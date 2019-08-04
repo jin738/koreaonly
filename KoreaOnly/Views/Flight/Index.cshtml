@@ -1,0 +1,69 @@
+﻿@model List<KoreaOnly.Airlines>
+
+@{
+    ViewBag.Title = "All Airlines";
+    Layout = "~/Views/AdminView.cshtml";
+}
+
+
+<div class="container">
+    <br/>
+    <a href="/SystemMaster/" class="btn btn-default" value="Go To Main Control Station">Go To Main Control Station</a>
+
+    <br />
+    <h2 style="float:left;">Airlines</h2>
+    <br />
+
+    <hr />
+    <br />
+    @using (Html.BeginForm())
+    {
+
+        <label for="txtSearch">Airline Code</label>
+        <input type="text" name="txtSearch" style="max-width:200px;" class="form-control" />
+            <input type="submit" class="btn btn-default" value="Search" />
+
+    }
+    <br />
+    <p style="float:right;">
+        @Html.ActionLink("Add New Airline", "Create") |        
+        @Html.ActionLink("Add Airline Logo", "AirlineLogo")
+    </p>
+
+    <table class="table">
+        <tr>
+            <td>
+                Airline Logo
+            </td>
+            <th>
+                Airline Code
+            </th>
+            <th>
+                Airline Name
+            </th>
+            <th></th>
+        </tr>
+
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/Images/Airlines/@(item.AirlineCode).png" style="width:60px;" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AirlineCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AirlineName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { aircode = item.AirlineCode }) |
+                    @Html.ActionLink("Delete", "Delete", new { aircode = item.AirlineCode })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

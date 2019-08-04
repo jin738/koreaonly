@@ -1,0 +1,94 @@
+﻿
+@{
+    var Reqst = (KoreaOnly.Models.SoapWorkflowPostRQ)Session["REQUEST"];
+    var SearchFillter = (KoreaOnly.Models.SearchFillter)Session["SearchFillter"];
+}
+
+<div class="col70">
+    <div id="result">
+        <div class="in70">
+            <div class="topmatrix1 avlhtls">
+                (@(MainController.GetAirport(Reqst.OriginAirportCode[0]).AirportCode))@(MainController.GetAirport(Reqst.OriginAirportCode[0]).AirportLocation) : @Convert.ToDateTime(Reqst.DepartureDate.First()).ToString("MMM dd yyyy(ddd)") - (@(MainController.GetAirport(Reqst.DestinationAirportCode[0]).AirportCode))@(MainController.GetAirport(Reqst.DestinationAirportCode[0]).AirportLocation)
+                <span class="placenamefil">
+
+                    @if (Reqst.triptype == "0")
+                    {
+                        <span>
+                            @string.Format(" : {0}", Convert.ToDateTime(Reqst.arrivedate).ToString("MMM dd yyyy(ddd)"))
+                        </span>
+                    }
+
+                </span>
+            </div>
+
+            <div class="airlineplace">
+
+                <div class="col-xs-2 boxx SelectAll">
+                    <span class="dummyairline" style="height: 82px;">
+                        <a class="airinage">
+                            <div class="topmatrix_ailine">All Results</div>
+                        </a>
+                    </span>
+                    <span class="dummyprice">Non Stop</span>
+                    <span class="dummyprice">1 Stop</span>
+                    <span class="dummyprice">2+ Stop</span>
+                </div>
+                <div class="col-xs-10 boxx">
+                    <div id="owl-demo2" class="owl-carousel owl-theme">
+
+                        @for (int i = 0; i < SearchFillter.Airlines.Count; i++)
+                        {
+                            <div class="item">
+                                <div class="portimgwrap item onlythisFA" id="onlyflight@(SearchFillter.Airlines[i][0])">
+                                    <a class="airinage SelectAllStops">
+                                        <img src="~/Images/Airlines/@(SearchFillter.Airlines[i][0]).png" style="width: 60px;" alt="">
+                                        <div class="topmatrix_ailine">@MainController.GetAirline(SearchFillter.Airlines[i][0]).AirlineName</div>
+                                    </a>
+                                    <a class="nonstops stopclickE" id="onlystop1">
+                                        <span class="airtotal">@(SearchFillter.Stop1MinPrice[i] == null ? "---" : "$ " + SearchFillter.Stop1MinPrice[i])</span>
+                                    </a>
+                                    <a class="nonstops stopclickE" id="onlystop2">
+                                        <span class="airtotal">@(SearchFillter.Stop2MinPrice[i] == null ? "---" : "$ " + SearchFillter.Stop2MinPrice[i])</span>
+                                    </a>
+                                    <a class="nonstops stopclickE" id="onlystop3">
+                                        <span class="airtotal">@(SearchFillter.Stop3MinPrice[i] == null ? "---" : "$ " + SearchFillter.Stop3MinPrice[i])</span>
+                                    </a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    <style>
+                        .owl-item {
+                            width: 160px !important;
+                        }
+                    </style>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $("#owl-demo2").owlCarousel({
+            loop: true,
+            items: 4,
+            margin: 10,
+            itemsDesktop: [1000, 6],
+            itemsDesktopSmall: [900, 4],
+            itemsTablet: [600, 2],
+            itemsMobile: [479, 1],
+            pagination: false,
+            navigation: true
+        });
+
+    });
+</script>
+
+
+
+<script src="~/scripts/Koreaonly.js"></script>

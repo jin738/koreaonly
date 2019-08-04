@@ -1,0 +1,1435 @@
+
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <POS xmlns="http://www.opentravel.org/OTA/2002/11">
+    <Source PseudoCityCode="K3SG" />
+  </POS>
+</SessionCreateRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" status="Approved">
+  <ConversationId xmlns="http://www.opentravel.org/OTA/2002/11">KoreaOnly</ConversationId>
+</SessionCreateRS>
+<?xml version="1.0" encoding="utf-16"?>
+<IgnoreTransactionRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.0" />
+<?xml version="1.0" encoding="utf-16"?>
+<IgnoreTransactionRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.0">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL/v01">
+    <Success timeStamp="2017-12-22T21:40:09+05:00">
+      <SystemSpecificResults />
+    </Success>
+  </ApplicationResults>
+</IgnoreTransactionRS>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="3.4.0" ResponseType="OTA" ResponseVersion="1.9.2">
+  <POS xmlns="http://www.opentravel.org/OTA/2003/05">
+    <Source PseudoCityCode="K3SG">
+      <RequestorID Type="1" ID="1">
+        <CompanyName Code="TN" />
+      </RequestorID>
+    </Source>
+  </POS>
+  <OriginDestinationInformation RPH="1" xmlns="http://www.opentravel.org/OTA/2003/05">
+    <DepartureDateTime>2017-12-22T00:00:00</DepartureDateTime>
+    <DepartureWindow>00302359</DepartureWindow>
+    <OriginLocation LocationCode="SAN" />
+    <DestinationLocation LocationCode="LAX" />
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://www.opentravel.org/OTA/2003/05">
+    <DepartureDateTime>2017-12-28T00:00:00</DepartureDateTime>
+    <DepartureWindow>00302359</DepartureWindow>
+    <OriginLocation LocationCode="LAX" />
+    <DestinationLocation LocationCode="SAN" />
+  </OriginDestinationInformation>
+  <TravelPreferences xmlns="http://www.opentravel.org/OTA/2003/05">
+    <FlightTypePref MaxConnections="2" />
+    <TPA_Extensions>
+      <NumTrips Number="10" />
+    </TPA_Extensions>
+  </TravelPreferences>
+  <TravelerInfoSummary xmlns="http://www.opentravel.org/OTA/2003/05">
+    <AirTravelerAvail>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+    </AirTravelerAvail>
+  </TravelerInfoSummary>
+  <TPA_Extensions xmlns="http://www.opentravel.org/OTA/2003/05">
+    <IntelliSellTransaction>
+      <RequestType Name="50ITINS" />
+      <CompressResponse />
+    </IntelliSellTransaction>
+  </TPA_Extensions>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.9.2" PricedItinCount="10" BrandedOneWayItinCount="0" SimpleOneWayItinCount="0" DepartedItinCount="0" SoldOutItinCount="0" AvailableItinCount="0">
+  <Success xmlns="http://www.opentravel.org/OTA/2003/05" />
+  <Warnings xmlns="http://www.opentravel.org/OTA/2003/05">
+    <Warning Type="MAIN" ShortText="This response version is deprecated and will be decommissioned once a newer version is released." Code="DEPRECATEDRS" />
+    <Warning Type="WORKERTHREAD" ShortText="9158259908631872179" Code="TRANSACTIONID" MessageClass="I" />
+    <Warning Type="SERVER" ShortText="27040" Code="TTFHLC703" MessageClass="I" />
+    <Warning Type="DEFAULT" ShortText="25238" Code="RULEID" MessageClass="I" />
+    <Warning Type="DRE" ShortText="13289" Code="RULEID" MessageClass="I" />
+  </Warnings>
+  <PricedItineraries xmlns="http://www.opentravel.org/OTA/2003/05">
+    <PricedItinerary SequenceNumber="1">
+      <AirItinerary DirectionInd="Return">
+        <OriginDestinationOptions>
+          <OriginDestinationOption ElapsedTime="57">
+            <FlightSegment DepartureDateTime="2017-12-22T15:11:00" ArrivalDateTime="2017-12-22T16:08:00" StopQuantity="0" FlightNumber="6032" ResBookDesigCode="S" ElapsedTime="57">
+              <DepartureAirport LocationCode="SAN" TerminalID="2" />
+              <ArrivalAirport LocationCode="LAX" TerminalID="0" />
+              <OperatingAirline CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" Code="AA" FlightNumber="6032" />
+              <Equipment AirEquipType="E75" />
+              <MarketingAirline Code="AA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="9" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+          <OriginDestinationOption ElapsedTime="49">
+            <FlightSegment DepartureDateTime="2017-12-28T18:30:00" ArrivalDateTime="2017-12-28T19:19:00" StopQuantity="0" FlightNumber="6074" ResBookDesigCode="S" ElapsedTime="49">
+              <DepartureAirport LocationCode="LAX" TerminalID="0" />
+              <ArrivalAirport LocationCode="SAN" TerminalID="2" />
+              <OperatingAirline CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" Code="AA" FlightNumber="6074" />
+              <Equipment AirEquipType="E75" />
+              <MarketingAirline Code="AA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="8" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+        </OriginDestinationOptions>
+      </AirItinerary>
+      <AirItineraryPricingInfo PricingSource="ADVJR1" PricingSubSource="MIP">
+        <ItinTotalFare>
+          <BaseFare Amount="253.02" />
+          <FareConstruction Amount="253.02" />
+          <EquivFare Amount="253.02" />
+          <Taxes>
+            <Tax TaxCode="TOTALTAX" Amount="47.38" />
+          </Taxes>
+          <TotalFare Amount="300.40" />
+        </ItinTotalFare>
+        <PTC_FareBreakdowns>
+          <PTC_FareBreakdown>
+            <PassengerTypeQuantity Code="ADT" Quantity="1" />
+            <FareBasisCodes>
+              <FareBasisCode BookingCode="S" AvailabilityBreak="true" DepartureAirportCode="SAN" ArrivalAirportCode="LAX">S0EHZNN1</FareBasisCode>
+              <FareBasisCode BookingCode="S" AvailabilityBreak="true" DepartureAirportCode="LAX" ArrivalAirportCode="SAN">S0EHZNN1</FareBasisCode>
+            </FareBasisCodes>
+            <PassengerFare>
+              <BaseFare Amount="253.02" />
+              <FareConstruction Amount="253.02" />
+              <EquivFare Amount="253.02" />
+              <Taxes>
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="US1" Amount="18.98" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <TotalTax Amount="47.38" />
+              </Taxes>
+              <TotalFare Amount="300.40" />
+              <TPA_Extensions>
+                <Messages>
+                  <Message AirlineCode="AA" Type="N" FailCode="0" Info="NONREF/SVCCHGPLUSFAREDIF/CXL BY FLT TIME OR NOVALUE" />
+                  <Message Type="W" FailCode="0" Info="VALIDATING CARRIER - AA" />
+                </Messages>
+                <BaggageInformationList>
+                  <BaggageInformation>
+                    <Segment Id="0" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                  <BaggageInformation>
+                    <Segment Id="1" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                </BaggageInformationList>
+              </TPA_Extensions>
+            </PassengerFare>
+            <Endorsements NonRefundableIndicator="true" />
+            <TPA_Extensions>
+              <FareCalcLine Info="SAN AA LAX126.51AA SAN126.51USD253.02END ZPSANLAX XFSAN4.5LAX4.5" />
+            </TPA_Extensions>
+            <FareInfos>
+              <FareInfo>
+                <FareReference>S</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+              <FareInfo>
+                <FareReference>S</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+            </FareInfos>
+          </PTC_FareBreakdown>
+        </PTC_FareBreakdowns>
+        <FareInfos>
+          <FareInfo>
+            <FareReference>S</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+          <FareInfo>
+            <FareReference>S</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+        </FareInfos>
+        <TPA_Extensions>
+          <DivideInParty Indicator="false" />
+          <ValidatingCarrier SettlementMethod="ARC" NewVcxProcess="true">
+            <Default>AA</Default>
+          </ValidatingCarrier>
+        </TPA_Extensions>
+      </AirItineraryPricingInfo>
+      <TicketingInfo TicketType="eTicket" ValidInterline="Yes" />
+      <TPA_Extensions>
+        <ValidatingCarrier Code="AA" />
+      </TPA_Extensions>
+    </PricedItinerary>
+    <PricedItinerary SequenceNumber="2">
+      <AirItinerary DirectionInd="Return">
+        <OriginDestinationOptions>
+          <OriginDestinationOption ElapsedTime="57">
+            <FlightSegment DepartureDateTime="2017-12-22T15:11:00" ArrivalDateTime="2017-12-22T16:08:00" StopQuantity="0" FlightNumber="6032" ResBookDesigCode="S" ElapsedTime="57">
+              <DepartureAirport LocationCode="SAN" TerminalID="2" />
+              <ArrivalAirport LocationCode="LAX" TerminalID="0" />
+              <OperatingAirline CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" Code="AA" FlightNumber="6032" />
+              <Equipment AirEquipType="E75" />
+              <MarketingAirline Code="AA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="9" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+          <OriginDestinationOption ElapsedTime="50">
+            <FlightSegment DepartureDateTime="2017-12-28T21:09:00" ArrivalDateTime="2017-12-28T21:59:00" StopQuantity="0" FlightNumber="6052" ResBookDesigCode="S" ElapsedTime="50">
+              <DepartureAirport LocationCode="LAX" TerminalID="0" />
+              <ArrivalAirport LocationCode="SAN" TerminalID="2" />
+              <OperatingAirline CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" Code="AA" FlightNumber="6052" />
+              <Equipment AirEquipType="E75" />
+              <MarketingAirline Code="AA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="8" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+        </OriginDestinationOptions>
+      </AirItinerary>
+      <AirItineraryPricingInfo PricingSource="ADVJR1" PricingSubSource="MIP">
+        <ItinTotalFare>
+          <BaseFare Amount="253.02" />
+          <FareConstruction Amount="253.02" />
+          <EquivFare Amount="253.02" />
+          <Taxes>
+            <Tax TaxCode="TOTALTAX" Amount="47.38" />
+          </Taxes>
+          <TotalFare Amount="300.40" />
+        </ItinTotalFare>
+        <PTC_FareBreakdowns>
+          <PTC_FareBreakdown>
+            <PassengerTypeQuantity Code="ADT" Quantity="1" />
+            <FareBasisCodes>
+              <FareBasisCode BookingCode="S" AvailabilityBreak="true" DepartureAirportCode="SAN" ArrivalAirportCode="LAX">S0EHZNN1</FareBasisCode>
+              <FareBasisCode BookingCode="S" AvailabilityBreak="true" DepartureAirportCode="LAX" ArrivalAirportCode="SAN">S0EHZNN1</FareBasisCode>
+            </FareBasisCodes>
+            <PassengerFare>
+              <BaseFare Amount="253.02" />
+              <FareConstruction Amount="253.02" />
+              <EquivFare Amount="253.02" />
+              <Taxes>
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="US1" Amount="18.98" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <TotalTax Amount="47.38" />
+              </Taxes>
+              <TotalFare Amount="300.40" />
+              <TPA_Extensions>
+                <Messages>
+                  <Message AirlineCode="AA" Type="N" FailCode="0" Info="NONREF/SVCCHGPLUSFAREDIF/CXL BY FLT TIME OR NOVALUE" />
+                  <Message Type="W" FailCode="0" Info="VALIDATING CARRIER - AA" />
+                </Messages>
+                <BaggageInformationList>
+                  <BaggageInformation>
+                    <Segment Id="0" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                  <BaggageInformation>
+                    <Segment Id="1" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                </BaggageInformationList>
+              </TPA_Extensions>
+            </PassengerFare>
+            <Endorsements NonRefundableIndicator="true" />
+            <TPA_Extensions>
+              <FareCalcLine Info="SAN AA LAX126.51AA SAN126.51USD253.02END ZPSANLAX XFSAN4.5LAX4.5" />
+            </TPA_Extensions>
+            <FareInfos>
+              <FareInfo>
+                <FareReference>S</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+              <FareInfo>
+                <FareReference>S</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+            </FareInfos>
+          </PTC_FareBreakdown>
+        </PTC_FareBreakdowns>
+        <FareInfos>
+          <FareInfo>
+            <FareReference>S</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+          <FareInfo>
+            <FareReference>S</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+        </FareInfos>
+        <TPA_Extensions>
+          <DivideInParty Indicator="false" />
+          <ValidatingCarrier SettlementMethod="ARC" NewVcxProcess="true">
+            <Default>AA</Default>
+          </ValidatingCarrier>
+        </TPA_Extensions>
+      </AirItineraryPricingInfo>
+      <TicketingInfo TicketType="eTicket" ValidInterline="Yes" />
+      <TPA_Extensions>
+        <ValidatingCarrier Code="AA" />
+      </TPA_Extensions>
+    </PricedItinerary>
+    <PricedItinerary SequenceNumber="3">
+      <AirItinerary DirectionInd="Return">
+        <OriginDestinationOptions>
+          <OriginDestinationOption ElapsedTime="57">
+            <FlightSegment DepartureDateTime="2017-12-22T15:11:00" ArrivalDateTime="2017-12-22T16:08:00" StopQuantity="0" FlightNumber="6032" ResBookDesigCode="S" ElapsedTime="57">
+              <DepartureAirport LocationCode="SAN" TerminalID="2" />
+              <ArrivalAirport LocationCode="LAX" TerminalID="0" />
+              <OperatingAirline CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" Code="AA" FlightNumber="6032" />
+              <Equipment AirEquipType="E75" />
+              <MarketingAirline Code="AA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="9" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+          <OriginDestinationOption ElapsedTime="51">
+            <FlightSegment DepartureDateTime="2017-12-28T13:50:00" ArrivalDateTime="2017-12-28T14:41:00" StopQuantity="0" FlightNumber="6032" ResBookDesigCode="S" ElapsedTime="51">
+              <DepartureAirport LocationCode="LAX" TerminalID="0" />
+              <ArrivalAirport LocationCode="SAN" TerminalID="2" />
+              <OperatingAirline CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" Code="AA" FlightNumber="6032" />
+              <Equipment AirEquipType="E75" />
+              <MarketingAirline Code="AA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="9" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+        </OriginDestinationOptions>
+      </AirItinerary>
+      <AirItineraryPricingInfo PricingSource="ADVJR1" PricingSubSource="MIP">
+        <ItinTotalFare>
+          <BaseFare Amount="253.02" />
+          <FareConstruction Amount="253.02" />
+          <EquivFare Amount="253.02" />
+          <Taxes>
+            <Tax TaxCode="TOTALTAX" Amount="47.38" />
+          </Taxes>
+          <TotalFare Amount="300.40" />
+        </ItinTotalFare>
+        <PTC_FareBreakdowns>
+          <PTC_FareBreakdown>
+            <PassengerTypeQuantity Code="ADT" Quantity="1" />
+            <FareBasisCodes>
+              <FareBasisCode BookingCode="S" AvailabilityBreak="true" DepartureAirportCode="SAN" ArrivalAirportCode="LAX">S0EHZNN1</FareBasisCode>
+              <FareBasisCode BookingCode="S" AvailabilityBreak="true" DepartureAirportCode="LAX" ArrivalAirportCode="SAN">S0EHZNN1</FareBasisCode>
+            </FareBasisCodes>
+            <PassengerFare>
+              <BaseFare Amount="253.02" />
+              <FareConstruction Amount="253.02" />
+              <EquivFare Amount="253.02" />
+              <Taxes>
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="US1" Amount="18.98" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <TotalTax Amount="47.38" />
+              </Taxes>
+              <TotalFare Amount="300.40" />
+              <TPA_Extensions>
+                <Messages>
+                  <Message AirlineCode="AA" Type="N" FailCode="0" Info="NONREF/SVCCHGPLUSFAREDIF/CXL BY FLT TIME OR NOVALUE" />
+                  <Message Type="W" FailCode="0" Info="VALIDATING CARRIER - AA" />
+                </Messages>
+                <BaggageInformationList>
+                  <BaggageInformation>
+                    <Segment Id="0" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                  <BaggageInformation>
+                    <Segment Id="1" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                </BaggageInformationList>
+              </TPA_Extensions>
+            </PassengerFare>
+            <Endorsements NonRefundableIndicator="true" />
+            <TPA_Extensions>
+              <FareCalcLine Info="SAN AA LAX126.51AA SAN126.51USD253.02END ZPSANLAX XFSAN4.5LAX4.5" />
+            </TPA_Extensions>
+            <FareInfos>
+              <FareInfo>
+                <FareReference>S</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+              <FareInfo>
+                <FareReference>S</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+            </FareInfos>
+          </PTC_FareBreakdown>
+        </PTC_FareBreakdowns>
+        <FareInfos>
+          <FareInfo>
+            <FareReference>S</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+          <FareInfo>
+            <FareReference>S</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+        </FareInfos>
+        <TPA_Extensions>
+          <DivideInParty Indicator="false" />
+          <ValidatingCarrier SettlementMethod="ARC" NewVcxProcess="true">
+            <Default>AA</Default>
+          </ValidatingCarrier>
+        </TPA_Extensions>
+      </AirItineraryPricingInfo>
+      <TicketingInfo TicketType="eTicket" ValidInterline="Yes" />
+      <TPA_Extensions>
+        <ValidatingCarrier Code="AA" />
+      </TPA_Extensions>
+    </PricedItinerary>
+    <PricedItinerary SequenceNumber="4">
+      <AirItinerary DirectionInd="Return">
+        <OriginDestinationOptions>
+          <OriginDestinationOption ElapsedTime="60">
+            <FlightSegment DepartureDateTime="2017-12-22T20:15:00" ArrivalDateTime="2017-12-22T21:15:00" StopQuantity="0" FlightNumber="6074" ResBookDesigCode="S" ElapsedTime="60">
+              <DepartureAirport LocationCode="SAN" TerminalID="2" />
+              <ArrivalAirport LocationCode="LAX" TerminalID="0" />
+              <OperatingAirline CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" Code="AA" FlightNumber="6074" />
+              <Equipment AirEquipType="E75" />
+              <MarketingAirline Code="AA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="9" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+          <OriginDestinationOption ElapsedTime="49">
+            <FlightSegment DepartureDateTime="2017-12-28T18:30:00" ArrivalDateTime="2017-12-28T19:19:00" StopQuantity="0" FlightNumber="6074" ResBookDesigCode="S" ElapsedTime="49">
+              <DepartureAirport LocationCode="LAX" TerminalID="0" />
+              <ArrivalAirport LocationCode="SAN" TerminalID="2" />
+              <OperatingAirline CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" Code="AA" FlightNumber="6074" />
+              <Equipment AirEquipType="E75" />
+              <MarketingAirline Code="AA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="8" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+        </OriginDestinationOptions>
+      </AirItinerary>
+      <AirItineraryPricingInfo PricingSource="ADVJR1" PricingSubSource="MIP">
+        <ItinTotalFare>
+          <BaseFare Amount="253.02" />
+          <FareConstruction Amount="253.02" />
+          <EquivFare Amount="253.02" />
+          <Taxes>
+            <Tax TaxCode="TOTALTAX" Amount="47.38" />
+          </Taxes>
+          <TotalFare Amount="300.40" />
+        </ItinTotalFare>
+        <PTC_FareBreakdowns>
+          <PTC_FareBreakdown>
+            <PassengerTypeQuantity Code="ADT" Quantity="1" />
+            <FareBasisCodes>
+              <FareBasisCode BookingCode="S" AvailabilityBreak="true" DepartureAirportCode="SAN" ArrivalAirportCode="LAX">S0EHZNN1</FareBasisCode>
+              <FareBasisCode BookingCode="S" AvailabilityBreak="true" DepartureAirportCode="LAX" ArrivalAirportCode="SAN">S0EHZNN1</FareBasisCode>
+            </FareBasisCodes>
+            <PassengerFare>
+              <BaseFare Amount="253.02" />
+              <FareConstruction Amount="253.02" />
+              <EquivFare Amount="253.02" />
+              <Taxes>
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="US1" Amount="18.98" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <TotalTax Amount="47.38" />
+              </Taxes>
+              <TotalFare Amount="300.40" />
+              <TPA_Extensions>
+                <Messages>
+                  <Message AirlineCode="AA" Type="N" FailCode="0" Info="NONREF/SVCCHGPLUSFAREDIF/CXL BY FLT TIME OR NOVALUE" />
+                  <Message Type="W" FailCode="0" Info="VALIDATING CARRIER - AA" />
+                </Messages>
+                <BaggageInformationList>
+                  <BaggageInformation>
+                    <Segment Id="0" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                  <BaggageInformation>
+                    <Segment Id="1" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                </BaggageInformationList>
+              </TPA_Extensions>
+            </PassengerFare>
+            <Endorsements NonRefundableIndicator="true" />
+            <TPA_Extensions>
+              <FareCalcLine Info="SAN AA LAX126.51AA SAN126.51USD253.02END ZPSANLAX XFSAN4.5LAX4.5" />
+            </TPA_Extensions>
+            <FareInfos>
+              <FareInfo>
+                <FareReference>S</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+              <FareInfo>
+                <FareReference>S</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+            </FareInfos>
+          </PTC_FareBreakdown>
+        </PTC_FareBreakdowns>
+        <FareInfos>
+          <FareInfo>
+            <FareReference>S</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+          <FareInfo>
+            <FareReference>S</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+        </FareInfos>
+        <TPA_Extensions>
+          <DivideInParty Indicator="false" />
+          <ValidatingCarrier SettlementMethod="ARC" NewVcxProcess="true">
+            <Default>AA</Default>
+          </ValidatingCarrier>
+        </TPA_Extensions>
+      </AirItineraryPricingInfo>
+      <TicketingInfo TicketType="eTicket" ValidInterline="Yes" />
+      <TPA_Extensions>
+        <ValidatingCarrier Code="AA" />
+      </TPA_Extensions>
+    </PricedItinerary>
+    <PricedItinerary SequenceNumber="5">
+      <AirItinerary DirectionInd="Return">
+        <OriginDestinationOptions>
+          <OriginDestinationOption ElapsedTime="57">
+            <FlightSegment DepartureDateTime="2017-12-22T15:11:00" ArrivalDateTime="2017-12-22T16:08:00" StopQuantity="0" FlightNumber="6032" ResBookDesigCode="S" ElapsedTime="57">
+              <DepartureAirport LocationCode="SAN" TerminalID="2" />
+              <ArrivalAirport LocationCode="LAX" TerminalID="0" />
+              <OperatingAirline CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" Code="AA" FlightNumber="6032" />
+              <Equipment AirEquipType="E75" />
+              <MarketingAirline Code="AA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="9" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+          <OriginDestinationOption ElapsedTime="53">
+            <FlightSegment DepartureDateTime="2017-12-28T16:40:00" ArrivalDateTime="2017-12-28T17:33:00" StopQuantity="0" FlightNumber="3014" ResBookDesigCode="S" ElapsedTime="53">
+              <DepartureAirport LocationCode="LAX" TerminalID="0" />
+              <ArrivalAirport LocationCode="SAN" TerminalID="2" />
+              <OperatingAirline CompanyShortName="SKYWEST AIRLINES AS AMERICAN EAGLE" Code="AA" FlightNumber="3014" />
+              <Equipment AirEquipType="CR7" />
+              <MarketingAirline Code="AA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="8" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+        </OriginDestinationOptions>
+      </AirItinerary>
+      <AirItineraryPricingInfo PricingSource="ADVJR1" PricingSubSource="MIP">
+        <ItinTotalFare>
+          <BaseFare Amount="253.02" />
+          <FareConstruction Amount="253.02" />
+          <EquivFare Amount="253.02" />
+          <Taxes>
+            <Tax TaxCode="TOTALTAX" Amount="47.38" />
+          </Taxes>
+          <TotalFare Amount="300.40" />
+        </ItinTotalFare>
+        <PTC_FareBreakdowns>
+          <PTC_FareBreakdown>
+            <PassengerTypeQuantity Code="ADT" Quantity="1" />
+            <FareBasisCodes>
+              <FareBasisCode BookingCode="S" AvailabilityBreak="true" DepartureAirportCode="SAN" ArrivalAirportCode="LAX">S0EHZNN1</FareBasisCode>
+              <FareBasisCode BookingCode="S" AvailabilityBreak="true" DepartureAirportCode="LAX" ArrivalAirportCode="SAN">S0EHZNN1</FareBasisCode>
+            </FareBasisCodes>
+            <PassengerFare>
+              <BaseFare Amount="253.02" />
+              <FareConstruction Amount="253.02" />
+              <EquivFare Amount="253.02" />
+              <Taxes>
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="US1" Amount="18.98" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <TotalTax Amount="47.38" />
+              </Taxes>
+              <TotalFare Amount="300.40" />
+              <TPA_Extensions>
+                <Messages>
+                  <Message AirlineCode="AA" Type="N" FailCode="0" Info="NONREF/SVCCHGPLUSFAREDIF/CXL BY FLT TIME OR NOVALUE" />
+                  <Message Type="W" FailCode="0" Info="VALIDATING CARRIER - AA" />
+                </Messages>
+                <BaggageInformationList>
+                  <BaggageInformation>
+                    <Segment Id="0" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                  <BaggageInformation>
+                    <Segment Id="1" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                </BaggageInformationList>
+              </TPA_Extensions>
+            </PassengerFare>
+            <Endorsements NonRefundableIndicator="true" />
+            <TPA_Extensions>
+              <FareCalcLine Info="SAN AA LAX126.51AA SAN126.51USD253.02END ZPSANLAX XFSAN4.5LAX4.5" />
+            </TPA_Extensions>
+            <FareInfos>
+              <FareInfo>
+                <FareReference>S</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+              <FareInfo>
+                <FareReference>S</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+            </FareInfos>
+          </PTC_FareBreakdown>
+        </PTC_FareBreakdowns>
+        <FareInfos>
+          <FareInfo>
+            <FareReference>S</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+          <FareInfo>
+            <FareReference>S</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+        </FareInfos>
+        <TPA_Extensions>
+          <DivideInParty Indicator="false" />
+          <ValidatingCarrier SettlementMethod="ARC" NewVcxProcess="true">
+            <Default>AA</Default>
+          </ValidatingCarrier>
+        </TPA_Extensions>
+      </AirItineraryPricingInfo>
+      <TicketingInfo TicketType="eTicket" ValidInterline="Yes" />
+      <TPA_Extensions>
+        <ValidatingCarrier Code="AA" />
+      </TPA_Extensions>
+    </PricedItinerary>
+    <PricedItinerary SequenceNumber="6">
+      <AirItinerary DirectionInd="Return">
+        <OriginDestinationOptions>
+          <OriginDestinationOption ElapsedTime="60">
+            <FlightSegment DepartureDateTime="2017-12-22T20:15:00" ArrivalDateTime="2017-12-22T21:15:00" StopQuantity="0" FlightNumber="6074" ResBookDesigCode="S" ElapsedTime="60">
+              <DepartureAirport LocationCode="SAN" TerminalID="2" />
+              <ArrivalAirport LocationCode="LAX" TerminalID="0" />
+              <OperatingAirline CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" Code="AA" FlightNumber="6074" />
+              <Equipment AirEquipType="E75" />
+              <MarketingAirline Code="AA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="9" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+          <OriginDestinationOption ElapsedTime="50">
+            <FlightSegment DepartureDateTime="2017-12-28T21:09:00" ArrivalDateTime="2017-12-28T21:59:00" StopQuantity="0" FlightNumber="6052" ResBookDesigCode="S" ElapsedTime="50">
+              <DepartureAirport LocationCode="LAX" TerminalID="0" />
+              <ArrivalAirport LocationCode="SAN" TerminalID="2" />
+              <OperatingAirline CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" Code="AA" FlightNumber="6052" />
+              <Equipment AirEquipType="E75" />
+              <MarketingAirline Code="AA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="8" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+        </OriginDestinationOptions>
+      </AirItinerary>
+      <AirItineraryPricingInfo PricingSource="ADVJR1" PricingSubSource="MIP">
+        <ItinTotalFare>
+          <BaseFare Amount="253.02" />
+          <FareConstruction Amount="253.02" />
+          <EquivFare Amount="253.02" />
+          <Taxes>
+            <Tax TaxCode="TOTALTAX" Amount="47.38" />
+          </Taxes>
+          <TotalFare Amount="300.40" />
+        </ItinTotalFare>
+        <PTC_FareBreakdowns>
+          <PTC_FareBreakdown>
+            <PassengerTypeQuantity Code="ADT" Quantity="1" />
+            <FareBasisCodes>
+              <FareBasisCode BookingCode="S" AvailabilityBreak="true" DepartureAirportCode="SAN" ArrivalAirportCode="LAX">S0EHZNN1</FareBasisCode>
+              <FareBasisCode BookingCode="S" AvailabilityBreak="true" DepartureAirportCode="LAX" ArrivalAirportCode="SAN">S0EHZNN1</FareBasisCode>
+            </FareBasisCodes>
+            <PassengerFare>
+              <BaseFare Amount="253.02" />
+              <FareConstruction Amount="253.02" />
+              <EquivFare Amount="253.02" />
+              <Taxes>
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="US1" Amount="18.98" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <TotalTax Amount="47.38" />
+              </Taxes>
+              <TotalFare Amount="300.40" />
+              <TPA_Extensions>
+                <Messages>
+                  <Message AirlineCode="AA" Type="N" FailCode="0" Info="NONREF/SVCCHGPLUSFAREDIF/CXL BY FLT TIME OR NOVALUE" />
+                  <Message Type="W" FailCode="0" Info="VALIDATING CARRIER - AA" />
+                </Messages>
+                <BaggageInformationList>
+                  <BaggageInformation>
+                    <Segment Id="0" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                  <BaggageInformation>
+                    <Segment Id="1" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                </BaggageInformationList>
+              </TPA_Extensions>
+            </PassengerFare>
+            <Endorsements NonRefundableIndicator="true" />
+            <TPA_Extensions>
+              <FareCalcLine Info="SAN AA LAX126.51AA SAN126.51USD253.02END ZPSANLAX XFSAN4.5LAX4.5" />
+            </TPA_Extensions>
+            <FareInfos>
+              <FareInfo>
+                <FareReference>S</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+              <FareInfo>
+                <FareReference>S</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+            </FareInfos>
+          </PTC_FareBreakdown>
+        </PTC_FareBreakdowns>
+        <FareInfos>
+          <FareInfo>
+            <FareReference>S</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+          <FareInfo>
+            <FareReference>S</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+        </FareInfos>
+        <TPA_Extensions>
+          <DivideInParty Indicator="false" />
+          <ValidatingCarrier SettlementMethod="ARC" NewVcxProcess="true">
+            <Default>AA</Default>
+          </ValidatingCarrier>
+        </TPA_Extensions>
+      </AirItineraryPricingInfo>
+      <TicketingInfo TicketType="eTicket" ValidInterline="Yes" />
+      <TPA_Extensions>
+        <ValidatingCarrier Code="AA" />
+      </TPA_Extensions>
+    </PricedItinerary>
+    <PricedItinerary SequenceNumber="7">
+      <AirItinerary DirectionInd="Return">
+        <OriginDestinationOptions>
+          <OriginDestinationOption ElapsedTime="56">
+            <FlightSegment DepartureDateTime="2017-12-22T20:15:00" ArrivalDateTime="2017-12-22T21:11:00" StopQuantity="0" FlightNumber="5444" ResBookDesigCode="Q" ElapsedTime="56">
+              <DepartureAirport LocationCode="SAN" TerminalID="2" />
+              <ArrivalAirport LocationCode="LAX" TerminalID="7" />
+              <OperatingAirline CompanyShortName="/SKYWEST DBA UNITED EXPRESS" Code="UA" FlightNumber="5444" />
+              <Equipment AirEquipType="E7W" />
+              <MarketingAirline Code="UA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="N" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+          <OriginDestinationOption ElapsedTime="54">
+            <FlightSegment DepartureDateTime="2017-12-28T22:35:00" ArrivalDateTime="2017-12-28T23:29:00" StopQuantity="0" FlightNumber="5840" ResBookDesigCode="Q" ElapsedTime="54">
+              <DepartureAirport LocationCode="LAX" TerminalID="7" />
+              <ArrivalAirport LocationCode="SAN" TerminalID="2" />
+              <OperatingAirline CompanyShortName="/SKYWEST DBA UNITED EXPRESS" Code="UA" FlightNumber="5840" />
+              <Equipment AirEquipType="CR7" />
+              <MarketingAirline Code="UA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="N" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+        </OriginDestinationOptions>
+      </AirItinerary>
+      <AirItineraryPricingInfo PricingSource="ADVJR1" PricingSubSource="MIP">
+        <ItinTotalFare>
+          <BaseFare Amount="253.02" />
+          <FareConstruction Amount="253.02" />
+          <EquivFare Amount="253.02" />
+          <Taxes>
+            <Tax TaxCode="TOTALTAX" Amount="47.38" />
+          </Taxes>
+          <TotalFare Amount="300.40" />
+        </ItinTotalFare>
+        <PTC_FareBreakdowns>
+          <PTC_FareBreakdown>
+            <PassengerTypeQuantity Code="ADT" Quantity="1" />
+            <FareBasisCodes>
+              <FareBasisCode BookingCode="Q" AvailabilityBreak="true" DepartureAirportCode="SAN" ArrivalAirportCode="LAX">QEA0AFEN</FareBasisCode>
+              <FareBasisCode BookingCode="Q" AvailabilityBreak="true" DepartureAirportCode="LAX" ArrivalAirportCode="SAN">QEA0AFEN</FareBasisCode>
+            </FareBasisCodes>
+            <PassengerFare>
+              <BaseFare Amount="253.02" />
+              <FareConstruction Amount="253.02" />
+              <EquivFare Amount="253.02" />
+              <Taxes>
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="US1" Amount="18.98" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <TotalTax Amount="47.38" />
+              </Taxes>
+              <TotalFare Amount="300.40" />
+              <TPA_Extensions>
+                <Messages>
+                  <Message AirlineCode="UA" Type="N" FailCode="0" Info="NONREF/0VALUAFTDPT/CHGFEE" />
+                  <Message Type="W" FailCode="0" Info="VALIDATING CARRIER - UA" />
+                  <Message Type="W" FailCode="0" Info="CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES" />
+                </Messages>
+                <BaggageInformationList>
+                  <BaggageInformation>
+                    <Segment Id="0" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                  <BaggageInformation>
+                    <Segment Id="1" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                </BaggageInformationList>
+              </TPA_Extensions>
+            </PassengerFare>
+            <Endorsements NonRefundableIndicator="true" />
+            <TPA_Extensions>
+              <FareCalcLine Info="SAN UA LAX126.51UA SAN126.51USD253.02END ZPSANLAX XFSAN4.5LAX4.5" />
+            </TPA_Extensions>
+            <FareInfos>
+              <FareInfo>
+                <FareReference>Q</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+              <FareInfo>
+                <FareReference>Q</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+            </FareInfos>
+          </PTC_FareBreakdown>
+        </PTC_FareBreakdowns>
+        <FareInfos>
+          <FareInfo>
+            <FareReference>Q</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+          <FareInfo>
+            <FareReference>Q</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+        </FareInfos>
+        <TPA_Extensions>
+          <DivideInParty Indicator="false" />
+          <ValidatingCarrier SettlementMethod="ARC" NewVcxProcess="true">
+            <Default>UA</Default>
+          </ValidatingCarrier>
+        </TPA_Extensions>
+      </AirItineraryPricingInfo>
+      <TicketingInfo TicketType="eTicket" ValidInterline="Yes" />
+      <TPA_Extensions>
+        <ValidatingCarrier Code="UA" />
+      </TPA_Extensions>
+    </PricedItinerary>
+    <PricedItinerary SequenceNumber="8">
+      <AirItinerary DirectionInd="Return">
+        <OriginDestinationOptions>
+          <OriginDestinationOption ElapsedTime="57">
+            <FlightSegment DepartureDateTime="2017-12-22T15:11:00" ArrivalDateTime="2017-12-22T16:08:00" StopQuantity="0" FlightNumber="6032" ResBookDesigCode="S" ElapsedTime="57">
+              <DepartureAirport LocationCode="SAN" TerminalID="2" />
+              <ArrivalAirport LocationCode="LAX" TerminalID="0" />
+              <OperatingAirline CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" Code="AA" FlightNumber="6032" />
+              <Equipment AirEquipType="E75" />
+              <MarketingAirline Code="AA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="9" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+          <OriginDestinationOption ElapsedTime="54">
+            <FlightSegment DepartureDateTime="2017-12-28T09:35:00" ArrivalDateTime="2017-12-28T10:29:00" StopQuantity="0" FlightNumber="6053" ResBookDesigCode="S" ElapsedTime="54">
+              <DepartureAirport LocationCode="LAX" TerminalID="0" />
+              <ArrivalAirport LocationCode="SAN" TerminalID="2" />
+              <OperatingAirline CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" Code="AA" FlightNumber="6053" />
+              <Equipment AirEquipType="E75" />
+              <MarketingAirline Code="AA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="8" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+        </OriginDestinationOptions>
+      </AirItinerary>
+      <AirItineraryPricingInfo PricingSource="ADVJR1" PricingSubSource="MIP">
+        <ItinTotalFare>
+          <BaseFare Amount="253.02" />
+          <FareConstruction Amount="253.02" />
+          <EquivFare Amount="253.02" />
+          <Taxes>
+            <Tax TaxCode="TOTALTAX" Amount="47.38" />
+          </Taxes>
+          <TotalFare Amount="300.40" />
+        </ItinTotalFare>
+        <PTC_FareBreakdowns>
+          <PTC_FareBreakdown>
+            <PassengerTypeQuantity Code="ADT" Quantity="1" />
+            <FareBasisCodes>
+              <FareBasisCode BookingCode="S" AvailabilityBreak="true" DepartureAirportCode="SAN" ArrivalAirportCode="LAX">S0EHZNN1</FareBasisCode>
+              <FareBasisCode BookingCode="S" AvailabilityBreak="true" DepartureAirportCode="LAX" ArrivalAirportCode="SAN">S0EHZNN1</FareBasisCode>
+            </FareBasisCodes>
+            <PassengerFare>
+              <BaseFare Amount="253.02" />
+              <FareConstruction Amount="253.02" />
+              <EquivFare Amount="253.02" />
+              <Taxes>
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="US1" Amount="18.98" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <TotalTax Amount="47.38" />
+              </Taxes>
+              <TotalFare Amount="300.40" />
+              <TPA_Extensions>
+                <Messages>
+                  <Message AirlineCode="AA" Type="N" FailCode="0" Info="NONREF/SVCCHGPLUSFAREDIF/CXL BY FLT TIME OR NOVALUE" />
+                  <Message Type="W" FailCode="0" Info="VALIDATING CARRIER - AA" />
+                </Messages>
+                <BaggageInformationList>
+                  <BaggageInformation>
+                    <Segment Id="0" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                  <BaggageInformation>
+                    <Segment Id="1" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                </BaggageInformationList>
+              </TPA_Extensions>
+            </PassengerFare>
+            <Endorsements NonRefundableIndicator="true" />
+            <TPA_Extensions>
+              <FareCalcLine Info="SAN AA LAX126.51AA SAN126.51USD253.02END ZPSANLAX XFSAN4.5LAX4.5" />
+            </TPA_Extensions>
+            <FareInfos>
+              <FareInfo>
+                <FareReference>S</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+              <FareInfo>
+                <FareReference>S</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+            </FareInfos>
+          </PTC_FareBreakdown>
+        </PTC_FareBreakdowns>
+        <FareInfos>
+          <FareInfo>
+            <FareReference>S</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+          <FareInfo>
+            <FareReference>S</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+        </FareInfos>
+        <TPA_Extensions>
+          <DivideInParty Indicator="false" />
+          <ValidatingCarrier SettlementMethod="ARC" NewVcxProcess="true">
+            <Default>AA</Default>
+          </ValidatingCarrier>
+        </TPA_Extensions>
+      </AirItineraryPricingInfo>
+      <TicketingInfo TicketType="eTicket" ValidInterline="Yes" />
+      <TPA_Extensions>
+        <ValidatingCarrier Code="AA" />
+      </TPA_Extensions>
+    </PricedItinerary>
+    <PricedItinerary SequenceNumber="9">
+      <AirItinerary DirectionInd="Return">
+        <OriginDestinationOptions>
+          <OriginDestinationOption ElapsedTime="60">
+            <FlightSegment DepartureDateTime="2017-12-22T20:15:00" ArrivalDateTime="2017-12-22T21:15:00" StopQuantity="0" FlightNumber="6074" ResBookDesigCode="S" ElapsedTime="60">
+              <DepartureAirport LocationCode="SAN" TerminalID="2" />
+              <ArrivalAirport LocationCode="LAX" TerminalID="0" />
+              <OperatingAirline CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" Code="AA" FlightNumber="6074" />
+              <Equipment AirEquipType="E75" />
+              <MarketingAirline Code="AA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="9" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+          <OriginDestinationOption ElapsedTime="51">
+            <FlightSegment DepartureDateTime="2017-12-28T13:50:00" ArrivalDateTime="2017-12-28T14:41:00" StopQuantity="0" FlightNumber="6032" ResBookDesigCode="S" ElapsedTime="51">
+              <DepartureAirport LocationCode="LAX" TerminalID="0" />
+              <ArrivalAirport LocationCode="SAN" TerminalID="2" />
+              <OperatingAirline CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" Code="AA" FlightNumber="6032" />
+              <Equipment AirEquipType="E75" />
+              <MarketingAirline Code="AA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="9" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+        </OriginDestinationOptions>
+      </AirItinerary>
+      <AirItineraryPricingInfo PricingSource="ADVJR1" PricingSubSource="MIP">
+        <ItinTotalFare>
+          <BaseFare Amount="253.02" />
+          <FareConstruction Amount="253.02" />
+          <EquivFare Amount="253.02" />
+          <Taxes>
+            <Tax TaxCode="TOTALTAX" Amount="47.38" />
+          </Taxes>
+          <TotalFare Amount="300.40" />
+        </ItinTotalFare>
+        <PTC_FareBreakdowns>
+          <PTC_FareBreakdown>
+            <PassengerTypeQuantity Code="ADT" Quantity="1" />
+            <FareBasisCodes>
+              <FareBasisCode BookingCode="S" AvailabilityBreak="true" DepartureAirportCode="SAN" ArrivalAirportCode="LAX">S0EHZNN1</FareBasisCode>
+              <FareBasisCode BookingCode="S" AvailabilityBreak="true" DepartureAirportCode="LAX" ArrivalAirportCode="SAN">S0EHZNN1</FareBasisCode>
+            </FareBasisCodes>
+            <PassengerFare>
+              <BaseFare Amount="253.02" />
+              <FareConstruction Amount="253.02" />
+              <EquivFare Amount="253.02" />
+              <Taxes>
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="US1" Amount="18.98" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <TotalTax Amount="47.38" />
+              </Taxes>
+              <TotalFare Amount="300.40" />
+              <TPA_Extensions>
+                <Messages>
+                  <Message AirlineCode="AA" Type="N" FailCode="0" Info="NONREF/SVCCHGPLUSFAREDIF/CXL BY FLT TIME OR NOVALUE" />
+                  <Message Type="W" FailCode="0" Info="VALIDATING CARRIER - AA" />
+                </Messages>
+                <BaggageInformationList>
+                  <BaggageInformation>
+                    <Segment Id="0" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                  <BaggageInformation>
+                    <Segment Id="1" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                </BaggageInformationList>
+              </TPA_Extensions>
+            </PassengerFare>
+            <Endorsements NonRefundableIndicator="true" />
+            <TPA_Extensions>
+              <FareCalcLine Info="SAN AA LAX126.51AA SAN126.51USD253.02END ZPSANLAX XFSAN4.5LAX4.5" />
+            </TPA_Extensions>
+            <FareInfos>
+              <FareInfo>
+                <FareReference>S</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+              <FareInfo>
+                <FareReference>S</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+            </FareInfos>
+          </PTC_FareBreakdown>
+        </PTC_FareBreakdowns>
+        <FareInfos>
+          <FareInfo>
+            <FareReference>S</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+          <FareInfo>
+            <FareReference>S</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+        </FareInfos>
+        <TPA_Extensions>
+          <DivideInParty Indicator="false" />
+          <ValidatingCarrier SettlementMethod="ARC" NewVcxProcess="true">
+            <Default>AA</Default>
+          </ValidatingCarrier>
+        </TPA_Extensions>
+      </AirItineraryPricingInfo>
+      <TicketingInfo TicketType="eTicket" ValidInterline="Yes" />
+      <TPA_Extensions>
+        <ValidatingCarrier Code="AA" />
+      </TPA_Extensions>
+    </PricedItinerary>
+    <PricedItinerary SequenceNumber="10">
+      <AirItinerary DirectionInd="Return">
+        <OriginDestinationOptions>
+          <OriginDestinationOption ElapsedTime="56">
+            <FlightSegment DepartureDateTime="2017-12-22T20:15:00" ArrivalDateTime="2017-12-22T21:11:00" StopQuantity="0" FlightNumber="5444" ResBookDesigCode="Q" ElapsedTime="56">
+              <DepartureAirport LocationCode="SAN" TerminalID="2" />
+              <ArrivalAirport LocationCode="LAX" TerminalID="7" />
+              <OperatingAirline CompanyShortName="/SKYWEST DBA UNITED EXPRESS" Code="UA" FlightNumber="5444" />
+              <Equipment AirEquipType="E7W" />
+              <MarketingAirline Code="UA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="N" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+          <OriginDestinationOption ElapsedTime="57">
+            <FlightSegment DepartureDateTime="2017-12-28T15:30:00" ArrivalDateTime="2017-12-28T16:27:00" StopQuantity="0" FlightNumber="5944" ResBookDesigCode="Q" ElapsedTime="57">
+              <DepartureAirport LocationCode="LAX" TerminalID="7" />
+              <ArrivalAirport LocationCode="SAN" TerminalID="2" />
+              <OperatingAirline CompanyShortName="/SKYWEST DBA UNITED EXPRESS" Code="UA" FlightNumber="5944" />
+              <Equipment AirEquipType="CRJ" />
+              <MarketingAirline Code="UA" />
+              <MarriageGrp>O</MarriageGrp>
+              <DepartureTimeZone GMTOffset="-8" />
+              <ArrivalTimeZone GMTOffset="-8" />
+              <OnTimePerformance Level="9" />
+              <TPA_Extensions>
+                <eTicket Ind="true" />
+              </TPA_Extensions>
+            </FlightSegment>
+          </OriginDestinationOption>
+        </OriginDestinationOptions>
+      </AirItinerary>
+      <AirItineraryPricingInfo PricingSource="ADVJR1" PricingSubSource="MIP">
+        <ItinTotalFare>
+          <BaseFare Amount="253.02" />
+          <FareConstruction Amount="253.02" />
+          <EquivFare Amount="253.02" />
+          <Taxes>
+            <Tax TaxCode="TOTALTAX" Amount="47.38" />
+          </Taxes>
+          <TotalFare Amount="300.40" />
+        </ItinTotalFare>
+        <PTC_FareBreakdowns>
+          <PTC_FareBreakdown>
+            <PassengerTypeQuantity Code="ADT" Quantity="1" />
+            <FareBasisCodes>
+              <FareBasisCode BookingCode="Q" AvailabilityBreak="true" DepartureAirportCode="SAN" ArrivalAirportCode="LAX">QEA0AFEN</FareBasisCode>
+              <FareBasisCode BookingCode="Q" AvailabilityBreak="true" DepartureAirportCode="LAX" ArrivalAirportCode="SAN">QEA0AFEN</FareBasisCode>
+            </FareBasisCodes>
+            <PassengerFare>
+              <BaseFare Amount="253.02" />
+              <FareConstruction Amount="253.02" />
+              <EquivFare Amount="253.02" />
+              <Taxes>
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="AY" Amount="5.60" />
+                <Tax TaxCode="US1" Amount="18.98" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="ZP" Amount="4.10" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <Tax TaxCode="XF" Amount="4.50" />
+                <TotalTax Amount="47.38" />
+              </Taxes>
+              <TotalFare Amount="300.40" />
+              <TPA_Extensions>
+                <Messages>
+                  <Message AirlineCode="UA" Type="N" FailCode="0" Info="NONREF/0VALUAFTDPT/CHGFEE" />
+                  <Message Type="W" FailCode="0" Info="VALIDATING CARRIER - UA" />
+                  <Message Type="W" FailCode="0" Info="CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES" />
+                </Messages>
+                <BaggageInformationList>
+                  <BaggageInformation>
+                    <Segment Id="0" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                  <BaggageInformation>
+                    <Segment Id="1" />
+                    <Allowance Pieces="0" />
+                  </BaggageInformation>
+                </BaggageInformationList>
+              </TPA_Extensions>
+            </PassengerFare>
+            <Endorsements NonRefundableIndicator="true" />
+            <TPA_Extensions>
+              <FareCalcLine Info="SAN UA LAX126.51UA SAN126.51USD253.02END ZPSANLAX XFSAN4.5LAX4.5" />
+            </TPA_Extensions>
+            <FareInfos>
+              <FareInfo>
+                <FareReference>Q</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="9" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+              <FareInfo>
+                <FareReference>Q</FareReference>
+                <TPA_Extensions>
+                  <SeatsRemaining Number="6" BelowMin="false" />
+                  <Cabin Cabin="Y" />
+                </TPA_Extensions>
+              </FareInfo>
+            </FareInfos>
+          </PTC_FareBreakdown>
+        </PTC_FareBreakdowns>
+        <FareInfos>
+          <FareInfo>
+            <FareReference>Q</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="9" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+          <FareInfo>
+            <FareReference>Q</FareReference>
+            <TPA_Extensions>
+              <SeatsRemaining Number="6" BelowMin="false" />
+              <Cabin Cabin="Y" />
+            </TPA_Extensions>
+          </FareInfo>
+        </FareInfos>
+        <TPA_Extensions>
+          <DivideInParty Indicator="false" />
+          <ValidatingCarrier SettlementMethod="ARC" NewVcxProcess="true">
+            <Default>UA</Default>
+          </ValidatingCarrier>
+        </TPA_Extensions>
+      </AirItineraryPricingInfo>
+      <TicketingInfo TicketType="eTicket" ValidInterline="Yes" />
+      <TPA_Extensions>
+        <ValidatingCarrier Code="UA" />
+      </TPA_Extensions>
+    </PricedItinerary>
+  </PricedItineraries>
+</OTA_AirLowFareSearchRS>

@@ -1,0 +1,684 @@
+HX
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfOTA_AirLowFareSearchRSPricedItinerary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="1" TotalAmount="824.71">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX HX X/HKG HX SEL266.50HX X/HKG HX LAX266.50NUC533.00END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="533.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="533.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="66.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.80" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.80" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="66.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="9.00" TaxCode="G3" TaxName="AIRPORT CONSTRUCTION FEE" />
+          <Tax Amount="20.50" TaxCode="G3" TaxName="AIRPORT CONSTRUCTION FEE" />
+          <Tax Amount="5.80" TaxCode="I5" TaxName="AIRPORT PASSENGER SECURITY CHARGE" />
+          <Tax Amount="5.80" TaxCode="I5" TaxName="AIRPORT PASSENGER SECURITY CHARGE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="824.71" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND RFD USD200/NOSH USD150" />
+          <Warning ShortText="VALIDATING CARRIER - HX" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="T3MUS23W" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="T3MUS23W" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="HX" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T18:20" ConnectionInd="O" DepartureDateTime="2018-02-13T10:45" DestinationTimeZone="8" DivideInd="true" ElapsedTime="935" eTicket="true" FlightNumber="69" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="T" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HKG" />
+        <Equipment AirEquipType="359" />
+        <MarketingAirline Code="HX" FlightNumber="69" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T01:00" ConnectionInd="OI" DepartureDateTime="2018-02-14T20:10" DestinationTimeZone="9" DivideInd="true" ElapsedTime="230" eTicket="true" FlightNumber="626" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="HX" FlightNumber="626" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="HKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-26T02:30" ConnectionInd="O" DepartureDateTime="2018-02-25T23:40" DestinationTimeZone="8" DivideInd="true" ElapsedTime="230" eTicket="true" FlightNumber="623" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="K" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HKG" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="HX" FlightNumber="623" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-26T08:15" ConnectionInd="OI" DepartureDateTime="2018-02-26T12:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="735" eTicket="true" FlightNumber="68" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="T" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="359" />
+        <MarketingAirline Code="HX" FlightNumber="68" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="HKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="3" TotalAmount="968.71">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX HX X/HKG HX SEL410.00HX X/HKG HX LAX266.50NUC676.50END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="677.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="677.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="66.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.80" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.80" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="66.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="9.00" TaxCode="G3" TaxName="AIRPORT CONSTRUCTION FEE" />
+          <Tax Amount="20.50" TaxCode="G3" TaxName="AIRPORT CONSTRUCTION FEE" />
+          <Tax Amount="5.80" TaxCode="I5" TaxName="AIRPORT PASSENGER SECURITY CHARGE" />
+          <Tax Amount="5.80" TaxCode="I5" TaxName="AIRPORT PASSENGER SECURITY CHARGE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="968.71" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND RFD USD200/NOSH USD150" />
+          <Warning ShortText="VALIDATING CARRIER - HX" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="X6MUS23W" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="T3MUS23W" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="HX" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T18:20" ConnectionInd="O" DepartureDateTime="2018-02-13T10:45" DestinationTimeZone="8" DivideInd="true" ElapsedTime="935" eTicket="true" FlightNumber="69" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="X" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HKG" />
+        <Equipment AirEquipType="359" />
+        <MarketingAirline Code="HX" FlightNumber="69" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T05:00" ConnectionInd="OI" DepartureDateTime="2018-02-14T23:55" DestinationTimeZone="9" DivideInd="true" ElapsedTime="245" eTicket="true" FlightNumber="6535" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="H" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="333" />
+        <MarketingAirline Code="HX" FlightNumber="6535" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="HKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-26T02:30" ConnectionInd="O" DepartureDateTime="2018-02-25T23:40" DestinationTimeZone="8" DivideInd="true" ElapsedTime="230" eTicket="true" FlightNumber="623" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="K" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HKG" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="HX" FlightNumber="623" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-26T08:15" ConnectionInd="OI" DepartureDateTime="2018-02-26T12:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="735" eTicket="true" FlightNumber="68" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="T" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="359" />
+        <MarketingAirline Code="HX" FlightNumber="68" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="HKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="1" TotalAmount="824.71">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX HX X/HKG HX SEL266.50HX X/HKG HX LAX266.50NUC533.00END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="533.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="533.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="66.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.80" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.80" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="66.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="9.00" TaxCode="G3" TaxName="AIRPORT CONSTRUCTION FEE" />
+          <Tax Amount="20.50" TaxCode="G3" TaxName="AIRPORT CONSTRUCTION FEE" />
+          <Tax Amount="5.80" TaxCode="I5" TaxName="AIRPORT PASSENGER SECURITY CHARGE" />
+          <Tax Amount="5.80" TaxCode="I5" TaxName="AIRPORT PASSENGER SECURITY CHARGE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="824.71" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND RFD USD200/NOSH USD150" />
+          <Warning ShortText="VALIDATING CARRIER - HX" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="T3MUS23W" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="T3MUS23W" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="HX" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T18:20" ConnectionInd="O" DepartureDateTime="2018-02-13T10:45" DestinationTimeZone="8" DivideInd="true" ElapsedTime="935" eTicket="true" FlightNumber="69" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="T" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HKG" />
+        <Equipment AirEquipType="359" />
+        <MarketingAirline Code="HX" FlightNumber="69" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T01:00" ConnectionInd="OI" DepartureDateTime="2018-02-14T20:10" DestinationTimeZone="9" DivideInd="true" ElapsedTime="230" eTicket="true" FlightNumber="626" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="HX" FlightNumber="626" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="HKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-26T02:30" ConnectionInd="O" DepartureDateTime="2018-02-25T23:40" DestinationTimeZone="8" DivideInd="true" ElapsedTime="230" eTicket="true" FlightNumber="623" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="K" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HKG" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="HX" FlightNumber="623" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-26T08:15" ConnectionInd="OI" DepartureDateTime="2018-02-26T12:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="735" eTicket="true" FlightNumber="68" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="T" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="359" />
+        <MarketingAirline Code="HX" FlightNumber="68" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="HKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="2" TotalAmount="824.71">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX HX X/HKG HX SEL266.50HX X/HKG HX LAX266.50NUC533.00END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="533.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="533.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="66.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.80" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.80" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="66.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="9.00" TaxCode="G3" TaxName="AIRPORT CONSTRUCTION FEE" />
+          <Tax Amount="20.50" TaxCode="G3" TaxName="AIRPORT CONSTRUCTION FEE" />
+          <Tax Amount="5.80" TaxCode="I5" TaxName="AIRPORT PASSENGER SECURITY CHARGE" />
+          <Tax Amount="5.80" TaxCode="I5" TaxName="AIRPORT PASSENGER SECURITY CHARGE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="824.71" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND RFD USD200/NOSH USD150" />
+          <Warning ShortText="VALIDATING CARRIER - HX" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="T3MUS23W" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="T3MUS23W" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="HX" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T18:20" ConnectionInd="O" DepartureDateTime="2018-02-13T10:45" DestinationTimeZone="8" DivideInd="true" ElapsedTime="935" eTicket="true" FlightNumber="69" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="T" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HKG" />
+        <Equipment AirEquipType="359" />
+        <MarketingAirline Code="HX" FlightNumber="69" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T04:15" ConnectionInd="OI" DepartureDateTime="2018-02-14T23:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="250" eTicket="true" FlightNumber="6527" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="L" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="333" />
+        <MarketingAirline Code="HX" FlightNumber="6527" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="HKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-26T02:30" ConnectionInd="O" DepartureDateTime="2018-02-25T23:40" DestinationTimeZone="8" DivideInd="true" ElapsedTime="230" eTicket="true" FlightNumber="623" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="K" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HKG" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="HX" FlightNumber="623" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-26T08:15" ConnectionInd="OI" DepartureDateTime="2018-02-26T12:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="735" eTicket="true" FlightNumber="68" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="T" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="359" />
+        <MarketingAirline Code="HX" FlightNumber="68" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="HKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="3" TotalAmount="968.71">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX HX X/HKG HX SEL410.00HX X/HKG HX LAX266.50NUC676.50END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="677.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="677.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="66.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.80" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.80" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="66.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="9.00" TaxCode="G3" TaxName="AIRPORT CONSTRUCTION FEE" />
+          <Tax Amount="20.50" TaxCode="G3" TaxName="AIRPORT CONSTRUCTION FEE" />
+          <Tax Amount="5.80" TaxCode="I5" TaxName="AIRPORT PASSENGER SECURITY CHARGE" />
+          <Tax Amount="5.80" TaxCode="I5" TaxName="AIRPORT PASSENGER SECURITY CHARGE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="968.71" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND RFD USD200/NOSH USD150" />
+          <Warning ShortText="VALIDATING CARRIER - HX" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="X6MUS23W" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="T3MUS23W" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="HX" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T18:20" ConnectionInd="O" DepartureDateTime="2018-02-13T10:45" DestinationTimeZone="8" DivideInd="true" ElapsedTime="935" eTicket="true" FlightNumber="69" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="X" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HKG" />
+        <Equipment AirEquipType="359" />
+        <MarketingAirline Code="HX" FlightNumber="69" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T05:00" ConnectionInd="OI" DepartureDateTime="2018-02-14T23:55" DestinationTimeZone="9" DivideInd="true" ElapsedTime="245" eTicket="true" FlightNumber="6535" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="H" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="333" />
+        <MarketingAirline Code="HX" FlightNumber="6535" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="HKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-26T02:30" ConnectionInd="O" DepartureDateTime="2018-02-25T23:40" DestinationTimeZone="8" DivideInd="true" ElapsedTime="230" eTicket="true" FlightNumber="623" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="K" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HKG" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="HX" FlightNumber="623" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-26T08:15" ConnectionInd="OI" DepartureDateTime="2018-02-26T12:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="735" eTicket="true" FlightNumber="68" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="T" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="359" />
+        <MarketingAirline Code="HX" FlightNumber="68" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="HKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="4" TotalAmount="1177.71">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX HX X/HKG HX SEL266.50HX X/HKG HX LAX619.00NUC885.50END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="886.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="886.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="66.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.80" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.80" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="66.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="9.00" TaxCode="G3" TaxName="AIRPORT CONSTRUCTION FEE" />
+          <Tax Amount="20.50" TaxCode="G3" TaxName="AIRPORT CONSTRUCTION FEE" />
+          <Tax Amount="5.80" TaxCode="I5" TaxName="AIRPORT PASSENGER SECURITY CHARGE" />
+          <Tax Amount="5.80" TaxCode="I5" TaxName="AIRPORT PASSENGER SECURITY CHARGE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1177.71" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND RFD USD200/NOSH USD150" />
+          <Warning ShortText="VALIDATING CARRIER - HX" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="T3MUS23W" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="NRTUS23W" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="HX" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T18:20" ConnectionInd="O" DepartureDateTime="2018-02-13T10:45" DestinationTimeZone="8" DivideInd="true" ElapsedTime="935" eTicket="true" FlightNumber="69" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="T" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HKG" />
+        <Equipment AirEquipType="359" />
+        <MarketingAirline Code="HX" FlightNumber="69" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T01:00" ConnectionInd="OI" DepartureDateTime="2018-02-14T20:10" DestinationTimeZone="9" DivideInd="true" ElapsedTime="230" eTicket="true" FlightNumber="626" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="HX" FlightNumber="626" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="HKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T09:20" ConnectionInd="O" DepartureDateTime="2018-02-25T06:30" DestinationTimeZone="8" DivideInd="true" ElapsedTime="230" eTicket="true" FlightNumber="627" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HKG" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="HX" FlightNumber="627" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="B" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T08:15" ConnectionInd="OI" DepartureDateTime="2018-02-25T12:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="735" eTicket="true" FlightNumber="68" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="N" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="359" />
+        <MarketingAirline Code="HX" FlightNumber="68" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="HKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="5" TotalAmount="1177.71">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX HX X/HKG HX SEL266.50HX X/HKG HX LAX619.00NUC885.50END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="886.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="886.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="66.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.80" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.80" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="66.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="9.00" TaxCode="G3" TaxName="AIRPORT CONSTRUCTION FEE" />
+          <Tax Amount="20.50" TaxCode="G3" TaxName="AIRPORT CONSTRUCTION FEE" />
+          <Tax Amount="5.80" TaxCode="I5" TaxName="AIRPORT PASSENGER SECURITY CHARGE" />
+          <Tax Amount="5.80" TaxCode="I5" TaxName="AIRPORT PASSENGER SECURITY CHARGE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1177.71" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND RFD USD200/NOSH USD150" />
+          <Warning ShortText="VALIDATING CARRIER - HX" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="T3MUS23W" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="NRTUS23W" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="HX" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T18:20" ConnectionInd="O" DepartureDateTime="2018-02-13T10:45" DestinationTimeZone="8" DivideInd="true" ElapsedTime="935" eTicket="true" FlightNumber="69" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="T" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HKG" />
+        <Equipment AirEquipType="359" />
+        <MarketingAirline Code="HX" FlightNumber="69" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T04:15" ConnectionInd="OI" DepartureDateTime="2018-02-14T23:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="250" eTicket="true" FlightNumber="6527" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="L" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="333" />
+        <MarketingAirline Code="HX" FlightNumber="6527" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="HKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T09:20" ConnectionInd="O" DepartureDateTime="2018-02-25T06:30" DestinationTimeZone="8" DivideInd="true" ElapsedTime="230" eTicket="true" FlightNumber="627" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HKG" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="HX" FlightNumber="627" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="B" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T08:15" ConnectionInd="OI" DepartureDateTime="2018-02-25T12:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="735" eTicket="true" FlightNumber="68" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="N" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="359" />
+        <MarketingAirline Code="HX" FlightNumber="68" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="HKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="6" TotalAmount="1320.71">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX HX X/HKG HX SEL410.00HX X/HKG HX LAX619.00NUC1029.00END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1029.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1029.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="66.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.80" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.80" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="66.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="9.00" TaxCode="G3" TaxName="AIRPORT CONSTRUCTION FEE" />
+          <Tax Amount="20.50" TaxCode="G3" TaxName="AIRPORT CONSTRUCTION FEE" />
+          <Tax Amount="5.80" TaxCode="I5" TaxName="AIRPORT PASSENGER SECURITY CHARGE" />
+          <Tax Amount="5.80" TaxCode="I5" TaxName="AIRPORT PASSENGER SECURITY CHARGE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1320.71" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND RFD USD200/NOSH USD150" />
+          <Warning ShortText="VALIDATING CARRIER - HX" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="X6MUS23W" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="NRTUS23W" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="HX" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T18:20" ConnectionInd="O" DepartureDateTime="2018-02-13T10:45" DestinationTimeZone="8" DivideInd="true" ElapsedTime="935" eTicket="true" FlightNumber="69" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="X" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HKG" />
+        <Equipment AirEquipType="359" />
+        <MarketingAirline Code="HX" FlightNumber="69" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T05:00" ConnectionInd="OI" DepartureDateTime="2018-02-14T23:55" DestinationTimeZone="9" DivideInd="true" ElapsedTime="245" eTicket="true" FlightNumber="6535" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="H" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="333" />
+        <MarketingAirline Code="HX" FlightNumber="6535" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="HKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T09:20" ConnectionInd="O" DepartureDateTime="2018-02-25T06:30" DestinationTimeZone="8" DivideInd="true" ElapsedTime="230" eTicket="true" FlightNumber="627" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HKG" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="HX" FlightNumber="627" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="B" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T08:15" ConnectionInd="OI" DepartureDateTime="2018-02-25T12:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="735" eTicket="true" FlightNumber="68" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="N" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="359" />
+        <MarketingAirline Code="HX" FlightNumber="68" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="HX" />
+        <OriginLocation LocationCode="HKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+</ArrayOfOTA_AirLowFareSearchRSPricedItinerary>

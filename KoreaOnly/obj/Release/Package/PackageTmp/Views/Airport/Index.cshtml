@@ -1,0 +1,58 @@
+﻿@model IEnumerable<KoreaOnly.Airports>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminView.cshtml";
+}
+
+
+<div class="container">
+    <br />
+    <a href="/SystemMaster/" class="btn btn-default" value="Go To Main Control Station">Go To Main Control Station</a>
+    <br/>
+    <br />
+    <h2 style="float:left;">Airports</h2>
+    <br />
+
+    <hr />
+    <br />
+    
+    <p style="float:right;">
+        @Html.ActionLink("Add New Airport", "Create")
+    </p>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AirportCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirportLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirportName)
+            </th>            
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AirportCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AirportLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AirportName)
+                </td>                
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { AirportCode = item.AirportCode }) |                    
+                    @Html.ActionLink("Delete", "Delete", new { AirportCode = item.AirportCode })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

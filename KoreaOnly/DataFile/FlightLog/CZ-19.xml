@@ -1,0 +1,1778 @@
+CZ
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfOTA_AirLowFareSearchRSPricedItinerary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="1" TotalAmount="1454.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ DLC500.00CZ SEL43.06CZ X/CAN CZ LAX590.00NUC1133.06END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1133.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1133.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="100.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="7.90" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1454.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUC" FarePassengerType="ADT" GlobalInd="PA" Market="LAXDLC" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="ZHZRQK" FarePassengerType="ADT" GlobalInd="EH" Market="DLCSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T11:25" ConnectionInd="OI" DepartureDateTime="2018-02-15T08:00" DestinationTimeZone="8" DivideInd="true" ElapsedTime="205" eTicket="true" FlightNumber="3604" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="H" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="DLC" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="3604" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T16:30" ConnectionInd="OI" DepartureDateTime="2018-02-15T14:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="85" eTicket="true" FlightNumber="695" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="Z" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="CZ" FlightNumber="695" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="DLC" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T18:00" ConnectionInd="O" DepartureDateTime="2018-02-25T14:50" DestinationTimeZone="8" DivideInd="true" ElapsedTime="250" eTicket="true" FlightNumber="338" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="319" />
+        <MarketingAirline Code="CZ" FlightNumber="338" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="2" TotalAmount="1454.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ DLC500.00CZ SEL43.06CZ X/CAN CZ LAX590.00NUC1133.06END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1133.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1133.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="100.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="7.90" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1454.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUC" FarePassengerType="ADT" GlobalInd="PA" Market="LAXDLC" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="ZHZRQK" FarePassengerType="ADT" GlobalInd="EH" Market="DLCSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T11:25" ConnectionInd="OI" DepartureDateTime="2018-02-15T08:00" DestinationTimeZone="8" DivideInd="true" ElapsedTime="205" eTicket="true" FlightNumber="3604" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="H" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="DLC" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="3604" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T16:30" ConnectionInd="OI" DepartureDateTime="2018-02-15T14:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="85" eTicket="true" FlightNumber="695" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="Z" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="CZ" FlightNumber="695" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="DLC" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T19:35" ConnectionInd="O" DepartureDateTime="2018-02-25T16:15" DestinationTimeZone="8" DivideInd="true" ElapsedTime="260" eTicket="true" FlightNumber="3062" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="CZ" FlightNumber="3062" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="3" TotalAmount="1454.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ DLC500.00CZ SEL43.06CZ X/CAN CZ LAX590.00NUC1133.06END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1133.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1133.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="100.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="7.90" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1454.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUC" FarePassengerType="ADT" GlobalInd="PA" Market="LAXDLC" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="ZHZRQK" FarePassengerType="ADT" GlobalInd="EH" Market="DLCSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T11:25" ConnectionInd="OI" DepartureDateTime="2018-02-15T08:00" DestinationTimeZone="8" DivideInd="true" ElapsedTime="205" eTicket="true" FlightNumber="3604" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="H" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="DLC" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="3604" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T16:30" ConnectionInd="OI" DepartureDateTime="2018-02-15T14:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="85" eTicket="true" FlightNumber="695" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="Z" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="CZ" FlightNumber="695" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="DLC" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T13:50" ConnectionInd="O" DepartureDateTime="2018-02-25T10:55" DestinationTimeZone="8" DivideInd="true" ElapsedTime="235" eTicket="true" FlightNumber="340" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="340" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="4" TotalAmount="1509.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ DLC500.00CZ SEL98.21CZ X/CAN CZ LAX590.00NUC1188.21END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1188.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1188.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="100.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="7.90" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1509.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUC" FarePassengerType="ADT" GlobalInd="PA" Market="LAXDLC" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="U2LRPQK" FarePassengerType="ADT" GlobalInd="EH" Market="DLCSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T11:25" ConnectionInd="OI" DepartureDateTime="2018-02-15T08:00" DestinationTimeZone="8" DivideInd="true" ElapsedTime="205" eTicket="true" FlightNumber="3604" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="H" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="DLC" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="3604" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T16:55" ConnectionInd="OI" DepartureDateTime="2018-02-15T14:25" DestinationTimeZone="9" DivideInd="true" ElapsedTime="90" eTicket="true" FlightNumber="4517" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="U" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="333" />
+        <MarketingAirline Code="CZ" FlightNumber="4517" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="DLC" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T13:50" ConnectionInd="O" DepartureDateTime="2018-02-25T10:55" DestinationTimeZone="8" DivideInd="true" ElapsedTime="235" eTicket="true" FlightNumber="340" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="340" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="5" TotalAmount="1509.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ DLC500.00CZ SEL98.21CZ X/CAN CZ LAX590.00NUC1188.21END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1188.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1188.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="100.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="7.90" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1509.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUC" FarePassengerType="ADT" GlobalInd="PA" Market="LAXDLC" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="U2LRPQK" FarePassengerType="ADT" GlobalInd="EH" Market="DLCSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T11:25" ConnectionInd="OI" DepartureDateTime="2018-02-15T08:00" DestinationTimeZone="8" DivideInd="true" ElapsedTime="205" eTicket="true" FlightNumber="3604" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="H" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="DLC" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="3604" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T16:55" ConnectionInd="OI" DepartureDateTime="2018-02-15T14:25" DestinationTimeZone="9" DivideInd="true" ElapsedTime="90" eTicket="true" FlightNumber="4517" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="U" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="333" />
+        <MarketingAirline Code="CZ" FlightNumber="4517" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="DLC" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T18:00" ConnectionInd="O" DepartureDateTime="2018-02-25T14:50" DestinationTimeZone="8" DivideInd="true" ElapsedTime="250" eTicket="true" FlightNumber="338" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="319" />
+        <MarketingAirline Code="CZ" FlightNumber="338" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="6" TotalAmount="1509.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ DLC500.00CZ SEL98.21CZ X/CAN CZ LAX590.00NUC1188.21END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1188.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1188.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="100.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="7.90" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1509.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUC" FarePassengerType="ADT" GlobalInd="PA" Market="LAXDLC" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="U2LRPQK" FarePassengerType="ADT" GlobalInd="EH" Market="DLCSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T11:25" ConnectionInd="OI" DepartureDateTime="2018-02-15T08:00" DestinationTimeZone="8" DivideInd="true" ElapsedTime="205" eTicket="true" FlightNumber="3604" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="H" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="DLC" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="3604" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T16:55" ConnectionInd="OI" DepartureDateTime="2018-02-15T14:25" DestinationTimeZone="9" DivideInd="true" ElapsedTime="90" eTicket="true" FlightNumber="4517" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="U" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="333" />
+        <MarketingAirline Code="CZ" FlightNumber="4517" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="DLC" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T19:35" ConnectionInd="O" DepartureDateTime="2018-02-25T16:15" DestinationTimeZone="8" DivideInd="true" ElapsedTime="260" eTicket="true" FlightNumber="3062" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="CZ" FlightNumber="3062" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="7" TotalAmount="1532.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ SHE500.00CZ SEL120.87CZ X/CAN CZ LAX590.00NUC1210.87END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1211.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1211.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="100.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="7.90" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1532.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUC" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSHE" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="L2LRPQK" FarePassengerType="ADT" GlobalInd="EH" Market="SHESEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T13:40" ConnectionInd="OI" DepartureDateTime="2018-02-15T07:50" DestinationTimeZone="8" DivideInd="true" ElapsedTime="350" eTicket="true" FlightNumber="3601" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="H" RPH="2" StopQuantity="1">
+        <DestinationLocation LocationCode="SHE" />
+        <Equipment AirEquipType="320" />
+        <IntermediatePointInfo>
+          <FlightSegment ArrivalDateTime="2018-02-15T11:05" DepartureDateTime="2018-02-15T12:10" Duration="65" ElapsedTime="195" IntermediateTimeZone="8" RPH="1">
+            <Equipment AirEquipType="320" />
+            <IntermediateLocation LocationCode="TAO" />
+          </FlightSegment>
+        </IntermediatePointInfo>
+        <MarketingAirline Code="CZ" FlightNumber="3601" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T19:30" ConnectionInd="OI" DepartureDateTime="2018-02-15T17:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="90" eTicket="true" FlightNumber="671" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="L" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="671" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="SHE" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T13:50" ConnectionInd="O" DepartureDateTime="2018-02-25T10:55" DestinationTimeZone="8" DivideInd="true" ElapsedTime="235" eTicket="true" FlightNumber="340" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="340" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="8" TotalAmount="1532.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ SHE500.00CZ SEL120.87CZ X/CAN CZ LAX590.00NUC1210.87END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1211.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1211.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="100.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="7.90" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1532.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUC" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSHE" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="L2LRPQK" FarePassengerType="ADT" GlobalInd="EH" Market="SHESEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T13:40" ConnectionInd="OI" DepartureDateTime="2018-02-15T07:50" DestinationTimeZone="8" DivideInd="true" ElapsedTime="350" eTicket="true" FlightNumber="3601" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="H" RPH="2" StopQuantity="1">
+        <DestinationLocation LocationCode="SHE" />
+        <Equipment AirEquipType="320" />
+        <IntermediatePointInfo>
+          <FlightSegment ArrivalDateTime="2018-02-15T11:05" DepartureDateTime="2018-02-15T12:10" Duration="65" ElapsedTime="195" IntermediateTimeZone="8" RPH="1">
+            <Equipment AirEquipType="320" />
+            <IntermediateLocation LocationCode="TAO" />
+          </FlightSegment>
+        </IntermediatePointInfo>
+        <MarketingAirline Code="CZ" FlightNumber="3601" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T19:30" ConnectionInd="OI" DepartureDateTime="2018-02-15T17:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="90" eTicket="true" FlightNumber="671" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="L" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="671" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="SHE" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T18:00" ConnectionInd="O" DepartureDateTime="2018-02-25T14:50" DestinationTimeZone="8" DivideInd="true" ElapsedTime="250" eTicket="true" FlightNumber="338" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="319" />
+        <MarketingAirline Code="CZ" FlightNumber="338" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="9" TotalAmount="1532.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ SHE500.00CZ SEL120.87CZ X/CAN CZ LAX590.00NUC1210.87END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1211.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1211.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="100.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="7.90" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1532.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUC" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSHE" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="L2LRPQK" FarePassengerType="ADT" GlobalInd="EH" Market="SHESEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T13:40" ConnectionInd="OI" DepartureDateTime="2018-02-15T07:50" DestinationTimeZone="8" DivideInd="true" ElapsedTime="350" eTicket="true" FlightNumber="3601" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="H" RPH="2" StopQuantity="1">
+        <DestinationLocation LocationCode="SHE" />
+        <Equipment AirEquipType="320" />
+        <IntermediatePointInfo>
+          <FlightSegment ArrivalDateTime="2018-02-15T11:05" DepartureDateTime="2018-02-15T12:10" Duration="65" ElapsedTime="195" IntermediateTimeZone="8" RPH="1">
+            <Equipment AirEquipType="320" />
+            <IntermediateLocation LocationCode="TAO" />
+          </FlightSegment>
+        </IntermediatePointInfo>
+        <MarketingAirline Code="CZ" FlightNumber="3601" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T19:30" ConnectionInd="OI" DepartureDateTime="2018-02-15T17:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="90" eTicket="true" FlightNumber="671" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="L" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="671" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="SHE" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T19:35" ConnectionInd="O" DepartureDateTime="2018-02-25T16:15" DestinationTimeZone="8" DivideInd="true" ElapsedTime="260" eTicket="true" FlightNumber="3062" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="CZ" FlightNumber="3062" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="10" TotalAmount="1573.41">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ SEL690.00CZ X/CAN CZ LAX590.00NUC1280.00END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1280.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1280.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1573.41" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T20:35" ConnectionInd="OI" DepartureDateTime="2018-02-15T16:20" DestinationTimeZone="9" DivideInd="true" ElapsedTime="195" eTicket="true" FlightNumber="339" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="P" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="339" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T19:35" ConnectionInd="O" DepartureDateTime="2018-02-25T16:15" DestinationTimeZone="8" DivideInd="true" ElapsedTime="260" eTicket="true" FlightNumber="3062" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="CZ" FlightNumber="3062" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="11" TotalAmount="1573.41">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ SEL690.00CZ X/CAN CZ LAX590.00NUC1280.00END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1280.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1280.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1573.41" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T15:15" ConnectionInd="OI" DepartureDateTime="2018-02-15T10:45" DestinationTimeZone="9" DivideInd="true" ElapsedTime="210" eTicket="true" FlightNumber="3061" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="P" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="3061" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T18:00" ConnectionInd="O" DepartureDateTime="2018-02-25T14:50" DestinationTimeZone="8" DivideInd="true" ElapsedTime="250" eTicket="true" FlightNumber="338" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="319" />
+        <MarketingAirline Code="CZ" FlightNumber="338" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="12" TotalAmount="1573.41">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ SEL690.00CZ X/CAN CZ LAX590.00NUC1280.00END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1280.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1280.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1573.41" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T15:15" ConnectionInd="OI" DepartureDateTime="2018-02-15T10:45" DestinationTimeZone="9" DivideInd="true" ElapsedTime="210" eTicket="true" FlightNumber="3061" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="P" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="3061" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T13:50" ConnectionInd="O" DepartureDateTime="2018-02-25T10:55" DestinationTimeZone="8" DivideInd="true" ElapsedTime="235" eTicket="true" FlightNumber="340" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="340" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="13" TotalAmount="1573.41">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ SEL690.00CZ X/CAN CZ LAX590.00NUC1280.00END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1280.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1280.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1573.41" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T13:50" ConnectionInd="OI" DepartureDateTime="2018-02-15T09:25" DestinationTimeZone="9" DivideInd="true" ElapsedTime="205" eTicket="true" FlightNumber="337" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="P" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="319" />
+        <MarketingAirline Code="CZ" FlightNumber="337" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T19:35" ConnectionInd="O" DepartureDateTime="2018-02-25T16:15" DestinationTimeZone="8" DivideInd="true" ElapsedTime="260" eTicket="true" FlightNumber="3062" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="CZ" FlightNumber="3062" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="14" TotalAmount="1573.41">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ SEL690.00CZ X/CAN CZ LAX590.00NUC1280.00END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1280.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1280.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1573.41" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T13:50" ConnectionInd="OI" DepartureDateTime="2018-02-15T09:25" DestinationTimeZone="9" DivideInd="true" ElapsedTime="205" eTicket="true" FlightNumber="337" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="P" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="319" />
+        <MarketingAirline Code="CZ" FlightNumber="337" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T18:00" ConnectionInd="O" DepartureDateTime="2018-02-25T14:50" DestinationTimeZone="8" DivideInd="true" ElapsedTime="250" eTicket="true" FlightNumber="338" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="319" />
+        <MarketingAirline Code="CZ" FlightNumber="338" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="15" TotalAmount="1573.41">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ SEL690.00CZ X/CAN CZ LAX590.00NUC1280.00END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1280.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1280.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1573.41" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T13:50" ConnectionInd="OI" DepartureDateTime="2018-02-15T09:25" DestinationTimeZone="9" DivideInd="true" ElapsedTime="205" eTicket="true" FlightNumber="337" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="P" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="319" />
+        <MarketingAirline Code="CZ" FlightNumber="337" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T13:50" ConnectionInd="O" DepartureDateTime="2018-02-25T10:55" DestinationTimeZone="8" DivideInd="true" ElapsedTime="235" eTicket="true" FlightNumber="340" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="340" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="16" TotalAmount="1573.41">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ SEL690.00CZ X/CAN CZ LAX590.00NUC1280.00END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1280.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1280.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1573.41" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T15:15" ConnectionInd="OI" DepartureDateTime="2018-02-15T10:45" DestinationTimeZone="9" DivideInd="true" ElapsedTime="210" eTicket="true" FlightNumber="3061" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="P" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="3061" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T19:35" ConnectionInd="O" DepartureDateTime="2018-02-25T16:15" DestinationTimeZone="8" DivideInd="true" ElapsedTime="260" eTicket="true" FlightNumber="3062" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="CZ" FlightNumber="3062" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="17" TotalAmount="1573.41">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ SEL690.00CZ X/CAN CZ LAX590.00NUC1280.00END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1280.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1280.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1573.41" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T20:35" ConnectionInd="OI" DepartureDateTime="2018-02-15T16:20" DestinationTimeZone="9" DivideInd="true" ElapsedTime="195" eTicket="true" FlightNumber="339" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="P" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="339" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T18:00" ConnectionInd="O" DepartureDateTime="2018-02-25T14:50" DestinationTimeZone="8" DivideInd="true" ElapsedTime="250" eTicket="true" FlightNumber="338" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="319" />
+        <MarketingAirline Code="CZ" FlightNumber="338" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="18" TotalAmount="1573.41">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ SEL690.00CZ X/CAN CZ LAX590.00NUC1280.00END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1280.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1280.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1573.41" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T20:35" ConnectionInd="OI" DepartureDateTime="2018-02-15T16:20" DestinationTimeZone="9" DivideInd="true" ElapsedTime="195" eTicket="true" FlightNumber="339" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="P" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="339" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T13:50" ConnectionInd="O" DepartureDateTime="2018-02-25T10:55" DestinationTimeZone="8" DivideInd="true" ElapsedTime="235" eTicket="true" FlightNumber="340" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="340" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="19" TotalAmount="1581.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX CZ X/CAN CZ X/CGO CZ SEL690.00CZ X/CAN CZ LAX590.00NUC1280.00END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1280.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1280.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YR" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="7.90" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="14.20" TaxCode="CN" TaxName="AIRPORT FEE" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1581.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="Q/NONEND PENALTY APPLS" />
+          <Warning ShortText="VALIDATING CARRIER - CZ" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="H2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="K2NRCUS" FarePassengerType="ADT" GlobalInd="PA" Market="SELLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="CZ" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-15T05:40" ConnectionInd="O" DepartureDateTime="2018-02-13T22:20" DestinationTimeZone="8" DivideInd="true" ElapsedTime="920" eTicket="true" FlightNumber="328" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="H" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T09:50" ConnectionInd="OI" DepartureDateTime="2018-02-15T07:30" DestinationTimeZone="8" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="3392" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="CGO" />
+        <Equipment AirEquipType="73Q" />
+        <MarketingAirline Code="CZ" FlightNumber="3392" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T15:30" ConnectionInd="OI" DepartureDateTime="2018-02-15T12:10" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="4529" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="H" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="73J" />
+        <MarketingAirline Code="CZ" FlightNumber="4529" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="CGO" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T13:50" ConnectionInd="O" DepartureDateTime="2018-02-25T10:55" DestinationTimeZone="8" DivideInd="true" ElapsedTime="235" eTicket="true" FlightNumber="340" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="P" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="340" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="C" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:10" ConnectionInd="OI" DepartureDateTime="2018-02-25T21:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="760" eTicket="true" FlightNumber="327" MarketingCabin="Y" OriginTimeZone="8" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+</ArrayOfOTA_AirLowFareSearchRSPricedItinerary>

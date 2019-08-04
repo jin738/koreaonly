@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/AdminView.cshtml";
+}
+
+
+<div class="row">
+    <div style="width:700px; margin:10px auto;">
+        <br />
+        <br />
+
+        <br />
+        <br />
+        <form class="form-horizontal" action="/SystemMaster/Index" method="post">
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Username</label>
+                <div class="col-md-10">
+                    <input type="text" name="User" class="form-control" placeholder="Enter Username" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Password</label>
+                <div class="col-md-10">
+                    <input type="password" name="Pass" class="form-control" placeholder="Enter Password" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-10">
+                    <input type="submit" class="btn btn-dark" value="Give Me Access" />
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>

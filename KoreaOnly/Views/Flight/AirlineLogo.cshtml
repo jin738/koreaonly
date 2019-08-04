@@ -1,0 +1,39 @@
+﻿@model KoreaOnly.Airlines
+
+@{ 
+    Layout = "~/Views/AdminView.cshtml";
+}
+
+<div class="container">
+    <br />
+    <h2>Add Airline Logo</h2>
+
+
+    @using (Html.BeginForm("AirlineLogo", "Flight", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Upload File</label>
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Files, new { type = "file", name = "Files" })
+                @Html.ValidationMessageFor(model => model.AirlineCode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Upload" class="btn btn-default" />
+                
+            </div>
+        </div>
+        
+    }
+
+    
+        <div class="col-md-12">
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    
+
+</div>

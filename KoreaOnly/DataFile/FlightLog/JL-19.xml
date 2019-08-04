@@ -1,0 +1,2070 @@
+JL
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfOTA_AirLowFareSearchRSPricedItinerary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="1" TotalAmount="1301.21">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/SAN JL X/TYO JL SEL M389.00JL TYO338.28JL X/OSA JL LAX M243.00NUC970.28END ROE1.00 XFLAX4.5SAN4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="970.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="970.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="2.70" TaxCode="HJ" TaxName="PASSENGER FACILITY CHARGE  DOMESTIC DEPARTURES" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="2.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.00" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1301.21" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONEND/NONREF/FEE FOR CHG" />
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="NLU0Q8O1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YNN0OG4A" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="QLX0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-13T10:30" ConnectionInd="O" DepartureDateTime="2018-02-13T09:35" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="55" eTicket="true" FlightNumber="7254" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="SAN" />
+        <Equipment AirEquipType="E75" />
+        <FlightDetails TrafficRestrictionCode="Q" />
+        <MarketingAirline Code="JL" FlightNumber="7254" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" CompanyShortName="/COMPASS AIRLINES AS AMERICAN EAGLE" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T16:45" ConnectionInd="OI" DepartureDateTime="2018-02-13T11:45" DestinationTimeZone="9" DivideInd="false" ElapsedTime="720" eTicket="true" FlightNumber="65" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="788" />
+        <MarketingAirline Code="JL" FlightNumber="65" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="SAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="false" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="N" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T22:50" ConnectionInd="O" DepartureDateTime="2018-02-25T20:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="130" eTicket="true" FlightNumber="5256" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="5256" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-26T08:40" ConnectionInd="OI" DepartureDateTime="2018-02-26T07:15" DestinationTimeZone="9" DivideInd="true" ElapsedTime="85" eTicket="true" FlightNumber="221" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="KIX" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="221" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-26T10:50" ConnectionInd="OI" DepartureDateTime="2018-02-26T17:45" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="605" eTicket="true" FlightNumber="60" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Q" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="788" />
+        <MarketingAirline Code="JL" FlightNumber="60" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="KIX" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="2" TotalAmount="1335.11">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/SAN JL X/TYO JL SEL M389.00JL TYO338.28JL LAX293.00NUC1020.28END ROE1.00 XFLAX4.5SAN4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1020.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1020.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1335.11" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONEND/NONREF/FEE FOR CHG" />
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="NLU0Q8O1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YNN0OG4A" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="QLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-13T10:30" ConnectionInd="O" DepartureDateTime="2018-02-13T09:35" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="55" eTicket="true" FlightNumber="7254" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="SAN" />
+        <Equipment AirEquipType="E75" />
+        <FlightDetails TrafficRestrictionCode="Q" />
+        <MarketingAirline Code="JL" FlightNumber="7254" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" CompanyShortName="/COMPASS AIRLINES AS AMERICAN EAGLE" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T16:45" ConnectionInd="OI" DepartureDateTime="2018-02-13T11:45" DestinationTimeZone="9" DivideInd="false" ElapsedTime="720" eTicket="true" FlightNumber="65" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="788" />
+        <MarketingAirline Code="JL" FlightNumber="65" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="SAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="false" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="N" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T12:30" ConnectionInd="O" DepartureDateTime="2018-02-25T10:10" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="5202" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="74H" />
+        <MarketingAirline Code="JL" FlightNumber="5202" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:00" ConnectionInd="OI" DepartureDateTime="2018-02-25T18:45" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="615" eTicket="true" FlightNumber="7016" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Q" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7016" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="3" TotalAmount="1358.91">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/SAN JL X/TYO JL SEL M389.00JL KMQ275.12JL X/TYO JL LAX M367.50NUC1031.62END ROE1.00 XFLAX4.5SAN4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1032.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1032.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="2.70" TaxCode="HJ" TaxName="PASSENGER FACILITY CHARGE DOMESTIC ARRIVALS" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="23.50" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1358.91" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONEND/NONREF/FEE FOR CHG" />
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="NONEND/FEE ON CHG/FEE ON RFND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="NLU0Q8O1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="BNN0OGEE" FarePassengerType="ADT" GlobalInd="EH" Market="SELKMQ" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="KMQLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-13T10:30" ConnectionInd="O" DepartureDateTime="2018-02-13T09:35" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="55" eTicket="true" FlightNumber="7254" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="SAN" />
+        <Equipment AirEquipType="E75" />
+        <FlightDetails TrafficRestrictionCode="Q" />
+        <MarketingAirline Code="JL" FlightNumber="7254" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" CompanyShortName="/COMPASS AIRLINES AS AMERICAN EAGLE" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T16:45" ConnectionInd="OI" DepartureDateTime="2018-02-13T11:45" DestinationTimeZone="9" DivideInd="false" ElapsedTime="720" eTicket="true" FlightNumber="65" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="788" />
+        <MarketingAirline Code="JL" FlightNumber="65" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="SAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="false" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="N" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T10:50" ConnectionInd="O" DepartureDateTime="2018-02-25T09:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="105" eTicket="true" FlightNumber="5228" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="KMQ" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="73J" />
+        <MarketingAirline Code="JL" FlightNumber="5228" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T15:50" ConnectionInd="OI" DepartureDateTime="2018-02-25T14:45" DestinationTimeZone="9" DivideInd="true" ElapsedTime="65" eTicket="true" FlightNumber="188" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="188" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="KMQ" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:25" ConnectionInd="OI" DepartureDateTime="2018-02-25T19:20" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="605" eTicket="true" FlightNumber="7018" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7018" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="4" TotalAmount="1359.21">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/SAN JL X/TYO JL SEL M389.00JL TYO338.28JL LAX307.50NUC1034.78END ROE1.00 XFLAX4.5SAN4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1035.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1035.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="23.50" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1359.21" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONEND/NONREF/FEE FOR CHG" />
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="NLU0Q8O1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YNN0OG4A" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-13T10:30" ConnectionInd="O" DepartureDateTime="2018-02-13T09:35" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="55" eTicket="true" FlightNumber="7254" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="SAN" />
+        <Equipment AirEquipType="E75" />
+        <FlightDetails TrafficRestrictionCode="Q" />
+        <MarketingAirline Code="JL" FlightNumber="7254" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" CompanyShortName="/COMPASS AIRLINES AS AMERICAN EAGLE" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T16:45" ConnectionInd="OI" DepartureDateTime="2018-02-13T11:45" DestinationTimeZone="9" DivideInd="false" ElapsedTime="720" eTicket="true" FlightNumber="65" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="788" />
+        <MarketingAirline Code="JL" FlightNumber="65" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="SAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="false" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="N" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T12:30" ConnectionInd="O" DepartureDateTime="2018-02-25T10:10" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="5202" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="74H" />
+        <MarketingAirline Code="JL" FlightNumber="5202" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:25" ConnectionInd="OI" DepartureDateTime="2018-02-25T19:20" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="605" eTicket="true" FlightNumber="7018" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7018" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="5" TotalAmount="1379.91">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/CHI JL TYO25M303.75JL SEL119.99JL KMQ262.20JL X/TYO JL LAX M367.50NUC1053.44END ROE1.00 XFLAX4.5ORD4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1053.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1053.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="2.70" TaxCode="HJ" TaxName="PASSENGER FACILITY CHARGE DOMESTIC ARRIVALS" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="23.50" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1379.91" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NO CHG/RFND RESTR APPLY" />
+          <Warning ShortText="RFND RESTR APPLY" />
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="QLX0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="VNN32ACF" FarePassengerType="ADT" GlobalInd="EH" Market="TYOSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="BNN01ACD" FarePassengerType="ADT" GlobalInd="EH" Market="SELKMQ" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="KMQLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <LastTicketingDate>2018-02-12</LastTicketingDate>
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T06:12" ConnectionInd="O" DepartureDateTime="2018-02-13T23:59" DestinationTimeZone="-6" DivideInd="true" ElapsedTime="253" eTicket="true" FlightNumber="7522" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="Q" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="ORD" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="738" />
+        <FlightDetails TrafficRestrictionCode="Q" />
+        <MarketingAirline Code="JL" FlightNumber="7522" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T15:05" ConnectionInd="OI" DepartureDateTime="2018-02-14T10:55" DestinationTimeZone="9" DivideInd="true" ElapsedTime="790" eTicket="true" FlightNumber="9" MarketingCabin="Y" OriginTimeZone="-6" ResBookDesigCode="Q" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="JL" FlightNumber="9" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="ORD" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-15T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="V" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T10:50" ConnectionInd="O" DepartureDateTime="2018-02-25T09:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="105" eTicket="true" FlightNumber="5228" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="KMQ" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="73J" />
+        <MarketingAirline Code="JL" FlightNumber="5228" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T15:50" ConnectionInd="OI" DepartureDateTime="2018-02-25T14:45" DestinationTimeZone="9" DivideInd="true" ElapsedTime="65" eTicket="true" FlightNumber="188" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="188" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="KMQ" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:25" ConnectionInd="OI" DepartureDateTime="2018-02-25T19:20" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="605" eTicket="true" FlightNumber="7018" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7018" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="6" TotalAmount="1391.61">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/TYO JL SEL M450.00JL TYO338.28JL LAX293.00NUC1081.28END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1081.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1081.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1391.61" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="NLU0Q4D1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YNN0OG4A" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="QLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T16:50" ConnectionInd="O" DepartureDateTime="2018-02-13T11:50" DestinationTimeZone="9" DivideInd="false" ElapsedTime="720" eTicket="true" FlightNumber="7015" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="772" />
+        <MarketingAirline Code="JL" FlightNumber="7015" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="false" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="N" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T12:30" ConnectionInd="O" DepartureDateTime="2018-02-25T10:10" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="5202" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="74H" />
+        <MarketingAirline Code="JL" FlightNumber="5202" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:00" ConnectionInd="OI" DepartureDateTime="2018-02-25T18:45" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="615" eTicket="true" FlightNumber="7016" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Q" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7016" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="7" TotalAmount="1399.21">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/CHI JL X/TYO JL SEL25M486.25JL TYO338.28JL X/OSA JL LAX M243.00NUC1067.53END ROE1.00 XFLAX4.5ORD4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1068.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1068.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="2.70" TaxCode="HJ" TaxName="PASSENGER FACILITY CHARGE  DOMESTIC DEPARTURES" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="2.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.00" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1399.21" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONEND/NONREF/FEE FOR CHG" />
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="NLU0Q8O1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YNN0OG4A" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="QLX0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T06:12" ConnectionInd="O" DepartureDateTime="2018-02-13T23:59" DestinationTimeZone="-6" DivideInd="false" ElapsedTime="253" eTicket="true" FlightNumber="7522" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="ORD" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="738" />
+        <FlightDetails TrafficRestrictionCode="Q" />
+        <MarketingAirline Code="JL" FlightNumber="7522" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T15:05" ConnectionInd="OI" DepartureDateTime="2018-02-14T10:55" DestinationTimeZone="9" DivideInd="false" ElapsedTime="790" eTicket="true" FlightNumber="9" MarketingCabin="Y" OriginTimeZone="-6" ResBookDesigCode="N" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="JL" FlightNumber="9" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="ORD" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-15T18:40" DestinationTimeZone="9" DivideInd="false" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="N" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T22:50" ConnectionInd="O" DepartureDateTime="2018-02-25T20:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="130" eTicket="true" FlightNumber="5256" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="5256" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-26T08:40" ConnectionInd="OI" DepartureDateTime="2018-02-26T07:15" DestinationTimeZone="9" DivideInd="true" ElapsedTime="85" eTicket="true" FlightNumber="221" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="KIX" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="221" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-26T10:50" ConnectionInd="OI" DepartureDateTime="2018-02-26T17:45" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="605" eTicket="true" FlightNumber="60" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Q" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="788" />
+        <MarketingAirline Code="JL" FlightNumber="60" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="KIX" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="8" TotalAmount="1400.91">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/SAN JL X/TYO JL SEL M389.00JL AOJ302.94JL X/TYO JL LAX M382.50NUC1074.44END ROE1.00 XFLAX4.5SAN4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1074.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1074.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="2.70" TaxCode="HJ" TaxName="PASSENGER FACILITY CHARGE DOMESTIC ARRIVALS" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="23.50" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1400.91" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONEND/NONREF/FEE FOR CHG" />
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="NONEND/FEE ON CHG/FEE ON RFND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="NLU0Q8O1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="BNN0OGEE" FarePassengerType="ADT" GlobalInd="EH" Market="SELAOJ" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="AOJLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-13T10:30" ConnectionInd="O" DepartureDateTime="2018-02-13T09:35" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="55" eTicket="true" FlightNumber="7254" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="SAN" />
+        <Equipment AirEquipType="E75" />
+        <FlightDetails TrafficRestrictionCode="Q" />
+        <MarketingAirline Code="JL" FlightNumber="7254" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" CompanyShortName="/COMPASS AIRLINES AS AMERICAN EAGLE" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T16:45" ConnectionInd="OI" DepartureDateTime="2018-02-13T11:45" DestinationTimeZone="9" DivideInd="false" ElapsedTime="720" eTicket="true" FlightNumber="65" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="788" />
+        <MarketingAirline Code="JL" FlightNumber="65" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="SAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="false" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="N" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T12:50" ConnectionInd="O" DepartureDateTime="2018-02-25T10:30" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="5252" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="AOJ" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="5252" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:15" ConnectionInd="OI" DepartureDateTime="2018-02-25T16:50" DestinationTimeZone="9" DivideInd="true" ElapsedTime="85" eTicket="true" FlightNumber="148" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="148" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="AOJ" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:25" ConnectionInd="OI" DepartureDateTime="2018-02-25T19:20" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="605" eTicket="true" FlightNumber="7018" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7018" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="9" TotalAmount="1400.91">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/SAN JL X/TYO JL SEL M389.00JL AOJ302.94JL X/TYO JL LAX M382.50NUC1074.44END ROE1.00 XFLAX4.5SAN4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1074.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1074.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="2.70" TaxCode="HJ" TaxName="PASSENGER FACILITY CHARGE DOMESTIC ARRIVALS" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="23.50" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1400.91" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONEND/NONREF/FEE FOR CHG" />
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="NONEND/FEE ON CHG/FEE ON RFND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="NLU0Q8O1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="BNN0OGEE" FarePassengerType="ADT" GlobalInd="EH" Market="SELAOJ" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="AOJLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-13T10:30" ConnectionInd="O" DepartureDateTime="2018-02-13T09:35" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="55" eTicket="true" FlightNumber="7254" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="SAN" />
+        <Equipment AirEquipType="E75" />
+        <FlightDetails TrafficRestrictionCode="Q" />
+        <MarketingAirline Code="JL" FlightNumber="7254" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" CompanyShortName="/COMPASS AIRLINES AS AMERICAN EAGLE" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T16:45" ConnectionInd="OI" DepartureDateTime="2018-02-13T11:45" DestinationTimeZone="9" DivideInd="false" ElapsedTime="720" eTicket="true" FlightNumber="65" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="788" />
+        <MarketingAirline Code="JL" FlightNumber="65" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="SAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="false" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="N" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T12:50" ConnectionInd="O" DepartureDateTime="2018-02-25T10:30" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="5252" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="AOJ" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="5252" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T16:55" ConnectionInd="OI" DepartureDateTime="2018-02-25T15:30" DestinationTimeZone="9" DivideInd="true" ElapsedTime="85" eTicket="true" FlightNumber="146" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="146" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="AOJ" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:25" ConnectionInd="OI" DepartureDateTime="2018-02-25T19:20" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="605" eTicket="true" FlightNumber="7018" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7018" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="10" TotalAmount="1415.41">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/TYO JL SEL M450.00JL KMQ275.12JL X/TYO JL LAX M367.50NUC1092.62END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1093.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1093.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="2.70" TaxCode="HJ" TaxName="PASSENGER FACILITY CHARGE DOMESTIC ARRIVALS" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="23.50" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1415.41" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="NONEND/FEE ON CHG/FEE ON RFND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="NLU0Q4D1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="BNN0OGEE" FarePassengerType="ADT" GlobalInd="EH" Market="SELKMQ" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="KMQLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T16:50" ConnectionInd="O" DepartureDateTime="2018-02-13T11:50" DestinationTimeZone="9" DivideInd="false" ElapsedTime="720" eTicket="true" FlightNumber="7015" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="772" />
+        <MarketingAirline Code="JL" FlightNumber="7015" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="false" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="N" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T10:50" ConnectionInd="O" DepartureDateTime="2018-02-25T09:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="105" eTicket="true" FlightNumber="5228" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="KMQ" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="73J" />
+        <MarketingAirline Code="JL" FlightNumber="5228" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T15:50" ConnectionInd="OI" DepartureDateTime="2018-02-25T14:45" DestinationTimeZone="9" DivideInd="true" ElapsedTime="65" eTicket="true" FlightNumber="188" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="188" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="KMQ" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:25" ConnectionInd="OI" DepartureDateTime="2018-02-25T19:20" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="605" eTicket="true" FlightNumber="7018" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7018" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="11" TotalAmount="1415.71">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/TYO JL SEL M450.00JL TYO338.28JL LAX307.50NUC1095.78END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1096.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1096.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="23.50" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1415.71" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="NLU0Q4D1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YNN0OG4A" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T16:50" ConnectionInd="O" DepartureDateTime="2018-02-13T11:50" DestinationTimeZone="9" DivideInd="false" ElapsedTime="720" eTicket="true" FlightNumber="7015" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="772" />
+        <MarketingAirline Code="JL" FlightNumber="7015" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="false" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="N" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T12:30" ConnectionInd="O" DepartureDateTime="2018-02-25T10:10" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="5202" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="74H" />
+        <MarketingAirline Code="JL" FlightNumber="5202" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:25" ConnectionInd="OI" DepartureDateTime="2018-02-25T19:20" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="605" eTicket="true" FlightNumber="7018" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7018" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="12" TotalAmount="1424.91">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/CHI JL TYO25M303.75JL SEL119.99JL SPK306.65JL X/TYO JL LAX M367.50NUC1097.89END ROE1.00 XFLAX4.5ORD4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1098.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1098.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="2.70" TaxCode="HJ" TaxName="PASSENGER FACILITY CHARGE DOMESTIC ARRIVALS" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="23.50" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1424.91" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NO CHG/RFND RESTR APPLY" />
+          <Warning ShortText="RFND RESTR APPLY" />
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="QLX0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="VNN32ACF" FarePassengerType="ADT" GlobalInd="EH" Market="TYOSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="BNN01ACD" FarePassengerType="ADT" GlobalInd="EH" Market="SELSPK" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="SPKLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <LastTicketingDate>2018-02-12</LastTicketingDate>
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T06:12" ConnectionInd="O" DepartureDateTime="2018-02-13T23:59" DestinationTimeZone="-6" DivideInd="true" ElapsedTime="253" eTicket="true" FlightNumber="7522" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="Q" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="ORD" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="738" />
+        <FlightDetails TrafficRestrictionCode="Q" />
+        <MarketingAirline Code="JL" FlightNumber="7522" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T15:05" ConnectionInd="OI" DepartureDateTime="2018-02-14T10:55" DestinationTimeZone="9" DivideInd="true" ElapsedTime="790" eTicket="true" FlightNumber="9" MarketingCabin="Y" OriginTimeZone="-6" ResBookDesigCode="Q" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="JL" FlightNumber="9" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="ORD" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-15T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="V" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T12:45" ConnectionInd="O" DepartureDateTime="2018-02-25T10:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="160" eTicket="true" FlightNumber="5208" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CTS" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="744" />
+        <MarketingAirline Code="JL" FlightNumber="5208" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T17:40" ConnectionInd="OI" DepartureDateTime="2018-02-25T16:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="100" eTicket="true" FlightNumber="516" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="767" />
+        <MarketingAirline Code="JL" FlightNumber="516" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="CTS" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:25" ConnectionInd="OI" DepartureDateTime="2018-02-25T19:20" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="605" eTicket="true" FlightNumber="7018" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7018" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="13" TotalAmount="1424.91">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/CHI JL TYO25M303.75JL SEL119.99JL SPK306.65JL X/TYO JL LAX M367.50NUC1097.89END ROE1.00 XFLAX4.5ORD4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1098.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1098.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="2.70" TaxCode="HJ" TaxName="PASSENGER FACILITY CHARGE DOMESTIC ARRIVALS" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="23.50" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1424.91" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NO CHG/RFND RESTR APPLY" />
+          <Warning ShortText="RFND RESTR APPLY" />
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="QLX0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="VNN32ACF" FarePassengerType="ADT" GlobalInd="EH" Market="TYOSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="BNN01ACD" FarePassengerType="ADT" GlobalInd="EH" Market="SELSPK" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="SPKLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <LastTicketingDate>2018-02-12</LastTicketingDate>
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T06:12" ConnectionInd="O" DepartureDateTime="2018-02-13T23:59" DestinationTimeZone="-6" DivideInd="true" ElapsedTime="253" eTicket="true" FlightNumber="7522" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="Q" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="ORD" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="738" />
+        <FlightDetails TrafficRestrictionCode="Q" />
+        <MarketingAirline Code="JL" FlightNumber="7522" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T15:05" ConnectionInd="OI" DepartureDateTime="2018-02-14T10:55" DestinationTimeZone="9" DivideInd="true" ElapsedTime="790" eTicket="true" FlightNumber="9" MarketingCabin="Y" OriginTimeZone="-6" ResBookDesigCode="Q" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="JL" FlightNumber="9" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="ORD" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-15T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="V" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T12:45" ConnectionInd="O" DepartureDateTime="2018-02-25T10:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="160" eTicket="true" FlightNumber="5208" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CTS" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="744" />
+        <MarketingAirline Code="JL" FlightNumber="5208" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T16:40" ConnectionInd="OI" DepartureDateTime="2018-02-25T15:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="100" eTicket="true" FlightNumber="514" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="773" />
+        <MarketingAirline Code="JL" FlightNumber="514" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="CTS" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:25" ConnectionInd="OI" DepartureDateTime="2018-02-25T19:20" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="605" eTicket="true" FlightNumber="7018" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7018" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="14" TotalAmount="1433.11">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/CHI JL X/TYO JL SEL25M486.25JL TYO338.28JL LAX293.00NUC1117.53END ROE1.00 XFLAX4.5ORD4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1118.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1118.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1433.11" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONEND/NONREF/FEE FOR CHG" />
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="NLU0Q8O1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YNN0OG4A" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="QLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T06:12" ConnectionInd="O" DepartureDateTime="2018-02-13T23:59" DestinationTimeZone="-6" DivideInd="false" ElapsedTime="253" eTicket="true" FlightNumber="7522" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="ORD" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="738" />
+        <FlightDetails TrafficRestrictionCode="Q" />
+        <MarketingAirline Code="JL" FlightNumber="7522" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T15:05" ConnectionInd="OI" DepartureDateTime="2018-02-14T10:55" DestinationTimeZone="9" DivideInd="false" ElapsedTime="790" eTicket="true" FlightNumber="9" MarketingCabin="Y" OriginTimeZone="-6" ResBookDesigCode="N" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="JL" FlightNumber="9" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="ORD" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-15T18:40" DestinationTimeZone="9" DivideInd="false" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="N" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T12:30" ConnectionInd="O" DepartureDateTime="2018-02-25T10:10" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="5202" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="74H" />
+        <MarketingAirline Code="JL" FlightNumber="5202" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:00" ConnectionInd="OI" DepartureDateTime="2018-02-25T18:45" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="615" eTicket="true" FlightNumber="7016" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Q" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7016" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="15" TotalAmount="1434.91">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/CHI JL TYO25M303.75JL SEL119.99JL AOJ302.20JL X/TYO JL LAX M382.50NUC1108.44END ROE1.00 XFLAX4.5ORD4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1108.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1108.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="2.70" TaxCode="HJ" TaxName="PASSENGER FACILITY CHARGE DOMESTIC ARRIVALS" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="23.50" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1434.91" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NO CHG/RFND RESTR APPLY" />
+          <Warning ShortText="RFND RESTR APPLY" />
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="QLX0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="VNN32ACF" FarePassengerType="ADT" GlobalInd="EH" Market="TYOSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="BNN01ACD" FarePassengerType="ADT" GlobalInd="EH" Market="SELAOJ" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="AOJLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <LastTicketingDate>2018-02-12</LastTicketingDate>
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T06:12" ConnectionInd="O" DepartureDateTime="2018-02-13T23:59" DestinationTimeZone="-6" DivideInd="true" ElapsedTime="253" eTicket="true" FlightNumber="7522" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="Q" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="ORD" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="738" />
+        <FlightDetails TrafficRestrictionCode="Q" />
+        <MarketingAirline Code="JL" FlightNumber="7522" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T16:15" ConnectionInd="OI" DepartureDateTime="2018-02-14T12:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="795" eTicket="true" FlightNumber="7009" MarketingCabin="Y" OriginTimeZone="-6" ResBookDesigCode="Q" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="788" />
+        <MarketingAirline Code="JL" FlightNumber="7009" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="ORD" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-15T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="V" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T12:50" ConnectionInd="O" DepartureDateTime="2018-02-25T10:30" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="5252" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="AOJ" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="5252" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:15" ConnectionInd="OI" DepartureDateTime="2018-02-25T16:50" DestinationTimeZone="9" DivideInd="true" ElapsedTime="85" eTicket="true" FlightNumber="148" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="148" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="AOJ" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:25" ConnectionInd="OI" DepartureDateTime="2018-02-25T19:20" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="605" eTicket="true" FlightNumber="7018" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7018" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="16" TotalAmount="1434.91">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/CHI JL TYO25M303.75JL SEL119.99JL AOJ302.20JL X/TYO JL LAX M382.50NUC1108.44END ROE1.00 XFLAX4.5ORD4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1108.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1108.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="2.70" TaxCode="HJ" TaxName="PASSENGER FACILITY CHARGE DOMESTIC ARRIVALS" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="23.50" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1434.91" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NO CHG/RFND RESTR APPLY" />
+          <Warning ShortText="RFND RESTR APPLY" />
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="QLX0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="VNN32ACF" FarePassengerType="ADT" GlobalInd="EH" Market="TYOSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="BNN01ACD" FarePassengerType="ADT" GlobalInd="EH" Market="SELAOJ" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="AOJLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <LastTicketingDate>2018-02-12</LastTicketingDate>
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T06:12" ConnectionInd="O" DepartureDateTime="2018-02-13T23:59" DestinationTimeZone="-6" DivideInd="true" ElapsedTime="253" eTicket="true" FlightNumber="7522" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="Q" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="ORD" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="738" />
+        <FlightDetails TrafficRestrictionCode="Q" />
+        <MarketingAirline Code="JL" FlightNumber="7522" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T16:15" ConnectionInd="OI" DepartureDateTime="2018-02-14T12:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="795" eTicket="true" FlightNumber="7009" MarketingCabin="Y" OriginTimeZone="-6" ResBookDesigCode="Q" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="788" />
+        <MarketingAirline Code="JL" FlightNumber="7009" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="ORD" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-15T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="V" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T12:50" ConnectionInd="O" DepartureDateTime="2018-02-25T10:30" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="5252" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="AOJ" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="5252" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T16:55" ConnectionInd="OI" DepartureDateTime="2018-02-25T15:30" DestinationTimeZone="9" DivideInd="true" ElapsedTime="85" eTicket="true" FlightNumber="146" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="146" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="AOJ" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:25" ConnectionInd="OI" DepartureDateTime="2018-02-25T19:20" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="605" eTicket="true" FlightNumber="7018" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7018" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="17" TotalAmount="1434.91">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/CHI JL TYO25M303.75JL SEL119.99JL AOJ302.20JL X/TYO JL LAX M382.50NUC1108.44END ROE1.00 XFLAX4.5ORD4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1108.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1108.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="2.70" TaxCode="HJ" TaxName="PASSENGER FACILITY CHARGE DOMESTIC ARRIVALS" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="23.50" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1434.91" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NO CHG/RFND RESTR APPLY" />
+          <Warning ShortText="RFND RESTR APPLY" />
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="QLX0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="VNN32ACF" FarePassengerType="ADT" GlobalInd="EH" Market="TYOSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="BNN01ACD" FarePassengerType="ADT" GlobalInd="EH" Market="SELAOJ" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="AOJLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <LastTicketingDate>2018-02-12</LastTicketingDate>
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T06:12" ConnectionInd="O" DepartureDateTime="2018-02-13T23:59" DestinationTimeZone="-6" DivideInd="true" ElapsedTime="253" eTicket="true" FlightNumber="7522" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="Q" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="ORD" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="738" />
+        <FlightDetails TrafficRestrictionCode="Q" />
+        <MarketingAirline Code="JL" FlightNumber="7522" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T15:05" ConnectionInd="OI" DepartureDateTime="2018-02-14T10:55" DestinationTimeZone="9" DivideInd="true" ElapsedTime="790" eTicket="true" FlightNumber="9" MarketingCabin="Y" OriginTimeZone="-6" ResBookDesigCode="Q" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="JL" FlightNumber="9" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="ORD" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-15T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="V" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T12:50" ConnectionInd="O" DepartureDateTime="2018-02-25T10:30" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="5252" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="AOJ" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="5252" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T16:55" ConnectionInd="OI" DepartureDateTime="2018-02-25T15:30" DestinationTimeZone="9" DivideInd="true" ElapsedTime="85" eTicket="true" FlightNumber="146" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="146" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="AOJ" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:25" ConnectionInd="OI" DepartureDateTime="2018-02-25T19:20" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="605" eTicket="true" FlightNumber="7018" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7018" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="18" TotalAmount="1434.91">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/CHI JL TYO25M303.75JL SEL119.99JL AOJ302.20JL X/TYO JL LAX M382.50NUC1108.44END ROE1.00 XFLAX4.5ORD4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1108.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1108.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="2.70" TaxCode="HJ" TaxName="PASSENGER FACILITY CHARGE DOMESTIC ARRIVALS" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="23.50" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1434.91" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NO CHG/RFND RESTR APPLY" />
+          <Warning ShortText="RFND RESTR APPLY" />
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="QLX0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="VNN32ACF" FarePassengerType="ADT" GlobalInd="EH" Market="TYOSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="BNN01ACD" FarePassengerType="ADT" GlobalInd="EH" Market="SELAOJ" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="AOJLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <LastTicketingDate>2018-02-12</LastTicketingDate>
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T06:12" ConnectionInd="O" DepartureDateTime="2018-02-13T23:59" DestinationTimeZone="-6" DivideInd="true" ElapsedTime="253" eTicket="true" FlightNumber="7522" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="Q" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="ORD" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="738" />
+        <FlightDetails TrafficRestrictionCode="Q" />
+        <MarketingAirline Code="JL" FlightNumber="7522" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T15:05" ConnectionInd="OI" DepartureDateTime="2018-02-14T10:55" DestinationTimeZone="9" DivideInd="true" ElapsedTime="790" eTicket="true" FlightNumber="9" MarketingCabin="Y" OriginTimeZone="-6" ResBookDesigCode="Q" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="JL" FlightNumber="9" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="ORD" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-15T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-15T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="V" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T12:50" ConnectionInd="O" DepartureDateTime="2018-02-25T10:30" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="5252" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="AOJ" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="5252" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T18:15" ConnectionInd="OI" DepartureDateTime="2018-02-25T16:50" DestinationTimeZone="9" DivideInd="true" ElapsedTime="85" eTicket="true" FlightNumber="148" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="148" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="AOJ" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:25" ConnectionInd="OI" DepartureDateTime="2018-02-25T19:20" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="605" eTicket="true" FlightNumber="7018" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7018" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="19" TotalAmount="1451.91">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX JL X/SAN JL X/TYO JL SEL M389.00JL SPK368.21JL X/TYO JL LAX M367.50NUC1124.71END ROE1.00 XFLAX4.5SAN4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1125.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1125.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="90.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="3.20" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="2.70" TaxCode="HJ" TaxName="PASSENGER FACILITY CHARGE DOMESTIC ARRIVALS" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="23.50" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1451.91" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONEND/NONREF/FEE FOR CHG" />
+          <Warning ShortText="FEE FOR RFND AND CHG/NONEND" />
+          <Warning ShortText="NONEND/FEE ON CHG/FEE ON RFND" />
+          <Warning ShortText="VALIDATING CARRIER - JL" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="NLU0Q8O1" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="BNN0OGEE" FarePassengerType="ADT" GlobalInd="EH" Market="SELSPK" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLW0N4D1" FarePassengerType="ADT" GlobalInd="PA" Market="SPKLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="JL" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-13T10:30" ConnectionInd="O" DepartureDateTime="2018-02-13T09:35" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="55" eTicket="true" FlightNumber="7254" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="SAN" />
+        <Equipment AirEquipType="E75" />
+        <FlightDetails TrafficRestrictionCode="Q" />
+        <MarketingAirline Code="JL" FlightNumber="7254" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="AA" CompanyShortName="/COMPASS AIRLINES AS AMERICAN EAGLE" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T16:45" ConnectionInd="OI" DepartureDateTime="2018-02-13T11:45" DestinationTimeZone="9" DivideInd="false" ElapsedTime="720" eTicket="true" FlightNumber="65" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="N" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="788" />
+        <MarketingAirline Code="JL" FlightNumber="65" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="SAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:35" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="false" ElapsedTime="175" eTicket="true" FlightNumber="959" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="N" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="JL" FlightNumber="959" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T12:45" ConnectionInd="O" DepartureDateTime="2018-02-25T10:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="160" eTicket="true" FlightNumber="5208" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="CTS" />
+        <DisclosureAirline Code="KE" />
+        <Equipment AirEquipType="744" />
+        <MarketingAirline Code="JL" FlightNumber="5208" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T16:40" ConnectionInd="OI" DepartureDateTime="2018-02-25T15:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="100" eTicket="true" FlightNumber="514" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="773" />
+        <MarketingAirline Code="JL" FlightNumber="514" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="JL" />
+        <OriginLocation LocationCode="CTS" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T12:25" ConnectionInd="OI" DepartureDateTime="2018-02-25T19:20" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="605" eTicket="true" FlightNumber="7018" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="AA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="JL" FlightNumber="7018" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="AA" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+</ArrayOfOTA_AirLowFareSearchRSPricedItinerary>

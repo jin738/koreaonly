@@ -1,0 +1,1879 @@
+NH
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfOTA_AirLowFareSearchRSPricedItinerary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="1" TotalAmount="1887.11">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/TYO NH SEL1008.00NH TYO307.48NH LAX293.00NUC1608.48END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1608.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1608.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="11.70" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1887.11" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="KLW0ZNJD" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T05:25" ConnectionInd="O" DepartureDateTime="2018-02-13T00:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="740" eTicket="true" FlightNumber="105" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="105" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T08:50" ConnectionInd="OI" DepartureDateTime="2018-02-14T06:10" DestinationTimeZone="9" DivideInd="true" ElapsedTime="160" eTicket="true" FlightNumber="6895" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="NH" FlightNumber="6895" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="B" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T10:20" ConnectionInd="OI" DepartureDateTime="2018-02-25T17:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="590" eTicket="true" FlightNumber="7018" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="UA" />
+        <Equipment AirEquipType="789" />
+        <MarketingAirline Code="NH" FlightNumber="7018" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="UA" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="2" TotalAmount="1912.61">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/TYO NH SEL1008.00NH OSA254.42NH X/SFO NH LAX368.00NUC1630.42END ROE1.00 XFLAX4.5SFO4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1630.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1630.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="2.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="11.70" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="5.00" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1912.61" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELOSA" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="KLW0ZNJD" FarePassengerType="ADT" GlobalInd="PA" Market="OSALAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T05:25" ConnectionInd="O" DepartureDateTime="2018-02-13T00:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="740" eTicket="true" FlightNumber="105" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="105" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T08:50" ConnectionInd="OI" DepartureDateTime="2018-02-14T06:10" DestinationTimeZone="9" DivideInd="true" ElapsedTime="160" eTicket="true" FlightNumber="6895" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="NH" FlightNumber="6895" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="B" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T15:50" ConnectionInd="O" DepartureDateTime="2018-02-25T14:10" DestinationTimeZone="9" DivideInd="true" ElapsedTime="100" eTicket="true" FlightNumber="6954" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="KIX" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="333" />
+        <MarketingAirline Code="NH" FlightNumber="6954" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T10:50" ConnectionInd="OI" DepartureDateTime="2018-02-25T18:10" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="580" eTicket="true" FlightNumber="7070" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="SFO" />
+        <DisclosureAirline Code="UA" />
+        <Equipment AirEquipType="788" />
+        <MarketingAirline Code="NH" FlightNumber="7070" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="UA" />
+        <OriginLocation LocationCode="KIX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T14:16" ConnectionInd="OI" DepartureDateTime="2018-02-25T12:36" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="100" eTicket="true" FlightNumber="7356" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="K" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="UA" />
+        <Equipment AirEquipType="320" />
+        <FlightDetails TrafficRestrictionCode="D" />
+        <MarketingAirline Code="NH" FlightNumber="7356" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="UA" />
+        <OriginLocation LocationCode="SFO" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="3" TotalAmount="1915.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/TYO NH SEL1008.00NH OSA254.42NH X/SFO NH LAX368.00NUC1630.42END ROE1.00 XFLAX4.5SFO4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1630.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1630.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="2.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="5.00" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1915.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELOSA" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="KLW0ZNJD" FarePassengerType="ADT" GlobalInd="PA" Market="OSALAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T16:25" ConnectionInd="O" DepartureDateTime="2018-02-13T11:25" DestinationTimeZone="9" DivideInd="true" ElapsedTime="720" eTicket="true" FlightNumber="5" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="5" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:30" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="170" eTicket="true" FlightNumber="6975" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="763" />
+        <MarketingAirline Code="NH" FlightNumber="6975" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T15:50" ConnectionInd="O" DepartureDateTime="2018-02-25T14:10" DestinationTimeZone="9" DivideInd="true" ElapsedTime="100" eTicket="true" FlightNumber="6954" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="KIX" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="333" />
+        <MarketingAirline Code="NH" FlightNumber="6954" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T10:50" ConnectionInd="OI" DepartureDateTime="2018-02-25T18:10" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="580" eTicket="true" FlightNumber="7070" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="K" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="SFO" />
+        <DisclosureAirline Code="UA" />
+        <Equipment AirEquipType="788" />
+        <MarketingAirline Code="NH" FlightNumber="7070" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="UA" />
+        <OriginLocation LocationCode="KIX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T14:16" ConnectionInd="OI" DepartureDateTime="2018-02-25T12:36" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="100" eTicket="true" FlightNumber="7356" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="K" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <DisclosureAirline Code="UA" />
+        <Equipment AirEquipType="320" />
+        <FlightDetails TrafficRestrictionCode="D" />
+        <MarketingAirline Code="NH" FlightNumber="7356" />
+        <MarriageGrp Ind="I" />
+        <OperatingAirline Code="UA" />
+        <OriginLocation LocationCode="SFO" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="4" TotalAmount="1981.11">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/TYO NH SEL1008.00NH TYO307.48NH LAX387.00NUC1702.48END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1702.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1702.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="11.70" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1981.11" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLG0ZNJK" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T05:25" ConnectionInd="O" DepartureDateTime="2018-02-13T00:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="740" eTicket="true" FlightNumber="105" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="105" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T08:50" ConnectionInd="OI" DepartureDateTime="2018-02-14T06:10" DestinationTimeZone="9" DivideInd="true" ElapsedTime="160" eTicket="true" FlightNumber="6895" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="NH" FlightNumber="6895" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="B" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T09:05" ConnectionInd="OI" DepartureDateTime="2018-02-25T16:25" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="580" eTicket="true" FlightNumber="176" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="176" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="5" TotalAmount="1983.81">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/TYO NH SEL1008.00NH TYO307.48NH LAX387.00NUC1702.48END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1702.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1702.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1983.81" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLG0ZNJK" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T15:45" ConnectionInd="O" DepartureDateTime="2018-02-13T10:45" DestinationTimeZone="9" DivideInd="true" ElapsedTime="720" eTicket="true" FlightNumber="175" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="175" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:30" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="170" eTicket="true" FlightNumber="6975" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="763" />
+        <MarketingAirline Code="NH" FlightNumber="6975" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T09:05" ConnectionInd="OI" DepartureDateTime="2018-02-25T16:25" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="580" eTicket="true" FlightNumber="176" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="176" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="6" TotalAmount="1983.81">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/TYO NH SEL1008.00NH TYO307.48NH LAX387.00NUC1702.48END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1702.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1702.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1983.81" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLG0ZNJK" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T16:25" ConnectionInd="O" DepartureDateTime="2018-02-13T11:25" DestinationTimeZone="9" DivideInd="true" ElapsedTime="720" eTicket="true" FlightNumber="5" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="5" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:30" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="170" eTicket="true" FlightNumber="6975" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="763" />
+        <MarketingAirline Code="NH" FlightNumber="6975" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T09:05" ConnectionInd="OI" DepartureDateTime="2018-02-25T16:25" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="580" eTicket="true" FlightNumber="176" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="176" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="7" TotalAmount="1988.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/SFO NH X/TYO NH SEL1008.00NH TYO307.48NH LAX387.00NUC1702.48END ROE1.00 XFLAX4.5SFO4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1702.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1702.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1988.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLG0ZNJK" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-13T09:56" ConnectionInd="O" DepartureDateTime="2018-02-13T08:10" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="106" eTicket="true" FlightNumber="7510" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="SFO" />
+        <DisclosureAirline Code="UA" />
+        <Equipment AirEquipType="739" />
+        <FlightDetails TrafficRestrictionCode="D" />
+        <MarketingAirline Code="NH" FlightNumber="7510" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="UA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T15:20" ConnectionInd="OI" DepartureDateTime="2018-02-13T11:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="680" eTicket="true" FlightNumber="7" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="7" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="SFO" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:30" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="170" eTicket="true" FlightNumber="6975" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="763" />
+        <MarketingAirline Code="NH" FlightNumber="6975" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T09:05" ConnectionInd="OI" DepartureDateTime="2018-02-25T16:25" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="580" eTicket="true" FlightNumber="176" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="176" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="8" TotalAmount="1988.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/SFO NH X/TYO NH SEL1008.00NH TYO307.48NH LAX387.00NUC1702.48END ROE1.00 XFLAX4.5SFO4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1702.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1702.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1988.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLG0ZNJK" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-13T07:57" ConnectionInd="O" DepartureDateTime="2018-02-13T06:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="87" eTicket="true" FlightNumber="7355" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="SFO" />
+        <DisclosureAirline Code="UA" />
+        <Equipment AirEquipType="320" />
+        <FlightDetails TrafficRestrictionCode="D" />
+        <MarketingAirline Code="NH" FlightNumber="7355" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="UA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T15:20" ConnectionInd="OI" DepartureDateTime="2018-02-13T11:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="680" eTicket="true" FlightNumber="7" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="7" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="SFO" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:30" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="170" eTicket="true" FlightNumber="6975" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="763" />
+        <MarketingAirline Code="NH" FlightNumber="6975" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T09:05" ConnectionInd="OI" DepartureDateTime="2018-02-25T16:25" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="580" eTicket="true" FlightNumber="176" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="176" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="9" TotalAmount="1988.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/SFO NH X/TYO NH SEL1008.00NH TYO307.48NH LAX387.00NUC1702.48END ROE1.00 XFLAX4.5SFO4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1702.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1702.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1988.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLG0ZNJK" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-13T07:28" ConnectionInd="O" DepartureDateTime="2018-02-13T06:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="88" eTicket="true" FlightNumber="7357" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="SFO" />
+        <DisclosureAirline Code="UA" />
+        <Equipment AirEquipType="739" />
+        <FlightDetails TrafficRestrictionCode="D" />
+        <MarketingAirline Code="NH" FlightNumber="7357" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="UA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T15:20" ConnectionInd="OI" DepartureDateTime="2018-02-13T11:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="680" eTicket="true" FlightNumber="7" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="7" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="SFO" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:30" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="170" eTicket="true" FlightNumber="6975" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="763" />
+        <MarketingAirline Code="NH" FlightNumber="6975" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T09:05" ConnectionInd="OI" DepartureDateTime="2018-02-25T16:25" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="580" eTicket="true" FlightNumber="176" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="176" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="10" TotalAmount="1993.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/TYO NH SEL1008.00NH TYO307.48NH LAX387.00NUC1702.48END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1702.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1702.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="19.10" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1993.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLG0ZNJK" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T05:25" ConnectionInd="O" DepartureDateTime="2018-02-13T00:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="740" eTicket="true" FlightNumber="105" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="105" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T11:40" ConnectionInd="OI" DepartureDateTime="2018-02-14T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="160" eTicket="true" FlightNumber="6977" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="NH" FlightNumber="6977" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T09:05" ConnectionInd="OI" DepartureDateTime="2018-02-25T16:25" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="580" eTicket="true" FlightNumber="176" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="176" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="11" TotalAmount="1993.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/TYO NH SEL1008.00NH TYO307.48NH LAX387.00NUC1702.48END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1702.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1702.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="19.10" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="1993.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="SLG0ZNJK" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T05:25" ConnectionInd="O" DepartureDateTime="2018-02-13T00:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="740" eTicket="true" FlightNumber="105" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="105" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T15:55" ConnectionInd="OI" DepartureDateTime="2018-02-14T13:20" DestinationTimeZone="9" DivideInd="true" ElapsedTime="155" eTicket="true" FlightNumber="6971" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6971" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T09:05" ConnectionInd="OI" DepartureDateTime="2018-02-25T16:25" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="580" eTicket="true" FlightNumber="176" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="S" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="176" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="12" TotalAmount="2124.11">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/TYO NH SEL1008.00NH TYO307.48NH LAX530.00NUC1845.48END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1845.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1845.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="11.70" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="2124.11" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="VLE0ONJD" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T05:25" ConnectionInd="O" DepartureDateTime="2018-02-13T00:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="740" eTicket="true" FlightNumber="105" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="105" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T08:50" ConnectionInd="OI" DepartureDateTime="2018-02-14T06:10" DestinationTimeZone="9" DivideInd="true" ElapsedTime="160" eTicket="true" FlightNumber="6895" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="NH" FlightNumber="6895" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="B" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="HND" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T09:45" ConnectionInd="OI" DepartureDateTime="2018-02-25T17:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="585" eTicket="true" FlightNumber="6" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="V" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="6" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="13" TotalAmount="2126.81">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/TYO NH SEL1008.00NH TYO307.48NH LAX530.00NUC1845.48END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1845.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1845.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="2126.81" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="VLE0ONJD" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T15:45" ConnectionInd="O" DepartureDateTime="2018-02-13T10:45" DestinationTimeZone="9" DivideInd="true" ElapsedTime="720" eTicket="true" FlightNumber="175" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="175" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:30" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="170" eTicket="true" FlightNumber="6975" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="763" />
+        <MarketingAirline Code="NH" FlightNumber="6975" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T09:45" ConnectionInd="OI" DepartureDateTime="2018-02-25T17:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="585" eTicket="true" FlightNumber="6" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="V" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="6" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="14" TotalAmount="2126.81">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/TYO NH SEL1008.00NH TYO307.48NH LAX530.00NUC1845.48END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1845.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1845.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="2126.81" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="VLE0ONJD" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T16:25" ConnectionInd="O" DepartureDateTime="2018-02-13T11:25" DestinationTimeZone="9" DivideInd="true" ElapsedTime="720" eTicket="true" FlightNumber="5" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="5" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:30" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="170" eTicket="true" FlightNumber="6975" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="763" />
+        <MarketingAirline Code="NH" FlightNumber="6975" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T09:45" ConnectionInd="OI" DepartureDateTime="2018-02-25T17:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="585" eTicket="true" FlightNumber="6" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="V" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="6" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="15" TotalAmount="2131.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/SFO NH X/TYO NH SEL1008.00NH TYO307.48NH LAX530.00NUC1845.48END ROE1.00 XFLAX4.5SFO4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1845.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1845.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="2131.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="VLE0ONJD" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-13T07:28" ConnectionInd="O" DepartureDateTime="2018-02-13T06:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="88" eTicket="true" FlightNumber="7357" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="SFO" />
+        <DisclosureAirline Code="UA" />
+        <Equipment AirEquipType="739" />
+        <FlightDetails TrafficRestrictionCode="D" />
+        <MarketingAirline Code="NH" FlightNumber="7357" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="UA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T15:20" ConnectionInd="OI" DepartureDateTime="2018-02-13T11:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="680" eTicket="true" FlightNumber="7" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="7" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="SFO" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:30" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="170" eTicket="true" FlightNumber="6975" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="763" />
+        <MarketingAirline Code="NH" FlightNumber="6975" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T09:45" ConnectionInd="OI" DepartureDateTime="2018-02-25T17:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="585" eTicket="true" FlightNumber="6" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="V" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="6" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="16" TotalAmount="2131.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/SFO NH X/TYO NH SEL1008.00NH TYO307.48NH LAX530.00NUC1845.48END ROE1.00 XFLAX4.5SFO4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1845.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1845.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="2131.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="VLE0ONJD" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-13T07:57" ConnectionInd="O" DepartureDateTime="2018-02-13T06:30" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="87" eTicket="true" FlightNumber="7355" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="SFO" />
+        <DisclosureAirline Code="UA" />
+        <Equipment AirEquipType="320" />
+        <FlightDetails TrafficRestrictionCode="D" />
+        <MarketingAirline Code="NH" FlightNumber="7355" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="UA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T15:20" ConnectionInd="OI" DepartureDateTime="2018-02-13T11:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="680" eTicket="true" FlightNumber="7" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="7" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="SFO" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:30" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="170" eTicket="true" FlightNumber="6975" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="763" />
+        <MarketingAirline Code="NH" FlightNumber="6975" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T09:45" ConnectionInd="OI" DepartureDateTime="2018-02-25T17:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="585" eTicket="true" FlightNumber="6" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="V" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="6" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="17" TotalAmount="2131.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/SFO NH X/TYO NH SEL1008.00NH TYO307.48NH LAX530.00NUC1845.48END ROE1.00 XFLAX4.5SFO4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1845.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1845.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="2131.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="VLE0ONJD" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-13T09:56" ConnectionInd="O" DepartureDateTime="2018-02-13T08:10" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="106" eTicket="true" FlightNumber="7510" MarketingCabin="Y" OriginTimeZone="-8" ResBookDesigCode="B" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="SFO" />
+        <DisclosureAirline Code="UA" />
+        <Equipment AirEquipType="739" />
+        <FlightDetails TrafficRestrictionCode="D" />
+        <MarketingAirline Code="NH" FlightNumber="7510" />
+        <MarriageGrp Ind="O" />
+        <OperatingAirline Code="UA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T15:20" ConnectionInd="OI" DepartureDateTime="2018-02-13T11:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="680" eTicket="true" FlightNumber="7" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="7" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="SFO" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T21:30" ConnectionInd="OI" DepartureDateTime="2018-02-14T18:40" DestinationTimeZone="9" DivideInd="true" ElapsedTime="170" eTicket="true" FlightNumber="6975" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="3" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="763" />
+        <MarketingAirline Code="NH" FlightNumber="6975" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="D" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T09:45" ConnectionInd="OI" DepartureDateTime="2018-02-25T17:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="585" eTicket="true" FlightNumber="6" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="V" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="6" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="18" TotalAmount="2136.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/TYO NH SEL1008.00NH TYO307.48NH LAX530.00NUC1845.48END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1845.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1845.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="19.10" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="2136.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="VLE0ONJD" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T05:25" ConnectionInd="O" DepartureDateTime="2018-02-13T00:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="740" eTicket="true" FlightNumber="105" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="105" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T15:55" ConnectionInd="OI" DepartureDateTime="2018-02-14T13:20" DestinationTimeZone="9" DivideInd="true" ElapsedTime="155" eTicket="true" FlightNumber="6971" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6971" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="L" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T09:45" ConnectionInd="OI" DepartureDateTime="2018-02-25T17:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="585" eTicket="true" FlightNumber="6" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="V" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="6" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+  <OTA_AirLowFareSearchRSPricedItinerary CurrencyCode="USD" RPH="19" TotalAmount="2136.31">
+    <AirItineraryPricingInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FareCalculation>
+        <Text>LAX NH X/TYO NH SEL1008.00NH TYO307.48NH LAX530.00NUC1845.48END ROE1.00 XFLAX4.5</Text>
+      </FareCalculation>
+      <ItinTotalFare>
+        <BaseFare Amount="1845.00" CurrencyCode="USD" />
+        <Commission Amount="0.00" Percent="0.00" />
+        <EquivFare Amount="1845.00" CurrencyCode="USD" />
+        <Taxes>
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="80.00" TaxCode="YQ" TaxName="SERVICE FEE - FUEL" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="1.00" TaxCode="YQ" TaxName="SERVICE FEE - INSURANCE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="4.80" TaxCode="OI" TaxName="PASSENGER SECURITY SERVICE CHARGE" />
+          <Tax Amount="19.10" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="9.60" TaxCode="SW" TaxName="PASSENGER SERVICE FACILITIES CHARGE  INTERNATIONAL" />
+          <Tax Amount="25.70" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TAX AND GLOBAL DISEASE ERADICATION FUND" />
+          <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL DEPARTURE INCLUDING AK AND HI" />
+          <Tax Amount="18.30" TaxCode="US" TaxName="TRANSPORTATION TAX INTERNATIONAL ARRIVAL" />
+          <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" />
+          <Tax Amount="7.00" TaxCode="XY" TaxName="IMMIGRATION USER FEE" />
+          <Tax Amount="5.65" TaxCode="YC" TaxName="CUSTOMS USER FEE" />
+          <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+        </Taxes>
+        <TotalFare Amount="2136.31" CurrencyCode="USD" />
+        <Warnings>
+          <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+          <Warning ShortText="REFUNDABLE/CXLFEE/CHGFEE" />
+          <Warning ShortText="VALIDATING CARRIER - NH" />
+        </Warnings>
+      </ItinTotalFare>
+      <PassengerTypeQuantity Code="ADT" Quantity="1" />
+      <PTC_FareBreakdown>
+        <FareBasis Code="ELX03NH6" FarePassengerType="ADT" GlobalInd="PA" Market="LAXSEL" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="YRTDJ" FarePassengerType="ADT" GlobalInd="EH" Market="SELTYO" />
+      </PTC_FareBreakdown>
+      <PTC_FareBreakdown>
+        <FareBasis Code="VLE0ONJD" FarePassengerType="ADT" GlobalInd="PA" Market="TYOLAX" />
+      </PTC_FareBreakdown>
+    </AirItineraryPricingInfo>
+    <HeaderInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <ValidInterline Ind="true" />
+      <ValidatingCarrier Code="NH" />
+    </HeaderInformation>
+    <OriginDestinationOption RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-14T05:25" ConnectionInd="O" DepartureDateTime="2018-02-13T00:05" DestinationTimeZone="9" DivideInd="true" ElapsedTime="740" eTicket="true" FlightNumber="105" MarketingCabin="S" OriginTimeZone="-8" ResBookDesigCode="E" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="HND" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="105" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-14T11:40" ConnectionInd="OI" DepartureDateTime="2018-02-14T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="160" eTicket="true" FlightNumber="6977" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="B" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="ICN" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="NH" FlightNumber="6977" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+    <OriginDestinationOption RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+      <FlightSegment ArrivalDateTime="2018-02-25T11:20" ConnectionInd="O" DepartureDateTime="2018-02-25T09:00" DestinationTimeZone="9" DivideInd="true" ElapsedTime="140" eTicket="true" FlightNumber="6972" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="Y" RPH="1" StopQuantity="0">
+        <DestinationLocation LocationCode="NRT" />
+        <DisclosureAirline Code="OZ" />
+        <Equipment AirEquipType="388" />
+        <MarketingAirline Code="NH" FlightNumber="6972" />
+        <MarriageGrp Ind="O" />
+        <Meal MealCode="S" />
+        <OperatingAirline Code="OZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-02-25T09:45" ConnectionInd="OI" DepartureDateTime="2018-02-25T17:00" DestinationTimeZone="-8" DivideInd="true" ElapsedTime="585" eTicket="true" FlightNumber="6" MarketingCabin="Y" OriginTimeZone="9" ResBookDesigCode="V" RPH="2" StopQuantity="0">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="77W" />
+        <MarketingAirline Code="NH" FlightNumber="6" />
+        <MarriageGrp Ind="I" />
+        <Meal MealCode="M" />
+        <OperatingAirline Code="NH" />
+        <OriginLocation LocationCode="NRT" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirLowFareSearchRSPricedItinerary>
+</ArrayOfOTA_AirLowFareSearchRSPricedItinerary>

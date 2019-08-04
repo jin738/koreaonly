@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/AdminView.cshtml";
+}
+
+<style>
+    .box {
+        background-color: #112435;
+        color: white;
+        padding: 20px;
+        margin: 10px;
+        min-height: 150px;
+    }
+
+        .box:hover {
+            background-color: #000000;
+            cursor: pointer;
+        }
+
+        .box > a {
+            color: #4791d5;
+        }
+
+    .smallbox {
+        min-height: 100px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <br />
+
+            <a style="font-size:12px;" class="btn btn-dark" href="/SystemMaster?logout=true">Logout</a>
+
+            <div class="col-md-12">
+                <h3>Manage Website</h3>
+            </div>
+
+            <div class="col-md-3 box smallbox">
+                <h4>View Logs</h4>
+                <span>Check Website Log</span><br />
+                <a style="font-size:12px;" href="/Index/ViewLogs">Click Here</a>
+
+            </div>
+
+            <div class="col-md-3 box smallbox">
+                <h4>Airlines</h4>
+                <span>Manage All Airlines Data</span><br />
+                <a style="font-size:12px;" href="/SystemMaster/Flight">Click Here</a>
+            </div>
+
+            <div class="col-md-3 box smallbox">
+                <h4>Aircraft</h4>
+                <span>Manage All Aircraft Data</span><br />
+                <a style="font-size:12px;" href="/SystemMaster/Aircraft">Click Here</a>
+            </div>
+
+            <div class="col-md-3 box smallbox">
+                <h4>Airport</h4>
+                <span>Manage All Airport Data</span><br />
+                <a style="font-size:12px;" href="/SystemMaster/Airport">Click Here</a>
+            </div>
+
+            <div class="col-md-12">
+                <hr />
+                <h3>Website Developer Operation</h3>
+            </div>
+
+
+            <div class="col-md-3 box">
+                <h4>Clear Log</h4>
+                <span>Clear System Log File</span><br />
+                <a href="/index/ViewLogs?flush=y" target="_self" style="Display:block;color:white;padding:10px;margin-top:10px;background-color:#4791d5;" class="btnclearlog">Clear Log</a>
+            </div>
+
+            <div class="col-md-3 box">
+                <h4>Website Mode</h4>
+                <span>Manage Website Access Mode</span><br />
+                <a href="/index/ViewLogs?Activate=y" target="_self" style="Display:block;color:white;padding:10px;margin-top:10px;@(MainController.CasheCheck ? "background-color: #ff1a09;" : "background-color:#039e08;")" class="btnclearlog">Activate @(MainController.CasheCheck ? "Online" : "Offline" ) </a>
+            </div>
+
+            <div class="col-md-3 box">
+                <h4>Generate Log File</h4>
+                <span>Generate Flights Log File</span><br />
+                <a href="/index/ViewLogs?Activate=y" target="_self" style="Display:block;color:white;padding:10px;margin-top:10px;@(MainController.AllowRecoding ? "background-color: #ff1a09;" : "background-color:#039e08;")" class="btnclearlog">@(MainController.AllowRecoding ? "Activated" : "Active Now" ) </a>
+            </div>
+
+        </div>
+    </div>
+</div>
