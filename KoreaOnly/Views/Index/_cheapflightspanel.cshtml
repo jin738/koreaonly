@@ -1,0 +1,25 @@
+﻿@model List<KoreaOnly.CheapFlights>
+
+
+@foreach (var item in Model)
+{
+
+    <div class="col-sm-4 col-md-3">
+        <div class="thumbnail cheapflightsbox" data-flightOrigin="@item.AirportNameOrigin()" data-flightDestination="@item.AirportNameDestination()" data-Airline="@(item.AirlineCode + " " + item.AirlineName() )" data-Date="@item.DepartureDate" data-Price="@item.Price" data-id="@item.ID">
+            @*<img src="@item.Picture" alt="@item.AirportCode">*@
+            @*<div class="caption">
+                    <p class="cheap-flights-city">@(item.Name())</p>
+                </div>*@
+
+            <div class="caption">
+                <p class="cheap-flights-city"><b>From    : </b> @item.NameOrigin()</p>
+                <p class="cheap-flights-city"><b>To      : </b> @item.NameDestination()</p>
+                <p class="cheap-flights-city"><b>Airline : </b> @item.AirlineName()</p>
+                <p class="cheap-flights-city"><b>Date    : </b> @item.DepartureDate</p>
+                <p class="cheap-flights-city"><b>Price   : </b> $@item.Price</p>
+            </div>
+
+        </div>
+    </div>
+
+}

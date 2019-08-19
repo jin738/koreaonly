@@ -1,723 +1,755 @@
 ﻿
-@model KoreaOnly.Models.BargainFinderMaxPostRQ
-
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Index2";
     Layout = "~/Views/Default.cshtml";
 }
 
-
-<script>
-    $(function () {
-
-        var dateFormat = "mm/dd/yy",
-          from = $("input[name='DepartureDate']")
-            .datepicker({
-                defaultDate: "+2d",
-                changeMonth: true,
-                minDate: 0,
-                numberOfMonths: 2
-            })
-            .on("change", function () {
-                to.datepicker("option", "minDate", getDate(this));
-            }),
-        to = $("input[name='arrivedate']").datepicker({
-            defaultDate: "+3d",
-            minDate: 1,
-            changeMonth: true,
-            numberOfMonths: 2
-        })
-          .on("change", function () {
-              from.datepicker("option", "maxDate", getDate(this));
-          });
-
-        function getDate(element) {
-            var date;
-            try {
-                date = $.datepicker.parseDate(dateFormat, element.value);
-            } catch (error) {
-                date = null;
-            }
-
-            return date;
-        }
-
-        RadClick();
-
-    });
-
-    function setmultidates(divmindateid, datedivid) {
-        var dateFormat = "mm/dd/yy",
-     from = $("#" + datedivid + "")
-       .datepicker({
-           defaultDate: "+1w",
-           changeMonth: true,
-           minDate: new Date($("#" + divmindateid).val()),
-           numberOfMonths: 2
-       });
-
-    }
-
-
-
-</script>
-
-<div class="row">
-
-    <div class="Background-fight">
-
-        <div class="col-md-12 animatedParent">
-
-            <div class="col-md-5 hidden-xs ">
-
-            </div>
-
-            <div class="col-md-7 SearchDiv animated growIn animateOnce">
-                <div id="loadingdivs" style="display:none;">
-                    <div style="position:  absolute;height: 95%;width: 95%;top: 10px;background-color:  #fff;bottom:  10px; z-index:100; opacity:0.6;  ">
-                    </div>
-                    <div class="loader" style="position:absolute;top: 30%;right: 40%;left: 40%;z-index: 110;"></div>
-                    <div style="position:absolute;top: 65%;right: 36%;left: 36%;z-index: 110;text-align:center;">
-                        <label>Please Wait <br />Let us Find Flights for you...</label>
-                    </div>
-                </div>
-                <p><i class="fa fa-plane" aria-hidden="true"></i> Flight</p>
-                <hr />
-
-                <label style="color:red;font-weight:bold;" id="error">@( Session["Error"]?.ToString() != "" ? Session["Error"] : "")</label>
-                <form action="/Index/SearchFlight" method="get">
-
-                    <div class="col-md-12">
-                        <label class="containerRad radio-inline">
-                            Round Trip
-                            <input type="radio" onclick="RadClick()" name="triptype" value="0" checked="checked">
-
-                            <span class="checkmark"></span>
-                        </label>
-
-                        <label class="containerRad radio-inline">
-                            One Way
-                            <input type="radio" onclick="RadClick()" name="triptype" value="1">
-                            <span class="checkmark"></span>
-                        </label>
-
-                        <label class="containerRad radio-inline">
-                            Multi City
-                            <input type="radio" name="triptype" onclick="RadClick()" value="2">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-
-                    <br /><br />
-
-                    <div id="NormalTrip">
-
-                        <div class="col-md-6">
-                            <label>Departure <span id="errorOriginAirportCode0" style="color:red;"></span></label>
-                            <input type="text" name="OriginAirportCode" id="OriginAirportCode0" class="form-control searchtxt" placeholder="Airport Code or City" autocomplete="off" />
-                        </div>
-                        <div class="col-md-6">
-                            <label>Arrival <span id="errorDestinationAirportCode0" style="color:red;"></span></label>
-                            <input type="text" name="DestinationAirportCode" id="DestinationAirportCode0" class="form-control searchtxt" placeholder="Airport Code or City" autocomplete="off" />
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Departure Date <span id="errorDepartureDate1" style="color:red;"></span></label>
-                            <input type="text" name="DepartureDate" class="form-control" id="DepartureDate1" placeholder="Departure Date" />
-                        </div>
-                        <div class="col-md-6" id="ArvDate">
-                            <label>Return Date <span id="errorarrivedate" style="color:red;"></span></label>
-                            <input type="text" name="arrivedate" id="arrivedate" class="form-control" placeholder="Return Date" />
-                        </div>
-
-                    </div>
-
-                    <div id="MultiTrip">
-
-                        <div class="col-md-3">
-                            <label>Departure <span id="errorOriginAirportCode1" style="color:red;"></span></label>
-                            <input type="text" name="OriginAirportCode" id="OriginAirportCode1" class="form-control searchtxt" placeholder="Airport Code or City" />
-                        </div>
-                        <div class="col-md-3">
-                            <label>Return <span id="errorDestinationAirportCode1" style="color:red;"></span></label>
-                            <input type="text" name="DestinationAirportCode" id="DestinationAirportCode1" class="form-control searchtxt" placeholder="Airport Code or City" />
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Departure Date <span id="errorDepartureDate2" style="color:red;"></span></label>
-                            <input type="text" name="DepartureDate" id="DepartureDate2" class="form-control" placeholder="Departure Date" />
-                        </div>
-
-                        <div id="MultiTripAdd">
-
-                        </div>
-
-                        <div class="col-md-12">
-                            <input style="margin-top:10px;margin-bottom:10px;" id="AddTrip" type="button" class="btn btn-default btnTheam" value="Add Trip" />
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-
-                        <div class="col-md-6" style="padding-left:0px;">
-                            <label>Adults (12+)</label>
-                            <input type="number" name="trvaud" min="1" max="100" class="form-control" placeholder="Adults" value="1" />
-                        </div>
-                        <div class="col-md-6" style="padding-right:0px;">
-                            <label>Child</label>
-                            <input type="number" name="trvchild" min="0" max="10" class="form-control" placeholder="Return Date" value="0" />
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <label>Class</label>
-                        <select name="flightclass" class="form-control">
-                            <option selected="selected" value="Y">Economy</option>
-                            <option value="S">Premium Economy</option>
-                            <option value="C">Business</option>
-                        </select>
-                    </div>
-
-                    <div class="col-md-3">
-                        <label>Airline</label>
-                        <input type="text" id="airlinename" name="airlinename" class="form-control" placeholder="Enter Airline Name" />
-                    </div>
-
-                    <div class="col-md-12">
-                        <span class="btn btn-default btnTheam" id="btnSubmit">
-                            <i class="fa fa-search" aria-hidden="true"></i> Search Flight
-                        </span>
-
-                        <script>
-
-                            $(document).ready(function () {
-                                $('#btnSubmit').click(function () {
-
-                                    var res = true;
-
-                                    var elem = $(".searchtxt");
-                                    for (var i = 0; i < elem.length; i++) {
-                                        if (!$("#" + elem[i].id).prop("disabled") && elem[i].value == "") {
-                                            res = false;
-
-                                            $("#error" + elem[i].id).html("Please fill in here");
-
-                                            break;
-                                        }
-                                    }
-
-
-                                    var elem2 = $(".hasDatepicker");
-                                    for (var i = 0; i < elem2.length; i++) {
-                                        if (!$("#" + elem2[i].id).prop("disabled") && $("#" + elem2[i].id).val() == "") {
-                                            $("#error" + elem2[i].id).html("Please fill in here");
-                                            res = false;
-                                            break;
-                                        }
-                                    }
-
-                                    if (res) {
-                                        $("#loadingdivs").show();
-                                        $('#btnSubmitOff').click();
-
-                                    } else {
-                                       
-                                    }
-                                });
-                            });
-                        </script>
-
-                        <input type="submit" style="display:none;" id="btnSubmitOff" class="btn btn-default btnTheam" value="Search Flight" />
-
-                    </div>
-
-                </form>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<div class="row" style="padding: 40px 0px 40px 0px;background-color: #4791d5;">
-
-    <div class="col-md-12 animatedParent" style="padding-top:60px;" id="se">
-
-        <div class="col-md-3 SubDivs">
-            <div class="col-md-4 SubDivs4">
-                <img src="~/Images/search-icon-png-21.png" />
-            </div>
-            <div class="col-md-8 SubDivs8">
-                <p class="subheading">The World's Travel Search Engine</p>
-                <p style="color:#fff;text-align: justify;">You can use our search engine to find any flight you want and select a desired destination and price.</p>
-            </div>
-        </div>
-
-        <div class="col-md-3 SubDivs">
-            <div class="col-md-4 SubDivs4">
-                <img src="~/Images/images.png" />
-            </div>
-            <div class="col-md-8 SubDivs8">
-                <p class="subheading">Cheap and Beneficial Air Tickets</p>
-                <p style="color:#fff;text-align: justify;">We provide affordable tickets to the flights of almost all existing airlines so you don’t need to look for them.</p>
-            </div>
-        </div>
-
-        <div class="col-md-3 SubDivs">
-            <div class="col-md-4 SubDivs4">
-                <img src="~/Images/audio-headset-of-auriculars-with-microphone-included_318-47145.png" />
-            </div>
-            <div class="col-md-8 SubDivs8">
-                <p class="subheading">Our Support Lines are Open 24/7</p>
-                <p style="color:#fff;text-align: justify;">Our 24/7 support operators are always ready to help you select a proper flight according to your needs.</p>
-            </div>
-        </div>
-
-        <div class="col-md-3 SubDivs">
-            <div class="col-md-4 SubDivs4">
-                <img src="~/Images/business.png" />
-            </div>
-            <div class="col-md-8 SubDivs8">
-                <p class="subheading">Convenient Payment Method For You</p>
-                <p style="color:#fff;text-align: justify;">We provide a variety of payment methods including cheque, cash, and credit cards.</p>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-<div class="row">
-
-    <div class="callcenter" style="margin-top: 40px;">
-
-        <div class="col-md-12" style="">
-            <div class="col-md-6 hidden-xs">
-
-            </div>
-            <div class="col-md-6" style="padding-top:70px;">
-
-                <p class="text-blue-light big">24/7 Support</p>
-                <div style="color: #1f2746;letter-spacing: 0;font-weight: 900;text-transform: capitalize;line-height: 1.16667;font-size: 30px;">Tel. <a href="callto:#" style="color: #1f2746;">(+1) 213 738-8185</a></div>
-                <p class="text-base offset-top-20 offset-md-top-30 big">Our Support Service is available 24 hours a day, 7 days a week to help you buy your tickets.</p>
-
-                <span class="btn btn-default btnTheam" id="btncontact">
-                    Contact Us
-                </span>
-
-                <script>
-                    $(document).ready(function () {
-                        $('#btncontact').click(function () {
-
-                        });
-                    });
-                </script>
-
-
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-
 <style>
-    #wrapper {
-        width: 100%;
-        height: 220px;
-        margin-top: 60px;
-        margin-bottom: 60px;
+    /* Style the input container */
+    .input-container {
+        display: flex;
+        margin-bottom: 15px;
     }
 
-    #carousel {
-        width: 80%;
-        position: relative;
-        margin: 60px auto;
-    }
-
-        #carousel ul {
-            list-style: none;
-            display: block;
-            margin: 0;
-            padding: 0;
-        }
-
-        #carousel li {
-            font-size: 40px;
-            color: #999;
-            text-align: center;
-            display: block;
-            width: 232px;
-            height: 178px;
-            padding: 0;
-            margin: 6px;
-            float: left;
-            position: relative;
-        }
-
-            #carousel li img {
-                width: 201px;
-                height: 127px;
-                margin-top: 14px;
-            }
-
-            #carousel li span {
-                background: transparent url(../../Images/complogo/carousel_shine.png) no-repeat 0 0;
-                text-indent: -999px;
-                display: block;
-                overflow: hidden;
-                width: 201px;
-                height: 127px;
-                position: absolute;
-                z-index: 2;
-                top: 14px;
-                left: 16px;
-            }
-
-    .clearfix {
-        float: none;
-        clear: both;
-    }
-
-    #carousel .prev, #carousel .next {
-        background: transparent url(../../Images/complogo/carousel_control.png) no-repeat 0 0;
-        text-indent: -999px;
-        display: block;
-        overflow: hidden;
-        width: 15px;
-        height: 21px;
-        margin-left: 10px;
-        position: absolute;
-        top: 70px;
-    }
-
-    #carousel .prev {
-        background-position: 0 0;
-        left: -30px;
-    }
-
-        #carousel .prev:hover {
-            left: -31px;
-        }
-
-    #carousel .next {
-        background-position: -18px 0;
-        right: -20px;
-    }
-
-        #carousel .next:hover {
-            right: -21px;
-        }
-
-    #carousel .pager {
+    /* Style the form icons */
+    .icons {
+        padding: 10px;
+        background: #1f4d65;
+        color: white;
+        min-width: 50px;
         text-align: center;
-        margin: 0 auto;
     }
 
-        #carousel .pager a {
-            background: transparent url(../../Images/complogo/carousel_control.png) no-repeat -2px -32px;
-            text-decoration: none;
-            text-indent: -999px;
-            display: inline-block;
-            overflow: hidden;
-            width: 8px;
-            height: 8px;
-            margin: 0 5px 0 0;
+    /* Style the input fields */
+    .input-field {
+        padding: 10px !important;
+        outline: none !important;
+        border: 0px !important;
+        width: 100% !important;
+        font-weight: bold !important;
+        font-size: 14px !important;
+        height: 45px !important;
+        border-radius: 0px !important;
+    }
+
+        .input-field:focus {
+            color: #1f4d65 !important;
         }
 
-            #carousel .pager a.selected {
-                background: transparent url(../../Images/complogo/carousel_control.png) no-repeat -12px -32px;
-                text-decoration: underline;
-            }
+    /* Set a style for the submit button */
+    .button {
+        border: none;
+        padding: 0px 10px;
+        color: #fff;
+        background: #1f4d65;
+        font-weight: bold;
+    }
 
-    #source {
-        text-align: center;
+        .button:hover {
+            background: #113040;
+        }
+
+    .cheap-flights-country {
+        font-weight: bold;
+        font-size: 14px;
+        color: #7d8184;
+        margin-bottom: 0px;
+    }
+
+    .cheap-flights-city {
+        font-weight: bold;
+        font-size: 18px;
+        color: #1f4d65;
+        margin-bottom: 0px;
+    }
+
+    .backgroundimage {
+        background: url('/Images/plane.jpg') repeat;
         width: 100%;
-        position: absolute;
-        bottom: 10px;
-        left: 0;
+        background-position: center;
+        min-height: 400px;
+        background-size: cover;
+        padding-top: 20px;
     }
 
-        #source, #source a {
-            font-size: 12px;
-            color: #999;
-        }
-
-    #donate-spacer {
-        height: 100%;
+    .subheading {
+        font-family: "Lato", sans-serif;
+        line-height: 1;
+        color: #fff;
+        margin: 0 0 10px 0;
+        font-size: 25px;
+        text-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+        font-weight: 900;
+        text-align: left;
     }
 
-    #donate {
-        border-top: 1px solid #999;
-        width: 750px;
-        padding: 50px 75px;
-        margin: 0 auto;
-        overflow: hidden;
+    .dropdowncustom {
+        border: none !important;
+        border-radius: 0px !important;
+        height: auto !important;
+        width: 300px !important;
+        font-weight: bold !important;
     }
 
-        #donate p, #donate form {
-            margin: 0;
-            float: left;
+    .triptypeActive {
+        background-color: #1f4d65;
+        color: #fff;
+    }
+
+    .triptype {
+        font-weight: bold;
+        color: #fff;
+        padding: 10px;
+        display: inline-block;
+        border: 1px solid hsl(201, 53%, 26%);
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+
+        .triptype:hover {
+            background-color: #1f4d65 !important;
+            color: #fff !important;
         }
 
-        #donate p {
-            width: 650px;
-        }
+    .easy-autocomplete {
+        width: 100% !important;
+    }
 
-        #donate form {
-            width: 100px;
-        }
+    .border {
+        border: 1px solid red !important;
+    }
 </style>
 
-<div class="row" style="padding: 40px 0px 40px 0px;background-color: #4791d5;">
 
-    <div class="col-md-12 animatedParent" style="padding-top:60px;">
-
-        <div class="col-md-4 SubDivs">
-            <div class="col-md-4 SubDivs4">
-                <p class="subheading" style="text-align:right;">FREE CANCELLATION POLICY</p>
-            </div>
-            <div class="col-md-8 SubDivs8">
-                <p style="color:#fff;font-weight:bold;">Cancel Free With In 24 Hrs</p>
-                <p style="color:#fff;">You can cancel your booking with in 24 hrs with Best Flight DealsNo Extra Cost. We serve you best!.</p>
-            </div>
-        </div>
-        <div class="col-md-4 SubDivs">
-            <div class="col-md-4 SubDivs4">
-                <p class="subheading" style="text-align:right;">BEST FARE GUARANTEE</p>
-            </div>
-            <div class="col-md-8 SubDivs8">
-                <p style="color:#fff;font-weight:bold;">The Lowest Asiana Fare</p>
-                <p style="color:#fff;">If you find a lower rate, we will pay you the difference.</p>
-            </div>
-        </div>
-        <div class="col-md-4 SubDivs">
-            <div class="col-md-4 SubDivs4">
-                <p class="subheading" style="text-align:right;">NO BOOKING FEE</p>
-            </div>
-            <div class="col-md-8 SubDivs8">
-                <p style="color:#fff;font-weight:bold;">When you book with Us</p>
-                <p style="color:#fff;">We decided to reduce the cost for our clients.</p>
-            </div>
-        </div>
-
-    </div>
-
-</div>
 
 <div class="row">
 
-    <div id="wrapper">
 
-        <div id="carousel">
-            <ul>
-                <li><img src="~/Images/complogo/fruit1.png" alt="" /><span>Image1</span></li>
-                <li><img src="~/Images/complogo/fruit2.png" alt="" /><span>Image2</span></li>
-                <li><img src="~/Images/complogo/fruit3.png" alt="" /><span>Image3</span></li>
-                <li><img src="~/Images/complogo/fruit4.png" alt="" /><span>Image4</span></li>
-                <li><img src="~/Images/complogo/fruit5.png" alt="" /><span>Image5</span></li>
-                <li><img src="~/Images/complogo/fruit6.png" alt="" /><span>Image6</span></li>
-                <li><img src="~/Images/complogo/fruit7.png" alt="" /><span>Image6</span></li>
-                <li><img src="~/Images/complogo/fruit8.png" alt="" /><span>Image6</span></li>
-                <li><img src="~/Images/complogo/fruit9.png" alt="" /><span>Image6</span></li>
-                <li><img src="~/Images/complogo/fruit10.png" alt="" /><span>Image6</span></li>
-                <li><img src="~/Images/complogo/fruit11.png" alt="" /><span>Image6</span></li>
-                <li><img src="~/Images/complogo/fruit12.png" alt="" /><span>Image6</span></li>
-                <li><img src="~/Images/complogo/fruit13.png" alt="" /><span>Image6</span></li>
-            </ul>
+    <div class="col-md-12 col-sm-12 col-xs-12 backgroundimage" style="min-height:400px !important;">
+
+
+        <div class="col-md-12 col-sm-12 col-xs-12">
+
             <div class="clearfix"></div>
-            <a id="prev" class="prev" href="#">&lt;</a>
-            <a id="next" class="next" href="#">&gt;</a>
-            <div id="pager" class="pager"></div>
+            <br />
+            <h2 id="flightsearch" style="display:none; text-align: center;color: #fff;font-weight: bold;">
+                Please Wait Let us Find a Best Flight For You...
+            </h2>
+        </div>
+
+
+        <div class="col-md-12 col-sm-12 col-xs-12" id="flightsearchpanel" style="float:right;padding: 10px 100px;">
+
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <p class="subheading"> SEARCH FLIGHT</p>
+
+
+
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+
+
+                <span class="triptype triptypeActive" data-mode="rt">Round Trip</span>
+                <span class="triptype" data-mode="ot">One Way</span>
+                <span class="triptype" data-mode="mt">Multi City</span>
+
+
+
+            </div>
+
+
+
+
+            <div class="clearfix"></div>
+
+            <form class="form" id="frmsearchflight" action="/Index/SearchFlight" method="get" autocomplete="off">
+                <input type="text" name="triptype2" style="display: none;" id="triptypetext" value="0" autocomplete="off">
+                <input type="text" name="triptype" style="display: none;" id="triptypetext1" value="0" autocomplete="off">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+
+                        <div class="form-group input-container">
+                            <i class="material-icons icons">flight_takeoff</i>
+                            <input name="OriginAirportCode" id="OriginAirportCode1" data-airportname="yes" autocomplete="off" class="input-field" type="text" placeholder="Leaving From">
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+
+                        <div class="form-group input-container">
+                            <i class="material-icons icons">flight_land</i>
+                            <input name="DestinationAirportCode" id="DestinationAirportCode1" data-airportname="yes" autocomplete="off" class="input-field" type="text" placeholder="Going To">
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+
+                        <div class="form-group input-container">
+                            <i class="material-icons icons">date_range</i>
+                            <input id="DepartureDate1" name="DepartureDate" autocomplete="off" type="text" class="input-field datepicker" placeholder="Departure Date" />
+                        </div>
+
+                        <div class="form-group input-container" id="contarrivedate">
+                            <i class="material-icons icons">date_range</i>
+                            <input id="arrivedate" name="arrivedate" autocomplete="off" type="text" class="input-field datepicker" placeholder="Arrival Date" />
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div id="multicityarea" style="display: none;">
+
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12 multicityareaButtons" style="display: none;">
+                    <div class="col-md-2 col-sm-12 col-xs-12">
+                        <div class="form-group input-container button-container">
+                            <i class="material-icons icons">remove</i>
+                            <input type="button" class="button" value="Remove" id="removebtnmulticity" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-12 col-xs-12">
+                        <div class="form-group input-container button-container" id="addsegmulticityDiv">
+                            <i class="material-icons icons">add</i>
+                            <input type="button" class="button" value="Add Segment" id="addsegmulticity" />
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <hr />
+                </div>
+
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+
+                        <div class="form-group input-container">
+                            <i class="material-icons icons">person</i>
+                            <input class="input-field" name="trvaud" type="number" min="1" value="1" max="10"
+                                   placeholder="Adults (12+)">
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="form-group input-container">
+                            <i class="material-icons icons">person</i>
+                            <input class="input-field" name="trvchild" type="number" min="0" value="0" max="10" placeholder="Child">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="form-group input-container">
+                            <i class="material-icons icons">flight</i>
+                            <select name="flightclass" class="form-control dropdowncustom">
+                                <option selected="selected" value="Y">Economy</option>
+                                <option value="S">Premium Economy</option>
+                                <option value="C">Business</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="form-group input-container">
+                            <i class="material-icons icons">flight</i>
+                            <input id="Airline" name="airlinename" type="text" class="input-field" data-optional="1"
+                                   placeholder="Airline" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+
+
+                        <div class="form-group input-container button-container">
+                            <i class="material-icons icons">search</i>
+                            <button class="button" type="button" id="submitnow">Search Flight</button>
+                            <input type="submit" style="display: none;" id="submitreal" class="btn btn-default"
+                                   value="Search Flight" />
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+
+
+            </form>
+
         </div>
     </div>
+
 
 </div>
 
 
-<script type="text/javascript">
 
-    function AddSearchoption(inputid) {
-        var Apt = $("#" + inputid).val();
 
-        var options = {
-            url: function (phrase) {
-                return "/Index/GetAllAirports?AirCode=" + ($("#" + inputid).val());
-            },
-            list: {
-                maxNumberOfElements: 15,
-                match: {
-                    enabled: true
-                }
-            },
-            requestDelay: 500,
-            theme: "plate-dark",
-            getValue: "name"
-        };
+<div class="clearfix"></div>
 
-        $("#" + inputid).easyAutocomplete(options);
+<style>
+    .cheap-flight-subhead {
+        text-align: center;
+        font-weight: normal;
+        color: #444;
+    }
+</style>
+
+<div class="row">
+
+    <div class="col-md-12" style="padding:20px">
+
+
+        <h2 class="text-center" style="font-weight:bold;color:#1f4d65;">Cheap Flights</h2>
+
+        <p class="cheap-flight-subhead">Fly from <b id="CurrentCity">Karachi</b> to your favorite cities</p>
+
+    </div>
+</div>
+
+<style>
+    .cheap-flights-country {
+        font-weight: bold;
+        font-size: 14px;
+        color: #7d8184;
+        margin-bottom: 0px;
     }
 
-    $(function () {
+    .cheap-flights-city {
+        font-size: 17px;
+        color: #1f4d65;
+        margin-bottom: 0px;
+    }
+</style>
 
-        $("#NormalTrip").show();
-        $("#MultiTrip").hide();
-        $("#ArvDate").show();
+<div class="row" style="margin-top:20px;margin-bottom:20px;">
 
-        $('#carousel ul').carouFredSel({
-            prev: '#prev',
-            next: '#next',
-            pagination: "#pager",
-            scroll: 1000
-        });
+    <div class="col-md-12" id="CheapFlightPanelList">
 
-        $(".caroufredsel_wrapper").css("width", "100%");
+        <h2 class="text-center font-weight-bold">Loading.....</h2>
 
-        $("#AddTrip").click(function () {
-            var ii = $("input[name='DestinationAirportCode']").length;
-            if (ii < 6) {
-                var Div = "<div id='trip" + (ii + 1) + "'><div class='col-md-3'> <input type='text' name='OriginAirportCode' id='OriginAirportCode" + (ii + 1) + "' class='form-control searchtxt'  placeholder='Airport Code or City' autocomplete='off' />  </div><div class='col-md-3'> <input type='text' id='DestinationAirportCode" + (ii + 1) + "' name='DestinationAirportCode' class='form-control searchtxt'  placeholder='Airport Code or City' autocomplete='off' /> </div><div class='col-md-4'> <input type='text' name='DepartureDate' id='DepartureDate" + (ii + 1) + "' class='form-control' placeholder='Departure Date' /> </div><div class='col-md-2'> <input style='margin-top:0px;' type='button' class='btn btn-danger' value='Delete Trip' onclick='delthis(\"" + (ii + 1) + "\")' /> </div><div class='col-md-12'> </div></div>";
-                $("#MultiTripAdd").append(Div);
-                var Apt = $("#OriginAirportCode" + (ii + 1) + "").val();
 
-                var options = {
-                    url: function (phrase) {
-                        return "/Index/GetAllAirports?AirCode=" + Apt;
-                    },
-                    list: {
-                        maxNumberOfElements: 15,
-                        match: {
-                            enabled: true
+    </div>
+
+</div>
+
+@section scriptarea{
+
+    <script src="~/scripts/picker.js"></script>
+    <script src="~/scripts/pickerdate.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+
+            AddSearch("OriginAirportCode1");
+            AddSearch("DestinationAirportCode1");
+
+            AddAirlineSearch("Airline");
+            AddValidation();
+
+            $('#arrivedate').prop('disabled', true);
+
+            window.dp1 = $('#DepartureDate1').pickadate({
+                min: new Date(),
+                format: 'dddd, dd mmm, yyyy',
+                formatSubmit: 'yyyy/mm/dd',
+                hiddenName: true,
+                hiddenPrefix: 'prefix__',
+                hiddenSuffix: '',
+                onSet: function (thingSet) {
+
+                    if ($("#triptypetext").val() == "0") {
+                        $('#arrivedate').prop('disabled', false);
+                        $('#arrivedate').focus();
+                    }
+
+
+                }
+            });
+
+
+
+            window.ari1 = $('#arrivedate').pickadate({
+                min: new Date(),
+                format: 'dddd, dd mmm, yyyy',
+                formatSubmit: 'yyyy/mm/dd',
+                hiddenName: true,
+                hiddenPrefix: 'prefix__',
+                hiddenSuffix: '',
+                onSet: function (thingSet) {
+
+                }
+            });
+
+
+            $(".triptype").click(function () {
+                var mode = $(this).data('mode');
+
+                $(".triptype").removeClass("triptypeActive");
+
+                $(this).addClass("triptypeActive");
+
+
+                $("#arrivedate").prop("disabled", false);
+                $("#contarrivedate").hide();
+                $(".multicityareaButtons").hide();
+                $("#multicityarea").hide();
+
+                $("#multicityarea input[type='text']").prop("disabled", true);
+
+
+
+                if (mode == 'rt') {
+
+                    $("#triptypetext").val("0");
+
+                    $("#triptypetext1").val("0");
+
+
+                    $("#contarrivedate").show();
+                    if ($("#DepartureDate1").val() == "") {
+                        $("#arrivedate").prop("disabled", true);
+                    }
+
+                } else if (mode == 'ot') {
+                    $("#triptypetext").val("1");
+                    $("#triptypetext1").val("1");
+
+                    $("#arrivedate").prop("disabled", true);
+                } else if (mode == 'mt') {
+                    $("#arrivedate").attr("disabled", true);
+                    $("#triptypetext").val("2");
+                    $("#triptypetext1").val("2");
+
+                    $(".multicityareaButtons").show();
+                    $("#multicityarea").show();
+
+                    $("#multicityarea input[type='text']").prop("disabled", false);
+                    $("#arrivedate").prop("disabled", true);
+                }
+            });
+
+            $("#removebtnmulticity").click(function () {
+                $(".MulticitySegment").last().remove();
+                var count = $(".MulticitySegment").length;
+
+                if (count < 4) {
+                    $("#addsegmulticityDiv").show();
+                }
+
+
+            });
+
+
+            $("#addsegmulticity").click(function () {
+
+                var count = $(".MulticitySegment").length;
+
+                if (count < 4) {
+
+                    var OriginAirportCodeID = "OriginAirportCode" + (count + 2);
+                    var DestinationAirportCodeID = "DestinationAirportCode" + (count + 2);
+                    var DepartureDateID = "DepartureDate" + (count + 2);
+
+
+
+
+                    var MulticitySegmentDiv =
+                        "<div class='col-md-12 col-sm-12 col-xs-12 MulticitySegment'><div class='col-md-4 col-sm-12 col-xs-12'><div class='form-group input-container'><i class='material-icons icons'>flight_takeoff</i><input name='OriginAirportCode' id='" +
+                        OriginAirportCodeID +
+                        "' class='input-field'  data-airportname='yes' type='text' autocomplete='off' placeholder='Leaving From'></div></div><div class='col-md-4 col-sm-12 col-xs-12'><div class='form-group input-container'><i class='material-icons icons'>flight_land</i><input name='DestinationAirportCode' id='" +
+                        DestinationAirportCodeID +
+                        "' class='input-field' data-airportname='yes' type='text' autocomplete='off' placeholder='Going To'></div></div><div class='col-md-4 col-sm-12 col-xs-12'><div class='form-group input-container'><i class='material-icons icons'>date_range</i><input id='" +
+                        DepartureDateID +
+                        "' autocomplete='off' type='text' class='input-field datepicker' placeholder='Departure Date' /><input type='hidden' name='DepartureDate' id='" + DepartureDateID + "Main'/></div></div></div>";
+
+                    $("#multicityarea").append(MulticitySegmentDiv);
+                    if (count == 3) {
+                        $("#addsegmulticityDiv").hide();
+                    }
+
+                    $('#' + DepartureDateID).pickadate({
+                        min: new Date(),
+                        format: 'dddd, dd mmm, yyyy',
+                        formatSubmit: 'yyyy/mm/dd',
+                        hiddenName: true,
+                        hiddenPrefix: 'prefix__',
+                        hiddenSuffix: '',
+                        onSet: function (thingSet) {
+                            var a = $("#" + DepartureDateID).pickadate('picker');
+                            $("#" + DepartureDateID + "Main").val(a.get('select', 'yyyy/mm/dd'));
                         }
-                    }, requestDelay: 500,
-                    theme: "plate-dark",
-                    getValue: "name"
-                };
-                setmultidates("DepartureDate" + (ii), "DepartureDate" + (ii + 1));
-                $("#OriginAirportCode" + (ii + 1) + "").easyAutocomplete(options);
-                $("#DestinationAirportCode" + (ii + 1) + "").easyAutocomplete(options);
+                    });
 
-                ActiveButton();
-            }
+                    AddSearch(OriginAirportCodeID);
+                    AddSearch(DestinationAirportCodeID);
+                    AddValidation();
+
+                } else {
+                    $("#addsegmulticityDiv").hide();
+                }
+
+            });
+
+
+            $("#submitnow").click(function () {
+
+                var Run = true;
+
+                $(".input-field").each(function () {
+
+                    var disabledElement = $(this).prop('disabled');
+
+                    if (disabledElement == false) {
+
+                        var Optional = $(this).data('optional');
+
+                        if (Optional != undefined && Optional == "1") {
+                            $(this).removeClass('border');
+
+                        } else {
+
+                            if ($(this).val() == "") {
+                                $(this).addClass('border');
+
+                                if ($("#triptypetext").val() != "0") {
+                                    if ($(this).get(0).id == "arrivedate") {
+
+                                    } else {
+                                        Run = false;
+                                    }
+                                } else {
+                                    Run = false;
+                                }
+
+                            } else {
+                                $(this).removeClass('border');
+                            }
+
+                        }
+                    }
+
+                });
+
+
+                if (Run) {
+
+                    var FrmData = $("#frmsearchflight").serialize();
+
+
+                    $("#frmsearchflight input").prop('disabled', true);
+                    $("#frmsearchflight select").prop('disabled', true);
+                    $("#frmsearchflight button").prop('disabled', true);
+
+                    $("#flightsearchpanel").css('opacity', '0.5');
+                    $("#flightsearch").css('display', 'block');
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/Index/TaskRun",
+                        data: FrmData,
+                        success: function (response) {
+
+                            $("#frmsearchflight input").prop('disabled', false);
+                            $("#frmsearchflight select").prop('disabled', false);
+                            $("#frmsearchflight button").prop('disabled', false);
+
+                            $('#submitreal').click();
+                            if (response != "") {
+
+                                var obj = $.parseJSON(response);
+
+                                if (obj.Code == "200") {
+                                    //$('#btnSubmitOff').click();
+                                } else {
+                                    $("#loadingdivs").hide();
+                                    $("#error").html(obj.Message);
+                                }
+
+                            } else {
+                                window.location.href = "/";
+                            }
+
+                        },
+                        error: function (response) {
+                            $("#frmsearchflight input").prop('disabled', false);
+                            $("#frmsearchflight select").prop('disabled', false);
+                            $("#frmsearchflight button").prop('disabled', false);
+                            $('#submitreal').click();
+
+                        }
+                    });
+
+                }
+
+            });
+
+
         });
 
-    });
+
+        function AddValidation() {
+            $(".input-field").each(function () {
+                $(this).unbind('blur');
+                $(this).unbind('change');
 
 
-    var Apt = $(".searchtxt");
+                var isairporttext = $(this).data('airportname');
 
-    for (var i = 0; i < Apt.length; i++) {
-        AddSearchoption(Apt[i].id);
-    }
+                if (isairporttext != undefined) {
+                    $(this).unbind('click');
 
-    var Apt = $("#airlinename").val();
+                    $(this).click(function () {
+                        $(this).val("");
+                        $(this).focus();
+                    });
 
-    var options = {
-        url: function (phrase) {
-            return "/Index/GetAllAirlines?AirCode=" + Apt;
-        },
-        list: {
-            maxNumberOfElements: 15,
-            match: {
-                enabled: true
-            }
-        }, requestDelay: 500,
-        theme: "plate-dark",
-        getValue: "name"
-    };
+                }
 
-    $("#airlinename").easyAutocomplete(options);
 
-    function delthis(div) {
-        $("#trip" + div).remove();
-    }
+                $(this).blur(function () {
+                    var Optional = $(this).data('optional');
 
-    function RadClick() {
-        var Rad = $("input[name='triptype']");
-        $("#NormalTrip").show();
-        $("#MultiTrip").hide();
-        $("#ArvDate").show();
+                    if (Optional != undefined && Optional == "1") {
+                        $(this).removeClass('border');
+                    } else {
 
-        $('input[name="arrivedate"]').prop("disabled", false);
-        $("#MultiTrip input[type='text']").prop("disabled", false);
-        $("#NormalTrip input[type='text']").prop("disabled", false);
+                        if ($(this).val() == "") {
+                            $(this).addClass('border');
 
-        if (Rad[0].checked) {
-            $("#MultiTrip input[type='text']").prop("disabled", true);
-        } else if (Rad[1].checked) {
-            $("#MultiTrip input[type='text']").prop("disabled", true);
-            $('input[name="arrivedate"]').prop("disabled", true);
-            $("#ArvDate").hide();
-        } else if (Rad[2].checked) {
-            $('input[name="arrivedate"]').prop("disabled", true);
-            $("#MultiTrip input[type='text']").prop("disabled", false);
-            $("#NormalTrip input[type='text']").prop("disabled", true);
+                        } else {
+                            $(this).removeClass('border');
+                        }
 
-            $("#NormalTrip").hide();
-            $("#MultiTrip").show();
+                    }
+                });
+
+                $(this).change(function () {
+                    var Optional = $(this).data('optional');
+
+                    if (Optional != undefined && Optional == "1") {
+                        $(this).removeClass('border');
+                    } else {
+
+                        if ($(this).val() == "") {
+                            $(this).addClass('border');
+
+                        } else {
+                            $(this).removeClass('border');
+                        }
+
+                    }
+                });
+
+            });
         }
-        ActiveButton();
-    }
 
-    function ActiveButton() {
-        $(".searchtxt").click(function () {
-            this.value = "";
-        });
-        $(".searchtxt").blur(function () {
-            if (this.value == "") {
-                if (!$("#" + this.id).prop("disabled")) {
-                    $("#" + this.id).css("border-color", "red");
-                    $("#error" + this.id).html("Please fill in here");
-                    $("#btnSubmit").attr("Allow", "NotAccess");
-                } else {
-                    $("#" + this.id).css("border-color", "#ccc");
-                    $("#error" + this.id).html("");
-                    $("#btnSubmit").attr("Allow", "Access");
-                }
-            } else {
-                $("#error" + this.id).html("");
-                $("#" + this.id).css("border-color", "#ccc");
-                $("#btnSubmit").attr("Allow", "Access");
+        function AddAirlineSearch(ID) {
+            var options = {
+                url: function (phrase) {
+                    return "/Index/GetAllAirlines?AirCode=" + ($("#" + ID).val());
+                },
+                list: {
+                    maxNumberOfElements: 15,
+                    match: {
+                        enabled: true
+                    },
+                    onClickEvent: function () {
+                        $(".easy-autocomplete-container").each(function () {
+                            $(this).children().css('display', 'none');
+                        });
+                    }
+                },
+                requestDelay: 500,
+                theme: "plate-dark",
+                getValue: "name"
+            };
+
+            $("#" + ID).easyAutocomplete(options);
+        }
+
+        function AddSearch(ID) {
+            var options = {
+                url: function (phrase) {
+                    return "/index/GetAllAirports?AirCode=" + ($("#" + ID).val());
+                },
+                list: {
+                    maxNumberOfElements: 15,
+                    match: {
+                        enabled: true
+                    },
+                    onClickEvent: function () {
+                        $(".easy-autocomplete-container").each(function () {
+                            $(this).children().css('display', 'none');
+                        });
+                    }
+                },
+                requestDelay: 500,
+                theme: "plate-dark",
+                getValue: "name"
+            };
+
+            $("#" + ID).easyAutocomplete(options);
+        }
+
+        $.ajax({
+            url: "https://geoip-db.com/jsonp",
+            jsonpCallback: "callback",
+            dataType: "jsonp",
+            success: function (location) {
+
+                $('#CurrentCity').html(location.city);
             }
         });
 
-        $(".hasDatepicker").blur(function () {
-            if (this.value == "") {
-                if (!$("#" + this.id).prop("disabled")) {
-                    $("#" + this.id).css("border-color", "red");
-                    $("#btnSubmit").attr("Allow", "NotAccess");
-                } else {
-                    $("#" + this.id).css("border-color", "#ccc");
-                    $("#btnSubmit").attr("Allow", "Access");
-                }
-            } else {
-                $("#" + this.id).css("border-color", "#ccc");
-                $("#btnSubmit").attr("Allow", "Access");
-            }
+        $.post("/Index/GetCheapFlights", function (data) {
+
+            $("#CheapFlightPanelList").html(data);
+            $(".cheapflightsbox").click(function () {
+                var codeO = $(this).data('flightorigin');
+                $("#OriginAirportCode1").val(codeO);
+                var codeD = $(this).data('flightdestination');
+                $("#DestinationAirportCode1").val(codeD);
+
+                $("#DepartureDate1").val($(this).data('date'))
+                $("#airlinename").val($(this).data('airline'))
+
+                //$.ajax({
+                //    url: "https://geoip-db.com/jsonp",
+                //    jsonpCallback: "callback",
+                //    dataType: "jsonp",
+                //    success: function (location) {
+                //        $('#country').html(location.country_name);
+                //        $('#state').html(location.state);
+                //        $('#city').html(location.city);
+                //        $('#latitude').html(location.latitude);
+                //        $('#longitude').html(location.longitude);
+                //        $('#ip').html(location.IPv4);
+                //    }
+                //});
+
+                $("#arrivedate").focus();
+            });
         });
 
-        $(".hasDatepicker").change(function () {
-            if (this.value == "") {
-                if (!$("#" + this.id).prop("disabled")) {
-                    $("#" + this.id).css("border-color", "red");
-                    $("#error" + this.id).html("Please fill in here");
-                    $("#btnSubmit").attr("Allow", "NotAccess");
-                } else {
-                    $("#" + this.id).css("border-color", "#ccc");
-                    $("#btnSubmit").attr("Allow", "Access");
-                    $("#error" + this.id).html("");
-                }
-            } else {
-                $("#" + this.id).css("border-color", "#ccc");
-                $("#btnSubmit").attr("Allow", "Access");
-                $("#error" + this.id).html("");
-            }
-        });
-    }
 
+    </script>
 
-</script>
+}

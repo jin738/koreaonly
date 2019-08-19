@@ -1,0 +1,238 @@
+﻿
+@model KoreaOnly.Models.TicketsModel
+
+@{
+    ViewBag.Title = "Tickets";
+    Layout = "~/Views/Default.cshtml";
+}
+
+<head>
+    <link href="~/Content/Tickets.css" media="all" rel="stylesheet" />
+</head>
+
+<div class="container TicketClass" id="" style="margin-bottom: 30px;">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tripheader">
+                <span class="bold uppercase">21 DEC 2017 <i style="font-size: 20px;" class="fa fa-caret-right" aria-hidden="true"></i> 22 JAN 2018</span><span class="tripto">TRIP TO</span><span class="bold">SEOUL INCHEON INT, KOREA REPUBLIC</span>
+            </div>
+
+            <div class="top10 FullWidth">
+                <span class="preparedfor">PREPARED FOR</span>
+            </div>
+            <div class="FullWidth">
+                <span class="bold uppercase">Muhammad Usama Alam</span>
+            </div>
+
+            <div class="top10 FullWidth">
+                <span class="normalHeading colorgray uppercase">RESERVATION CODE <span class="smalltext">EHFZAZ</span></span>
+            </div>
+
+            <div class="FullWidth borderbottom">
+                <span class="normalHeading colorgray uppercase">AIRLINE RESERVATION CODE <span class="smalltext">T9DW7N (OZ)</span></span>
+            </div>
+            <div class="FullWidth top10">
+                <div>
+                    <div style="width: 55px;float: left;">
+                        <i style="font-size: 50px;" class="fa fa-plane" aria-hidden="true"></i>
+                    </div>
+                    <span class="marginleft">
+                        <span class="bold normalHeading">Departure:  </span><span class="bigtext bold marginright">THURSDAY 21 DEC</span><i style="font-size: 20px;" class="fa fa-caret-right" aria-hidden="true"></i><span class="bold normalHeading marginleft">ARRIVAL:  </span><span class="bigtext bold">FRIDAY 22 DEC</span>
+                    </span>
+                    <br />
+                    <span class="marginleft">
+                        <span class="smalltext fontsize11 normalHeading">Please verify flight times prior to departure</span>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row top10">
+
+        <div class="col-md-12 top10 ">
+            <div class="col-md-3 graybackcolor curvediv" style="border:1px solid #ccc">
+                <span class="bold FullWidth">ASIANA AIRLINES</span><br />
+                <span class="bold FullWidth">OZ 0201</span><br /><br />
+                <span class="bold normalHeading FullWidth">Duration :</span><br />
+                <span class="normalHeading">13hr(s) 30min(s)</span><br />
+                <br />
+                <span class="bold normalHeading FullWidth">Class :</span><br />
+                <span class="normalHeading">Economy</span><br />
+                <br />
+                <span class="bold normalHeading FullWidth">Status :</span><br />
+                <span class="normalHeading">Confirmed</span><br />
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="row" style="border:2px solid #ccc">
+                    <div class="col-md-6 col-sm-6" style="border-right:2px solid #ccc">
+                        <p style="font-weight:bold;font-size:20px;">LAX</p>
+                        <p>LOS ANGLES CA</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6" style="border-left:2px solid #ccc">
+                        <p style="font-weight:bold;font-size:20px;">ICN</p>
+                        <p>SEOUL INCHEON INT, KOREA REPUBLIC</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-sm-6" style="min-height: 190px !important;border:2px solid #ccc">
+                        <p style="font-weight:bold;font-size:17px;padding-top:5px;">Departing At:</p>
+                        <p style="font-size:18px;margin-bottom: 0px;">11:00am</p>
+                        <p style="font-size:18px;padding-top:0px;">(Thu, Dec 21)</h4>
+                        <p style="font-weight:bold;font-size:17px;margin-bottom: 0px;">Terminal</p>
+                        <p style="font-size:16px;padding-top:5px; margin-bottom: 0px;">TOM BRADELY INTL TERM</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6" style="min-height: 190px !important;border:2px solid #ccc">
+                        <p style="font-weight:bold;font-size:17px;padding-top:5px;">Departing At:</p>
+                        <p style="font-size:18px;margin-bottom: 0px;">11:00am</p>
+                        <p style="font-size:18px;padding-top:0px;">(Thu, Dec 21)</h4>
+                        <p style="font-weight:bold;font-size:17px;margin-bottom: 0px;">Terminal</p>
+                        <p style="font-size:16px;padding-top:5px; margin-bottom: 0px;">TOM BRADELY INTL TERM</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12" style="min-height: 280px !important;border:2px solid #ccc">
+                    <p style="font-weight:bold;font-size:17px;padding-top:5px;">Aircraft:</p>
+                    <p style="font-size:16px;margin-bottom: 0px;">AIRBUS INDUSTRIE A380-800 JET</p>
+                    <p style="font-size:18px;Padding-top:5px;margin-bottom: 0px;">Distance(in Miles):</p>
+                    <p style="font-size:16px;margin-bottom: 0px;">5999</p>
+
+                    <p style="font-size:18px;Padding-top:5px;margin-bottom: 0px;">Stop(s): 0</p>
+
+                    <p style="font-size:18px;Padding-top:5px;margin-bottom: 0px;">Meals:</p>
+                    <p style="font-size:16px;margin-bottom: 0px;">Lunch, Snack</p>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="row top10">
+        <div class="col-md-12 top10 ">
+            <table id="tb" style="width:100%;border:2px solid #ccc">
+                <tr>
+                    <th>Passenger Name:</th>
+                    <th>Seats:</th>
+                    <th>Frequent Flyer:</th>
+                    <th>eTicket Receipt(s):</th>
+                </tr>
+
+                <tr>
+                    <td>Muhammad Usama Alam</td>
+                    <td>Check-In Required</td>
+                    <td>30000131/ASIANAAIRLINES</td>
+                    <td>988701715419</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="section-to-print">
+
+    <table>
+        <tr class="top10">
+            <td class="graybackcolor curvediv" style="border:1px solid #ccc">
+                <span class="bold FullWidth">ASIANA AIRLINES</span><br />
+                <span class="bold FullWidth">OZ 0201</span><br /><br />
+                <span class="bold normalHeading FullWidth">Duration :</span><br />
+                <span class="normalHeading">13hr(s) 30min(s)</span><br />
+                <br />
+                <span class="bold normalHeading FullWidth">Class :</span><br />
+                <span class="normalHeading">Economy</span><br />
+                <br />
+                <span class="bold normalHeading FullWidth">Status :</span><br />
+                <span class="normalHeading">Confirmed</span><br />
+            </td>
+
+            <td class="">
+                <table>
+
+                    <tr>
+                        <td>
+                            <table>
+                                <tr  style="border:2px solid #ccc">
+                                    <td class="col-md-6 col-sm-6" style="border-right:2px solid #ccc">
+                                        <p style="font-weight:bold;font-size:20px;">LAX</p>
+                                        <p>LOS ANGLES CA</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td  style="min-height: 190px !important;border:2px solid #ccc">
+                                        <p style="font-weight:bold;font-size:17px;padding-top:5px;">Departing At:</p>
+                                        <p style="font-size:18px;margin-bottom: 0px;">11:00am</p>
+                                        <p style="font-size:18px;padding-top:0px;">(Thu, Dec 21)</p>
+                                        <p style="font-weight:bold;font-size:17px;margin-bottom: 0px;">Terminal</p>
+                                        <p style="font-size:16px;padding-top:5px; margin-bottom: 0px;">TOM BRADELY INTL TERM</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+
+                                <tr>
+                                    <td  style="border-left:2px solid #ccc">
+                                        <p style="font-weight:bold;font-size:20px;">ICN</p>
+                                        <p>SEOUL INCHEON INT, KOREA REPUBLIC</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="min-height: 190px !important;border:2px solid #ccc">
+                                        <p style="font-weight:bold;font-size:17px;padding-top:5px;">Departing At:</p>
+                                        <p style="font-size:18px;margin-bottom: 0px;">11:00am</p>
+                                        <p style="font-size:18px;padding-top:0px;">(Thu, Dec 21)</p>
+                                        <p style="font-weight:bold;font-size:17px;margin-bottom: 0px;">Terminal</p>
+                                        <p style="font-size:16px;padding-top:5px; margin-bottom: 0px;">TOM BRADELY INTL TERM</p>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+
+                    </tr>
+
+                </table>
+            </td>
+
+            <td class="">
+
+                <table>
+                    <tr>
+                        <td>
+                            <p style="font-weight:bold;font-size:17px;padding-top:5px;">Aircraft:</p>
+                            <p style="font-size:16px;margin-bottom: 0px;">AIRBUS INDUSTRIE A380-800 JET</p>
+                            <p style="font-size:18px;Padding-top:5px;margin-bottom: 0px;">Distance(in Miles):</p>
+                            <p style="font-size:16px;margin-bottom: 0px;">5999</p>
+
+                            <p style="font-size:18px;Padding-top:5px;margin-bottom: 0px;">Stop(s): 0</p>
+
+                            <p style="font-size:18px;Padding-top:5px;margin-bottom: 0px;">Meals:</p>
+                            <p style="font-size:16px;margin-bottom: 0px;">Lunch, Snack</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+        </tr>
+
+    </table>
+
+</div>
