@@ -352,7 +352,7 @@ namespace KoreaOnly.Controllers
                 }
                 else
                 {
-                    Session["Error"] = "Flight Not Found";
+                    Session["Error"] = "NO Flight Schedule, Please Change Your Destination";
                     Session["ErrorDate"] = DateTime.Now;
                     return null;
                 }
