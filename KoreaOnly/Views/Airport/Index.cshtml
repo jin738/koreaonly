@@ -30,7 +30,7 @@
                 @Html.DisplayNameFor(model => model.AirportLocation)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AirportName)
+                @Html.DisplayNameFor(model => model.AirportFullName)
             </th>            
             <th></th>
         </tr>
@@ -45,7 +45,7 @@
                     @Html.DisplayFor(modelItem => item.AirportLocation)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.AirportName)
+                    @Html.DisplayFor(modelItem => item.AirportFullName)
                 </td>                
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { AirportCode = item.AirportCode }) |                    
