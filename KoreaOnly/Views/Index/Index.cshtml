@@ -22,12 +22,12 @@
         text-align: center;
     }
 
-    input[name="OriginAirportCode"] {
+    input[id^="OriginAirportCode"] {
         text-transform: uppercase;
     }
 
 
-    input[name="DestinationAirportCode"] {
+    input[id^="DestinationAirportCode"] {
         text-transform: uppercase;
     }
 
@@ -126,6 +126,14 @@
         width: 100% !important;
     }
 
+    .eac-item {
+        padding: 10px !important;
+    }
+
+        .eac-item b {
+            color: red !important;
+        }
+
     .border {
         border: 1px solid red !important;
     }
@@ -156,7 +164,7 @@
                 </div>
                 <div class="loader" style="position:absolute;top: 30%;right: 40%;left: 42%;z-index: 110;"></div>
                 <div style="position:absolute;top: 65%;right: 36%;left: 36%;z-index: 110;text-align:center;color:#1c6784;">
-                    <label>Please Wait <br>Let us Find Flights for you...</label>
+                    @*<label>Please Wait <br>Let us Find Flights for you...</label>*@
                 </div>
             </div>
 
@@ -194,7 +202,8 @@
 
                         <div class="form-group input-container">
                             <i class="material-icons icons">flight_takeoff</i>
-                            <input name="OriginAirportCode" id="OriginAirportCode1" data-airportname="yes" autocomplete="off" class="input-field" type="text" placeholder="Leaving From">
+                            <input id="OriginAirportCode1" data-code="OAC1" data-moveto="DestinationAirportCode1" data-airportname="yes" autocomplete="off" class="input-field" type="text" placeholder="Leaving From">
+                            <input name="OriginAirportCode" id="OAC1" type="hidden" />
                         </div>
 
                     </div>
@@ -203,7 +212,8 @@
 
                         <div class="form-group input-container">
                             <i class="material-icons icons">flight_land</i>
-                            <input name="DestinationAirportCode" id="DestinationAirportCode1" data-airportname="yes" autocomplete="off" class="input-field" type="text" placeholder="Going To">
+                            <input id="DestinationAirportCode1" data-code="DAC1" data-airportname="yes" autocomplete="off" class="input-field" type="text" placeholder="Going To">
+                            <input name="DestinationAirportCode" id="DAC1" type="hidden" />
                         </div>
 
                     </div>
@@ -823,13 +833,13 @@
                     var DepartureDateNextID = "DepartureDate" + (count + 3);
 
                     var MulticitySegmentDiv =
-                        "<div class='col-md-12 col-sm-12 col-xs-12 MulticitySegment'><div class='col-md-4 col-sm-12 col-xs-12'><div class='form-group input-container'><i class='material-icons icons'>flight_takeoff</i><input name='OriginAirportCode' id='" +
+                        "<div class='col-md-12 col-sm-12 col-xs-12 MulticitySegment'><div class='col-md-4 col-sm-12 col-xs-12'><div class='form-group input-container'><i class='material-icons icons'>flight_takeoff</i><input id='" +
                         OriginAirportCodeID +
-                        "' class='input-field'  data-airportname='yes' type='text' autocomplete='off' placeholder='Leaving From'></div></div><div class='col-md-4 col-sm-12 col-xs-12'><div class='form-group input-container'><i class='material-icons icons'>flight_land</i><input name='DestinationAirportCode' id='" +
+                        "' class='input-field' data-code='OAC" + (count + 2) + "' data-moveto='" + DestinationAirportCodeID + "' data-airportname='yes' type='text' autocomplete='off' placeholder='Leaving From'/><input name='OriginAirportCode' id='OAC" + (count + 2) + "' type='hidden' /></div></div><div class='col-md-4 col-sm-12 col-xs-12'><div class='form-group input-container'><i class='material-icons icons'>flight_land</i><input  id='" +
                         DestinationAirportCodeID +
-                        "' class='input-field' data-airportname='yes' type='text' autocomplete='off' placeholder='Going To'></div></div><div class='col-md-4 col-sm-12 col-xs-12'><div class='form-group input-container'><i class='material-icons icons'>date_range</i><input id='" +
+                        "' class='input-field' data-airportname='yes' data-code='DAC" + (count + 2) + "' type='text' autocomplete='off' placeholder='Going To'/><input name='DestinationAirportCode' id='DAC" + (count + 2) + "' type='hidden' /></div></div><div class='col-md-4 col-sm-12 col-xs-12'><div class='form-group input-container'><i class='material-icons icons'>date_range</i><input id='" +
                         DepartureDateID +
-                        "' autocomplete='off' type='text' class='input-field datepicker' placeholder='Departure Date' /><input type='hidden' name='DepartureDate' id='" + DepartureDateID + "Main'/></div></div></div>";
+                        "' autocomplete='off' type='text'   class='input-field datepicker' placeholder='Departure Date' /><input type='hidden' name='DepartureDate' id='" + DepartureDateID + "Main'/></div></div></div>";
 
                     $("#multicityarea").append(MulticitySegmentDiv);
                     if (count == 3) {
@@ -1005,9 +1015,23 @@
                 if (isairporttext != undefined) {
                     $(this).unbind('click');
 
+                    $(this).change(function () {
+                        $("#" + $(this).data("code")).val($(this).val().replace("(", "").replace(")", ""));
+
+                        if ($(this).data("moveto") != "") {
+                            $("#" + $(this).data("moveto")).delay(2000).focus();
+                        }
+
+                        $("#" + $(this).data("code")).val($(this).val().replace("(", "").replace(")", ""));
+
+                    });
+
                     $(this).click(function () {
                         $(this).val("");
                         $(this).focus();
+
+                        $("#" + $(this).data('code')).val("");
+
                     });
 
                 }
@@ -1028,6 +1052,10 @@
                         }
 
                     }
+
+
+
+
                 });
 
                 $(this).change(function () {
@@ -1056,7 +1084,7 @@
                     return "/Index/GetAllAirlines?AirCode=" + ($("#" + ID).val().toUpperCase());
                 },
                 list: {
-                    maxNumberOfElements: 15,
+                    maxNumberOfElements: 20,
                     match: {
                         enabled: true
                     },
@@ -1080,7 +1108,7 @@
                     return "/index/GetAllAirports?AirCode=" + ($("#" + ID).val().toUpperCase());
                 },
                 list: {
-                    maxNumberOfElements: 15,
+                    maxNumberOfElements: 20,
                     match: {
                         enabled: true
                     },
@@ -1108,35 +1136,37 @@
             }
         });
 
-        $.post("/Index/GetCheapFlights", function (data) {
+            // Comment duew to Ch
 
-            $("#CheapFlightPanelList").html(data);
-            $(".cheapflightsbox").click(function () {
-                var codeO = $(this).data('flightorigin');
-                $("#OriginAirportCode1").val(codeO);
-                var codeD = $(this).data('flightdestination');
-                $("#DestinationAirportCode1").val(codeD);
+            //$.post("/Index/GetCheapFlights", function (data) {
 
-                $("#DepartureDate1").val($(this).data('date'))
-                $("#airlinename").val($(this).data('airline'))
+            //    $("#CheapFlightPanelList").html(data);
+            //    $(".cheapflightsbox").click(function () {
+            //        var codeO = $(this).data('flightorigin');
+            //        $("#OriginAirportCode1").val(codeO);
+            //        var codeD = $(this).data('flightdestination');
+            //        $("#DestinationAirportCode1").val(codeD);
 
-                //$.ajax({
-                //    url: "https://geoip-db.com/jsonp",
-                //    jsonpCallback: "callback",
-                //    dataType: "jsonp",
-                //    success: function (location) {
-                //        $('#country').html(location.country_name);
-                //        $('#state').html(location.state);
-                //        $('#city').html(location.city);
-                //        $('#latitude').html(location.latitude);
-                //        $('#longitude').html(location.longitude);
-                //        $('#ip').html(location.IPv4);
-                //    }
-                //});
+            //        $("#DepartureDate1").val($(this).data('date'))
+            //        $("#airlinename").val($(this).data('airline'))
 
-                $("#arrivedate").focus();
-            });
-        });
+            //        //$.ajax({
+            //        //    url: "https://geoip-db.com/jsonp",
+            //        //    jsonpCallback: "callback",
+            //        //    dataType: "jsonp",
+            //        //    success: function (location) {
+            //        //        $('#country').html(location.country_name);
+            //        //        $('#state').html(location.state);
+            //        //        $('#city').html(location.city);
+            //        //        $('#latitude').html(location.latitude);
+            //        //        $('#longitude').html(location.longitude);
+            //        //        $('#ip').html(location.IPv4);
+            //        //    }
+            //        //});
+
+            //        $("#arrivedate").focus();
+            //    });
+            //});
 
 
     </script>

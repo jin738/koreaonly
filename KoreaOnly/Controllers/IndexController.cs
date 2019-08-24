@@ -17,35 +17,17 @@ namespace KoreaOnly.Controllers
 
         public ActionResult Index()
         {
-            try
-            {
-                if (Session["ErrorDate"]?.ToString() != "")
-                {
-                    var Dt = DateTime.Now - Convert.ToDateTime(Session["ErrorDate"]);
-                    if (Dt.TotalMinutes > 1)
-                    {
-                        Session["Error"] = "";
-                    }
-                }
-                return View();
-            }
-            catch (Exception ex)
-            {
-                var st = new StackTrace(ex, true);
-                var frame = st.GetFrame(0);
-                var line = frame.GetFileLineNumber();
-                Session["Error"] = ex.Message;
-                Session["ErrorDate"] = DateTime.Now;
-                MainController.WriteLog("---------Exception-----------");
-                MainController.WriteLog(ex.Message + " LINE NUMBER  " + line + Environment.NewLine + "--------Complete Exception-----------" + "" + ex.InnerException + "" + Environment.NewLine + "" + ex.StackTrace);
-            }
+			//Enable Security
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
+            MainController.OTA_AIRLOWFARESEARCH_Response = null;
+            Session["ViewModel"] = null;
 
-            MainController.GetAirport();
-            MainController.GetAirline();
+            ViewBag.Error = Session["Error"];
+            Session["Error"] = "";
 
             return View();
-
+ 
         }
 
 
@@ -78,7 +60,8 @@ namespace KoreaOnly.Controllers
         {
             var Control = new MainController();
 
-            requestModel.DestinationAirportCode = (from code in requestModel.DestinationAirportCode
+			
+             requestModel.DestinationAirportCode = (from code in requestModel.DestinationAirportCode
                                                    where code != ""
                                                    select code.Substring(0, 3).ToString()).ToArray();
 
@@ -89,6 +72,7 @@ namespace KoreaOnly.Controllers
             requestModel.DepartureDate = (from deptDate in requestModel.DepartureDate
                                           where deptDate.ToString("ddMMyyyy") != "01010001"
                                           select deptDate).ToArray();
+
 
             if (requestModel.triptype == "0")
             {
@@ -194,6 +178,20 @@ namespace KoreaOnly.Controllers
             return PartialView("_SearchFillter");
         }
 
+		public ActionResult GetCheapFlights()
+        {
+            using (var DB = new DbConnection())
+            {
+                var Res = DB.GetResult<CheapFlights>("Select * from CheapFlights where isactive = 1 ", null);
+
+                if (Res != null)
+                    return PartialView("_cheapflightspanel", Res);
+                return PartialView("_cheapflightspanel", new List<CheapFlights>());
+            }
+
+
+        }
+		
         public List<SearchFlightResult> GetDistinctFlights(List<SearchFlightResult> FlightsList)
         {
             try

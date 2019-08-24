@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-16"?>
+<EnhancedAirBookRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL_Payload/v02_01">
+        <Success timeStamp="2018-07-10T11:18:14.687+05:00" />
+    </ApplicationResults>
+    <OTA_AirBookRS xmlns="http://services.sabre.com/sp/eab/v3_2">
+        <OriginDestinationOption>
+            <FlightSegment ArrivalDateTime="07-19T16:45" DepartureDateTime="07-19T15:33" eTicket="true" FlightNumber="0720" NumberInParty="001" ResBookDesigCode="R" Status="SS">
+                <DestinationLocation LocationCode="LAS" />
+                <MarketingAirline Code="NK" FlightNumber="0720" />
+                <OriginLocation LocationCode="LAX" />
+            </FlightSegment>
+            <FlightSegment ArrivalDateTime="07-19T19:48" DepartureDateTime="07-19T18:40" eTicket="true" FlightNumber="0245" NumberInParty="001" ResBookDesigCode="U" Status="SS">
+                <DestinationLocation LocationCode="SAN" />
+                <MarketingAirline Code="NK" FlightNumber="0245" />
+                <OriginLocation LocationCode="LAS" />
+            </FlightSegment>
+            <FlightSegment ArrivalDateTime="08-16T16:49" DepartureDateTime="08-16T15:32" eTicket="true" FlightNumber="0356" NumberInParty="001" ResBookDesigCode="U" Status="SS">
+                <DestinationLocation LocationCode="LAS" />
+                <MarketingAirline Code="NK" FlightNumber="0356" />
+                <OriginLocation LocationCode="SAN" />
+            </FlightSegment>
+            <FlightSegment ArrivalDateTime="08-16T21:53" DepartureDateTime="08-16T20:34" eTicket="true" FlightNumber="0719" NumberInParty="001" ResBookDesigCode="U" Status="SS">
+                <DestinationLocation LocationCode="LAX" />
+                <MarketingAirline Code="NK" FlightNumber="0719" />
+                <OriginLocation LocationCode="LAS" />
+            </FlightSegment>
+        </OriginDestinationOption>
+    </OTA_AirBookRS>
+    <OTA_AirPriceRS xmlns="http://services.sabre.com/sp/eab/v3_2">
+        <PriceQuote>
+            <MiscInformation>
+                <BaggageInfo>
+                    <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="1">
+                        <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+                        <AncillaryService SubGroupCode="CY">
+                            <Text>CARRY ON HAND BAGGAGE</Text>
+                        </AncillaryService>
+                        <CommercialNameofBaggageItemType>CARRY ON BAGGAGE</CommercialNameofBaggageItemType>
+                        <DescriptionOne Code="10">
+                            <Text>UP TO 22 POUNDS/10 KILOGRAMS</Text>
+                        </DescriptionOne>
+                        <DescriptionTwo Code="5C">
+                            <Text>UP TO 50 POUNDS/127 LINEAR CENTIMETERS</Text>
+                        </DescriptionTwo>
+                        <EMD_Type>4</EMD_Type>
+                        <ExtendedSubCodeKey>010ACNK</ExtendedSubCodeKey>
+                        <SizeWeightInfo>
+                            <MaximumSize Units="C">127</MaximumSize>
+                            <MaximumWeightInAlternate Units="K">10</MaximumWeightInAlternate>
+                            <MaximumWeight Units="L">22</MaximumWeight>
+                        </SizeWeightInfo>
+                    </SubCodeProperties>
+                    <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="2">
+                        <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+                        <CommercialNameofBaggageItemType>UPTO 40LB 18KG AND 62LI 158LCM</CommercialNameofBaggageItemType>
+                        <DescriptionOne Code="18">
+                            <Text>UP TO 40 POUNDS/18 KILOGRAMS</Text>
+                        </DescriptionOne>
+                        <DescriptionTwo Code="6U">
+                            <Text>UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                        </DescriptionTwo>
+                        <EMD_Type>4</EMD_Type>
+                        <ExtendedSubCodeKey>04BACNK</ExtendedSubCodeKey>
+                        <SizeWeightInfo>
+                            <MaximumSizeInAlternate Units="C">158</MaximumSizeInAlternate>
+                            <MaximumSize Units="I">62</MaximumSize>
+                            <MaximumWeightInAlternate Units="K">18</MaximumWeightInAlternate>
+                            <MaximumWeight Units="L">40</MaximumWeight>
+                        </SizeWeightInfo>
+                    </SubCodeProperties>
+                </BaggageInfo>
+                <HeaderInformation MultiTicketSequenceNmbr="1">
+                    <DepartureDate>2018-07-19</DepartureDate>
+                    <LastTicketingDate>07-10T23:18</LastTicketingDate>
+                    <Text>VALIDATING CARRIER - NK</Text>
+                    <Text>CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES</Text>
+                    <Text>BAG ALLOWANCE -LAXSAN-*/NK</Text>
+                    <Text>*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT NK</Text>
+                    <Text>1STCHECKED BAG FEE-LAXSAN-USD50.00/NK/UP TO 40 POUNDS/18 KILOGR</Text>
+                    <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                    <Text>2NDCHECKED BAG FEE-LAXSAN-USD62.00/NK/UP TO 40 POUNDS/18 KILOGR</Text>
+                    <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                    <Text>BAG ALLOWANCE -SANLAX-*/NK</Text>
+                    <Text>*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT NK</Text>
+                    <Text>1STCHECKED BAG FEE-SANLAX-USD50.00/NK/UP TO 40 POUNDS/18 KILOGR</Text>
+                    <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                    <Text>2NDCHECKED BAG FEE-SANLAX-USD62.00/NK/UP TO 40 POUNDS/18 KILOGR</Text>
+                    <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                    <Text>CARRY ON ALLOWANCE</Text>
+                    <Text>LAXLAS LASSAN SANLAS LASLAX-NK-CARRY ON ALLOWANCE UNKNOWN-CONTA</Text>
+                    <Text>CT CARRIER</Text>
+                    <Text>CARRY ON CHARGES</Text>
+                    <Text>LAXLAS LASSAN SANLAS LASLAX-NK</Text>
+                    <Text>1ST UP TO 22 POUNDS/10 KILOGRAMS AND UP TO 50 POUNDS/127 LINEAR</Text>
+                    <Text>CENTIMETERS-USD55.00</Text>
+                    <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+                    <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+                    <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+                    <Text>19JUL DEPARTURE DATE-----LAST DAY TO PURCHASE 10JUL/2318</Text>
+                    <ValidatingCarrier Code="NK" />
+                </HeaderInformation>
+                <MultiTicketInformation MultiTicketSequenceNmbr="1">
+                    <CurrencyCode>USD</CurrencyCode>
+                    <TicketNumber>0</TicketNumber>
+                    <TotalAmount>238.55</TotalAmount>
+                </MultiTicketInformation>
+            </MiscInformation>
+            <PricedItinerary CurrencyCode="USD" MultiTicket="false" TotalAmount="238.55">
+                <AirItineraryPricingInfo MultiTicketSequenceNmbr="1">
+                    <BaggageProvisions RPH="1">
+                        <Associations>
+                            <CarrierCode RPH="1">NK</CarrierCode>
+                            <CarrierCode RPH="2">NK</CarrierCode>
+                            <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+                            <DepartureDate RPH="1">2018-07-19</DepartureDate>
+                            <DepartureDate RPH="2">2018-07-19</DepartureDate>
+                            <DestinationLocation LocationCode="LAS" RPH="1" />
+                            <DestinationLocation LocationCode="SAN" RPH="2" />
+                            <FlightNumber RPH="1">720</FlightNumber>
+                            <FlightNumber RPH="2">245</FlightNumber>
+                            <OriginLocation LocationCode="LAX" RPH="1" />
+                            <OriginLocation LocationCode="LAS" RPH="2" />
+                            <PNR_Segment RPH="1">2</PNR_Segment>
+                            <PNR_Segment RPH="2">3</PNR_Segment>
+                            <ResBookDesigCode RPH="1">R</ResBookDesigCode>
+                            <ResBookDesigCode RPH="2">U</ResBookDesigCode>
+                            <StatusCode RPH="1">SS</StatusCode>
+                            <StatusCode RPH="2">SS</StatusCode>
+                        </Associations>
+                        <CarrierWhoseBaggageProvisionsApply>NK</CarrierWhoseBaggageProvisionsApply>
+                        <Commissionable>N</Commissionable>
+                        <FeeApplicationIndicator>4</FeeApplicationIndicator>
+                        <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+                        <FirstOccurrence>1</FirstOccurrence>
+                        <LastOccurrence>1</LastOccurrence>
+                        <PassengerType Code="ADT" />
+                        <PriceInformation>
+                            <Base Amount="50.00" CurrencyCode="USD" />
+                            <Equiv Amount="50.00" CurrencyCode="USD" />
+                            <TaxIndicator>X</TaxIndicator>
+                            <Total>50.00</Total>
+                        </PriceInformation>
+                        <ProvisionType>C</ProvisionType>
+                        <RefundReissue>N</RefundReissue>
+                        <SubCodeInfo>
+                            <SubCodeForChargesOthers>04BACNK</SubCodeForChargesOthers>
+                        </SubCodeInfo>
+                    </BaggageProvisions>
+                    <BaggageProvisions RPH="2">
+                        <Associations>
+                            <CarrierCode RPH="1">NK</CarrierCode>
+                            <CarrierCode RPH="2">NK</CarrierCode>
+                            <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+                            <DepartureDate RPH="1">2018-07-19</DepartureDate>
+                            <DepartureDate RPH="2">2018-07-19</DepartureDate>
+                            <DestinationLocation LocationCode="LAS" RPH="1" />
+                            <DestinationLocation LocationCode="SAN" RPH="2" />
+                            <FlightNumber RPH="1">720</FlightNumber>
+                            <FlightNumber RPH="2">245</FlightNumber>
+                            <OriginLocation LocationCode="LAX" RPH="1" />
+                            <OriginLocation LocationCode="LAS" RPH="2" />
+                            <PNR_Segment RPH="1">2</PNR_Segment>
+                            <PNR_Segment RPH="2">3</PNR_Segment>
+                            <ResBookDesigCode RPH="1">R</ResBookDesigCode>
+                            <ResBookDesigCode RPH="2">U</ResBookDesigCode>
+                            <StatusCode RPH="1">SS</StatusCode>
+                            <StatusCode RPH="2">SS</StatusCode>
+                        </Associations>
+                        <CarrierWhoseBaggageProvisionsApply>NK</CarrierWhoseBaggageProvisionsApply>
+                        <Commissionable>N</Commissionable>
+                        <FeeApplicationIndicator>4</FeeApplicationIndicator>
+                        <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+                        <FirstOccurrence>2</FirstOccurrence>
+                        <LastOccurrence>2</LastOccurrence>
+                        <PassengerType Code="ADT" />
+                        <PriceInformation>
+                            <Base Amount="62.00" CurrencyCode="USD" />
+                            <Equiv Amount="62.00" CurrencyCode="USD" />
+                            <TaxIndicator>X</TaxIndicator>
+                            <Total>62.00</Total>
+                        </PriceInformation>
+                        <ProvisionType>C</ProvisionType>
+                        <RefundReissue>N</RefundReissue>
+                        <SubCodeInfo>
+                            <SubCodeForChargesOthers>04BACNK</SubCodeForChargesOthers>
+                        </SubCodeInfo>
+                    </BaggageProvisions>
+                    <BaggageProvisions RPH="3">
+                        <Associations>
+                            <CarrierCode RPH="1">NK</CarrierCode>
+                            <CarrierCode RPH="2">NK</CarrierCode>
+                            <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+                            <DepartureDate RPH="1">2018-08-16</DepartureDate>
+                            <DepartureDate RPH="2">2018-08-16</DepartureDate>
+                            <DestinationLocation LocationCode="LAS" RPH="1" />
+                            <DestinationLocation LocationCode="LAX" RPH="2" />
+                            <FlightNumber RPH="1">356</FlightNumber>
+                            <FlightNumber RPH="2">719</FlightNumber>
+                            <OriginLocation LocationCode="SAN" RPH="1" />
+                            <OriginLocation LocationCode="LAS" RPH="2" />
+                            <PNR_Segment RPH="1">4</PNR_Segment>
+                            <PNR_Segment RPH="2">5</PNR_Segment>
+                            <ResBookDesigCode RPH="1">U</ResBookDesigCode>
+                            <ResBookDesigCode RPH="2">U</ResBookDesigCode>
+                            <StatusCode RPH="1">SS</StatusCode>
+                            <StatusCode RPH="2">SS</StatusCode>
+                        </Associations>
+                        <CarrierWhoseBaggageProvisionsApply>NK</CarrierWhoseBaggageProvisionsApply>
+                        <Commissionable>N</Commissionable>
+                        <FeeApplicationIndicator>4</FeeApplicationIndicator>
+                        <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+                        <FirstOccurrence>1</FirstOccurrence>
+                        <LastOccurrence>1</LastOccurrence>
+                        <PassengerType Code="ADT" />
+                        <PriceInformation>
+                            <Base Amount="50.00" CurrencyCode="USD" />
+                            <Equiv Amount="50.00" CurrencyCode="USD" />
+                            <TaxIndicator>X</TaxIndicator>
+                            <Total>50.00</Total>
+                        </PriceInformation>
+                        <ProvisionType>C</ProvisionType>
+                        <RefundReissue>N</RefundReissue>
+                        <SubCodeInfo>
+                            <SubCodeForChargesOthers>04BACNK</SubCodeForChargesOthers>
+                        </SubCodeInfo>
+                    </BaggageProvisions>
+                    <BaggageProvisions RPH="4">
+                        <Associations>
+                            <CarrierCode RPH="1">NK</CarrierCode>
+                            <CarrierCode RPH="2">NK</CarrierCode>
+                            <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+                            <DepartureDate RPH="1">2018-08-16</DepartureDate>
+                            <DepartureDate RPH="2">2018-08-16</DepartureDate>
+                            <DestinationLocation LocationCode="LAS" RPH="1" />
+                            <DestinationLocation LocationCode="LAX" RPH="2" />
+                            <FlightNumber RPH="1">356</FlightNumber>
+                            <FlightNumber RPH="2">719</FlightNumber>
+                            <OriginLocation LocationCode="SAN" RPH="1" />
+                            <OriginLocation LocationCode="LAS" RPH="2" />
+                            <PNR_Segment RPH="1">4</PNR_Segment>
+                            <PNR_Segment RPH="2">5</PNR_Segment>
+                            <ResBookDesigCode RPH="1">U</ResBookDesigCode>
+                            <ResBookDesigCode RPH="2">U</ResBookDesigCode>
+                            <StatusCode RPH="1">SS</StatusCode>
+                            <StatusCode RPH="2">SS</StatusCode>
+                        </Associations>
+                        <CarrierWhoseBaggageProvisionsApply>NK</CarrierWhoseBaggageProvisionsApply>
+                        <Commissionable>N</Commissionable>
+                        <FeeApplicationIndicator>4</FeeApplicationIndicator>
+                        <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+                        <FirstOccurrence>2</FirstOccurrence>
+                        <LastOccurrence>2</LastOccurrence>
+                        <PassengerType Code="ADT" />
+                        <PriceInformation>
+                            <Base Amount="62.00" CurrencyCode="USD" />
+                            <Equiv Amount="62.00" CurrencyCode="USD" />
+                            <TaxIndicator>X</TaxIndicator>
+                            <Total>62.00</Total>
+                        </PriceInformation>
+                        <ProvisionType>C</ProvisionType>
+                        <RefundReissue>N</RefundReissue>
+                        <SubCodeInfo>
+                            <SubCodeForChargesOthers>04BACNK</SubCodeForChargesOthers>
+                        </SubCodeInfo>
+                    </BaggageProvisions>
+                    <BaggageProvisions RPH="5">
+                        <Associations>
+                            <CarrierCode RPH="1">NK</CarrierCode>
+                            <CarrierCode RPH="2">NK</CarrierCode>
+                            <CarrierCode RPH="3">NK</CarrierCode>
+                            <CarrierCode RPH="4">NK</CarrierCode>
+                            <CountForSegmentAssociatedID>4</CountForSegmentAssociatedID>
+                            <DepartureDate RPH="1">2018-07-19</DepartureDate>
+                            <DepartureDate RPH="2">2018-07-19</DepartureDate>
+                            <DepartureDate RPH="3">2018-08-16</DepartureDate>
+                            <DepartureDate RPH="4">2018-08-16</DepartureDate>
+                            <DestinationLocation LocationCode="LAS" RPH="1" />
+                            <DestinationLocation LocationCode="SAN" RPH="2" />
+                            <DestinationLocation LocationCode="LAS" RPH="3" />
+                            <DestinationLocation LocationCode="LAX" RPH="4" />
+                            <FlightNumber RPH="1">720</FlightNumber>
+                            <FlightNumber RPH="2">245</FlightNumber>
+                            <FlightNumber RPH="3">356</FlightNumber>
+                            <FlightNumber RPH="4">719</FlightNumber>
+                            <OriginLocation LocationCode="LAX" RPH="1" />
+                            <OriginLocation LocationCode="LAS" RPH="2" />
+                            <OriginLocation LocationCode="SAN" RPH="3" />
+                            <OriginLocation LocationCode="LAS" RPH="4" />
+                            <PNR_Segment RPH="1">2</PNR_Segment>
+                            <PNR_Segment RPH="2">3</PNR_Segment>
+                            <PNR_Segment RPH="3">4</PNR_Segment>
+                            <PNR_Segment RPH="4">5</PNR_Segment>
+                            <ResBookDesigCode RPH="1">R</ResBookDesigCode>
+                            <ResBookDesigCode RPH="2">U</ResBookDesigCode>
+                            <ResBookDesigCode RPH="3">U</ResBookDesigCode>
+                            <ResBookDesigCode RPH="4">U</ResBookDesigCode>
+                            <StatusCode RPH="1">SS</StatusCode>
+                            <StatusCode RPH="2">SS</StatusCode>
+                            <StatusCode RPH="3">SS</StatusCode>
+                            <StatusCode RPH="4">SS</StatusCode>
+                        </Associations>
+                        <CarrierWhoseBaggageProvisionsApply>NK</CarrierWhoseBaggageProvisionsApply>
+                        <Commissionable>N</Commissionable>
+                        <FeeApplicationIndicator>4</FeeApplicationIndicator>
+                        <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+                        <FirstOccurrence>1</FirstOccurrence>
+                        <LastOccurrence>1</LastOccurrence>
+                        <PassengerType Code="ADT" />
+                        <PriceInformation>
+                            <Base Amount="55.00" CurrencyCode="USD" />
+                            <Equiv Amount="55.00" CurrencyCode="USD" />
+                            <TaxIndicator>X</TaxIndicator>
+                            <Total>55.00</Total>
+                        </PriceInformation>
+                        <ProvisionType>CC</ProvisionType>
+                        <RefundReissue>N</RefundReissue>
+                        <SubCodeInfo>
+                            <SubCodeForChargesOthers>010ACNK</SubCodeForChargesOthers>
+                        </SubCodeInfo>
+                    </BaggageProvisions>
+                    <FareCalculation>
+                        <Text>LAX NK LAS Q34.41Q4.65 15.81NK SAN Q34.41Q4.65 0.93NK LAS Q34.41Q4.65 0.93NK LAX Q34.41Q4.65 0.93USD174.84 PLUS5.00END ZPLAXLASSANLAS XFLAX4.5LAS4.5SAN4.5LAS4.5</Text>
+                    </FareCalculation>
+                    <FareCalculationBreakdown>
+                        <Branch PCC="K3SG" FirstJointCarrier="NK" />
+                        <Departure CityCode="LAX" AirportCode="LAX" AirlineCode="NK" GenericInd="O" ArrivalCityCode="LAS" ArrivalAirportCode="LAS" />
+                        <FareBasis Code="R0XSNR" FareAmount="15.81" FarePassengerType="ADT" FareType="P" FilingCarrier="NK" GlobalInd="WH" TripTypeInd="O" Market="LAXLAS" Cabin="Y" />
+                        <RuleCategoryIndicator>5</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>8</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>10</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>12</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>15</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>16</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>18</RuleCategoryIndicator>
+                        <Surcharges Ind="Q" Type="UNK">34.41</Surcharges>
+                        <Surcharges Ind="Q" Type="UNK">4.65</Surcharges>
+                    </FareCalculationBreakdown>
+                    <FareCalculationBreakdown>
+                        <Branch PCC="K3SG" FirstJointCarrier="NK" />
+                        <Departure CityCode="LAS" AirportCode="LAS" AirlineCode="NK" GenericInd="O" ArrivalCityCode="SAN" ArrivalAirportCode="SAN" />
+                        <FareBasis Code="U7XSNR" FareAmount="0.93" FarePassengerType="ADT" FareType="P" FilingCarrier="NK" GlobalInd="WH" TripTypeInd="O" Market="LASSAN" Cabin="Y" />
+                        <RuleCategoryIndicator>5</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>8</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>10</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>12</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>15</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>16</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>18</RuleCategoryIndicator>
+                        <Surcharges Ind="Q" Type="UNK">34.41</Surcharges>
+                        <Surcharges Ind="Q" Type="UNK">4.65</Surcharges>
+                    </FareCalculationBreakdown>
+                    <FareCalculationBreakdown>
+                        <Branch PCC="K3SG" FirstJointCarrier="NK" />
+                        <Departure CityCode="SAN" AirportCode="SAN" AirlineCode="NK" GenericInd="O" ArrivalCityCode="LAS" ArrivalAirportCode="LAS" />
+                        <FareBasis Code="U7XSNR" FareAmount="0.93" FarePassengerType="ADT" FareType="P" FilingCarrier="NK" GlobalInd="WH" TripTypeInd="O" Market="SANLAS" Cabin="Y" />
+                        <RuleCategoryIndicator>5</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>8</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>10</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>12</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>15</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>16</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>18</RuleCategoryIndicator>
+                        <Surcharges Ind="Q" Type="UNK">34.41</Surcharges>
+                        <Surcharges Ind="Q" Type="UNK">4.65</Surcharges>
+                    </FareCalculationBreakdown>
+                    <FareCalculationBreakdown>
+                        <Branch PCC="K3SG" FirstJointCarrier="NK" />
+                        <Departure CityCode="LAS" AirportCode="LAS" AirlineCode="NK" GenericInd="O" ArrivalCityCode="LAX" ArrivalAirportCode="LAX" />
+                        <FareBasis Code="U7XSNR" FareAmount="0.93" FarePassengerType="ADT" FareType="P" FilingCarrier="NK" GlobalInd="WH" TripTypeInd="O" Market="LASLAX" Cabin="Y" />
+                        <RuleCategoryIndicator>5</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>8</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>10</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>12</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>15</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>16</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>18</RuleCategoryIndicator>
+                        <Surcharges Ind="Q" Type="UNK">34.41</Surcharges>
+                        <Surcharges Ind="Q" Type="UNK">4.65</Surcharges>
+                    </FareCalculationBreakdown>
+                    <ItinTotalFare NonRefundableInd="N">
+                        <BaggageInfo>
+                            <US_DOT_Disclosure>
+                                <Text>BAG ALLOWANCE -LAXSAN-*/NK</Text>
+                                <Text>*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT NK</Text>
+                                <Text>1STCHECKED BAG FEE-LAXSAN-USD50.00/NK/UP TO 40 POUNDS/18 KILOGR</Text>
+                                <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                                <Text>2NDCHECKED BAG FEE-LAXSAN-USD62.00/NK/UP TO 40 POUNDS/18 KILOGR</Text>
+                                <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                                <Text>BAG ALLOWANCE -SANLAX-*/NK</Text>
+                                <Text>*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT NK</Text>
+                                <Text>1STCHECKED BAG FEE-SANLAX-USD50.00/NK/UP TO 40 POUNDS/18 KILOGR</Text>
+                                <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                                <Text>2NDCHECKED BAG FEE-SANLAX-USD62.00/NK/UP TO 40 POUNDS/18 KILOGR</Text>
+                                <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                                <Text>CARRY ON ALLOWANCE</Text>
+                                <Text>LAXLAS LASSAN SANLAS LASLAX-NK-CARRY ON ALLOWANCE UNKNOWN-CONTA</Text>
+                                <Text>CT CARRIER</Text>
+                                <Text>CARRY ON CHARGES</Text>
+                                <Text>LAXLAS LASSAN SANLAS LASLAX-NK</Text>
+                                <Text>1ST UP TO 22 POUNDS/10 KILOGRAMS AND UP TO 50 POUNDS/127 LINEAR</Text>
+                                <Text>CENTIMETERS-USD55.00</Text>
+                                <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+                                <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+                                <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+                            </US_DOT_Disclosure>
+                        </BaggageInfo>
+                        <BaseFare Amount="179.84" CurrencyCode="USD" />
+                        <Endorsements>
+                            <Text>NONREF/NONTRANS/VALID NK</Text>
+                        </Endorsements>
+                        <Taxes TotalAmount="58.71">
+                            <Tax Amount="13.11" TaxCode="US1" TaxName="TRANSPORTATION TAX DOMESTIC WH" TicketingTaxCode="US" />
+                            <Tax Amount="16.40" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" TicketingTaxCode="ZP" />
+                            <Tax Amount="11.20" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECUR" TicketingTaxCode="AY" />
+                            <Tax Amount="18.00" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGE" TicketingTaxCode="XF" />
+                        </Taxes>
+                        <TotalFare Amount="238.55" CurrencyCode="USD" />
+                        <Warnings>
+                            <Warning ShortText="BAG ALLOWANCE     -LAXSAN-*/NK" />
+                            <Warning ShortText="*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT NK" />
+                            <Warning ShortText="1STCHECKED BAG FEE-LAXSAN-USD50.00/NK/UP TO 40 POUNDS/18 KILOGR" />
+                            <Warning ShortText="AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS" />
+                            <Warning ShortText="2NDCHECKED BAG FEE-LAXSAN-USD62.00/NK/UP TO 40 POUNDS/18 KILOGR" />
+                            <Warning ShortText="AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS" />
+                            <Warning ShortText="BAG ALLOWANCE     -SANLAX-*/NK" />
+                            <Warning ShortText="*BAGGAGE ALLOWANCES/FEES UNKNOWN - CONTACT NK" />
+                            <Warning ShortText="1STCHECKED BAG FEE-SANLAX-USD50.00/NK/UP TO 40 POUNDS/18 KILOGR" />
+                            <Warning ShortText="AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS" />
+                            <Warning ShortText="2NDCHECKED BAG FEE-SANLAX-USD62.00/NK/UP TO 40 POUNDS/18 KILOGR" />
+                            <Warning ShortText="AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS" />
+                            <Warning ShortText="CARRY ON ALLOWANCE" />
+                            <Warning ShortText="LAXLAS LASSAN SANLAS LASLAX-NK-CARRY ON ALLOWANCE UNKNOWN-CONTA" />
+                            <Warning ShortText="CT CARRIER" />
+                            <Warning ShortText="CARRY ON CHARGES" />
+                            <Warning ShortText="LAXLAS LASSAN SANLAS LASLAX-NK" />
+                            <Warning ShortText="1ST UP TO 22 POUNDS/10 KILOGRAMS AND UP TO 50 POUNDS/127 LINEAR" />
+                            <Warning ShortText="CENTIMETERS-USD55.00" />
+                            <Warning ShortText="ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON" />
+                            <Warning ShortText="FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/" />
+                            <Warning ShortText="CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./" />
+                        </Warnings>
+                    </ItinTotalFare>
+                    <PassengerTypeQuantity Code="ADT" Quantity="1" />
+                    <PTC_FareBreakdown>
+                        <Cabin>Y</Cabin>
+                        <FareBasis Code="R0XSNR" FareAmount="15.81" FarePassengerType="ADT" FareType="P" FilingCarrier="NK" GlobalInd="WH" Market="LAXLAS" />
+                        <Surcharges Ind="Q" Type="UNK">34.41</Surcharges>
+                        <Surcharges Ind="Q" Type="UNK">4.65</Surcharges>
+                    </PTC_FareBreakdown>
+                    <PTC_FareBreakdown>
+                        <Cabin>Y</Cabin>
+                        <FareBasis Code="U7XSNR" FareAmount="0.93" FarePassengerType="ADT" FareType="P" FilingCarrier="NK" GlobalInd="WH" Market="LASSAN" />
+                        <Surcharges Ind="Q" Type="UNK">34.41</Surcharges>
+                        <Surcharges Ind="Q" Type="UNK">4.65</Surcharges>
+                    </PTC_FareBreakdown>
+                    <PTC_FareBreakdown>
+                        <Cabin>Y</Cabin>
+                        <FareBasis Code="U7XSNR" FareAmount="0.93" FarePassengerType="ADT" FareType="P" FilingCarrier="NK" GlobalInd="WH" Market="SANLAS" />
+                        <Surcharges Ind="Q" Type="UNK">34.41</Surcharges>
+                        <Surcharges Ind="Q" Type="UNK">4.65</Surcharges>
+                    </PTC_FareBreakdown>
+                    <PTC_FareBreakdown>
+                        <Cabin>Y</Cabin>
+                        <FareBasis Code="U7XSNR" FareAmount="0.93" FarePassengerType="ADT" FareType="P" FilingCarrier="NK" GlobalInd="WH" Market="LASLAX" />
+                        <Surcharges Ind="Q" Type="UNK">34.41</Surcharges>
+                        <Surcharges Ind="Q" Type="UNK">4.65</Surcharges>
+                    </PTC_FareBreakdown>
+                </AirItineraryPricingInfo>
+                <AirItineraryPricingInfo MultiTicketSequenceNmbr="1">
+                    <BaggageProvisions RPH="1">
+                        <Associations>
+                            <CarrierCode RPH="1">UA</CarrierCode>
+                            <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+                            <DepartureDate RPH="1">2018-08-30</DepartureDate>
+                            <DestinationLocation LocationCode="LAS" RPH="1" />
+                            <FlightNumber RPH="1">671</FlightNumber>
+                            <OriginLocation LocationCode="LAX" RPH="1" />
+                            <PNR_Segment RPH="1">2</PNR_Segment>
+                            <ResBookDesigCode RPH="1">S</ResBookDesigCode>
+                            <StatusCode RPH="1">SS</StatusCode>
+                        </Associations>
+                        <CarrierWhoseBaggageProvisionsApply>UA</CarrierWhoseBaggageProvisionsApply>
+                        <NumPiecesBDI>0</NumPiecesBDI>
+                        <ProvisionType>A</ProvisionType>
+                        <SubCodeInfo>
+                            <SubCodeForChargesOthers>0DFAAUA</SubCodeForChargesOthers>
+                        </SubCodeInfo>
+                    </BaggageProvisions>
+                    <BaggageProvisions RPH="2">
+                        <Associations>
+                            <CarrierCode RPH="1">UA</CarrierCode>
+                            <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+                            <DepartureDate RPH="1">2018-08-30</DepartureDate>
+                            <DestinationLocation LocationCode="LAS" RPH="1" />
+                            <FlightNumber RPH="1">671</FlightNumber>
+                            <OriginLocation LocationCode="LAX" RPH="1" />
+                            <PNR_Segment RPH="1">2</PNR_Segment>
+                            <ResBookDesigCode RPH="1">S</ResBookDesigCode>
+                            <StatusCode RPH="1">SS</StatusCode>
+                        </Associations>
+                        <CarrierWhoseBaggageProvisionsApply>UA</CarrierWhoseBaggageProvisionsApply>
+                        <Commissionable>N</Commissionable>
+                        <FeeApplicationIndicator>3</FeeApplicationIndicator>
+                        <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+                        <FirstOccurrence>1</FirstOccurrence>
+                        <LastOccurrence>1</LastOccurrence>
+                        <PassengerType Code="CNN" />
+                        <PriceInformation>
+                            <Base Amount="25.00" CurrencyCode="USD" />
+                            <Equiv Amount="25.00" CurrencyCode="USD" />
+                            <TaxIndicator>X</TaxIndicator>
+                            <Total>25.00</Total>
+                        </PriceInformation>
+                        <ProvisionType>C</ProvisionType>
+                        <RefundReissue>R</RefundReissue>
+                        <SubCodeInfo>
+                            <SubCodeForChargesOthers>0GOACUA</SubCodeForChargesOthers>
+                        </SubCodeInfo>
+                    </BaggageProvisions>
+                    <BaggageProvisions RPH="3">
+                        <Associations>
+                            <CarrierCode RPH="1">UA</CarrierCode>
+                            <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+                            <DepartureDate RPH="1">2018-08-30</DepartureDate>
+                            <DestinationLocation LocationCode="LAS" RPH="1" />
+                            <FlightNumber RPH="1">671</FlightNumber>
+                            <OriginLocation LocationCode="LAX" RPH="1" />
+                            <PNR_Segment RPH="1">2</PNR_Segment>
+                            <ResBookDesigCode RPH="1">S</ResBookDesigCode>
+                            <StatusCode RPH="1">SS</StatusCode>
+                        </Associations>
+                        <CarrierWhoseBaggageProvisionsApply>UA</CarrierWhoseBaggageProvisionsApply>
+                        <Commissionable>N</Commissionable>
+                        <FeeApplicationIndicator>3</FeeApplicationIndicator>
+                        <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+                        <FirstOccurrence>2</FirstOccurrence>
+                        <LastOccurrence>2</LastOccurrence>
+                        <PassengerType Code="CNN" />
+                        <PriceInformation>
+                            <Base Amount="35.00" CurrencyCode="USD" />
+                            <Equiv Amount="35.00" CurrencyCode="USD" />
+                            <TaxIndicator>X</TaxIndicator>
+                            <Total>35.00</Total>
+                        </PriceInformation>
+                        <ProvisionType>C</ProvisionType>
+                        <RefundReissue>R</RefundReissue>
+                        <SubCodeInfo>
+                            <SubCodeForChargesOthers>0GOACUA</SubCodeForChargesOthers>
+                        </SubCodeInfo>
+                    </BaggageProvisions>
+                    <BaggageProvisions RPH="4">
+                        <Associations>
+                            <CarrierCode RPH="1">UA</CarrierCode>
+                            <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+                            <DepartureDate RPH="1">2018-08-30</DepartureDate>
+                            <DestinationLocation LocationCode="LAS" RPH="1" />
+                            <FlightNumber RPH="1">671</FlightNumber>
+                            <OriginLocation LocationCode="LAX" RPH="1" />
+                            <PNR_Segment RPH="1">2</PNR_Segment>
+                            <ResBookDesigCode RPH="1">S</ResBookDesigCode>
+                            <StatusCode RPH="1">SS</StatusCode>
+                        </Associations>
+                        <CarrierWhoseBaggageProvisionsApply>UA</CarrierWhoseBaggageProvisionsApply>
+                        <NumPiecesBDI>1</NumPiecesBDI>
+                        <ProvisionType>B</ProvisionType>
+                        <SubCodeInfo>
+                            <SubCodeForChargesOthers>0LNABUA</SubCodeForChargesOthers>
+                        </SubCodeInfo>
+                    </BaggageProvisions>
+                    <FareCalculation>
+                        <Text>LAX UA LAS74.42USD74.42 PLUS5.00END ZPLAX XFLAX4.5</Text>
+                    </FareCalculation>
+                    <FareCalculationBreakdown>
+                        <Branch PCC="K3SG" FirstJointCarrier="UA" />
+                        <Departure CityCode="LAX" AirportCode="LAX" AirlineCode="UA" GenericInd="O" ArrivalCityCode="LAS" ArrivalAirportCode="LAS" />
+                        <FareBasis Code="SAA7AFENCH" FareAmount="74.42" FarePassengerType="CNN" FareType="P" FilingCarrier="UA" GlobalInd="WH" TripTypeInd="O" Market="LAXLAS" Cabin="Y" />
+                        <FreeBaggageAllowance>NONIL</FreeBaggageAllowance>
+                        <RuleCategoryIndicator>2</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>4</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>5</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>6</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>10</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>12</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>15</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>16</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>18</RuleCategoryIndicator>
+                        <RuleCategoryIndicator>19</RuleCategoryIndicator>
+                    </FareCalculationBreakdown>
+                    <ItinTotalFare NonRefundableInd="N">
+                        <BaggageInfo>
+                            <US_DOT_Disclosure>
+                                <Text>BAG ALLOWANCE -LAXLAS-NIL/UA</Text>
+                                <Text>1STCHECKED BAG FEE-LAXLAS-USD25.00/UA/UP TO 50 POUNDS/23 KILOGR</Text>
+                                <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS**</Text>
+                                <Text>2NDCHECKED BAG FEE-LAXLAS-USD35.00/UA/UP TO 50 POUNDS/23 KILOGR</Text>
+                                <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS**</Text>
+                                <Text>**BAG FEES APPLY AT EACH CHECK IN LOCATION</Text>
+                                <Text>CARRY ON ALLOWANCE</Text>
+                                <Text>LAXLAS-01P/UA</Text>
+                                <Text>CARRY ON CHARGES</Text>
+                                <Text>LAXLAS-UA-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+                                <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+                                <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+                                <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+                            </US_DOT_Disclosure>
+                        </BaggageInfo>
+                        <BaseFare Amount="79.42" CurrencyCode="USD" />
+                        <Endorsements>
+                            <Text>NONREF/0VALUAFTDPT/CHGFEE</Text>
+                        </Endorsements>
+                        <Taxes TotalAmount="19.78">
+                            <Tax Amount="5.58" TaxCode="US1" TaxName="TRANSPORTATION TAX DOMESTIC WH" TicketingTaxCode="US" />
+                            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" TicketingTaxCode="ZP" />
+                            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECUR" TicketingTaxCode="AY" />
+                            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGE" TicketingTaxCode="XF" />
+                        </Taxes>
+                        <TotalFare Amount="99.20" CurrencyCode="USD" />
+                        <Warnings>
+                            <Warning ShortText="BAG ALLOWANCE     -LAXLAS-NIL/UA" />
+                            <Warning ShortText="1STCHECKED BAG FEE-LAXLAS-USD25.00/UA/UP TO 50 POUNDS/23 KILOGR" />
+                            <Warning ShortText="AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS**" />
+                            <Warning ShortText="2NDCHECKED BAG FEE-LAXLAS-USD35.00/UA/UP TO 50 POUNDS/23 KILOGR" />
+                            <Warning ShortText="AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS**" />
+                            <Warning ShortText="**BAG FEES APPLY AT EACH CHECK IN LOCATION" />
+                            <Warning ShortText="CARRY ON ALLOWANCE" />
+                            <Warning ShortText="LAXLAS-01P/UA" />
+                            <Warning ShortText="CARRY ON CHARGES" />
+                            <Warning ShortText="LAXLAS-UA-CARRY ON FEES UNKNOWN-CONTACT CARRIER" />
+                            <Warning ShortText="ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON" />
+                            <Warning ShortText="FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/" />
+                            <Warning ShortText="CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./" />
+                            <Warning ShortText="MIXED PASSENGER TYPES - VERIFY RESTRICTIONS" />
+                        </Warnings>
+                    </ItinTotalFare>
+                    <PassengerTypeQuantity Code="CNN" Quantity="2" />
+                    <PTC_FareBreakdown>
+                        <Cabin>Y</Cabin>
+                        <FareBasis Code="SAA7AFENCH" FareAmount="74.42" FarePassengerType="CNN" FareType="P" FilingCarrier="UA" GlobalInd="WH" Market="LAXLAS" />
+                        <FreeBaggageAllowance>NONIL</FreeBaggageAllowance>
+                    </PTC_FareBreakdown>
+                </AirItineraryPricingInfo>
+            </PricedItinerary>
+        </PriceQuote>
+    </OTA_AirPriceRS>
+    <TravelItineraryReadRS xmlns="http://services.sabre.com/sp/eab/v3_2">
+        <TravelItinerary>
+            <CustomerInfo />
+            <ItineraryInfo>
+                <ReservationItems>
+                    <Item RPH="1">
+                        <FlightSegment AirMilesFlown="0236" ArrivalDateTime="07-19T16:45" DayOfWeekInd="4" DepartureDateTime="2018-07-19T15:33" ElapsedTime="01.12" eTicket="true" FlightNumber="0720" NumberInParty="01" ResBookDesigCode="R" SegmentNumber="0001" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+                            <DestinationLocation LocationCode="LAS" />
+                            <Equipment AirEquipType="32A" />
+                            <MarketingAirline Code="NK" FlightNumber="0720" />
+                            <OriginLocation LocationCode="LAX" />
+                            <SupplierRef ID="ABRQ" />
+                            <UpdatedArrivalTime>07-19T16:45</UpdatedArrivalTime>
+                            <UpdatedDepartureTime>07-19T15:33</UpdatedDepartureTime>
+                        </FlightSegment>
+                    </Item>
+                    <Item RPH="2">
+                        <FlightSegment AirMilesFlown="0258" ArrivalDateTime="07-19T19:48" DayOfWeekInd="4" DepartureDateTime="2018-07-19T18:40" ElapsedTime="01.08" eTicket="true" FlightNumber="0245" NumberInParty="01" ResBookDesigCode="U" SegmentNumber="0002" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+                            <DestinationLocation LocationCode="SAN" />
+                            <Equipment AirEquipType="32A" />
+                            <MarketingAirline Code="NK" FlightNumber="0245" />
+                            <OriginLocation LocationCode="LAS" />
+                            <SupplierRef ID="ABRQ" />
+                            <UpdatedArrivalTime>07-19T19:48</UpdatedArrivalTime>
+                            <UpdatedDepartureTime>07-19T18:40</UpdatedDepartureTime>
+                        </FlightSegment>
+                    </Item>
+                    <Item RPH="3">
+                        <FlightSegment AirMilesFlown="0258" ArrivalDateTime="08-16T16:49" DayOfWeekInd="4" DepartureDateTime="2018-08-16T15:32" ElapsedTime="01.17" eTicket="true" FlightNumber="0356" NumberInParty="01" ResBookDesigCode="U" SegmentNumber="0003" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+                            <DestinationLocation LocationCode="LAS" />
+                            <Equipment AirEquipType="32B" />
+                            <MarketingAirline Code="NK" FlightNumber="0356" />
+                            <OriginLocation LocationCode="SAN" />
+                            <SupplierRef ID="ABRQ" />
+                            <UpdatedArrivalTime>08-16T16:49</UpdatedArrivalTime>
+                            <UpdatedDepartureTime>08-16T15:32</UpdatedDepartureTime>
+                        </FlightSegment>
+                    </Item>
+                    <Item RPH="4">
+                        <FlightSegment AirMilesFlown="0236" ArrivalDateTime="08-16T21:53" DayOfWeekInd="4" DepartureDateTime="2018-08-16T20:34" ElapsedTime="01.19" eTicket="true" FlightNumber="0719" NumberInParty="01" ResBookDesigCode="U" SegmentNumber="0004" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+                            <DestinationLocation LocationCode="LAX" />
+                            <Equipment AirEquipType="32A" />
+                            <MarketingAirline Code="NK" FlightNumber="0719" />
+                            <OriginLocation LocationCode="LAS" />
+                            <SupplierRef ID="ABRQ" />
+                            <UpdatedArrivalTime>08-16T21:53</UpdatedArrivalTime>
+                            <UpdatedDepartureTime>08-16T20:34</UpdatedDepartureTime>
+                        </FlightSegment>
+                    </Item>
+                </ReservationItems>
+            </ItineraryInfo>
+            <ItineraryRef AirExtras="false" InhibitCode="U" PartitionID="AA" PrimeHostID="1S">
+                <Source PseudoCityCode="K3SG" />
+            </ItineraryRef>
+        </TravelItinerary>
+    </TravelItineraryReadRS>
+</EnhancedAirBookRS>

@@ -1,0 +1,107 @@
+﻿.TicketClass .row {
+    display: flex; /* equal height of the children */
+}
+
+.bold {
+    font-weight: 1000;
+    font-size: 18px;
+}
+
+.tripto {
+    margin-left: 15px;
+    margin-right: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    color: gray;
+}
+
+.tripheader {
+    margin-top: 20px;
+    width: 100%;
+    border-bottom: 3px solid black;
+}
+
+#tb th {
+    border: 2px solid #8e8e8e;
+    padding: 5px;
+    background-color: #ccc;
+    color: #000;
+}
+
+
+#tb td {
+    border: 2px solid #ccc;
+    padding: 5px;
+}
+
+.top10 {
+    margin-top: 10px !important;
+}
+
+.preparedfor {
+    color: #696969;
+    font-weight: bold;
+}
+
+.colorgray {
+    color: #696969 !important;
+}
+
+.normalHeading {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.FullWidth {
+    width: 100% !important;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.smalltext {
+    font-size: 13px;
+}
+
+.borderbottom {
+    border-bottom: 3px solid black;
+}
+
+.marginleft {
+    margin-left: 10px !important;
+}
+
+.marginright {
+    margin-right: 10px !important;
+}
+
+.bigtext {
+    font-size: 18px;
+}
+
+.fontsize11 {
+    font-size: 11px !important;
+}
+
+.graybackcolor {
+    background-color: #cecbcb;
+}
+
+.curvediv {
+    padding: 10px 10px 35px 30px !important;
+    border-radius: 0px 0px 0px 50px !important;
+}
+
+
+@media print {
+     body * {
+    visibility: hidden;
+  }
+  #section-to-print, #section-to-print * {
+    visibility: visible;
+   
+  }
+   
+}
