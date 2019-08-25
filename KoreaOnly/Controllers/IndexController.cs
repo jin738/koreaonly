@@ -502,11 +502,30 @@ namespace KoreaOnly.Controllers
 
                     };
 
-                    var Response2 = Control.SendAirRulellSRequest(Seg);
+                   List<string> BookCodes = new List<string>();
+                        foreach (var BookCode in Responce.TravelItineraryReadRS.TravelItinerary.ItineraryInfo.ReservationItems)
+                        {
+                            BookCodes.AddRange(from i in BookCode.FlightSegment select i.ResBookDesigCode.ToString());
+                        }
 
-                    Session["FlightFareView"] = SelectFlightFare;
-                    Session["SelectedFlight"] = SelectedFlightEn;
-                    Session["FlightReserve"] = Responce;
+                        // Change AirRule RQ
+
+                        var Response2 = Control.SendAirRulellSRequest(new Additional.OTA_AirRule.OTA_AirRulesRQOriginDestinationInformation()
+                        {
+                            FlightSegment = RQ
+
+                        }, BookCodes.Distinct().ToList());
+
+
+                        foreach (var item in Response2)
+                        {
+                            if (item.ApplicationResults.status != Additional.OTA_AirRule.CompletionCodes.Complete)
+                            {
+                               // var SabreRes = new MainController().SendSabreCommand("WPRD*");
+                            }
+                        }
+                        
+                        Session["AirRulles"] = Response2;
                 }
                 else
                 {
