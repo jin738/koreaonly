@@ -502,11 +502,12 @@ namespace KoreaOnly.Controllers
 
                     };
 
-                   List<string> BookCodes = new List<string>();
-                        foreach (var BookCode in Responce.TravelItineraryReadRS.TravelItinerary.ItineraryInfo.ReservationItems)
+                  List<string> BookCodes = new List<string>();
+                        foreach (var BookCode in Responce.OTA_AirPriceRS.PriceQuote.PricedItinerary.AirItineraryPricingInfo)
                         {
-                            BookCodes.AddRange(from i in BookCode.FlightSegment select i.ResBookDesigCode.ToString());
+                            BookCodes.AddRange(from i in BookCode.FareCalculationBreakdown select i.FareBasis.Code.ToString());
                         }
+
 
                         // Change AirRule RQ
 
