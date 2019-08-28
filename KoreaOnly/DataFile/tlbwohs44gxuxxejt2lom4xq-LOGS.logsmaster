@@ -1,0 +1,1931 @@
+
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <POS xmlns="http://www.opentravel.org/OTA/2002/11">
+    <Source PseudoCityCode="K3SG" />
+  </POS>
+</SessionCreateRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" status="Approved">
+  <ConversationId xmlns="http://www.opentravel.org/OTA/2002/11">KoreaOnly</ConversationId>
+</SessionCreateRS>
+<?xml version="1.0" encoding="utf-16"?>
+<IgnoreTransactionRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.0" />
+<?xml version="1.0" encoding="utf-16"?>
+<IgnoreTransactionRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.0">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL/v01">
+    <Success timeStamp="2018-11-13T16:06:10+05:00">
+      <SystemSpecificResults />
+    </Success>
+  </ApplicationResults>
+</IgnoreTransactionRS>
+<?xml version="1.0" encoding="utf-16"?>
+<FareRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.7.0">
+  <OptionalQualifiers xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <TimeQualifiers>
+      <TravelDateOptions Start="11-21" />
+    </TimeQualifiers>
+  </OptionalQualifiers>
+  <OriginDestinationInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment>
+      <DestinationLocation LocationCode="SAN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+</FareRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="SAN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="SAN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="UA" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="SAN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="AA" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="SAN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="DL" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="SAN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="AS" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="SAN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="O2" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<EnhancedAirBookRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="3.2.0">
+  <OTA_AirBookRQ xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <HaltOnStatus Code="NO" />
+    <HaltOnStatus Code="UC" />
+    <HaltOnStatus Code="US" />
+    <OriginDestinationInformation>
+      <FlightSegment ArrivalDateTime="2018-11-21T12:54" DepartureDateTime="2018-11-21T11:55" FlightNumber="5415" NumberInParty="1" ResBookDesigCode="V" Status="NN">
+        <DestinationLocation LocationCode="SAN" />
+        <Equipment AirEquipType="CRJ" />
+        <MarketingAirline Code="UA" FlightNumber="5415" />
+        <OperatingAirline Code="UA" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+    </OriginDestinationInformation>
+    <RedisplayReservation NumAttempts="2" WaitInterval="5000" />
+  </OTA_AirBookRQ>
+  <OTA_AirPriceRQ xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <PriceRequestInformation Retain="true">
+      <OptionalQualifiers>
+        <MiscQualifiers>
+          <Commission Amount="5.00" />
+        </MiscQualifiers>
+        <PricingQualifiers>
+          <PassengerType Code="ADT" Quantity="1" />
+          <PlusUp Amount="5.00" />
+        </PricingQualifiers>
+      </OptionalQualifiers>
+    </PriceRequestInformation>
+  </OTA_AirPriceRQ>
+  <PostProcessing IgnoreAfter="false" xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <RedisplayReservation WaitInterval="5000" UnmaskCreditCard="false" />
+  </PostProcessing>
+  <PreProcessing IgnoreBefore="true" xmlns="http://services.sabre.com/sp/eab/v3_2" />
+</EnhancedAirBookRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<EnhancedAirBookRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL_Payload/v02_01">
+    <Success timeStamp="2018-11-13T16:06:42.56+05:00" />
+  </ApplicationResults>
+  <OTA_AirBookRS xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <OriginDestinationOption>
+      <FlightSegment ArrivalDateTime="11-21T12:54" DepartureDateTime="11-21T11:55" eTicket="true" FlightNumber="5415" NumberInParty="001" ResBookDesigCode="V" Status="NN">
+        <DestinationLocation LocationCode="SAN" />
+        <MarketingAirline Code="UA" FlightNumber="5415" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirBookRS>
+  <OTA_AirPriceRS xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <PriceQuote>
+      <MiscInformation>
+        <BaggageInfo>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="1">
+            <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+            <CommercialNameofBaggageItemType>FREE BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0DFAAUA</ExtendedSubCodeKey>
+          </SubCodeProperties>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="2">
+            <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+            <CommercialNameofBaggageItemType>UPTO50LB 23KG AND62LI 158LCM</CommercialNameofBaggageItemType>
+            <DescriptionOne Code="23">
+              <Text>UP TO 50 POUNDS/23 KILOGRAMS</Text>
+            </DescriptionOne>
+            <DescriptionTwo Code="6U">
+              <Text>UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+            </DescriptionTwo>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0GOACUA</ExtendedSubCodeKey>
+            <SizeWeightInfo>
+              <MaximumSizeInAlternate Units="C">158</MaximumSizeInAlternate>
+              <MaximumSize Units="I">62</MaximumSize>
+              <MaximumWeightInAlternate Units="K">23</MaximumWeightInAlternate>
+              <MaximumWeight Units="L">50</MaximumWeight>
+            </SizeWeightInfo>
+          </SubCodeProperties>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="3">
+            <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+            <AncillaryService SubGroupCode="CY">
+              <Text>CARRY ON HAND BAGGAGE</Text>
+            </AncillaryService>
+            <CommercialNameofBaggageItemType>CARRYON HAND BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0LNABUA</ExtendedSubCodeKey>
+          </SubCodeProperties>
+        </BaggageInfo>
+        <HeaderInformation MultiTicketSequenceNmbr="1">
+          <DepartureDate>2018-11-21</DepartureDate>
+          <LastTicketingDate>11-14T23:59</LastTicketingDate>
+          <Text>VALIDATING CARRIER - UA</Text>
+          <Text>CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES</Text>
+          <Text>BAG ALLOWANCE     -LAXSAN-NIL/UA</Text>
+          <Text>1STCHECKED BAG FEE-LAXSAN-USD30.00/UA/UP TO 50 POUNDS/23 KILOGR</Text>
+          <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+          <Text>2NDCHECKED BAG FEE-LAXSAN-USD40.00/UA/UP TO 50 POUNDS/23 KILOGR</Text>
+          <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+          <Text>CARRY ON ALLOWANCE</Text>
+          <Text>LAXSAN-01P/UA</Text>
+          <Text>CARRY ON CHARGES</Text>
+          <Text>LAXSAN-UA-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+          <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+          <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+          <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+          <Text>21NOV DEPARTURE DATE-----LAST DAY TO PURCHASE 14NOV/2359</Text>
+          <ValidatingCarrier Code="UA" />
+        </HeaderInformation>
+        <MultiTicketInformation MultiTicketSequenceNmbr="1">
+          <CurrencyCode>USD</CurrencyCode>
+          <TicketNumber>0</TicketNumber>
+          <TotalAmount>135.20</TotalAmount>
+        </MultiTicketInformation>
+      </MiscInformation>
+      <PricedItinerary CurrencyCode="USD" MultiTicket="false" TotalAmount="135.20">
+        <AirItineraryPricingInfo MultiTicketSequenceNmbr="1">
+          <BaggageProvisions RPH="1">
+            <Associations>
+              <CarrierCode RPH="1">UA</CarrierCode>
+              <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+              <DepartureDate RPH="1">2018-11-21</DepartureDate>
+              <DestinationLocation LocationCode="SAN" RPH="1" />
+              <FlightNumber RPH="1">5415</FlightNumber>
+              <OriginLocation LocationCode="LAX" RPH="1" />
+              <PNR_Segment RPH="1">2</PNR_Segment>
+              <ResBookDesigCode RPH="1">V</ResBookDesigCode>
+              <StatusCode RPH="1">SS</StatusCode>
+            </Associations>
+            <CarrierWhoseBaggageProvisionsApply>UA</CarrierWhoseBaggageProvisionsApply>
+            <NumPiecesBDI>0</NumPiecesBDI>
+            <ProvisionType>A</ProvisionType>
+            <SubCodeInfo>
+              <SubCodeForChargesOthers>0DFAAUA</SubCodeForChargesOthers>
+            </SubCodeInfo>
+          </BaggageProvisions>
+          <BaggageProvisions RPH="2">
+            <Associations>
+              <CarrierCode RPH="1">UA</CarrierCode>
+              <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+              <DepartureDate RPH="1">2018-11-21</DepartureDate>
+              <DestinationLocation LocationCode="SAN" RPH="1" />
+              <FlightNumber RPH="1">5415</FlightNumber>
+              <OriginLocation LocationCode="LAX" RPH="1" />
+              <PNR_Segment RPH="1">2</PNR_Segment>
+              <ResBookDesigCode RPH="1">V</ResBookDesigCode>
+              <StatusCode RPH="1">SS</StatusCode>
+            </Associations>
+            <CarrierWhoseBaggageProvisionsApply>UA</CarrierWhoseBaggageProvisionsApply>
+            <Commissionable>N</Commissionable>
+            <FeeApplicationIndicator>4</FeeApplicationIndicator>
+            <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+            <FirstOccurrence>1</FirstOccurrence>
+            <LastOccurrence>1</LastOccurrence>
+            <PassengerType Code="ADT" />
+            <PriceInformation>
+              <Base Amount="30.00" CurrencyCode="USD" />
+              <Equiv Amount="30.00" CurrencyCode="USD" />
+              <TaxIndicator>X</TaxIndicator>
+              <Total>30.00</Total>
+            </PriceInformation>
+            <ProvisionType>C</ProvisionType>
+            <RefundReissue>R</RefundReissue>
+            <SubCodeInfo>
+              <SubCodeForChargesOthers>0GOACUA</SubCodeForChargesOthers>
+            </SubCodeInfo>
+          </BaggageProvisions>
+          <BaggageProvisions RPH="3">
+            <Associations>
+              <CarrierCode RPH="1">UA</CarrierCode>
+              <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+              <DepartureDate RPH="1">2018-11-21</DepartureDate>
+              <DestinationLocation LocationCode="SAN" RPH="1" />
+              <FlightNumber RPH="1">5415</FlightNumber>
+              <OriginLocation LocationCode="LAX" RPH="1" />
+              <PNR_Segment RPH="1">2</PNR_Segment>
+              <ResBookDesigCode RPH="1">V</ResBookDesigCode>
+              <StatusCode RPH="1">SS</StatusCode>
+            </Associations>
+            <CarrierWhoseBaggageProvisionsApply>UA</CarrierWhoseBaggageProvisionsApply>
+            <Commissionable>N</Commissionable>
+            <FeeApplicationIndicator>4</FeeApplicationIndicator>
+            <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+            <FirstOccurrence>2</FirstOccurrence>
+            <LastOccurrence>2</LastOccurrence>
+            <PassengerType Code="ADT" />
+            <PriceInformation>
+              <Base Amount="40.00" CurrencyCode="USD" />
+              <Equiv Amount="40.00" CurrencyCode="USD" />
+              <TaxIndicator>X</TaxIndicator>
+              <Total>40.00</Total>
+            </PriceInformation>
+            <ProvisionType>C</ProvisionType>
+            <RefundReissue>R</RefundReissue>
+            <SubCodeInfo>
+              <SubCodeForChargesOthers>0GOACUA</SubCodeForChargesOthers>
+            </SubCodeInfo>
+          </BaggageProvisions>
+          <BaggageProvisions RPH="4">
+            <Associations>
+              <CarrierCode RPH="1">UA</CarrierCode>
+              <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+              <DepartureDate RPH="1">2018-11-21</DepartureDate>
+              <DestinationLocation LocationCode="SAN" RPH="1" />
+              <FlightNumber RPH="1">5415</FlightNumber>
+              <OriginLocation LocationCode="LAX" RPH="1" />
+              <PNR_Segment RPH="1">2</PNR_Segment>
+              <ResBookDesigCode RPH="1">V</ResBookDesigCode>
+              <StatusCode RPH="1">SS</StatusCode>
+            </Associations>
+            <CarrierWhoseBaggageProvisionsApply>UA</CarrierWhoseBaggageProvisionsApply>
+            <NumPiecesBDI>1</NumPiecesBDI>
+            <ProvisionType>B</ProvisionType>
+            <SubCodeInfo>
+              <SubCodeForChargesOthers>0LNABUA</SubCodeForChargesOthers>
+            </SubCodeInfo>
+          </BaggageProvisions>
+          <FareCalculation>
+            <Text>LAX UA SAN107.91USD107.91 PLUS5.00END ZPLAX XFLAX4.5</Text>
+          </FareCalculation>
+          <FareCalculationBreakdown>
+            <Branch PCC="K3SG" FirstJointCarrier="UA" />
+            <Departure CityCode="LAX" AirportCode="LAX" AirlineCode="UA" GenericInd="O" ArrivalCityCode="SAN" ArrivalAirportCode="SAN" />
+            <FareBasis Code="VAA7AFEN" FareAmount="107.91" FarePassengerType="ADT" FareType="P" FilingCarrier="UA" GlobalInd="WH" TripTypeInd="O" Market="LAXSAN" Cabin="Y" />
+            <FreeBaggageAllowance>NONIL</FreeBaggageAllowance>
+            <RuleCategoryIndicator>2</RuleCategoryIndicator>
+            <RuleCategoryIndicator>4</RuleCategoryIndicator>
+            <RuleCategoryIndicator>5</RuleCategoryIndicator>
+            <RuleCategoryIndicator>6</RuleCategoryIndicator>
+            <RuleCategoryIndicator>10</RuleCategoryIndicator>
+            <RuleCategoryIndicator>12</RuleCategoryIndicator>
+            <RuleCategoryIndicator>15</RuleCategoryIndicator>
+            <RuleCategoryIndicator>16</RuleCategoryIndicator>
+            <RuleCategoryIndicator>18</RuleCategoryIndicator>
+          </FareCalculationBreakdown>
+          <ItinTotalFare NonRefundableInd="N">
+            <BaggageInfo>
+              <US_DOT_Disclosure>
+                <Text>BAG ALLOWANCE     -LAXSAN-NIL/UA</Text>
+                <Text>1STCHECKED BAG FEE-LAXSAN-USD30.00/UA/UP TO 50 POUNDS/23 KILOGR</Text>
+                <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                <Text>2NDCHECKED BAG FEE-LAXSAN-USD40.00/UA/UP TO 50 POUNDS/23 KILOGR</Text>
+                <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                <Text>CARRY ON ALLOWANCE</Text>
+                <Text>LAXSAN-01P/UA</Text>
+                <Text>CARRY ON CHARGES</Text>
+                <Text>LAXSAN-UA-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+                <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+                <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+                <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+              </US_DOT_Disclosure>
+            </BaggageInfo>
+            <BaseFare Amount="112.91" CurrencyCode="USD" />
+            <Endorsements>
+              <Text>NONREF/0VALUAFTDPT/CHGFEE</Text>
+            </Endorsements>
+            <Taxes TotalAmount="22.29">
+              <Tax Amount="8.09" TaxCode="US1" TaxName="TRANSPORTATION TAX DOMESTIC WH" TicketingTaxCode="US" />
+              <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" TicketingTaxCode="ZP" />
+              <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECUR" TicketingTaxCode="AY" />
+              <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGE" TicketingTaxCode="XF" />
+            </Taxes>
+            <TotalFare Amount="135.20" CurrencyCode="USD" />
+            <Warnings>
+              <Warning ShortText="BAG ALLOWANCE     -LAXSAN-NIL/UA" />
+              <Warning ShortText="1STCHECKED BAG FEE-LAXSAN-USD30.00/UA/UP TO 50 POUNDS/23 KILOGR" />
+              <Warning ShortText="AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS" />
+              <Warning ShortText="2NDCHECKED BAG FEE-LAXSAN-USD40.00/UA/UP TO 50 POUNDS/23 KILOGR" />
+              <Warning ShortText="AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS" />
+              <Warning ShortText="CARRY ON ALLOWANCE" />
+              <Warning ShortText="LAXSAN-01P/UA" />
+              <Warning ShortText="CARRY ON CHARGES" />
+              <Warning ShortText="LAXSAN-UA-CARRY ON FEES UNKNOWN-CONTACT CARRIER" />
+              <Warning ShortText="ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON" />
+              <Warning ShortText="FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/" />
+              <Warning ShortText="CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./" />
+            </Warnings>
+          </ItinTotalFare>
+          <PassengerTypeQuantity Code="ADT" Quantity="1" />
+          <PTC_FareBreakdown>
+            <Cabin>Y</Cabin>
+            <FareBasis Code="VAA7AFEN" FareAmount="107.91" FarePassengerType="ADT" FareType="P" FilingCarrier="UA" GlobalInd="WH" Market="LAXSAN" />
+            <FreeBaggageAllowance>NONIL</FreeBaggageAllowance>
+          </PTC_FareBreakdown>
+        </AirItineraryPricingInfo>
+      </PricedItinerary>
+    </PriceQuote>
+  </OTA_AirPriceRS>
+  <TravelItineraryReadRS xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <TravelItinerary>
+      <CustomerInfo />
+      <ItineraryInfo>
+        <ItineraryPricing>
+          <PriceQuote RPH="1">
+            <MiscInformation>
+              <BaggageFees>
+                <Text>BAG ALLOWANCE     -LAXSAN-NIL/UA</Text>
+                <Text>1STCHECKED BAG FEE-LAXSAN-USD30.00/UA/UP TO 50 POUNDS/23 KILOGR</Text>
+                <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                <Text>2NDCHECKED BAG FEE-LAXSAN-USD40.00/UA/UP TO 50 POUNDS/23 KILOGR</Text>
+                <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                <Text>CARRY ON ALLOWANCE</Text>
+                <Text>LAXSAN-01P/UA</Text>
+                <Text>CARRY ON CHARGES</Text>
+                <Text>LAXSAN-UA-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+                <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+                <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+                <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+              </BaggageFees>
+              <SignatureLine CommissionAmount="5.00" CommissionID="A" ExpirationDateTime="00:00" Source="SYS" Status="EXPIRED">
+                <Text>K3SG K3SG*AWS 0306/13NOV18</Text>
+              </SignatureLine>
+            </MiscInformation>
+            <PricedItinerary DisplayOnly="false" InputMessage="WPK5.00P1ADTPU*5.00RQ" RPH="1" StatusCode="A" TaxExempt="false" ValidatingCarrier="UA">
+              <AirItineraryPricingInfo>
+                <ItinTotalFare>
+                  <BaseFare Amount="112.91" CurrencyCode="USD" />
+                  <Taxes>
+                    <Tax Amount="22.29" TaxCode="XT" />
+                    <TaxBreakdownCode TaxPaid="false">8.09US</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">4.10ZP</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">5.60AY</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">4.50XF</TaxBreakdownCode>
+                  </Taxes>
+                  <TotalFare Amount="135.20" CurrencyCode="USD" />
+                  <Totals>
+                    <BaseFare Amount="112.91" />
+                    <Taxes>
+                      <Tax Amount="22.29" />
+                    </Taxes>
+                    <TotalFare Amount="135.20" />
+                  </Totals>
+                </ItinTotalFare>
+                <PassengerTypeQuantity Code="ADT" Quantity="01" />
+                <PTC_FareBreakdown>
+                  <Endorsements>
+                    <Endorsement type="PRICING_PARAMETER">
+                      <Text>WPK5.00$P1ADT$PU*5.00$RQ</Text>
+                    </Endorsement>
+                    <Endorsement type="WARNING">
+                      <Text>VALIDATING CARRIER - UA</Text>
+                    </Endorsement>
+                    <Endorsement type="WARNING">
+                      <Text>CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES</Text>
+                    </Endorsement>
+                    <Endorsement type="SYSTEM_ENDORSEMENT">
+                      <Text>NONREF/0VALUAFTDPT/CHGFEE</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>BAG ALLOWANCE     -LAXSAN-NIL/UA</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>1STCHECKED BAG FEE-LAXSAN-USD30.00/UA/UP TO 50 POUNDS/23 KILOGR</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>2NDCHECKED BAG FEE-LAXSAN-USD40.00/UA/UP TO 50 POUNDS/23 KILOGR</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>CARRY ON ALLOWANCE</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>LAXSAN-01P/UA</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>CARRY ON CHARGES</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>LAXSAN-UA-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+                    </Endorsement>
+                  </Endorsements>
+                  <FareBasis Code="VAA7AFEN" />
+                  <FareCalculation>
+                    <Text>LAX UA SAN107.91USD107.91 PLUS5.00END ZPLAX XFLAX4.5</Text>
+                  </FareCalculation>
+                  <FareSource>ATPC</FareSource>
+                  <FlightSegment ConnectionInd="O" DepartureDateTime="11-21T11:55" FlightNumber="5415" ResBookDesigCode="V" SegmentNumber="1" Status="OK">
+                    <BaggageAllowance Number="NIL" />
+                    <FareBasis Code="VAA7AFEN" />
+                    <MarketingAirline Code="UA" FlightNumber="5415" />
+                    <OriginLocation LocationCode="LAX" />
+                    <ValidityDates>
+                      <NotValidAfter>2018-11-21</NotValidAfter>
+                      <NotValidBefore>2018-11-21</NotValidBefore>
+                    </ValidityDates>
+                  </FlightSegment>
+                  <FlightSegment>
+                    <OriginLocation LocationCode="SAN" />
+                  </FlightSegment>
+                  <ResTicketingRestrictions>LAST DAY TO PURCHASE 14NOV/2359</ResTicketingRestrictions>
+                  <ResTicketingRestrictions>GUARANTEED FARE APPL IF PURCHASED BEFORE 14NOV</ResTicketingRestrictions>
+                </PTC_FareBreakdown>
+              </AirItineraryPricingInfo>
+            </PricedItinerary>
+            <ResponseHeader>
+              <Text>FARE - PRICE RETAINED</Text>
+              <Text>FARE USED TO CALCULATE DISCOUNT</Text>
+              <Text>FARE NOT GUARANTEED UNTIL TICKETED</Text>
+            </ResponseHeader>
+            <PriceQuotePlus DomesticIntlInd="I" PricingStatus="S" VerifyFareCalc="false" ItineraryChanged="false" ManualFare="false" NegotiatedFare="false" SystemIndicator="S" NUCSuppresion="false" SubjToGovtApproval="false" IT_BT_Fare="BT" DisplayOnly="false" DiscountAmount="0">
+              <TicketingInstructionsInfo />
+            </PriceQuotePlus>
+          </PriceQuote>
+          <PriceQuoteTotals>
+            <BaseFare Amount="112.91" />
+            <Taxes>
+              <Tax Amount="22.29" />
+            </Taxes>
+            <TotalFare Amount="135.20" />
+          </PriceQuoteTotals>
+        </ItineraryPricing>
+        <ReservationItems>
+          <Item RPH="1">
+            <FlightSegment AirMilesFlown="0109" ArrivalDateTime="11-21T12:54" DayOfWeekInd="3" DepartureDateTime="2018-11-21T11:55" ElapsedTime="00.59" eTicket="true" FlightNumber="5415" NumberInParty="01" ResBookDesigCode="V" SegmentNumber="0001" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="SAN" Terminal="TERMINAL 2" TerminalCode="2" />
+              <Equipment AirEquipType="CRJ" />
+              <MarketingAirline Code="UA" FlightNumber="5415" />
+              <OperatingAirline Code="UA" CompanyShortName="/SKYWEST DBA UNITED EXPRESS" />
+              <OriginLocation LocationCode="LAX" Terminal="TERMINAL 7" TerminalCode="7" />
+              <SupplierRef ID="DCUA" />
+              <Text>OPERATED BY /SKYWEST DBA UNITED EXPRESS</Text>
+              <UpdatedArrivalTime>11-21T12:54</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-21T11:55</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+        </ReservationItems>
+      </ItineraryInfo>
+      <ItineraryRef AirExtras="false" InhibitCode="U" PartitionID="AA" PrimeHostID="1S">
+        <Source PseudoCityCode="K3SG" />
+      </ItineraryRef>
+    </TravelItinerary>
+  </TravelItineraryReadRS>
+</EnhancedAirBookRS>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirRulesRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ReturnHostCommand="true" Version="2.3.0">
+  <OriginDestinationInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="11-21">
+      <DestinationLocation LocationCode="SAN" />
+      <MarketingCarrier Code="UA" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <RuleReqInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <Category>16</Category>
+    <FareBasis Code="VAA7AFEN" />
+  </RuleReqInfo>
+</OTA_AirRulesRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirRulesRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL/v01">
+    <Success timeStamp="2018-11-13T16:06:45+05:00">
+      <SystemSpecificResults>
+        <HostCommand LNIATA="222222">RDLAXSAN21NOVVAA7AFEN-UA*16</HostCommand>
+      </SystemSpecificResults>
+    </Success>
+    <Warning type="BusinessLogic">
+      <SystemSpecificResults>
+        <Message>                                  R24NV                        </Message>
+        <ShortText>WARN.SWS.HOST.WARNING_RESPONSE</ShortText>
+      </SystemSpecificResults>
+    </Warning>
+  </ApplicationResults>
+  <FareRuleInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <Header>
+      <Line Type="Legend">
+        <Text>V FARE BASIS     BK    FARE   TRAVEL-TICKET AP  MINMAX  RTG</Text>
+      </Line>
+      <Line Type="Fare">
+        <Text>1   VAA7AFEN       V X   116.00 E16NV  T17NV  7/1  -/  -  596</Text>
+      </Line>
+      <Line Type="Passenger Type">
+        <Text>PASSENGER TYPE-ADT                 AUTO PRICE-YES</Text>
+      </Line>
+      <Line Type="Origin Destination">
+        <Text>FROM-LAX TO-SAN    CXR-UA    TVL-21NOV18  RULE-ECF2 DFR/11</Text>
+      </Line>
+      <Line Type="Fare Basis">
+        <Text>FARE BASIS-VAA7AFEN          SPECIAL FARE  DIS-N   VENDOR-ATP</Text>
+      </Line>
+      <Line Type="Fare Type">
+        <Text>FARE TYPE-SIP      OW-INSTANT PURCHASE</Text>
+      </Line>
+      <Line Type="Currency">
+        <Text>USD   107.91  0596  E16NOV18 D24NOV18   FC-VAA7AFEN  FN-R</Text>
+      </Line>
+      <Line Type="System Dates">
+        <Text>SYSTEM DATES - CREATED 09NOV18/1514  EXPIRES INFINITY</Text>
+      </Line>
+      <ParsedData>
+        <CurrencyLine>
+          <Amount>107.91</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <Discontinue>2018-11-24</Discontinue>
+          <Effective>2018-11-16</Effective>
+          <FareClass>VAA7AFEN</FareClass>
+          <RoutingNumberOrMPM>0596</RoutingNumberOrMPM>
+          <TariffDescriptionNumber>R</TariffDescriptionNumber>
+        </CurrencyLine>
+        <FareBasisLine>
+          <DisplayType Code="N" />
+          <FareBasis Code="VAA7AFEN" />
+          <FareVendor>ATP</FareVendor>
+          <Text>SPECIAL FARE</Text>
+        </FareBasisLine>
+        <FareTypeLine>
+          <FareDescription Code="OW">INSTANT PURCHASE</FareDescription>
+          <FareType>SIP</FareType>
+        </FareTypeLine>
+        <OriginDestinationLine>
+          <Airline Code="UA" />
+          <DestinationLocation LocationCode="SAN" />
+          <OriginLocation LocationCode="LAX" />
+          <Rule>ECF2</Rule>
+          <TariffDescriptionNumber>DFR/11</TariffDescriptionNumber>
+          <TravelDate>2018-11-21</TravelDate>
+        </OriginDestinationLine>
+        <PassengerTypeLine>
+          <AutoPrice>YES</AutoPrice>
+          <PassengerType Code="ADT" />
+        </PassengerTypeLine>
+        <SystemDatesLine>
+          <CreateDateTime>2018-11-09T15:14</CreateDateTime>
+          <ExpireDateTime>INFINITY</ExpireDateTime>
+        </SystemDatesLine>
+      </ParsedData>
+    </Header>
+    <Rules>
+      <Paragraph RPH="16" Title="PENALTIES">
+        <Text>CANCELLATIONS
+TICKET IS NON-REFUNDABLE.
+WAIVED FOR SCHEDULE CHANGE.
+NOTE - TEXT BELOW NOT VALIDATED FOR AUTOPRICING.
+--
+TAX/CHARGE - US/ZP/XF - WILL NOT BE
+REFUNDED ON NON-REFUNDABLE FARE TICKETS
+--
+A.  WHOLLY UNUSED TICKET -
+--
+A WHOLLY UNUSED TICKET MAY BE APPLIED TOWARD THE
+PURCHASE OF MOST DOMESTIC OR INTERNATIONAL FARES/
+EXCLUSIONS APPLY / TICKET PRICED AT -CURRENT-
+FARE LEVELS FOLLOWING ALL FARE RULE PROVISIONS.
+--
+ORIGINAL RESERVATIONS OF WHOLLY UNUSED TICKET MUST
+BE CANCELLED PRIOR TO ORIGINALLY SCHEDULED FLIGHT
+OR TICKET HAS NO VALUE
+--
+WHEN PASSENGER CANCELS THE TICKETED FLIGHT
+RESERVATIONS PRIOR TO THE TICKETED DEPARTURE
+TIME / THE TICKET WILL BE VALID FOR
+TRANSPORTATION FOR ONE YEAR FROM THE DATE OF
+ISSUANCE OF THE ORIGINAL TICKET AND WILL BE
+SUBJECT TO ANY AND ALL APPLICABLE CHANGE FEES.
+OTHERWISE THE TICKET HAS NO VALUE AFTER TICKETED
+DEPARTURE TIME
+--
+THE NON-REFUNDABLE VALUE OF THE UNUSED TICKET
+MUST BE CARRIED FORWARD IN THE ENDORSEMENT BOX OF
+THE NEW TICKET AND DESIGNATED AS NON REFUNDABLE
+--
+AN ADMINISTRATIVE SERVICE FEE EQUAL TO THE CHANGE
+FEE WILL BE ASSESSED PER TRANSACTION.
+RESIDUAL VALUE / IF ANY / WILL BE RETURNED IN THE
+FORM OF A NON-REFUNDABLE VOUCHER VALID FOR TRAVEL
+ON UNITED AIRLINES.
+TRAVEL AGENCY MAY ISSUE A NON-REFUNDABLE MCO/EMD
+VALID FOR TRAVEL ON UNITED AIRLINES.
+--
+PASSENGERS TRAVELING ON COMPANION FARES MUST
+PRESENT ALL TICKETS AT THE SAME TIME.
+--
+B.  BOOKING CODE CHANGE PERMITTED  -
+--
+WHEN A NEW FARE IS INTRODUCED INTO THE MARKET OR
+A CURRENT FARE IS REDUCED OR BECOMES AVAILABLE /
+THE TICKETED PASSENGER MAY QUALIFY FOR ONE OF
+THE ABOVE OPTIONS.
+ALL PROVISIONS OF THE NEW FARE MUST BE MET
+BEFORE DEPARTURE.
+--
+NO CHANGE TO ORIGIN/DESTINATION/DATES/FLIGHTS.
+ONLY BOOKING CODE CHANGE IS PERMITTED.
+--
+AN ADMINISTRATIVE SERVICE FEE EQUAL TO THE CHANGE
+FEE WILL BE ASSESSED.  RESIDUAL VALUE /IF ANY/
+WILL BE RETURNED IN THE FORM OF A NON-REFUNDABLE
+VOUCHER VALID FOR TRAVEL ON UNITED AIRLINES.
+TRAVEL AGENCY MAY ISSUE NON-REFUNDABLE MCO
+VALID FOR TRAVEL ON UNITED AIRLINES.
+--
+C. IF MULTIPLE CHANGES ARE MADE AT THE SAME TIME
+ONLY ONE SERVICE CHARGE / CHANGE FEE WILL
+APPLY PER TICKET.
+IF FARES WITH DIFFERENT SERVICE CHARGES /
+CHANGE FEES ARE COMBINED ON THE SAME TICKET
+THE HIGHEST FEE OF ONLY THE CHANGED FARE
+COMPONENTS WILL APPLY TO THE JOURNEY.
+IF CHANGED FARE COMPONENT HAS NO SERVICE
+CHARGE / CHANGE FEE AND THAT IS THE ONLY FARE
+COMPONENT CHANGED THERE WOULD BE NO SERVICE
+CHARGE / CHANGE FEE.
+---
+D. FARES COMBINED END-ON-END ON THE SAME TICKET
+// FARES THAT COULD STAND ALONE IF ISSUED ON
+A SEPARATE TICKET//  MAY BE CHANGED SEPARATELY
+ACCORDING TO ASSOCIATED FARE RULE.
+IF CHANGED FARE COMPONENT HAS NO SERVICE
+CHARGE AND THAT IS THE ONLY FARE COMPONENT
+CHANGED THERE WOULD BE NO SERVICE CHARGE.
+---
+CHANGES
+BEFORE DEPARTURE
+CHARGE USD 200.00 FOR REISSUE/UNTICKTED PTA.
+WAIVED FOR SCHEDULE CHANGE.
+NOTE - TEXT BELOW NOT VALIDATED FOR AUTOPRICING.
+--
+BEFORE DEPARTURE CHANGE OPTIONS -
+--
+BEFORE DEPARTURE OF JOURNEY AND WITHIN TICKET
+VALIDITY CERTAIN DOMESTIC REISSUE PROVISIONS
+MAY BE OVERRIDDEN BY THOSE OF UA INTERNATIONAL
+FARES.  CHARGE HIGHEST FEE OF ONLY CHANGED
+FARE COMPONENTS WITHIN JOURNEY.
+--
+BOOKING CODE CHANGE PERMITTED -
+WHOLLY UNUSED TICKET
+--
+WHEN A FARE IS INTRODUCED INTO THE MARKET
+/ TICKETED FARE IS REDUCED / BOOKING
+CODE BECOMES AVAILABLE  -
+REPRICE USING --CURRENT FARES--
+-- ONLY BOOKING CODE CHANGE PERMITTED --
+--
+PROVIDED ALL THE FOLLOWING CONDITIONS AND
+FARE RULES ARE MET.
+1.  NO CHANGE TO FARE BREAK POINTS
+2.  CHANGE IS BEFORE ORIGINAL SCHEDULED FLIGHT
+3.  SAME TRAVEL DATES / FLIGHTS
+4.  UA  FARES ARE USED
+5.  VALIDATE ADVANCE RESERVATIONS REQUIREMENTS
+6.  ADVANCE RESERVATION IS MEASURED FROM REISSUE
+DATE TO DEPARTURE OF PRICING UNIT
+--
+WHEN CHANGE RESULTS IN FARE DIFFERENCE -
+FOLLOW THE 2 STEP PROCESS
+--
+UA WILL RETURN RESIDUAL VALUE / IF ANY / VIA
+VOUCHER
+AGENCY WILL RETURN RESIDUAL VALUE / IF ANY / VIA
+MCO / EMD
+--
+RESIDUAL VALUE MAY NOT BE USED TOWARD CHANGE FEE
+--
+COLLECT FARE DIFFERENCE IF APPLICABLE
+CHARGE FULL CHANGE FEE
+--
+QUALIFYING CURRENT DAY FARE
+WHOLLY UNUSED TICKET / CHANGE TO 1ST
+TICKETED FLIGHT COUPON
+--
+REPRICE USING --CURRENT FARES-- IN EFFECT TODAY
+--
+PROVIDED ALL OF THE FOLLOWING CONDITIONS ARE MET-
+1.  UA FARES ARE USED
+2.  FARE BREAK POINT CHANGES ARE PERMITTED
+3.  VALIDATE ADVANCE RESERVATION REQUIREMENTS
+4.  ADVANCE RESERVATION/TKG IS MEASURED FROM
+REISSUE DATE TO DEPARTURE OF PRICING UNIT.
+--
+WHEN CHANGE RESULTS IN FARE DIFFERENCE -
+FOLLOW THE 2 STEP PROCESS
+--
+UA WILL RETURN RESIDUAL VALUE / IF ANY / VIA
+VOUCHER
+AGENCY WILL RETURN RESIDUAL VALUE / IF ANY / VIA
+MCO / EMD
+--
+RESIDUAL VALUE MAY NOT BE USED TOWARD CHANGE FEE
+--
+COLLECT FARE DIFFERENCE IF APPLICABLE
+CHARGE FULL CHANGE FEE
+--
+DOWNLINE DATE CHANGE/ FLIGHT CHANGE
+SAME BOOKING CODE / SAME FARE BASIS CODE /
+KEEP THE FARE
+--
+REPRICE USING CURRENTLY TICKETED/HISTORICAL FARE
+PROVIDED ALL OF THE FOLLOWING CONDITIONS ARE MET -
+--
+1. NO CHANGE 1ST FLIGHT COUPON / NO CHANGE TO
+FARE BREAKS
+2. ALL TRAVEL REMAINS DOMESTIC
+3. SAME UA FARE USED
+4. ALL RULE AND BOOKING CODE PROVISIONS ARE MET
+INCLUDING RES/TKG
+5. VALIDATE ADVANCE RES/TICKETING FROM ORIGINAL
+TICKET DATE TO DEPARTURE OF PRICING UNIT
+--
+-- REFUND NOT APPLICABLE
+EVEN REISSUE
+-- CHARGE FULL CHANGE FEE
+--
+FARE BREAK POINT CHANGE PERMITTED / OR REMAIN
+THE SAME / BOOKING CODE CHANGE
+--
+A.  CHANGED FARE COMPONENTS - USE FARE IN
+EFFECT TODAY - CURRENT - DAY TARIFF
+B.  ALL OTHER FARE COMPONENTS - USE TICKETED
+FARE.
+PROVIDED ALL OF THE FOLLOWING CONDITIONS ARE MET
+--
+1. NO CHANGE TO FARE BREAKS UP TO THE FIRST
+CHANGED FARE COMPONENET
+2. WHEN NO INTL COUPONS REMAIN - ALL NEW TRAVEL
+MUST BE DOMESTIC
+3. UA FARES ARE USED
+4. ALL RULE AND BOOKING CODE PROVISIONS ARE MET
+5. ADV RES IS MEASURED FROM NEW TKT ISSUE DATE IF
+CURRENT FARES / FROM PREVIOUS TKT ISSUE DATE IF
+HISTORICAL FARES TO DEPARTURE OF PRICING UNIT
+--
+WHEN CHANGE RESULTS IN FARE DIFFERENCE -
+FOLLOW THE 2 STEP PROCESS
+--
+UA WILL RETURN RESIDUAL VALUE / IF ANY / VIA
+VOUCHER
+AGENCY WILL RETURN RESIDUAL VALUE / IF ANY / VIA
+MCO / EMD
+--
+RESIDUAL VALUE MAY NOT BE USED TOWARD CHANGE FEE
+--
+COLLECT FULL CHANGE FEE / FARE DIFFERENCE IF
+APPLICABLE
+--
+AFTER DEPARTURE
+CHARGE USD 200.00 FOR REISSUE.
+WAIVED FOR SCHEDULE CHANGE.
+NOTE - TEXT BELOW NOT VALIDATED FOR AUTOPRICING.
+--
+AFTER DEPARTURE CHANGE OPTIONS -
+--
+AFTER DEPARTURE OF JOURNEY AND WITHIN TICKET
+VALIDITY CERTAIN DOMESTIC REISSUE PROVISIONS
+MAY BE OVERRIDDEN BY THOSE OF UA INTERNATIONAL
+FARES.  CHARGE HIGHEST FEE OF ONLY CHANGED FARE
+COMPONENTS WITHIN JOURNEY -
+REPRICE USING CURRENLTY TICKETED / HISTORICAL
+FARES.
+--
+PROVIDED ALL OF THE FOLLOWING CONDITIONS ARE MET-
+--
+DOWNLINE DATE CHANGE / FLIGHT CHANGE
+SAME BOOKING CODE / SAME FARE BASIS CODE /
+KEEP THE FARE
+--
+1. NO CHANGE TO FARE BREAKS
+2. ALL TRAVEL REMAINS DOMESTIC
+3. FULLY FLOWN FARE NOT REPRICED TO FURTHER POINT
+4. UA FARES ARE USED
+5. ALL RULE AND BOOKING CODE PROVISIONS ARE
+INCLUDING ADVANCE RESERVATION/TICKETING
+6. ADV RES IS MEASURED FROM ORIGINAL TKT DATE TO
+DEPARTURE OF PRICING UNIT
+--
+-- REFUND NOT APPLICABLE
+EVEN REISSUE
+-- CHARGE FULL CHANGE FEE
+--
+--
+FARE BREAK POINT CHANGE PERMITTED / OR REMAIN
+THE SAME / BOOKING CODE CHANGE
+--
+REPRICE AS FOLLOWS -
+--
+A.  FULLY FLOWN FARE COMPONENTS - USE FARES IN
+EFFECT WHEN TICKET WAS ISSUED
+B.  CHANGED FARE COMPONENTS - USE CURRENT
+FARES IN EFFECT TODAY
+C.  UNCHANGED FARE COMPONENTS  - USE CURRENTLY
+TICKETED FARES
+--
+1. ALL TRAVEL REMAINS DOMESTIC
+2. UA FARES ARE USED
+3. ALL RULE AND BOOKING CODE PROVISIONS ARE MET
+4. ADV RES IS MEASURED FROM NEW TKT ISSUE DATE IF
+CURRENT FARES
+5. FROM PREVIOUS TICKET ISSUE DATE IF
+HISTORICAL FARES TO DEPARTURE OF PRICING UNIT
+--
+WHEN CHANGE RESULTS IN FARE DIFFERENCE -
+FOLLOW THE 2 STEP PROCESS
+--
+UA WILL RETURN RESIDUAL VALUE / IF ANY / VIA
+VOUCHER
+AGENCY WILL RETURN RESIDUAL VALUE / IF ANY / VIA
+MCO / EMD
+--
+RESIDUAL VALUE MAY NOT BE USED TOWARD CHANGE FEE
+--
+COLLECT FARE DIFFERENCE IF APPLICABLE
+CHARGE FULL CHANGE FEE
+--</Text>
+      </Paragraph>
+    </Rules>
+  </FareRuleInfo>
+</OTA_AirRulesRS>
+<?xml version="1.0" encoding="utf-16"?>
+<PassengerDetailsRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="3.3.0">
+  <MiscSegmentSellRQ xmlns="http://services.sabre.com/sp/pd/v3_3">
+    <MiscSegment DepartureDateTime="11-21" InsertAfter="0" NumberInParty="1" Status="HK" Type="OTH">
+      <OriginLocation LocationCode="LAX" />
+      <Text>America Tours</Text>
+      <VendorPrefs>
+        <Airline Code="UA" />
+      </VendorPrefs>
+    </MiscSegment>
+  </MiscSegmentSellRQ>
+  <PostProcessing IgnoreAfter="false" RedisplayReservation="true" UnmaskCreditCard="true" xmlns="http://services.sabre.com/sp/pd/v3_3">
+    <EndTransactionRQ>
+      <EndTransaction Ind="true">
+        <Email Ind="true" />
+      </EndTransaction>
+      <Source ReceivedFrom="SWS TESTING" />
+    </EndTransactionRQ>
+  </PostProcessing>
+  <PriceQuoteInfo xmlns="http://services.sabre.com/sp/pd/v3_3">
+    <Link HostedCarrier="false" Record="1" />
+  </PriceQuoteInfo>
+  <SpecialReqDetails xmlns="http://services.sabre.com/sp/pd/v3_3">
+    <SpecialServiceRQ>
+      <SpecialServiceInfo>
+        <SecureFlight SegmentNumber="A">
+          <PersonName DateOfBirth="1996-10-09" Gender="M" NameNumber="1.1">
+            <GivenName>tes</GivenName>
+            <Surname>test</Surname>
+          </PersonName>
+          <VendorPrefs>
+            <Airline Hosted="false" />
+          </VendorPrefs>
+        </SecureFlight>
+      </SpecialServiceInfo>
+    </SpecialServiceRQ>
+  </SpecialReqDetails>
+  <TravelItineraryAddInfoRQ xmlns="http://services.sabre.com/sp/pd/v3_3">
+    <AgencyInfo>
+      <Address>
+        <AddressLine>America Tours</AddressLine>
+        <CityName>Los Angeles</CityName>
+        <CountryCode>US</CountryCode>
+        <PostalCode>90020</PostalCode>
+        <StateCountyProv StateCode="CA" />
+        <StreetNmbr>3434 West 6th Street Suite 400-6</StreetNmbr>
+      </Address>
+      <Ticketing TicketType="7T-A" />
+    </AgencyInfo>
+    <CustomerInfo>
+      <ContactNumbers>
+        <ContactNumber NameNumber="1.1" Phone="213-738-8185" PhoneUseType="A" />
+        <ContactNumber NameNumber="1.1" Phone="154-552-2121" PhoneUseType="A" />
+      </ContactNumbers>
+      <Email Address="tre@d.com" ShortText="AmericaTours" />
+      <Email Address="admin@koreaonly.com" ShortText="AmericaTours" />
+      <PersonName Infant="false" NameNumber="1.1" NameReference="ADT" PassengerType="ADT">
+        <GivenName>tes</GivenName>
+        <Surname>test</Surname>
+      </PersonName>
+    </CustomerInfo>
+  </TravelItineraryAddInfoRQ>
+</PassengerDetailsRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<PassengerDetailsRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL_Payload/v02_01">
+    <Success timeStamp="2018-11-13T16:07:30.736+05:00" />
+    <Warning type="BusinessLogic" timeStamp="2018-11-13T16:07:30.521+05:00">
+      <SystemSpecificResults>
+        <Message code="WARN.SWS.HOST.WARNING_RESPONSE">EndTransactionLLSRQ: TTY REQ PEND</Message>
+      </SystemSpecificResults>
+    </Warning>
+  </ApplicationResults>
+  <ItineraryRef ID="FGVXLV" xmlns="http://services.sabre.com/sp/pd/v3_3" />
+  <TravelItineraryReadRS xmlns="http://services.sabre.com/sp/pd/v3_3">
+    <TravelItinerary>
+      <CustomerInfo>
+        <Address>
+          <AddressLine type="O">AMERICA TOURS</AddressLine>
+          <AddressLine type="O">3434 WEST 6TH STREET SUITE 400-6</AddressLine>
+          <AddressLine type="O">LOS ANGELES, CA US</AddressLine>
+          <AddressLine type="O">90020</AddressLine>
+        </Address>
+        <ContactNumbers>
+          <ContactNumber LocationCode="LAX" Phone="213-738-8185-A-1.1" RPH="001" />
+          <ContactNumber LocationCode="LAX" Phone="154-552-2121-A-1.1" RPH="002" />
+        </ContactNumbers>
+        <PersonName WithInfant="false" NameNumber="01.01" NameReference="ADT" PassengerType="ADT" RPH="1">
+          <Email Comment="AMERICATOURS">ADMIN@KOREAONLY.COM</Email>
+          <Email Comment="AMERICATOURS">TRE@D.COM</Email>
+          <GivenName>TES</GivenName>
+          <Surname>TEST</Surname>
+        </PersonName>
+      </CustomerInfo>
+      <ItineraryInfo>
+        <ItineraryPricing>
+          <PriceQuote RPH="1">
+            <MiscInformation>
+              <BaggageFees>
+                <Text>BAG ALLOWANCE     -LAXSAN-NIL/UA</Text>
+                <Text>1STCHECKED BAG FEE-LAXSAN-USD30.00/UA/UP TO 50 POUNDS/23 KILOGR</Text>
+                <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                <Text>2NDCHECKED BAG FEE-LAXSAN-USD40.00/UA/UP TO 50 POUNDS/23 KILOGR</Text>
+                <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                <Text>CARRY ON ALLOWANCE</Text>
+                <Text>LAXSAN-01P/UA</Text>
+                <Text>CARRY ON CHARGES</Text>
+                <Text>LAXSAN-UA-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+                <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+                <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+                <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+              </BaggageFees>
+              <SignatureLine CommissionAmount="5.00" CommissionID="A" ExpirationDateTime="00:00" Source="SYS" Status="ACTIVE">
+                <Text>K3SG K3SG*AWS 0307/13NOV18</Text>
+              </SignatureLine>
+            </MiscInformation>
+            <PricedItinerary DisplayOnly="false" InputMessage="WPK5.00P1ADTPU*5.00RQ" RPH="1" StatusCode="A" TaxExempt="false" ValidatingCarrier="UA">
+              <AirItineraryPricingInfo>
+                <ItinTotalFare>
+                  <BaseFare Amount="112.91" CurrencyCode="USD" />
+                  <Taxes>
+                    <Tax Amount="22.29" TaxCode="XT" />
+                    <TaxBreakdownCode TaxPaid="false">8.09US</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">4.10ZP</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">5.60AY</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">4.50XF</TaxBreakdownCode>
+                  </Taxes>
+                  <TotalFare Amount="135.20" CurrencyCode="USD" />
+                  <Totals>
+                    <BaseFare Amount="112.91" />
+                    <Taxes>
+                      <Tax Amount="22.29" />
+                    </Taxes>
+                    <TotalFare Amount="135.20" />
+                  </Totals>
+                </ItinTotalFare>
+                <PassengerTypeQuantity Code="ADT" Quantity="01" />
+                <PTC_FareBreakdown>
+                  <Endorsements>
+                    <Endorsement type="PRICING_PARAMETER">
+                      <Text>WPK5.00$P1ADT$PU*5.00$RQ</Text>
+                    </Endorsement>
+                    <Endorsement type="WARNING">
+                      <Text>VALIDATING CARRIER - UA</Text>
+                    </Endorsement>
+                    <Endorsement type="WARNING">
+                      <Text>CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES</Text>
+                    </Endorsement>
+                    <Endorsement type="SYSTEM_ENDORSEMENT">
+                      <Text>NONREF/0VALUAFTDPT/CHGFEE</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>BAG ALLOWANCE     -LAXSAN-NIL/UA</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>1STCHECKED BAG FEE-LAXSAN-USD30.00/UA/UP TO 50 POUNDS/23 KILOGR</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>2NDCHECKED BAG FEE-LAXSAN-USD40.00/UA/UP TO 50 POUNDS/23 KILOGR</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>CARRY ON ALLOWANCE</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>LAXSAN-01P/UA</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>CARRY ON CHARGES</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>LAXSAN-UA-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+                    </Endorsement>
+                  </Endorsements>
+                  <FareBasis Code="VAA7AFEN" />
+                  <FareCalculation>
+                    <Text>LAX UA SAN107.91USD107.91 PLUS5.00END ZPLAX XFLAX4.5</Text>
+                  </FareCalculation>
+                  <FareSource>ATPC</FareSource>
+                  <FlightSegment ConnectionInd="O" DepartureDateTime="11-21T11:55" FlightNumber="5415" ResBookDesigCode="V" SegmentNumber="1" Status="OK">
+                    <BaggageAllowance Number="NIL" />
+                    <FareBasis Code="VAA7AFEN" />
+                    <MarketingAirline Code="UA" FlightNumber="5415" />
+                    <OriginLocation LocationCode="LAX" />
+                    <ValidityDates>
+                      <NotValidAfter>2018-11-21</NotValidAfter>
+                      <NotValidBefore>2018-11-21</NotValidBefore>
+                    </ValidityDates>
+                  </FlightSegment>
+                  <FlightSegment>
+                    <OriginLocation LocationCode="SAN" />
+                  </FlightSegment>
+                  <ResTicketingRestrictions>LAST DAY TO PURCHASE 14NOV/2359</ResTicketingRestrictions>
+                  <ResTicketingRestrictions>GUARANTEED FARE APPL IF PURCHASED BEFORE 14NOV</ResTicketingRestrictions>
+                </PTC_FareBreakdown>
+              </AirItineraryPricingInfo>
+            </PricedItinerary>
+            <ResponseHeader>
+              <Text>FARE - PRICE RETAINED</Text>
+              <Text>FARE USED TO CALCULATE DISCOUNT</Text>
+              <Text>FARE NOT GUARANTEED UNTIL TICKETED</Text>
+            </ResponseHeader>
+            <PriceQuotePlus DomesticIntlInd="I" PricingStatus="S" VerifyFareCalc="false" ItineraryChanged="false" ManualFare="false" NegotiatedFare="false" SystemIndicator="S" NUCSuppresion="false" SubjToGovtApproval="false" IT_BT_Fare="BT" DisplayOnly="false" DiscountAmount="0">
+              <PassengerInfo>
+                <PassengerData NameNumber="01.01">TEST/TES</PassengerData>
+              </PassengerInfo>
+              <TicketingInstructionsInfo />
+            </PriceQuotePlus>
+          </PriceQuote>
+          <PriceQuoteTotals>
+            <BaseFare Amount="112.91" />
+            <Taxes>
+              <Tax Amount="22.29" />
+            </Taxes>
+            <TotalFare Amount="135.20" />
+          </PriceQuoteTotals>
+        </ItineraryPricing>
+        <ReservationItems>
+          <Item RPH="1">
+            <MiscSegment DayOfWeekInd="3" DepartureDateTime="11-21" NumberInParty="01" SegmentNumber="0001" Status="HK" Type="OTH" IsPast="false">
+              <OriginLocation LocationCode="LAX" />
+              <Text>AMERICA TOURS</Text>
+              <Vendor Code="UA" />
+            </MiscSegment>
+          </Item>
+          <Item RPH="2">
+            <FlightSegment AirMilesFlown="0109" ArrivalDateTime="11-21T12:54" DayOfWeekInd="3" DepartureDateTime="2018-11-21T11:55" ElapsedTime="00.59" eTicket="true" FlightNumber="5415" NumberInParty="01" ResBookDesigCode="V" SegmentNumber="0002" SmokingAllowed="false" SpecialMeal="false" Status="HK" StopQuantity="00" IsPast="false">
+              <DestinationLocation LocationCode="SAN" Terminal="TERMINAL 2" TerminalCode="2" />
+              <Equipment AirEquipType="CRJ" />
+              <MarketingAirline Code="UA" FlightNumber="5415" />
+              <OperatingAirline Code="UA" CompanyShortName="/SKYWEST DBA UNITED EXPRESS" FlightNumber="5415" />
+              <OriginLocation LocationCode="LAX" Terminal="TERMINAL 7" TerminalCode="7" />
+              <SupplierRef ID="DCUA" />
+              <Text>OPERATED BY /SKYWEST DBA UNITED EXPRESS</Text>
+              <UpdatedArrivalTime>11-21T12:54</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-21T11:55</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+        </ReservationItems>
+        <Ticketing RPH="01" TicketTimeLimit="T-A" />
+      </ItineraryInfo>
+      <ItineraryRef AirExtras="false" ID="FGVXLV" InhibitCode="U" PartitionID="AA" PrimeHostID="1S">
+        <Source AAA_PseudoCityCode="K3SG" CreateDateTime="2018-11-13T05:07" CreationAgent="AWS" HomePseudoCityCode="K3SG" PseudoCityCode="K3SG" ReceivedFrom="SWS TESTING" LastUpdateDateTime="2018-11-13T05:07" SequenceNumber="1" />
+      </ItineraryRef>
+      <SpecialServiceInfo RPH="001" Type="GFX">
+        <Service SSR_Code="SSR" SSR_Type="DOCS">
+          <Airline Code="UA" />
+          <PersonName NameNumber="01.01">TEST/TES</PersonName>
+          <Text>HK1/DB/09OCT1996/M/TEST/TES</Text>
+        </Service>
+      </SpecialServiceInfo>
+    </TravelItinerary>
+  </TravelItineraryReadRS>
+</PassengerDetailsRS>
+<?xml version="1.0" encoding="utf-16"?>
+<SabreCommandLLSRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EchoToken="string" Version="1.8.1">
+  <Request Output="SCREEN" CDATA="true" xmlns="http://webservices.sabre.com/sabreXML/2003/07">
+    <HostCommand>IR</HostCommand>
+  </Request>
+</SabreCommandLLSRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<SabreCommandLLSRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EchoToken="String" TimeStamp="2018-11-13T11:07:32" Version="1.8.1" SequenceNmbr="1" PrimaryLangID="en-us" AltLangID="en-us">
+  <Response xmlns="http://webservices.sabre.com/sabreXML/2003/07"> 1.1TEST/TES*ADT
+ 1  OTH UA 21NOV W HK1  LAX/AMERICA TOURS
+ 2 UA5415V 21NOV W LAXSAN HK1  1155A 1254P /DCUA*B982RM /E
+OPERATED BY /SKYWEST DBA UNITED EXPRESS
+TKT/TIME LIMIT
+  1.T-A
+PHONES
+  1.LAX213-738-8185-A-1.1
+  2.LAX154-552-2121-A-1.1
+PASSENGER EMAIL DATA EXISTS  *PE TO DISPLAY ALL
+ADDRESS
+    AMERICA TOURS
+    3434 WEST 6TH STREET SUITE 400-6
+    LOS ANGELES, CA US
+    90020
+PRICE QUOTE RECORD EXISTS
+SECURITY INFO EXISTS *P3D OR *P4D TO DISPLAY
+RECEIVED FROM - SWS TESTING
+K3SG.K3SG*AWS 0507/13NOV18 FGVXLV H</Response>
+</SabreCommandLLSRS>
+<?xml version="1.0" encoding="utf-16"?>
+<QueuePlaceRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ReturnHostCommand="true" Version="2.0.4">
+  <QueueInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <QueueIdentifier Number="7" PrefatoryInstructionCode="5" PseudoCityCode="K3SG" />
+    <UniqueID ID="FGVXLV" />
+  </QueueInfo>
+</QueuePlaceRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<QueuePlaceRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.4">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL/v01">
+    <Success timeStamp="2018-11-13T16:07:34+05:00">
+      <SystemSpecificResults>
+        <HostCommand LNIATA="168F3B">QP/K3SG7/5*FGVXLV</HostCommand>
+      </SystemSpecificResults>
+    </Success>
+  </ApplicationResults>
+  <QueueInfo DateTime="11-13T05:07" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <QueueIdentifier Number="0007" PseudoCityCode="K3SG" />
+    <UniqueID ID="FGVXLV" />
+  </QueueInfo>
+  <Text xmlns="http://webservices.sabre.com/sabreXML/2011/10">QUEUE PLACEMENT COMPLETED</Text>
+</QueuePlaceRS>
+<?xml version="1.0" encoding="utf-16"?>
+<DesignatePrinterRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.1">
+  <Printers xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <Ticket CountryCode="AB" LNIATA="77EBA7" />
+  </Printers>
+</DesignatePrinterRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<DesignatePrinterRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.1">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL/v01">
+    <Success timeStamp="2018-11-13T16:07:35+05:00" />
+  </ApplicationResults>
+</DesignatePrinterRS>
+<?xml version="1.0" encoding="utf-16"?>
+<DesignatePrinterRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.1">
+  <Printers xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <InvoiceItinerary LNIATA="77EBA8" />
+  </Printers>
+</DesignatePrinterRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<DesignatePrinterRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.1">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL/v01">
+    <Success timeStamp="2018-11-13T16:07:35+05:00" />
+  </ApplicationResults>
+</DesignatePrinterRS>
+<?xml version="1.0" encoding="utf-16"?>
+<DesignatePrinterRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.1">
+  <Printers xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <Hardcopy LNIATA="77EBA8" />
+  </Printers>
+</DesignatePrinterRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<DesignatePrinterRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.1">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL/v01">
+    <Success timeStamp="2018-11-13T16:07:36+05:00" />
+  </ApplicationResults>
+</DesignatePrinterRS>
+<?xml version="1.0" encoding="utf-16"?>
+<GetReservationRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.18.0">
+  <Locator xmlns="http://webservices.sabre.com/pnrbuilder/v1_18">FGVXLV</Locator>
+  <RequestType xmlns="http://webservices.sabre.com/pnrbuilder/v1_18">Stateful</RequestType>
+  <ReturnOptions xsi:type="ReturnOptions" xmlns="http://webservices.sabre.com/pnrbuilder/v1_18">
+    <ViewName>VaDefaultWithPq</ViewName>
+  </ReturnOptions>
+</GetReservationRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<GetReservationRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.18.0">
+  <Reservation numberInParty="1" numberOfInfants="0" NumberInSegment="1" xmlns="http://webservices.sabre.com/pnrbuilder/v1_18">
+    <BookingDetails>
+      <RecordLocator>FGVXLV</RecordLocator>
+      <CreationTimestamp>2018-11-13T05:07:00</CreationTimestamp>
+      <SystemCreationTimestamp>2018-11-13T05:07:00</SystemCreationTimestamp>
+      <CreationAgentID>AWS</CreationAgentID>
+      <UpdateTimestamp>2018-11-13T05:07:30</UpdateTimestamp>
+      <PNRSequence>1</PNRSequence>
+      <FlightsRange Start="2018-11-21T11:55:00" End="2018-11-21T12:54:00" />
+      <DivideSplitDetails />
+      <EstimatedPurgeTimestamp>2018-11-21T00:00:00</EstimatedPurgeTimestamp>
+      <UpdateToken>-537723e836eb68098e4c4913bde1f2eac1849e5499094ef5</UpdateToken>
+    </BookingDetails>
+    <POS AirExtras="false" InhibitCode="U">
+      <Source BookingSource="K3SG" AgentSine="AWS" PseudoCityCode="K3SG" ISOCountry="US" AgentDutyCode="*" AirlineVendorID="AA" HomePseudoCityCode="K3SG" />
+    </POS>
+    <PassengerReservation>
+      <Passengers>
+        <Passenger id="4" nameType="S" passengerType="ADT" referenceNumber="ADT" nameId="01.01" nameAssocId="1" elementId="pnr-4.1">
+          <LastName>TEST</LastName>
+          <FirstName>TES</FirstName>
+          <SpecialRequests>
+            <APISRequest>
+              <DOCSEntry id="16" type="G">
+                <DateOfBirth>1996-10-09</DateOfBirth>
+                <Gender>M</Gender>
+                <Surname>TEST</Surname>
+                <Forename>TES</Forename>
+                <MiddleName />
+                <PrimaryHolder>false</PrimaryHolder>
+                <FreeText />
+                <ActionCode>HK</ActionCode>
+                <NumberInParty>1</NumberInParty>
+                <VendorCode>UA</VendorCode>
+              </DOCSEntry>
+            </APISRequest>
+          </SpecialRequests>
+          <Seats />
+        </Passenger>
+      </Passengers>
+      <Segments>
+        <Poc>
+          <Airport>LAX</Airport>
+          <Departure>2018-11-21T11:55:00</Departure>
+        </Poc>
+        <Segment sequence="1" id="15">
+          <General isPast="false" dayOfWeekInd="3">
+            <Line Number="1" Type="OTH" Status="HK" />
+            <Vendor Code="UA" />
+            <NumberInParty>1</NumberInParty>
+            <Location LocationCode="LAX" />
+            <DateTime>2018-11-21T00:00:00</DateTime>
+            <Text>AMERICA TOURS</Text>
+          </General>
+        </Segment>
+        <Segment sequence="2" id="3">
+          <Air SpecialMeal="false" CodeShare="false" DayOfWeekInd="3" Code="UA" ResBookDesigCode="V" segmentAssociationId="2" sequence="2" id="3" isPast="false" StopQuantity="00">
+            <DepartureAirport>LAX</DepartureAirport>
+            <DepartureAirportCodeContext>IATA</DepartureAirportCodeContext>
+            <DepartureTerminalName>TERMINAL 7</DepartureTerminalName>
+            <DepartureTerminalCode>7</DepartureTerminalCode>
+            <ArrivalAirport>SAN</ArrivalAirport>
+            <ArrivalAirportCodeContext>IATA</ArrivalAirportCodeContext>
+            <ArrivalTerminalName>TERMINAL 2</ArrivalTerminalName>
+            <ArrivalTerminalCode>2</ArrivalTerminalCode>
+            <OperatingAirlineCode>UA</OperatingAirlineCode>
+            <OperatingAirlineShortName>UNITED AIRLINES</OperatingAirlineShortName>
+            <OperatingFlightNumber>5415</OperatingFlightNumber>
+            <EquipmentType>CRJ</EquipmentType>
+            <MarketingAirlineCode>UA</MarketingAirlineCode>
+            <MarketingFlightNumber>5415</MarketingFlightNumber>
+            <OperatingClassOfService>V</OperatingClassOfService>
+            <MarketingClassOfService>V</MarketingClassOfService>
+            <DisclosureCarrier Code="UA" DOT="true">
+              <Banner>/SKYWEST DBA UNITED EXPRESS</Banner>
+            </DisclosureCarrier>
+            <MarriageGrp>
+              <Ind>0</Ind>
+              <Group>0</Group>
+              <Sequence>0</Sequence>
+            </MarriageGrp>
+            <Seats />
+            <AirlineRefId>DCUA*B982RM</AirlineRefId>
+            <Eticket>true</Eticket>
+            <DepartureDateTime>2018-11-21T11:55:00</DepartureDateTime>
+            <ArrivalDateTime>2018-11-21T12:54:00</ArrivalDateTime>
+            <FlightNumber>5415</FlightNumber>
+            <ClassOfService>V</ClassOfService>
+            <ActionCode>HK</ActionCode>
+            <NumberInParty>1</NumberInParty>
+            <SegmentSpecialRequests />
+            <inboundConnection>false</inboundConnection>
+            <outboundConnection>false</outboundConnection>
+            <ScheduleChangeIndicator>false</ScheduleChangeIndicator>
+            <SegmentBookedDate>2018-11-13T05:07:00</SegmentBookedDate>
+            <ElapsedTime>00.59</ElapsedTime>
+            <AirMilesFlown>0109</AirMilesFlown>
+            <FunnelFlight>false</FunnelFlight>
+            <ChangeOfGauge>false</ChangeOfGauge>
+            <Banner>MARKETED BY UNITED AIRLINES</Banner>
+          </Air>
+        </Segment>
+      </Segments>
+      <TicketingInfo>
+        <AlreadyTicketed id="6" index="1" elementId="pnr-6">
+          <Code>T-A</Code>
+        </AlreadyTicketed>
+      </TicketingInfo>
+      <ItineraryPricing>
+        <PricedItinerary TaxExempt="N" StatusCode="A" SequenceNumber="1" InputMessage="WPK5.00$P1ADT$PU*5.00$RQ" ValidatingCarrier="UA">
+          <AirItineraryPricingInfo>
+            <ItinTotalFare code="NN">
+              <Base>112.91</Base>
+              <Total>135.20</Total>
+              <Taxes>
+                <Tax code="XT">
+                  <Amount currency="USD">22.29</Amount>
+                </Tax>
+                <TaxBreakdownCode TaxPaid="false">8.09US</TaxBreakdownCode>
+                <TaxBreakdownCode TaxPaid="false">4.10ZP</TaxBreakdownCode>
+                <TaxBreakdownCode TaxPaid="false">5.60AY</TaxBreakdownCode>
+                <TaxBreakdownCode TaxPaid="false">4.50XF</TaxBreakdownCode>
+              </Taxes>
+              <Totals code="NN">
+                <Base currency="USD">112.91</Base>
+                <TotalTax currency="USD">22.29</TotalTax>
+                <Total currency="USD">135.20</Total>
+              </Totals>
+            </ItinTotalFare>
+            <PTC_FareBreakdown>
+              <PassengerTypeQuantity Code="ADT" Quantity="1" />
+              <FareBasisCode>VAA7AFEN</FareBasisCode>
+              <FareCalc>LAX UA SAN107.91USD107.91 PLUS5.00END ZPLAX XFLAX4.5</FareCalc>
+              <FlightSegment RPH="001">
+                <DepartureDateTime>2018-11-21T11:55:00</DepartureDateTime>
+                <ResBookDesigCode>V</ResBookDesigCode>
+                <FlightNumber>5415</FlightNumber>
+                <ActionCode>OK</ActionCode>
+                <FlightType>O</FlightType>
+                <AirPort name="LOS ANGELES">LAX</AirPort>
+                <OperatingAirline>UA</OperatingAirline>
+                <FareBasisCode>VAA7AFEN</FareBasisCode>
+                <ValidityDates>
+                  <NotValidBefore>21NOV2018</NotValidBefore>
+                  <NotValidAfter>21NOV2018</NotValidAfter>
+                </ValidityDates>
+              </FlightSegment>
+              <FlightSegment>
+                <AirPort name="SAN DIEGO">SAN</AirPort>
+              </FlightSegment>
+              <FareComponent FareBasisCode="VAA7AFEN" FareDirectionality="FROM" Amount="10791" TicketDesignator="" GoverningCarrier="UA" FareComponentNumber="1">
+                <Location Origin="LAX" Destination="SAN" />
+              </FareComponent>
+              <PassengerTypeRequested Code="ADT" />
+              <PassengerTypePriced Code="ADT" />
+            </PTC_FareBreakdown>
+            <TicketingFees />
+            <SignatureLine ExpirationDateTime="2018-11-14T23:59:00">
+              <Text>K3SG K3SG *AWS 0507/13NOV</Text>
+            </SignatureLine>
+          </AirItineraryPricingInfo>
+        </PricedItinerary>
+      </ItineraryPricing>
+    </PassengerReservation>
+    <ReceivedFrom>
+      <Name>SWS TESTING</Name>
+    </ReceivedFrom>
+    <Addresses>
+      <Address>
+        <AddressLines>
+          <AddressLine id="11" type="O">
+            <Text>AMERICA TOURS</Text>
+          </AddressLine>
+          <AddressLine id="12" type="O">
+            <Text>3434 WEST 6TH STREET SUITE 400-6</Text>
+          </AddressLine>
+          <AddressLine id="13" type="O">
+            <Text>LOS ANGELES, CA US</Text>
+          </AddressLine>
+          <AddressLine id="14" type="O">
+            <Text>90020</Text>
+          </AddressLine>
+        </AddressLines>
+      </Address>
+    </Addresses>
+    <PhoneNumbers>
+      <PhoneNumber id="9" index="1" elementId="pnr-9">
+        <CityCode>LAX</CityCode>
+        <Number>213-738-8185-A-1.1</Number>
+      </PhoneNumber>
+      <PhoneNumber id="10" index="2" elementId="pnr-10">
+        <CityCode>LAX</CityCode>
+        <Number>154-552-2121-A-1.1</Number>
+      </PhoneNumber>
+    </PhoneNumbers>
+    <EmailAddresses>
+      <EmailAddress id="8">
+        <Address>ADMIN@KOREAONLY.COM</Address>
+        <Comment>AMERICATOURS</Comment>
+      </EmailAddress>
+      <EmailAddress id="7">
+        <Address>TRE@D.COM</Address>
+        <Comment>AMERICATOURS</Comment>
+      </EmailAddress>
+    </EmailAddresses>
+    <OpenReservationElements>
+      <OpenReservationElement id="16" type="SRVC" elementId="pnr-16" xmlns="http://services.sabre.com/res/or/v1_12">
+        <ServiceRequest actionCode="HK" airlineCode="UA" code="DOCS" serviceCount="1" serviceType="SSR" ssrType="GFX">
+          <FreeText>/DB/09OCT1996/M/TEST/TES</FreeText>
+          <FullText>DOCS UA HK1/DB/09OCT1996/M/TEST/TES</FullText>
+          <TravelDocument>
+            <Type>DB</Type>
+            <DateOfBirth>09OCT1996</DateOfBirth>
+            <Gender>M</Gender>
+            <LastName>TEST</LastName>
+            <FirstName>TES</FirstName>
+            <Infant>false</Infant>
+            <HasDocumentData>false</HasDocumentData>
+          </TravelDocument>
+        </ServiceRequest>
+        <NameAssociation>
+          <LastName>TEST</LastName>
+          <FirstName>TES</FirstName>
+          <NameRefNumber>01.01</NameRefNumber>
+        </NameAssociation>
+      </OpenReservationElement>
+      <OpenReservationElement id="8" type="PSG_DETAILS_MAIL" elementId="pnr-8" xmlns="http://services.sabre.com/res/or/v1_12">
+        <Email comment="AMERICATOURS">
+          <Address>ADMIN@KOREAONLY.COM</Address>
+        </Email>
+      </OpenReservationElement>
+      <OpenReservationElement id="7" type="PSG_DETAILS_MAIL" elementId="pnr-7" xmlns="http://services.sabre.com/res/or/v1_12">
+        <Email comment="AMERICATOURS">
+          <Address>TRE@D.COM</Address>
+        </Email>
+      </OpenReservationElement>
+    </OpenReservationElements>
+  </Reservation>
+</GetReservationRS>
+<?xml version="1.0" encoding="utf-16"?>
+<SabreCommandLLSRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EchoToken="string" Version="1.8.1">
+  <Request Output="SCREEN" CDATA="true" xmlns="http://webservices.sabre.com/sabreXML/2003/07">
+    <HostCommand>CC/PC</HostCommand>
+  </Request>
+</SabreCommandLLSRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<SabreCommandLLSRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EchoToken="String" TimeStamp="2018-11-13T11:07:41" Version="1.8.1" SequenceNmbr="1" PrimaryLangID="en-us" AltLangID="en-us">
+  <Response xmlns="http://webservices.sabre.com/sabreXML/2003/07">* 
+</Response>
+</SabreCommandLLSRS>
+<?xml version="1.0" encoding="utf-16"?>
+<AirTicketRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" NumResponses="1" Version="2.11.0">
+  <OptionalQualifiers xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightQualifiers>
+      <VendorPrefs>
+        <Airline Code="UA" />
+      </VendorPrefs>
+    </FlightQualifiers>
+    <FOP_Qualifiers>
+      <BasicFOP>
+        <CC_Info Suppress="true">
+          <PaymentCard Code="VI" CardSecurityCode="212" ExpireDate="2021-01" Number="4544445545455544" />
+        </CC_Info>
+      </BasicFOP>
+    </FOP_Qualifiers>
+    <MiscQualifiers>
+      <Endorsement>
+        <Text>Non_End</Text>
+      </Endorsement>
+      <EndTransaction Ind="true" />
+      <Invoice Ind="true" ETReceipt="true" />
+      <Ticket Type="ETR" />
+    </MiscQualifiers>
+    <PricingQualifiers>
+      <PriceQuote>
+        <Record Number="1" />
+      </PriceQuote>
+    </PricingQualifiers>
+  </OptionalQualifiers>
+</AirTicketRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<AirTicketRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.11.0">
+  <ApplicationResults status="NotProcessed" xmlns="http://services.sabre.com/STL/v01">
+    <Error type="BusinessLogic" timeStamp="2018-11-13T16:07:42+05:00">
+      <SystemSpecificResults>
+        <Message>INCORRECT CARD NUMBER</Message>
+        <ShortText>ERR.SWS.HOST.ERROR_IN_RESPONSE</ShortText>
+      </SystemSpecificResults>
+    </Error>
+  </ApplicationResults>
+</AirTicketRS>
+---------Exception-----------
+There was an error reflecting type 'KoreaOnly.SabreSoapApis.SessionCreateRQService'. LINE NUMBER  0
+--------Complete Exception-----------System.InvalidOperationException: Cannot serialize member 'System.ComponentModel.Component.Site' of type 'System.ComponentModel.ISite', see inner exception for more details. ---> System.NotSupportedException: Cannot serialize member System.ComponentModel.Component.Site of type System.ComponentModel.ISite because it is an interface.
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.StructModel.CheckSupportedMember(TypeDesc typeDesc, MemberInfo member, Type type)
+   at System.Xml.Serialization.StructModel.GetPropertyModel(PropertyInfo propertyInfo)
+   at System.Xml.Serialization.StructModel.GetFieldModel(MemberInfo memberInfo)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportElement(TypeModel model, XmlRootAttribute root, String defaultNamespace, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(Type type, XmlRootAttribute root, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type)
+   at KoreaOnly.MainController.ObjectToXML(String xml, Type objectType) in D:\Projects\Websites\KoreaOnlyAsp\KoreaOnly\App_Start\MainController.cs:line 1617
+---------Exception-----------
+There is an error in XML document (1, 1). LINE NUMBER  0
+--------Complete Exception-----------System.Xml.XmlException: Data at the root level is invalid. Line 1, position 1.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSessionCreateRQ.Read5_SessionCreateRQ()
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   at KoreaOnly.MainController.ObjectToXML(String xml, Type objectType)
+---------Exception-----------
+There is an error in XML document (1, 1). LINE NUMBER  0
+--------Complete Exception-----------System.Xml.XmlException: Data at the root level is invalid. Line 1, position 1.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSessionCreateRQ.Read5_SessionCreateRQ()
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   at KoreaOnly.MainController.ObjectToXML(String xml, Type objectType) in D:\Projects\Websites\KoreaOnlyAsp\KoreaOnly\App_Start\MainController.cs:line 1637
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <POS xmlns="http://www.opentravel.org/OTA/2002/11">
+    <Source PseudoCityCode="K3SG" />
+  </POS>
+</SessionCreateRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" status="Approved">
+  <ConversationId xmlns="http://www.opentravel.org/OTA/2002/11">KoreaOnly</ConversationId>
+</SessionCreateRS>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <POS xmlns="http://www.opentravel.org/OTA/2002/11">
+    <Source PseudoCityCode="K3SG" />
+  </POS>
+</SessionCreateRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" status="Approved">
+  <ConversationId xmlns="http://www.opentravel.org/OTA/2002/11">KoreaOnly</ConversationId>
+</SessionCreateRS>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <POS xmlns="http://www.opentravel.org/OTA/2002/11">
+    <Source PseudoCityCode="K3SG" />
+  </POS>
+</SessionCreateRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <POS xmlns="http://www.opentravel.org/OTA/2002/11">
+    <Source PseudoCityCode="K3SG" />
+  </POS>
+</SessionCreateRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" status="Approved">
+  <ConversationId xmlns="http://www.opentravel.org/OTA/2002/11">KoreaOnly</ConversationId>
+</SessionCreateRS>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <POS xmlns="http://www.opentravel.org/OTA/2002/11">
+    <Source PseudoCityCode="K3SG" />
+  </POS>
+</SessionCreateRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" status="Approved">
+  <ConversationId xmlns="http://www.opentravel.org/OTA/2002/11">KoreaOnly</ConversationId>
+</SessionCreateRS>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <POS xmlns="http://www.opentravel.org/OTA/2002/11">
+    <Source PseudoCityCode="K3SG" />
+  </POS>
+</SessionCreateRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" status="Approved">
+  <ConversationId xmlns="http://www.opentravel.org/OTA/2002/11">KoreaOnly</ConversationId>
+</SessionCreateRS>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <POS xmlns="http://www.opentravel.org/OTA/2002/11">
+    <Source PseudoCityCode="K3SG" />
+  </POS>
+</SessionCreateRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" status="Approved">
+  <ConversationId xmlns="http://www.opentravel.org/OTA/2002/11">KoreaOnly</ConversationId>
+</SessionCreateRS>
+---------Exception-----------
+There is an error in XML document (2, 7). LINE NUMBER  0
+--------Complete Exception-----------System.Xml.XmlException: Unexpected XML declaration. The XML declaration must be the first node in the document, and no white space characters are allowed to appear before it. Line 2, position 7.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParsePI(StringBuilder piInDtdStringBuilder)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSessionCreateRQ.Read5_SessionCreateRQ()
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   at KoreaOnly.MainController.ObjectToXML(String xml, Type objectType) in D:\Projects\Websites\KoreaOnlyAsp\KoreaOnly\App_Start\MainController.cs:line 1637
+
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" status="Approved">
+  <ConversationId xmlns="http://www.opentravel.org/OTA/2002/11">KoreaOnly</ConversationId>
+</SessionCreateRS>
+---------Exception-----------
+There is an error in XML document (1, 6). LINE NUMBER  0
+--------Complete Exception-----------System.Xml.XmlException: Unexpected XML declaration. The XML declaration must be the first node in the document, and no white space characters are allowed to appear before it. Line 1, position 6.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParsePI(StringBuilder piInDtdStringBuilder)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSessionCreateRQ.Read5_SessionCreateRQ()
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   at KoreaOnly.MainController.ObjectToXML(String xml, Type objectType) in D:\Projects\Websites\KoreaOnlyAsp\KoreaOnly\App_Start\MainController.cs:line 1643
+
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" status="Approved">
+  <ConversationId xmlns="http://www.opentravel.org/OTA/2002/11">KoreaOnly</ConversationId>
+</SessionCreateRS>
+---------Exception-----------
+There is an error in XML document (3, 7). LINE NUMBER  0
+--------Complete Exception-----------System.Xml.XmlException: Unexpected XML declaration. The XML declaration must be the first node in the document, and no white space characters are allowed to appear before it. Line 3, position 7.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParsePI(StringBuilder piInDtdStringBuilder)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderAirTicketRQ.Read110_AirTicketRQ()
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   at KoreaOnly.MainController.ObjectToXML(String xml, Type objectType) in D:\Projects\Websites\KoreaOnlyAsp\KoreaOnly\App_Start\MainController.cs:line 1643
+
+<?xml version="1.0" encoding="utf-16"?>
+<AirTicketRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" NumResponses="1" Version="2.11.0">
+  <OptionalQualifiers xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightQualifiers>
+      <VendorPrefs>
+        <Airline Code="UA" />
+      </VendorPrefs>
+    </FlightQualifiers>
+    <FOP_Qualifiers>
+      <BasicFOP>
+        <CC_Info Suppress="true">
+          <PaymentCard Code="VI" CardSecurityCode="212" ExpireDate="2021-01" Number="4544445545455544" />
+        </CC_Info>
+      </BasicFOP>
+    </FOP_Qualifiers>
+    <MiscQualifiers>
+      <Endorsement>
+        <Text>Non_End</Text>
+      </Endorsement>
+      <EndTransaction Ind="true" />
+      <Invoice Ind="true" ETReceipt="true" />
+      <Ticket Type="ETR" />
+    </MiscQualifiers>
+    <PricingQualifiers>
+      <PriceQuote>
+        <Record Number="1" />
+      </PriceQuote>
+    </PricingQualifiers>
+  </OptionalQualifiers>
+</AirTicketRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<AirTicketRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.11.0">
+  <ApplicationResults status="NotProcessed" xmlns="http://services.sabre.com/STL/v01">
+    <Error type="BusinessLogic" timeStamp="2018-11-13T17:42:27+05:00">
+      <SystemSpecificResults>
+        <Message>UNABLE TO END TRANSACTION - NO PNR PRESENT IN WORK AREA</Message>
+        <ShortText>ERR.SWS.HOST.ERROR_IN_RESPONSE</ShortText>
+      </SystemSpecificResults>
+    </Error>
+  </ApplicationResults>
+</AirTicketRS>

@@ -1,0 +1,233 @@
+﻿
+@model List<KoreaOnly.Models.ContactInfoModel>
+@{
+
+    //var AirRule = (Additional.SabreCommand.SabreCommandLLSRS)Session["WP"];
+
+    //var WPRD = (List<Additional.SabreCommand.SabreCommandLLSRS>)Session["WPRD"];
+
+
+    var AirRules = (List<Additional.OTA_AirRule.OTA_AirRulesRS>)Session["AirRulles"];
+
+}
+
+
+<div class="row">
+    <h2 style="font-size: 22px !important;line-height: 26px;font-weight:bold;">Review Your Selection and Price</h2>
+    <hr style="margin-top: 9px;margin-bottom: 10px;" />
+    <div class="col-md-12">
+        <div class="Flight_Details" data-toggle="collapse" data-target="#Flight_More_info">
+            <p>Flight Details</p>
+            @{ var R = (Additional.SearchFares.OTA_AirLowFareSearchRSPricedItineraryOriginDestinationOption[])Session["SelectedFlight"]; }
+            @for (int i = 0; i < R.Length; i++)
+            {
+                if (i == 1 && Model.Count == 2)
+                {
+                    <p><i class="fa fa-plane fa-rotate-270"></i>&nbsp;&nbsp;Return --- @R[i].FlightSegment.First().OriginLocation.LocationCode&nbsp;&nbsp;<i class="glyphicon glyphicon-arrow-right"></i>&nbsp;&nbsp;@R[i].FlightSegment.Last().DestinationLocation.LocationCode&nbsp;&nbsp;@(Convert.ToDateTime(R[i].FlightSegment.First().DepartureDateTime).ToString("MMM dd hh:mm")) @*@(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("hh:mm"))*@</p>
+                }
+                else
+                {
+                    <p><i class="fa fa-plane"></i>&nbsp;&nbsp;Depart --- @R[i].FlightSegment.First().OriginLocation.LocationCode&nbsp;&nbsp;<i class="glyphicon glyphicon-arrow-right"></i>&nbsp;&nbsp;@R[i].FlightSegment.Last().DestinationLocation.LocationCode&nbsp;&nbsp;@(Convert.ToDateTime(R[i].FlightSegment.First().DepartureDateTime).ToString("MMM dd hh:mm")) @*@(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("hh:mm"))*@</p>
+                }
+            }
+
+            <p class="small" style="cursor: pointer;">(Click To See Your Flight Details)</p>
+        </div>
+        <div id="Flight_More_info" class="Flight_More_info collapse">
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                if (i == 1 && Model.Count == 2)
+                {
+                    <p style="font-weight:bold;"><i class="fa fa-plane fa-rotate-270"></i>&nbsp;&nbsp;Return</p>
+                }
+                else
+                {
+                    <p style="font-weight:bold;"><i class="fa fa-plane"></i>&nbsp;&nbsp;Departure</p>
+                }
+
+                <table class="table table-bordered c-passenger-table" style="background-color:#0f3e50;font-size: 13px; color:white;">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <table class="table table-bordered c-passenger-table" style="background-color:white;color:#474747;font-weight:normal;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 70px" class="small">Flight#</td>
+                                            <td>@string.Format("{0} {1}", Model[i].Marketing_Airline, Model[i].FlightNo)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-plane"></i> <br>Take-off</td>
+                                            <td>
+                                                @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("MMM")) @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("hh:mm"))<br> @Model[i].Take_Off_Location_Airport <br /><strong>Terminal-:</strong>@(Model[i].Take_Off_Location_Terminal) <br> @Model[i].Take_Off_Location_City
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-plane fa-rotate-90"></i><br> Landing</td>
+                                            <td>
+                                                @(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("MMM")) @(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("hh:mm"))<br />
+                                                <strong>Terminal-:</strong>
+                                                @(Model[i].Landing_Location_Terminal)
+                                                <br>
+                                                @Model[i].Landing_Location_Airport <br> @Model[i].Landing_Location_City
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <strong>Duration-:</strong>
+                                @Model[i].Flight_Duration  &nbsp;|
+                                <strong>Equipment Type:</strong>
+                                @( MainController.GetAircraftTypeByCode(Model[i].Equipment_Type).Description) &nbsp;|
+                                &nbsp;
+                                <strong>Air Miles-:</strong>
+                                @Model[i].Air_Miles&nbsp;|
+                                &nbsp;<strong>Operating Airline-:</strong>
+                                @(MainController.GetAirline(Model[i].Operating_Airline).AirlineName)&nbsp; @Model[i].Operating_Airline_CompanyName
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            }
+        </div>
+
+        <div class="Fare_Info" data-toggle="collapse" data-target="#Fare_Info">
+            <p>Fare Info</p>
+            <p class="small" style="cursor: pointer;">(Click To See Your Fare Details)</p>
+            <div id="Fare_Info" class="Fare_More_Info collapse in">
+                <table class="table table-bordered c-passenger-table" style="font-weight:normal;background-color:white;color:#474747;    font-size: 14px;">
+                    <thead>
+                        <tr>
+                            <th class="small">Passengers</th>
+                            <th class="small">Base Fare</th>
+                            <th class="small">Tax</th>
+                            <th class="small">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{ decimal TotalFarePrice = 0;}
+                        @foreach (var Price in (List<FarePrice>)Session["Prices"])
+                        {
+                            <tr>
+                                <td>
+                                    @Price.PassengerName.ToString()&nbsp;x&nbsp; @Price.NoOfPassenger
+                                </td>
+                                <td>@Price.BaseFare</td>
+                                <td>@Price.Tax</td>
+                                <td>@Price.TotalAmount</td>
+                            </tr>
+
+                            TotalFarePrice += Convert.ToDecimal(Price.TotalAmount);
+
+                        }
+                    </tbody>
+                </table>
+                <div class="center" style="margin-bottom: 10px;">
+                    <br>
+                    Total Fare: $@TotalFarePrice
+                    <br>
+                    @* Service Charge: $0.00*@
+                </div>
+                <div>
+                    <div class="center" style="margin-bottom: 10px;">
+                        <span class="font-xl">
+                            @*Total Price: $@TotalFarePrice*@
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Baggage_Details" data-toggle="collapse" data-target="#Baggage_Details">
+            <p>Baggage Details</p>
+            <p class="small" style="cursor: pointer;">(Click Here)</p>
+            <div id="Baggage_Details" class="Baggage_More_Details collapse">
+                <table class="table table-bordered c-passenger-table" style="font-weight:normal;background-color:white;color:#474747;">
+                    <tbody>
+                        @foreach (var Bag in (string[])Session["BagDetails"])
+                        {
+                            <tr>
+                                <td class="small" style="text-align:left; color: white; background: rgb(15, 62, 80);">@Bag</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="IMportant">
+            <p>Important Information</p>
+            <p class="small" style="cursor: pointer;"></p>
+            <div id="IMportant" class="IMportant_More">
+                <table class="table table-bordered c-passenger-table" style="font-weight:normal;background-color:white;color:#474747;">
+                    <tbody>
+                        <tr>
+                            <td class="small" style="text-align:left; color: white; background: rgb(15, 62, 80);cursor:pointer;" data-toggle="modal" data-target="#exampleModalLong">Click to See Fare Rules For Airline</td>
+                        </tr>
+                        <tr>
+                            <td class="small" style="text-align:left; color: white; background: rgb(15, 62, 80);cursor:pointer;" data-toggle="modal" data-target="#myModal">Click to See Conditions for Payments &amp; Security </td>
+                        </tr>
+                        <tr>
+                            <td class="small" style="text-align:left; color: white; background: rgb(15, 62, 80);cursor:pointer;">Free Cancellation within 24 Hours</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalLongTitle" style="font-weight:bold;color:#10404F;font-size:25px;text-align:center;">
+                    Fare Rules For Airline
+                </h5>
+            </div>
+            <div class="modal-body">
+                @*@if (AirRule.Response != null)
+                    {
+                        <p style="font-size: 15px;margin: 5px; white-space:pre-line;">@AirRule.Response</p>
+
+                    }
+                    <br />
+                    @foreach (var item in WPRD)
+                    {
+                        <p style="font-size: 15px;margin: 5px; white-space:pre-line;">@item.Response</p>
+                        <br />
+                    }*@
+
+                @foreach (var Rules in AirRules)
+                {
+                    if (Rules.ApplicationResults.status != Additional.OTA_AirRule.CompletionCodes.Complete)
+                    {
+                        continue;
+                    }
+                    if (Rules.FareRuleInfo != null)
+                    {
+                        <p style="font-weight:bold">@((MainController.GetAirport(Rules.FareRuleInfo.Header.ParsedData.OriginDestinationLine.OriginLocation.LocationCode)).Result.AirportLocation) - @(MainController.GetAirport(Rules.FareRuleInfo.Header.ParsedData.OriginDestinationLine.DestinationLocation.LocationCode).Result.AirportLocation)</p>
+
+                        <p style="font-size: 15px;margin: 5px; white-space:pre-line;">@Rules.FareRuleInfo.Rules.First().Text</p>
+                        <br />
+
+                    }
+                    else
+                    {
+                        <p style="font-size: 15px;margin: 5px; white-space:pre-line;">@Rules.DuplicateFareInfo.Text</p>
+                        <br />
+                    }
+                }
+
+
+            </div>
+        </div>
+    </div>
+</div>

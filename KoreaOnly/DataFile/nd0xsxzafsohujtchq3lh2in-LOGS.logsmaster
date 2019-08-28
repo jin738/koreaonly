@@ -1,0 +1,987 @@
+
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <POS xmlns="http://www.opentravel.org/OTA/2002/11">
+    <Source PseudoCityCode="K3SG" />
+  </POS>
+</SessionCreateRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" status="Approved">
+  <ConversationId xmlns="http://www.opentravel.org/OTA/2002/11">KoreaOnly</ConversationId>
+</SessionCreateRS>
+---------Exception-----------
+There is an error in XML document (2, 2). LINE NUMBER  0
+--------Complete Exception-----------System.InvalidOperationException: <OTA_AirLowFareSearchRQ xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSessionCreateRQ.Read5_SessionCreateRQ()
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   at KoreaOnly.MainController.ObjectToXML(String xml, Type objectType) in D:\Projects\Websites\KoreaOnlyAsp\KoreaOnly\App_Start\MainController.cs:line 1793
+
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" status="Approved">
+  <ConversationId xmlns="http://www.opentravel.org/OTA/2002/11">KoreaOnly</ConversationId>
+</SessionCreateRS>
+---------Exception-----------
+There is an error in XML document (2, 7). LINE NUMBER  0
+--------Complete Exception-----------System.Xml.XmlException: Unexpected XML declaration. The XML declaration must be the first node in the document, and no white space characters are allowed to appear before it. Line 2, position 7.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParsePI(StringBuilder piInDtdStringBuilder)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderOTA_AirLowFareSearchRQ.Read52_OTA_AirLowFareSearchRQ()
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   at KoreaOnly.MainController.ObjectToXML(String xml, Type objectType) in D:\Projects\Websites\KoreaOnlyAsp\KoreaOnly\App_Start\MainController.cs:line 1793
+
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="SFO" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL/v01">
+    <Success timeStamp="2018-11-14T00:52:33.559+05:00" />
+  </ApplicationResults>
+  <PricedItineraries xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <PricedItinerary CurrencyCode="USD" RPH="1" TotalAmount="178.20">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX AA SFO152.56USD152.56END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="152.56" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="152.56" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.44" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.20" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/SVCCHGPLUSFAREDIF/CXL BY FLT TIME OR NOVALUE" />
+            <Warning ShortText="VALIDATING CARRIER - AA" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="V0AKZNN1" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="AA" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T13:55" DepartureDateTime="2018-11-13T12:30" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="85" eTicket="true" FlightNumber="6007" MarketingCabin="Y" OnTimeRate="9" OriginTimeZone="-8" ResBookDesigCode="V" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="E75" />
+          <MarketingAirline Code="AA" FlightNumber="6007" />
+          <MarriageGrp Ind="O" />
+          <OperatingAirline Code="AA" CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="2" TotalAmount="178.20">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX DL SFO152.56USD152.56END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="152.56" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="152.56" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.44" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.20" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/PENALTY APPLIES" />
+            <Warning ShortText="VALIDATING CARRIER - DL" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="KA0NA0MA" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="DL" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T14:32" DepartureDateTime="2018-11-13T12:55" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="97" eTicket="true" FlightNumber="2066" MarketingCabin="Y" OnTimeRate="9" OriginTimeZone="-8" ResBookDesigCode="K" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="738" />
+          <MarketingAirline Code="DL" FlightNumber="2066" />
+          <MarriageGrp Ind="O" />
+          <OperatingAirline Code="DL" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="3" TotalAmount="178.20">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX UA SFO152.56USD152.56END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="152.56" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="152.56" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.44" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.20" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+            <Warning ShortText="VALIDATING CARRIER - UA" />
+            <Warning ShortText="CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="QAA0AKEN" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="UA" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T14:23" DepartureDateTime="2018-11-13T13:00" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="83" eTicket="true" FlightNumber="444" MarketingCabin="Y" OnTimeRate="9" OriginTimeZone="-8" ResBookDesigCode="Q" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="320" />
+          <MarketingAirline Code="UA" FlightNumber="444" />
+          <MarriageGrp Ind="O" />
+          <Meal MealCode="R" />
+          <OperatingAirline Code="UA" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="4" TotalAmount="178.20">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX AA SFO152.56USD152.56END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="152.56" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="152.56" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.44" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.20" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/SVCCHGPLUSFAREDIF/CXL BY FLT TIME OR NOVALUE" />
+            <Warning ShortText="VALIDATING CARRIER - AA" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="V0AKZNN1" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="AA" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T15:24" DepartureDateTime="2018-11-13T14:00" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="84" eTicket="true" FlightNumber="6040" MarketingCabin="Y" OnTimeRate="9" OriginTimeZone="-8" ResBookDesigCode="V" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="E75" />
+          <MarketingAirline Code="AA" FlightNumber="6040" />
+          <MarriageGrp Ind="O" />
+          <OperatingAirline Code="AA" CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="5" TotalAmount="178.20">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX UA SFO152.56USD152.56END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="152.56" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="152.56" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.44" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.20" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+            <Warning ShortText="VALIDATING CARRIER - UA" />
+            <Warning ShortText="CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="QAA0AKEN" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="UA" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T15:23" DepartureDateTime="2018-11-13T14:00" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="83" eTicket="true" FlightNumber="420" MarketingCabin="Y" OnTimeRate="9" OriginTimeZone="-8" ResBookDesigCode="Q" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="738" />
+          <MarketingAirline Code="UA" FlightNumber="420" />
+          <MarriageGrp Ind="O" />
+          <Meal MealCode="R" />
+          <OperatingAirline Code="UA" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="6" TotalAmount="178.20">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX AS SFO152.56USD152.56END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="152.56" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="152.56" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.44" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.20" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/SVCCHGPLUSFAREDIF/CXL BY FLT TIME OR NOVALUE/VALID AS/" />
+            <Warning ShortText="VALIDATING CARRIER - AS" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="MH0OAVMN" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="AS" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T16:05" DepartureDateTime="2018-11-13T14:30" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="95" eTicket="true" FlightNumber="1923" MarketingCabin="Y" OnTimePercent="89" OriginTimeZone="-8" ResBookDesigCode="M" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="32S" />
+          <MarketingAirline Code="AS" FlightNumber="1923" />
+          <MarriageGrp Ind="O" />
+          <Meal MealCode="S" />
+          <OperatingAirline Code="AS" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="7" TotalAmount="178.20">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX AA SFO152.56USD152.56END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="152.56" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="152.56" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.44" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.20" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/SVCCHGPLUSFAREDIF/CXL BY FLT TIME OR NOVALUE" />
+            <Warning ShortText="VALIDATING CARRIER - AA" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="V0AKZNN1" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="AA" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T17:10" DepartureDateTime="2018-11-13T15:45" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="85" eTicket="true" FlightNumber="6045" MarketingCabin="Y" OnTimeRate="9" OriginTimeZone="-8" ResBookDesigCode="V" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="E75" />
+          <MarketingAirline Code="AA" FlightNumber="6045" />
+          <MarriageGrp Ind="O" />
+          <OperatingAirline Code="AA" CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="8" TotalAmount="178.20">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX UA SFO152.56USD152.56END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="152.56" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="152.56" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.44" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.20" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+            <Warning ShortText="VALIDATING CARRIER - UA" />
+            <Warning ShortText="CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="QAA0AKEN" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="UA" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T17:27" DepartureDateTime="2018-11-13T16:00" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="87" eTicket="true" FlightNumber="460" MarketingCabin="Y" OnTimeRate="9" OriginTimeZone="-8" ResBookDesigCode="Q" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="738" />
+          <MarketingAirline Code="UA" FlightNumber="460" />
+          <MarriageGrp Ind="O" />
+          <Meal MealCode="R" />
+          <OperatingAirline Code="UA" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="9" TotalAmount="178.20">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX AA SFO152.56USD152.56END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="152.56" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="152.56" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.44" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.20" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/SVCCHGPLUSFAREDIF/CXL BY FLT TIME OR NOVALUE" />
+            <Warning ShortText="VALIDATING CARRIER - AA" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="V0AKZNN1" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="AA" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T18:24" DepartureDateTime="2018-11-13T17:00" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="84" eTicket="true" FlightNumber="1454" MarketingCabin="Y" OnTimeRate="9" OriginTimeZone="-8" ResBookDesigCode="V" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="738" />
+          <MarketingAirline Code="AA" FlightNumber="1454" />
+          <MarriageGrp Ind="O" />
+          <OperatingAirline Code="AA" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="10" TotalAmount="178.20">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX UA SFO152.56USD152.56END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="152.56" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="152.56" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.44" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.20" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+            <Warning ShortText="VALIDATING CARRIER - UA" />
+            <Warning ShortText="CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="QAA0AKEN" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="UA" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T18:23" DepartureDateTime="2018-11-13T17:00" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="83" eTicket="true" FlightNumber="632" MarketingCabin="Y" OnTimeRate="N" OriginTimeZone="-8" ResBookDesigCode="Q" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="738" />
+          <MarketingAirline Code="UA" FlightNumber="632" />
+          <MarriageGrp Ind="O" />
+          <Meal MealCode="R" />
+          <OperatingAirline Code="UA" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="11" TotalAmount="178.20">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX UA SFO152.56USD152.56END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="152.56" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="152.56" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.44" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.20" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+            <Warning ShortText="VALIDATING CARRIER - UA" />
+            <Warning ShortText="CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="QAA0AKEN" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="UA" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T19:23" DepartureDateTime="2018-11-13T18:00" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="83" eTicket="true" FlightNumber="481" MarketingCabin="Y" OnTimeRate="8" OriginTimeZone="-8" ResBookDesigCode="Q" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="739" />
+          <MarketingAirline Code="UA" FlightNumber="481" />
+          <MarriageGrp Ind="O" />
+          <Meal MealCode="R" />
+          <OperatingAirline Code="UA" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="12" TotalAmount="178.20">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX AA SFO152.56USD152.56END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="152.56" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="152.56" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.44" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.20" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/SVCCHGPLUSFAREDIF/CXL BY FLT TIME OR NOVALUE" />
+            <Warning ShortText="VALIDATING CARRIER - AA" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="V0AKZNN1" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="AA" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T19:52" DepartureDateTime="2018-11-13T18:30" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="82" eTicket="true" FlightNumber="6015" MarketingCabin="Y" OnTimeRate="9" OriginTimeZone="-8" ResBookDesigCode="V" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="E75" />
+          <MarketingAirline Code="AA" FlightNumber="6015" />
+          <MarriageGrp Ind="O" />
+          <OperatingAirline Code="AA" CompanyShortName="COMPASS AIRLINES AS AMERICAN EAGLE" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="13" TotalAmount="178.20">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX DL SFO152.56USD152.56END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="152.56" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="152.56" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.44" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.20" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/PENALTY APPLIES" />
+            <Warning ShortText="VALIDATING CARRIER - DL" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="KA0NA0MA" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="DL" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T20:29" DepartureDateTime="2018-11-13T19:00" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="89" eTicket="true" FlightNumber="2782" MarketingCabin="Y" OnTimeRate="8" OriginTimeZone="-8" ResBookDesigCode="K" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="738" />
+          <MarketingAirline Code="DL" FlightNumber="2782" />
+          <MarriageGrp Ind="O" />
+          <OperatingAirline Code="DL" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="14" TotalAmount="178.20">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX UA SFO152.56USD152.56END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="152.56" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="152.56" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.44" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.20" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+            <Warning ShortText="VALIDATING CARRIER - UA" />
+            <Warning ShortText="CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="QAA0AKEN" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="UA" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T20:23" DepartureDateTime="2018-11-13T19:00" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="83" eTicket="true" FlightNumber="2201" MarketingCabin="Y" OnTimeRate="8" OriginTimeZone="-8" ResBookDesigCode="Q" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="320" />
+          <MarketingAirline Code="UA" FlightNumber="2201" />
+          <MarriageGrp Ind="O" />
+          <Meal MealCode="R" />
+          <OperatingAirline Code="UA" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="15" TotalAmount="178.20">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX AS SFO152.56USD152.56END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="152.56" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="152.56" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.44" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.20" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/SVCCHGPLUSFAREDIF/CXL BY FLT TIME OR NOVALUE/VALID AS/" />
+            <Warning ShortText="VALIDATING CARRIER - AS" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="MH0OAVMN" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <LastTicketingDate>2018-11-13</LastTicketingDate>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="AS" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T23:05" DepartureDateTime="2018-11-13T21:30" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="95" eTicket="true" FlightNumber="1045" MarketingCabin="Y" OnTimePercent="NNN" OriginTimeZone="-8" ResBookDesigCode="M" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="32S" />
+          <MarketingAirline Code="AS" FlightNumber="1045" />
+          <MarriageGrp Ind="O" />
+          <Meal MealCode="S" />
+          <OperatingAirline Code="AS" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="16" TotalAmount="178.20">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX UA SFO152.56USD152.56END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="152.56" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="152.56" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.44" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.20" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/0VALUAFTDPT/CHGFEE" />
+            <Warning ShortText="VALIDATING CARRIER - UA" />
+            <Warning ShortText="CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="QAA0AKEN" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="UA" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T23:55" DepartureDateTime="2018-11-13T22:30" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="85" eTicket="true" FlightNumber="5439" MarketingCabin="Y" OnTimeRate="N" OriginTimeZone="-8" ResBookDesigCode="Q" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="E7W" />
+          <MarketingAirline Code="UA" FlightNumber="5439" />
+          <MarriageGrp Ind="O" />
+          <Meal MealCode="R" />
+          <OperatingAirline Code="UA" CompanyShortName="/SKYWEST DBA UNITED EXPRESS" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="17" TotalAmount="178.98">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX WN SFO153.28NLN0PNR USD153.28END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="153.28" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="153.28" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.50" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.98" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/NONTRANSFERABLE/STANDBY REQ UPGRADE TO Y" />
+            <Warning ShortText="VALIDATING CARRIER - WN" />
+            <Warning ShortText="CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="NLN0PNR" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="WN" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T16:35" DepartureDateTime="2018-11-13T15:10" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="85" eTicket="true" FlightNumber="1444" MarketingCabin="Y" OnTimePercent="75" OriginTimeZone="-8" ResBookDesigCode="N" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="73W" />
+          <FlightDetails TrafficRestrictionCode="F" />
+          <MarketingAirline Code="WN" FlightNumber="1444" />
+          <MarriageGrp Ind="O" />
+          <OperatingAirline Code="WN" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="18" TotalAmount="178.98">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX WN SFO153.28NLN0PNR USD153.28END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="153.28" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="153.28" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.50" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.98" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/NONTRANSFERABLE/STANDBY REQ UPGRADE TO Y" />
+            <Warning ShortText="VALIDATING CARRIER - WN" />
+            <Warning ShortText="CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="NLN0PNR" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="WN" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T18:25" DepartureDateTime="2018-11-13T17:00" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="85" eTicket="true" FlightNumber="1972" MarketingCabin="Y" OnTimePercent="75" OriginTimeZone="-8" ResBookDesigCode="N" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="73W" />
+          <FlightDetails TrafficRestrictionCode="F" />
+          <MarketingAirline Code="WN" FlightNumber="1972" />
+          <MarriageGrp Ind="O" />
+          <OperatingAirline Code="WN" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+    <PricedItinerary CurrencyCode="USD" RPH="19" TotalAmount="178.98">
+      <AirItineraryPricingInfo>
+        <FareCalculation>
+          <Text>LAX WN SFO153.28NLN0PNR USD153.28END ZPLAX XFLAX4.5</Text>
+        </FareCalculation>
+        <ItinTotalFare>
+          <BaseFare Amount="153.28" CurrencyCode="USD" />
+          <Commission Amount="0.00" Percent="0.00" />
+          <EquivFare Amount="153.28" CurrencyCode="USD" />
+          <Taxes>
+            <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECURITY SERVICE FEE" />
+            <Tax Amount="11.50" TaxCode="US" TaxName="TRANSPORTATION TAX DOMESTIC WHOLLY WITHIN US AND 225 MILE BUFFER ZONE" />
+            <Tax Amount="4.10" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" />
+            <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGES" />
+          </Taxes>
+          <TotalFare Amount="178.98" CurrencyCode="USD" />
+          <Warnings>
+            <Warning ShortText="NONREF/NONTRANSFERABLE/STANDBY REQ UPGRADE TO Y" />
+            <Warning ShortText="VALIDATING CARRIER - WN" />
+            <Warning ShortText="CAT 15 SALES RESTRICTIONS FREE TEXT FOUND - VERIFY RULES" />
+          </Warnings>
+        </ItinTotalFare>
+        <PassengerTypeQuantity Code="ADT" Quantity="1" />
+        <PTC_FareBreakdown>
+          <FareBasis Code="NLN0PNR" FarePassengerType="ADT" GlobalInd="WH" Market="LAXSFO" />
+        </PTC_FareBreakdown>
+      </AirItineraryPricingInfo>
+      <HeaderInformation>
+        <ValidInterline Ind="true" />
+        <ValidatingCarrier Code="WN" />
+      </HeaderInformation>
+      <OriginDestinationOption RPH="1">
+        <FlightSegment ArrivalDateTime="2018-11-13T22:35" DepartureDateTime="2018-11-13T21:20" DestinationTimeZone="-8" DivideInd="false" ElapsedTime="75" eTicket="true" FlightNumber="1974" MarketingCabin="Y" OnTimePercent="33" OriginTimeZone="-8" ResBookDesigCode="N" RPH="1" StopQuantity="0">
+          <DestinationLocation LocationCode="SFO" />
+          <Equipment AirEquipType="73W" />
+          <FlightDetails TrafficRestrictionCode="F" />
+          <MarketingAirline Code="WN" FlightNumber="1974" />
+          <MarriageGrp Ind="O" />
+          <OperatingAirline Code="WN" />
+          <OriginLocation LocationCode="LAX" />
+        </FlightSegment>
+      </OriginDestinationOption>
+    </PricedItinerary>
+  </PricedItineraries>
+</OTA_AirLowFareSearchRS>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <POS xmlns="http://www.opentravel.org/OTA/2002/11">
+    <Source PseudoCityCode="K3SG" />
+  </POS>
+</SessionCreateRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" status="Approved">
+  <ConversationId xmlns="http://www.opentravel.org/OTA/2002/11">KoreaOnly</ConversationId>
+</SessionCreateRS>
+---------Exception-----------
+There is an error in XML document (1, 9). LINE NUMBER  0
+--------Complete Exception-----------System.Xml.XmlException: Unexpected XML declaration. The XML declaration must be the first node in the document, and no white space characters are allowed to appear before it. Line 1, position 9.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParsePI(StringBuilder piInDtdStringBuilder)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderFareRQ.Read29_FareRQ()
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   at KoreaOnly.MainController.ObjectToXML(String xml, Type objectType) in D:\Projects\Websites\KoreaOnlyAsp\KoreaOnly\App_Start\MainController.cs:line 1793
+---------Exception-----------
+There is an error in XML document (0, 0). LINE NUMBER  0
+--------Complete Exception-----------System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderIgnoreTransactionRQ.Read3_IgnoreTransactionRQ()
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   at KoreaOnly.MainController.ObjectToXML(String xml, Type objectType) in D:\Projects\Websites\KoreaOnlyAsp\KoreaOnly\App_Start\MainController.cs:line 1793
+---------Exception-----------
+There is an error in XML document (0, 0). LINE NUMBER  0
+--------Complete Exception-----------System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSessionCreateRQ.Read5_SessionCreateRQ()
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   at KoreaOnly.MainController.ObjectToXML(String xml, Type objectType) in D:\Projects\Websites\KoreaOnlyAsp\KoreaOnly\App_Start\MainController.cs:line 1793
+---------Exception-----------
+There is an error in XML document (0, 0). LINE NUMBER  0
+--------Complete Exception-----------System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSessionCreateRQ.Read5_SessionCreateRQ()
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   at KoreaOnly.MainController.ObjectToXML(String xml, Type objectType) in D:\Projects\Websites\KoreaOnlyAsp\KoreaOnly\App_Start\MainController.cs:line 1793
+---------Exception-----------
+There is an error in XML document (0, 0). LINE NUMBER  0
+--------Complete Exception-----------System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSessionCreateRQ.Read5_SessionCreateRQ()
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   at KoreaOnly.MainController.ObjectToXML(String xml, Type objectType) in D:\Projects\Websites\KoreaOnlyAsp\KoreaOnly\App_Start\MainController.cs:line 1793
+---------Exception-----------
+There is an error in XML document (0, 0). LINE NUMBER  0
+--------Complete Exception-----------System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSessionCreateRQ.Read5_SessionCreateRQ()
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   at KoreaOnly.MainController.ObjectToXML(String xml, Type objectType) in D:\Projects\Websites\KoreaOnlyAsp\KoreaOnly\App_Start\MainController.cs:line 1793
+---------Exception-----------
+There is an error in XML document (0, 0). LINE NUMBER  0
+--------Complete Exception-----------System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSessionCreateRQ.Read5_SessionCreateRQ()
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   at KoreaOnly.MainController.ObjectToXML(String xml, Type objectType) in D:\Projects\Websites\KoreaOnlyAsp\KoreaOnly\App_Start\MainController.cs:line 1793
+---------Exception-----------
+There is an error in XML document (0, 0). LINE NUMBER  0
+--------Complete Exception-----------System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSessionCreateRQ.Read5_SessionCreateRQ()
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   at KoreaOnly.MainController.ObjectToXML(String xml, Type objectType) in D:\Projects\Websites\KoreaOnlyAsp\KoreaOnly\App_Start\MainController.cs:line 1793

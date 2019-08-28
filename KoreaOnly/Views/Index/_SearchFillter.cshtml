@@ -300,6 +300,207 @@
                             return "";
                         }
 
+                        function Load2s() {
+
+                            $(".SelectFlight").unbind("click").bind("click", function () {
+                                var FID = $(this).attr("FlightId");
+
+                                $(".loadinglap" + FID).show();
+                                $("#overlay32").show();
+
+                                $("body").css("overflow-y", "hidden");
+
+                                // Load Flight Detils
+
+                                $.ajax({
+                                    type: "POST",
+                                    data: { id: FID },
+                                    url: "/Index/GetFlightDetails",
+                                    success: function (response) {
+                                        $("#WaitingflightDetails").html(response);
+                                    }
+                                });
+
+
+
+                                $.post("/Index/SelectFlight", { SelectedFlight: FID }, function (success) {
+                                    $("#overlay32").hide();
+                                    $("body").css("overflow-y", "scroll");
+                                    if (success != "") {
+
+                                        var obj = success;
+
+                                        if (obj.Code == "200") {
+                                            $("#divques").fadeOut();
+                                            window.location.href = "/index/ContactInfo";
+                                        } else {
+                                            $("#AlertMsg").html(obj.ExMessage);
+                                            $("#divques").fadeIn();
+                                            $(".loadinglap" + FID).hide();
+                                        }
+                                    }
+                                });
+                                 
+                            });
+
+                            $(".CLickonly").unbind("click").bind("click", function (e) {
+                                //$(".CLickonly").click(function () {
+                                console.log("check Trig");
+                                $(".subval > input[name='AirlineChk']").prop("checked", true);
+
+                                var e = $("label[id^='flight'] > input[name='Airline']");
+
+                                for (var i = 0; i < e.length; i++) {
+                                    e[i].value = e[i].value.substring(0, 2) + "1";
+                                }
+
+                                $("#idstop1").prop("checked", false);
+                                $("#idstop2").prop("checked", false);
+                                $("#idstop3").prop("checked", false);
+                                setCookie("stopid", "id" + $(this).get(0).id.substring(4, 9));
+                                $("#id" + $(this).get(0).id.substring(4, 9)).prop("checked", true);
+                                LOCK = true;
+                                dosearch("E" + this.id);
+                                LOCK = false;
+                            });
+
+                            $(".onlythisF").unbind("click").bind("click", function (e) {
+                                //$(".onlythisF").click(function (e) {
+
+                                $("input[name='stop1']").prop('checked', true);
+                                $("input[name='stop2']").prop('checked', true);
+                                $("input[name='stop3']").prop('checked', true);
+
+                                $("label[id^='flight'] > input[name='AirlineChk']").prop('checked', false);
+
+                                var Chec = $("label[id^='flight'] > input[name='Airline']");
+
+                                for (var i = 0; i < Chec.length; i++) {
+                                    if (Chec[i].value.substring(0, 2) != this.id.substring(10, this.id.length))
+                                        Chec[i].value = (Chec[i].value.substring(0, 2) + "0");
+                                    else
+                                        Chec[i].value = (Chec[i].value.substring(0, 2) + "1");
+                                }
+
+                                var ee = this.id.substring(4, this.id.length);
+                                setTimeout(function () {
+                                    Dochecked(ee);
+                                }, 200);
+                                LOCK = true;
+                                dosearch("check box " + this.id);
+                                LOCK = false;
+                            });
+
+                            function dosearch(whoclick) {
+                                // console.log(whoclick);
+
+                                if (LOCK)
+                                    $("#btnsearchsubmit").click();
+
+                                Loads();
+
+                            }
+
+                            $(".onlythisFA").unbind("click").bind("click", function (e) {
+                                //$(".onlythisFA").click(function (e) {
+
+                                $("input[name='stop1']").prop('checked', true);
+                                $("input[name='stop2']").prop('checked', true);
+                                $("input[name='stop3']").prop('checked', true);
+
+                                $("label[id^='flight'] > input[name='AirlineChk']").prop('checked', false);
+
+                                var Chec = $("label[id^='flight'] > input[name='Airline']");
+
+                                for (var i = 0; i < Chec.length; i++) {
+                                    if (Chec[i].value.substring(0, 2) != this.id.substring(10, this.id.length))
+                                        Chec[i].value = (Chec[i].value.substring(0, 2) + "0");
+                                    else
+                                        Chec[i].value = (Chec[i].value.substring(0, 2) + "1");
+                                }
+
+                                $("label[id='" + this.id.substring(4, this.id.length) + "'] > input[name='AirlineChk']").prop('checked', true);
+
+                                LOCK = true;
+                                dosearch("check box SEARCH" + this.id);
+                                LOCK = false;
+
+                            });
+
+                            $(".SelectAll").unbind("click").bind("click", function (e) {
+                                //$(".SelectAll").click(function () {
+
+                                $("input[name='stop1']").prop('checked', true);
+                                $("input[name='stop2']").prop('checked', true);
+                                $("input[name='stop3']").prop('checked', true);
+
+
+                                $(".subval > input[name='AirlineChk']").prop('checked', true);
+
+                                var Chec = $("label[id^='flight'] > input[name='Airline']");
+
+                                for (var i = 0; i < Chec.length; i++) {
+                                    Chec[i].value = (Chec[i].value.substring(0, 2) + "1");
+                                }
+
+                                var options = $("#slider-range").slider('option');
+
+                                //$("#slider-range").slider('values', [options.min, options.max]);
+                                LOCK = true;
+                                dosearch("all flight");
+                                LOCK = false;
+                            });
+
+
+                            $(".stopclickE").unbind("click").bind("click", function (e) {
+                                //$(".stopclickE").click(function (e) {
+
+                                $("input[name='stop1']").prop("checked", false);
+                                $("input[name='stop2']").prop("checked", false);
+                                $("input[name='stop3']").prop("checked", false);
+
+                                $(".subval > input[name='AirlineChk']").prop("checked", false);
+
+                                if ($(this).attr("flightid") == "All") {
+                                    $(".subval > input[name='AirlineChk']").prop("checked", true);
+                                } else {
+
+                                    $("#" + $(this).attr("flightid") + " > input[name='AirlineChk']").prop("checked", true);
+                                }
+
+
+                                $("input[name='" + this.id.substring(4, 10) + "']").prop("checked", true);
+
+                                var Chec = $("label[id^='flight'] > input[name='Airline']");
+
+                                if ($(this).attr("flightid") == "All") {
+
+                                    for (var i = 0; i < Chec.length; i++) {
+                                        Chec[i].value = (Chec[i].value.substring(0, 2) + "1");
+                                    }
+                                } else {
+                                    for (var i = 0; i < Chec.length; i++) {
+                                        Chec[i].value = (Chec[i].value.substring(0, 2) + "0");
+                                    }
+                                }
+
+                                if ($(this).attr("flightid") != "All") {
+                                    $("#" + $(this).attr("flightid") + " > input[name='Airline']").val($("#" + $(this).attr("flightid") + " > input[name='Airline']").val().substring(0, 2) + "1");
+                                }
+
+                                ///var ee = this.id.substring(4, this.id.length);
+                                // setTimeout(function () {
+                                //ChangeChecked(ee);
+                                LOCK = true;
+                                dosearch("E " + this.id);
+                                LOCK = false;
+
+                                //}, 200);
+
+                            });
+
+                        }
+
                         $("#btnsearchsubmit").click(function () {
 
                             $("#loadingdiv").show();
@@ -314,7 +515,7 @@
                                     if(response.search("<script src=") == -1)
                                     {
                                         if (response != "") {
-                                            Loads();
+                                            Load2s();
                                         } else {
                                             window.location.href = "/";
                                         }
@@ -336,6 +537,7 @@
                                                         $(name).html(response);
                                                         $(name).attr("st", "1");
                                                         a.html("View Flight Details");
+                                                        Load2s();
                                                     }
                                                 });
                                             }
@@ -344,13 +546,16 @@
                                             type: "POST",
                                             url: "/Index/GetSearchFlightsPanel",
                                             success: function (response) {
-
+                                                
                                                 $("#SearchFlightsPanel").html(response);
 
                                                 if(getCookie("stopid") != "")
                                                 {
                                                     $("#"+getCookie("stopid")).prop("checked",true);
                                                 }
+
+                                                Load2s();
+
 
                                             }
                                         });
@@ -360,7 +565,7 @@
                                     }
 
                                     setTimeout(function(){
-                                        Loads();
+                                        Load2s();
                                         $("#loadingdiv").hide();
 
                                         $("#loadingdivsFlight").hide();

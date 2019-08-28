@@ -1,0 +1,246 @@
+
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <POS xmlns="http://www.opentravel.org/OTA/2002/11">
+    <Source PseudoCityCode="K3SG" />
+  </POS>
+</SessionCreateRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" status="Approved">
+  <ConversationId xmlns="http://www.opentravel.org/OTA/2002/11">KoreaOnly</ConversationId>
+</SessionCreateRS>
+<?xml version="1.0" encoding="utf-16"?>
+<IgnoreTransactionRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.0" />
+<?xml version="1.0" encoding="utf-16"?>
+<IgnoreTransactionRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.0">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL/v01">
+    <Success timeStamp="2018-11-01T11:10:51+05:00">
+      <SystemSpecificResults />
+    </Success>
+  </ApplicationResults>
+</IgnoreTransactionRS>
+<?xml version="1.0" encoding="utf-16"?>
+<FareRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.7.0">
+  <OptionalQualifiers xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <TimeQualifiers>
+      <TravelDateOptions Start="11-21" />
+    </TimeQualifiers>
+  </OptionalQualifiers>
+  <OriginDestinationInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment>
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="SFO" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+</FareRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="SFO" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="SFO" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="UA" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="SFO" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="AS" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="SFO" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="AA" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="SFO" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="DL" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="SFO" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="4B" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>

@@ -1,0 +1,1125 @@
+
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <POS xmlns="http://www.opentravel.org/OTA/2002/11">
+    <Source PseudoCityCode="K3SG" />
+  </POS>
+</SessionCreateRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" status="Approved">
+  <ConversationId xmlns="http://www.opentravel.org/OTA/2002/11">KoreaOnly</ConversationId>
+</SessionCreateRS>
+<?xml version="1.0" encoding="utf-16"?>
+<IgnoreTransactionRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.0" />
+<?xml version="1.0" encoding="utf-16"?>
+<IgnoreTransactionRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.0">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL/v01">
+    <Success timeStamp="2018-11-02T01:02:19+05:00">
+      <SystemSpecificResults />
+    </Success>
+  </ApplicationResults>
+</IgnoreTransactionRS>
+<?xml version="1.0" encoding="utf-16"?>
+<FareRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.7.0">
+  <OptionalQualifiers xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <TimeQualifiers>
+      <TravelDateOptions Start="11-21" />
+    </TimeQualifiers>
+  </OptionalQualifiers>
+  <OriginDestinationInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment>
+      <DestinationLocation LocationCode="SFO" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+</FareRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="SFO" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="SFO" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="UA" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="SFO" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="AS" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="SFO" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="AA" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="SFO" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="DL" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-21T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="SFO" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="4B" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="1" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<EnhancedAirBookRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="3.2.0">
+  <OTA_AirBookRQ xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <HaltOnStatus Code="NO" />
+    <HaltOnStatus Code="UC" />
+    <HaltOnStatus Code="US" />
+    <OriginDestinationInformation>
+      <FlightSegment ArrivalDateTime="2018-11-21T09:12" DepartureDateTime="2018-11-21T08:15" FlightNumber="5765" NumberInParty="1" ResBookDesigCode="M" Status="NN">
+        <DestinationLocation LocationCode="SAN" />
+        <Equipment AirEquipType="E75" />
+        <MarketingAirline Code="DL" FlightNumber="5765" />
+        <OperatingAirline Code="DL" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-11-21T13:07" DepartureDateTime="2018-11-21T10:11" FlightNumber="507" NumberInParty="1" ResBookDesigCode="M" Status="NN">
+        <DestinationLocation LocationCode="SLC" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="DL" FlightNumber="507" />
+        <OperatingAirline Code="DL" />
+        <OriginLocation LocationCode="SAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-11-21T18:10" DepartureDateTime="2018-11-21T17:00" FlightNumber="746" NumberInParty="1" ResBookDesigCode="M" Status="NN">
+        <DestinationLocation LocationCode="SFO" />
+        <Equipment AirEquipType="717" />
+        <MarketingAirline Code="DL" FlightNumber="746" />
+        <OperatingAirline Code="DL" />
+        <OriginLocation LocationCode="SLC" />
+      </FlightSegment>
+    </OriginDestinationInformation>
+    <RedisplayReservation NumAttempts="2" WaitInterval="5000" />
+  </OTA_AirBookRQ>
+  <OTA_AirPriceRQ xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <PriceRequestInformation Retain="true">
+      <OptionalQualifiers>
+        <MiscQualifiers>
+          <Commission Amount="5.00" />
+        </MiscQualifiers>
+        <PricingQualifiers>
+          <PassengerType Code="ADT" Quantity="1" />
+          <PlusUp Amount="5.00" />
+        </PricingQualifiers>
+      </OptionalQualifiers>
+    </PriceRequestInformation>
+  </OTA_AirPriceRQ>
+  <PostProcessing IgnoreAfter="false" xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <RedisplayReservation WaitInterval="5000" UnmaskCreditCard="false" />
+  </PostProcessing>
+  <PreProcessing IgnoreBefore="true" xmlns="http://services.sabre.com/sp/eab/v3_2" />
+</EnhancedAirBookRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<EnhancedAirBookRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL_Payload/v02_01">
+    <Success timeStamp="2018-11-02T01:02:56.598+05:00" />
+  </ApplicationResults>
+  <OTA_AirBookRS xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <OriginDestinationOption>
+      <FlightSegment ArrivalDateTime="11-21T09:12" DepartureDateTime="11-21T08:15" eTicket="true" FlightNumber="5765" NumberInParty="001" ResBookDesigCode="M" Status="NN">
+        <DestinationLocation LocationCode="SAN" />
+        <MarketingAirline Code="DL" FlightNumber="5765" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="11-21T13:07" DepartureDateTime="11-21T10:11" eTicket="true" FlightNumber="0507" NumberInParty="001" ResBookDesigCode="M" Status="NN">
+        <DestinationLocation LocationCode="SLC" />
+        <MarketingAirline Code="DL" FlightNumber="0507" />
+        <OriginLocation LocationCode="SAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="11-21T18:10" DepartureDateTime="11-21T17:00" eTicket="true" FlightNumber="0746" NumberInParty="001" ResBookDesigCode="M" Status="NN">
+        <DestinationLocation LocationCode="SFO" />
+        <MarketingAirline Code="DL" FlightNumber="0746" />
+        <OriginLocation LocationCode="SLC" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirBookRS>
+  <OTA_AirPriceRS xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <PriceQuote>
+      <MiscInformation>
+        <BaggageInfo>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="1">
+            <AncillaryFeeGroupCode>PT</AncillaryFeeGroupCode>
+            <AncillaryService SubGroupCode="PH">
+              <Text>IN HOLD</Text>
+            </AncillaryService>
+            <CommercialNameofBaggageItemType>PET IN HOLD</CommercialNameofBaggageItemType>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0BSAEDL</ExtendedSubCodeKey>
+          </SubCodeProperties>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="2">
+            <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+            <CommercialNameofBaggageItemType>FREE BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0DFAADL</ExtendedSubCodeKey>
+          </SubCodeProperties>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="3">
+            <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+            <AncillaryService SubGroupCode="SP">
+              <Text>SPORTING EQUIPMENT</Text>
+            </AncillaryService>
+            <CommercialNameofBaggageItemType>POLE VAULT EQUIPMENT</CommercialNameofBaggageItemType>
+            <DescriptionOne Code="PV">
+              <Text>POLE VAULT EQUIPMENT</Text>
+            </DescriptionOne>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0F3AEDL</ExtendedSubCodeKey>
+          </SubCodeProperties>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="4">
+            <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+            <AncillaryService SubGroupCode="SP">
+              <Text>SPORTING EQUIPMENT</Text>
+            </AncillaryService>
+            <CommercialNameofBaggageItemType>CANOE KAYAK OARS</CommercialNameofBaggageItemType>
+            <DescriptionOne Code="CK">
+              <Text>CANOE/KAYAK</Text>
+            </DescriptionOne>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0FTAEDL</ExtendedSubCodeKey>
+          </SubCodeProperties>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="5">
+            <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+            <CommercialNameofBaggageItemType>UPTO50LB 23KG AND62LI 158LCM</CommercialNameofBaggageItemType>
+            <DescriptionOne Code="23">
+              <Text>UP TO 50 POUNDS/23 KILOGRAMS</Text>
+            </DescriptionOne>
+            <DescriptionTwo Code="6U">
+              <Text>UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+            </DescriptionTwo>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0GOACDL</ExtendedSubCodeKey>
+            <SizeWeightInfo>
+              <MaximumSizeInAlternate Units="C">158</MaximumSizeInAlternate>
+              <MaximumSize Units="I">62</MaximumSize>
+              <MaximumWeightInAlternate Units="K">23</MaximumWeightInAlternate>
+              <MaximumWeight Units="L">50</MaximumWeight>
+            </SizeWeightInfo>
+          </SubCodeProperties>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="6">
+            <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+            <AncillaryService SubGroupCode="CY">
+              <Text>CARRY ON HAND BAGGAGE</Text>
+            </AncillaryService>
+            <CommercialNameofBaggageItemType>CARRY ON HAND BAGGAGE</CommercialNameofBaggageItemType>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0L5ACDL</ExtendedSubCodeKey>
+            <RFIC>C</RFIC>
+          </SubCodeProperties>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="7">
+            <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+            <AncillaryService SubGroupCode="CY">
+              <Text>CARRY ON HAND BAGGAGE</Text>
+            </AncillaryService>
+            <CommercialNameofBaggageItemType>CARRYON HAND BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0LNABDL</ExtendedSubCodeKey>
+            <RFIC>C</RFIC>
+          </SubCodeProperties>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="8">
+            <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+            <AncillaryService SubGroupCode="CY">
+              <Text>CARRY ON HAND BAGGAGE</Text>
+            </AncillaryService>
+            <CommercialNameofBaggageItemType>CARRY ON UP TO 45 LI 115 LCM</CommercialNameofBaggageItemType>
+            <DescriptionOne Code="4U">
+              <Text>UP TO 45 LINEAR INCHES/115 LINEAR CENTIMETERS</Text>
+            </DescriptionOne>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0MUACDL</ExtendedSubCodeKey>
+            <RFIC>C</RFIC>
+            <SizeWeightInfo>
+              <MaximumSizeInAlternate Units="C">115</MaximumSizeInAlternate>
+              <MaximumSize Units="I">45</MaximumSize>
+            </SizeWeightInfo>
+          </SubCodeProperties>
+        </BaggageInfo>
+        <HeaderInformation MultiTicketSequenceNmbr="1">
+          <DepartureDate>2018-11-21</DepartureDate>
+          <LastTicketingDate>11-02T23:59</LastTicketingDate>
+          <Text>VALIDATING CARRIER - DL</Text>
+          <Text>BAG ALLOWANCE     -LAXSFO-NIL/DL</Text>
+          <Text>1STCHECKED BAG FEE-LAXSFO-USD30.00/DL/UP TO 50 POUNDS/23 KILOGR</Text>
+          <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+          <Text>2NDCHECKED BAG FEE-LAXSFO-USD40.00/DL/UP TO 50 POUNDS/23 KILOGR</Text>
+          <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+          <Text>CARRY ON ALLOWANCE</Text>
+          <Text>LAXSAN SANSLC SLCSFO-01P/DL</Text>
+          <Text>01/CARRY ON HAND BAGGAGE</Text>
+          <Text>01/UP TO 45 LINEAR INCHES/115 LINEAR CENTIMETERS</Text>
+          <Text>CARRY ON CHARGES</Text>
+          <Text>LAXSAN SANSLC SLCSFO-DL-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+          <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+          <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+          <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+          <Text>EMBARGOES-APPLY TO EACH PASSENGER</Text>
+          <Text>LAXSAN-DL</Text>
+          <Text>SPORTING EQUIPMENT/POLE VAULT EQUIPMENT NOT PERMITTED</Text>
+          <Text>SPORTING EQUIPMENT/CANOE/KAYAK NOT PERMITTED</Text>
+          <Text>SANSLC SLCSFO-DL</Text>
+          <Text>PET IN HOLD NOT PERMITTED</Text>
+          <Text>SPORTING EQUIPMENT/POLE VAULT EQUIPMENT NOT PERMITTED</Text>
+          <Text>SPORTING EQUIPMENT/CANOE/KAYAK NOT PERMITTED</Text>
+          <Text>21NOV DEPARTURE DATE-----LAST DAY TO PURCHASE 02NOV/2359</Text>
+          <ValidatingCarrier Code="DL" />
+        </HeaderInformation>
+        <MultiTicketInformation MultiTicketSequenceNmbr="1">
+          <CurrencyCode>USD</CurrencyCode>
+          <TicketNumber>0</TicketNumber>
+          <TotalAmount>676.90</TotalAmount>
+        </MultiTicketInformation>
+      </MiscInformation>
+      <PricedItinerary CurrencyCode="USD" MultiTicket="false" TotalAmount="676.90">
+        <AirItineraryPricingInfo MultiTicketSequenceNmbr="1">
+          <BaggageProvisions RPH="1">
+            <Associations>
+              <CarrierCode RPH="1">DL</CarrierCode>
+              <CarrierCode RPH="2">DL</CarrierCode>
+              <CarrierCode RPH="3">DL</CarrierCode>
+              <CountForSegmentAssociatedID>3</CountForSegmentAssociatedID>
+              <DepartureDate RPH="1">2018-11-21</DepartureDate>
+              <DepartureDate RPH="2">2018-11-21</DepartureDate>
+              <DepartureDate RPH="3">2018-11-21</DepartureDate>
+              <DestinationLocation LocationCode="SAN" RPH="1" />
+              <DestinationLocation LocationCode="SLC" RPH="2" />
+              <DestinationLocation LocationCode="SFO" RPH="3" />
+              <FlightNumber RPH="1">5765</FlightNumber>
+              <FlightNumber RPH="2">507</FlightNumber>
+              <FlightNumber RPH="3">746</FlightNumber>
+              <OriginLocation LocationCode="LAX" RPH="1" />
+              <OriginLocation LocationCode="SAN" RPH="2" />
+              <OriginLocation LocationCode="SLC" RPH="3" />
+              <PNR_Segment RPH="1">2</PNR_Segment>
+              <PNR_Segment RPH="2">3</PNR_Segment>
+              <PNR_Segment RPH="3">4</PNR_Segment>
+              <ResBookDesigCode RPH="1">M</ResBookDesigCode>
+              <ResBookDesigCode RPH="2">M</ResBookDesigCode>
+              <ResBookDesigCode RPH="3">M</ResBookDesigCode>
+              <StatusCode RPH="1">SS</StatusCode>
+              <StatusCode RPH="2">SS</StatusCode>
+              <StatusCode RPH="3">SS</StatusCode>
+            </Associations>
+            <CarrierWhoseBaggageProvisionsApply>DL</CarrierWhoseBaggageProvisionsApply>
+            <NumPiecesBDI>0</NumPiecesBDI>
+            <ProvisionType>A</ProvisionType>
+            <SubCodeInfo>
+              <SubCodeForChargesOthers>0DFAADL</SubCodeForChargesOthers>
+            </SubCodeInfo>
+          </BaggageProvisions>
+          <BaggageProvisions RPH="2">
+            <Associations>
+              <CarrierCode RPH="1">DL</CarrierCode>
+              <CarrierCode RPH="2">DL</CarrierCode>
+              <CarrierCode RPH="3">DL</CarrierCode>
+              <CountForSegmentAssociatedID>3</CountForSegmentAssociatedID>
+              <DepartureDate RPH="1">2018-11-21</DepartureDate>
+              <DepartureDate RPH="2">2018-11-21</DepartureDate>
+              <DepartureDate RPH="3">2018-11-21</DepartureDate>
+              <DestinationLocation LocationCode="SAN" RPH="1" />
+              <DestinationLocation LocationCode="SLC" RPH="2" />
+              <DestinationLocation LocationCode="SFO" RPH="3" />
+              <FlightNumber RPH="1">5765</FlightNumber>
+              <FlightNumber RPH="2">507</FlightNumber>
+              <FlightNumber RPH="3">746</FlightNumber>
+              <OriginLocation LocationCode="LAX" RPH="1" />
+              <OriginLocation LocationCode="SAN" RPH="2" />
+              <OriginLocation LocationCode="SLC" RPH="3" />
+              <PNR_Segment RPH="1">2</PNR_Segment>
+              <PNR_Segment RPH="2">3</PNR_Segment>
+              <PNR_Segment RPH="3">4</PNR_Segment>
+              <ResBookDesigCode RPH="1">M</ResBookDesigCode>
+              <ResBookDesigCode RPH="2">M</ResBookDesigCode>
+              <ResBookDesigCode RPH="3">M</ResBookDesigCode>
+              <StatusCode RPH="1">SS</StatusCode>
+              <StatusCode RPH="2">SS</StatusCode>
+              <StatusCode RPH="3">SS</StatusCode>
+            </Associations>
+            <CarrierWhoseBaggageProvisionsApply>DL</CarrierWhoseBaggageProvisionsApply>
+            <Commissionable>N</Commissionable>
+            <FeeApplicationIndicator>4</FeeApplicationIndicator>
+            <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+            <FirstOccurrence>1</FirstOccurrence>
+            <Interlineable>Y</Interlineable>
+            <LastOccurrence>1</LastOccurrence>
+            <PassengerType Code="ADT" />
+            <PriceInformation>
+              <Base Amount="30.00" CurrencyCode="USD" />
+              <Equiv Amount="30.00" CurrencyCode="USD" />
+              <TaxIndicator>X</TaxIndicator>
+              <Total>30.00</Total>
+            </PriceInformation>
+            <ProvisionType>C</ProvisionType>
+            <RefundReissue>N</RefundReissue>
+            <SubCodeInfo>
+              <SubCodeForChargesOthers>0GOACDL</SubCodeForChargesOthers>
+            </SubCodeInfo>
+          </BaggageProvisions>
+          <BaggageProvisions RPH="3">
+            <Associations>
+              <CarrierCode RPH="1">DL</CarrierCode>
+              <CarrierCode RPH="2">DL</CarrierCode>
+              <CarrierCode RPH="3">DL</CarrierCode>
+              <CountForSegmentAssociatedID>3</CountForSegmentAssociatedID>
+              <DepartureDate RPH="1">2018-11-21</DepartureDate>
+              <DepartureDate RPH="2">2018-11-21</DepartureDate>
+              <DepartureDate RPH="3">2018-11-21</DepartureDate>
+              <DestinationLocation LocationCode="SAN" RPH="1" />
+              <DestinationLocation LocationCode="SLC" RPH="2" />
+              <DestinationLocation LocationCode="SFO" RPH="3" />
+              <FlightNumber RPH="1">5765</FlightNumber>
+              <FlightNumber RPH="2">507</FlightNumber>
+              <FlightNumber RPH="3">746</FlightNumber>
+              <OriginLocation LocationCode="LAX" RPH="1" />
+              <OriginLocation LocationCode="SAN" RPH="2" />
+              <OriginLocation LocationCode="SLC" RPH="3" />
+              <PNR_Segment RPH="1">2</PNR_Segment>
+              <PNR_Segment RPH="2">3</PNR_Segment>
+              <PNR_Segment RPH="3">4</PNR_Segment>
+              <ResBookDesigCode RPH="1">M</ResBookDesigCode>
+              <ResBookDesigCode RPH="2">M</ResBookDesigCode>
+              <ResBookDesigCode RPH="3">M</ResBookDesigCode>
+              <StatusCode RPH="1">SS</StatusCode>
+              <StatusCode RPH="2">SS</StatusCode>
+              <StatusCode RPH="3">SS</StatusCode>
+            </Associations>
+            <CarrierWhoseBaggageProvisionsApply>DL</CarrierWhoseBaggageProvisionsApply>
+            <Commissionable>N</Commissionable>
+            <FeeApplicationIndicator>4</FeeApplicationIndicator>
+            <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+            <FirstOccurrence>2</FirstOccurrence>
+            <Interlineable>Y</Interlineable>
+            <LastOccurrence>2</LastOccurrence>
+            <PassengerType Code="ADT" />
+            <PriceInformation>
+              <Base Amount="40.00" CurrencyCode="USD" />
+              <Equiv Amount="40.00" CurrencyCode="USD" />
+              <TaxIndicator>X</TaxIndicator>
+              <Total>40.00</Total>
+            </PriceInformation>
+            <ProvisionType>C</ProvisionType>
+            <RefundReissue>N</RefundReissue>
+            <SubCodeInfo>
+              <SubCodeForChargesOthers>0GOACDL</SubCodeForChargesOthers>
+            </SubCodeInfo>
+          </BaggageProvisions>
+          <BaggageProvisions RPH="4">
+            <Associations>
+              <CarrierCode RPH="1">DL</CarrierCode>
+              <CarrierCode RPH="2">DL</CarrierCode>
+              <CarrierCode RPH="3">DL</CarrierCode>
+              <CountForSegmentAssociatedID>3</CountForSegmentAssociatedID>
+              <DepartureDate RPH="1">2018-11-21</DepartureDate>
+              <DepartureDate RPH="2">2018-11-21</DepartureDate>
+              <DepartureDate RPH="3">2018-11-21</DepartureDate>
+              <DestinationLocation LocationCode="SAN" RPH="1" />
+              <DestinationLocation LocationCode="SLC" RPH="2" />
+              <DestinationLocation LocationCode="SFO" RPH="3" />
+              <FlightNumber RPH="1">5765</FlightNumber>
+              <FlightNumber RPH="2">507</FlightNumber>
+              <FlightNumber RPH="3">746</FlightNumber>
+              <OriginLocation LocationCode="LAX" RPH="1" />
+              <OriginLocation LocationCode="SAN" RPH="2" />
+              <OriginLocation LocationCode="SLC" RPH="3" />
+              <PNR_Segment RPH="1">2</PNR_Segment>
+              <PNR_Segment RPH="2">3</PNR_Segment>
+              <PNR_Segment RPH="3">4</PNR_Segment>
+              <ResBookDesigCode RPH="1">M</ResBookDesigCode>
+              <ResBookDesigCode RPH="2">M</ResBookDesigCode>
+              <ResBookDesigCode RPH="3">M</ResBookDesigCode>
+              <StatusCode RPH="1">SS</StatusCode>
+              <StatusCode RPH="2">SS</StatusCode>
+              <StatusCode RPH="3">SS</StatusCode>
+            </Associations>
+            <CarrierWhoseBaggageProvisionsApply>DL</CarrierWhoseBaggageProvisionsApply>
+            <NumPiecesBDI>1</NumPiecesBDI>
+            <NumPiecesITR>1</NumPiecesITR>
+            <NumPiecesITR>1</NumPiecesITR>
+            <ProvisionType>B</ProvisionType>
+            <SubCodeInfo>
+              <SubCodeForAllowance RPH="1">0L5ACDL</SubCodeForAllowance>
+              <SubCodeForAllowance RPH="2">0MUACDL</SubCodeForAllowance>
+              <SubCodeForChargesOthers>0LNABDL</SubCodeForChargesOthers>
+            </SubCodeInfo>
+          </BaggageProvisions>
+          <BaggageProvisions RPH="5">
+            <Associations>
+              <CarrierCode RPH="1">DL</CarrierCode>
+              <CarrierCode RPH="2">DL</CarrierCode>
+              <CarrierCode RPH="3">DL</CarrierCode>
+              <CountForSegmentAssociatedID>3</CountForSegmentAssociatedID>
+              <DepartureDate RPH="1">2018-11-21</DepartureDate>
+              <DepartureDate RPH="2">2018-11-21</DepartureDate>
+              <DepartureDate RPH="3">2018-11-21</DepartureDate>
+              <DestinationLocation LocationCode="SAN" RPH="1" />
+              <DestinationLocation LocationCode="SLC" RPH="2" />
+              <DestinationLocation LocationCode="SFO" RPH="3" />
+              <FlightNumber RPH="1">5765</FlightNumber>
+              <FlightNumber RPH="2">507</FlightNumber>
+              <FlightNumber RPH="3">746</FlightNumber>
+              <OriginLocation LocationCode="LAX" RPH="1" />
+              <OriginLocation LocationCode="SAN" RPH="2" />
+              <OriginLocation LocationCode="SLC" RPH="3" />
+              <PNR_Segment RPH="1">2</PNR_Segment>
+              <PNR_Segment RPH="2">3</PNR_Segment>
+              <PNR_Segment RPH="3">4</PNR_Segment>
+              <ResBookDesigCode RPH="1">M</ResBookDesigCode>
+              <ResBookDesigCode RPH="2">M</ResBookDesigCode>
+              <ResBookDesigCode RPH="3">M</ResBookDesigCode>
+              <StatusCode RPH="1">SS</StatusCode>
+              <StatusCode RPH="2">SS</StatusCode>
+              <StatusCode RPH="3">SS</StatusCode>
+            </Associations>
+            <CarrierWhoseBaggageProvisionsApply>DL</CarrierWhoseBaggageProvisionsApply>
+            <Commissionable>N</Commissionable>
+            <FeeNotGuaranteedIndicator>Y</FeeNotGuaranteedIndicator>
+            <NoChargeNotAvailableIndicator>X</NoChargeNotAvailableIndicator>
+            <PassengerType Code="ADT" />
+            <PriceInformation>
+              <Base Amount="0.00" />
+              <Equiv CurrencyCode="USD" />
+            </PriceInformation>
+            <ProvisionType>E</ProvisionType>
+            <SubCodeInfo>
+              <SubCodeForChargesOthers>0F3AEDL</SubCodeForChargesOthers>
+            </SubCodeInfo>
+          </BaggageProvisions>
+          <BaggageProvisions RPH="6">
+            <Associations>
+              <CarrierCode RPH="1">DL</CarrierCode>
+              <CarrierCode RPH="2">DL</CarrierCode>
+              <CarrierCode RPH="3">DL</CarrierCode>
+              <CountForSegmentAssociatedID>3</CountForSegmentAssociatedID>
+              <DepartureDate RPH="1">2018-11-21</DepartureDate>
+              <DepartureDate RPH="2">2018-11-21</DepartureDate>
+              <DepartureDate RPH="3">2018-11-21</DepartureDate>
+              <DestinationLocation LocationCode="SAN" RPH="1" />
+              <DestinationLocation LocationCode="SLC" RPH="2" />
+              <DestinationLocation LocationCode="SFO" RPH="3" />
+              <FlightNumber RPH="1">5765</FlightNumber>
+              <FlightNumber RPH="2">507</FlightNumber>
+              <FlightNumber RPH="3">746</FlightNumber>
+              <OriginLocation LocationCode="LAX" RPH="1" />
+              <OriginLocation LocationCode="SAN" RPH="2" />
+              <OriginLocation LocationCode="SLC" RPH="3" />
+              <PNR_Segment RPH="1">2</PNR_Segment>
+              <PNR_Segment RPH="2">3</PNR_Segment>
+              <PNR_Segment RPH="3">4</PNR_Segment>
+              <ResBookDesigCode RPH="1">M</ResBookDesigCode>
+              <ResBookDesigCode RPH="2">M</ResBookDesigCode>
+              <ResBookDesigCode RPH="3">M</ResBookDesigCode>
+              <StatusCode RPH="1">SS</StatusCode>
+              <StatusCode RPH="2">SS</StatusCode>
+              <StatusCode RPH="3">SS</StatusCode>
+            </Associations>
+            <CarrierWhoseBaggageProvisionsApply>DL</CarrierWhoseBaggageProvisionsApply>
+            <Commissionable>N</Commissionable>
+            <FeeNotGuaranteedIndicator>Y</FeeNotGuaranteedIndicator>
+            <NoChargeNotAvailableIndicator>X</NoChargeNotAvailableIndicator>
+            <PassengerType Code="ADT" />
+            <PriceInformation>
+              <Base Amount="0.00" />
+              <Equiv CurrencyCode="USD" />
+            </PriceInformation>
+            <ProvisionType>E</ProvisionType>
+            <SubCodeInfo>
+              <SubCodeForChargesOthers>0FTAEDL</SubCodeForChargesOthers>
+            </SubCodeInfo>
+          </BaggageProvisions>
+          <BaggageProvisions RPH="7">
+            <Associations>
+              <CarrierCode RPH="1">DL</CarrierCode>
+              <CarrierCode RPH="2">DL</CarrierCode>
+              <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+              <DepartureDate RPH="1">2018-11-21</DepartureDate>
+              <DepartureDate RPH="2">2018-11-21</DepartureDate>
+              <DestinationLocation LocationCode="SLC" RPH="1" />
+              <DestinationLocation LocationCode="SFO" RPH="2" />
+              <FlightNumber RPH="1">507</FlightNumber>
+              <FlightNumber RPH="2">746</FlightNumber>
+              <OriginLocation LocationCode="SAN" RPH="1" />
+              <OriginLocation LocationCode="SLC" RPH="2" />
+              <PNR_Segment RPH="1">3</PNR_Segment>
+              <PNR_Segment RPH="2">4</PNR_Segment>
+              <ResBookDesigCode RPH="1">M</ResBookDesigCode>
+              <ResBookDesigCode RPH="2">M</ResBookDesigCode>
+              <StatusCode RPH="1">SS</StatusCode>
+              <StatusCode RPH="2">SS</StatusCode>
+            </Associations>
+            <CarrierWhoseBaggageProvisionsApply>DL</CarrierWhoseBaggageProvisionsApply>
+            <Commissionable>N</Commissionable>
+            <FeeNotGuaranteedIndicator>Y</FeeNotGuaranteedIndicator>
+            <NoChargeNotAvailableIndicator>X</NoChargeNotAvailableIndicator>
+            <PassengerType Code="ADT" />
+            <PriceInformation>
+              <Base Amount="0.00" />
+              <Equiv CurrencyCode="USD" />
+            </PriceInformation>
+            <ProvisionType>E</ProvisionType>
+            <SubCodeInfo>
+              <SubCodeForChargesOthers>0BSAEDL</SubCodeForChargesOthers>
+            </SubCodeInfo>
+          </BaggageProvisions>
+          <FareCalculation>
+            <Text>LAX DL SAN314.42DL X/SLC DL SFO285.58USD600.00 PLUS5.00END ZPLAXSANSLC XFLAX4.5SAN4.5</Text>
+          </FareCalculation>
+          <FareCalculationBreakdown>
+            <Branch PCC="K3SG" FirstJointCarrier="DL" />
+            <Departure CityCode="LAX" AirportCode="LAX" AirlineCode="DL" GenericInd="O" ArrivalCityCode="SAN" ArrivalAirportCode="SAN" />
+            <FareBasis Code="MA0RA0MQ" FareAmount="314.42" FarePassengerType="ADT" FareType="P" FilingCarrier="DL" GlobalInd="WH" TripTypeInd="O" Market="LAXSAN" Cabin="Y" />
+            <FreeBaggageAllowance>NONIL</FreeBaggageAllowance>
+            <RuleCategoryIndicator>2</RuleCategoryIndicator>
+            <RuleCategoryIndicator>4</RuleCategoryIndicator>
+            <RuleCategoryIndicator>5</RuleCategoryIndicator>
+            <RuleCategoryIndicator>6</RuleCategoryIndicator>
+            <RuleCategoryIndicator>7</RuleCategoryIndicator>
+            <RuleCategoryIndicator>9</RuleCategoryIndicator>
+            <RuleCategoryIndicator>10</RuleCategoryIndicator>
+            <RuleCategoryIndicator>12</RuleCategoryIndicator>
+            <RuleCategoryIndicator>16</RuleCategoryIndicator>
+          </FareCalculationBreakdown>
+          <FareCalculationBreakdown>
+            <Departure CityCode="SAN" AirportCode="SAN" AirlineCode="DL" GenericInd="X" ArrivalCityCode="SLC" ArrivalAirportCode="SLC" />
+            <FareBasis Code="MA0RA0MQ" FilingCarrier="DL" Cabin="Y" />
+            <FreeBaggageAllowance>NONIL</FreeBaggageAllowance>
+          </FareCalculationBreakdown>
+          <FareCalculationBreakdown>
+            <Branch PCC="K3SG" FirstJointCarrier="DL" />
+            <Departure CityCode="SLC" AirportCode="SLC" AirlineCode="DL" GenericInd="O" ArrivalCityCode="SFO" ArrivalAirportCode="SFO" />
+            <FareBasis Code="MA0RA0MQ" FareAmount="285.58" FarePassengerType="ADT" FareType="P" FilingCarrier="DL" GlobalInd="WH" TripTypeInd="O" Market="SANSFO" Cabin="Y" />
+            <FreeBaggageAllowance>NONIL</FreeBaggageAllowance>
+            <RuleCategoryIndicator>2</RuleCategoryIndicator>
+            <RuleCategoryIndicator>4</RuleCategoryIndicator>
+            <RuleCategoryIndicator>5</RuleCategoryIndicator>
+            <RuleCategoryIndicator>6</RuleCategoryIndicator>
+            <RuleCategoryIndicator>7</RuleCategoryIndicator>
+            <RuleCategoryIndicator>9</RuleCategoryIndicator>
+            <RuleCategoryIndicator>10</RuleCategoryIndicator>
+            <RuleCategoryIndicator>11</RuleCategoryIndicator>
+            <RuleCategoryIndicator>12</RuleCategoryIndicator>
+            <RuleCategoryIndicator>16</RuleCategoryIndicator>
+          </FareCalculationBreakdown>
+          <ItinTotalFare NonRefundableInd="O">
+            <BaggageInfo>
+              <US_DOT_Disclosure>
+                <Text>BAG ALLOWANCE     -LAXSFO-NIL/DL</Text>
+                <Text>1STCHECKED BAG FEE-LAXSFO-USD30.00/DL/UP TO 50 POUNDS/23 KILOGR</Text>
+                <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                <Text>2NDCHECKED BAG FEE-LAXSFO-USD40.00/DL/UP TO 50 POUNDS/23 KILOGR</Text>
+                <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                <Text>CARRY ON ALLOWANCE</Text>
+                <Text>LAXSAN SANSLC SLCSFO-01P/DL</Text>
+                <Text>01/CARRY ON HAND BAGGAGE</Text>
+                <Text>01/UP TO 45 LINEAR INCHES/115 LINEAR CENTIMETERS</Text>
+                <Text>CARRY ON CHARGES</Text>
+                <Text>LAXSAN SANSLC SLCSFO-DL-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+                <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+                <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+                <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+                <Text>EMBARGOES-APPLY TO EACH PASSENGER</Text>
+                <Text>LAXSAN-DL</Text>
+                <Text>SPORTING EQUIPMENT/POLE VAULT EQUIPMENT NOT PERMITTED</Text>
+                <Text>SPORTING EQUIPMENT/CANOE/KAYAK NOT PERMITTED</Text>
+                <Text>SANSLC SLCSFO-DL</Text>
+                <Text>PET IN HOLD NOT PERMITTED</Text>
+                <Text>SPORTING EQUIPMENT/POLE VAULT EQUIPMENT NOT PERMITTED</Text>
+                <Text>SPORTING EQUIPMENT/CANOE/KAYAK NOT PERMITTED</Text>
+              </US_DOT_Disclosure>
+            </BaggageInfo>
+            <BaseFare Amount="605.00" CurrencyCode="USD" />
+            <Taxes TotalAmount="71.90">
+              <Tax Amount="45.00" TaxCode="US1" TaxName="TRANSPORTATION TAX DOMESTIC WH" TicketingTaxCode="US" />
+              <Tax Amount="12.30" TaxCode="ZP" TaxName="FLIGHT SEGMENT TAX DOMESTIC" TicketingTaxCode="ZP" />
+              <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECUR" TicketingTaxCode="AY" />
+              <Tax Amount="9.00" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGE" TicketingTaxCode="XF" />
+            </Taxes>
+            <TotalFare Amount="676.90" CurrencyCode="USD" />
+            <Warnings>
+              <Warning ShortText="BAG ALLOWANCE     -LAXSFO-NIL/DL" />
+              <Warning ShortText="1STCHECKED BAG FEE-LAXSFO-USD30.00/DL/UP TO 50 POUNDS/23 KILOGR" />
+              <Warning ShortText="AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS" />
+              <Warning ShortText="2NDCHECKED BAG FEE-LAXSFO-USD40.00/DL/UP TO 50 POUNDS/23 KILOGR" />
+              <Warning ShortText="AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS" />
+              <Warning ShortText="CARRY ON ALLOWANCE" />
+              <Warning ShortText="LAXSAN SANSLC SLCSFO-01P/DL" />
+              <Warning ShortText="01/CARRY ON HAND BAGGAGE" />
+              <Warning ShortText="01/UP TO 45 LINEAR INCHES/115 LINEAR CENTIMETERS" />
+              <Warning ShortText="CARRY ON CHARGES" />
+              <Warning ShortText="LAXSAN SANSLC SLCSFO-DL-CARRY ON FEES UNKNOWN-CONTACT CARRIER" />
+              <Warning ShortText="ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON" />
+              <Warning ShortText="FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/" />
+              <Warning ShortText="CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./" />
+              <Warning ShortText="EMBARGOES-APPLY TO EACH PASSENGER" />
+              <Warning ShortText="LAXSAN-DL" />
+              <Warning ShortText="SPORTING EQUIPMENT/POLE VAULT EQUIPMENT NOT PERMITTED" />
+              <Warning ShortText="SPORTING EQUIPMENT/CANOE/KAYAK NOT PERMITTED" />
+              <Warning ShortText="SANSLC SLCSFO-DL" />
+              <Warning ShortText="PET IN HOLD NOT PERMITTED" />
+              <Warning ShortText="SPORTING EQUIPMENT/POLE VAULT EQUIPMENT NOT PERMITTED" />
+              <Warning ShortText="SPORTING EQUIPMENT/CANOE/KAYAK NOT PERMITTED" />
+            </Warnings>
+          </ItinTotalFare>
+          <PassengerTypeQuantity Code="ADT" Quantity="1" />
+          <PTC_FareBreakdown>
+            <Cabin>Y</Cabin>
+            <FareBasis Code="MA0RA0MQ" FareAmount="314.42" FarePassengerType="ADT" FareType="P" FilingCarrier="DL" GlobalInd="WH" Market="LAXSAN" />
+            <FreeBaggageAllowance>NONIL</FreeBaggageAllowance>
+          </PTC_FareBreakdown>
+          <PTC_FareBreakdown>
+            <Cabin>Y</Cabin>
+            <FareBasis Code="MA0RA0MQ" FilingCarrier="DL" />
+            <FreeBaggageAllowance>NONIL</FreeBaggageAllowance>
+          </PTC_FareBreakdown>
+          <PTC_FareBreakdown>
+            <Cabin>Y</Cabin>
+            <FareBasis Code="MA0RA0MQ" FareAmount="285.58" FarePassengerType="ADT" FareType="P" FilingCarrier="DL" GlobalInd="WH" Market="SANSFO" />
+            <FreeBaggageAllowance>NONIL</FreeBaggageAllowance>
+          </PTC_FareBreakdown>
+        </AirItineraryPricingInfo>
+      </PricedItinerary>
+    </PriceQuote>
+  </OTA_AirPriceRS>
+  <TravelItineraryReadRS xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <TravelItinerary>
+      <CustomerInfo />
+      <ItineraryInfo>
+        <ItineraryPricing>
+          <PriceQuote RPH="1">
+            <MiscInformation>
+              <BaggageFees>
+                <Text>BAG ALLOWANCE     -LAXSFO-NIL/DL</Text>
+                <Text>1STCHECKED BAG FEE-LAXSFO-USD30.00/DL/UP TO 50 POUNDS/23 KILOGR</Text>
+                <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                <Text>2NDCHECKED BAG FEE-LAXSFO-USD40.00/DL/UP TO 50 POUNDS/23 KILOGR</Text>
+                <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                <Text>CARRY ON ALLOWANCE</Text>
+                <Text>LAXSAN SANSLC SLCSFO-01P/DL</Text>
+                <Text>01/CARRY ON HAND BAGGAGE</Text>
+                <Text>01/UP TO 45 LINEAR INCHES/115 LINEAR CENTIMETERS</Text>
+                <Text>CARRY ON CHARGES</Text>
+                <Text>LAXSAN SANSLC SLCSFO-DL-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+                <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+                <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+                <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+                <Text>EMBARGOES-APPLY TO EACH PASSENGER</Text>
+                <Text>LAXSAN-DL</Text>
+                <Text>SPORTING EQUIPMENT/POLE VAULT EQUIPMENT NOT PERMITTED</Text>
+                <Text>SPORTING EQUIPMENT/CANOE/KAYAK NOT PERMITTED</Text>
+                <Text>SANSLC SLCSFO-DL</Text>
+                <Text>PET IN HOLD NOT PERMITTED</Text>
+                <Text>SPORTING EQUIPMENT/POLE VAULT EQUIPMENT NOT PERMITTED</Text>
+                <Text>SPORTING EQUIPMENT/CANOE/KAYAK NOT PERMITTED</Text>
+              </BaggageFees>
+              <SignatureLine CommissionAmount="5.00" CommissionID="A" ExpirationDateTime="00:00" Source="SYS" Status="EXPIRED">
+                <Text>K3SG K3SG*AWS 1302/01NOV18</Text>
+              </SignatureLine>
+            </MiscInformation>
+            <PricedItinerary DisplayOnly="false" InputMessage="WPK5.00P1ADTPU*5.00RQ" RPH="1" StatusCode="A" TaxExempt="false" ValidatingCarrier="DL">
+              <AirItineraryPricingInfo>
+                <ItinTotalFare>
+                  <BaseFare Amount="605.00" CurrencyCode="USD" />
+                  <Taxes>
+                    <Tax Amount="71.90" TaxCode="XT" />
+                    <TaxBreakdownCode TaxPaid="false">45.00US</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">12.30ZP</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">5.60AY</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">9.00XF</TaxBreakdownCode>
+                  </Taxes>
+                  <TotalFare Amount="676.90" CurrencyCode="USD" />
+                  <Totals>
+                    <BaseFare Amount="605.00" />
+                    <Taxes>
+                      <Tax Amount="71.90" />
+                    </Taxes>
+                    <TotalFare Amount="676.90" />
+                  </Totals>
+                </ItinTotalFare>
+                <PassengerTypeQuantity Code="ADT" Quantity="01" />
+                <PTC_FareBreakdown>
+                  <Endorsements>
+                    <Endorsement type="PRICING_PARAMETER">
+                      <Text>WPK5.00$P1ADT$PU*5.00$RQ</Text>
+                    </Endorsement>
+                    <Endorsement type="WARNING">
+                      <Text>VALIDATING CARRIER - DL</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>BAG ALLOWANCE     -LAXSFO-NIL/DL</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>1STCHECKED BAG FEE-LAXSFO-USD30.00/DL/UP TO 50 POUNDS/23 KILOGR</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>2NDCHECKED BAG FEE-LAXSFO-USD40.00/DL/UP TO 50 POUNDS/23 KILOGR</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>AMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>CARRY ON ALLOWANCE</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>LAXSAN SANSLC SLCSFO-01P/DL</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>01/CARRY ON HAND BAGGAGE</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>01/UP TO 45 LINEAR INCHES/115 LINEAR CENTIMETERS</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>CARRY ON CHARGES</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>LAXSAN SANSLC SLCSFO-DL-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>EMBARGOES-APPLY TO EACH PASSENGER</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>LAXSAN-DL</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>SPORTING EQUIPMENT/POLE VAULT EQUIPMENT NOT PERMITTED</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>SPORTING EQUIPMENT/CANOE/KAYAK NOT PERMITTED</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>SANSLC SLCSFO-DL</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>PET IN HOLD NOT PERMITTED</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>SPORTING EQUIPMENT/POLE VAULT EQUIPMENT NOT PERMITTED</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>SPORTING EQUIPMENT/CANOE/KAYAK NOT PERMITTED</Text>
+                    </Endorsement>
+                  </Endorsements>
+                  <FareBasis Code="MA0RA0MQ/MA0RA0MQ/MA0RA0MQ" />
+                  <FareCalculation>
+                    <Text>LAX DL SAN314.42DL X/SLC DL SFO285.58USD600.00 PLUS5.00END ZPLAXSANSLC XFLAX4.5SAN4.5</Text>
+                  </FareCalculation>
+                  <FareSource>ATPC</FareSource>
+                  <FlightSegment ConnectionInd="O" DepartureDateTime="11-21T08:15" FlightNumber="5765" ResBookDesigCode="M" SegmentNumber="1" Status="OK">
+                    <BaggageAllowance Number="NIL" />
+                    <FareBasis Code="MA0RA0MQ" />
+                    <MarketingAirline Code="DL" FlightNumber="5765" />
+                    <OriginLocation LocationCode="LAX" />
+                    <ValidityDates>
+                      <NotValidAfter>2019-11-21</NotValidAfter>
+                    </ValidityDates>
+                  </FlightSegment>
+                  <FlightSegment ConnectionInd="O" DepartureDateTime="11-21T10:11" FlightNumber="507" ResBookDesigCode="M" SegmentNumber="2" Status="OK">
+                    <BaggageAllowance Number="NIL" />
+                    <FareBasis Code="MA0RA0MQ" />
+                    <MarketingAirline Code="DL" FlightNumber="507" />
+                    <OriginLocation LocationCode="SAN" />
+                    <ValidityDates>
+                      <NotValidAfter>2019-11-21</NotValidAfter>
+                    </ValidityDates>
+                  </FlightSegment>
+                  <FlightSegment ConnectionInd="X" DepartureDateTime="11-21T17:00" FlightNumber="746" ResBookDesigCode="M" SegmentNumber="3" Status="OK">
+                    <BaggageAllowance Number="NIL" />
+                    <FareBasis Code="MA0RA0MQ" />
+                    <MarketingAirline Code="DL" FlightNumber="746" />
+                    <OriginLocation LocationCode="SLC" />
+                    <ValidityDates>
+                      <NotValidAfter>2019-11-21</NotValidAfter>
+                    </ValidityDates>
+                  </FlightSegment>
+                  <FlightSegment>
+                    <OriginLocation LocationCode="SFO" />
+                  </FlightSegment>
+                  <ResTicketingRestrictions>LAST DAY TO PURCHASE 02NOV/2359</ResTicketingRestrictions>
+                  <ResTicketingRestrictions>GUARANTEED FARE APPL IF PURCHASED BEFORE 02NOV</ResTicketingRestrictions>
+                </PTC_FareBreakdown>
+              </AirItineraryPricingInfo>
+            </PricedItinerary>
+            <ResponseHeader>
+              <Text>FARE - PRICE RETAINED</Text>
+              <Text>FARE USED TO CALCULATE DISCOUNT</Text>
+              <Text>FARE NOT GUARANTEED UNTIL TICKETED</Text>
+            </ResponseHeader>
+            <PriceQuotePlus DomesticIntlInd="I" PricingStatus="S" VerifyFareCalc="false" ItineraryChanged="false" ManualFare="false" NegotiatedFare="false" SystemIndicator="S" NUCSuppresion="false" SubjToGovtApproval="false" IT_BT_Fare="BT" DisplayOnly="false" DiscountAmount="0">
+              <TicketingInstructionsInfo />
+            </PriceQuotePlus>
+          </PriceQuote>
+          <PriceQuoteTotals>
+            <BaseFare Amount="605.00" />
+            <Taxes>
+              <Tax Amount="71.90" />
+            </Taxes>
+            <TotalFare Amount="676.90" />
+          </PriceQuoteTotals>
+        </ItineraryPricing>
+        <ReservationItems>
+          <Item RPH="1">
+            <FlightSegment AirMilesFlown="0109" ArrivalDateTime="11-21T09:12" DayOfWeekInd="3" DepartureDateTime="2018-11-21T08:15" ElapsedTime="00.57" eTicket="true" FlightNumber="5765" NumberInParty="01" ResBookDesigCode="M" SegmentNumber="0001" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="SAN" Terminal="TERMINAL 2" TerminalCode="2" />
+              <Equipment AirEquipType="E75" />
+              <MarketingAirline Code="DL" FlightNumber="5765" />
+              <MarriageGrp Group="001" Sequence="1" />
+              <OperatingAirline Code="DL" CompanyShortName="COMPASS DBA DELTA CONNECTION" />
+              <OriginLocation LocationCode="LAX" Terminal="TERMINAL 2" TerminalCode="2" />
+              <SupplierRef ID="DCDL" />
+              <Text>OPERATED BY COMPASS DBA DELTA CONNECTION</Text>
+              <UpdatedArrivalTime>11-21T09:12</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-21T08:15</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+          <Item RPH="2">
+            <FlightSegment AirMilesFlown="0626" ArrivalDateTime="11-21T13:07" DayOfWeekInd="3" DepartureDateTime="2018-11-21T10:11" ElapsedTime="01.56" eTicket="true" FlightNumber="0507" NumberInParty="01" ResBookDesigCode="M" SegmentNumber="0002" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="SLC" Terminal="TERMINAL UNIT 2" TerminalCode="2" />
+              <Equipment AirEquipType="320" />
+              <MarketingAirline Code="DL" FlightNumber="0507" />
+              <MarriageGrp Group="001" Sequence="2" />
+              <Meal Code="N" />
+              <OriginLocation LocationCode="SAN" Terminal="TERMINAL 2" TerminalCode="2" />
+              <SupplierRef ID="DCDL" />
+              <UpdatedArrivalTime>11-21T13:07</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-21T10:11</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+          <Item RPH="3">
+            <FlightSegment AirMilesFlown="0599" ArrivalDateTime="11-21T18:10" DayOfWeekInd="3" DepartureDateTime="2018-11-21T17:00" ElapsedTime="02.10" eTicket="true" FlightNumber="0746" NumberInParty="01" ResBookDesigCode="M" SegmentNumber="0003" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="SFO" Terminal="TERMINAL 1" TerminalCode="1" />
+              <Equipment AirEquipType="717" />
+              <MarketingAirline Code="DL" FlightNumber="0746" />
+              <MarriageGrp Group="001" Sequence="3" />
+              <OriginLocation LocationCode="SLC" Terminal="TERMINAL UNIT 2" TerminalCode="2" />
+              <SupplierRef ID="DCDL" />
+              <UpdatedArrivalTime>11-21T18:10</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-21T17:00</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+        </ReservationItems>
+      </ItineraryInfo>
+      <ItineraryRef AirExtras="false" InhibitCode="U" PartitionID="AA" PrimeHostID="1S">
+        <Source PseudoCityCode="K3SG" />
+      </ItineraryRef>
+    </TravelItinerary>
+  </TravelItineraryReadRS>
+</EnhancedAirBookRS>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirRulesRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ReturnHostCommand="true" Version="2.3.0">
+  <OriginDestinationInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="11-21">
+      <DestinationLocation LocationCode="SFO" />
+      <MarketingCarrier Code="DL" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <RuleReqInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <Category>16</Category>
+    <FareBasis Code="MA0RA0MQ" />
+  </RuleReqInfo>
+</OTA_AirRulesRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirRulesRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <ApplicationResults status="NotProcessed" xmlns="http://services.sabre.com/STL/v01">
+    <Error type="BusinessLogic" timeStamp="2018-11-02T01:03:00+05:00">
+      <SystemSpecificResults>
+        <HostCommand LNIATA="222222">RDLAXSFO21NOVMA0RA0MQ-DL*16</HostCommand>
+        <Message>FARE BASIS NOT FOUND FOR CITYPAIR/DATE
+</Message>
+        <ShortText>ERR.SWS.HOST.ERROR_IN_RESPONSE</ShortText>
+      </SystemSpecificResults>
+    </Error>
+  </ApplicationResults>
+</OTA_AirRulesRS>

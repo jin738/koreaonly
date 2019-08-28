@@ -96,12 +96,12 @@
 
 
 @media print {
-     body * {
+     /*body * {
     visibility: hidden;
   }
   #section-to-print, #section-to-print * {
     visibility: visible;
    
-  }
+  }*/
    
 }

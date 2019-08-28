@@ -1,0 +1,2506 @@
+
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <POS xmlns="http://www.opentravel.org/OTA/2002/11">
+    <Source PseudoCityCode="K3SG" />
+  </POS>
+</SessionCreateRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<SessionCreateRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" status="Approved">
+  <ConversationId xmlns="http://www.opentravel.org/OTA/2002/11">KoreaOnly</ConversationId>
+</SessionCreateRS>
+<?xml version="1.0" encoding="utf-16"?>
+<IgnoreTransactionRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.0" />
+<?xml version="1.0" encoding="utf-16"?>
+<IgnoreTransactionRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0.0">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL/v01">
+    <Success timeStamp="2018-11-08T10:07:07+05:00">
+      <SystemSpecificResults />
+    </Success>
+  </ApplicationResults>
+</IgnoreTransactionRS>
+<?xml version="1.0" encoding="utf-16"?>
+<FareRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.7.0">
+  <OptionalQualifiers xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <TimeQualifiers>
+      <TravelDateOptions Start="11-13" />
+    </TimeQualifiers>
+  </OptionalQualifiers>
+  <OriginDestinationInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment>
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+</FareRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="MF" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="CA" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="3U" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="MU" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="HX" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="HA" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="CX" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="HU" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="MH" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="BR" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="CZ" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="PR" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="SQ" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="OZ" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="AA" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="JL" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="CI" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="AC" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="DL" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="UA" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="KE" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirLowFareSearchRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <OriginDestinationInformation RPH="1" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-13T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <OriginDestinationInformation RPH="2" xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="2018-11-30T00:00:00" ResBookDesigCode="Y">
+      <DestinationLocation LocationCode="LAX" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <PriceRequestInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <OptionalQualifiers>
+      <FlightQualifiers AvailableFlightsOnly="true" NumStops="2" OnlineOnly="false">
+        <VendorPrefs>
+          <Airline Code="NH" />
+        </VendorPrefs>
+      </FlightQualifiers>
+      <MiscQualifiers>
+        <Indicators>
+          <MinMaxStay Ind="true" />
+          <RefundPenalty Ind="true" />
+          <ResTicketing Ind="true" />
+          <RetainFare Ind="true" />
+          <TravelPolicy Ind="true" />
+        </Indicators>
+        <Priority>
+          <DirectFlights Priority="1" />
+          <Price Priority="2" />
+          <Time Priority="3" />
+          <Vendor Priority="4" />
+        </Priority>
+      </MiscQualifiers>
+      <PricingQualifiers CurrencyCode="USD">
+        <PassengerType Code="ADT" Quantity="2" />
+      </PricingQualifiers>
+    </OptionalQualifiers>
+  </PriceRequestInformation>
+</OTA_AirLowFareSearchRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<EnhancedAirBookRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="3.2.0">
+  <OTA_AirBookRQ xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <HaltOnStatus Code="NO" />
+    <HaltOnStatus Code="UC" />
+    <HaltOnStatus Code="US" />
+    <OriginDestinationInformation>
+      <FlightSegment ArrivalDateTime="2018-11-14T19:05" DepartureDateTime="2018-11-13T12:30" FlightNumber="2856" NumberInParty="2" ResBookDesigCode="V" Status="NN">
+        <DestinationLocation LocationCode="NKG" />
+        <Equipment AirEquipType="332" />
+        <MarketingAirline Code="MU" FlightNumber="2856" />
+        <OperatingAirline Code="MU" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-11-15T08:25" DepartureDateTime="2018-11-15T07:25" FlightNumber="2881" NumberInParty="2" ResBookDesigCode="B" Status="NN">
+        <DestinationLocation LocationCode="PVG" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="MU" FlightNumber="2881" />
+        <OperatingAirline Code="MU" />
+        <OriginLocation LocationCode="NKG" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-11-15T15:20" DepartureDateTime="2018-11-15T12:15" FlightNumber="5033" NumberInParty="2" ResBookDesigCode="S" Status="NN">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="MU" FlightNumber="5033" />
+        <OperatingAirline Code="MU" />
+        <OriginLocation LocationCode="PVG" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-12-01T02:55" DepartureDateTime="2018-11-30T22:45" FlightNumber="2004" NumberInParty="2" ResBookDesigCode="B" Status="NN">
+        <DestinationLocation LocationCode="KMG" />
+        <Equipment AirEquipType="738" />
+        <MarketingAirline Code="MU" FlightNumber="2004" />
+        <OperatingAirline Code="MU" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-12-01T10:30" DepartureDateTime="2018-12-01T08:00" FlightNumber="2706" NumberInParty="2" ResBookDesigCode="B" Status="NN">
+        <DestinationLocation LocationCode="NKG" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="MU" FlightNumber="2706" />
+        <OperatingAirline Code="MU" />
+        <OriginLocation LocationCode="KMG" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-12-01T10:00" DepartureDateTime="2018-12-01T13:55" FlightNumber="2855" NumberInParty="2" ResBookDesigCode="V" Status="NN">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="332" />
+        <MarketingAirline Code="MU" FlightNumber="2855" />
+        <OperatingAirline Code="MU" />
+        <OriginLocation LocationCode="NKG" />
+      </FlightSegment>
+    </OriginDestinationInformation>
+    <RedisplayReservation NumAttempts="2" WaitInterval="5000" />
+  </OTA_AirBookRQ>
+  <OTA_AirPriceRQ xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <PriceRequestInformation Retain="true">
+      <OptionalQualifiers>
+        <MiscQualifiers>
+          <Commission Amount="5.00" />
+        </MiscQualifiers>
+        <PricingQualifiers>
+          <PassengerType Code="ADT" Quantity="2" />
+          <PlusUp Amount="5.00" />
+        </PricingQualifiers>
+      </OptionalQualifiers>
+    </PriceRequestInformation>
+  </OTA_AirPriceRQ>
+  <PostProcessing IgnoreAfter="false" xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <RedisplayReservation WaitInterval="5000" UnmaskCreditCard="false" />
+  </PostProcessing>
+  <PreProcessing IgnoreBefore="true" xmlns="http://services.sabre.com/sp/eab/v3_2" />
+</EnhancedAirBookRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<EnhancedAirBookRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ApplicationResults status="Incomplete" xmlns="http://services.sabre.com/STL_Payload/v02_01">
+    <Error type="BusinessLogic" timeStamp="2018-11-08T10:08:17.823+05:00">
+      <SystemSpecificResults>
+        <Message code="ERR.SP.HALT_ON_STATUS_RECEIVED">Specified HaltOnStatus Received - Processing Aborted</Message>
+      </SystemSpecificResults>
+    </Error>
+  </ApplicationResults>
+  <OTA_AirBookRS xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <OriginDestinationOption>
+      <FlightSegment ArrivalDateTime="11-14T19:05" DepartureDateTime="11-13T12:30" eTicket="true" FlightNumber="2856" NumberInParty="002" ResBookDesigCode="V" Status="NN">
+        <DestinationLocation LocationCode="NKG" />
+        <MarketingAirline Code="MU" FlightNumber="2856" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="11-15T08:25" DepartureDateTime="11-15T07:25" eTicket="true" FlightNumber="2881" NumberInParty="002" ResBookDesigCode="B" Status="NN">
+        <DestinationLocation LocationCode="PVG" />
+        <MarketingAirline Code="MU" FlightNumber="2881" />
+        <OriginLocation LocationCode="NKG" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="11-15T15:20" DepartureDateTime="11-15T12:15" eTicket="true" FlightNumber="5033" NumberInParty="002" ResBookDesigCode="S" Status="NN">
+        <DestinationLocation LocationCode="ICN" />
+        <MarketingAirline Code="MU" FlightNumber="5033" />
+        <OriginLocation LocationCode="PVG" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="12-01T02:55" DepartureDateTime="11-30T22:45" eTicket="true" FlightNumber="2004" NumberInParty="002" ResBookDesigCode="B" Status="NN">
+        <DestinationLocation LocationCode="KMG" />
+        <MarketingAirline Code="MU" FlightNumber="2004" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="12-01T10:30" DepartureDateTime="12-01T08:00" eTicket="true" FlightNumber="2706" NumberInParty="002" ResBookDesigCode="B" Status="NN">
+        <DestinationLocation LocationCode="NKG" />
+        <MarketingAirline Code="MU" FlightNumber="2706" />
+        <OriginLocation LocationCode="KMG" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="12-01T10:00" DepartureDateTime="12-01T13:55" eTicket="true" FlightNumber="2855" NumberInParty="002" ResBookDesigCode="V" Status="NN">
+        <DestinationLocation LocationCode="LAX" />
+        <MarketingAirline Code="MU" FlightNumber="2855" />
+        <OriginLocation LocationCode="NKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirBookRS>
+  <TravelItineraryReadRS xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <TravelItinerary>
+      <CustomerInfo />
+      <ItineraryInfo>
+        <ReservationItems>
+          <Item RPH="1">
+            <FlightSegment AirMilesFlown="6569" ArrivalDateTime="11-14T19:05" DayOfWeekInd="2" DepartureDateTime="2018-11-13T12:30" ElapsedTime="14.35" eTicket="true" FlightNumber="2856" NumberInParty="02" ResBookDesigCode="V" SegmentNumber="0001" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="NKG" />
+              <Equipment AirEquipType="332" />
+              <MarketingAirline Code="MU" FlightNumber="2856" />
+              <Meal Code="D" />
+              <OriginLocation LocationCode="LAX" Terminal="TOM BRADLEY INTL TERM" TerminalCode="B" />
+              <SupplierRef ID="DCMU" />
+              <UpdatedArrivalTime>11-14T19:05</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-13T12:30</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+          <Item RPH="2">
+            <FlightSegment AirMilesFlown="0185" ArrivalDateTime="11-15T08:25" DayOfWeekInd="4" DepartureDateTime="2018-11-15T07:25" ElapsedTime="01.00" eTicket="true" FlightNumber="2881" NumberInParty="02" ResBookDesigCode="B" SegmentNumber="0002" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="PVG" Terminal="TERMINAL 1" TerminalCode="1" />
+              <Equipment AirEquipType="320" />
+              <MarketingAirline Code="MU" FlightNumber="2881" />
+              <OriginLocation LocationCode="NKG" />
+              <SupplierRef ID="DCMU" />
+              <UpdatedArrivalTime>11-15T08:25</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-15T07:25</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+          <Item RPH="3">
+            <FlightSegment AirMilesFlown="0506" ArrivalDateTime="11-15T15:20" DayOfWeekInd="4" DepartureDateTime="2018-11-15T12:15" ElapsedTime="02.05" eTicket="true" FlightNumber="5033" NumberInParty="02" ResBookDesigCode="S" SegmentNumber="0003" SmokingAllowed="false" SpecialMeal="false" Status="UC" StopQuantity="00">
+              <DestinationLocation LocationCode="ICN" Terminal="TERMINAL 1" TerminalCode="1" />
+              <Equipment AirEquipType="321" />
+              <MarketingAirline Code="MU" FlightNumber="5033" />
+              <Meal Code="D" />
+              <OriginLocation LocationCode="PVG" Terminal="TERMINAL 1" TerminalCode="1" />
+              <SupplierRef ID="DCMU" />
+              <UpdatedArrivalTime>11-15T15:20</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-15T12:15</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+          <Item RPH="4">
+            <FlightSegment AirMilesFlown="1622" ArrivalDateTime="12-01T02:55" DayOfWeekInd="5" DepartureDateTime="2018-11-30T22:45" ElapsedTime="05.10" eTicket="true" FlightNumber="2004" NumberInParty="02" ResBookDesigCode="B" SegmentNumber="0004" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="KMG" />
+              <Equipment AirEquipType="738" />
+              <MarketingAirline Code="MU" FlightNumber="2004" />
+              <Meal Code="S" />
+              <OriginLocation LocationCode="ICN" Terminal="TERMINAL 1" TerminalCode="1" />
+              <SupplierRef ID="DCMU" />
+              <UpdatedArrivalTime>12-01T02:55</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-30T22:45</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+          <Item RPH="5">
+            <FlightSegment AirMilesFlown="1078" ArrivalDateTime="12-01T10:30" DayOfWeekInd="6" DepartureDateTime="2018-12-01T08:00" ElapsedTime="02.30" eTicket="true" FlightNumber="2706" NumberInParty="02" ResBookDesigCode="B" SegmentNumber="0005" SmokingAllowed="false" SpecialMeal="false" Status="UC" StopQuantity="00">
+              <DestinationLocation LocationCode="NKG" />
+              <Equipment AirEquipType="320" />
+              <MarketingAirline Code="MU" FlightNumber="2706" />
+              <Meal Code="B" />
+              <OriginLocation LocationCode="KMG" />
+              <SupplierRef ID="DCMU" />
+              <UpdatedArrivalTime>12-01T10:30</UpdatedArrivalTime>
+              <UpdatedDepartureTime>12-01T08:00</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+          <Item RPH="6">
+            <FlightSegment AirMilesFlown="6569" ArrivalDateTime="12-01T10:00" DayOfWeekInd="6" DepartureDateTime="2018-12-01T13:55" ElapsedTime="12.05" eTicket="true" FlightNumber="2855" NumberInParty="02" ResBookDesigCode="V" SegmentNumber="0006" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="LAX" Terminal="TOM BRADLEY INTL TERM" TerminalCode="B" />
+              <Equipment AirEquipType="332" />
+              <MarketingAirline Code="MU" FlightNumber="2855" />
+              <Meal Code="D" />
+              <OriginLocation LocationCode="NKG" />
+              <SupplierRef ID="DCMU" />
+              <UpdatedArrivalTime>12-01T10:00</UpdatedArrivalTime>
+              <UpdatedDepartureTime>12-01T13:55</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+        </ReservationItems>
+      </ItineraryInfo>
+      <ItineraryRef AirExtras="false" InhibitCode="U" PartitionID="AA" PrimeHostID="1S">
+        <Source PseudoCityCode="K3SG" />
+      </ItineraryRef>
+    </TravelItinerary>
+  </TravelItineraryReadRS>
+</EnhancedAirBookRS>
+<?xml version="1.0" encoding="utf-16"?>
+<EnhancedAirBookRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="3.2.0">
+  <OTA_AirBookRQ xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <HaltOnStatus Code="NO" />
+    <HaltOnStatus Code="UC" />
+    <HaltOnStatus Code="US" />
+    <OriginDestinationInformation>
+      <FlightSegment ArrivalDateTime="2018-11-14T06:25" DepartureDateTime="2018-11-13T00:05" FlightNumber="578" NumberInParty="2" ResBookDesigCode="N" Status="NN">
+        <DestinationLocation LocationCode="PVG" />
+        <Equipment AirEquipType="773" />
+        <MarketingAirline Code="MU" FlightNumber="578" />
+        <OperatingAirline Code="MU" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-11-14T17:25" DepartureDateTime="2018-11-14T14:10" FlightNumber="9827" NumberInParty="2" ResBookDesigCode="B" Status="NN">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="73H" />
+        <MarketingAirline Code="MU" FlightNumber="9827" />
+        <OperatingAirline Code="FM" />
+        <OriginLocation LocationCode="PVG" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-12-01T02:55" DepartureDateTime="2018-11-30T22:45" FlightNumber="2004" NumberInParty="2" ResBookDesigCode="B" Status="NN">
+        <DestinationLocation LocationCode="KMG" />
+        <Equipment AirEquipType="738" />
+        <MarketingAirline Code="MU" FlightNumber="2004" />
+        <OperatingAirline Code="MU" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-12-01T10:30" DepartureDateTime="2018-12-01T08:00" FlightNumber="2706" NumberInParty="2" ResBookDesigCode="B" Status="NN">
+        <DestinationLocation LocationCode="NKG" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="MU" FlightNumber="2706" />
+        <OperatingAirline Code="MU" />
+        <OriginLocation LocationCode="KMG" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-12-01T10:00" DepartureDateTime="2018-12-01T13:55" FlightNumber="2855" NumberInParty="2" ResBookDesigCode="V" Status="NN">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="332" />
+        <MarketingAirline Code="MU" FlightNumber="2855" />
+        <OperatingAirline Code="MU" />
+        <OriginLocation LocationCode="NKG" />
+      </FlightSegment>
+    </OriginDestinationInformation>
+    <RedisplayReservation NumAttempts="2" WaitInterval="5000" />
+  </OTA_AirBookRQ>
+  <OTA_AirPriceRQ xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <PriceRequestInformation Retain="true">
+      <OptionalQualifiers>
+        <MiscQualifiers>
+          <Commission Amount="5.00" />
+        </MiscQualifiers>
+        <PricingQualifiers>
+          <PassengerType Code="ADT" Quantity="2" />
+          <PlusUp Amount="5.00" />
+        </PricingQualifiers>
+      </OptionalQualifiers>
+    </PriceRequestInformation>
+  </OTA_AirPriceRQ>
+  <PostProcessing IgnoreAfter="false" xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <RedisplayReservation WaitInterval="5000" UnmaskCreditCard="false" />
+  </PostProcessing>
+  <PreProcessing IgnoreBefore="true" xmlns="http://services.sabre.com/sp/eab/v3_2" />
+</EnhancedAirBookRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<EnhancedAirBookRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ApplicationResults status="Incomplete" xmlns="http://services.sabre.com/STL_Payload/v02_01">
+    <Error type="BusinessLogic" timeStamp="2018-11-08T10:11:17.519+05:00">
+      <SystemSpecificResults>
+        <Message code="ERR.SP.HALT_ON_STATUS_RECEIVED">Specified HaltOnStatus Received - Processing Aborted</Message>
+      </SystemSpecificResults>
+    </Error>
+  </ApplicationResults>
+  <OTA_AirBookRS xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <OriginDestinationOption>
+      <FlightSegment ArrivalDateTime="11-14T06:25" DepartureDateTime="11-13T00:05" eTicket="true" FlightNumber="0578" NumberInParty="002" ResBookDesigCode="N" Status="NN">
+        <DestinationLocation LocationCode="PVG" />
+        <MarketingAirline Code="MU" FlightNumber="0578" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="11-14T17:25" DepartureDateTime="11-14T14:10" eTicket="true" FlightNumber="9827" NumberInParty="002" ResBookDesigCode="B" Status="NN">
+        <DestinationLocation LocationCode="ICN" />
+        <MarketingAirline Code="MU" FlightNumber="9827" />
+        <OriginLocation LocationCode="PVG" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="12-01T02:55" DepartureDateTime="11-30T22:45" eTicket="true" FlightNumber="2004" NumberInParty="002" ResBookDesigCode="B" Status="NN">
+        <DestinationLocation LocationCode="KMG" />
+        <MarketingAirline Code="MU" FlightNumber="2004" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="12-01T10:30" DepartureDateTime="12-01T08:00" eTicket="true" FlightNumber="2706" NumberInParty="002" ResBookDesigCode="B" Status="NN">
+        <DestinationLocation LocationCode="NKG" />
+        <MarketingAirline Code="MU" FlightNumber="2706" />
+        <OriginLocation LocationCode="KMG" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="12-01T10:00" DepartureDateTime="12-01T13:55" eTicket="true" FlightNumber="2855" NumberInParty="002" ResBookDesigCode="V" Status="NN">
+        <DestinationLocation LocationCode="LAX" />
+        <MarketingAirline Code="MU" FlightNumber="2855" />
+        <OriginLocation LocationCode="NKG" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirBookRS>
+  <TravelItineraryReadRS xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <TravelItinerary>
+      <CustomerInfo />
+      <ItineraryInfo>
+        <ReservationItems>
+          <Item RPH="1">
+            <FlightSegment AirMilesFlown="6485" ArrivalDateTime="11-14T06:25" DayOfWeekInd="2" DepartureDateTime="2018-11-13T00:05" ElapsedTime="14.20" eTicket="true" FlightNumber="0578" NumberInParty="02" ResBookDesigCode="N" SegmentNumber="0001" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="PVG" Terminal="TERMINAL 1" TerminalCode="1" />
+              <Equipment AirEquipType="773" />
+              <MarketingAirline Code="MU" FlightNumber="0578" />
+              <Meal Code="D" />
+              <OriginLocation LocationCode="LAX" Terminal="TOM BRADLEY INTL TERM" TerminalCode="B" />
+              <SupplierRef ID="DCMU" />
+              <UpdatedArrivalTime>11-14T06:25</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-13T00:05</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+          <Item RPH="2">
+            <FlightSegment AirMilesFlown="0506" ArrivalDateTime="11-14T17:25" DayOfWeekInd="3" DepartureDateTime="2018-11-14T14:10" ElapsedTime="02.15" eTicket="true" FlightNumber="9827" NumberInParty="02" ResBookDesigCode="B" SegmentNumber="0002" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="ICN" Terminal="TERMINAL 1" TerminalCode="1" />
+              <Equipment AirEquipType="73H" />
+              <MarketingAirline Code="MU" FlightNumber="9827" />
+              <Meal Code="D" />
+              <OperatingAirline Code="FM" CompanyShortName="SHANGHAI AIRLINES" />
+              <OriginLocation LocationCode="PVG" Terminal="TERMINAL 1" TerminalCode="1" />
+              <SupplierRef ID="DCMU" />
+              <Text>OPERATED BY SHANGHAI AIRLINES</Text>
+              <UpdatedArrivalTime>11-14T17:25</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-14T14:10</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+          <Item RPH="3">
+            <FlightSegment AirMilesFlown="1622" ArrivalDateTime="12-01T02:55" DayOfWeekInd="5" DepartureDateTime="2018-11-30T22:45" ElapsedTime="05.10" eTicket="true" FlightNumber="2004" NumberInParty="02" ResBookDesigCode="B" SegmentNumber="0003" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="KMG" />
+              <Equipment AirEquipType="738" />
+              <MarketingAirline Code="MU" FlightNumber="2004" />
+              <Meal Code="S" />
+              <OriginLocation LocationCode="ICN" Terminal="TERMINAL 1" TerminalCode="1" />
+              <SupplierRef ID="DCMU" />
+              <UpdatedArrivalTime>12-01T02:55</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-30T22:45</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+          <Item RPH="4">
+            <FlightSegment AirMilesFlown="1078" ArrivalDateTime="12-01T10:30" DayOfWeekInd="6" DepartureDateTime="2018-12-01T08:00" ElapsedTime="02.30" eTicket="true" FlightNumber="2706" NumberInParty="02" ResBookDesigCode="B" SegmentNumber="0004" SmokingAllowed="false" SpecialMeal="false" Status="UC" StopQuantity="00">
+              <DestinationLocation LocationCode="NKG" />
+              <Equipment AirEquipType="320" />
+              <MarketingAirline Code="MU" FlightNumber="2706" />
+              <Meal Code="B" />
+              <OriginLocation LocationCode="KMG" />
+              <SupplierRef ID="DCMU" />
+              <UpdatedArrivalTime>12-01T10:30</UpdatedArrivalTime>
+              <UpdatedDepartureTime>12-01T08:00</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+          <Item RPH="5">
+            <FlightSegment AirMilesFlown="6569" ArrivalDateTime="12-01T10:00" DayOfWeekInd="6" DepartureDateTime="2018-12-01T13:55" ElapsedTime="12.05" eTicket="true" FlightNumber="2855" NumberInParty="02" ResBookDesigCode="V" SegmentNumber="0005" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="LAX" Terminal="TOM BRADLEY INTL TERM" TerminalCode="B" />
+              <Equipment AirEquipType="332" />
+              <MarketingAirline Code="MU" FlightNumber="2855" />
+              <Meal Code="D" />
+              <OriginLocation LocationCode="NKG" />
+              <SupplierRef ID="DCMU" />
+              <UpdatedArrivalTime>12-01T10:00</UpdatedArrivalTime>
+              <UpdatedDepartureTime>12-01T13:55</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+        </ReservationItems>
+      </ItineraryInfo>
+      <ItineraryRef AirExtras="false" InhibitCode="U" PartitionID="AA" PrimeHostID="1S">
+        <Source PseudoCityCode="K3SG" />
+      </ItineraryRef>
+    </TravelItinerary>
+  </TravelItineraryReadRS>
+</EnhancedAirBookRS>
+<?xml version="1.0" encoding="utf-16"?>
+<EnhancedAirBookRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="3.2.0">
+  <OTA_AirBookRQ xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <HaltOnStatus Code="NO" />
+    <HaltOnStatus Code="UC" />
+    <HaltOnStatus Code="US" />
+    <OriginDestinationInformation>
+      <FlightSegment ArrivalDateTime="2018-11-15T05:40" DepartureDateTime="2018-11-13T22:20" FlightNumber="328" NumberInParty="2" ResBookDesigCode="U" Status="NN">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="328" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-11-15T17:25" DepartureDateTime="2018-11-15T13:15" FlightNumber="4501" NumberInParty="2" ResBookDesigCode="U" Status="NN">
+        <DestinationLocation LocationCode="ICN" />
+        <Equipment AirEquipType="333" />
+        <MarketingAirline Code="CZ" FlightNumber="4501" />
+        <OperatingAirline Code="KE" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-11-30T11:40" DepartureDateTime="2018-11-30T11:20" FlightNumber="686" NumberInParty="2" ResBookDesigCode="V" Status="NN">
+        <DestinationLocation LocationCode="DLC" />
+        <Equipment AirEquipType="320" />
+        <MarketingAirline Code="CZ" FlightNumber="686" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-11-30T18:15" DepartureDateTime="2018-11-30T14:30" FlightNumber="3607" NumberInParty="2" ResBookDesigCode="V" Status="NN">
+        <DestinationLocation LocationCode="CAN" />
+        <Equipment AirEquipType="321" />
+        <MarketingAirline Code="CZ" FlightNumber="3607" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="DLC" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="2018-11-30T18:10" DepartureDateTime="2018-11-30T21:30" FlightNumber="327" NumberInParty="2" ResBookDesigCode="V" Status="NN">
+        <DestinationLocation LocationCode="LAX" />
+        <Equipment AirEquipType="380" />
+        <MarketingAirline Code="CZ" FlightNumber="327" />
+        <OperatingAirline Code="CZ" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationInformation>
+    <RedisplayReservation NumAttempts="2" WaitInterval="5000" />
+  </OTA_AirBookRQ>
+  <OTA_AirPriceRQ xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <PriceRequestInformation Retain="true">
+      <OptionalQualifiers>
+        <MiscQualifiers>
+          <Commission Amount="5.00" />
+        </MiscQualifiers>
+        <PricingQualifiers>
+          <PassengerType Code="ADT" Quantity="2" />
+          <PlusUp Amount="5.00" />
+        </PricingQualifiers>
+      </OptionalQualifiers>
+    </PriceRequestInformation>
+  </OTA_AirPriceRQ>
+  <PostProcessing IgnoreAfter="false" xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <RedisplayReservation WaitInterval="5000" UnmaskCreditCard="false" />
+  </PostProcessing>
+  <PreProcessing IgnoreBefore="true" xmlns="http://services.sabre.com/sp/eab/v3_2" />
+</EnhancedAirBookRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<EnhancedAirBookRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL_Payload/v02_01">
+    <Success timeStamp="2018-11-08T10:12:54.789+05:00" />
+  </ApplicationResults>
+  <OTA_AirBookRS xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <OriginDestinationOption>
+      <FlightSegment ArrivalDateTime="11-15T05:40" DepartureDateTime="11-13T22:20" eTicket="true" FlightNumber="0328" NumberInParty="002" ResBookDesigCode="U" Status="NN">
+        <DestinationLocation LocationCode="CAN" />
+        <MarketingAirline Code="CZ" FlightNumber="0328" />
+        <OriginLocation LocationCode="LAX" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="11-15T17:25" DepartureDateTime="11-15T13:15" eTicket="true" FlightNumber="4501" NumberInParty="002" ResBookDesigCode="U" Status="NN">
+        <DestinationLocation LocationCode="ICN" />
+        <MarketingAirline Code="CZ" FlightNumber="4501" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="11-30T11:40" DepartureDateTime="11-30T11:20" eTicket="true" FlightNumber="0686" NumberInParty="002" ResBookDesigCode="V" Status="NN">
+        <DestinationLocation LocationCode="DLC" />
+        <MarketingAirline Code="CZ" FlightNumber="0686" />
+        <OriginLocation LocationCode="ICN" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="11-30T18:15" DepartureDateTime="11-30T14:30" eTicket="true" FlightNumber="3607" NumberInParty="002" ResBookDesigCode="V" Status="NN">
+        <DestinationLocation LocationCode="CAN" />
+        <MarketingAirline Code="CZ" FlightNumber="3607" />
+        <OriginLocation LocationCode="DLC" />
+      </FlightSegment>
+      <FlightSegment ArrivalDateTime="11-30T18:10" DepartureDateTime="11-30T21:30" eTicket="true" FlightNumber="0327" NumberInParty="002" ResBookDesigCode="V" Status="NN">
+        <DestinationLocation LocationCode="LAX" />
+        <MarketingAirline Code="CZ" FlightNumber="0327" />
+        <OriginLocation LocationCode="CAN" />
+      </FlightSegment>
+    </OriginDestinationOption>
+  </OTA_AirBookRS>
+  <OTA_AirPriceRS xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <PriceQuote>
+      <MiscInformation>
+        <BaggageInfo>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="1">
+            <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+            <CommercialNameofBaggageItemType>FREE BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0DFAACZ</ExtendedSubCodeKey>
+          </SubCodeProperties>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="2">
+            <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+            <CommercialNameofBaggageItemType>UPTO50LB 23KG AND62LI 158LCM</CommercialNameofBaggageItemType>
+            <DescriptionOne Code="23">
+              <Text>UP TO 50 POUNDS/23 KILOGRAMS</Text>
+            </DescriptionOne>
+            <DescriptionTwo Code="6U">
+              <Text>UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+            </DescriptionTwo>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0GOACCZ</ExtendedSubCodeKey>
+            <SizeWeightInfo>
+              <MaximumSizeInAlternate Units="C">158</MaximumSizeInAlternate>
+              <MaximumSize Units="I">62</MaximumSize>
+              <MaximumWeightInAlternate Units="K">23</MaximumWeightInAlternate>
+              <MaximumWeight Units="L">50</MaximumWeight>
+            </SizeWeightInfo>
+          </SubCodeProperties>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="3">
+            <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+            <AncillaryService SubGroupCode="CY">
+              <Text>CARRY ON HAND BAGGAGE</Text>
+            </AncillaryService>
+            <CommercialNameofBaggageItemType>CARRYON HAND BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0LNABCZ</ExtendedSubCodeKey>
+            <RFIC>C</RFIC>
+          </SubCodeProperties>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="4">
+            <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+            <AncillaryService SubGroupCode="CY">
+              <Text>CARRY ON HAND BAGGAGE</Text>
+            </AncillaryService>
+            <CommercialNameofBaggageItemType>CARRY5KG 11LBUPTO 45LI 115LCM</CommercialNameofBaggageItemType>
+            <DescriptionOne Code="05">
+              <Text>UP TO 11 POUNDS/5 KILOGRAMS</Text>
+            </DescriptionOne>
+            <DescriptionTwo Code="4U">
+              <Text>UP TO 45 LINEAR INCHES/115 LINEAR CENTIMETERS</Text>
+            </DescriptionTwo>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0MLACCZ</ExtendedSubCodeKey>
+            <SizeWeightInfo>
+              <MaximumSizeInAlternate Units="C">115</MaximumSizeInAlternate>
+              <MaximumSize Units="I">45</MaximumSize>
+              <MaximumWeightInAlternate Units="K">5</MaximumWeightInAlternate>
+              <MaximumWeight Units="L">11</MaximumWeight>
+            </SizeWeightInfo>
+          </SubCodeProperties>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="5">
+            <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+            <AncillaryService SubGroupCode="CY">
+              <Text>CARRY ON HAND BAGGAGE</Text>
+            </AncillaryService>
+            <CommercialNameofBaggageItemType>CARRYON HAND BAGGAGE ALLOWANCE</CommercialNameofBaggageItemType>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0LNABKE</ExtendedSubCodeKey>
+          </SubCodeProperties>
+          <SubCodeProperties MultiTicketSequenceNmbr="1" RPH="6">
+            <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+            <AncillaryService SubGroupCode="CY">
+              <Text>CARRY ON HAND BAGGAGE</Text>
+            </AncillaryService>
+            <CommercialNameofBaggageItemType>CARRY12KG 26LB UPTO45LI 115LCM</CommercialNameofBaggageItemType>
+            <DescriptionOne Code="12">
+              <Text>UP TO 26 POUNDS/12 KILOGRAMS</Text>
+            </DescriptionOne>
+            <DescriptionTwo Code="4U">
+              <Text>UP TO 45 LINEAR INCHES/115 LINEAR CENTIMETERS</Text>
+            </DescriptionTwo>
+            <EMD_Type>4</EMD_Type>
+            <ExtendedSubCodeKey>0MRACKE</ExtendedSubCodeKey>
+            <SizeWeightInfo>
+              <MaximumSizeInAlternate Units="C">115</MaximumSizeInAlternate>
+              <MaximumSize Units="I">45</MaximumSize>
+              <MaximumWeightInAlternate Units="K">12</MaximumWeightInAlternate>
+              <MaximumWeight Units="L">26</MaximumWeight>
+            </SizeWeightInfo>
+          </SubCodeProperties>
+        </BaggageInfo>
+        <HeaderInformation MultiTicketSequenceNmbr="1">
+          <DepartureDate>2018-11-13</DepartureDate>
+          <Text>VALIDATING CARRIER - CZ</Text>
+          <Text>BAG ALLOWANCE     -LAXICN-02P/CZ/EACH PIECE UP TO 50 POUNDS/23</Text>
+          <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+          <Text>BAG ALLOWANCE     -ICNLAX-02P/CZ/EACH PIECE UP TO 50 POUNDS/23</Text>
+          <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+          <Text>CARRY ON ALLOWANCE</Text>
+          <Text>LAXCAN CANLAX-01P/CZ</Text>
+          <Text>01/UP TO 11 POUNDS/5 KILOGRAMS AND UP TO 45 LINEAR INCHES/115 L</Text>
+          <Text>INEAR CENTIMETERS</Text>
+          <Text>CANICN-01P/KE</Text>
+          <Text>01/UP TO 26 POUNDS/12 KILOGRAMS AND UP TO 45 LINEAR INCHES/115</Text>
+          <Text>LINEAR CENTIMETERS</Text>
+          <Text>ICNDLC DLCCAN-CZ-CARRY ON ALLOWANCE UNKNOWN-CONTACT CARRIER</Text>
+          <Text>CARRY ON CHARGES</Text>
+          <Text>LAXCAN ICNDLC DLCCAN CANLAX-CZ-CARRY ON FEES UNKNOWN-CONTACT CA</Text>
+          <Text>RRIER</Text>
+          <Text>CANICN-KE-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+          <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+          <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+          <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+          <ValidatingCarrier Code="CZ" />
+        </HeaderInformation>
+        <MultiTicketInformation MultiTicketSequenceNmbr="1">
+          <CurrencyCode>USD</CurrencyCode>
+          <TicketNumber>0</TicketNumber>
+          <TotalAmount>2247.66</TotalAmount>
+        </MultiTicketInformation>
+      </MiscInformation>
+      <PricedItinerary CurrencyCode="USD" MultiTicket="false" TotalAmount="2247.66">
+        <AirItineraryPricingInfo MultiTicketSequenceNmbr="1">
+          <BaggageProvisions RPH="1">
+            <Associations>
+              <CarrierCode RPH="1">CZ</CarrierCode>
+              <CarrierCode RPH="2">CZ</CarrierCode>
+              <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+              <DepartureDate RPH="1">2018-11-13</DepartureDate>
+              <DepartureDate RPH="2">2018-11-15</DepartureDate>
+              <DestinationLocation LocationCode="CAN" RPH="1" />
+              <DestinationLocation LocationCode="ICN" RPH="2" />
+              <FlightNumber RPH="1">328</FlightNumber>
+              <FlightNumber RPH="2">4501</FlightNumber>
+              <OriginLocation LocationCode="LAX" RPH="1" />
+              <OriginLocation LocationCode="CAN" RPH="2" />
+              <PNR_Segment RPH="1">2</PNR_Segment>
+              <PNR_Segment RPH="2">3</PNR_Segment>
+              <ResBookDesigCode RPH="1">U</ResBookDesigCode>
+              <ResBookDesigCode RPH="2">U</ResBookDesigCode>
+              <StatusCode RPH="1">SS</StatusCode>
+              <StatusCode RPH="2">SS</StatusCode>
+            </Associations>
+            <CarrierWhoseBaggageProvisionsApply>CZ</CarrierWhoseBaggageProvisionsApply>
+            <NumPiecesBDI>2</NumPiecesBDI>
+            <NumPiecesITR>2</NumPiecesITR>
+            <ProvisionType>A</ProvisionType>
+            <SubCodeInfo>
+              <SubCodeForAllowance RPH="1">0GOACCZ</SubCodeForAllowance>
+              <SubCodeForChargesOthers>0DFAACZ</SubCodeForChargesOthers>
+            </SubCodeInfo>
+          </BaggageProvisions>
+          <BaggageProvisions RPH="2">
+            <Associations>
+              <CarrierCode RPH="1">CZ</CarrierCode>
+              <CarrierCode RPH="2">CZ</CarrierCode>
+              <CarrierCode RPH="3">CZ</CarrierCode>
+              <CountForSegmentAssociatedID>3</CountForSegmentAssociatedID>
+              <DepartureDate RPH="1">2018-11-30</DepartureDate>
+              <DepartureDate RPH="2">2018-11-30</DepartureDate>
+              <DepartureDate RPH="3">2018-11-30</DepartureDate>
+              <DestinationLocation LocationCode="DLC" RPH="1" />
+              <DestinationLocation LocationCode="CAN" RPH="2" />
+              <DestinationLocation LocationCode="LAX" RPH="3" />
+              <FlightNumber RPH="1">686</FlightNumber>
+              <FlightNumber RPH="2">3607</FlightNumber>
+              <FlightNumber RPH="3">327</FlightNumber>
+              <OriginLocation LocationCode="ICN" RPH="1" />
+              <OriginLocation LocationCode="DLC" RPH="2" />
+              <OriginLocation LocationCode="CAN" RPH="3" />
+              <PNR_Segment RPH="1">4</PNR_Segment>
+              <PNR_Segment RPH="2">5</PNR_Segment>
+              <PNR_Segment RPH="3">6</PNR_Segment>
+              <ResBookDesigCode RPH="1">V</ResBookDesigCode>
+              <ResBookDesigCode RPH="2">V</ResBookDesigCode>
+              <ResBookDesigCode RPH="3">V</ResBookDesigCode>
+              <StatusCode RPH="1">SS</StatusCode>
+              <StatusCode RPH="2">SS</StatusCode>
+              <StatusCode RPH="3">SS</StatusCode>
+            </Associations>
+            <CarrierWhoseBaggageProvisionsApply>CZ</CarrierWhoseBaggageProvisionsApply>
+            <NumPiecesBDI>2</NumPiecesBDI>
+            <NumPiecesITR>2</NumPiecesITR>
+            <ProvisionType>A</ProvisionType>
+            <SubCodeInfo>
+              <SubCodeForAllowance RPH="1">0GOACCZ</SubCodeForAllowance>
+              <SubCodeForChargesOthers>0DFAACZ</SubCodeForChargesOthers>
+            </SubCodeInfo>
+          </BaggageProvisions>
+          <BaggageProvisions RPH="3">
+            <Associations>
+              <CarrierCode RPH="1">CZ</CarrierCode>
+              <CarrierCode RPH="2">CZ</CarrierCode>
+              <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+              <DepartureDate RPH="1">2018-11-13</DepartureDate>
+              <DepartureDate RPH="2">2018-11-30</DepartureDate>
+              <DestinationLocation LocationCode="CAN" RPH="1" />
+              <DestinationLocation LocationCode="LAX" RPH="2" />
+              <FlightNumber RPH="1">328</FlightNumber>
+              <FlightNumber RPH="2">327</FlightNumber>
+              <OriginLocation LocationCode="LAX" RPH="1" />
+              <OriginLocation LocationCode="CAN" RPH="2" />
+              <PNR_Segment RPH="1">2</PNR_Segment>
+              <PNR_Segment RPH="2">6</PNR_Segment>
+              <ResBookDesigCode RPH="1">U</ResBookDesigCode>
+              <ResBookDesigCode RPH="2">V</ResBookDesigCode>
+              <StatusCode RPH="1">SS</StatusCode>
+              <StatusCode RPH="2">SS</StatusCode>
+            </Associations>
+            <CarrierWhoseBaggageProvisionsApply>CZ</CarrierWhoseBaggageProvisionsApply>
+            <NumPiecesBDI>1</NumPiecesBDI>
+            <NumPiecesITR>1</NumPiecesITR>
+            <ProvisionType>B</ProvisionType>
+            <SubCodeInfo>
+              <SubCodeForAllowance RPH="1">0MLACCZ</SubCodeForAllowance>
+              <SubCodeForChargesOthers>0LNABCZ</SubCodeForChargesOthers>
+            </SubCodeInfo>
+          </BaggageProvisions>
+          <BaggageProvisions RPH="4">
+            <Associations>
+              <CarrierCode RPH="1">CZ</CarrierCode>
+              <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+              <DepartureDate RPH="1">2018-11-15</DepartureDate>
+              <DestinationLocation LocationCode="ICN" RPH="1" />
+              <FlightNumber RPH="1">4501</FlightNumber>
+              <OriginLocation LocationCode="CAN" RPH="1" />
+              <PNR_Segment RPH="1">3</PNR_Segment>
+              <ResBookDesigCode RPH="1">U</ResBookDesigCode>
+              <StatusCode RPH="1">SS</StatusCode>
+            </Associations>
+            <CarrierWhoseBaggageProvisionsApply>KE</CarrierWhoseBaggageProvisionsApply>
+            <NumPiecesBDI>1</NumPiecesBDI>
+            <NumPiecesITR>1</NumPiecesITR>
+            <ProvisionType>B</ProvisionType>
+            <SubCodeInfo>
+              <SubCodeForAllowance RPH="1">0MRACKE</SubCodeForAllowance>
+              <SubCodeForChargesOthers>0LNABKE</SubCodeForChargesOthers>
+            </SubCodeInfo>
+          </BaggageProvisions>
+          <FareCalculation>
+            <Text>LAX CZ X/CAN CZ SEL515.00CZ DLC83.95CZ X/CAN CZ LAX195.00NUC793.95 PLUS5.00END ROE1.00 XFLAX4.5</Text>
+          </FareCalculation>
+          <FareCalculationBreakdown>
+            <Departure CityCode="LAX" AirportCode="LAX" AirlineCode="CZ" GenericInd="X" ArrivalCityCode="CAN" ArrivalAirportCode="CAN" />
+            <FareBasis Code="U2NRCUS" FilingCarrier="CZ" Cabin="Y" />
+            <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+          </FareCalculationBreakdown>
+          <FareCalculationBreakdown>
+            <Branch PCC="K3SG" FirstJointCarrier="CZ" />
+            <Departure CityCode="CAN" AirportCode="CAN" AirlineCode="CZ" GenericInd="O" ArrivalCityCode="SEL" ArrivalAirportCode="ICN" />
+            <FareBasis Code="U2NRCUS" FareAmount="515.00" FarePassengerType="ADT" FareType="P" FilingCarrier="CZ" GlobalInd="PA" TripTypeInd="R" Market="LAXSEL" Cabin="Y" />
+            <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+            <RuleCategoryIndicator>2</RuleCategoryIndicator>
+            <RuleCategoryIndicator>3</RuleCategoryIndicator>
+            <RuleCategoryIndicator>4</RuleCategoryIndicator>
+            <RuleCategoryIndicator>5</RuleCategoryIndicator>
+            <RuleCategoryIndicator>7</RuleCategoryIndicator>
+            <RuleCategoryIndicator>8</RuleCategoryIndicator>
+            <RuleCategoryIndicator>9</RuleCategoryIndicator>
+            <RuleCategoryIndicator>10</RuleCategoryIndicator>
+            <RuleCategoryIndicator>12</RuleCategoryIndicator>
+            <RuleCategoryIndicator>15</RuleCategoryIndicator>
+            <RuleCategoryIndicator>16</RuleCategoryIndicator>
+            <RuleCategoryIndicator>18</RuleCategoryIndicator>
+          </FareCalculationBreakdown>
+          <FareCalculationBreakdown>
+            <Branch PCC="K3SG" FirstJointCarrier="CZ" />
+            <Departure CityCode="SEL" AirportCode="ICN" AirlineCode="CZ" GenericInd="O" ArrivalCityCode="DLC" ArrivalAirportCode="DLC" />
+            <FareBasis Code="V2LRCKR" FareAmount="83.95" FarePassengerType="ADT" FareType="P" FilingCarrier="CZ" GlobalInd="EH" TripTypeInd="R" Market="SELDLC" Cabin="Y" />
+            <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+            <RuleCategoryIndicator>3</RuleCategoryIndicator>
+            <RuleCategoryIndicator>4</RuleCategoryIndicator>
+            <RuleCategoryIndicator>5</RuleCategoryIndicator>
+            <RuleCategoryIndicator>6</RuleCategoryIndicator>
+            <RuleCategoryIndicator>7</RuleCategoryIndicator>
+            <RuleCategoryIndicator>8</RuleCategoryIndicator>
+            <RuleCategoryIndicator>9</RuleCategoryIndicator>
+            <RuleCategoryIndicator>10</RuleCategoryIndicator>
+            <RuleCategoryIndicator>12</RuleCategoryIndicator>
+            <RuleCategoryIndicator>15</RuleCategoryIndicator>
+            <RuleCategoryIndicator>16</RuleCategoryIndicator>
+            <RuleCategoryIndicator>18</RuleCategoryIndicator>
+          </FareCalculationBreakdown>
+          <FareCalculationBreakdown>
+            <Departure CityCode="DLC" AirportCode="DLC" AirlineCode="CZ" GenericInd="X" ArrivalCityCode="CAN" ArrivalAirportCode="CAN" />
+            <FareBasis Code="V2NRCUC" FilingCarrier="CZ" Cabin="Y" />
+            <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+          </FareCalculationBreakdown>
+          <FareCalculationBreakdown>
+            <Branch PCC="K3SG" FirstJointCarrier="CZ" />
+            <Departure CityCode="CAN" AirportCode="CAN" AirlineCode="CZ" GenericInd="O" ArrivalCityCode="LAX" ArrivalAirportCode="LAX" />
+            <FareBasis Code="V2NRCUC" FareAmount="195.00" FarePassengerType="ADT" FareType="P" FilingCarrier="CZ" GlobalInd="PA" TripTypeInd="R" Market="LAXDLC" Cabin="Y" />
+            <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+            <RuleCategoryIndicator>2</RuleCategoryIndicator>
+            <RuleCategoryIndicator>3</RuleCategoryIndicator>
+            <RuleCategoryIndicator>4</RuleCategoryIndicator>
+            <RuleCategoryIndicator>5</RuleCategoryIndicator>
+            <RuleCategoryIndicator>6</RuleCategoryIndicator>
+            <RuleCategoryIndicator>7</RuleCategoryIndicator>
+            <RuleCategoryIndicator>8</RuleCategoryIndicator>
+            <RuleCategoryIndicator>9</RuleCategoryIndicator>
+            <RuleCategoryIndicator>10</RuleCategoryIndicator>
+            <RuleCategoryIndicator>12</RuleCategoryIndicator>
+            <RuleCategoryIndicator>15</RuleCategoryIndicator>
+            <RuleCategoryIndicator>16</RuleCategoryIndicator>
+            <RuleCategoryIndicator>18</RuleCategoryIndicator>
+          </FareCalculationBreakdown>
+          <ItinTotalFare NonRefundableInd="O">
+            <BaggageInfo>
+              <US_DOT_Disclosure>
+                <Text>BAG ALLOWANCE     -LAXICN-02P/CZ/EACH PIECE UP TO 50 POUNDS/23</Text>
+                <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                <Text>BAG ALLOWANCE     -ICNLAX-02P/CZ/EACH PIECE UP TO 50 POUNDS/23</Text>
+                <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                <Text>CARRY ON ALLOWANCE</Text>
+                <Text>LAXCAN CANLAX-01P/CZ</Text>
+                <Text>01/UP TO 11 POUNDS/5 KILOGRAMS AND UP TO 45 LINEAR INCHES/115 L</Text>
+                <Text>INEAR CENTIMETERS</Text>
+                <Text>CANICN-01P/KE</Text>
+                <Text>01/UP TO 26 POUNDS/12 KILOGRAMS AND UP TO 45 LINEAR INCHES/115</Text>
+                <Text>LINEAR CENTIMETERS</Text>
+                <Text>ICNDLC DLCCAN-CZ-CARRY ON ALLOWANCE UNKNOWN-CONTACT CARRIER</Text>
+                <Text>CARRY ON CHARGES</Text>
+                <Text>LAXCAN ICNDLC DLCCAN CANLAX-CZ-CARRY ON FEES UNKNOWN-CONTACT CA</Text>
+                <Text>RRIER</Text>
+                <Text>CANICN-KE-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+                <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+                <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+                <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+              </US_DOT_Disclosure>
+            </BaggageInfo>
+            <BaseFare Amount="799.00" CurrencyCode="USD" />
+            <Endorsements>
+              <Text>Q/NONEND PENALTY APPLS</Text>
+            </Endorsements>
+            <Taxes TotalAmount="324.83">
+              <Tax Amount="16.00" TaxCode="YQI" TaxName="SERVICE FEE - INSURANCE" TicketingTaxCode="YQ" />
+              <Tax Amount="187.20" TaxCode="YRF" TaxName="SERVICE FEE - FUEL" TicketingTaxCode="YR" />
+              <Tax Amount="36.60" TaxCode="US2" TaxName="TRANSPORTATION TAX INTERNATION" TicketingTaxCode="US" />
+              <Tax Amount="5.77" TaxCode="YC" TaxName="CUSTOMS USER FEE" TicketingTaxCode="YC" />
+              <Tax Amount="7.00" TaxCode="XY2" TaxName="IMMIGRATION USER FEE" TicketingTaxCode="XY" />
+              <Tax Amount="3.96" TaxCode="XA" TaxName="APHIS PASSENGER FEE PASSENGERS" TicketingTaxCode="XA" />
+              <Tax Amount="5.60" TaxCode="AY" TaxName="PASSENGER CIVIL AVIATION SECUR" TicketingTaxCode="AY" />
+              <Tax Amount="33.20" TaxCode="CN" TaxName="AIRPORT FEE" TicketingTaxCode="CN" />
+              <Tax Amount="25.00" TaxCode="BP" TaxName="INTERNATIONAL PSC DEPARTURE TA" TicketingTaxCode="BP" />
+              <Tax Amount="4.50" TaxCode="XF" TaxName="PASSENGER FACILITY CHARGE" TicketingTaxCode="XF" />
+            </Taxes>
+            <TotalFare Amount="1123.83" CurrencyCode="USD" />
+            <Warnings>
+              <Warning ShortText="BAG ALLOWANCE     -LAXICN-02P/CZ/EACH PIECE UP TO 50 POUNDS/23" />
+              <Warning ShortText="KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS" />
+              <Warning ShortText="BAG ALLOWANCE     -ICNLAX-02P/CZ/EACH PIECE UP TO 50 POUNDS/23" />
+              <Warning ShortText="KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS" />
+              <Warning ShortText="CARRY ON ALLOWANCE" />
+              <Warning ShortText="LAXCAN CANLAX-01P/CZ" />
+              <Warning ShortText="01/UP TO 11 POUNDS/5 KILOGRAMS AND UP TO 45 LINEAR INCHES/115 L" />
+              <Warning ShortText="INEAR CENTIMETERS" />
+              <Warning ShortText="CANICN-01P/KE" />
+              <Warning ShortText="01/UP TO 26 POUNDS/12 KILOGRAMS AND UP TO 45 LINEAR INCHES/115" />
+              <Warning ShortText="LINEAR CENTIMETERS" />
+              <Warning ShortText="ICNDLC DLCCAN-CZ-CARRY ON ALLOWANCE UNKNOWN-CONTACT CARRIER" />
+              <Warning ShortText="CARRY ON CHARGES" />
+              <Warning ShortText="LAXCAN ICNDLC DLCCAN CANLAX-CZ-CARRY ON FEES UNKNOWN-CONTACT CA" />
+              <Warning ShortText="RRIER" />
+              <Warning ShortText="CANICN-KE-CARRY ON FEES UNKNOWN-CONTACT CARRIER" />
+              <Warning ShortText="ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON" />
+              <Warning ShortText="FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/" />
+              <Warning ShortText="CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./" />
+            </Warnings>
+          </ItinTotalFare>
+          <PassengerTypeQuantity Code="ADT" Quantity="2" />
+          <PTC_FareBreakdown>
+            <Cabin>Y</Cabin>
+            <FareBasis Code="U2NRCUS" FilingCarrier="CZ" />
+            <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+          </PTC_FareBreakdown>
+          <PTC_FareBreakdown>
+            <Cabin>Y</Cabin>
+            <FareBasis Code="U2NRCUS" FareAmount="515.00" FarePassengerType="ADT" FareType="P" FilingCarrier="CZ" GlobalInd="PA" Market="LAXSEL" />
+            <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+          </PTC_FareBreakdown>
+          <PTC_FareBreakdown>
+            <Cabin>Y</Cabin>
+            <FareBasis Code="V2LRCKR" FareAmount="83.95" FarePassengerType="ADT" FareType="P" FilingCarrier="CZ" GlobalInd="EH" Market="SELDLC" />
+            <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+          </PTC_FareBreakdown>
+          <PTC_FareBreakdown>
+            <Cabin>Y</Cabin>
+            <FareBasis Code="V2NRCUC" FilingCarrier="CZ" />
+            <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+          </PTC_FareBreakdown>
+          <PTC_FareBreakdown>
+            <Cabin>Y</Cabin>
+            <FareBasis Code="V2NRCUC" FareAmount="195.00" FarePassengerType="ADT" FareType="P" FilingCarrier="CZ" GlobalInd="PA" Market="LAXDLC" />
+            <FreeBaggageAllowance>PC002</FreeBaggageAllowance>
+          </PTC_FareBreakdown>
+        </AirItineraryPricingInfo>
+      </PricedItinerary>
+    </PriceQuote>
+  </OTA_AirPriceRS>
+  <TravelItineraryReadRS xmlns="http://services.sabre.com/sp/eab/v3_2">
+    <TravelItinerary>
+      <CustomerInfo />
+      <ItineraryInfo>
+        <ItineraryPricing>
+          <PriceQuote RPH="1">
+            <MiscInformation>
+              <BaggageFees>
+                <Text>BAG ALLOWANCE     -LAXICN-02P/CZ/EACH PIECE UP TO 50 POUNDS/23</Text>
+                <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                <Text>BAG ALLOWANCE     -ICNLAX-02P/CZ/EACH PIECE UP TO 50 POUNDS/23</Text>
+                <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                <Text>CARRY ON ALLOWANCE</Text>
+                <Text>LAXCAN CANLAX-01P/CZ</Text>
+                <Text>01/UP TO 11 POUNDS/5 KILOGRAMS AND UP TO 45 LINEAR INCHES/115 L</Text>
+                <Text>INEAR CENTIMETERS</Text>
+                <Text>CANICN-01P/KE</Text>
+                <Text>01/UP TO 26 POUNDS/12 KILOGRAMS AND UP TO 45 LINEAR INCHES/115</Text>
+                <Text>LINEAR CENTIMETERS</Text>
+                <Text>ICNDLC DLCCAN-CZ-CARRY ON ALLOWANCE UNKNOWN-CONTACT CARRIER</Text>
+                <Text>CARRY ON CHARGES</Text>
+                <Text>LAXCAN ICNDLC DLCCAN CANLAX-CZ-CARRY ON FEES UNKNOWN-CONTACT CA</Text>
+                <Text>RRIER</Text>
+                <Text>CANICN-KE-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+                <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+                <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+                <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+              </BaggageFees>
+              <SignatureLine CommissionAmount="5.00" CommissionID="A" ExpirationDateTime="00:00" Source="SYS" Status="EXPIRED">
+                <Text>K3SG K3SG*AWS 2112/07NOV18</Text>
+              </SignatureLine>
+            </MiscInformation>
+            <PricedItinerary DisplayOnly="false" InputMessage="WPK5.00P2ADTPU*5.00RQ" RPH="1" StatusCode="A" TaxExempt="false" ValidatingCarrier="CZ">
+              <AirItineraryPricingInfo>
+                <ItinTotalFare>
+                  <BaseFare Amount="799.00" CurrencyCode="USD" />
+                  <Taxes>
+                    <Tax Amount="324.83" TaxCode="XT" />
+                    <TaxBreakdownCode TaxPaid="false">16.00YQ</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">187.20YR</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">36.60US</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">5.77YC</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">7.00XY</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">3.96XA</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">5.60AY</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">33.20CN</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">25.00BP</TaxBreakdownCode>
+                    <TaxBreakdownCode TaxPaid="false">4.50XF</TaxBreakdownCode>
+                  </Taxes>
+                  <TotalFare Amount="1123.83" CurrencyCode="USD" />
+                  <Totals>
+                    <BaseFare Amount="1598.00" />
+                    <Taxes>
+                      <Tax Amount="649.66" />
+                    </Taxes>
+                    <TotalFare Amount="2247.66" />
+                  </Totals>
+                </ItinTotalFare>
+                <PassengerTypeQuantity Code="ADT" Quantity="02" />
+                <PTC_FareBreakdown>
+                  <Endorsements>
+                    <Endorsement type="PRICING_PARAMETER">
+                      <Text>WPK5.00$P2ADT$PU*5.00$RQ</Text>
+                    </Endorsement>
+                    <Endorsement type="WARNING">
+                      <Text>VALIDATING CARRIER - CZ</Text>
+                    </Endorsement>
+                    <Endorsement type="SYSTEM_ENDORSEMENT">
+                      <Text>Q/NONEND PENALTY APPLS</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>BAG ALLOWANCE     -LAXICN-02P/CZ/EACH PIECE UP TO 50 POUNDS/23</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>BAG ALLOWANCE     -ICNLAX-02P/CZ/EACH PIECE UP TO 50 POUNDS/23</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>KILOGRAMS AND UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>CARRY ON ALLOWANCE</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>LAXCAN CANLAX-01P/CZ</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>01/UP TO 11 POUNDS/5 KILOGRAMS AND UP TO 45 LINEAR INCHES/115 L</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>INEAR CENTIMETERS</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>CANICN-01P/KE</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>01/UP TO 26 POUNDS/12 KILOGRAMS AND UP TO 45 LINEAR INCHES/115</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>LINEAR CENTIMETERS</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>ICNDLC DLCCAN-CZ-CARRY ON ALLOWANCE UNKNOWN-CONTACT CARRIER</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>CARRY ON CHARGES</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>LAXCAN ICNDLC DLCCAN CANLAX-CZ-CARRY ON FEES UNKNOWN-CONTACT CA</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>RRIER</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>CANICN-KE-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+                    </Endorsement>
+                    <Endorsement type="DOT_BAGGAGE">
+                      <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+                    </Endorsement>
+                  </Endorsements>
+                  <FareBasis Code="U2NRCUS/U2NRCUS/V2LRCKR/V2NRCUC/V2NRCUC" />
+                  <FareCalculation>
+                    <Text>LAX CZ X/CAN CZ SEL515.00CZ DLC83.95CZ X/CAN CZ LAX195.00NUC793.95 PLUS5.00END ROE1.00 XFLAX4.5</Text>
+                  </FareCalculation>
+                  <FareSource>ATPC</FareSource>
+                  <FlightSegment ConnectionInd="O" DepartureDateTime="11-13T22:20" FlightNumber="328" ResBookDesigCode="U" SegmentNumber="1" Status="OK">
+                    <BaggageAllowance Number="02P" />
+                    <FareBasis Code="U2NRCUS" />
+                    <MarketingAirline Code="CZ" FlightNumber="328" />
+                    <OriginLocation LocationCode="LAX" />
+                    <ValidityDates>
+                      <NotValidAfter>2018-11-13</NotValidAfter>
+                      <NotValidBefore>2018-11-13</NotValidBefore>
+                    </ValidityDates>
+                  </FlightSegment>
+                  <FlightSegment ConnectionInd="X" DepartureDateTime="11-15T13:15" FlightNumber="4501" ResBookDesigCode="U" SegmentNumber="2" Status="OK">
+                    <BaggageAllowance Number="02P" />
+                    <FareBasis Code="U2NRCUS" />
+                    <MarketingAirline Code="CZ" FlightNumber="4501" />
+                    <OriginLocation LocationCode="CAN" />
+                    <ValidityDates>
+                      <NotValidAfter>2018-11-15</NotValidAfter>
+                      <NotValidBefore>2018-11-15</NotValidBefore>
+                    </ValidityDates>
+                  </FlightSegment>
+                  <FlightSegment ConnectionInd="O" DepartureDateTime="11-30T11:20" FlightNumber="686" ResBookDesigCode="V" SegmentNumber="3" Status="OK">
+                    <BaggageAllowance Number="02P" />
+                    <FareBasis Code="V2LRCKR" />
+                    <MarketingAirline Code="CZ" FlightNumber="686" />
+                    <OriginLocation LocationCode="ICN" />
+                    <ValidityDates>
+                      <NotValidAfter>2018-11-30</NotValidAfter>
+                      <NotValidBefore>2018-11-30</NotValidBefore>
+                    </ValidityDates>
+                  </FlightSegment>
+                  <FlightSegment ConnectionInd="O" DepartureDateTime="11-30T14:30" FlightNumber="3607" ResBookDesigCode="V" SegmentNumber="4" Status="OK">
+                    <BaggageAllowance Number="02P" />
+                    <FareBasis Code="V2NRCUC" />
+                    <MarketingAirline Code="CZ" FlightNumber="3607" />
+                    <OriginLocation LocationCode="DLC" />
+                    <ValidityDates>
+                      <NotValidAfter>2018-11-30</NotValidAfter>
+                      <NotValidBefore>2018-11-30</NotValidBefore>
+                    </ValidityDates>
+                  </FlightSegment>
+                  <FlightSegment ConnectionInd="X" DepartureDateTime="11-30T21:30" FlightNumber="327" ResBookDesigCode="V" SegmentNumber="5" Status="OK">
+                    <BaggageAllowance Number="02P" />
+                    <FareBasis Code="V2NRCUC" />
+                    <MarketingAirline Code="CZ" FlightNumber="327" />
+                    <OriginLocation LocationCode="CAN" />
+                    <ValidityDates>
+                      <NotValidAfter>2018-11-30</NotValidAfter>
+                      <NotValidBefore>2018-11-30</NotValidBefore>
+                    </ValidityDates>
+                  </FlightSegment>
+                  <FlightSegment>
+                    <OriginLocation LocationCode="LAX" />
+                  </FlightSegment>
+                </PTC_FareBreakdown>
+              </AirItineraryPricingInfo>
+            </PricedItinerary>
+            <ResponseHeader>
+              <Text>FARE - PRICE RETAINED</Text>
+              <Text>FARE USED TO CALCULATE DISCOUNT</Text>
+              <Text>FARE NOT GUARANTEED UNTIL TICKETED</Text>
+            </ResponseHeader>
+            <PriceQuotePlus DomesticIntlInd="I" PricingStatus="S" VerifyFareCalc="false" ItineraryChanged="false" ManualFare="false" NegotiatedFare="false" SystemIndicator="S" NUCSuppresion="false" SubjToGovtApproval="false" IT_BT_Fare="BT" DisplayOnly="false" DiscountAmount="0">
+              <TicketingInstructionsInfo />
+            </PriceQuotePlus>
+          </PriceQuote>
+          <PriceQuoteTotals>
+            <BaseFare Amount="1598.00" />
+            <Taxes>
+              <Tax Amount="649.66" />
+            </Taxes>
+            <TotalFare Amount="2247.66" />
+          </PriceQuoteTotals>
+        </ItineraryPricing>
+        <ReservationItems>
+          <Item RPH="1">
+            <FlightSegment AirMilesFlown="7231" ArrivalDateTime="11-15T05:40" DayOfWeekInd="2" DepartureDateTime="2018-11-13T22:20" ElapsedTime="15.20" eTicket="true" FlightNumber="0328" NumberInParty="02" ResBookDesigCode="U" SegmentNumber="0001" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="CAN" TerminalCode="2" />
+              <Equipment AirEquipType="380" />
+              <MarketingAirline Code="CZ" FlightNumber="0328" />
+              <Meal Code="D" />
+              <OriginLocation LocationCode="LAX" Terminal="TOM BRADLEY INTL TERM" TerminalCode="B" />
+              <SupplierRef ID="DCCZ" />
+              <UpdatedArrivalTime>11-15T05:40</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-13T22:20</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+          <Item RPH="2">
+            <FlightSegment AirMilesFlown="1240" ArrivalDateTime="11-15T17:25" DayOfWeekInd="4" DepartureDateTime="2018-11-15T13:15" ElapsedTime="03.10" eTicket="true" FlightNumber="4501" NumberInParty="02" ResBookDesigCode="U" SegmentNumber="0002" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="ICN" Terminal="TERMINAL 2" TerminalCode="2" />
+              <Equipment AirEquipType="333" />
+              <MarketingAirline Code="CZ" FlightNumber="4501" />
+              <Meal Code="L" />
+              <OperatingAirline Code="KE" CompanyShortName="KOREAN AIR" />
+              <OriginLocation LocationCode="CAN" TerminalCode="2" />
+              <SupplierRef ID="DCCZ" />
+              <Text>OPERATED BY KOREAN AIR</Text>
+              <UpdatedArrivalTime>11-15T17:25</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-15T13:15</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+          <Item RPH="3">
+            <FlightSegment AirMilesFlown="0277" ArrivalDateTime="11-30T11:40" DayOfWeekInd="5" DepartureDateTime="2018-11-30T11:20" ElapsedTime="01.20" eTicket="true" FlightNumber="0686" NumberInParty="02" ResBookDesigCode="V" SegmentNumber="0003" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="DLC" />
+              <Equipment AirEquipType="320" />
+              <MarketingAirline Code="CZ" FlightNumber="0686" />
+              <OriginLocation LocationCode="ICN" Terminal="TERMINAL 1" TerminalCode="1" />
+              <SupplierRef ID="DCCZ" />
+              <UpdatedArrivalTime>11-30T11:40</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-30T11:20</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+          <Item RPH="4">
+            <FlightSegment AirMilesFlown="1177" ArrivalDateTime="11-30T18:15" DayOfWeekInd="5" DepartureDateTime="2018-11-30T14:30" ElapsedTime="03.45" eTicket="true" FlightNumber="3607" NumberInParty="02" ResBookDesigCode="V" SegmentNumber="0004" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="CAN" TerminalCode="2" />
+              <Equipment AirEquipType="321" />
+              <MarketingAirline Code="CZ" FlightNumber="3607" />
+              <Meal Code="C" />
+              <OriginLocation LocationCode="DLC" />
+              <SupplierRef ID="DCCZ" />
+              <UpdatedArrivalTime>11-30T18:15</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-30T14:30</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+          <Item RPH="5">
+            <FlightSegment AirMilesFlown="7231" ArrivalDateTime="11-30T18:10" DayOfWeekInd="5" DepartureDateTime="2018-11-30T21:30" ElapsedTime="12.40" eTicket="true" FlightNumber="0327" NumberInParty="02" ResBookDesigCode="V" SegmentNumber="0005" SmokingAllowed="false" SpecialMeal="false" Status="SS" StopQuantity="00">
+              <DestinationLocation LocationCode="LAX" Terminal="TOM BRADLEY INTL TERM" TerminalCode="B" />
+              <Equipment AirEquipType="380" />
+              <MarketingAirline Code="CZ" FlightNumber="0327" />
+              <Meal Code="D" />
+              <OriginLocation LocationCode="CAN" TerminalCode="2" />
+              <SupplierRef ID="DCCZ" />
+              <UpdatedArrivalTime>11-30T18:10</UpdatedArrivalTime>
+              <UpdatedDepartureTime>11-30T21:30</UpdatedDepartureTime>
+            </FlightSegment>
+          </Item>
+        </ReservationItems>
+      </ItineraryInfo>
+      <ItineraryRef AirExtras="false" InhibitCode="U" PartitionID="AA" PrimeHostID="1S">
+        <Source PseudoCityCode="K3SG" />
+      </ItineraryRef>
+    </TravelItinerary>
+  </TravelItineraryReadRS>
+</EnhancedAirBookRS>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirRulesRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ReturnHostCommand="true" Version="2.3.0">
+  <OriginDestinationInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="11-13">
+      <DestinationLocation LocationCode="ICN" />
+      <MarketingCarrier Code="CZ" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <RuleReqInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <Category>16</Category>
+    <FareBasis Code="U2NRCUS" />
+  </RuleReqInfo>
+</OTA_AirRulesRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirRulesRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL/v01">
+    <Success timeStamp="2018-11-08T10:13:20+05:00">
+      <SystemSpecificResults>
+        <HostCommand LNIATA="222222">RDLAXICN13NOVU2NRCUS-CZ*16</HostCommand>
+      </SystemSpecificResults>
+    </Success>
+  </ApplicationResults>
+  <FareRuleInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <Header>
+      <Line Type="Legend">
+        <Text>V FARE BASIS     BK    FARE   TRAVEL-TICKET AP  MINMAX  RTG</Text>
+      </Line>
+      <Line Type="Fare">
+        <Text>1   U2NRCUS        U R  1030.00     ----      -    -/ 6M PA01</Text>
+      </Line>
+      <Line Type="Passenger Type">
+        <Text>PASSENGER TYPE-ADT                 AUTO PRICE-YES</Text>
+      </Line>
+      <Line Type="Origin Destination">
+        <Text>FROM-LAX TO-SEL    CXR-CZ    TVL-13NOV18  RULE-US05 IPRP/3</Text>
+      </Line>
+      <Line Type="Fare Basis">
+        <Text>FARE BASIS-U2NRCUS           SPECIAL FARE  DIS-E   VENDOR-ATP</Text>
+      </Line>
+      <Line Type="Fare Type">
+        <Text>FARE TYPE-XEX      RT-REGULAR EXCURSION</Text>
+      </Line>
+      <Line Type="Currency">
+        <Text>USD  1030.00  0008  E28MAY16 D-INFINITY   FC-U2NRCUS  FN-Z</Text>
+      </Line>
+      <Line Type="System Dates">
+        <Text>SYSTEM DATES - CREATED 26MAY16/2349  EXPIRES INFINITY</Text>
+      </Line>
+      <ParsedData>
+        <CurrencyLine>
+          <Amount>1030.00</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <Discontinue>INFINITY</Discontinue>
+          <Effective>2016-05-28</Effective>
+          <FareClass>U2NRCUS</FareClass>
+          <RoutingNumberOrMPM>0008</RoutingNumberOrMPM>
+          <TariffDescriptionNumber>Z</TariffDescriptionNumber>
+        </CurrencyLine>
+        <FareBasisLine>
+          <DisplayType Code="E" />
+          <FareBasis Code="U2NRCUS" />
+          <FareVendor>ATP</FareVendor>
+          <Text>SPECIAL FARE</Text>
+        </FareBasisLine>
+        <FareTypeLine>
+          <FareDescription Code="RT">REGULAR EXCURSION</FareDescription>
+          <FareType>XEX</FareType>
+        </FareTypeLine>
+        <OriginDestinationLine>
+          <Airline Code="CZ" />
+          <DestinationLocation LocationCode="SEL" />
+          <OriginLocation LocationCode="LAX" />
+          <Rule>US05</Rule>
+          <TariffDescriptionNumber>IPRP/3</TariffDescriptionNumber>
+          <TravelDate>2018-11-13</TravelDate>
+        </OriginDestinationLine>
+        <PassengerTypeLine>
+          <AutoPrice>YES</AutoPrice>
+          <PassengerType Code="ADT" />
+        </PassengerTypeLine>
+        <SystemDatesLine>
+          <CreateDateTime>2016-05-26T23:49</CreateDateTime>
+          <ExpireDateTime>INFINITY</ExpireDateTime>
+        </SystemDatesLine>
+      </ParsedData>
+    </Header>
+    <Rules>
+      <Paragraph RPH="16" Title="PENALTIES">
+        <Text>FARE RULE
+CHANGES
+CHARGE USD 100.00.
+NOTE - TEXT BELOW NOT VALIDATED FOR AUTOPRICING.
+A CHANGE IS A ROUTING/DATE/BOOKING CLASS/FLIGHT
+MODIFICATION. WHEN MORE THAN ONE FARE COMPONENT
+IS BEING CHANGED THE HIGHEST PENALTY OF ALL
+CHANGED FARE COMPONENTS WILL APPLY.
+BEFORE DEPARTURE OF JOURNEY
+IF CHANGE DOES NOT OCCUR ON THE FIRST FARE
+COMPONENT OF THE JOURNEY NEW FARE WILL BE
+RECALCULATED USING FARES IN EFFECT WHEN TKT WAS
+ISSUED.
+WHEN CHANGE OCCURS ON THE FIRST FARE COMPONENT OF
+THE JOURNEY ONLY OR ON THE FIRST FARE COMPONENT
+AND OTHER FARE COMPONENT OF THE JOURNEY NEW FARE
+WILL BE RECALCULATED USING FARES IN EFFECT ON
+DATE OF REISSUE.
+AFTER DEPARTURE OF JOURNEY
+NEW FARE WILL BE RECALCULATED USING FARES IN
+EFFECT WHEN TKT WAS ISSUED.
+THE NEW TICKET FARE AMOUNT MUST BE EQUAL TO OR
+HIGHER THAN THE PREVIOUS TICKET FARE AMOUNT.
+CHARGE DIFFERENCE IN FARE PLUS CHANGE FEE IF ANY
+IF THE NEW FARE AMOUNT IS LOWER THAN THE PREVIOUS
+FARE AMOUNT IGNORE ANY RESIDUAL AMOUNT AND NO
+REFUND PERMITTED. CHARGE CHANGE FEE IF ANY
+APPLY THE HIGHEST CHANGE FEE OF ALL CHANGED FARE
+COMPONENTS WITHIN THE JOURNEY. CHANGE FEE IS
+SUBJECT TO EACH CHANGE TRANSACTION.
+CHANGES MUST BE WITHIN TICKET VALIDITY.
+CANCELLATIONS
+CHARGE USD 100.00 FOR CANCEL/REFUND.
+NOTE - TEXT BELOW NOT VALIDATED FOR AUTOPRICING.
+IF PASSENGER FLOWN ONLY ON CODE-SHAREDFLIGHT
+WITHIN NORTH AMERICA.THE FARE OF FLOWN SECTOR
+WILL BE THE HIGHEST FARE LEVEL OF
+FIRST/BUSINESS/ECONOMY CLASS SERVICE OF OPERATING
+CARRIER.
+NOTE - TEXT BELOW NOT VALIDATED FOR AUTOPRICING.
+CUSTOMERS WHO PURCHASE A TICKET FOR TRAVEL ON CZ
+VIA CZ CHANNELS MAY CANCEL RESERVATIONS/REFUND
+TICKET WITHOUT PENALTY WITHIN 24HRS OF PURCHASE
+IF TICKET IS PURCHASED AT LEAST 1 WEEK PRIOR TO
+FLIGHT DEPARTURE IF THE JOURNEY INVOLVES ANY
+POINT IN THE USA.
+NOTE - TEXT BELOW NOT VALIDATED FOR AUTOPRICING.
+CHILD 2-11 AND INFANT UNDER 2 WITH A SEAT
+CHANGE/CANCELLATION/NOSHOW
+ANY TIME
+SAME CHARGE WITH ADULT.
+INFANT UNDER 2 WITHOUT A SEAT
+CHANGE/CANCELLATION/NOSHOW
+ANY TIME
+PERMITTED WITH NO CHARGE.
+GENERAL RULE - APPLY UNLESS OTHERWISE SPECIFIED
+NOTE - TEXT BELOW NOT VALIDATED FOR AUTOPRICING.
+CANCELLATIONS
+THE MOST RESTRICTED RULE WILL BE APPLIED WHEN
+FARES COMBINED.
+AND
+FOR REFUNDABLE FARES/TICKETS
+REFUND THE DIFFERENCE BETWEEN THE FARE PAID AND
+THE APPLICABLE FARE FOR THE TRANSPORTATION USE.
+AND
+FOR NON REFUNDABLE FARES/TICKETS
+THE INTERNATIONAL/DOMESTIC SURCHARGES OF
+YQ/CARRIER IMPOSED MISC FEE AND YR/FUEL SERVICE
+FEE WILL NOT BE REFUNDED.</Text>
+      </Paragraph>
+    </Rules>
+  </FareRuleInfo>
+</OTA_AirRulesRS>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirRulesRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ReturnHostCommand="true" Version="2.3.0">
+  <OriginDestinationInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="11-30">
+      <DestinationLocation LocationCode="DLC" />
+      <MarketingCarrier Code="CZ" />
+      <OriginLocation LocationCode="ICN" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <RuleReqInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <Category>16</Category>
+    <FareBasis Code="V2LRCKR" />
+  </RuleReqInfo>
+</OTA_AirRulesRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirRulesRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL/v01">
+    <Success timeStamp="2018-11-08T10:13:21+05:00">
+      <SystemSpecificResults>
+        <HostCommand LNIATA="222222">RDICNDLC30NOVV2LRCKR-CZ*16</HostCommand>
+      </SystemSpecificResults>
+    </Success>
+  </ApplicationResults>
+  <FareRuleInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <Header>
+      <Line Type="Legend">
+        <Text>V FARE BASIS     BK    FARE   TRAVEL-TICKET AP  MINMAX  RTG</Text>
+      </Line>
+      <Line Type="Fare">
+        <Text>1   V2LRCKR        V R   169.00     ----      -    -/  EH01</Text>
+      </Line>
+      <Line Type="Passenger Type">
+        <Text>PASSENGER TYPE-ADT                 AUTO PRICE-YES</Text>
+      </Line>
+      <Line Type="Origin Destination">
+        <Text>FROM-SEL TO-DLC    CXR-CZ    TVL-30NOV18  RULE-KR03 IPRPG/8</Text>
+      </Line>
+      <Line Type="Fare Basis">
+        <Text>FARE BASIS-V2LRCKR           SPECIAL FARE  DIS-E   VENDOR-ATP</Text>
+      </Line>
+      <Line Type="Fare Type">
+        <Text>FARE TYPE-XEX      RT-REGULAR EXCURSION</Text>
+      </Line>
+      <Line Type="Currency">
+        <Text>KRW   190000  0082  E15MAY18 D-INFINITY   FC-V2LRCKR  FN-</Text>
+      </Line>
+      <Line Type="System Dates">
+        <Text>SYSTEM DATES - CREATED 14MAY18/2015  EXPIRES INFINITY</Text>
+      </Line>
+      <ParsedData>
+        <CurrencyLine>
+          <Amount>190000</Amount>
+          <CurrencyCode>KRW</CurrencyCode>
+          <Discontinue>INFINITY</Discontinue>
+          <Effective>2018-05-15</Effective>
+          <FareClass>V2LRCKR</FareClass>
+          <RoutingNumberOrMPM>0082</RoutingNumberOrMPM>
+        </CurrencyLine>
+        <FareBasisLine>
+          <DisplayType Code="E" />
+          <FareBasis Code="V2LRCKR" />
+          <FareVendor>ATP</FareVendor>
+          <Text>SPECIAL FARE</Text>
+        </FareBasisLine>
+        <FareTypeLine>
+          <FareDescription Code="RT">REGULAR EXCURSION</FareDescription>
+          <FareType>XEX</FareType>
+        </FareTypeLine>
+        <OriginDestinationLine>
+          <Airline Code="CZ" />
+          <DestinationLocation LocationCode="DLC" />
+          <OriginLocation LocationCode="SEL" />
+          <Rule>KR03</Rule>
+          <TariffDescriptionNumber>IPRPG/8</TariffDescriptionNumber>
+          <TravelDate>2018-11-30</TravelDate>
+        </OriginDestinationLine>
+        <PassengerTypeLine>
+          <AutoPrice>YES</AutoPrice>
+          <PassengerType Code="ADT" />
+        </PassengerTypeLine>
+        <SystemDatesLine>
+          <CreateDateTime>2018-05-14T20:15</CreateDateTime>
+          <ExpireDateTime>INFINITY</ExpireDateTime>
+        </SystemDatesLine>
+      </ParsedData>
+    </Header>
+    <Rules>
+      <Paragraph RPH="16" Title="PENALTIES">
+        <Text>FARE RULE
+CHANGES
+ANY TIME
+CHARGE KRW 30000.
+NOTE - TEXT BELOW NOT VALIDATED FOR AUTOPRICING.
+A CHANGE IS A ROUTING/DATE/BOOKING CLASS/FLIGHT
+MODIFICATION. WHEN MORE THAN ONE FARE COMPONENT
+IS BEING CHANGED THE HIGHEST PENALTY OF ALL
+CHANGED FARE COMPONENTS WILL APPLY.
+BEFORE DEPARTURE OF JOURNEY
+IF CHANGE DOES NOT OCCUR ON THE FIRST FARE
+COMPONENT OF THE JOURNEY NEW FARE WILL BE
+RECALCULATED USING FARES IN EFFECT WHEN TKT WAS
+ISSUED.
+WHEN CHANGE OCCURS ON THE FIRST FARE COMPONENT OF
+THE JOURNEY ONLY OR ON THE FIRST FARE COMPONENT
+AND OTHER FARE COMPONENT OF THE JOURNEY NEW FARE
+WILL BE RECALCULATED USING FARES IN EFFECT ON
+DATE OF REISSUE.
+AFTER DEPARTURE OF JOURNEY
+NEW FARE WILL BE RECALCULATED USING FARES IN
+EFFECT WHEN TKT WAS ISSUED.
+THE NEW TICKET FARE AMOUNT MUST BE EQUAL TO OR
+HIGHER THAN THE PREVIOUS TICKET FARE AMOUNT.
+CHARGE DIFFERENCE IN FARE PLUS CHANGE FEE IF ANY
+IF THE NEW FARE AMOUNT IS LOWER THAN THE PREVIOUS
+FARE AMOUNT IGNORE ANY RESIDUAL AMOUNT AND NO
+REFUND PERMITTED. CHARGE CHANGE FEE IF ANY
+APPLY THE HIGHEST CHANGE FEE OF ALL CHANGED FARE
+COMPONENTS WITHIN THE JOURNEY. CHANGE FEE IS
+SUBJECT TO EACH CHANGE TRANSACTION.
+CHANGES MUST BE WITHIN TICKET VALIDITY.
+CANCELLATIONS
+ANY TIME
+CHARGE KRW 90000 FOR CANCEL/REFUND.
+CHILD/INFANT DISCOUNTS APPLY.
+NOTE - TEXT BELOW NOT VALIDATED FOR AUTOPRICING.
+WITHIN 6DAYS BEFORE DEPARTURE THE ORIGIN OF
+JOURNEY KRW90000
+14DAYS - 07DAYS BEFORE DEPARTURE THE
+ORIGIN OF JOURNEY
+KRW70000
+60DAYS - 15DAYS BEFORE DEPARTURE THE
+ORIGIN OF JOURNEY
+KRW60000
+90DAYS - 61DAYS BEFORE DEPARTURE THE
+ORIGIN OF JOURNEY
+KRW40000
+MORE THAN 91DAYS BEFORE DEPARTURE THE ORIGIN
+OF JOURNEY KRW30000
+NOTE - TEXT BELOW NOT VALIDATED FOR AUTOPRICING.
+CHILD 2-11 AND INFANT UNDER 2 WITH A SEAT
+CHANGE/CANCELLATION/NOSHOW
+ANY TIME
+SAME CHARGE WITH ADULT.
+INFANT UNDER 2 WITHOUT A SEAT
+CHANGE/CANCELLATION/NOSHOW
+ANY TIME
+PERMITTED WITH NO CHARGE.
+NOTE - TEXT BELOW NOT VALIDATED FOR AUTOPRICING.
+ORIGIN FROM KR
+1/ PENALTY DOES NOT APPLY FOR INFANT NOT
+OCCUPYING A SEAT.
+2/ PENALTY FOR CHILD IS SUBJECT TO CHILD
+DISCOUNTS RULE FOR THE FARE.
+3/ WAIVER APPLIES TO DEATH OF THE PASSENGER/
+IMMEDIATE FAMILY MEMBER VALID DEATH
+CERTIFICATE REQUIRED.
+4/ IN CASE OF COMBINATION OF FARES THE MOST
+RESTRICTIVE RULE APPLIES PER PRICING UNIT.
+GENERAL RULE - APPLY UNLESS OTHERWISE SPECIFIED
+NOTE - TEXT BELOW NOT VALIDATED FOR AUTOPRICING.
+CANCELLATIONS
+THE MOST RESTRICTED RULE WILL BE APPLIED WHEN
+FARES COMBINED.
+AND
+FOR REFUNDABLE FARES/TICKETS
+REFUND THE DIFFERENCE BETWEEN THE FARE PAID AND
+THE APPLICABLE FARE FOR THE TRANSPORTATION USE.
+AND
+FOR NON REFUNDABLE FARES/TICKETS
+THE INTERNATIONAL/DOMESTIC SURCHARGES OF
+YQ/CARRIER IMPOSED MISC FEE AND YR/FUEL SERVICE
+FEE WILL NOT BE REFUNDED.</Text>
+      </Paragraph>
+    </Rules>
+  </FareRuleInfo>
+</OTA_AirRulesRS>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirRulesRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ReturnHostCommand="true" Version="2.3.0">
+  <OriginDestinationInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment DepartureDateTime="11-30">
+      <DestinationLocation LocationCode="LAX" />
+      <MarketingCarrier Code="CZ" />
+      <OriginLocation LocationCode="DLC" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+  <RuleReqInfo xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <Category>16</Category>
+    <FareBasis Code="V2NRCUC" />
+  </RuleReqInfo>
+</OTA_AirRulesRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_AirRulesRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.3.0">
+  <ApplicationResults status="NotProcessed" xmlns="http://services.sabre.com/STL/v01">
+    <Error type="BusinessLogic" timeStamp="2018-11-08T10:13:22+05:00">
+      <SystemSpecificResults>
+        <HostCommand LNIATA="222222">RDDLCLAX30NOVV2NRCUC-CZ*16</HostCommand>
+        <Message>FARE BASIS NOT FOUND FOR CITYPAIR/DATE
+</Message>
+        <ShortText>ERR.SWS.HOST.ERROR_IN_RESPONSE</ShortText>
+      </SystemSpecificResults>
+    </Error>
+  </ApplicationResults>
+</OTA_AirRulesRS>
