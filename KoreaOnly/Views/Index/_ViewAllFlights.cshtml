@@ -9,7 +9,6 @@
 }
 
 
-
 <h4 style="margin-left:20px;margin-top:20px;">@Model.Count() Flights Found</h4>
 <div class="col-md-12 col-lg-12 col-sm-12">
 
@@ -30,23 +29,23 @@
                     @for (int i = 0; i < Flight.AirlineCode.Count; i++)
                     {
                         <div class="row flight_one left">
-                            <div class="col-md-3 col-xs-4 flight_centre">
+                            <div class="col-md-3 col-xs-12 flight_centre">
                                 <img src="~/Images/Airlines/@(Flight.AirlineCode[i]).png" height="30" class="flight_icon">
                                 <p class="airlinename2"> @(MainController.GetAirline(Flight.GetDeparture_Airline(i)).AirlineName) </p>
                             </div>
-                            <div class="col-md-2 col-xs-2 flight_right">
+                            <div class="col-md-2 col-xs-4 flight_right">
                                 <strong> @Flight.Flight_From_Time[i] </strong>
                                 <p> @Flight.Flight_From[i] </p>
                             </div>
-                            <div class="col-md-2 col-xs-2 flight_centre">
+                            <div class="col-md-2 col-xs-4 flight_centre">
                                 <div class="line hidden-xs"></div>
                                 <p class="flight_stop">@(Convert.ToInt32(Flight.Stop_Count[i]) == 0 ? "NonStop" : Flight.Stop_Count[i] + " Stop")</p>
                             </div>
-                            <div class="col-md-2 col-xs-2 flight_left">
+                            <div class="col-md-2 col-xs-4 flight_left">
                                 <strong> @Flight.Flight_To_Time[i] </strong>
                                 <p> @Flight.Flight_To[i] </p>
                             </div>
-                            <div class="col-md-3 col-xs-3 flight_centre">
+                            <div class="col-md-3 col-xs-12 flight_centre">
                                 <p style="margin-bottom:0px;font-weight:bold;" class="hidden-xs">Duration</p>
                                 <p class="flight_stop"> @Flight.GetTotalTime[i]</p>
                             </div>
@@ -56,7 +55,7 @@
                 <div class="col-md-3 col-xs-12 flight_right flight_two">
                     <div class="bottom-right">
                         <span class="amount">$ @Flight.Total_Price</span>
-                        <span href="#" FlightId="@Flight.ID" class="btn btn-default btnTheam btnx SelectFlight" role="button">Select</span>
+                        <a href="#" FlightId="@Flight.ID" class="btn btn-default btnTheam btnx SelectFlight" role="button">Select</a>
 
                     </div>
                 </div>
@@ -83,5 +82,3 @@
 
 
 </div>
-
-

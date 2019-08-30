@@ -1,14 +1,15 @@
-﻿
+﻿@model List<KoreaOnly.Models.ContactInfoModel>
+
 @{
     ViewBag.Title = "ContactInfo";
     Layout = "~/Views/Default.cshtml";
-    //var AirRule = (Additional.SabreCommand.SabreCommandLLSRS)Session["WP"];
+    var AirRule = (List<Additional.OTA_AirRule.OTA_AirRulesRS>)Session["AirRulles"];
+    var AirRulleSabre = (string)Session["AirRullesSabre"];
 
-    //var WPRD = (List<Additional.SabreCommand.SabreCommandLLSRS>)Session["WPRD"];
 
 }
 
- 
+
 <style>
     .btn-primary {
         color: #fff;
@@ -101,23 +102,210 @@
 
 <div class="clearfix"></div>
 <div class="row">
+
     <div class="col-md-12">
-        <div class="col-md-4" id="SideBarFlightDetails">
+        <div class="col-md-4">
             <div class="row">
                 <h2 style="font-size: 22px !important;line-height: 26px;font-weight:bold;">Review Your Selection and Price</h2>
                 <hr style="margin-top: 9px;margin-bottom: 10px;" />
 
-                <div id="loadingdivs" style="">
-                    <div style="height: 95%;width: 95%;top: 10px;background-color:  #fff;bottom:  10px; z-index:100; opacity:0.6;  ">
+                <div class="col-md-12">
+
+                    <div class="Flight_Details" data-toggle="collapse" data-target="#Flight_More_info">
+
+                        <p>Flight Details</p>
+
+                        @{ var R = (Additional.SearchFares.OTA_AirLowFareSearchRSPricedItineraryOriginDestinationOption[])Session["SelectedFlight"]; }
+
+                        @for (int i = 0; i < R.Length; i++)
+                        {
+                            if (i == 1 && Model.Count == 2)
+                            {
+                                <p><i class="fa fa-plane fa-rotate-270"></i>&nbsp;&nbsp;Return --- @R[i].FlightSegment.First().OriginLocation.LocationCode&nbsp;&nbsp;<i class="glyphicon glyphicon-arrow-right"></i>&nbsp;&nbsp;@R[i].FlightSegment.Last().DestinationLocation.LocationCode&nbsp;&nbsp;@(Convert.ToDateTime(R[i].FlightSegment.First().DepartureDateTime).ToString("MMM dd hh:mm")) @*@(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("hh:mm"))*@</p>
+                            }
+                            else
+                            {
+                                <p><i class="fa fa-plane"></i>&nbsp;&nbsp;Depart --- @R[i].FlightSegment.First().OriginLocation.LocationCode&nbsp;&nbsp;<i class="glyphicon glyphicon-arrow-right"></i>&nbsp;&nbsp;@R[i].FlightSegment.Last().DestinationLocation.LocationCode&nbsp;&nbsp;@(Convert.ToDateTime(R[i].FlightSegment.First().DepartureDateTime).ToString("MMM dd hh:mm")) @*@(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("hh:mm"))*@</p>
+                            }
+                        }
+
+
+                        <p class="small" style="cursor: pointer;">(Click To See Your Flight Details)</p>
+
                     </div>
-                    <div class="loader" style="margin:0 auto;top: 30%;right: 40%;left: 42%;z-index: 110;"></div>
-                    <div style="margin:25px auto;top: 65%;right: 36%;left: 36%;z-index: 110;text-align:center;color:#1c6784;">
-                        <label>Please Wait...</label>
+                    <div id="Flight_More_info" class="Flight_More_info collapse">
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            if (i == 1 && Model.Count == 2)
+                            {
+                                <p style="font-weight:bold;"><i class="fa fa-plane fa-rotate-270"></i>&nbsp;&nbsp;Return</p>
+                            }
+                            else
+                            {
+                                <p style="font-weight:bold;"><i class="fa fa-plane"></i>&nbsp;&nbsp;Departure</p>
+                            }
+
+                            <table class="table table-bordered c-passenger-table" style="background-color:#0f3e50;font-size: 13px; color:white;">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <table class="table table-bordered c-passenger-table" style="background-color:white;color:#474747;font-weight:normal;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="width: 70px" class="small">Flight#</td>
+                                                        <td>@string.Format("{0} {1}", Model[i].Marketing_Airline, Model[i].FlightNo)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><i class="fa fa-plane"></i> <br>Take-off</td>
+                                                        <td>
+                                                            @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("MMM")) @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("hh:mm"))<br> @Model[i].Take_Off_Location_Airport <br /><strong>Terminal-:</strong>@(Model[i].Take_Off_Location_Terminal) <br> @Model[i].Take_Off_Location_City
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><i class="fa fa-plane fa-rotate-90"></i><br> Landing</td>
+                                                        <td>
+                                                            @(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("MMM")) @(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("hh:mm"))<br />
+                                                            <strong>Terminal-:</strong>
+                                                            @(Model[i].Landing_Location_Terminal)
+                                                            <br>
+                                                            @Model[i].Landing_Location_Airport <br> @Model[i].Landing_Location_City
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <strong>Duration-:</strong>
+                                            @Model[i].Flight_Duration  &nbsp;|
+                                            <strong>Equipment Type:</strong>
+                                            @( MainController.GetAircraftTypeByCode(Model[i].Equipment_Type).Description) &nbsp;|
+                                            &nbsp;
+                                            <strong>Air Miles-:</strong>
+                                            @Model[i].Air_Miles&nbsp;|
+                                            &nbsp;<strong>Operating Airline-:</strong>
+                                            @(MainController.GetAirline(Model[i].Operating_Airline).AirlineName)&nbsp; @Model[i].Operating_Airline_CompanyName
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        }
+
                     </div>
+
+
+                    <div class="Fare_Info" data-toggle="collapse" data-target="#Fare_Info">
+
+                        <p>Fare Info</p>
+
+                        <p class="small" style="cursor: pointer;">(Click To See Your Fare Details)</p>
+
+                        <div id="Fare_Info" class="Fare_More_Info collapse in">
+                            <table class="table table-bordered c-passenger-table" style="font-weight:normal;background-color:white;color:#474747;    font-size: 14px;">
+                                <thead>
+                                    <tr>
+                                        <th class="small">Passengers</th>
+                                        <th class="small">Base Fare</th>
+                                        <th class="small">Tax</th>
+                                        <th class="small">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{ decimal TotalFarePrice = 0;}
+                                    @foreach (var Price in (List<FarePrice>)Session["Prices"])
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Price.PassengerName.ToString()&nbsp;x&nbsp; @Price.NoOfPassenger
+                                            </td>
+                                            <td>@Price.BaseFare</td>
+                                            <td>@Price.Tax</td>
+                                            <td>@Price.TotalAmount</td>
+                                        </tr>
+
+                                        TotalFarePrice += Convert.ToDecimal(Price.TotalAmount);
+
+                                    }
+                                </tbody>
+                            </table>
+
+                            <div class="center" style="margin-bottom: 10px;">
+                                <br>
+                                Total Fare: $@TotalFarePrice
+                                <br>
+                                @* Service Charge: $0.00*@
+                            </div>
+                            <div>
+                                <div class="center" style="margin-bottom: 10px;">
+                                    <span class="font-xl">
+                                        @*Total Price: $@TotalFarePrice*@
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="Baggage_Details" data-toggle="collapse" data-target="#Baggage_Details">
+
+                        <p>Baggage Details</p>
+
+                        <p class="small" style="cursor: pointer;">(Click Here)</p>
+
+                        <div id="Baggage_Details" class="Baggage_More_Details collapse">
+                            <table class="table table-bordered c-passenger-table" style="font-weight:normal;background-color:white;color:#474747;">
+                                <tbody>
+
+                                    @foreach (var Bag in (string[])Session["BagDetails"])
+                                    {
+                                        <tr>
+                                            <td class="small" style="text-align:left; color: white; background: rgb(15, 62, 80);">@Bag</td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="IMportant">
+
+                        <p>Important Information</p>
+
+                        <p class="small" style="cursor: pointer;"></p>
+
+                        <div id="IMportant" class="IMportant_More">
+                            <table class="table table-bordered c-passenger-table" style="font-weight:normal;background-color:white;color:#474747;">
+                                <tbody>
+                                    <tr>
+                                        <td class="small" style="text-align:left; color: white; background: rgb(15, 62, 80);cursor:pointer;" data-toggle="modal" data-target="#exampleModalLong">Click to See Fare Rules For Airline</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="small" style="text-align:left; color: white; background: rgb(15, 62, 80);cursor:pointer;" data-toggle="modal" data-target="#myModal">Click to See Conditions for Payments &amp; Security </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="small" style="text-align:left; color: white; background: rgb(15, 62, 80);cursor:pointer;">Free Cancellation within 24 Hours</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
+
+
 
             </div>
         </div>
+
 
         <div class="col-md-8" style="padding:0 10px 0px 20px;">
             <form method="post" id="contactfrm" action="">
@@ -125,6 +313,7 @@
                     <h2 style="font-size: 22px !important;line-height: 26px;font-weight:bold;">Contact Info</h2>
                     <hr style="margin-top: 9px;margin-bottom: 10px;" />
                     <p class="NormalText">Phone Number is required (example +001-312-3339706)</p>
+
                     <div class="col-md-4">
                         <label>Device Type</label>
                         <select name="DeviceType" class="form-control">
@@ -133,6 +322,7 @@
                             <option>Other</option>
                         </select>
                     </div>
+
                     <div class="col-md-4">
                         <label>Country Code</label>
                         <select name="CountryCode" id="countrycode" class="form-control">
@@ -140,6 +330,7 @@
                             <option value="KO">82-Korea (South)</option>
                         </select>
                     </div>
+
                     <div class="col-md-4">
                         <label>Phone Number</label>
                         <input type="text" placeholder="123-123-1234 or 010-1234-1234" class="form-control" id="phonenumber" name="PhoneNumber" />
@@ -156,6 +347,7 @@
                         <span id="errorEmail2" class="errorText"></span>
                     </div>
                 </div>
+
                 @{
                     List<string[]> List = new List<string[]>();
                     if (Session["Traveller"] != null)
@@ -165,9 +357,11 @@
 
                     int Number = 1;
                 }
+
                 <div class="row">
                     <h2 style="font-size: 22px !important;line-height: 26px;font-weight:bold;">Traveller Details</h2>
                     <hr style="margin-top: 9px;margin-bottom: 10px;" />
+
 
                     @for (int i = 0; i < List.Count; i++)
                     {
@@ -203,7 +397,7 @@
 
                             <div class="col-md-2">
                                 <label>Date Of Birth</label>
-                                <input type="text" placeholder="mm/dd/yyyy" class="form-control DBCalen@(Number)" name="TrvDOB" />
+                                <input type="text" placeholder="mm/dd/yyyy" required class="form-control DBCalen@(Number)" name="TrvDOB" />
                                 <span id="errorTrvDOB@(Number)" class="errorText"></span>
                             </div>
 
@@ -243,10 +437,12 @@
 
                         }
                     }
+
                 </div>
                 <div class="row">
                     <h2 style="font-size: 22px !important;line-height: 26px;font-weight:bold;">Payment Details</h2>
                     <hr style="margin-top: 9px;margin-bottom: 10px;" />
+
                     <div class="col-md-4">
                         <label>First Name</label>
                         <input type="text" placeholder="First Name" class="form-control" name="BillFName" />
@@ -257,26 +453,31 @@
                         <input type="text" placeholder="Middle Name" class="form-control" name="BillMName" />
                         <span id="errorBillMName" class="errorText"></span>
                     </div>
+
                     <div class="col-md-4">
                         <label>Last Name</label>
                         <input type="text" placeholder="Last Name" class="form-control" name="BillLName" />
                         <span id="errorBillLName" class="errorText"></span>
                     </div>
+
                     <div class="col-md-8">
                         <label>Street/House</label>
                         <input type="text" placeholder="Billing Address" class="form-control" name="BillAddress" />
                         <span id="errorAddress" class="errorText"></span>
                     </div>
+
                     <div class="col-md-4">
                         <label>City</label>
                         <input type="text" placeholder="City" class="form-control" name="City" />
                         <span id="errorCity" class="errorText"></span>
                     </div>
+
                     <div class="col-md-4">
                         <label>States/Prov</label>
                         <input type="text" placeholder="State/Prov" class="form-control" name="State" />
                         <span id="errorState" class="errorText"></span>
                     </div>
+
                     <div class="col-md-4">
                         <label>Country Code</label>
                         <select id="Country" name="Country" class="form-control">
@@ -284,15 +485,19 @@
                             <option>82-Korea (South)</option>
                         </select>
                     </div>
+
                     <div class="col-md-4">
                         <label>Zip/Postal Code</label>
                         <input type="text" placeholder="Zip/Postal Code" class="form-control" name="ZipCode" />
                         <span id="errorZipCode" class="errorText"></span>
                     </div>
+
                 </div>
+
                 <div class="row">
                     <h2 style="font-size: 22px !important;line-height: 26px;font-weight:bold;">Credit(Debit) Card Info</h2>
                     <hr style="margin-top: 9px;margin-bottom: 10px;" />
+
                     <div class="col-md-4">
                         <label>Card Type</label>
                         <select id="CardType" name="CardType" class="form-control">
@@ -304,14 +509,16 @@
                     </div>
                     <div class="col-md-4">
                         <label>Card Number</label>
-                        <span id="errorCardNumber" class="errorText"></span>
                         <input type="text" placeholder="Card Number" data-inputmask="'mask': '9999 999999 99999'" class="form-control" name="CardNumber" id="cardnumber" />
+                        <span id="errorCardNumber" class="errorText"></span>
                     </div>
+
                     <div class="col-md-4">
                         <label>CSV <a href="#" class="icon" style="font-size:12px;"><i class="fas fa-info-circle"></i></a><span class="iconimage"><img src="~/Images/VisaMastercardCVV.png"></span></label>
                         <input type="password" maxlength="3" placeholder="CSV" class="form-control" name="CSV" />
                         <span id="errorCSV" class="errorText"></span>
                     </div>
+
                     <div class="col-md-4">
                         <label>Expiration Month</label>
                         <select id="CardExpM" name="CardExpM" class="form-control">
@@ -329,6 +536,7 @@
                             <option value="12">December (12)</option>
                         </select>
                     </div>
+
                     <div class="col-md-4">
                         <label>Expiration Year</label>
                         <select id="CardExpY" name="CardExpY" class="form-control">
@@ -338,19 +546,100 @@
                             }
                         </select>
                     </div>
+
                 </div>
+
                 <div class="row">
                     <div class="col-md-6">
                         <input type="button" onclick="history.back();" class="btn btn-primary" value="Go Back" />
                     </div>
+
                     <div class="col-md-6">
                         <input type="button" id="btnSubmit" class="btn btn-primary" value="Buy Ticket Now" />
                     </div>
+
                 </div>
             </form>
         </div>
     </div>
+
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalLongTitle" style="font-weight:bold;color:#10404F;font-size:25px;text-align:center;">
+                    Fare Rules For Airline
+                </h5>
+
+            </div>
+            <div class="modal-body">
+
+                @if (AirRulleSabre == "")
+                {
+                    foreach (var item in AirRule)
+                    {
+                        if (item.ApplicationResults.status != Additional.OTA_AirRule.CompletionCodes.Complete)
+                        {
+
+                            foreach (var item2 in item.ApplicationResults.Error)
+                            {
+                                foreach (var item3 in item2.SystemSpecificResults)
+                                {
+                                    var c = item3.Message.Where(n => n.Value.Contains("FARE BASIS NOT FOUND FOR CITYPAIR/DATE"));
+                                    if (c != null && c.Count() > 0)
+                                    {
+                                        <p style="font-size: 15px;margin: 5px; white-space:pre-line;">
+                                            16.PENALTIES
+                                            CONTACT CARRIER FOR DETAILS.
+                                        </p>
+                                    }
+                                }
+                            }
+                        }
+                        else if (item.ApplicationResults.status == Additional.OTA_AirRule.CompletionCodes.Complete && item.ApplicationResults.Error == null)
+                        {
+                            if (item.FareRuleInfo != null && item.FareRuleInfo.Rules != null && item.FareRuleInfo.Rules.Count() > 0)
+                            {
+
+                                foreach (var Rule in item.FareRuleInfo.Rules.Where(r => r.RPH == "16"))
+                                {
+                                    <h3 style="font-weight: bold;color: #0f3e50;">@Rule.Title</h3>
+                                    <hr />
+                                    <p style="font-size: 15px;margin: 5px; white-space:pre-line;">@Rule.Text</p>
+
+                                    <br />
+
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    var str = AirRulleSabre.Substring(AirRulleSabre.IndexOf("16."));
+
+                    var t = str.Substring(0, str.IndexOf("17."));
+
+                    <p style="font-size: 15px;margin: 5px; white-space:pre-line;">
+                        @t
+                    </p>
+                }
+                /**/
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
 
 
 <style>
@@ -367,22 +656,6 @@
     }
 </style>
 
-
-<div class="row" style="position: fixed; top: 30%; left: 40%;">
-    <div class="dialogue-box" id="divques" style="display: none;">
-        <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-            <div id="AlertMsg" class="tdialogue-box-text" style="text-align: center; font-weight: bold; margin-bottom: 20px;">
-            </div>
-            <input class="btn btn-default BtnConf2" style="float:right" type="button" value="OK" id="btnCyes" />
-            @*<input class="btn btn-danger BtnConf2" type="button" value="No" id="btnCNo" />*@
-             
-        </div>
-    </div>
-</div>
-
-
-
-
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -393,384 +666,292 @@
                 <h5 class="modal-title" id="exampleModalLongTitle" style="font-weight:bold;color:red;font-size:25px;text-align:center;">
                     Payment &amp; Security Conditions
                 </h5>
+
             </div>
             <div class="modal-body">
+
                 <p>We assure you that your payment can be securely made in accordance with the international standards of online payment.</p>
+
                 <p>Your credit card number is entered on a secure page hosted by our bank and therefore external to our site. No credit card number is recorded, or even visible during the payment on our site. We have no access to your payment information.</p>
+
                 <p class="heading">Secure Sockets Layer (SSL Technology)</p>
                 <p>Koreaonly.com uses Secure Sockets Layer (SSL) technology to provide you with the safest, most secure shopping experience possible. SSL technology enables encryption of sensitive information during your online transactions. All of the forms on our site are secured with SSL technology so your personal information stays safe and out of malicious hands.</p>
+
                 <p class="heading">Credit Card</p>
                 <p>Payment will be deducted from your account using the US Dollar (USD) ($) as currency. It is very important that you understand that once you’ve decided to select this payment method,your account will be debited in USD, regardless of the currency you were using when browsing Koreaonly.com and when you place your order with us. </p>
+
                 <img src="~/Images/visa-verify-img.png" title="Visa Verifed" width="200" height="100" />
                 <img src="~/Images/mastercard-verify-img.png" title="Master Card Verifed" width="200" height="100" />
                 <br />
                 <p class="heading">Security Policy</p>
+
                 <p>We would like to assure you that your personal information is our top priority. We will never share any of your private data with other vendors or outside parties for any reason. Your Credit Card information, Personal Data and/or Order Information is processed and protected by our payment processors.</p>
+
                 <p>See our Privacy <a href="/Index/privacy_policy" style="color:red;">Policy page</a> for more information.</p>
+
             </div>
+
         </div>
     </div>
 </div>
 
-<div id="overlay32">
-    <div id="text32">Please Wait...</div>
+@section scriptarea{
 
-</div>
+    <script>
 
-<style>
-    #overlay32 {
-        position: fixed;
-        display: none;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0,0,0,0.5);
-        z-index: 2;
-        cursor: pointer;
-    }
+        $(document).ready(function () {
 
-    #text32 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        font-size: 50px;
-        color: white;
-        transform: translate(-50%,-50%);
-        -ms-transform: translate(-50%,-50%);
-    }
-</style>
+            //
+
+            $("#btnSubmit").click(function () {
+
+                $("#btnSubmit").prop('disabled', true);
+
+                $("#overlay").show();
+                $("#overlay").css('opacity', 1);
 
 
-@section scripts{
+                var FrmData = $("#contactfrm").serialize();
 
-<script>
-    $(".BtnConf2").click(function () {
-        $("#cont").removeClass("overlay2");
-        $("#divques").hide();
-    });
+                $.ajax({
+                    type: "POST",
+                    url: "/Index/PayNow",
+                    data: FrmData,
+                    success: function (response) {
+                        if (response != "") {
 
-                $(document).ready(function () {
+                            var obj = $.parseJSON(response);
 
-                    $.ajax({
-                        type: "GET",
-                        url: "/Index/CheckAirlineParms",
-                        success: function (response) {
+                            if (obj.Code == "200") {
+                                window.location.href = "/index/Tickets";
+                            } else {
+                                $("#btnSubmit").prop('disabled', false);
 
-                            if (response != "")
-                                $("#SideBarFlightDetails").html(response);
-                            else {
-                                $.ajax({
-                                    type: "GET",
-                                    url: "/Index/CheckAirlineParms",
-                                    success: function (response) {
-                                        $("#SideBarFlightDetails").html(response);
-                                    }
+                                $("#overlay").hide();
+                                $("#overlay").css('opacity', 0);
 
-                                });
+                                if (obj.Code == "100") {
+                                    $("#errorCardNumber").html("Please Enter Correct Card Number");
+                                    alert("Please Enter Correct Card Number");
+                                }
+                                else {
+                                    alert("Fill Required Feilds");
+                                }
+
+
+
                             }
-                        }
-
-                    });
-
-                    $("#btnSubmit").click(function () {
-
-                        $("#overlay32").show();
-
-                        var FrmData = $("#contactfrm").serialize();
-
-                        //
-
-                        if ($("#btnSubmit").attr("Confirm") == "1") {
-
-                            $.ajax({
-                                type: "POST",
-                                url: "/Index/CheckPayment",
-                                data: FrmData,
-                                success: function (response) {
-
-                                    $("#overlay32").hide();
-                                    //CheckPayment
-                                    if (response != "") {
-
-                                        var obj = (response);
-
-                                        if (obj.Code == "200") {
-                                            $("#divques").fadeOut();
-                                            window.location.href = "/index/Tickets";
-                                        } else {
-                                            $("#errorCardNumber").html("INCORRECT CARD NUMBER");
-                                            $("#cardnumber").val();
-                                            $("#AlertMsg").html(obj.Message);
-                                            $("#AlertMsg").css("color", "red");
-                                            $("#divques").fadeIn();
-                                        }
-                                    } else {
-                                        window.location.href = "/";
-                                    }
-
-                                }
-                            });
 
                         } else {
-
-                            $.ajax({
-                                type: "POST",
-                                url: "/Index/PayNow",
-                                data: FrmData,
-                                success: function (response) {
-
-                                    $("#overlay32").hide();
-                                    //
-                                    if (response != "") {
-
-                                        var obj = $.parseJSON(response);
-
-                                        if (obj.Code == "200") {
-
-                                            $("#btnSubmit").attr("Confirm", "1");
-
-                                            $.ajax({
-                                                type: "POST",
-                                                url: "/Index/CheckPayment",
-                                                data: FrmData,
-                                                success: function (response) {
-
-                                                    $("#overlay32").hide();
-                                                    //CheckPayment
-                                                    if (response != "") {
-
-                                                        var obj = (response);
-
-                                                        if (obj.Code == "200") {
-                                                            $("#divques").fadeOut();
-                                                            window.location.href = "/index/Tickets";
-                                                        } else {
-                                                            $("#cardnumber").val();
-                                                            $("#errorCardNumber").html("INCORRECT CARD NUMBER");
-                                                            $("#AlertMsg").html(obj.Message);
-                                                            $("#AlertMsg").css("color", "red");
-                                                            $("#divques").fadeIn();
-                                                        }
-                                                    } else {
-                                                        window.location.href = "/";
-                                                    }
-
-                                                }
-                                            });
-
-                                        } else {
-                                            //$("#errorCardNumber").html("INCORRECT CARD NUMBER");
-                                            $("#AlertMsg").html(obj.Message);
-                                            $("#AlertMsg").css("color", "red");
-                                            $("#divques").fadeIn();
-                                        }
-                                    } else {
-                                        window.location.href = "/";
-                                    }
-
-                                }
-                            });
+                            window.location.href = "/";
                         }
 
-                    });
-                    $("#cardnumber").mask("9999-9999-9999-9999");
-                    $("#phonenumber").mask("999-999-9999");
+                    }, error: function () {
+                        $("#overlay").hide();
+                        $("#overlay").css('opacity', 0);
 
-                    $('#CardType').change(function () {
-                        var $selected = $(this).find('option:selected');
-                        if ($selected.val() === 'AX') {
-                            $("#cardnumber").mask("9999-999999-99999");
-                        } else {
-                            $("#cardnumber").mask("9999-9999-9999-9999");
-                        }
-                    });
+                        alert("Fill Required Feilds");
 
-
-                    $('#countrycode').change(function () {
-                        var $selected = $(this).find('option:selected');
-                        if ($selected.val() === 'US') {
-                            $("#phonenumber").mask("999-999-9999");
-                        } else {
-                            $("#phonenumber").mask("99-9999-9999");
-                        }
-                    });
-
-
-
-
+                    }
                 });
 
-                function Check() {
+            });
 
-                    $(document).ready(function () {
+            $("#cardnumber").mask("9999-9999-9999-9999");
+            $("#phonenumber").mask("999-999-9999");
 
-                        var res = true;
+            $('#CardType').change(function () {
+                var $selected = $(this).find('option:selected');
+                if ($selected.val() === 'AX') {
+                    $("#cardnumber").mask("9999-999999-99999");
+                } else {
+                    $("#cardnumber").mask("9999-9999-9999-9999");
+                }
+            });
 
-                        var elem = $("input[type='text']");
-                        for (var i = 0; i < elem.length; i++) {
 
-                            if (!($("input[name=" + elem[i].name + "]").id.indexOf("-")) >= 0) {
+            $('#countrycode').change(function () {
+                var $selected = $(this).find('option:selected');
+                if ($selected.val() === 'US') {
+                    $("#phonenumber").mask("999-999-9999");
+                } else {
+                    $("#phonenumber").mask("99-9999-9999");
+                }
+            });
 
-                                if (!$("input[name=" + elem[i].name + "]").prop("disabled") && elem[i].value == "") {
-                                    res = false;
 
-                                    $("#error" + elem[i].name).html("Please fill in here");
-                                }
-                            }
+
+
+        });
+
+        function Check() {
+
+            $(document).ready(function () {
+
+                var res = true;
+
+                var elem = $("input[type='text']");
+                for (var i = 0; i < elem.length; i++) {
+
+                    if (!($("input[name=" + elem[i].name + "]").id.indexOf("-")) >= 0) {
+
+                        if (!$("input[name=" + elem[i].name + "]").prop("disabled") && elem[i].value == "") {
+                            res = false;
+
+                            $("#error" + elem[i].name).html("Please fill in here");
                         }
-
-                        for (var i = 0; i < elem.length; i++) {
-
-                            if (($("input[name=" + elem[i].name + "]").id.indexOf("-")) >= 0) {
-                                if (!$("input[id=" + elem[i].id + "]").prop("disabled") && elem[i].value == "") {
-                                    res = false;
-
-                                    $("#error" + elem[i].id).html("Please fill in here");
-
-                                }
-                            }
-                        }
-
-
-                        var elem2 = $(".hasDatepicker");
-                        for (var i = 0; i < elem2.length; i++) {
-                            if (!$("#" + elem2[i].id).prop("disabled") && $("#" + elem2[i].id).val() == "") {
-                                $("#error" + elem2[i].id).html("Please fill in here");
-                                res = false;
-
-                            }
-                        }
-
-                    });
+                    }
                 }
 
-                function ActiveButton() {
+                for (var i = 0; i < elem.length; i++) {
 
-                    $("input[type='text']").blur(function () {
-                        if (this.value == "") {
-                            if (!$("input[name=" + this.name + "]").prop("disabled")) {
-                                $("input[name=" + this.name + "]").css("border-color", "red");
-                                $("#error" + this.name).html("Please fill in here");
-                                $("#btnSubmit").attr("Allow", "NotAccess");
-                            } else {
-                                $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                                $("#error" + this.id).html("");
-                                $("#btnSubmit").attr("Allow", "Access");
-                            }
-                        } else {
-                            $("#error" + this.name).html("");
-                            $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                            $("#btnSubmit").attr("Allow", "Access");
-                        }
-                    });
+                    if (($("input[name=" + elem[i].name + "]").id.indexOf("-")) >= 0) {
+                        if (!$("input[id=" + elem[i].id + "]").prop("disabled") && elem[i].value == "") {
+                            res = false;
 
-                    $("input[type='email']").blur(function () {
-                        if (this.value == "") {
-                            if (!$("input[name=" + this.name + "]").prop("disabled")) {
-                                $("input[name=" + this.name + "]").css("border-color", "red");
-                                $("#error" + this.name).html("Please fill in here");
-                                $("#btnSubmit").attr("Allow", "NotAccess");
-                            } else {
-                                $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                                $("#error" + this.id).html("");
-                                $("#btnSubmit").attr("Allow", "Access");
-                            }
-                        } else {
-
-                            $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                            $("#error" + this.name).html("");
-
-                            $("#errorEmailAddress").html("");
-                            $("input[name=EmailAddress]").css("border-color", "#ccc");
-                            $("#btnSubmit").attr("Allow", "Access");
-
-                            if ($("input[name=EmailAddress]").val() != $("input[name=Email2]").val()) {
-
-                                $("input[name=EmailAddress]").css("border-color", "red");
-                                $("#errorEmailAddress").html("Email Address Not Match");
-                                $("#btnSubmit").attr("Allow", "NotAccess");
-                            }
+                            $("#error" + elem[i].id).html("Please fill in here");
 
                         }
-                    });
-
-
-
-
-
-                    $("input[type='Password']").blur(function () {
-                        if (this.value == "") {
-                            if (!$("input[name=" + this.name + "]").prop("disabled")) {
-                                $("input[name=" + this.name + "]").css("border-color", "red");
-                                $("#error" + this.name).html("Please fill in here");
-                                $("#btnSubmit").attr("Allow", "NotAccess");
-                            } else {
-                                $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                                $("#error" + this.id).html("");
-                                $("#btnSubmit").attr("Allow", "Access");
-                            }
-                        } else {
-                            $("#error" + this.name).html("");
-                            $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                            $("#btnSubmit").attr("Allow", "Access");
-                        }
-                    });
-
-
-                    $(".hasDatepicker").blur(function () {
-                        if (this.value == "") {
-                            if (!$("input[name=" + this.name + "]").prop("disabled")) {
-                                $("input[name=" + this.name + "]").css("border-color", "red");
-                                $("#btnSubmit").attr("Allow", "NotAccess");
-                            } else {
-                                $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                                $("#btnSubmit").attr("Allow", "Access");
-                            }
-                        } else {
-                            $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                            $("#btnSubmit").attr("Allow", "Access");
-                        }
-                    });
-
-                    $(".hasDatepicker").change(function () {
-                        if (this.value == "") {
-                            if (!$("input[name=" + this.name + "]").prop("disabled")) {
-                                $("input[name=" + this.name + "]").css("border-color", "red");
-                                $("#btnSubmit").attr("Allow", "NotAccess");
-                            } else {
-                                $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                                $("#btnSubmit").attr("Allow", "Access");
-                            }
-                        } else {
-                            $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                            $("#btnSubmit").attr("Allow", "Access");
-                        }
-                    });
-
-                    //$(".hasDatepicker").change(function () {
-                    //    if (this.value == "") {
-                    //        if (!$("input[name=" + this.name + "]").prop("disabled")) {
-                    //            $("input[name=" + this.name + "]").css("border-color", "red");
-                    //            $("#error" + this.name).html("Please fill in here");
-                    //            $("#btnSubmit").attr("Allow", "NotAccess");
-                    //        } else {
-                    //            $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                    //            $("#btnSubmit").attr("Allow", "Access");
-                    //            $("#error" + this.name).html("");
-                    //        }
-                    //    } else {
-                    //        $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                    //        $("#btnSubmit").attr("Allow", "Access");
-                    //        $("#error" + this.name).html("");
-                    //    }
-                    //});
+                    }
                 }
 
-                ActiveButton();
 
-</script>
+                var elem2 = $(".hasDatepicker");
+                for (var i = 0; i < elem2.length; i++) {
+                    if (!$("#" + elem2[i].id).prop("disabled") && $("#" + elem2[i].id).val() == "") {
+                        $("#error" + elem2[i].id).html("Please fill in here");
+                        res = false;
+
+                    }
+                }
+
+            });
+        }
+
+        function ActiveButton() {
+
+            $("input[type='text']").blur(function () {
+                if (this.value == "") {
+                    if (!$("input[name=" + this.name + "]").prop("disabled")) {
+                        $("input[name=" + this.name + "]").css("border-color", "red");
+                        $("#error" + this.name).html("Please fill in here");
+                        $("#btnSubmit").attr("Allow", "NotAccess");
+                    } else {
+                        $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                        $("#error" + this.id).html("");
+                        $("#btnSubmit").attr("Allow", "Access");
+                    }
+                } else {
+                    $("#error" + this.name).html("");
+                    $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                    $("#btnSubmit").attr("Allow", "Access");
+                }
+            });
+
+            $("input[type='email']").blur(function () {
+                if (this.value == "") {
+                    if (!$("input[name=" + this.name + "]").prop("disabled")) {
+                        $("input[name=" + this.name + "]").css("border-color", "red");
+                        $("#error" + this.name).html("Please fill in here");
+                        $("#btnSubmit").attr("Allow", "NotAccess");
+                    } else {
+                        $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                        $("#error" + this.id).html("");
+                        $("#btnSubmit").attr("Allow", "Access");
+                    }
+                } else {
+
+                    $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                    $("#error" + this.name).html("");
+
+                    $("#errorEmailAddress").html("");
+                    $("input[name=EmailAddress]").css("border-color", "#ccc");
+                    $("#btnSubmit").attr("Allow", "Access");
+
+                    if ($("input[name=EmailAddress]").val() != $("input[name=Email2]").val()) {
+
+                        $("input[name=EmailAddress]").css("border-color", "red");
+                        $("#errorEmailAddress").html("Email Address Not Match");
+                        $("#btnSubmit").attr("Allow", "NotAccess");
+                    }
+
+                }
+            });
+
+
+
+
+
+            $("input[type='Password']").blur(function () {
+                if (this.value == "") {
+                    if (!$("input[name=" + this.name + "]").prop("disabled")) {
+                        $("input[name=" + this.name + "]").css("border-color", "red");
+                        $("#error" + this.name).html("Please fill in here");
+                        $("#btnSubmit").attr("Allow", "NotAccess");
+                    } else {
+                        $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                        $("#error" + this.id).html("");
+                        $("#btnSubmit").attr("Allow", "Access");
+                    }
+                } else {
+                    $("#error" + this.name).html("");
+                    $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                    $("#btnSubmit").attr("Allow", "Access");
+                }
+            });
+
+
+            $(".hasDatepicker").blur(function () {
+                if (this.value == "") {
+                    if (!$("input[name=" + this.name + "]").prop("disabled")) {
+                        $("input[name=" + this.name + "]").css("border-color", "red");
+                        $("#btnSubmit").attr("Allow", "NotAccess");
+                    } else {
+                        $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                        $("#btnSubmit").attr("Allow", "Access");
+                    }
+                } else {
+                    $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                    $("#btnSubmit").attr("Allow", "Access");
+                }
+            });
+
+            $(".hasDatepicker").change(function () {
+                if (this.value == "") {
+                    if (!$("input[name=" + this.name + "]").prop("disabled")) {
+                        $("input[name=" + this.name + "]").css("border-color", "red");
+                        $("#btnSubmit").attr("Allow", "NotAccess");
+                    } else {
+                        $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                        $("#btnSubmit").attr("Allow", "Access");
+                    }
+                } else {
+                    $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                    $("#btnSubmit").attr("Allow", "Access");
+                }
+            });
+
+            //$(".hasDatepicker").change(function () {
+            //    if (this.value == "") {
+            //        if (!$("input[name=" + this.name + "]").prop("disabled")) {
+            //            $("input[name=" + this.name + "]").css("border-color", "red");
+            //            $("#error" + this.name).html("Please fill in here");
+            //            $("#btnSubmit").attr("Allow", "NotAccess");
+            //        } else {
+            //            $("input[name=" + this.name + "]").css("border-color", "#ccc");
+            //            $("#btnSubmit").attr("Allow", "Access");
+            //            $("#error" + this.name).html("");
+            //        }
+            //    } else {
+            //        $("input[name=" + this.name + "]").css("border-color", "#ccc");
+            //        $("#btnSubmit").attr("Allow", "Access");
+            //        $("#error" + this.name).html("");
+            //    }
+            //});
+        }
+
+        ActiveButton();
+
+    </script>
+
 }
-@section sc2{}

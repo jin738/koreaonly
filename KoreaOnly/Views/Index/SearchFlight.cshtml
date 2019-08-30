@@ -8,11 +8,147 @@
 
 }
 
+<style>
+
+
+    /* Style the input container */
+    .input-container {
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    /* Style the form icons */
+    .icons {
+        padding: 10px;
+        background: #1f4d65;
+        color: white;
+        min-width: 50px;
+        text-align: center;
+    }
+
+    input[id^="OriginAirportCode"] {
+        text-transform: uppercase;
+    }
+
+
+    input[id^="DestinationAirportCode"] {
+        text-transform: uppercase;
+    }
+
+    /* Style the input fields */
+    .input-field {
+        padding: 10px !important;
+        outline: none !important;
+        border: 0px !important;
+        width: 100% !important;
+        font-weight: bold !important;
+        font-size: 14px !important;
+        height: 45px !important;
+        border-radius: 0px !important;
+    }
+
+        .input-field:focus {
+            color: #1f4d65 !important;
+        }
+
+    /* Set a style for the submit button */
+    .button {
+        border: none;
+        padding: 0px 10px;
+        color: #fff;
+        background: #1f4d65;
+        font-weight: bold;
+    }
+
+        .button:hover {
+            background: #113040;
+        }
+
+    .cheap-flights-country {
+        font-weight: bold;
+        font-size: 14px;
+        color: #7d8184;
+        margin-bottom: 0px;
+    }
+
+    .cheap-flights-city {
+        font-weight: bold;
+        font-size: 18px;
+        color: #1f4d65;
+        margin-bottom: 0px;
+    }
+
+    .backgroundimage {
+        background: url('/Images/plane.jpg') repeat;
+        width: 100%;
+        background-position: center;
+        min-height: 400px;
+        background-size: cover;
+        padding-top: 20px;
+    }
+
+    .subheading {
+        font-family: "Lato", sans-serif;
+        line-height: 1;
+        color: #fff;
+        margin: 0 0 10px 0;
+        font-size: 25px;
+        text-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+        font-weight: 900;
+        text-align: left;
+    }
+
+    .dropdowncustom {
+        border: none !important;
+        border-radius: 0px !important;
+        height: auto !important;
+        width: 300px !important;
+        font-weight: bold !important;
+    }
+
+    .triptypeActive {
+        background-color: #1f4d65;
+        color: #fff;
+    }
+
+    .triptype {
+        font-weight: bold;
+        color: #fff;
+        padding: 10px 4px;
+        display: inline-block;
+        border: 1px solid hsl(201, 53%, 26%);
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+
+        .triptype:hover {
+            background-color: #1f4d65 !important;
+            color: #fff !important;
+        }
+
+    .easy-autocomplete {
+        width: 100% !important;
+    }
+
+    .eac-item {
+        color: black;
+        padding: 10px !important;
+    }
+
+        .eac-item b {
+            color: red !important;
+        }
+
+    .border {
+        border: 1px solid red !important;
+    }
+</style>
+
 <link rel="stylesheet" href="~/Content/Fillter.css" />
 
-@section scripts{
 <script>
-     
+
+
 
     $(function () {
 
@@ -64,559 +200,7 @@
 
     }
 
-    function AddSearchoption(inputid) {
-        var Apt = $("#" + inputid).val();
-
-        var options = {
-            url: function (phrase) {
-                return "/Index/GetAllAirports?AirCode=" + ($("#" + inputid).val());
-            },
-            list: {
-                maxNumberOfElements: 15,
-                match: {
-                    enabled: true
-                }
-            },
-            requestDelay: 500,
-            theme: "plate-dark",
-            getValue: "name"
-        };
-
-        $("#" + inputid).easyAutocomplete(options);
-
-        ActiveButton();
-    }
-
-    $(function () {
-
-        $("#loadingdivsFlight").show();
-        //GetAllFlights
-        $.ajax({
-            type: "POST",
-            url: "/Index/GetAllFlights",
-            success: function (response) {
-
-                if (response != "") {
-
-                    $("#AllFlights").html(response);
-                    $("#loadingdivsFlight").show();
-                    $.ajax({
-                        type: "POST",
-                        url: "/Index/GetCheapestFlights",
-                        success: function (response) {
-                            $("#CheapestFlightsSection").html(response);
-                            $("#loadingdivsFlight").hide();
-                            Loads();
-                        }
-                    });
-
-                    $.ajax({
-                        type: "POST",
-                        url: "/Index/GetSearchFlightsPanel",
-                        success: function (response) {
-                            $("#SearchFlightsPanel").html(response);
-                            $("#loadingdivsFlight").hide();
-
-                            Loads();
-
-                        }
-                    });
-
-
-                    $(".btnviewflightdetails").click(function () {
-                        var bc = $(this).attr("fid");
-                        var name = $(this).attr("data-target");
-
-                        if ($(name).attr("st") != "1") {
-                            var a = $(this);
-                            a.html("Loading...");
-                            $.ajax({
-                                type: "POST",
-                                data: { id: bc },
-                                url: "/Index/GetFlightDetails",
-                                success: function (response) {
-                                    $(name).html(response);
-                                    $(name).attr("st", "1");
-                                    a.html("View Flight Details");
-                                }
-                            });
-                        }
-                    });
-
-
-
-                } else {
-                    window.location.href = "/";
-                }
-
-            }
-        });
-
-        function setCookie(cname, cvalue, exdays) {
-            var d = new Date();
-            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-            var expires = "expires=" + d.toUTCString();
-            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-        }
-
-        function getCookie(cname) {
-            var name = cname + "=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') {
-                    c = c.substring(1);
-                }
-                if (c.indexOf(name) == 0) {
-                    return c.substring(name.length, c.length);
-                }
-            }
-            return "";
-        }
-
-
-        function Loads() {
-
-            $(".SelectFlight").unbind("click").bind("click", function () {
-                var FID = $(this).attr("FlightId");
-
-                $(".loadinglap" + FID).show();
-                $("#overlay32").show();
-
-                $("body").css("overflow-y", "hidden");
-
-                // Load Flight Detils
-
-                $.ajax({
-                    type: "POST",
-                    data: { id: FID },
-                    url: "/Index/GetFlightDetails",
-                    success: function (response) {
-                        $("#WaitingflightDetails").html(response);
-                    }
-                });
-
-
-
-                $.post("/Index/SelectFlight", { SelectedFlight: FID }, function (success) {
-                    $("#overlay32").hide();
-                    $("body").css("overflow-y", "scroll");
-                    if (success != "") {
-
-                        var obj = success;
-
-                        if (obj.Code == "200") {
-                            $("#divques").fadeOut();
-                            window.location.href = "/index/ContactInfo";
-                        } else {
-                            $("#AlertMsg").html(obj.ExMessage);
-                            $("#divques").fadeIn();
-                            $(".loadinglap" + FID).hide();
-                        }
-                    }
-                });
-
-                //$.ajax({
-                //    type: "POST",
-                //    data: { SelectedFlight: FID },
-                //    url: "/Index/SelectFlight",
-                //    success: function (response) {
-                //        $("#overlay32").hide();
-                //        $("body").css("overflow-y", "scroll");
-                //        if (response != "") {
-
-                //            var obj = $.parseJSON(response);
-
-                //            if (obj.Code == "200") {
-                //                $("#divques").fadeOut();
-                //                window.location.href = "/index/ContactInfo";
-                //            } else {
-                //                $("#AlertMsg").html(obj.ExMessage);
-                //                $("#divques").fadeIn();
-                //                $(".loadinglap" + FID).hide();
-                //            }
-                //        }
-                //    }
-
-
-                //});
-
-            });
-
-            $(".CLickonly").unbind("click").bind("click", function (e) {
-                //$(".CLickonly").click(function () {
-                console.log("check Trig");
-                $(".subval > input[name='AirlineChk']").prop("checked", true);
-
-                var e = $("label[id^='flight'] > input[name='Airline']");
-
-                for (var i = 0; i < e.length; i++) {
-                    e[i].value = e[i].value.substring(0, 2) + "1";
-                }
-
-                $("#idstop1").prop("checked", false);
-                $("#idstop2").prop("checked", false);
-                $("#idstop3").prop("checked", false);
-                setCookie("stopid", "id" + $(this).get(0).id.substring(4, 9));
-                $("#id" + $(this).get(0).id.substring(4, 9)).prop("checked", true);
-                LOCK = true;
-                dosearch("E" + this.id);
-                LOCK = false;
-            });
-
-            $(".onlythisF").unbind("click").bind("click", function (e) {
-                //$(".onlythisF").click(function (e) {
-
-                $("input[name='stop1']").prop('checked', true);
-                $("input[name='stop2']").prop('checked', true);
-                $("input[name='stop3']").prop('checked', true);
-
-                $("label[id^='flight'] > input[name='AirlineChk']").prop('checked', false);
-
-                var Chec = $("label[id^='flight'] > input[name='Airline']");
-
-                for (var i = 0; i < Chec.length; i++) {
-                    if (Chec[i].value.substring(0, 2) != this.id.substring(10, this.id.length))
-                        Chec[i].value = (Chec[i].value.substring(0, 2) + "0");
-                    else
-                        Chec[i].value = (Chec[i].value.substring(0, 2) + "1");
-                }
-
-                var ee = this.id.substring(4, this.id.length);
-                setTimeout(function () {
-                    Dochecked(ee);
-                }, 200);
-                LOCK = true;
-                dosearch("check box " + this.id);
-                LOCK = false;
-            });
-
-            function dosearch(whoclick) {
-                // console.log(whoclick);
-
-                if (LOCK)
-                    $("#btnsearchsubmit").click();
-
-                Loads();
-
-            }
-
-            $(".onlythisFA").unbind("click").bind("click", function (e) {
-                //$(".onlythisFA").click(function (e) {
-
-                $("input[name='stop1']").prop('checked', true);
-                $("input[name='stop2']").prop('checked', true);
-                $("input[name='stop3']").prop('checked', true);
-
-                $("label[id^='flight'] > input[name='AirlineChk']").prop('checked', false);
-
-                var Chec = $("label[id^='flight'] > input[name='Airline']");
-
-                for (var i = 0; i < Chec.length; i++) {
-                    if (Chec[i].value.substring(0, 2) != this.id.substring(10, this.id.length))
-                        Chec[i].value = (Chec[i].value.substring(0, 2) + "0");
-                    else
-                        Chec[i].value = (Chec[i].value.substring(0, 2) + "1");
-                }
-
-                $("label[id='" + this.id.substring(4, this.id.length) + "'] > input[name='AirlineChk']").prop('checked', true);
-
-                LOCK = true;
-                dosearch("check box SEARCH" + this.id);
-                LOCK = false;
-
-            });
-
-            $(".SelectAll").unbind("click").bind("click", function (e) {
-                //$(".SelectAll").click(function () {
-
-                $("input[name='stop1']").prop('checked', true);
-                $("input[name='stop2']").prop('checked', true);
-                $("input[name='stop3']").prop('checked', true);
-
-
-                $(".subval > input[name='AirlineChk']").prop('checked', true);
-
-                var Chec = $("label[id^='flight'] > input[name='Airline']");
-
-                for (var i = 0; i < Chec.length; i++) {
-                    Chec[i].value = (Chec[i].value.substring(0, 2) + "1");
-                }
-
-                var options = $("#slider-range").slider('option');
-
-                //$("#slider-range").slider('values', [options.min, options.max]);
-                LOCK = true;
-                dosearch("all flight");
-                LOCK = false;
-            });
-
-
-            $(".stopclickE").unbind("click").bind("click", function (e) {
-                //$(".stopclickE").click(function (e) {
-
-                $("input[name='stop1']").prop("checked", false);
-                $("input[name='stop2']").prop("checked", false);
-                $("input[name='stop3']").prop("checked", false);
-
-                $(".subval > input[name='AirlineChk']").prop("checked", false);
-
-                if ($(this).attr("flightid") == "All") {
-                    $(".subval > input[name='AirlineChk']").prop("checked", true);
-                } else {
-
-                    $("#" + $(this).attr("flightid") + " > input[name='AirlineChk']").prop("checked", true);
-                }
-
-
-                $("input[name='" + this.id.substring(4, 10) + "']").prop("checked", true);
-
-                var Chec = $("label[id^='flight'] > input[name='Airline']");
-
-                if ($(this).attr("flightid") == "All") {
-
-                    for (var i = 0; i < Chec.length; i++) {
-                        Chec[i].value = (Chec[i].value.substring(0, 2) + "1");
-                    }
-                } else {
-                    for (var i = 0; i < Chec.length; i++) {
-                        Chec[i].value = (Chec[i].value.substring(0, 2) + "0");
-                    }
-                }
-
-                if ($(this).attr("flightid") != "All") {
-                    $("#" + $(this).attr("flightid") + " > input[name='Airline']").val($("#" + $(this).attr("flightid") + " > input[name='Airline']").val().substring(0, 2) + "1");
-                }
-
-                ///var ee = this.id.substring(4, this.id.length);
-                // setTimeout(function () {
-                //ChangeChecked(ee);
-                LOCK = true;
-                dosearch("E " + this.id);
-                LOCK = false;
-
-                //}, 200);
-
-            });
-
-        }
-        // Loads();
-
-        $("#NormalTrip").show();
-        $("#MultiTrip").hide();
-        $("#ArvDate").show();
-
-        AddSearchoption("OriginAirportCode0");
-        AddSearchoption("DestinationAirportCode0");
-        AddSearchoption("OriginAirportCode1");
-        AddSearchoption("DestinationAirportCode1");
-
-
-        var Apt = $("#airlinename").val();
-
-        var options = {
-            url: function (phrase) {
-                return "/Index/GetAllAirlines?AirCode=" + Apt;
-            },
-            list: {
-                maxNumberOfElements: 15,
-                match: {
-                    enabled: true
-                }
-            },
-            requestDelay: 500,
-            theme: "plate-dark",
-            getValue: "name"
-        };
-
-        $("#airlinename").easyAutocomplete(options);
-
-
-
-        $("#AddTrip").click(function () {
-            var ii = $("input[name='DestinationAirportCode']").length;
-            if (ii < 6) {
-
-                var div2 = "<div id='trip" + (ii + 1) +
-                    "'> <div class='col-xs-12  marginbotom10 marginbotomdty pad5'> <div class='relativemask'> <span class='maskimg mfrom'> From</span>" +
-                    "<input type='text' name='OriginAirportCode' id='OriginAirportCode" + (ii + 1) + "' class='ft ui-autocomplete-input searchtxt' placeholder='Type Departure City' required='' autocomplete='off'> </div> </div>" +
-                    "<div class='col-xs-12  marginbotom10 marginbotomdty pad5'>" +
-                    "<div class='relativemask'>" +
-                    "<span class='maskimg mto'> To</span>" +
-                    "<input type='text' name='DestinationAirportCode' id='DestinationAirportCode" + (ii + 1) + "' class='searchtxt ft ui-autocomplete-input' placeholder='Type Destination City' required='' autocomplete='off'> </div></div> " +
-                    "<div class='clearfix'></div> " +
-                    "<div id='depart_date' class='col-xs-6 fiveh marginbotom10 pad5'> " +
-                    "<div class='relativemask'> " +
-                    "<span class='maskimg caln'>Depart</span> " +
-                    "<input name='DepartureDate' id='DepartureDate" + (ii + 1) + "' placeholder='Select Date' class='forminput' type='text' required=''> </div> </div> " +
-                    "<div id='depart_date' class='col-xs-6 fiveh marginbotom10 pad5'> " +
-                    "<div class='relativemask'> <span class='maskimg caln'>Remove Trip</span>" +
-                    "<input style='margin-top:0px;' type='button' class='btn btn-danger' value='Delete Trip' onclick='delthis(\"" + (ii + 1) + "\")' /> " +
-                    "</div> </div> <hr/></div>";
-
-
-                $("#MultiTripAdd").append(div2);
-                var Apt = $("#OriginAirportCode" + (ii + 1) + "").val();
-
-                var options = {
-                    url: function (phrase) {
-                        return "/Index/GetAllAirports?AirCode=" + Apt;
-                    },
-                    list: {
-                        maxNumberOfElements: 15,
-                        match: {
-                            enabled: true
-                        }
-
-                    },
-                    requestDelay: 500,
-                    theme: "plate-dark",
-                    getValue: "name"
-                };
-                setmultidates("DepartureDate" + (ii), "DepartureDate" + (ii + 1));
-                $("#OriginAirportCode" + (ii + 1) + "").easyAutocomplete(options);
-                $("#DestinationAirportCode" + (ii + 1) + "").easyAutocomplete(options);
-                ActiveButton();
-            }
-        });
-
-        $(".searchtxt").parent().css("width", "100%");
-        RadClick();
-        $(".airlinename").parent().css("width", "100%");
-    });
-
-
-    $(document).ready(function () {
-        $(".btnviewflightdetails").click(function () {
-            var bc = $(this).attr("fid");
-            var name = $(this).attr("data-target");
-
-            if ($(name).attr("st") != "1") {
-                var a = $(this);
-                a.html("Loading...");
-                $.ajax({
-                    type: "POST",
-                    data: { id: bc },
-                    url: "/Index/GetFlightDetails",
-                    success: function (response) {
-                        $(name).html(response);
-                        $(name).attr("st", "1");
-                        a.html("View Flight Details");
-                    }
-                });
-            }
-        });
-    });
-
-    function delthis(div) {
-        $("#trip" + div).remove();
-    }
-
-    function RadClick() {
-        var Rad = $("input[name='triptype']");
-        $("#NormalTrip").show();
-        $("#MultiTrip").hide();
-        $("#ArvDate").show();
-
-        $('input[name="arrivedate"]').prop("disabled", false);
-        $("#MultiTrip input[type='text']").prop("disabled", false);
-        $("#NormalTrip input[type='text']").prop("disabled", false);
-
-        if (Rad[0].checked) {
-
-            $("#MultiTrip input[type='text']").prop("disabled", true);
-        } else if (Rad[1].checked) {
-            $("#MultiTrip input[type='text']").prop("disabled", true);
-
-            $('input[name="arrivedate"]').prop("disabled", true);
-            $("#ArvDate").hide();
-        } else if (Rad[2].checked) {
-
-            $('input[name="arrivedate"]').prop("disabled", true);
-            $("#MultiTrip input[type='text']").prop("disabled", false);
-            $("#NormalTrip input[type='text']").prop("disabled", true);
-
-            $("#NormalTrip").hide();
-            $("#MultiTrip").show();
-        }
-
-        ActiveButton();
-
-    }
-
-
-    function ActiveButton() {
-        $(".searchtxt").click(function () {
-            this.value = "";
-        });
-        $(".searchtxt").blur(function () {
-            if (this.value == "") {
-                if (!$("#" + this.id).prop("disabled")) {
-                    $("#" + this.id).css("border-color", "red");
-                    $("#btnSubmit").attr("Allow", "NotAccess");
-                } else {
-                    $("#" + this.id).css("border-color", "#ccc");
-                    $("#btnSubmit").attr("Allow", "Access");
-                }
-            } else {
-                $("#" + this.id).css("border-color", "#ccc");
-                $("#btnSubmit").attr("Allow", "Access");
-            }
-        });
-
-        $(".hasDatepicker").blur(function () {
-            if (this.value == "") {
-                if (!$("#" + this.id).prop("disabled")) {
-                    $("#" + this.id).css("border-color", "red");
-                    $("#btnSubmit").attr("Allow", "NotAccess");
-                } else {
-                    $("#" + this.id).css("border-color", "#ccc");
-                    $("#btnSubmit").attr("Allow", "Access");
-                }
-            } else {
-                $("#" + this.id).css("border-color", "#ccc");
-                $("#btnSubmit").attr("Allow", "Access");
-            }
-        });
-
-        $(".hasDatepicker").change(function () {
-            if (this.value == "") {
-                if (!$("#" + this.id).prop("disabled")) {
-                    $("#" + this.id).css("border-color", "red");
-                    $("#btnSubmit").attr("Allow", "NotAccess");
-                } else {
-                    $("#" + this.id).css("border-color", "#ccc");
-                    $("#btnSubmit").attr("Allow", "Access");
-                }
-            } else {
-                $("#" + this.id).css("border-color", "#ccc");
-                $("#btnSubmit").attr("Allow", "Access");
-            }
-        });
-    }
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("myBtn").style.display = "block";
-        } else {
-            document.getElementById("myBtn").style.display = "none";
-        }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
-
 </script>
-    }
-
-
-
 <style>
     .h4heading {
         border: 0 none;
@@ -781,13 +365,13 @@
                                         <div class="col-xs-12  marginbotom10 marginbotomdty pad5">
                                             <div class="relativemask">
                                                 <span class="maskimg mfrom"> From</span>
-                                                <input type="text" name="OriginAirportCode" id="OriginAirportCode0" class="ft ui-autocomplete-input searchtxt" value="@(MainController.GetAirport(Reqst.OriginAirportCode[0]).Result.FormatedName)" placeholder="Type Departure City" required="" autocomplete="off">
+                                                <input type="text" name="OriginAirportCode" id="OriginAirportCode0" class="ft ui-autocomplete-input searchtxt" value="@(MainController.GetAirport(Reqst.OriginAirportCode[0]).Result.FormatedName())" placeholder="Type Departure City" required="" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-xs-12  marginbotom10 marginbotomdty pad5">
                                             <div class="relativemask">
                                                 <span class="maskimg mto"> To</span>
-                                                <input type="text" name="DestinationAirportCode" id="DestinationAirportCode0" class="searchtxt ft ui-autocomplete-input" value="@(Reqst.DestinationAirportCode != null && Reqst.DestinationAirportCode[0] != "" ? MainController.GetAirport(Reqst.DestinationAirportCode[0]).Result.FormatedName : "")" placeholder="Type Destination City" required="" autocomplete="off">
+                                                <input type="text" name="DestinationAirportCode" id="DestinationAirportCode0" class="searchtxt ft ui-autocomplete-input" value="@(Reqst.DestinationAirportCode != null && Reqst.DestinationAirportCode[0] != "" ? MainController.GetAirport(Reqst.DestinationAirportCode[0]).Result.FormatedName() : "")" placeholder="Type Destination City" required="" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="clearfix"></div>
@@ -808,13 +392,13 @@
                                         <div class="col-xs-12  marginbotom10 marginbotomdty pad5">
                                             <div class="relativemask">
                                                 <span class="maskimg mfrom"> From</span>
-                                                <input type="text" name="OriginAirportCode" id="OriginAirportCode1" class="ft ui-autocomplete-input searchtxt" value="@(MainController.GetAirport(Reqst.OriginAirportCode[0]).Result.FormatedName)" placeholder="Type Departure City" required="" autocomplete="off">
+                                                <input type="text" name="OriginAirportCode" id="OriginAirportCode1" class="ft ui-autocomplete-input searchtxt" value="@(MainController.GetAirport(Reqst.OriginAirportCode[0]).Result.FormatedName())" placeholder="Type Departure City" required="" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-xs-12  marginbotom10 marginbotomdty pad5">
                                             <div class="relativemask">
                                                 <span class="maskimg mto"> To</span>
-                                                <input type="text" name="DestinationAirportCode" id="DestinationAirportCode1" class="searchtxt ft ui-autocomplete-input" value="@(Reqst.DestinationAirportCode != null && Reqst.DestinationAirportCode[0] != "" ? MainController.GetAirport(Reqst.DestinationAirportCode[0]).Result.FormatedName : "")" placeholder="Type Destination City" required="" autocomplete="off">
+                                                <input type="text" name="DestinationAirportCode" id="DestinationAirportCode1" class="searchtxt ft ui-autocomplete-input" value="@(Reqst.DestinationAirportCode != null && Reqst.DestinationAirportCode[0] != "" ? MainController.GetAirport(Reqst.DestinationAirportCode[0]).Result.FormatedName() : "")" placeholder="Type Destination City" required="" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="clearfix"></div>
@@ -831,20 +415,20 @@
                                                     <div class="col-xs-12  marginbotom10 marginbotomdty pad5">
                                                         <div class="relativemask">
                                                             <span class="maskimg mfrom"> From</span>
-                                                            <input type="text" name="OriginAirportCode" id="OriginAirportCode@(i + 1)" class="ft ui-autocomplete-input searchtxt" value="@(MainController.GetAirport(Reqst.OriginAirportCode[i]).Result.FormatedName)" placeholder="Type Departure City" required="" autocomplete="off">
+                                                            <input type="text" name="OriginAirportCode" id="OriginAirportCode@(i + 1)" class="ft ui-autocomplete-input searchtxt" value="@(MainController.GetAirport(Reqst.OriginAirportCode[i]).Result.FormatedName())" placeholder="Type Departure City" required="" autocomplete="off">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12  marginbotom10 marginbotomdty pad5">
                                                         <div class="relativemask">
                                                             <span class="maskimg mto"> To</span>
-                                                            <input type="text" name="DestinationAirportCode" id="DestinationAirportCode@(i + 1)" class="searchtxt ft ui-autocomplete-input" value="@(Reqst.DestinationAirportCode != null && Reqst.DestinationAirportCode[i] != "" ? MainController.GetAirport(Reqst.DestinationAirportCode[i]).Result.FormatedName : "")" placeholder="Type Destination City" required="" autocomplete="off">
+                                                            <input type="text" name="DestinationAirportCode" id="DestinationAirportCode@(i + 1)" class="searchtxt ft ui-autocomplete-input" value="@(Reqst.DestinationAirportCode != null && Reqst.DestinationAirportCode[i] != "" ? MainController.GetAirport(Reqst.DestinationAirportCode[i]).Result.FormatedName() : "")" placeholder="Type Destination City" required="" autocomplete="off">
                                                         </div>
                                                     </div>
                                                     <div class="clearfix"></div>
                                                     <div id="depart_date" class="col-xs-6 fiveh marginbotom10 pad5">
                                                         <div class="relativemask">
                                                             <span class="maskimg caln">Depart</span>
-                                                            <input name="DepartureDate" id="DepartureDate@(i + 2)" placeholder="Select Date" value="@(Reqst.DepartureDate[i].ToString("MM/dd/yyyy"))" class="forminput" type="text" required="">
+                                                            <input name="DepartureDate" id="DepartureDate@(i + 2)" placeholder="Select Date" value="@(Reqst.DepartureDate[i-1].ToString("MM/dd/yyyy"))" class="forminput" type="text" required="">
                                                         </div>
                                                     </div>
                                                     <div id="depart_date" class="col-xs-6 fiveh marginbotom10 pad5">
@@ -854,46 +438,13 @@
                                                     </div>
                                                 </div>
 
-                                                @section sc2 { <script>
+                                                <script>
                                                     $(document).ready(function () {
                                                         AddSearchoption("OriginAirportCode@(i + 1)");
 
                                                         AddSearchoption("DestinationAirportCode@(i + 1)");
                                                     });
-
-                                                    $(document).ready(function () {
-                                                        $('#btnSubmit').click(function () {
-
-                                                            $("#loadingdiv").show();
-
-                                                            $("#loadingdivsFlight").show();
-                                                            $.ajax({
-                                                                type: "POST",
-                                                                data: $("#frm0").serialize(),
-                                                                url: "/Index/TaskRun",
-                                                                success: function (response) {
-
-
-                                                                    setTimeout(function () {
-                                                                        $('#btnSubmitOff').click();
-
-
-
-                                                                    }, 15000);
-
-
-
-                                                                }
-                                                            });
-
-                                                        });
-                                                    });
-                                                    $(".BtnConf2").click(function () {
-                                                        $("#cont").removeClass("overlay2");
-                                                        $("#divques").hide();
-                                                    }); 
                                                 </script>
-                                                    }
                                             }
                                         </div>
                                         <div class="col-md-12">
@@ -931,7 +482,41 @@
                                                 <i class="fa fa-search" aria-hidden="true"></i> Search Flight
                                             </span>
                                             <script>
-                                                  
+                                                $(document).ready(function () {
+                                                    $('#btnSubmit').click(function () {
+
+                                                        $("#loadingdiv").show();
+
+                                                        $("#loadingdivsFlight").show();
+                                                        $.ajax({
+                                                            type: "POST",
+                                                            data: $("#frm0").serialize(),
+                                                            url: "/Index/TaskRun",
+                                                            success: function (response) {
+
+
+                                                                setTimeout(function () {
+                                                                    $('#btnSubmitOff').click();
+
+
+
+                                                                }, 5000);
+
+
+
+                                                            }, error: function () {
+                                                                setTimeout(function () {
+                                                                    $('#btnSubmitOff').click();
+
+
+
+                                                                }, 5000);
+
+                                                            }
+                                                        });
+
+                                                    });
+                                                });
                                             </script>
                                             <input type="submit" style="display:none;" id="btnSubmitOff" class="btn btn-default btnTheam" value="Search Flight" />
                                         </div>
@@ -951,7 +536,7 @@
                     <div id="loadingdivsFlight" style="display:none;">
                         <div style="position:  absolute;height: 500px;width: 100%;top: 10px;background-color:  #fff;bottom:  10px; z-index:100; opacity:0.6;  ">
                         </div>
-                        <div id="loadingdiv2" style="position: absolute;left: 33%;z-index: 100;top: 1%;background-color: white;right: 47%;bottom: 50%;height: 100px;width: 300px;padding-top: 50px;box-shadow: 1px 2px 9px 2px #4791d5;padding-left: 38px;">
+                        <div id="loadingdiv2" style="display:none;position: absolute;left: 33%;z-index: 100;top: 1%;background-color: white;right: 47%;bottom: 50%;height: 100px;width: 300px;padding-top: 50px;box-shadow: 1px 2px 9px 2px #4791d5;padding-left: 38px;">
                             <div id="loading"></div>
                         </div>
                     </div>
@@ -972,16 +557,25 @@
                 </div>
                 <input class="btn btn-default BtnConf2" type="button" value="Yes" id="btnCyes" />
                 @*<input class="btn btn-danger BtnConf2" type="button" value="No" id="btnCNo" />*@
-                 
+                <script>
+                    $(".BtnConf2").click(function () {
+                        $("#cont").removeClass("overlay2");
+                        $("#divques").hide();
+                    });
+
+
+
+
+                </script>
             </div>
         </div>
     </div>
 
 </div>
 <div id="overlay32" style="overflow-y:scroll;">
-    <div id="text32">Please Wait...</div>
-
-    <div class="container" style="margin-top:10%;">
+    <div id="text32" style="position: unset;transform: none;text-align:center;">Please Wait...</div>
+    <div class="loader" style="/* position:absolute; */margin: 10px auto;right: 50%;/* left: 25%; */width: 70px;height: 70px;"></div>
+    <div class="container" style="margin-top:10px;">
         <p style="color: white;font-weight: bold;font-size: 21px;">Flight Details</p>
 
         <div id="WaitingflightDetails" class="keel-chp row">
@@ -1017,15 +611,544 @@
         -ms-transform: translate(-50%,-50%);
     }
 </style>
-<script type="text/javascript">
+
+@section scriptarea {
+
+    <script type="text/javascript">
+
+        function AddSearchoption(inputid) {
+
+            var Apt = $("#" + inputid).val();
+
+            var options = {
+                url: function (phrase) {
+                    return "/Index/GetAllAirports?AirCode=" + ($("#" + inputid).val());
+                },
+                list: {
+                    maxNumberOfElements: 15,
+                    match: {
+                        enabled: true
+                    }
+                },
+                requestDelay: 500,
+                theme: "plate-dark",
+                getValue: "name"
+            };
+
+            $("#" + inputid).easyAutocomplete(options);
+
+            ActiveButton();
+        }
+
+        $(function () {
+
+            $("#loadingdivsFlight").show();
+
+
+            //GetAllFlights
+            $.ajax({
+                type: "POST",
+                url: "/Index/GetAllFlights",
+                success: function (response) {
+
+                    if (response != "") {
+
+                        $("#AllFlights").html(response);
+                        $("#loadingdivsFlight").show();
+                        $.ajax({
+                            type: "POST",
+                            url: "/Index/GetCheapestFlights",
+                            success: function (response) {
+                                $("#CheapestFlightsSection").html(response);
+                                $("#loadingdivsFlight").hide();
+                                Loads();
+                            }
+                        });
+
+                        $.ajax({
+                            type: "POST",
+                            url: "/Index/GetSearchFlightsPanel",
+                            success: function (response) {
+                                $("#SearchFlightsPanel").html(response);
+                                $("#loadingdivsFlight").hide();
+
+                                Loads();
+
+                            }
+                        });
+
+
+                        $(".btnviewflightdetails").click(function () {
+                            var bc = $(this).attr("fid");
+                            var name = $(this).attr("data-target");
+
+                            if ($(name).attr("st") != "1") {
+                                var a = $(this);
+                                a.html("Loading...");
+                                $.ajax({
+                                    type: "POST",
+                                    data: { id: bc },
+                                    url: "/Index/GetFlightDetails",
+                                    success: function (response) {
+                                        $(name).html(response);
+                                        $(name).attr("st", "1");
+                                        a.html("View Flight Details");
+                                    }
+                                });
+                            }
+                        });
 
 
 
-                                                  
+                    } else {
+                        window.location.href = "/";
+                    }
 
-</script>
+                },
+                error: function () {
+                    window.location.href = "/";
+                }
+            });
 
+            $(document).on("click", ".SelectFlight", function () {
+                var FID = $(this).attr("FlightId");
+
+                $(".loadinglap" + FID).show();
+                $("#overlay32").show();
+
+                $("body").css("overflow-y", "hidden");
+
+                // Load Flight Detils
+
+                $.ajax({
+                    type: "POST",
+                    data: { id: FID },
+                    url: "/Index/GetFlightDetails",
+                    success: function (response) {
+                        $("#WaitingflightDetails").html(response);
+
+                        $.ajax({
+                            type: "GET",
+                            data: { SelectedFlight: FID },
+                            url: "/Index/SelectFlight",
+                            success: function (response) {
+                                $("#overlay32").hide();
+                                $("body").css("overflow-y", "scroll");
+                                if (response != "") {
+
+                                    var obj = $.parseJSON(response);
+
+                                    if (obj.Code == "200") {
+                                        $("#divques").fadeOut();
+                                        window.location.href = "/index/ContactInfo";
+                                    } else {
+                                        $("#AlertMsg").html(obj.ExMessage);
+                                        $("#divques").fadeIn();
+                                        $(".loadinglap" + FID).hide();
+                                    }
+                                }
+
+                            }
+                        });
+
+                    }
+                });
+
+
+            });
+
+
+            function setCookie(cname, cvalue, exdays) {
+                var d = new Date();
+                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + d.toUTCString();
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+
+            function getCookie(cname) {
+                var name = cname + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+
+            function Loads() {
+
+                $(".CLickonly").unbind("click").bind("click", function (e) {
+                    //$(".CLickonly").click(function () {
+                    console.log("check Trig");
+                    $(".subval > input[name='AirlineChk']").prop("checked", true);
+
+                    var e = $("label[id^='flight'] > input[name='Airline']");
+
+                    for (var i = 0; i < e.length; i++) {
+                        e[i].value = e[i].value.substring(0, 2) + "1";
+                    }
+
+                    $("#idstop1").prop("checked", false);
+                    $("#idstop2").prop("checked", false);
+                    $("#idstop3").prop("checked", false);
+                    setCookie("stopid", "id" + $(this).get(0).id.substring(4, 9));
+                    $("#id" + $(this).get(0).id.substring(4, 9)).prop("checked", true);
+                    LOCK = true;
+                    dosearch("E" + this.id);
+                    LOCK = false;
+                });
+
+                $(".onlythisF").unbind("click").bind("click", function (e) {
+                    //$(".onlythisF").click(function (e) {
+
+                    $("input[name='stop1']").prop('checked', true);
+                    $("input[name='stop2']").prop('checked', true);
+                    $("input[name='stop3']").prop('checked', true);
+
+                    $("label[id^='flight'] > input[name='AirlineChk']").prop('checked', false);
+
+                    var Chec = $("label[id^='flight'] > input[name='Airline']");
+
+                    for (var i = 0; i < Chec.length; i++) {
+                        if (Chec[i].value.substring(0, 2) != this.id.substring(10, this.id.length))
+                            Chec[i].value = (Chec[i].value.substring(0, 2) + "0");
+                        else
+                            Chec[i].value = (Chec[i].value.substring(0, 2) + "1");
+                    }
+
+                    var ee = this.id.substring(4, this.id.length);
+                    setTimeout(function () {
+                        Dochecked(ee);
+                    }, 200);
+                    LOCK = true;
+                    dosearch("check box " + this.id);
+                    LOCK = false;
+                });
+
+                function dosearch(whoclick) {
+                    // console.log(whoclick);
+                    if (LOCK)
+                        $("#btnsearchsubmit").click();
+                }
+
+                $(".onlythisFA").unbind("click").bind("click", function (e) {
+                    //$(".onlythisFA").click(function (e) {
+
+                    $("input[name='stop1']").prop('checked', true);
+                    $("input[name='stop2']").prop('checked', true);
+                    $("input[name='stop3']").prop('checked', true);
+
+                    $("label[id^='flight'] > input[name='AirlineChk']").prop('checked', false);
+
+                    var Chec = $("label[id^='flight'] > input[name='Airline']");
+
+                    for (var i = 0; i < Chec.length; i++) {
+                        if (Chec[i].value.substring(0, 2) != this.id.substring(10, this.id.length))
+                            Chec[i].value = (Chec[i].value.substring(0, 2) + "0");
+                        else
+                            Chec[i].value = (Chec[i].value.substring(0, 2) + "1");
+                    }
+
+                    $("label[id='" + this.id.substring(4, this.id.length) + "'] > input[name='AirlineChk']").prop('checked', true);
+
+                    LOCK = true;
+                    dosearch("check box SEARCH" + this.id);
+                    LOCK = false;
+
+                });
+
+                $(".SelectAll").unbind("click").bind("click", function (e) {
+                    //$(".SelectAll").click(function () {
+
+                    $("input[name='stop1']").prop('checked', true);
+                    $("input[name='stop2']").prop('checked', true);
+                    $("input[name='stop3']").prop('checked', true);
+
+
+                    $(".subval > input[name='AirlineChk']").prop('checked', true);
+
+                    var Chec = $("label[id^='flight'] > input[name='Airline']");
+
+                    for (var i = 0; i < Chec.length; i++) {
+                        Chec[i].value = (Chec[i].value.substring(0, 2) + "1");
+                    }
+
+                    var options = $("#slider-range").slider('option');
+
+                    //$("#slider-range").slider('values', [options.min, options.max]);
+                    LOCK = true;
+                    dosearch("all flight");
+                    LOCK = false;
+                });
+
+
+                $(".stopclickE").unbind("click").bind("click", function (e) {
+                    //$(".stopclickE").click(function (e) {
+
+                    $("input[name='stop1']").prop("checked", false);
+                    $("input[name='stop2']").prop("checked", false);
+                    $("input[name='stop3']").prop("checked", false);
+
+                    $(".subval > input[name='AirlineChk']").prop("checked", false);
+
+                    if ($(this).attr("flightid") == "All") {
+                        $(".subval > input[name='AirlineChk']").prop("checked", true);
+                    } else {
+
+                        $("#" + $(this).attr("flightid") + " > input[name='AirlineChk']").prop("checked", true);
+                    }
+
+
+                    $("input[name='" + this.id.substring(4, 10) + "']").prop("checked", true);
+
+                    var Chec = $("label[id^='flight'] > input[name='Airline']");
+
+                    if ($(this).attr("flightid") == "All") {
+
+                        for (var i = 0; i < Chec.length; i++) {
+                            Chec[i].value = (Chec[i].value.substring(0, 2) + "1");
+                        }
+                    } else {
+                        for (var i = 0; i < Chec.length; i++) {
+                            Chec[i].value = (Chec[i].value.substring(0, 2) + "0");
+                        }
+                    }
+
+                    if ($(this).attr("flightid") != "All") {
+                        $("#" + $(this).attr("flightid") + " > input[name='Airline']").val($("#" + $(this).attr("flightid") + " > input[name='Airline']").val().substring(0, 2) + "1");
+                    }
+
+                    ///var ee = this.id.substring(4, this.id.length);
+                    // setTimeout(function () {
+                    //ChangeChecked(ee);
+                    LOCK = true;
+                    dosearch("E " + this.id);
+                    LOCK = false;
+
+                    //}, 200);
+
+                });
+
+            }
+            // Loads();
+
+            $("#NormalTrip").show();
+            $("#MultiTrip").hide();
+            $("#ArvDate").show();
+
+            AddSearchoption("OriginAirportCode0");
+            AddSearchoption("DestinationAirportCode0");
+            AddSearchoption("OriginAirportCode1");
+            AddSearchoption("DestinationAirportCode1");
+
+
+            var Apt = $("#airlinename").val();
+
+            var options = {
+                url: function (phrase) {
+                    return "/Index/GetAllAirlines?AirCode=" + Apt;
+                },
+                list: {
+                    maxNumberOfElements: 15,
+                    match: {
+                        enabled: true
+                    }
+                },
+                requestDelay: 500,
+                theme: "plate-dark",
+                getValue: "name"
+            };
+
+            $("#airlinename").easyAutocomplete(options);
+
+
+
+            $("#AddTrip").click(function () {
+                var ii = $("input[name='DestinationAirportCode']").length;
+                if (ii < 6) {
+
+                    var div2 = "<div id='trip" + (ii + 1) +
+                        "'> <div class='col-xs-12  marginbotom10 marginbotomdty pad5'> <div class='relativemask'> <span class='maskimg mfrom'> From</span>" +
+                        "<input type='text' name='OriginAirportCode' id='OriginAirportCode" + (ii + 1) + "' class='ft ui-autocomplete-input searchtxt' placeholder='Type Departure City' required='' autocomplete='off'> </div> </div>" +
+                        "<div class='col-xs-12  marginbotom10 marginbotomdty pad5'>" +
+                        "<div class='relativemask'>" +
+                        "<span class='maskimg mto'> To</span>" +
+                        "<input type='text' name='DestinationAirportCode' id='DestinationAirportCode" + (ii + 1) + "' class='searchtxt ft ui-autocomplete-input' placeholder='Type Destination City' required='' autocomplete='off'> </div></div> " +
+                        "<div class='clearfix'></div> " +
+                        "<div id='depart_date' class='col-xs-6 fiveh marginbotom10 pad5'> " +
+                        "<div class='relativemask'> " +
+                        "<span class='maskimg caln'>Depart</span> " +
+                        "<input name='DepartureDate' id='DepartureDate" + (ii + 1) + "' placeholder='Select Date' class='forminput' type='text' required=''> </div> </div> " +
+                        "<div id='depart_date' class='col-xs-6 fiveh marginbotom10 pad5'> " +
+                        "<div class='relativemask'> <span class='maskimg caln'>Remove Trip</span>" +
+                        "<input style='margin-top:0px;' type='button' class='btn btn-danger' value='Delete Trip' onclick='delthis(\"" + (ii + 1) + "\")' /> " +
+                        "</div> </div> <hr/></div>";
+
+
+                    $("#MultiTripAdd").append(div2);
+                    var Apt = $("#OriginAirportCode" + (ii + 1) + "").val();
+
+                    var options = {
+                        url: function (phrase) {
+                            return "/Index/GetAllAirports?AirCode=" + Apt;
+                        },
+                        list: {
+                            maxNumberOfElements: 15,
+                            match: {
+                                enabled: true
+                            }
+
+                        },
+                        requestDelay: 500,
+                        theme: "plate-dark",
+                        getValue: "name"
+                    };
+                    setmultidates("DepartureDate" + (ii), "DepartureDate" + (ii + 1));
+                    $("#OriginAirportCode" + (ii + 1) + "").easyAutocomplete(options);
+                    $("#DestinationAirportCode" + (ii + 1) + "").easyAutocomplete(options);
+                    ActiveButton();
+                }
+            });
+
+            $(".searchtxt").parent().css("width", "100%");
+            RadClick();
+            $(".airlinename").parent().css("width", "100%");
+        });
+
+
+        $(document).ready(function () {
+            $(".btnviewflightdetails").click(function () {
+                var bc = $(this).attr("fid");
+                var name = $(this).attr("data-target");
+
+                if ($(name).attr("st") != "1") {
+                    var a = $(this);
+                    a.html("Loading...");
+                    $.ajax({
+                        type: "POST",
+                        data: { id: bc },
+                        url: "/Index/GetFlightDetails",
+                        success: function (response) {
+                            $(name).html(response);
+                            $(name).attr("st", "1");
+                            a.html("View Flight Details");
+                        }
+                    });
+                }
+            });
+        });
+
+        function delthis(div) {
+            $("#trip" + div).remove();
+        }
+
+        function RadClick() {
+            var Rad = $("input[name='triptype']");
+            $("#NormalTrip").show();
+            $("#MultiTrip").hide();
+            $("#ArvDate").show();
+
+            $('input[name="arrivedate"]').prop("disabled", false);
+            $("#MultiTrip input[type='text']").prop("disabled", false);
+            $("#NormalTrip input[type='text']").prop("disabled", false);
+
+            if (Rad[0].checked) {
+
+                $("#MultiTrip input[type='text']").prop("disabled", true);
+            } else if (Rad[1].checked) {
+                $("#MultiTrip input[type='text']").prop("disabled", true);
+
+                $('input[name="arrivedate"]').prop("disabled", true);
+                $("#ArvDate").hide();
+            } else if (Rad[2].checked) {
+
+                $('input[name="arrivedate"]').prop("disabled", true);
+                $("#MultiTrip input[type='text']").prop("disabled", false);
+                $("#NormalTrip input[type='text']").prop("disabled", true);
+
+                $("#NormalTrip").hide();
+                $("#MultiTrip").show();
+            }
+
+            ActiveButton();
+
+        }
+
+
+        function ActiveButton() {
+            $(".searchtxt").click(function () {
+                this.value = "";
+            });
+            $(".searchtxt").blur(function () {
+                if (this.value == "") {
+                    if (!$("#" + this.id).prop("disabled")) {
+                        $("#" + this.id).css("border-color", "red");
+                        $("#btnSubmit").attr("Allow", "NotAccess");
+                    } else {
+                        $("#" + this.id).css("border-color", "#ccc");
+                        $("#btnSubmit").attr("Allow", "Access");
+                    }
+                } else {
+                    $("#" + this.id).css("border-color", "#ccc");
+                    $("#btnSubmit").attr("Allow", "Access");
+                }
+            });
+
+            $(".hasDatepicker").blur(function () {
+                if (this.value == "") {
+                    if (!$("#" + this.id).prop("disabled")) {
+                        $("#" + this.id).css("border-color", "red");
+                        $("#btnSubmit").attr("Allow", "NotAccess");
+                    } else {
+                        $("#" + this.id).css("border-color", "#ccc");
+                        $("#btnSubmit").attr("Allow", "Access");
+                    }
+                } else {
+                    $("#" + this.id).css("border-color", "#ccc");
+                    $("#btnSubmit").attr("Allow", "Access");
+                }
+            });
+
+            $(".hasDatepicker").change(function () {
+                if (this.value == "") {
+                    if (!$("#" + this.id).prop("disabled")) {
+                        $("#" + this.id).css("border-color", "red");
+                        $("#btnSubmit").attr("Allow", "NotAccess");
+                    } else {
+                        $("#" + this.id).css("border-color", "#ccc");
+                        $("#btnSubmit").attr("Allow", "Access");
+                    }
+                } else {
+                    $("#" + this.id).css("border-color", "#ccc");
+                    $("#btnSubmit").attr("Allow", "Access");
+                }
+            });
+        }
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+    </script>
+
+}
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
-@section sc2{
-    }
