@@ -363,7 +363,7 @@
                     <hr style="margin-top: 9px;margin-bottom: 10px;" />
 
                     <div class="col-md-12">
-                        <p style="color:red;">IMPORTANT: Each passenger's full name must be entered as it appers on their passport or government issued photo ID. Name changes are not permitted after booking. </p>
+                        <p style="color:red;">IMPORTANT: Each passenger's full name must be entered as it appers on their passport or government issued photo ID. <br />Name changes are not permitted after booking. </p>
                     </div>
 
 
@@ -375,10 +375,12 @@
                         {
                             <div class="col-md-2">
                                 <label>@(List[i][1].ToString() == "ADT" ? "Adult" : "Child") # @(Number)</label>
-                                <select name="TrvTitle" class="form-control">
-                                    <option value="@(List[i][1].ToString() == "ADT" ? "ADT-Mr" : "CNN-Mr")" selected="selected">Mr</option>
+                                <select name="TrvTitle" data-Error="errorTrvTitle-@(Number)" class="form-control">
+                                    <option value="0">Select Title</option>
+                                    <option value="@(List[i][1].ToString() == "ADT" ? "ADT-Mr" : "CNN-Mr")">Mr</option>
                                     <option value="@(List[i][1].ToString() == "ADT" ? "Miss-Miss" : "CNN-Miss")">Miss</option>
                                 </select>
+                                <span id="errorTrvTitle-@(Number)" class="errorText"></span>
                             </div>
                             <input type="hidden" name="TrvType" value="@(List[i][1].ToString())" />
                             <div class="col-md-3">
@@ -387,11 +389,11 @@
                                 <span id="errorTrvFName-@(Number)" class="errorText"></span>
                             </div>
 
-                            @*<div class="col-md-3">
-                                    <label>Middle Name</label>
-                                    <input type="text" placeholder="Middle Name" class="form-control id" id="TrvMName-@(Number)" name="TrvMName" />
-                                    <span id="errorTrvMName-@(Number)" class="errorText"></span>
-                                </div>*@
+                            <div class="col-md-3">
+                                <label>Middle Name</label>
+                                <input type="text" placeholder="Middle Name" class="form-control id" id="TrvMName-@(Number)" name="TrvMName" />
+                                <span id="errorTrvMName-@(Number)" class="errorText"></span>
+                            </div>
 
                             <div class="col-md-3">
                                 <label>Last Name</label>
@@ -685,6 +687,16 @@
 
         $(document).ready(function () {
 
+            $("select[name='TrvTitle']").change(function () {
+                if ($(this).val() == "0") {
+                    $(this).css('border-color', 'red');
+                } else {
+                    $(this).css('border-color', '#ccc');
+                }
+            });
+
+
+
             $('.dob').each(function () {
 
                 $(this).change(function () {
@@ -730,7 +742,11 @@
                 } else {
                     $("#btnSubmit").prop("Allow", "Access");
                 }
-                 
+
+                if ($("#cardnumber").val() != "") {
+                    $("#errorCardNumber").val("");
+                }
+
 
                 $("#btnSubmit").prop('disabled', true);
 
@@ -760,6 +776,8 @@
                                 if (obj.Code == "100") {
                                     $("#errorCardNumber").html("Please Enter Correct Card Number");
                                     alert("Please Enter Correct Card Number");
+                                } else if (obj.Code == "102") {
+                                    alert(obj.Message);
                                 }
                                 else {
                                     alert("Fill Required fields");
@@ -833,9 +851,22 @@
                     res = false;
                     $(eid).html("Please Select Data of Birth.");
                     $(this).focus();
+                } else {
+                    $(eid).html("");
                 }
 
 
+            });
+
+            $("select[name='TrvTitle']").each(function () {
+                if ($(this).val() == "0") {
+                    $(this).css('border-color', 'red');
+                    $("#" + $(this).data('error')).html('Please Fill This field.');
+                    res = false;
+                } else {
+                    $(this).css('border-color', '#ccc');
+                    $("#" + $(this).data('error')).html('');
+                }
             });
 
             return res;
