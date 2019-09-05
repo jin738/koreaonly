@@ -719,16 +719,58 @@ namespace KoreaOnly.Controllers
 
         public string PayNow(Models.PassengerDetailsRQ Info)
         {
+            var Enhance = (Additional.Enhanced.EnhancedAirBookRS)Session["FlightReserve"];
+
+            Info.Airline = (from i in Enhance.OTA_AirBookRS.OriginDestinationOption select i.MarketingAirline.Code).Distinct().ToArray();
+
+		    
             var Response = new MainController().SendPassengerDetailsRequest(Info);
-
-            if (Response.ApplicationResults.status == CompletionCodes1.Complete)
+            if (Response == null)
             {
+                return "{\"Code\": \"104\", \"Message\":\"Fill Required Feilds\"}";
+            }
+            else if (Response.ApplicationResults.status == Additional.Passengers.CompletionCodes.Complete)
+            {
+                Session["UniqueID"] = Response?.TravelItineraryReadRS?.TravelItinerary.ItineraryRef?.ID?.ToString() == "" ? "" : Response?.TravelItineraryReadRS?.TravelItinerary.ItineraryRef?.ID;
+                var responce = (object[])new MainController().SendAllCommandFlow(Info);
 
-                new MainController().SendAllCommandFlow(Info);
+				
+            var Request = new Additional.CreditVerification.CreditVerificationRQ()
+            {
+                Version = "2.2.0",
+                Credit = new Additional.CreditVerification.CreditVerificationRQCredit()
+                {
+                    CC_Info = new Additional.CreditVerification.CreditVerificationRQCreditCC_Info()
+                    {
+                        PaymentCard = new Additional.CreditVerification.CreditVerificationRQCreditCC_InfoPaymentCard()
+                        {
+                            AirlineCode = Payment.Airline.First(),
+                            Code = Payment.CardType,
+                            ExpireDate = Payment.CardExpY + "-" + Payment.CardExpM,
+                            Number = Payment.CardNumber.Replace("-", "")
+                        }
+                    },
+                    ItinTotalFare = new Additional.CreditVerification.CreditVerificationRQCreditItinTotalFare()
+                    {
+                        TotalFare = new Additional.CreditVerification.CreditVerificationRQCreditItinTotalFareTotalFare()
+                        {
+                            Amount = totalamount.ToString("0.00") + "",
+                            CurrencyCode = "USD"
+                        }
+                    }
+                }
+            };
+				
+				
+				
+                if (responce[0].ToString() == "2")
+                {
+                    return "{\"Code\": \"100\", \"Message\":\"Enter Correct Card Number\"}";
+                }
+
             }
 
-
-            return "";
+            return "{\"Code\": \"200\", \"Message\":\"Success\"}";
         }
 
 

@@ -142,65 +142,18 @@
     .border {
         border: 1px solid red !important;
     }
+
+    .comncolor {
+        background: #28748f none repeat scroll 0 0 !important;
+    }
+
+    .srchbutn {
+        border: 1px solid #28748f !important;
+    }
 </style>
 
 <link rel="stylesheet" href="~/Content/Fillter.css" />
 
-<script>
-
-
-
-    $(function () {
-
-        var dateFormat = "mm/dd/yy",
-            from = $("input[name='DepartureDate']")
-                .datepicker({
-                    defaultDate: "+1w",
-                    changeMonth: true,
-                    minDate: 0,
-                    numberOfMonths: 2
-                })
-                .on("change", function () {
-                    to.datepicker("option", "minDate", getDate(this));
-                }),
-            to = $("input[name='arrivedate']").datepicker({
-                defaultDate: "+1w",
-                minDate: 1,
-                changeMonth: true,
-                numberOfMonths: 2
-            })
-                .on("change", function () {
-                    from.datepicker("option", "maxDate", getDate(this));
-                });
-
-        function getDate(element) {
-            var date;
-            try {
-                date = $.datepicker.parseDate(dateFormat, element.value);
-            } catch (error) {
-                date = null;
-            }
-
-            return date;
-        }
-
-
-
-    });
-
-    function setmultidates(divmindateid, datedivid) {
-        var dateFormat = "mm/dd/yy",
-            from = $("#" + datedivid + "")
-                .datepicker({
-                    defaultDate: "+1w",
-                    changeMonth: true,
-                    minDate: new Date($("#" + divmindateid).val()),
-                    numberOfMonths: 2
-                });
-
-    }
-
-</script>
 <style>
     .h4heading {
         border: 0 none;
@@ -317,7 +270,7 @@
             background-color: #284b6b; /* Add a dark-grey background on hover */
         }
 </style>
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 <div class="container" id="cont">
     <div class="row">
         <div class="col-md-3">
@@ -481,43 +434,7 @@
                                             <span class="btn btn-default btnTheam srchbutn comncolor" style="width:100%;" id="btnSubmit">
                                                 <i class="fa fa-search" aria-hidden="true"></i> Search Flight
                                             </span>
-                                            <script>
-                                                $(document).ready(function () {
-                                                    $('#btnSubmit').click(function () {
 
-                                                        $("#loadingdiv").show();
-
-                                                        $("#loadingdivsFlight").show();
-                                                        $.ajax({
-                                                            type: "POST",
-                                                            data: $("#frm0").serialize(),
-                                                            url: "/Index/TaskRun",
-                                                            success: function (response) {
-
-
-                                                                setTimeout(function () {
-                                                                    $('#btnSubmitOff').click();
-
-
-
-                                                                }, 5000);
-
-
-
-                                                            }, error: function () {
-                                                                setTimeout(function () {
-                                                                    $('#btnSubmitOff').click();
-
-
-
-                                                                }, 5000);
-
-                                                            }
-                                                        });
-
-                                                    });
-                                                });
-                                            </script>
                                             <input type="submit" style="display:none;" id="btnSubmitOff" class="btn btn-default btnTheam" value="Search Flight" />
                                         </div>
                                     </div>
@@ -557,16 +474,7 @@
                 </div>
                 <input class="btn btn-default BtnConf2" type="button" value="Yes" id="btnCyes" />
                 @*<input class="btn btn-danger BtnConf2" type="button" value="No" id="btnCNo" />*@
-                <script>
-                    $(".BtnConf2").click(function () {
-                        $("#cont").removeClass("overlay2");
-                        $("#divques").hide();
-                    });
 
-
-
-
-                </script>
             </div>
         </div>
     </div>
@@ -615,6 +523,97 @@
 @section scriptarea {
 
     <script type="text/javascript">
+
+
+
+
+        $(function () {
+
+            var dateFormat = "mm/dd/yy",
+                from = $("input[name='DepartureDate']")
+                    .datepicker({
+                        defaultDate: "+1w",
+                        changeMonth: true,
+                        minDate: 0,
+                        numberOfMonths: 2
+                    })
+                    .on("change", function () {
+                        to.datepicker("option", "minDate", getDate(this));
+                    }),
+                to = $("input[name='arrivedate']").datepicker({
+                    defaultDate: "+1w",
+                    minDate: 1,
+                    changeMonth: true,
+                    numberOfMonths: 2
+                })
+                    .on("change", function () {
+                        from.datepicker("option", "maxDate", getDate(this));
+                    });
+
+            function getDate(element) {
+                var date;
+                try {
+                    date = $.datepicker.parseDate(dateFormat, element.value);
+                } catch (error) {
+                    date = null;
+                }
+
+                return date;
+            }
+
+
+
+        });
+
+        $('#btnSubmit').click(function () {
+
+            $("#loadingdiv").show();
+
+            $("#loadingdivsFlight").show();
+            $.ajax({
+                type: "POST",
+                data: $("#frm0").serialize(),
+                url: "/Index/TaskRun",
+                success: function (response) {
+
+
+                    setTimeout(function () {
+                        $('#btnSubmitOff').click();
+
+
+
+                    }, 5000);
+
+
+
+                }, error: function () {
+                    setTimeout(function () {
+                        $('#btnSubmitOff').click();
+
+
+
+                    }, 5000);
+
+                }
+            });
+
+        });
+        $(".BtnConf2").click(function () {
+            $("#cont").removeClass("overlay2");
+            $("#divques").hide();
+        });
+
+        function setmultidates(divmindateid, datedivid) {
+            var dateFormat = "mm/dd/yy",
+                from = $("#" + datedivid + "")
+                    .datepicker({
+                        defaultDate: "+1w",
+                        changeMonth: true,
+                        minDate: new Date($("#" + divmindateid).val()),
+                        numberOfMonths: 2
+                    });
+
+        }
 
         function AddSearchoption(inputid) {
 

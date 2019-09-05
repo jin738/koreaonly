@@ -366,7 +366,7 @@
 
         <div class="col-md-12 SubDivss">
             <div class="col-md-1 SubDivs4 xs-only-text-center">
-                <img src="~/Images/search-icon-png-21.png" />
+                <img src="~/Images/search-icon-png-21.png" style="width:60px;height:60px" />
             </div>
             <div class="col-md-11 col-sm-11 col-xs-11 SubDivs8  xs-only-text-center">
                 <p class="subheadings">The World's Travel Search Engine</p>
@@ -383,7 +383,7 @@
                 <p class=" xs-only-text-center" style="color:#fff;text-align: right;">We provide affordable tickets to the flights of almost all existing airlines so you don’t need to look for them.</p>
             </div>
             <div class="col-md-1 SubDivs4  xs-only-text-center">
-                <img src="~/Images/images.png" />
+                <img src="~/Images/AirTicket.png" style="width:60px;height:60px" />
             </div>
         </div>
 
@@ -391,7 +391,7 @@
         <hr />
         <div class="col-md-12 SubDivss ">
             <div class="col-md-1 SubDivs4  xs-only-text-center">
-                <img src="~/Images/audio-headset-of-auriculars-with-microphone-included_318-47145.png" />
+                <img src="~/Images/SupportLines.png" style="width:60px;height:60px" />
             </div>
             <div class="col-md-11 SubDivs8  xs-only-text-center">
                 <p class="subheadings">Our Support Lines are Open 24/7</p>
@@ -408,7 +408,7 @@
                 <p class=" xs-only-text-center" style="color:#fff;text-align: right;">We provide a variety of payment methods including cheque, cash, and credit cards.</p>
             </div>
             <div class="col-md-1 SubDivs4 xs-only-text-center">
-                <img src="~/Images/business.png" />
+                <img src="~/Images/businessNew.png" style="width:60px;height:60px" />
             </div>
         </div>
 
@@ -433,14 +433,6 @@
                 <span class="btn btn-default btnTheam" id="btncontact">
                     Contact Us
                 </span>
-
-                <script>
-                    $(document).ready(function () {
-                        $('#btncontact').click(function () {
-
-                        });
-                    });
-                </script>
 
 
             </div>
@@ -639,9 +631,7 @@
 
 
 @section scriptarea{
-
-    <script src="~/scripts/picker.js"></script>
-    <script src="~/scripts/pickerdate.js"></script>
+ 
 
     <script>
         $(document).ready(function () {
@@ -789,6 +779,10 @@
 
             });
 
+
+            $('#btncontact').click(function () {
+
+            });
 
             $("#addsegmulticity").click(function () {
 
@@ -1129,48 +1123,49 @@
             $("#" + ID).easyAutocomplete(options);
         }
 
-        $.ajax({
-            url: "https://geoip-db.com/jsonp",
-            jsonpCallback: "callback",
-            dataType: "jsonp",
-            success: function (location) {
+        @*
+        //$.ajax({
+        //    url: "https://geoip-db.com/jsonp",
+        //    jsonpCallback: "callback",
+        //    dataType: "jsonp",
+        //    success: function (location) {
 
-                $('#CurrentCity').html(location.city);
-            }
-        });
+        //        $('#CurrentCity').html(location.city);
+        //    }
+        //});
 
-                // Comment duew to Ch
+                    // Comment duew to Ch
 
-                //$.post("/Index/GetCheapFlights", function (data) {
+                    //$.post("/Index/GetCheapFlights", function (data) {
 
-                //    $("#CheapFlightPanelList").html(data);
-                //    $(".cheapflightsbox").click(function () {
-                //        var codeO = $(this).data('flightorigin');
-                //        $("#OriginAirportCode1").val(codeO);
-                //        var codeD = $(this).data('flightdestination');
-                //        $("#DestinationAirportCode1").val(codeD);
+                    //    $("#CheapFlightPanelList").html(data);
+                    //    $(".cheapflightsbox").click(function () {
+                    //        var codeO = $(this).data('flightorigin');
+                    //        $("#OriginAirportCode1").val(codeO);
+                    //        var codeD = $(this).data('flightdestination');
+                    //        $("#DestinationAirportCode1").val(codeD);
 
-                //        $("#DepartureDate1").val($(this).data('date'))
-                //        $("#airlinename").val($(this).data('airline'))
+                    //        $("#DepartureDate1").val($(this).data('date'))
+                    //        $("#airlinename").val($(this).data('airline'))
 
-                //        //$.ajax({
-                //        //    url: "https://geoip-db.com/jsonp",
-                //        //    jsonpCallback: "callback",
-                //        //    dataType: "jsonp",
-                //        //    success: function (location) {
-                //        //        $('#country').html(location.country_name);
-                //        //        $('#state').html(location.state);
-                //        //        $('#city').html(location.city);
-                //        //        $('#latitude').html(location.latitude);
-                //        //        $('#longitude').html(location.longitude);
-                //        //        $('#ip').html(location.IPv4);
-                //        //    }
-                //        //});
+                    //        //$.ajax({
+                    //        //    url: "https://geoip-db.com/jsonp",
+                    //        //    jsonpCallback: "callback",
+                    //        //    dataType: "jsonp",
+                    //        //    success: function (location) {
+                    //        //        $('#country').html(location.country_name);
+                    //        //        $('#state').html(location.state);
+                    //        //        $('#city').html(location.city);
+                    //        //        $('#latitude').html(location.latitude);
+                    //        //        $('#longitude').html(location.longitude);
+                    //        //        $('#ip').html(location.IPv4);
+                    //        //    }
+                    //        //});
 
-                //        $("#arrivedate").focus();
-                //    });
-                //});
-
+                    //        $("#arrivedate").focus();
+                    //    });
+                    //});
+            *@
 
     </script>
 

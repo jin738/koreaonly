@@ -121,11 +121,11 @@
                         {
                             if (i == 1 && Model.Count == 2)
                             {
-                                <p><i class="fa fa-plane fa-rotate-270"></i>&nbsp;&nbsp;Return --- @R[i].FlightSegment.First().OriginLocation.LocationCode&nbsp;&nbsp;<i class="glyphicon glyphicon-arrow-right"></i>&nbsp;&nbsp;@R[i].FlightSegment.Last().DestinationLocation.LocationCode&nbsp;&nbsp;@(Convert.ToDateTime(R[i].FlightSegment.First().DepartureDateTime).ToString("MMM dd hh:mm")) @*@(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("hh:mm"))*@</p>
+                                <p><i class="fa fa-plane fa-rotate-270"></i>&nbsp;&nbsp;Return --- @R[i].FlightSegment.First().OriginLocation.LocationCode&nbsp;&nbsp;<i class="fa fa-arrow-right"></i>&nbsp;&nbsp;@R[i].FlightSegment.Last().DestinationLocation.LocationCode&nbsp;&nbsp;@(Convert.ToDateTime(R[i].FlightSegment.First().DepartureDateTime).ToString("MMM dd hh:mm")) @*@(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("hh:mm"))*@</p>
                             }
                             else
                             {
-                                <p><i class="fa fa-plane"></i>&nbsp;&nbsp;Depart --- @R[i].FlightSegment.First().OriginLocation.LocationCode&nbsp;&nbsp;<i class="glyphicon glyphicon-arrow-right"></i>&nbsp;&nbsp;@R[i].FlightSegment.Last().DestinationLocation.LocationCode&nbsp;&nbsp;@(Convert.ToDateTime(R[i].FlightSegment.First().DepartureDateTime).ToString("MMM dd hh:mm")) @*@(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("hh:mm"))*@</p>
+                                <p><i class="fa fa-plane"></i>&nbsp;&nbsp;Depart --- @R[i].FlightSegment.First().OriginLocation.LocationCode&nbsp;&nbsp;<i class="fa fa-arrow-right"></i>&nbsp;&nbsp;@R[i].FlightSegment.Last().DestinationLocation.LocationCode&nbsp;&nbsp;@(Convert.ToDateTime(R[i].FlightSegment.First().DepartureDateTime).ToString("MMM dd hh:mm")) @*@(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("hh:mm"))*@</p>
                             }
                         }
 
@@ -183,9 +183,9 @@
                                             @( MainController.GetAircraftTypeByCode(Model[i].Equipment_Type).Description) &nbsp;|
                                             &nbsp;
                                             <strong>Air Miles-:</strong>
-                                            @Model[i].Air_Miles&nbsp;|
-                                            &nbsp;<strong>Operating Airline-:</strong>
-                                            @(MainController.GetAirline(Model[i].Operating_Airline).AirlineName)&nbsp; @Model[i].Operating_Airline_CompanyName
+                                            @Model[i].Air_Miles&nbsp;<br />
+                                            <strong>Operating Airline-:</strong>
+                                            @(MainController.GetAirline(Model[i].Operating_Airline).AirlineName.ToUpper()) &nbsp; @(Model[i].Operating_Airline_CompanyName)
                                         </td>
                                     </tr>
                                 </tbody>
@@ -324,7 +324,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <label>Country Code</label>
+                        <label>Country</label>
                         <select name="CountryCode" id="countrycode" class="form-control">
                             <option value="US">1-United states</option>
                             <option value="KO">82-Korea (South)</option>
@@ -338,12 +338,12 @@
                     </div>
                     <div class="col-md-4">
                         <label>Email Address</label>
-                        <input type="email" placeholder="Email" class="form-control" name="EmailAddress" />
+                        <input type="email" placeholder="Email" class="form-control" name="EmailAddress" data-Error="errorEmailAddress" />
                         <span id="errorEmailAddress" class="errorText"></span>
                     </div>
                     <div class="col-md-4">
                         <label>Confirm Email Address</label>
-                        <input type="email" placeholder="Confrim-Email" class="form-control" name="Email2" />
+                        <input type="email" placeholder="Confrim-Email" class="form-control" name="Email2" data-Error="errorEmail2" />
                         <span id="errorEmail2" class="errorText"></span>
                     </div>
                 </div>
@@ -362,6 +362,10 @@
                     <h2 style="font-size: 22px !important;line-height: 26px;font-weight:bold;">Traveller Details</h2>
                     <hr style="margin-top: 9px;margin-bottom: 10px;" />
 
+                    <div class="col-md-12">
+                        <p style="color:red;">IMPORTANT: Each passenger's full name must be entered as it appers on their passport or government issued photo ID. Name changes are not permitted after booking. </p>
+                    </div>
+
 
                     @for (int i = 0; i < List.Count; i++)
                     {
@@ -372,33 +376,36 @@
                             <div class="col-md-2">
                                 <label>@(List[i][1].ToString() == "ADT" ? "Adult" : "Child") # @(Number)</label>
                                 <select name="TrvTitle" class="form-control">
-                                    <option value="@(List[i][1].ToString() == "ADT" ? "ADT-Mr" : "CNN-Mr")" selected>Mr</option>
+                                    <option value="@(List[i][1].ToString() == "ADT" ? "ADT-Mr" : "CNN-Mr")" selected="selected">Mr</option>
                                     <option value="@(List[i][1].ToString() == "ADT" ? "Miss-Miss" : "CNN-Miss")">Miss</option>
                                 </select>
                             </div>
                             <input type="hidden" name="TrvType" value="@(List[i][1].ToString())" />
                             <div class="col-md-3">
                                 <label>First Name</label>
-                                <input type="text" placeholder="First Name" class="form-control id" id="TrvFName-@(Number)" name="TrvFName" />
+                                <input type="text" placeholder="First Name" class="form-control id" id="TrvFName-@(Number)" name="TrvFName" data-Error="errorTrvFName-@(Number)" />
                                 <span id="errorTrvFName-@(Number)" class="errorText"></span>
                             </div>
 
+                            @*<div class="col-md-3">
+                                    <label>Middle Name</label>
+                                    <input type="text" placeholder="Middle Name" class="form-control id" id="TrvMName-@(Number)" name="TrvMName" />
+                                    <span id="errorTrvMName-@(Number)" class="errorText"></span>
+                                </div>*@
+
                             <div class="col-md-3">
-                                <label>Middle Name</label>
-                                <input type="text" placeholder="Middle Name" class="form-control id" id="TrvMName-@(Number)" name="TrvMName" />
-                                <span id="errorTrvMName-@(Number)" class="errorText"></span>
-                            </div>
-
-                            <div class="col-md-2">
                                 <label>Last Name</label>
-                                <input type="text" placeholder="Last Name" class="form-control" name="TrvLName" />
-                                <span id="errorTrvLName@(Number)" class="errorText"></span>
+                                <input type="text" placeholder="Last Name" class="form-control" name="TrvLName" data-Error="errorTrvLName-@(Number)" />
+                                <span id="errorTrvLName-@(Number)" class="errorText"></span>
                             </div>
 
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <label>Date Of Birth</label>
-                                <input type="text" placeholder="mm/dd/yyyy" required class="form-control DBCalen@(Number)" name="TrvDOB" />
+                                <input type="text" placeholder="mm/dd/yyyy" required class="form-control dob" id="DOB@(Number)" data-odate="DOBORG@(Number)" data-Error="errorTrvDOB@(Number)" />
                                 <span id="errorTrvDOB@(Number)" class="errorText"></span>
+
+                                <input type="hidden" class="DOBO" id="DOBORG@(Number)" name="TrvDOB" data-Picker="DOB@(Number)" data-Error="errorTrvDOB@(Number)" />
+
                             </div>
 
                             @*<div class="col-md-4">
@@ -416,21 +423,7 @@
                             <div class="col-md-12">
                             </div>
 
-                            <script>
 
-                                $(function () {
-
-                                    var dateFormat = "mm/dd/yy",
-                                        from = $(".DBCalen@(Number)")
-                                        .datepicker({
-                                            changeMonth: true,
-                                            changeYear: true,
-                                            yearRange: '-80:+0'
-
-                                        })
-                                });
-
-                            </script>
 
 
                             Number++;
@@ -443,54 +436,28 @@
                     <h2 style="font-size: 22px !important;line-height: 26px;font-weight:bold;">Payment Details</h2>
                     <hr style="margin-top: 9px;margin-bottom: 10px;" />
 
-                    <div class="col-md-4">
-                        <label>First Name</label>
-                        <input type="text" placeholder="First Name" class="form-control" name="BillFName" />
+
+
+                    <div class="col-md-12">
+                        <label>Card Holder Name: </label>
+                        <input type="text" placeholder="Card Holder Full Name" class="form-control" name="BillFName" data-Error="errorBillFName" />
                         <span id="errorBillFName" class="errorText"></span>
                     </div>
-                    <div class="col-md-4">
-                        <label>Middle Name</label>
-                        <input type="text" placeholder="Middle Name" class="form-control" name="BillMName" />
-                        <span id="errorBillMName" class="errorText"></span>
-                    </div>
 
-                    <div class="col-md-4">
-                        <label>Last Name</label>
-                        <input type="text" placeholder="Last Name" class="form-control" name="BillLName" />
-                        <span id="errorBillLName" class="errorText"></span>
-                    </div>
-
-                    <div class="col-md-8">
-                        <label>Street/House</label>
-                        <input type="text" placeholder="Billing Address" class="form-control" name="BillAddress" />
+                    <div class="col-md-12">
+                        <label>Address : </label>
+                        <input type="text" placeholder="Address" class="form-control" name="BillAddress" data-Error="errorAddress" />
                         <span id="errorAddress" class="errorText"></span>
                     </div>
 
-                    <div class="col-md-4">
-                        <label>City</label>
-                        <input type="text" placeholder="City" class="form-control" name="City" />
-                        <span id="errorCity" class="errorText"></span>
-                    </div>
 
                     <div class="col-md-4">
-                        <label>States/Prov</label>
-                        <input type="text" placeholder="State/Prov" class="form-control" name="State" />
-                        <span id="errorState" class="errorText"></span>
-                    </div>
-
-                    <div class="col-md-4">
-                        <label>Country Code</label>
-                        <select id="Country" name="Country" class="form-control">
-                            <option>1-United states</option>
-                            <option>82-Korea (South)</option>
-                        </select>
-                    </div>
-
-                    <div class="col-md-4">
-                        <label>Zip/Postal Code</label>
-                        <input type="text" placeholder="Zip/Postal Code" class="form-control" name="ZipCode" />
+                        <label>Zip/Postal Code :</label>
+                        <input type="text" placeholder="Zip/Postal Code" class="form-control" name="ZipCode" data-Error="errorZipCode" />
                         <span id="errorZipCode" class="errorText"></span>
                     </div>
+
+
 
                 </div>
 
@@ -509,16 +476,21 @@
                     </div>
                     <div class="col-md-4">
                         <label>Card Number</label>
-                        <input type="text" placeholder="Card Number" data-inputmask="'mask': '9999 999999 99999'" class="form-control" name="CardNumber" id="cardnumber" />
+                        <input type="text" placeholder="Card Number" data-inputmask="'mask': '9999 999999 99999'" class="form-control" name="CardNumber" id="cardnumber" data-Error="errorCardNumber" />
                         <span id="errorCardNumber" class="errorText"></span>
                     </div>
 
                     <div class="col-md-4">
                         <label>CSV <a href="#" class="icon" style="font-size:12px;"><i class="fas fa-info-circle"></i></a><span class="iconimage"><img src="~/Images/VisaMastercardCVV.png"></span></label>
-                        <input type="password" maxlength="3" placeholder="CSV" class="form-control" name="CSV" />
+                        <input type="password" maxlength="3" placeholder="CSV" class="form-control" name="CSV" data-Error="errorCSV" />
                         <span id="errorCSV" class="errorText"></span>
                     </div>
 
+
+
+                </div>
+
+                <div class="row">
                     <div class="col-md-4">
                         <label>Expiration Month</label>
                         <select id="CardExpM" name="CardExpM" class="form-control">
@@ -546,7 +518,6 @@
                             }
                         </select>
                     </div>
-
                 </div>
 
                 <div class="row">
@@ -580,12 +551,23 @@
             </div>
             <div class="modal-body">
 
+
+                <p style="font-size: 15px;margin: 5px; white-space:pre-line;font-weight:bold">1) Book With Confidence.</p>
+                <p style="font-size: 15px;margin: 5px; white-space:pre-line;">2) Fare is non-refundable, name change is not permitted and ticket is non-transferable.</p>
+                <p style="font-size: 15px;margin: 5px; white-space:pre-line;">3) Date changes will incur penaily and fees (airline penalty plus any fare difference plus or processing service fee) and is based on availity of flight at the time of change.</p>
+                <p style="font-size: 15px;margin: 5px; white-space:pre-line;">4) Date changes after departure must be done by the airline directly (airline penalty plus any fare difference will apply and is based on availability of flight at the time of change).</p>
+                <p style="font-size: 15px;margin: 5px; white-space:pre-line;">5) Routing change will incur penaily and fees (airline penaily plus any fare difference plus our processing service fee will apply and is based on availability of flight at the time of change).</p>
+                <br />
+
                 @if (AirRulleSabre == "")
                 {
+                    <h3>@((MainController.GetAirline((string)Session["MarketCode"]).AirlineName.ToUpper())) Fare Rules</h3>
+                    <hr />
                     foreach (var item in AirRule)
                     {
                         if (item.ApplicationResults.status != Additional.OTA_AirRule.CompletionCodes.Complete)
                         {
+
 
                             foreach (var item2 in item.ApplicationResults.Error)
                             {
@@ -627,12 +609,12 @@
                     var str = AirRulleSabre.Substring(AirRulleSabre.IndexOf("16."));
 
                     var t = str.Substring(0, str.IndexOf("17."));
-
+                    <h3>@((MainController.GetAirline((string)Session["MarketCode"]).AirlineName)) Fare Rules</h3>
                     <p style="font-size: 15px;margin: 5px; white-space:pre-line;">
                         @t
                     </p>
                 }
-                /**/
+
 
             </div>
 
@@ -697,13 +679,58 @@
 
 @section scriptarea{
 
+
+
     <script>
 
         $(document).ready(function () {
 
-            //
+            $('.dob').each(function () {
+
+                $(this).change(function () {
+
+                    var T = $(this);
+                    var a = T.data("odate");
+
+                    $("#" + a).val(T.val());
+
+
+                });
+
+            });
+
+
+
+
+            $('.dob').pickadate({
+                min: new Date(1950, 1, 1),
+                max: new Date(),
+                selectMonths: true,
+                selectYears: true,
+                format: 'mm/dd/yyyy',
+                formatSubmit: 'mm/dd/yyyy',
+                selectYears: 100,
+                hiddenName: true,
+                hiddenPrefix: 'prefix__',
+                hiddenSuffix: '',
+                onSet: function (thingSet) {
+
+
+
+                }
+            });
+
 
             $("#btnSubmit").click(function () {
+
+                var CHECK = Check();
+
+                if (!CHECK) {
+                    return;
+                } else {
+                    $("#btnSubmit").prop("Allow", "Access");
+                }
+                 
 
                 $("#btnSubmit").prop('disabled', true);
 
@@ -735,7 +762,7 @@
                                     alert("Please Enter Correct Card Number");
                                 }
                                 else {
-                                    alert("Fill Required Feilds");
+                                    alert("Fill Required fields");
                                 }
 
 
@@ -750,7 +777,7 @@
                         $("#overlay").hide();
                         $("#overlay").css('opacity', 0);
 
-                        alert("Fill Required Feilds");
+                        alert("Fill Required fields");
 
                     }
                 });
@@ -786,65 +813,87 @@
 
         function Check() {
 
-            $(document).ready(function () {
 
-                var res = true;
 
-                var elem = $("input[type='text']");
-                for (var i = 0; i < elem.length; i++) {
+            var res = true;
 
-                    if (!($("input[name=" + elem[i].name + "]").id.indexOf("-")) >= 0) {
+            $("input[type='text'], input[type='password'], input[type='email']").each(function () {
+                var T = $(this);
+                if (T.val() == "") {
+                    res = false;
+                    $("#" + T.data('error')).html('Please Fill This field.');
+                }
+            });
 
-                        if (!$("input[name=" + elem[i].name + "]").prop("disabled") && elem[i].value == "") {
-                            res = false;
 
-                            $("#error" + elem[i].name).html("Please fill in here");
-                        }
-                    }
+            $(".DOBO").each(function () {
+                var eid = "#" + $(this).data("error");
+
+                if ($(this).val() == "") {
+                    res = false;
+                    $(eid).html("Please Select Data of Birth.");
+                    $(this).focus();
                 }
 
-                for (var i = 0; i < elem.length; i++) {
-
-                    if (($("input[name=" + elem[i].name + "]").id.indexOf("-")) >= 0) {
-                        if (!$("input[id=" + elem[i].id + "]").prop("disabled") && elem[i].value == "") {
-                            res = false;
-
-                            $("#error" + elem[i].id).html("Please fill in here");
-
-                        }
-                    }
-                }
-
-
-                var elem2 = $(".hasDatepicker");
-                for (var i = 0; i < elem2.length; i++) {
-                    if (!$("#" + elem2[i].id).prop("disabled") && $("#" + elem2[i].id).val() == "") {
-                        $("#error" + elem2[i].id).html("Please fill in here");
-                        res = false;
-
-                    }
-                }
 
             });
+
+            return res;
+
         }
 
         function ActiveButton() {
 
+            $("input[type='text'], input[type='password'], input[type='email']").each(function () {
+
+                $(this).blur(function () {
+                    var T = $(this);
+                    if (T.val() == "") {
+                        T.css("border-color", "red");
+                        $("#" + T.data('error')).html('Please Fill This field.');
+                        $("#btnSubmit").prop("Allow", "NotAccess");
+                    } else {
+                        T.css("border-color", "#ccc");
+                        $("#btnSubmit").prop("Allow", "Access");
+                        $("#" + T.data('error')).html('');
+                    }
+                });
+
+            });
+
+
             $("input[type='text']").blur(function () {
-                if (this.value == "") {
+
+                if (this.name == "") {
+                    if ($(this).data("orgname") != "") {
+
+                        var aa = $("#" + $(this).data("orgname")).val();
+                        if (aa == "") {
+                            $(this).css("border-color", "red");
+                            $("#error" + $(this).data("orgname")).html("Please fill in here");
+                            $("#btnSubmit").prop("Allow", "NotAccess");
+                        } else {
+                            $(this).css("border-color", "#ccc");
+
+                            $("#error" + $(this).data("orgname")).html("");
+                            $("#btnSubmit").prop("Allow", "Access");
+                        }
+
+                    }
+                } else if (this.value == "") {
                     if (!$("input[name=" + this.name + "]").prop("disabled")) {
                         $("input[name=" + this.name + "]").css("border-color", "red");
                         $("#error" + this.name).html("Please fill in here");
-                        $("#btnSubmit").attr("Allow", "NotAccess");
+                        $("#btnSubmit").prop("Allow", "NotAccess");
                     } else {
                         $("input[name=" + this.name + "]").css("border-color", "#ccc");
                         $("#error" + this.id).html("");
-                        $("#btnSubmit").attr("Allow", "Access");
+                        $("#btnSubmit").prop("Allow", "Access");
                     }
                 } else {
                     $("#error" + this.name).html("");
                     $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                    $("#btnSubmit").attr("Allow", "Access");
+                    $("#btnSubmit").prop("Allow", "Access");
                 }
             });
 
@@ -853,11 +902,11 @@
                     if (!$("input[name=" + this.name + "]").prop("disabled")) {
                         $("input[name=" + this.name + "]").css("border-color", "red");
                         $("#error" + this.name).html("Please fill in here");
-                        $("#btnSubmit").attr("Allow", "NotAccess");
+                        $("#btnSubmit").prop("Allow", "NotAccess");
                     } else {
                         $("input[name=" + this.name + "]").css("border-color", "#ccc");
                         $("#error" + this.id).html("");
-                        $("#btnSubmit").attr("Allow", "Access");
+                        $("#btnSubmit").prop("Allow", "Access");
                     }
                 } else {
 
@@ -866,13 +915,13 @@
 
                     $("#errorEmailAddress").html("");
                     $("input[name=EmailAddress]").css("border-color", "#ccc");
-                    $("#btnSubmit").attr("Allow", "Access");
+                    $("#btnSubmit").prop("Allow", "Access");
 
                     if ($("input[name=EmailAddress]").val() != $("input[name=Email2]").val()) {
 
                         $("input[name=EmailAddress]").css("border-color", "red");
                         $("#errorEmailAddress").html("Email Address Not Match");
-                        $("#btnSubmit").attr("Allow", "NotAccess");
+                        $("#btnSubmit").prop("Allow", "NotAccess");
                     }
 
                 }
@@ -887,16 +936,16 @@
                     if (!$("input[name=" + this.name + "]").prop("disabled")) {
                         $("input[name=" + this.name + "]").css("border-color", "red");
                         $("#error" + this.name).html("Please fill in here");
-                        $("#btnSubmit").attr("Allow", "NotAccess");
+                        $("#btnSubmit").prop("Allow", "NotAccess");
                     } else {
                         $("input[name=" + this.name + "]").css("border-color", "#ccc");
                         $("#error" + this.id).html("");
-                        $("#btnSubmit").attr("Allow", "Access");
+                        $("#btnSubmit").prop("Allow", "Access");
                     }
                 } else {
                     $("#error" + this.name).html("");
                     $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                    $("#btnSubmit").attr("Allow", "Access");
+                    $("#btnSubmit").prop("Allow", "Access");
                 }
             });
 
@@ -905,14 +954,14 @@
                 if (this.value == "") {
                     if (!$("input[name=" + this.name + "]").prop("disabled")) {
                         $("input[name=" + this.name + "]").css("border-color", "red");
-                        $("#btnSubmit").attr("Allow", "NotAccess");
+                        $("#btnSubmit").prop("Allow", "NotAccess");
                     } else {
                         $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                        $("#btnSubmit").attr("Allow", "Access");
+                        $("#btnSubmit").prop("Allow", "Access");
                     }
                 } else {
                     $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                    $("#btnSubmit").attr("Allow", "Access");
+                    $("#btnSubmit").prop("Allow", "Access");
                 }
             });
 
@@ -920,14 +969,14 @@
                 if (this.value == "") {
                     if (!$("input[name=" + this.name + "]").prop("disabled")) {
                         $("input[name=" + this.name + "]").css("border-color", "red");
-                        $("#btnSubmit").attr("Allow", "NotAccess");
+                        $("#btnSubmit").prop("Allow", "NotAccess");
                     } else {
                         $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                        $("#btnSubmit").attr("Allow", "Access");
+                        $("#btnSubmit").prop("Allow", "Access");
                     }
                 } else {
                     $("input[name=" + this.name + "]").css("border-color", "#ccc");
-                    $("#btnSubmit").attr("Allow", "Access");
+                    $("#btnSubmit").prop("Allow", "Access");
                 }
             });
 
@@ -936,15 +985,15 @@
             //        if (!$("input[name=" + this.name + "]").prop("disabled")) {
             //            $("input[name=" + this.name + "]").css("border-color", "red");
             //            $("#error" + this.name).html("Please fill in here");
-            //            $("#btnSubmit").attr("Allow", "NotAccess");
+            //            $("#btnSubmit").prop("Allow", "NotAccess");
             //        } else {
             //            $("input[name=" + this.name + "]").css("border-color", "#ccc");
-            //            $("#btnSubmit").attr("Allow", "Access");
+            //            $("#btnSubmit").prop("Allow", "Access");
             //            $("#error" + this.name).html("");
             //        }
             //    } else {
             //        $("input[name=" + this.name + "]").css("border-color", "#ccc");
-            //        $("#btnSubmit").attr("Allow", "Access");
+            //        $("#btnSubmit").prop("Allow", "Access");
             //        $("#error" + this.name).html("");
             //    }
             //});
