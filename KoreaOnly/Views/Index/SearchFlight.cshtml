@@ -331,13 +331,13 @@
                                         <div id="depart_date" class="col-xs-6 fiveh marginbotom10 pad5">
                                             <div class="relativemask">
                                                 <span class="maskimg caln">Depart</span>
-                                                <input name="DepartureDate" id="DepartureDate1" placeholder="Select Date" value="@(Reqst.DepartureDate[0].ToString("MM/dd/yyyy"))" class="forminput" type="text" required="">
+                                                <input name="DepartureDate" id="DepartureDate0" placeholder="Select Date" value="@(Reqst.DepartureDate[0].ToString("MM/dd/yyyy"))" class="forminput" type="text" required="">
                                             </div>
                                         </div>
                                         <div id="ArvDate" class="col-xs-6 fiveh marginbotom10 pad5">
                                             <div class="relativemask">
                                                 <span class="maskimg caln">Return</span>
-                                                <input type="text" name="arrivedate" class="forminput" value="@(Reqst.arrivedate.ToString("MM/dd/yyyy"))" placeholder="Select Date">
+                                                <input type="text" id="arrivedate" name="arrivedate" class="forminput" value="@(Reqst.arrivedate.ToString("MM/dd/yyyy"))" placeholder="Select Date">
                                             </div>
                                         </div>
                                     </div>
@@ -415,6 +415,12 @@
                                                 <strong>(2-12 yrs)</strong>
                                             </span>
                                             <input type="number" name="trvchild" min="0" max="10" class="ft ui-autocomplete-input" placeholder="Arrival Date" value="@(Reqst.trvchild)" />
+                                        </div>
+                                        <div class="col-xs-12 fiveh marginbotom10 pad5">
+                                            <div class="relativemask">
+                                                <span class="maskimg mfrom"> Airline</span>
+                                                <input type="text" name="airlinename" id="airlinename" class="ft ui-autocomplete-input" data-optional="1" value="@(MainController.GetAirline(Reqst.airlinename).AirlineName)" placeholder="Airline " autocomplete="off">
+                                            </div>
                                         </div>
                                         <div class="col-xs-12 fiveh marginbotom10 pad5">
                                             <span class="formlabel">Class</span>
@@ -525,47 +531,161 @@
     <script type="text/javascript">
 
 
-
-
         $(function () {
 
-            var dateFormat = "mm/dd/yy",
-                from = $("input[name='DepartureDate']")
-                    .datepicker({
-                        defaultDate: "+1w",
-                        changeMonth: true,
-                        minDate: 0,
-                        numberOfMonths: 2
-                    })
-                    .on("change", function () {
-                        to.datepicker("option", "minDate", getDate(this));
-                    }),
-                to = $("input[name='arrivedate']").datepicker({
-                    defaultDate: "+1w",
-                    minDate: 1,
-                    changeMonth: true,
-                    numberOfMonths: 2
-                })
-                    .on("change", function () {
-                        from.datepicker("option", "maxDate", getDate(this));
-                    });
 
-            function getDate(element) {
-                var date;
-                try {
-                    date = $.datepicker.parseDate(dateFormat, element.value);
-                } catch (error) {
-                    date = null;
+
+            $("#DepartureDate0").pickadate({
+                format: 'dddd, dd mmm, yyyy',
+                formatSubmit: 'yyyy/mm/dd',
+                hiddenName: true,
+                hiddenPrefix: 'prefix__',
+                hiddenSuffix: '',
+                onSet: function (thingSet) {
+
+                    if ($("input[name='triptype']")[0].checked) {
+
+                        var A = $("#DepartureDate0").pickadate('picker');
+                        var c = A.get('select');
+                        var date = new Date(c.year, c.month, c.date);
+
+                        var B = $("#arrivedate").pickadate('picker');
+                        var NextDay = date.getDate() + 1;
+
+                        date.setDate(NextDay);
+                        B.set('min', date);
+                        B.set('select', date);
+
+
+
+                    }
+
                 }
+            });
 
-                return date;
-            }
+            $("#DepartureDate1").pickadate({
+                format: 'dddd, dd mmm, yyyy',
+                formatSubmit: 'yyyy/mm/dd',
+                hiddenName: true,
+                hiddenPrefix: 'prefix__',
+                hiddenSuffix: '',
+                onSet: function (thingSet) {
 
+                    if ($("input[name='triptype']")[2].checked) {
+
+                        if ($("#DepartureDate2").length > 0) {
+                            var A = $("#DepartureDate1").pickadate('picker');
+                            var c = A.get('select');
+                            var date = new Date(c.year, c.month, c.date);
+
+                            var B = $("#DepartureDate2").pickadate('picker');
+
+                            var NextDay = date.getDate() + 1;
+
+                            date.setDate(NextDay);
+
+                            B.set('min', date);
+                            B.set('select', date);
+
+                        }
+
+                    }
+
+                }
+            });
+
+            $("#arrivedate").pickadate({
+                format: 'dddd, dd mmm, yyyy',
+                formatSubmit: 'yyyy/mm/dd',
+                hiddenName: true,
+                hiddenPrefix: 'prefix__',
+                hiddenSuffix: '',
+                onSet: function (thingSet) {
+
+                }
+            });
+
+            //var dateFormat = "mm/dd/yy",
+            //    from = $("input[name='DepartureDate']")
+            //        .datepicker({
+            //            defaultDate: "+1w",
+            //            changeMonth: true,
+            //            minDate: 0,
+            //            numberOfMonths: 2
+            //        })
+            //        .on("change", function () {
+            //            to.datepicker("option", "minDate", getDate(this));
+            //        }),
+            //    to = $("input[name='arrivedate']").datepicker({
+            //        defaultDate: "+1w",
+            //        minDate: 1,
+            //        changeMonth: true,
+            //        numberOfMonths: 2
+            //    })
+            //        .on("change", function () {
+            //            from.datepicker("option", "maxDate", getDate(this));
+            //        });
+
+            //function getDate(element) {
+            //    var date;
+            //    try {
+            //        date = $.datepicker.parseDate(dateFormat, element.value);
+            //    } catch (error) {
+            //        date = null;
+            //    }
+
+            //    return date;
+            //}
+
+
+            $(document).on("load", "input[name='OriginAirportCode'],input[name='DestinationAirportCode']", function () {
+
+
+                var options = {
+                    url: function (phrase) {
+                        return "/Index/GetAllAirports?AirCode=" + ($(this).val());
+                    },
+                    list: {
+                        maxNumberOfElements: 15,
+                        match: {
+                            enabled: true
+                        }
+                    },
+                    requestDelay: 500,
+                    theme: "plate-dark",
+                    getValue: "name"
+                };
+
+                $(this).easyAutocomplete(options);
+
+            });
 
 
         });
 
+
         $('#btnSubmit').click(function () {
+
+            var Re = true;
+
+            $("#frm0 input[type='text']:enabled").each(function () {
+
+                if ($(this).data("optional") == "1") {
+
+                } else if ($(this).val() == "") {
+                    $(this).css('border', '1px solid red');
+
+                    Re = false;
+                    $(this).focus();
+                    return false;
+                } else {
+                    $(this).css('border', '1px solid #ddd');
+                }
+            });
+
+            if (!Re) {
+                return;
+            }
 
             $("#loadingdiv").show();
 
@@ -579,9 +699,6 @@
 
                     setTimeout(function () {
                         $('#btnSubmitOff').click();
-
-
-
                     }, 5000);
 
 
@@ -947,11 +1064,14 @@
             AddSearchoption("DestinationAirportCode1");
 
 
-            var Apt = $("#airlinename").val();
+            $("#airlinename").click(function ()
+            {
+                $(this).val("");
+            });
 
             var options = {
                 url: function (phrase) {
-                    return "/Index/GetAllAirlines?AirCode=" + Apt;
+                    return "/Index/GetAllAirlines?AirCode=" + $("#airlinename").val();;
                 },
                 list: {
                     maxNumberOfElements: 15,
@@ -969,8 +1089,25 @@
 
 
             $("#AddTrip").click(function () {
-                var ii = $("input[name='DestinationAirportCode']").length;
-                if (ii < 6) {
+
+
+                var ii = $("#MultiTrip input[name='DestinationAirportCode']").length;
+                if (ii < 5) {
+
+                    var Re = true;
+
+                    $("#trip" + ii + " input[type='text']").each(function () {
+                        if ($(this).val() == "") {
+                            $(this).css('border', '1px solid red');
+                            Re = false;
+                        } else {
+                            $(this).css('border', '1px solid #ddd');
+                        }
+                    });
+
+                    if (!Re) {
+                        return;
+                    }
 
                     var div2 = "<div id='trip" + (ii + 1) +
                         "'> <div class='col-xs-12  marginbotom10 marginbotomdty pad5'> <div class='relativemask'> <span class='maskimg mfrom'> From</span>" +
@@ -995,7 +1132,7 @@
 
                     var options = {
                         url: function (phrase) {
-                            return "/Index/GetAllAirports?AirCode=" + Apt;
+                            return "/Index/GetAllAirports?AirCode=" + $("#OriginAirportCode" + (ii + 1) + "").val();
                         },
                         list: {
                             maxNumberOfElements: 15,
@@ -1008,9 +1145,75 @@
                         theme: "plate-dark",
                         getValue: "name"
                     };
-                    setmultidates("DepartureDate" + (ii), "DepartureDate" + (ii + 1));
+
+                    var optionsd = {
+                        url: function (phrase) {
+                            return "/Index/GetAllAirports?AirCode=" + $("#DestinationAirportCode" + (ii + 1) + "").val();
+                        },
+                        list: {
+                            maxNumberOfElements: 15,
+                            match: {
+                                enabled: true
+                            }
+
+                        },
+                        requestDelay: 500,
+                        theme: "plate-dark",
+                        getValue: "name"
+                    };
+
+
+                    var a = $("#MultiTrip #DepartureDate" + (ii)).pickadate('picker');
+
+                    var getMinDate = a;
+
+                    var c = getMinDate.get('select');
+                    var date = new Date(c.year, c.month, c.date);
+                    var NextDay = date.getDate() + 1;
+
+                    date.setDate(NextDay);
+
+
+                    $('#MultiTrip #DepartureDate' + (ii + 1)).pickadate({
+                        min: date,
+                        format: 'dddd, dd mmm, yyyy',
+                        formatSubmit: 'yyyy/mm/dd',
+                        hiddenName: true,
+                        hiddenPrefix: 'prefix__',
+                        hiddenSuffix: '',
+                        onSet: function (thingSet) {
+
+                            // var a = $("#DepartureDate" + (ii + 1)).pickadate('picker');
+                            //$("#" + DepartureDateID + "Main").val(a.get('select', 'yyyy/mm/dd'));
+
+
+                            //var setMinDate = $("#DepartureDate" + ii).pickadate('picker');
+
+                            //var getMinDate = a;
+
+                            //var c = getMinDate.get('select');
+
+                            //var date = new Date(c.year, c.month, c.date);
+
+                            //var NextDay = date.getDate() + 1;
+
+                            //date.setDate(NextDay);
+
+                            //setMinDate.set('min', date);
+                            //setMinDate.set('select', date);
+
+
+                        }
+                    });
+
+
+                    //  setmultidates("DepartureDate" + (ii), "DepartureDate" + (ii + 1));
                     $("#OriginAirportCode" + (ii + 1) + "").easyAutocomplete(options);
-                    $("#DestinationAirportCode" + (ii + 1) + "").easyAutocomplete(options);
+
+                    $("#DestinationAirportCode" + (ii + 1) + "").easyAutocomplete(optionsd);
+
+                    $("#OriginAirportCode" + (ii + 1) + "").val($("#DestinationAirportCode" + (ii) + "").val());
+
                     ActiveButton();
                 }
             });

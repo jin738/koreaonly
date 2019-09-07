@@ -561,10 +561,12 @@
                 <p style="font-size: 15px;margin: 5px; white-space:pre-line;">5) Routing change will incur penaily and fees (airline penaily plus any fare difference plus our processing service fee will apply and is based on availability of flight at the time of change).</p>
                 <br />
 
+                <h3 style="text-align:center;">@((MainController.GetAirline((string)Session["MarketCode"]).AirlineName.ToUpper())) Fare Rules</h3>
+                <h4 style="text-align:center;">@((MainController.GetAirport(((string)Session["MarketCodeLocations"]).Split(' ')[0]).Result.AirportFullName).Split('-')[0]) --- @((MainController.GetAirport(((string)Session["MarketCodeLocations"]).Split(' ')[2]).Result.AirportFullName).Split('-')[0])</h4>
+                <hr />
                 @if (AirRulleSabre == "")
                 {
-                    <h3>@((MainController.GetAirline((string)Session["MarketCode"]).AirlineName.ToUpper())) Fare Rules</h3>
-                    <hr />
+
                     foreach (var item in AirRule)
                     {
                         if (item.ApplicationResults.status != Additional.OTA_AirRule.CompletionCodes.Complete)
@@ -611,7 +613,7 @@
                     var str = AirRulleSabre.Substring(AirRulleSabre.IndexOf("16."));
 
                     var t = str.Substring(0, str.IndexOf("17."));
-                    <h3>@((MainController.GetAirline((string)Session["MarketCode"]).AirlineName)) Fare Rules</h3>
+                   
                     <p style="font-size: 15px;margin: 5px; white-space:pre-line;">
                         @t
                     </p>
