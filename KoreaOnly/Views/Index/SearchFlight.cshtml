@@ -358,7 +358,7 @@
                                         <div id="depart_date" class="col-xs-12 fiveh marginbotom10 pad5">
                                             <div class="relativemask">
                                                 <span class="maskimg caln">Depart</span>
-                                                <input name="DepartureDate" id="DepartureDate1" placeholder="Select Date" value="@(Reqst.DepartureDate[0].ToString("MM/dd/yyyy"))" class="forminput" type="text" required="">
+                                                <input name="DepartureDate" disabled="disabled" id="DepartureDate1" placeholder="Select Date" value="@(Reqst.DepartureDate[0].ToString("MM/dd/yyyy"))" class="forminput" type="text" required="">
                                             </div>
                                         </div>
                                         <div id="MultiTripAdd">
@@ -391,13 +391,7 @@
                                                     </div>
                                                 </div>
 
-                                                <script>
-                                                    $(document).ready(function () {
-                                                        AddSearchoption("OriginAirportCode@(i + 1)");
-
-                                                        AddSearchoption("DestinationAirportCode@(i + 1)");
-                                                    });
-                                                </script>
+                                                
                                             }
                                         </div>
                                         <div class="col-md-12">
@@ -1057,6 +1051,8 @@
             $("#NormalTrip").show();
             $("#MultiTrip").hide();
             $("#ArvDate").show();
+            $("#MultiTrip input[type='text']").prop("disabled", true);
+            $("#NormalTrip input[type='text']").prop("disabled", false);
 
             AddSearchoption("OriginAirportCode0");
             AddSearchoption("DestinationAirportCode0");
@@ -1256,23 +1252,40 @@
             $("#MultiTrip").hide();
             $("#ArvDate").show();
 
-            $('input[name="arrivedate"]').prop("disabled", false);
-            $("#MultiTrip input[type='text']").prop("disabled", false);
-            $("#NormalTrip input[type='text']").prop("disabled", false);
+            $('input[name="arrivedate"]').prop("disabled", true);
+            $("#MultiTrip input[type='text']").prop("disabled", true);
+            $("#MultiTrip input[type='hidden']").prop("disabled", true);
+
+            $("#NormalTrip input[type='text']").prop("disabled", true);
+            $("#NormalTrip input[type='hidden']").prop("disabled", true);
 
             if (Rad[0].checked) {
 
                 $("#MultiTrip input[type='text']").prop("disabled", true);
+                $("#MultiTrip input[type='hidden']").prop("disabled", true);
+
+                $("#NormalTrip input[type='text']").prop("disabled", false);
+                $("#NormalTrip input[type='hidden']").prop("disabled", false);
+
             } else if (Rad[1].checked) {
                 $("#MultiTrip input[type='text']").prop("disabled", true);
+                $("#MultiTrip input[type='hidden']").prop("disabled", true);
+
+                $("#NormalTrip input[type='text']").prop("disabled", false);
+                $("#NormalTrip input[type='hidden']").prop("disabled", false);
 
                 $('input[name="arrivedate"]').prop("disabled", true);
+
                 $("#ArvDate").hide();
             } else if (Rad[2].checked) {
 
                 $('input[name="arrivedate"]').prop("disabled", true);
+
                 $("#MultiTrip input[type='text']").prop("disabled", false);
+                $("#MultiTrip input[type='hidden']").prop("disabled", false);
+
                 $("#NormalTrip input[type='text']").prop("disabled", true);
+                $("#NormalTrip input[type='hidden']").prop("disabled", true);
 
                 $("#NormalTrip").hide();
                 $("#MultiTrip").show();

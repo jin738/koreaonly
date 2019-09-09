@@ -430,7 +430,7 @@
                 <div style="color: #1f2746;letter-spacing: 0;font-weight: 900;text-transform: capitalize;line-height: 1.16667;font-size: 1.5em;">Tel. <a href="callto:#" style="color: #1f2746;">(+1) 213 738-8185</a></div>
                 <p class="text-base offset-top-20 offset-md-top-30 big">Our Support Service is available 24 hours a day, 7 days a week to help you buy your tickets.</p>
 
-                <span class="btn btn-default btnTheam" id="btncontact">
+                <span class="btn btn-default btnTheam" id="btncontact" data-toggle="modal" data-target="#contactModal">
                     Contact Us
                 </span>
 
@@ -441,6 +441,49 @@
     </div>
 
 </div>
+
+<div id="contactModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Contact us</h4>
+            </div>
+            <div class="modal-body">
+                <div class="containter">
+                    <div class="row">
+                        <form class="form-horizontal" name="commentform" method="post">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="InputName" class="col-lg-4 control-label">Name</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" name="CommentFormFirst_name" id="first_name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="InputEmail" class="col-lg-4 control-label">Email</label>
+                                    <div class="col-lg-8">
+                                        <input type="email" class="form-control" id="email" name="CommentFormEmail" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="InputMessage" class="col-lg-4 control-label">Message</label>
+                                    <div class="col-lg-8">
+                                        <textarea name="CommentFormComments" id="comments" class="form-control" rows="5" required></textarea>
+                                    </div>
+                                </div>
+
+                                <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+                            </div>
+                        </form>
+                        <hr class="featurette-divider hidden-lg">
+                    </div>
+                </div>
+            </div><!-- End of Modal body -->
+        </div><!-- End of Modal content -->
+    </div><!-- End of Modal dialog -->
+</div><!-- End of Modal -->
+
 
 
 <style>
@@ -631,11 +674,35 @@
 
 
 @section scriptarea{
- 
+
 
     <script>
         $(document).ready(function () {
 
+            $("form[name='commentform']").submit(function (e)
+            {
+                e.preventDefault();
+
+                $("#contactModal input[type='submit']").prop('disabled', true);
+                var ser = $(this).serialize();
+
+                $.post('/Index/Comment', ser , function (success)
+                {
+                    $("#contactModal input[type='submit']").prop('disabled', false);
+                    if (success.status == 200) {
+                        alert("Thanks For Contact us We Will Contact You as soon as possible.");
+
+                    } else {
+                        alert("Sorry For inconvenience Please Try Agin Later.");
+
+                    }
+
+
+                    $('#contactModal').modal('hide');
+
+                });
+
+            });
 
             AddSearch("OriginAirportCode1");
             AddSearch("DestinationAirportCode1");

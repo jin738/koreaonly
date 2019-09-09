@@ -561,14 +561,21 @@
                 <p style="font-size: 15px;margin: 5px; white-space:pre-line;">5) Routing change will incur penaily and fees (airline penaily plus any fare difference plus our processing service fee will apply and is based on availability of flight at the time of change).</p>
                 <br />
 
-                <h3 style="text-align:center;">@((MainController.GetAirline((string)Session["MarketCode"]).AirlineName.ToUpper())) Fare Rules</h3>
-                <h4 style="text-align:center;">@((MainController.GetAirport(((string)Session["MarketCodeLocations"]).Split(' ')[0]).Result.AirportFullName).Split('-')[0]) --- @((MainController.GetAirport(((string)Session["MarketCodeLocations"]).Split(' ')[2]).Result.AirportFullName).Split('-')[0])</h4>
                 <hr />
                 @if (AirRulleSabre == "")
                 {
-
+                    int Index = 0;
+                    var Vals = ((List<string[]>)Session["Route"]);
                     foreach (var item in AirRule)
                     {
+                        @*<p>@((MainController.GetAirport((Vals[Index][0]).Split(' ')[0]).Result.AirportFullName).Split('-')[0]) --- @((MainController.GetAirport((Vals[Index][1]).Split(' ')[0]).Result.AirportFullName).Split('-')[0]) </p>*@
+
+                        <h3 style="text-align:center;">(@(Vals[Index][2])) @((MainController.GetAirline((Vals[Index][2])).AirlineName.ToUpper())) Fare Rules</h3>
+                        <h4 style="text-align:center;">@((MainController.GetAirport((Vals[Index][0])).Result.AirportFullName).Split('-')[0]) --- @((MainController.GetAirport((Vals[Index][1])).Result.AirportFullName).Split('-')[0])</h4>
+                        Index++;
+                        <hr />
+
+
                         if (item.ApplicationResults.status != Additional.OTA_AirRule.CompletionCodes.Complete)
                         {
 
@@ -595,9 +602,15 @@
 
                                 foreach (var Rule in item.FareRuleInfo.Rules.Where(r => r.RPH == "16"))
                                 {
-                                    <h3 style="font-weight: bold;color: #0f3e50;">@Rule.Title</h3>
+                                    <h3 style="font-weight: bold;color: #0f3e50;">
+                                        @Rule.Title
+                                    </h3>
+
                                     <hr />
-                                    <p style="font-size: 15px;margin: 5px; white-space:pre-line;">@Rule.Text</p>
+
+                                    <p style="font-size: 15px;margin: 5px; white-space:pre-line;">
+                                        @Rule.Text
+                                    </p>
 
                                     <br />
 
@@ -613,7 +626,7 @@
                     var str = AirRulleSabre.Substring(AirRulleSabre.IndexOf("16."));
 
                     var t = str.Substring(0, str.IndexOf("17."));
-                   
+
                     <p style="font-size: 15px;margin: 5px; white-space:pre-line;">
                         @t
                     </p>
