@@ -672,51 +672,79 @@ namespace KoreaOnly.Controllers
             }
         }
 
-        public string GetAllAirports(string AirCode = "*")
+
+		public class AllowJsonGetAttribute : ActionFilterAttribute
         {
+            public override void OnResultExecuting(ResultExecutingContext filterContext)
+            {
+                var jsonResult = filterContext.Result as JsonResult;
+
+                if (jsonResult == null)
+                    throw new ArgumentException("Action does not return a JsonResult, attribute AllowJsonGet is not allowed");
+
+
+                jsonResult.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
+
+                base.OnResultExecuting(filterContext);
+            }
+        }
+		
+		// Make Offline
+        [HttpGet]
+        [AllowJsonGet]
+        public JsonResult GetAllAirports(string AirCode = "*")
+        {
+            ViewBag.SyncType = "Asynchronous";
+
             try
             {
+                var RR = System.IO.File.ReadAllText(HostingEnvironment.MapPath("/Content/AIRPORTCODE.json"));
                 AirCode = AirCode.ToUpper();
-                var DD = (List<Airports>)Session["AllAirports"];
-                if (DD == null)
-                {
-                    MainController.GetAirport();
+                var R = new System.Web.Script.Serialization.JavaScriptSerializer().Deserialize<List<AirportOffline>>(RR);
 
-                    DD = (List<Airports>)Session["AllAirports"];
+
+                var SList = (from u in R
+                             where u.name.ToUpper().Contains(AirCode)
+                             select u).ToList();
+
+                if (SList == null)
+                {
+                    return Json(new { });
                 }
 
 
-                List<object> List = new List<object>();
 
-                List = (from u in DD
-                        where u.AirportCode == AirCode.ToUpper()
-                        select (object)new { name = u.FormatedName }).ToList();
+                var resultWithCode = new List<AirportOffline>(SList.Where(word => word.name.ToUpper().StartsWith("(" + AirCode + ")"))?.OrderBy(word => word));
+
+                var EE = SList.Where(word => word.name.ToString().ToUpper().Contains("USA"))?.ToList();
+
+                var result = new List<AirportOffline>(EE.OrderBy(w => w.name));
+
+                if (resultWithCode == null)
+                {
+                    resultWithCode = new List<AirportOffline>();
+                }
+
+                if (result == null)
+                {
+                    result = new List<AirportOffline>();
+                }
+
+                result.AddRange(SList.Except(result).ToList());
 
 
+                resultWithCode.AddRange(result.Except(resultWithCode).ToList());
 
-                string JS = JsonConvert.SerializeObject(List.Distinct().ToArray());
 
-                return JS;
-
+                return Json(resultWithCode.ToArray());
             }
             catch (Exception ex)
             {
-                var st = new StackTrace(ex, true);
-                var frame = st.GetFrame(0);
-                var line = frame.GetFileLineNumber();
-                Session["Error"] = ex.Message;
-                Session["ErrorDate"] = DateTime.Now;
-                MainController.WriteLog("---------Exception-----------");
-                MainController.WriteLog(ex.Message + " LINE NUMBER  " + line + Environment.NewLine + "--------Complete Exception-----------" + "" + ex.InnerException + "" + Environment.NewLine + "" + ex.StackTrace);
-                string[] Airports = new string[] { "LAX", "MEX", "SAN" };
-
-                string JS = JsonConvert.SerializeObject(Airports);
-
-                return JS;
+                return Json(new { });
             }
+
         }
-
-
+		
         public string PayNow(Models.PassengerDetailsRQ Info)
         {
             var Enhance = (Additional.Enhanced.EnhancedAirBookRS)Session["FlightReserve"];
