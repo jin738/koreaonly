@@ -18,20 +18,21 @@
 .tripheader {
     margin-top: 20px;
     width: 100%;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #135577;
 }
 
 #tb th {
-    border: 2px solid #8e8e8e;
+    border: 2px solid #135577;
     padding: 5px;
-    background-color: #ccc;
-    color: #000;
+    background-color: #135577;
+    color: #fff;
 }
 
 
 #tb td {
-    border: 2px solid #ccc;
+    border: 2px solid #135577;
     padding: 5px;
+    color:#135577;
 }
 
 .top10 {
@@ -66,7 +67,7 @@
 }
 
 .borderbottom {
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #135577;
 }
 
 .marginleft {
@@ -95,13 +96,4 @@
 }
 
 
-@media print {
-     body * {
-    visibility: hidden;
-  }
-  #section-to-print, #section-to-print * {
-    visibility: visible;
-   
-  }
-   
-}
+ 

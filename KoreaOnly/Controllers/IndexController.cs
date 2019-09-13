@@ -745,6 +745,90 @@ namespace KoreaOnly.Controllers
 
         }
 		
+		 public ActionResult Tickets()
+        {
+            var Enhance = (Additional.Enhanced.EnhancedAirBookRS)Session["FlightReserve"];
+
+
+
+            var Flight = Enhance.TravelItineraryReadRS.TravelItinerary.ItineraryInfo.ReservationItems;
+
+            var Passengers = new List<TicketsPersonInfo>();
+
+
+            var R = (Additional.TravelRev.GetReservationRS)Session["GETRESERVATION"];
+            var R1 = (Additional.TravelRev.ReservationPNRB)R.Item;
+        
+
+            foreach (var item in R1.PassengerReservation.Passengers.Passenger)
+            {
+                List<TicketFligtInfo> List = new List<TicketFligtInfo>();
+
+
+                for (int i = 0; i < Flight.Length; i++)
+                {
+                    var Segment = Flight[i].FlightSegment.First();
+
+                    List.Add(new TicketFligtInfo()
+                    {
+                        AirlineName = MainController.GetAirline(Segment.MarketingAirline?.Code != "" ? Segment.MarketingAirline?.Code : Segment.OperatingAirline.First().Code).AirlineName,
+                        FlightNumber = Segment.MarketingAirline.Code + "" + Segment.FlightNumber,
+                        Duration = Segment.ElapsedTime.Replace(".", "hr(s) ") + "min(s)",
+                        Class = "Not Defined",
+                        Status = "Confirmed",
+                        AirportFrom = MainController.GetAirport(Segment.OriginLocation.LocationCode).Result.AirportFullName,
+                        AirportFromCode = Segment.OriginLocation.LocationCode,
+                        AirportToCode = Segment.DestinationLocation.LocationCode,
+                        AirportTo = MainController.GetAirport(Segment.DestinationLocation.LocationCode).Result.AirportFullName,
+
+                        DepartureDate = Convert.ToDateTime(Segment.DepartureDateTime.ToString()).ToString("ddd, MMM yy"),
+                        DepartureTerminal = Segment.OriginLocation.Terminal ?? "Not Defined",
+                        ArrivalTerminal = Segment.DestinationLocation.Terminal ?? "Not Defined" ,
+
+                        DepartureTime = Convert.ToDateTime(Segment.DepartureDateTime.ToString()).ToString("hh:mm tt"),
+                        ArrivalDate = Convert.ToDateTime(DateTime.Now.Year + "-" + Segment.ArrivalDateTime.ToString()).ToString("ddd, MMM yy"),
+                        ArrivalTime = Convert.ToDateTime(DateTime.Now.Year + "-" + Segment.ArrivalDateTime.ToString()).ToString("hh:mm tt"),
+
+
+                        AircraftName = Segment.Equipment.AirEquipType,
+                        Distance = Segment.AirMilesFlown,
+                        Stops = "0",
+
+
+                        Meals = Segment.Meal == null ? "No Meal" : string.Join(", ", (from ii in Segment.Meal select MainController.GetMealType(ii.Code).Description)),
+
+                        Seats = " ",
+                        PassengerName = " "
+                    });
+
+                }
+
+                Passengers.Add(new TicketsPersonInfo()
+                {
+                    AirlineCode = item.SpecialRequests.APISRequest.First().DOCSEntry.VendorCode,
+                    Name = item.LastName + "/" + item.FirstName,
+                    TicketFligtInfos = List
+
+                });
+
+            }
+
+
+
+            List<TicketsModel> ticketsModels = new List<TicketsModel>()
+            {
+                new TicketsModel()
+                {
+                    TripFromDate =  Convert.ToDateTime(Flight.First().FlightSegment.First().DepartureDateTime).ToString("dd MMM yyyy"),
+                    TripToDate = Convert.ToDateTime(Flight.Last().FlightSegment.First().DepartureDateTime).ToString("dd MMM yyyy"),
+                    TripTo = MainController.GetAirport(Flight.Last().FlightSegment.First().DestinationLocation.LocationCode).Result.AirportFullName,
+                    Passengers = Passengers
+                }
+            };
+            return View(ticketsModels);
+        }
+
+		
         public string PayNow(Models.PassengerDetailsRQ Info)
         {
             var Enhance = (Additional.Enhanced.EnhancedAirBookRS)Session["FlightReserve"];
