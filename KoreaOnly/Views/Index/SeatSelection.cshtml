@@ -1,0 +1,327 @@
+﻿@model Additional.EnhancedSeatMap.EnhancedSeatMapRS
+
+@{
+    ViewBag.Title = "Seat Selection";
+    Layout = "~/Views/Default.cshtml";
+
+}
+
+
+<link rel="stylesheet" href="~/Content/code.css" />
+
+
+
+<style>
+    .plane .row {
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
+
+    .pop-up {
+        display: none;
+        position: absolute;
+        width: 280px;
+        padding: 10px;
+        z-index: 1000;
+        background: #0f6e9c;
+        top: 30px;
+        left: 20px;
+        color: #fff;
+        box-shadow: 0px 0px 8px 0px #0f6e9c;
+        border: 1px solid #0f6e9c;
+        border-radius: 0px 20px 20px 0px;
+        font-size: 90%;
+    }
+
+    .ChargibleSeats {
+        background: #1e3540 !important;
+    }
+
+    .NoInfantSeat {
+        background: #c4c70b !important;
+    }
+
+    .WingSeats {
+        border-left: 2px solid Red;
+        border-right: 2px solid Red;
+    }
+</style>
+
+
+
+<div class="row ">
+
+    <div class="col-md-12 mt-5">
+
+        <div class="col-md-5">
+            <br />
+            <h2 style="color:#265d76; font-weight:bold;">Flight Information</h2>
+            <hr />
+
+            @if (Model.ApplicationResults.status == Additional.EnhancedSeatMap.CompletionCodes.Complete)
+            {
+
+
+                <p style="font-weight: bold;font-size: 22px;color: #265d76;">@(Model.SeatMap.First().Flight.origin) <i class="fa fa-arrow-right"></i> @( Model.SeatMap.First().Flight.destination)</p>
+
+                <p style="font-weight: bold;font-size: 16px;color: #265d76;">@(Model.SeatMap.First().Flight.Operating != null ? Model.SeatMap.First().Flight.Operating.carrier + "" + Model.SeatMap.First().Flight.Operating.Value : Model.SeatMap.First().Flight.Marketing.First().carrier + "" + Model.SeatMap.First().Flight.Marketing.First().Value)</p>
+                <p style="font-weight: bold;font-size: 16px;color: #265d76;">@(MainController.GetAircraftTypeByCode(Model.SeatMap.First().Equipment).Description)</p>
+                <p style="font-weight: bold;font-size: 16px;color: #265d76;">@(Convert.ToDateTime(Model.SeatMap.First().Flight.DepartureDate.Value).ToString("ddd, MM, yyyy"))</p>
+
+                foreach (var item in Model.SeatMap.First().Cabin.First().CabinClass.MarketingDescription)
+                {
+                    <p style="font-weight: bold;font-size: 14px;color: #265d76;">@(item )</p>
+                }
+            }
+            else
+            {
+                <p style="font-weight: bold;font-size: 16px;color: #265d76;">Flight Information Not Found Check Logs Files</p>
+            }
+
+            <hr />
+
+            <div>
+                <h4 style="font-weight:bold;color:#265d76;">Passenger List</h4>
+                <br />
+                <div style="color:#265d76;">
+                    <p> <i class="fa fa-arrow-right"></i> Muhammad Osama Alam</p>
+                    <p> <i class="fa fa-arrow-right"></i> XYZ NAME</p>
+                </div>
+            </div>
+
+            <br />
+
+            <div>
+                <h5 style="font-weight:bold;color:#265d76;">Test Operation</h5>
+                <hr />
+                <form method="post" action="/index/TestSeatMap">
+                    <div class="form-group">
+                        <label for="Origin">Origin Location</label>
+                        <input type="text" class="form-control" name="Origin" id="Origin" placeholder="Example: LAX" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Destination">Destination Location</label>
+                        <input type="text" class="form-control" name="Destination" id="Destination" placeholder="Example: LAS" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="DeprtDate">Deprt. Date</label>
+                        <input type="date" class="form-control" name="DeprtDate" id="DeprtDate" placeholder="Date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Arrival">Arrival. Date</label>
+                        <input type="date" class="form-control" name="Arrival" id="Arrival" placeholder="Date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="OperatingAirline">Operating Airline</label>
+                        <input type="text" class="form-control" name="OperatingAirline" id="OperatingAirline" placeholder="Example: AA" required>
+                        <label for="FlightNumberOperating">Flight Number</label>
+                        <input type="text" class="form-control" name="FlightNumberOperating" id="FlightNumberOperating" placeholder="Example: 0000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="MarketingAirline">Marketing Airline</label>
+                        <input type="text" class="form-control" name="MarketingAirline" id="MarketingAirline" placeholder="Example: AA" required>
+                        <label for="FlightNumberMarketing">Flight Number</label>
+                        <input type="text" class="form-control" name="FlightNumberMarketing" id="FlightNumberMarketing" placeholder="Example: 0000" required>
+                    </div>
+
+                    <input type="submit" value="Get Seat Map" class="btn btn-default" />
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-6">
+
+            @if (Model.ApplicationResults.status == Additional.EnhancedSeatMap.CompletionCodes.Complete)
+            {
+                <div class="plane">
+                    <div class="cockpit">
+                        <h1>Seats Selection</h1>
+                    </div>
+
+
+                    @foreach (var Cabin in Model.SeatMap.First().Cabin)
+                    {
+                        <h3 class="fuselage" style="text-align: center;">@Cabin.CabinClass.CabinType</h3>
+                        <ol class="cabin fuselage">
+
+                            @foreach (var Row in Cabin.Row)
+                            {
+                                if (Row.Seat.ElementAt(0).exitRowInd)
+                                {
+                                    <div class="exit exit--front fuselage">
+
+                                    </div>
+                                }
+
+                                <li class="row row--@(Row.RowNumber) @(Row.Seat.First().Location != null && Row.Seat.First().Location.ToList().FindIndex(s => s.Detail.Value == Additional.EnhancedSeatMap.Enum_SeatLocationType_Base.OverWingSeatS) != -1 ? "WingSeats" : "")">
+                                    <ol class="seats" type="A">
+                                        @foreach (var Seats in Row.Seat)
+                                        {
+
+                                            if (Seats.occupiedInd)
+                                            {
+                                                <li class="seat">
+
+                                                    <input type="checkbox" disabled id="@(Row.RowNumber + "" + Seats.Number)" />
+                                                    <label class="trigger" data-popup="#pop-up@(Row.RowNumber + "" + Seats.Number)" for="@(Row.RowNumber + "" + Seats.Number)">Occupied</label>
+                                                    <div class="pop-up" id="pop-up@(Row.RowNumber + "" + Seats.Number)">
+                                                        <p>
+                                                            @(Row.RowNumber + "" + Seats.Number) Seat is Already Reserved.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            }
+                                            else if ((Seats.Limitations != null && (Seats.Limitations.ToList().FindIndex(l => l.Detail.Value == Additional.EnhancedSeatMap.Enum_SeatLimitationsType_Base.SeatToBeLeftVacantOfferedLast)) != -1))
+                                            {
+                                                <li class="seat">
+
+                                                    <input type="checkbox" disabled id="@(Row.RowNumber + "" + Seats.Number)" />
+                                                    <label class="trigger" data-popup="#pop-up@(Row.RowNumber + "" + Seats.Number)" for="@(Row.RowNumber + "" + Seats.Number)">Occupied</label>
+                                                    <div class="pop-up" id="pop-up@(Row.RowNumber + "" + Seats.Number)">
+                                                        <p>
+                                                            @(Row.RowNumber + "" + Seats.Number) Seat To Be Left Vacant / Offered Last.
+                                                        </p>
+                                                    </div>
+
+                                                </li>
+                                            }
+                                            else
+                                            {
+
+                                                <li class="seat">
+
+                                                    <input type="checkbox" id="@(Row.RowNumber + "" + Seats.Number)" />
+                                                    <label class="trigger @(Seats.chargeableInd && !Seats.noInfantInd ? "ChargibleSeats" : "") @(Seats.noInfantInd ? "NoInfantSeat" : "")" data-popup="#pop-up@(Row.RowNumber + "" + Seats.Number)" for="@(Row.RowNumber + "" + Seats.Number)">@(Row.RowNumber + "" + Seats.Number)</label>
+
+                                                    <div class="pop-up" id="pop-up@(Row.RowNumber + "" + Seats.Number)">
+                                                        <p>
+                                                            @(Row.RowNumber + "" + Seats.Number) (@(Cabin.Column.ToList().Find(st => st.Column == Seats.Number).Characteristics.First())) Seat is Available@(Seats.chargeableInd ? " and Chargable" : "").
+                                                        </p>
+
+                                                        <br>
+
+                                                        @if (Seats.Location != null)
+                                                        {
+                                                            <b>Location</b>
+                                                            <br />
+
+                                                            foreach (var item in Seats.Location)
+                                                            {
+                                                                <p>@item.Detail.Value</p>
+                                                            }
+                                                        }
+
+                                                        @if (Seats.Limitations != null)
+                                                        {
+                                                            <b>Limitations</b>
+                                                            <br />
+
+                                                            foreach (var item in Seats.Limitations)
+                                                            {
+                                                                <p>@item.Detail.Value</p>
+                                                            }
+                                                        }
+
+
+
+                                                        @if (Seats.Facilities != null)
+                                                        {
+                                                            <b>Facilities</b>
+                                                            <br />
+
+                                                            foreach (var item in Seats.Facilities)
+                                                            {
+                                                                <p>@item.Detail.Value</p>
+                                                            }
+                                                        }
+
+
+
+                                                        @if (Seats.Price != null && Seats.Price.First().Taxes != null)
+                                                        {
+                                                            <b>Taxes</b>
+
+                                                            foreach (var Price in Seats.Price.First().Taxes)
+                                                            {
+                                                                <p> @(Price.TaxTypeRef): @(Price.Tax.Value) @(Price.Tax.currencyCode)</p>
+                                                            }
+
+                                                        }
+
+                                                        <hr />
+                                                        <b>Total Price:</b>
+                                                        @{
+                                                            if (Seats.Price != null)
+                                                            {
+                                                                <span>@(Seats.Price.First().TotalAmount.Value) @(Seats.Price.First().TotalAmount.currencyCode)</span>
+                                                            }
+                                                        }
+
+                                                    </div>
+
+                                                </li>
+                                            }
+
+                                        }
+                                    </ol>
+                                </li>
+                            }
+
+
+                        </ol>
+                    }
+
+                </div>
+
+
+            }
+            else
+            {
+                <p>Unable To Generate</p>
+            }
+        </div>
+    </div>
+
+
+</div>
+
+
+@section scriptarea{
+    <script>
+
+
+        $(document).ready(function () {
+            var moveLeft = 20;
+            var moveDown = 10;
+
+            $('.trigger').hover(function (e) {
+
+                var pop = $(this).data('popup');
+
+                $(pop).show();
+                //.css('top', e.pageY + moveDown)
+                //.css('left', e.pageX + moveLeft)
+                //.appendTo('body');
+            }, function () {
+                var pop = $(this).data('popup');
+                $(pop).hide();
+            });
+
+            $('.trigger').mousemove(function (e) {
+                var pop = $(this).data('popup');
+
+            });
+
+        });
+
+    </script>
+}
