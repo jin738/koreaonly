@@ -89,9 +89,12 @@ ol {
     position: relative;
 }
 
-    .seat:nth-child(3) {
+    /*.seat:nth-child(3) {
         margin-right: 14.2857142857%;
     }
+    .seat:nth-child(6) {
+        margin-right: 14.2857142857%;
+    }*/
 
     .seat input[type=checkbox] {
         position: absolute;
@@ -109,7 +112,7 @@ ol {
         .seat input[type=checkbox]:disabled + label {
             background: #dddddd;
             text-indent: -9999px;
-            overflow: hidden;
+             
         }
 
             .seat input[type=checkbox]:disabled + label:after {

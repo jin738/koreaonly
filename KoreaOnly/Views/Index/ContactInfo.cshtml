@@ -158,13 +158,13 @@
                                                     <tr>
                                                         <td><i class="fa fa-plane"></i> <br>Take-off</td>
                                                         <td>
-                                                            @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("MMM")) @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("hh:mm"))<br> @Model[i].Take_Off_Location_Airport <br /><strong>Terminal-:</strong>@(Model[i].Take_Off_Location_Terminal) <br> @Model[i].Take_Off_Location_City
+                                                            @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("MMM dd hh:mm tt")) @*@(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("MMM")) @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("hh:mm"))*@<br> @Model[i].Take_Off_Location_Airport <br /><strong>Terminal-:</strong>@(Model[i].Take_Off_Location_Terminal) <br> @Model[i].Take_Off_Location_City
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td><i class="fa fa-plane fa-rotate-90"></i><br> Landing</td>
                                                         <td>
-                                                            @(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("MMM")) @(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("hh:mm"))<br />
+                                                            @(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("MMM dd hh:mm tt")) @*@(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("MMM")) @(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("hh:mm"))*@<br />
                                                             <strong>Terminal-:</strong>
                                                             @(Model[i].Landing_Location_Terminal)
                                                             <br>
