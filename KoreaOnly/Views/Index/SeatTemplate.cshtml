@@ -5,6 +5,7 @@
     var Seats = Model.Seats;
 
     var isLav = false;
+    var isGalery = false;
 
     var isNotPricesed = true;
     var Pc = Model.Seats?.Price;
@@ -32,6 +33,12 @@
     {
         isNotPricesed = true;
         isLav = true;
+    }
+
+    if (Seats != null && Seats.Limitations != null && (Seats.Limitations.ToList().FindIndex(lm => lm.Detail.Value == Additional.EnhancedSeatMap.Enum_SeatLimitationsType_Base.NoSeatGalley) != -1))
+    {
+        isNotPricesed = true;
+        isGalery = true;
     }
 
     if (Seats != null && Seats.Limitations != null && (Seats.Limitations.ToList().FindIndex(lm => lm.Detail.Value == Additional.EnhancedSeatMap.Enum_SeatLimitationsType_Base.RestrictedGeneral) != -1))
@@ -71,7 +78,7 @@ else if (Model.Seats.Location != null && Model.Seats.Location?.ToList().FindInde
 }
 else if (isLav)
 {
-    <div class="CabinSeats seat trigger" data-popup="#pop-up@(Model.RowNumber + "" + Model.SeatNumner)">
+    <div class="CabinSeats seat trigger" style="max-width:5%;" data-popup="#pop-up@(Model.RowNumber + "" + Model.SeatNumner)">
 
         <input type="checkbox" disabled id="@(Model.RowNumber + "" + Model.SeatNumner)" />
 
@@ -80,6 +87,22 @@ else if (isLav)
         <div class="pop-up" id="pop-up@(Model.RowNumber + "" + Model.SeatNumner)">
             <p>
                 @(Model.RowNumber + "" + Model.SeatNumner) (@(Model.SeatLocation)) is Lavatory.
+            </p>
+        </div>
+
+    </div>
+}
+else if (isGalery)
+{
+    <div class="CabinSeats seat trigger" style="max-width:5%;" data-popup="#pop-up@(Model.RowNumber + "" + Model.SeatNumner)">
+
+        <input type="checkbox" disabled id="@(Model.RowNumber + "" + Model.SeatNumner)" />
+
+        <img src="~/Images/Gallery.png" width="35" height="35" />
+
+        <div class="pop-up" id="pop-up@(Model.RowNumber + "" + Model.SeatNumner)">
+            <p>
+                @(Model.RowNumber + "" + Model.SeatNumner) (@(Model.SeatLocation)) is Gallery.
             </p>
         </div>
 

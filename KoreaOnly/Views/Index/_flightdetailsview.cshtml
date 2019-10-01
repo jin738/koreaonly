@@ -1,7 +1,7 @@
 ﻿
 @model string
 
-@{ 
+@{
     var Flight = ((List<KoreaOnly.Models.SearchFlightResult>)Session["ViewModel"]).Find(f => f.ID == Model);
 }
 
@@ -103,7 +103,7 @@
                                                                                 <span class="time">
                                                                                     @(Convert.ToDateTime(Flight.FlightDetails[i].FlightSegment[j].DepartureDateTime).ToString("hh:mm tt"))
                                                                                 </span>
-                                                                                —
+                                                                                -
                                                                                 <span class="time">
                                                                                     @(Convert.ToDateTime(Flight.FlightDetails[i].FlightSegment[j].ArrivalDateTime).ToString("hh:mm tt"))
                                                                                 </span>
@@ -118,7 +118,7 @@
 
                                                                                     </span>
                                                                                 </span>
-                                                                                -
+                                                                                <i class="fa fa-arrow-right" style="font-size:12px;" />
                                                                                 <span class="destination">
                                                                                     <span class="city">
 
@@ -161,17 +161,17 @@
                                                                             </div>*@
 
                                                                         @if (Flight.FlightDetails[i].FlightSegment[j].OperatingAirline != null && Flight.FlightDetails[i].FlightSegment[j].OperatingAirline.Code != "" &&
-                                                                            @*Flight.FlightDetails[i].FlightSegment[j].OperatingAirline.Code != Flight.FlightDetails[i].FlightSegment[j].MarketingAirline.Code &&*@
-                                                                                                                Flight.FlightDetails[i].FlightSegment[j].OperatingAirline.CompanyShortName != "")
-                                                                        {
+                                                                        @*Flight.FlightDetails[i].FlightSegment[j].OperatingAirline.Code != Flight.FlightDetails[i].FlightSegment[j].MarketingAirline.Code &&*@
+                                                                        Flight.FlightDetails[i].FlightSegment[j].OperatingAirline.CompanyShortName != "")
+                                {
 
-                                                                            <div class="col text-row">
-                                                                                <div class="planeDetails details-subheading">
-                                                                                    <span style="font-weight:bold;">Operated by</span> @(MainController.GetAirline(Flight.FlightDetails[i].FlightSegment[j].OperatingAirline.Code).AirlineName) @(Flight.FlightDetails[i].FlightSegment[j].OperatingAirline.CompanyShortName)
-                                                                                </div>
-                                                                            </div>
+                                    <div class="col text-row">
+                                        <div class="planeDetails details-subheading">
+                                            <span style="font-weight:bold;">Operated by</span> @(MainController.GetAirline(Flight.FlightDetails[i].FlightSegment[j].OperatingAirline.Code).AirlineName) @(Flight.FlightDetails[i].FlightSegment[j].OperatingAirline.CompanyShortName)
+                                        </div>
+                                    </div>
 
-                                                                        }
+                                }
 
                                                                         <div class="col text-row">
                                                                             <div class="planeDetails details-subheading">
@@ -221,10 +221,10 @@
                                                                         </div>
                                                                     </div>
 
-                                                                                                }
+                                                                }
                                                             </div>
                                                         </div>
-                                                                                                }
+                                                    }
                                                 </div>
 
                                             </div>
@@ -234,7 +234,7 @@
 
 
 
-                                                                                                }
+                                }
                             </div>
 
                         </div>

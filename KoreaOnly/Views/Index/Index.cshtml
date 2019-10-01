@@ -336,7 +336,7 @@
 
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                        <p style="font-weight: bold;color: #c51616;background: #fff;padding: 20px;opacity: 0.7;border-radius: 10px;text-align: justify; @(string.IsNullOrEmpty(ViewBag.Error) ? "display: none;" : "")">
+                        <p style="font-weight: bold;color: #c51616;background: #fff;padding: 20px;opacity: 0.7;border-radius: 10px;text-align: justify; @(string.IsNullOrEmpty(ViewBag.Error) ? "display: none;" : "")" id="error">
 
                             @ViewBag.Error
 
@@ -678,6 +678,15 @@
 
     <script>
         $(document).ready(function () {
+
+            setInterval(function () {
+
+                $.post("/index/IAmActive", function (Success) {
+                     console.log(Success.Message);
+                });
+
+            }, ((10 * 60) * 1000));
+
 
             $("form[name='commentform']").submit(function (e)
             {
@@ -1034,16 +1043,18 @@
                             $("#frmsearchflight select").prop('disabled', false);
                             $("#frmsearchflight button").prop('disabled', false);
 
-                            $('#submitreal').click();
-                            if (response != "") {
+                            if (response != undefined) {
 
-                                var obj = $.parseJSON(response);
+                                var obj = (response);
 
                                 if (obj.Code == "200") {
-                                    //$('#btnSubmitOff').click();
+                                    $('#submitreal').click();
                                 } else {
                                     $("#loadingdivs").hide();
                                     $("#error").html(obj.Message);
+                                    $("#error").show();
+                                    
+
                                 }
 
                             } else {
@@ -1051,12 +1062,13 @@
                             }
 
                         },
-                        error: function (response) {
+                        error: function (request, textStatus, errorThrown) {
                             $("#frmsearchflight input").prop('disabled', false);
                             $("#frmsearchflight select").prop('disabled', false);
                             $("#frmsearchflight button").prop('disabled', false);
-                            $('#submitreal').click();
 
+                            $("#error").html(request.responseText);
+                            $("#error").show();
                         }
                     });
 

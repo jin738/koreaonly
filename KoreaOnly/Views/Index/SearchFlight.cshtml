@@ -391,7 +391,7 @@
                                                     </div>
                                                 </div>
 
-                                                
+
                                             }
                                         </div>
                                         <div class="col-md-12">
@@ -525,8 +525,18 @@
     <script type="text/javascript">
 
 
-        $(function () {
+        $(document).ready(function () {
 
+            setInterval(function () {
+
+                $.post("/index/IAmActive", function (Success) {
+                    if (Success.Code != "200") {
+                        window.location.href = "/";
+                        console.log(Success.Message);
+                    }
+                });
+
+            }, ((10 * 60) * 1000));
 
 
             $("#DepartureDate0").pickadate({
@@ -599,45 +609,10 @@
                 }
             });
 
-            //var dateFormat = "mm/dd/yy",
-            //    from = $("input[name='DepartureDate']")
-            //        .datepicker({
-            //            defaultDate: "+1w",
-            //            changeMonth: true,
-            //            minDate: 0,
-            //            numberOfMonths: 2
-            //        })
-            //        .on("change", function () {
-            //            to.datepicker("option", "minDate", getDate(this));
-            //        }),
-            //    to = $("input[name='arrivedate']").datepicker({
-            //        defaultDate: "+1w",
-            //        minDate: 1,
-            //        changeMonth: true,
-            //        numberOfMonths: 2
-            //    })
-            //        .on("change", function () {
-            //            from.datepicker("option", "maxDate", getDate(this));
-            //        });
-
-            //function getDate(element) {
-            //    var date;
-            //    try {
-            //        date = $.datepicker.parseDate(dateFormat, element.value);
-            //    } catch (error) {
-            //        date = null;
-            //    }
-
-            //    return date;
-            //}
-
-
-            $(document).on("load", "input[name='OriginAirportCode'],input[name='DestinationAirportCode']", function () {
-
-
+            $("input[name='OriginAirportCode'],input[name='DestinationAirportCode']").each(function () {
                 var options = {
                     url: function (phrase) {
-                        return "/Index/GetAllAirports?AirCode=" + ($(this).val());
+                        return "/Index/GetAllAirports?AirCode=" + phrase;
                     },
                     list: {
                         maxNumberOfElements: 15,
@@ -653,6 +628,71 @@
                 $(this).easyAutocomplete(options);
 
             });
+            $("input[name='DepartureDate']").each(function () {
+                if ($(this)[0].id != undefined && $(this)[0].id != "") {
+                    console.log("#" + $(this)[0].id);
+                    $("#" + $(this)[0].id).pickadate({
+                        format: 'dddd, dd mmm, yyyy',
+                        formatSubmit: 'yyyy/mm/dd',
+                        hiddenName: true,
+                        value: new Date($(this).get(0).value),
+                        hiddenPrefix: 'prefix__',
+                        hiddenSuffix: '',
+                        onSet: function (thingSet) {
+
+                        }
+                    });
+
+                    var A = $("#" + $(this)[0].id).pickadate('picker');
+
+                    var date = new Date($(this)[0].value);
+
+                    //var B = $("#DepartureDate2").pickadate('picker');
+
+                    //var NextDay = date.getDate() + 1;
+
+                    //date.setDate(NextDay);
+
+                    A.set('min', new Date());
+                    A.set('select', date);
+
+                }
+
+
+
+            });
+
+
+            var A = $("#DepartureDate1").pickadate('picker');
+            var date1 = new Date($("#DepartureDate1").val());
+            A.set('min', new Date());
+            A.set('select', date1);
+
+            var B = $("#DepartureDate2").pickadate('picker');
+
+            if (B != undefined) {
+                var date2 = new Date($("#DepartureDate2").val());
+                B.set('min', new Date());
+                B.set('select', date2);
+            }
+
+            var C = $("#DepartureDate0").pickadate('picker');
+             
+            if (C != undefined) {
+                var date3 = new Date($("#DepartureDate0").val());
+                C.set('min', new Date());
+                C.set('select', date3);
+            }
+
+            var D = $("#arrivedate").pickadate('picker');
+             
+            if (D != undefined) {
+                var date4 = new Date($("#arrivedate").val());
+                D.set('min', new Date());
+                D.set('select', date4);
+            }
+
+
 
 
         });
@@ -750,7 +790,7 @@
             ActiveButton();
         }
 
-        $(function () {
+        $(document).ready(function () {
 
             $("#loadingdivsFlight").show();
 
@@ -943,7 +983,7 @@
 
                 function dosearch(whoclick) {
                     // console.log(whoclick);
-                    if (LOCK)
+                    if (!isSlide)
                         $("#btnsearchsubmit").click();
                 }
 
@@ -1060,8 +1100,7 @@
             AddSearchoption("DestinationAirportCode1");
 
 
-            $("#airlinename").click(function ()
-            {
+            $("#airlinename").click(function () {
                 $(this).val("");
             });
 
@@ -1297,10 +1336,75 @@
 
 
         function ActiveButton() {
-            $(".searchtxt").click(function () {
+
+            $(document).on("click", ".searchtxt", function () {
                 this.value = "";
             });
-            $(".searchtxt").blur(function () {
+
+            //$(".searchtxt").click(function () {
+            //    this.value = "";
+            //});
+
+
+            $(document).on("blur", ".searchtxt", function () {
+                if (this.value == "") {
+                    if (!$("#" + this.id).prop("disabled")) {
+                        $("#" + this.id).css("border-color", "red");
+                        $("#btnSubmit").attr("Allow", "NotAccess");
+                    } else {
+                        $("#" + this.id).css("border-color", "#ccc");
+                        $("#btnSubmit").attr("Allow", "Access");
+                    }
+                } else {
+                    $("#" + this.id).css("border-color", "#ccc");
+                    $("#btnSubmit").attr("Allow", "Access");
+                }
+            });
+            //$(".searchtxt").blur(function () {
+            //    if (this.value == "") {
+            //        if (!$("#" + this.id).prop("disabled")) {
+            //            $("#" + this.id).css("border-color", "red");
+            //            $("#btnSubmit").attr("Allow", "NotAccess");
+            //        } else {
+            //            $("#" + this.id).css("border-color", "#ccc");
+            //            $("#btnSubmit").attr("Allow", "Access");
+            //        }
+            //    } else {
+            //        $("#" + this.id).css("border-color", "#ccc");
+            //        $("#btnSubmit").attr("Allow", "Access");
+            //    }
+            //});
+
+            $(document).on("blur", ".hasDatepicker", function () {
+                if (this.value == "") {
+                    if (!$("#" + this.id).prop("disabled")) {
+                        $("#" + this.id).css("border-color", "red");
+                        $("#btnSubmit").attr("Allow", "NotAccess");
+                    } else {
+                        $("#" + this.id).css("border-color", "#ccc");
+                        $("#btnSubmit").attr("Allow", "Access");
+                    }
+                } else {
+                    $("#" + this.id).css("border-color", "#ccc");
+                    $("#btnSubmit").attr("Allow", "Access");
+                }
+            });
+            //$(".hasDatepicker").blur(function () {
+            //    if (this.value == "") {
+            //        if (!$("#" + this.id).prop("disabled")) {
+            //            $("#" + this.id).css("border-color", "red");
+            //            $("#btnSubmit").attr("Allow", "NotAccess");
+            //        } else {
+            //            $("#" + this.id).css("border-color", "#ccc");
+            //            $("#btnSubmit").attr("Allow", "Access");
+            //        }
+            //    } else {
+            //        $("#" + this.id).css("border-color", "#ccc");
+            //        $("#btnSubmit").attr("Allow", "Access");
+            //    }
+            //});
+
+            $(document).on("change", ".hasDatepicker", function () {
                 if (this.value == "") {
                     if (!$("#" + this.id).prop("disabled")) {
                         $("#" + this.id).css("border-color", "red");
@@ -1315,35 +1419,20 @@
                 }
             });
 
-            $(".hasDatepicker").blur(function () {
-                if (this.value == "") {
-                    if (!$("#" + this.id).prop("disabled")) {
-                        $("#" + this.id).css("border-color", "red");
-                        $("#btnSubmit").attr("Allow", "NotAccess");
-                    } else {
-                        $("#" + this.id).css("border-color", "#ccc");
-                        $("#btnSubmit").attr("Allow", "Access");
-                    }
-                } else {
-                    $("#" + this.id).css("border-color", "#ccc");
-                    $("#btnSubmit").attr("Allow", "Access");
-                }
-            });
-
-            $(".hasDatepicker").change(function () {
-                if (this.value == "") {
-                    if (!$("#" + this.id).prop("disabled")) {
-                        $("#" + this.id).css("border-color", "red");
-                        $("#btnSubmit").attr("Allow", "NotAccess");
-                    } else {
-                        $("#" + this.id).css("border-color", "#ccc");
-                        $("#btnSubmit").attr("Allow", "Access");
-                    }
-                } else {
-                    $("#" + this.id).css("border-color", "#ccc");
-                    $("#btnSubmit").attr("Allow", "Access");
-                }
-            });
+            //$(".hasDatepicker").change(function () {
+            //    if (this.value == "") {
+            //        if (!$("#" + this.id).prop("disabled")) {
+            //            $("#" + this.id).css("border-color", "red");
+            //            $("#btnSubmit").attr("Allow", "NotAccess");
+            //        } else {
+            //            $("#" + this.id).css("border-color", "#ccc");
+            //            $("#btnSubmit").attr("Allow", "Access");
+            //        }
+            //    } else {
+            //        $("#" + this.id).css("border-color", "#ccc");
+            //        $("#btnSubmit").attr("Allow", "Access");
+            //    }
+            //});
         }
 
         // When the user scrolls down 20px from the top of the document, show the button

@@ -383,17 +383,17 @@
                                 <span id="errorTrvTitle-@(Number)" class="errorText"></span>
                             </div>
                             <input type="hidden" name="TrvType" value="@(List[i][1].ToString())" />
-                            <div class="col-md-3">
-                                <label>First Name</label>
+                            <div class="col-md-4">
+                                <label>First &nbsp; Middle Name </label>
                                 <input type="text" placeholder="First Name" class="form-control id" id="TrvFName-@(Number)" name="TrvFName" data-Error="errorTrvFName-@(Number)" />
                                 <span id="errorTrvFName-@(Number)" class="errorText"></span>
                             </div>
 
-                            <div class="col-md-3">
+                            @*<div class="col-md-3">
                                 <label>Middle Name</label>
                                 <input type="text" placeholder="Middle Name" class="form-control id" id="TrvMName-@(Number)" name="TrvMName" />
                                 <span id="errorTrvMName-@(Number)" class="errorText"></span>
-                            </div>
+                            </div>*@
 
                             <div class="col-md-3">
                                 <label>Last Name</label>
@@ -701,6 +701,17 @@
     <script>
 
         $(document).ready(function () {
+
+            setInterval(function () {
+
+                $.post("/index/IAmActive", function (Success) {
+                    if (Success.Code != "200") {
+                        window.location.href = "/";
+                        console.log(Success.Message);
+                    }
+                });
+
+            }, ((10 * 60) * 1000));
 
             $("select[name='TrvTitle']").change(function () {
                 if ($(this).val() == "0") {

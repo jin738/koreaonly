@@ -5,118 +5,7 @@
     var SearchFillter = (KoreaOnly.Models.SearchFillter)Session["SearchFillter"];
 }
 
-<script>
-    $(function () {
-        $("#slider-range").slider({
-            range: true,
-            min: @SearchFillter.PriceFillter[0],
-            max: @SearchFillter.PriceFillter[1],
-            values: [@SearchFillter.PriceFillter[2], @SearchFillter.PriceFillter[3]],
-            slide: function (event, ui) {
-                $("#stamount").val("$" + ui.values[0]);
-                $("#edamount").val("$" + ui.values[1]);
-                dosearch("price slider");
-            }
-        });
 
-        $("#stamount").val("$" + $("#slider-range").slider("values", 0));
-        $("#edamount").val("$" + $("#slider-range").slider("values", 1));
-
-        $("#slider-range2").slider({
-            range: true,
-            min: 0,
-            max: 1440,
-            step: 15,
-            values: [0, 1440],
-            slide: function (event, ui) {
-
-                var hours1 = Math.floor(ui.values[0] / 60);
-                var minutes1 = ui.values[0] - (hours1 * 60);
-
-                if (hours1.length == 1) hours1 = '0' + hours1;
-                if (minutes1.length == 1) minutes1 = '0' + minutes1;
-                if (minutes1 == 0) minutes1 = '00';
-                if (hours1 >= 12) {
-                    if (hours1 == 12) {
-                        hours1 = hours1;
-                        minutes1 = minutes1 + " PM";
-                    } else {
-                        hours1 = hours1 - 12;
-                        minutes1 = minutes1 + " PM";
-                    }
-                } else {
-                    hours1 = hours1;
-                    minutes1 = minutes1 + " AM";
-                }
-                if (hours1 == 0) {
-                    hours1 = 12;
-                    minutes1 = minutes1;
-                }
-
-
-                $('#stamount2val').val(ui.values[0]);
-                $('#stamount2').val(hours1 + ':' + minutes1);
-
-                var hours2 = Math.floor(ui.values[1] / 60);
-                var minutes2 = ui.values[1] - (hours2 * 60);
-
-                if (hours2.length == 1) hours2 = '0' + hours2;
-                if (minutes2.length == 1) minutes2 = '0' + minutes2;
-                if (minutes2 == 0) minutes2 = '00';
-                if (hours2 >= 12) {
-                    if (hours2 == 12) {
-                        hours2 = hours2;
-                        minutes2 = minutes2 + " PM";
-                    } else if (hours2 == 24) {
-                        hours2 = 11;
-                        minutes2 = "59 PM";
-                    } else {
-                        hours2 = hours2 - 12;
-                        minutes2 = minutes2 + " PM";
-                    }
-                } else {
-                    hours2 = hours2;
-                    minutes2 = minutes2 + " AM";
-                }
-
-                $('#edamount2val').val(ui.values[1]);
-                $('#edamount2').val(hours2 + ':' + minutes2);
-                dosearch("time slider");
-            }
-        });
-
-        $("#stamount2").val("12:00 AM");
-        $("#edamount2").val("11:59 PM");
-
-    });
-
-    function dosearch(whoclick){
-        // console.log(whoclick);
-        if(LOCK)
-            $("#btnsearchsubmit").click();
-    }
-
-    function AddSearchoption(inputid){
-        var Apt = $("#"+inputid).val();
-
-        var options = {
-            url: function (phrase) {
-                return "/Index/GetAllAirports?AirCode=" + ($("#"+inputid).val());
-            },
-            list: {
-                match: {
-                    enabled: true
-                }
-            },
-            theme: "plate-dark",
-            getValue: "name"
-        };
-
-
-        $("#"+inputid).easyAutocomplete(options);
-    }
-
-</script>
 
 <div class="row" style="margin-top:18px;">
     <div id="mobilefilter" class="filtert">
@@ -283,92 +172,6 @@
                         <input type="submit" style="display:none;" id="btnSubmitOff" class="btn btn-default btnTheam" value="Search Flight" />
                     </div>
 
-                    <script>
-
-                        function getCookie(cname) {
-                            var name = cname + "=";
-                            var ca = document.cookie.split(';');
-                            for (var i = 0; i < ca.length; i++) {
-                                var c = ca[i];
-                                while (c.charAt(0) == ' ') {
-                                    c = c.substring(1);
-                                }
-                                if (c.indexOf(name) == 0) {
-                                    return c.substring(name.length, c.length);
-                                }
-                            }
-                            return "";
-                        }
-
-                        $("#btnsearchsubmit").click(function () {
-
-                            $("#loadingdiv").show();
-
-                            $("#loadingdivsFlight").show();
-                            $.ajax({
-                                type: "POST",
-                                data:$("#frm1").serialize(),
-                                url: "/Index/SearchFlight",
-                                success: function (response) {
-
-                                    if(response.search("<script src=") == -1)
-                                    {
-                                        if (response != "") {
-                                            Loads();
-                                        } else {
-                                            window.location.href = "/";
-                                        }
-
-                                        $("#AllFlights").html(response);
-
-                                        $(".btnviewflightdetails").click(function () {
-                                            var bc = $(this).attr("fid");
-                                            var name = $(this).attr("data-target");
-
-                                            if ($(name).attr("st") != "1") {
-                                                var a = $(this);
-                                                a.html("Loading...");
-                                                $.ajax({
-                                                    type: "POST",
-                                                    data: { id: bc },
-                                                    url: "/Index/GetFlightDetails",
-                                                    success: function (response) {
-                                                        $(name).html(response);
-                                                        $(name).attr("st", "1");
-                                                        a.html("View Flight Details");
-                                                    }
-                                                });
-                                            }
-                                        });
-                                        $.ajax({
-                                            type: "POST",
-                                            url: "/Index/GetSearchFlightsPanel",
-                                            success: function (response) {
-
-                                                $("#SearchFlightsPanel").html(response);
-
-                                                if(getCookie("stopid") != "")
-                                                {
-                                                    $("#"+getCookie("stopid")).prop("checked",true);
-                                                }
-
-                                            }
-                                        });
-
-
-
-                                    }
-
-                                    setTimeout(function(){
-                                        Loads();
-                                        $("#loadingdiv").hide();
-
-                                        $("#loadingdivsFlight").hide();
-                                    },1000);
-                                }
-                            });
-                        });
-                    </script>
 
                 </form>
 
@@ -378,19 +181,138 @@
 </div>
 
 
-<script>
+<script type="text/javascript">
 
-    function setCookie(cname, cvalue, exdays) {
-        var d = new Date();
-        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-        var expires = "expires="+d.toUTCString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    var isSlide = false;
+
+    $(document).ready(function () {
+        $("#slider-range").slider({
+            range: true,
+            min: @SearchFillter.PriceFillter[0],
+            max: @SearchFillter.PriceFillter[1],
+            values: [@SearchFillter.PriceFillter[2], @SearchFillter.PriceFillter[3]],
+            slide: function (event, ui) {
+                isSlide = true;
+                $("#stamount").val("$" + ui.values[0]);
+                $("#edamount").val("$" + ui.values[1]);
+                console.log("SLIDES");
+            },
+            stop: function (event, ui) {
+                $("#stamount").val("$" + ui.values[0]);
+                $("#edamount").val("$" + ui.values[1]);
+                dosearch("price slider");
+                isSlide = false;
+                console.log("STOP");
+            }
+        });
+
+        $("#stamount").val("$" + $("#slider-range").slider("values", 0));
+        $("#edamount").val("$" + $("#slider-range").slider("values", 1));
+
+        $("#slider-range2").slider({
+            range: true,
+            min: 0,
+            max: 1440,
+            step: 15,
+            values: [0, 1440],
+            slide: function (event, ui) {
+                isSlide = true;
+                var hours1 = Math.floor(ui.values[0] / 60);
+                var minutes1 = ui.values[0] - (hours1 * 60);
+
+                if (hours1.length == 1) hours1 = '0' + hours1;
+                if (minutes1.length == 1) minutes1 = '0' + minutes1;
+                if (minutes1 == 0) minutes1 = '00';
+                if (hours1 >= 12) {
+                    if (hours1 == 12) {
+                        hours1 = hours1;
+                        minutes1 = minutes1 + " PM";
+                    } else {
+                        hours1 = hours1 - 12;
+                        minutes1 = minutes1 + " PM";
+                    }
+                } else {
+                    hours1 = hours1;
+                    minutes1 = minutes1 + " AM";
+                }
+                if (hours1 == 0) {
+                    hours1 = 12;
+                    minutes1 = minutes1;
+                }
+
+
+                $('#stamount2val').val(ui.values[0]);
+                $('#stamount2').val(hours1 + ':' + minutes1);
+
+                var hours2 = Math.floor(ui.values[1] / 60);
+                var minutes2 = ui.values[1] - (hours2 * 60);
+
+                if (hours2.length == 1) hours2 = '0' + hours2;
+                if (minutes2.length == 1) minutes2 = '0' + minutes2;
+                if (minutes2 == 0) minutes2 = '00';
+                if (hours2 >= 12) {
+                    if (hours2 == 12) {
+                        hours2 = hours2;
+                        minutes2 = minutes2 + " PM";
+                    } else if (hours2 == 24) {
+                        hours2 = 11;
+                        minutes2 = "59 PM";
+                    } else {
+                        hours2 = hours2 - 12;
+                        minutes2 = minutes2 + " PM";
+                    }
+                } else {
+                    hours2 = hours2;
+                    minutes2 = minutes2 + " AM";
+                }
+
+                $('#edamount2val').val(ui.values[1]);
+                $('#edamount2').val(hours2 + ':' + minutes2);
+               
+            },
+            stop: function () {
+                dosearch("time slider");
+                isSlide = false;
+            }
+        });
+
+        $("#stamount2").val("12:00 AM");
+        $("#edamount2").val("11:59 PM");
+
+    });
+
+    function dosearch(whoclick){
+        // console.log(whoclick);
+       
+            $("#btnsearchsubmit").click();
     }
+
+    function AddSearchoption(inputid){
+        var Apt = $("#"+inputid).val();
+
+        var options = {
+            url: function (phrase) {
+                return "/Index/GetAllAirports?AirCode=" + ($("#"+inputid).val());
+            },
+            list: {
+                match: {
+                    enabled: true
+                }
+            },
+            theme: "plate-dark",
+            getValue: "name"
+        };
+
+
+        $("#"+inputid).easyAutocomplete(options);
+    }
+
+
 
     function getCookie(cname) {
         var name = cname + "=";
         var ca = document.cookie.split(';');
-        for(var i = 0; i < ca.length; i++) {
+        for (var i = 0; i < ca.length; i++) {
             var c = ca[i];
             while (c.charAt(0) == ' ') {
                 c = c.substring(1);
@@ -402,7 +324,153 @@
         return "";
     }
 
-   
+    $("#btnsearchsubmit").click(function () {
+
+        $("#loadingdiv").show();
+
+        $("#loadingdivsFlight").show();
+        $.ajax({
+            type: "POST",
+            data: $("#frm1").serialize(),
+            url: "/Index/SearchFlight",
+            success: function (response) {
+
+                if (response.search("<script src=") == -1) {
+                    if (response != "") {
+                        Loads();
+                    } else {
+                        window.location.href = "/";
+                    }
+
+                    $("#AllFlights").html(response);
+
+                    $(".btnviewflightdetails").click(function () {
+                        var bc = $(this).attr("fid");
+                        var name = $(this).attr("data-target");
+
+                        if ($(name).attr("st") != "1") {
+                            var a = $(this);
+                            a.html("Loading...");
+                            $.ajax({
+                                type: "POST",
+                                data: { id: bc },
+                                url: "/Index/GetFlightDetails",
+                                success: function (response) {
+                                    $(name).html(response);
+                                    $(name).attr("st", "1");
+                                    a.html("View Flight Details");
+                                }
+                            });
+                        }
+                    });
+
+                    //$.ajax({
+                    //    type: "POST",
+                    //    url: "/Index/GetSearchFlightsPanel",
+                    //    success: function (response) {
+
+                    //        $("#SearchFlightsPanel").html(response);
+
+                    //        if (getCookie("stopid") != "") {
+                    //            $("#" + getCookie("stopid")).prop("checked", true);
+                    //        }
+
+                    //    }
+                    //});
+
+
+
+                }
+
+                setTimeout(function () {
+                    Loads();
+                    $("#loadingdiv").hide();
+
+                    $("#loadingdivsFlight").hide();
+                }, 1000);
+            },
+            error: function (response) {
+
+                if (response.search("<script src=") == -1) {
+                    if (response != "") {
+                        Loads();
+                    } else {
+                        window.location.href = "/";
+                    }
+
+                    $("#AllFlights").html(response);
+
+                    $(".btnviewflightdetails").click(function () {
+                        var bc = $(this).attr("fid");
+                        var name = $(this).attr("data-target");
+
+                        if ($(name).attr("st") != "1") {
+                            var a = $(this);
+                            a.html("Loading...");
+                            $.ajax({
+                                type: "POST",
+                                data: { id: bc },
+                                url: "/Index/GetFlightDetails",
+                                success: function (response) {
+                                    $(name).html(response);
+                                    $(name).attr("st", "1");
+                                    a.html("View Flight Details");
+                                }
+                            });
+                        }
+                    });
+
+                    //$.ajax({
+                    //    type: "POST",
+                    //    url: "/Index/GetSearchFlightsPanel",
+                    //    success: function (response) {
+
+                    //        $("#SearchFlightsPanel").html(response);
+
+                    //        if (getCookie("stopid") != "") {
+                    //            $("#" + getCookie("stopid")).prop("checked", true);
+                    //        }
+
+                    //    }
+                    //});
+
+
+
+                }
+
+                setTimeout(function () {
+                    Loads();
+                    $("#loadingdiv").hide();
+
+                    $("#loadingdivsFlight").hide();
+                }, 1000);
+            }
+        });
+    });
+
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+
     function Loads() {
 
         $(".CLickonly").unbind("click").bind("click", function (e) {
@@ -455,8 +523,8 @@
 
         function dosearch(whoclick) {
             // console.log(whoclick);
-            if (LOCK)
-                $("#btnsearchsubmit").click();
+
+            $("#btnsearchsubmit").click();
         }
 
         $(".onlythisFA").unbind("click").bind("click", function (e) {
@@ -560,3 +628,4 @@
     }
 
 </script>
+

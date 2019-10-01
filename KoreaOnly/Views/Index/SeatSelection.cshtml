@@ -9,11 +9,11 @@
 
     var SeatingArrgementMtrix = new List<KoreaOnly.Models.SeatingArragment>()
 {
-new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 10, SeatsBreaks = new List<int>(){ 3,4,3 } },
-new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 4, SeatsBreaks = new List<int>(){ 1,2,1 } },
-new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 6, SeatsBreaks = new List<int>(){ 3,3 } },
-new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 8, SeatsBreaks = new List<int>(){ 2,4,2 } },
-new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 9, SeatsBreaks = new List<int>(){ 3,3,3 } }
+new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 10, SeatsBreaks = new List<int>(){ 3,4,3 }, SpecialPadding = 20 },
+new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 4, SeatsBreaks = new List<int>(){ 1,2,1 }, SpecialPadding = 20 },
+new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 6, SeatsBreaks = new List<int>(){ 3,3 }, SpecialPadding = 30 },
+new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 8, SeatsBreaks = new List<int>(){ 2,4,2 }, SpecialPadding = 25 },
+new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 9, SeatsBreaks = new List<int>(){ 3,3,3 }, SpecialPadding = 20 }
 };
 
 }
@@ -253,108 +253,32 @@ new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 9, SeatsBreaks = new List<
                     <h4 style="text-align:center;color:#265d76;margin:20px;font-weight:bold;">@(Cabin.classLocation.First())</h4>
                     <h4 style="text-align:center;color:#265d76;margin:20px">Cabin Class : @(Cabin.CabinClass.RBD == "Y" ? "Economy" : Cabin.CabinClass.RBD == "F" ? "First" : "Business")</h4>
 
-                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:10px;border-top: 2px solid black;padding-top: 20px;border-left: 2px solid black;border-right: 2px solid black;">
+                    <div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:10px;@(Cabin.classLocation.First() == Additional.EnhancedSeatMap.Cabin_Simple.Upperdeck ? "border-top: 2px solid black;" : "" )padding-top: 20px;border-left: 2px solid black;border-right: 2px solid black;">
 
 
-                        @for (int i = 0; i < Cabin.Column.Length; i++)
-                        {
-                            if (Seating.SeatsBreaks[CurrentIndexOfSeatsBreak] == CurrentSeatCount)
+
+                            @for (int i = 0; i < Cabin.Column.Length; i++)
                             {
-                                <div class="SeatHeading CabinSeats">
-
-                                </div>
-                                <div class="SeatHeading CabinSeats">
-                                    @(Cabin.Column[i].Column?.ToString())
-                                </div>
-                                CurrentIndexOfSeatsBreak++;
-                                CurrentSeatCount = 1;
-                            }
-                            else
-                            {
-                                <div class="SeatHeading CabinSeats">
-                                    @(Cabin.Column[i].Column?.ToString())
-                                </div>
-                                CurrentSeatCount++;
-                            }
-                        }
-
-                        @{
-                            CurrentIndexOfSeatsBreak = 0;
-                            CurrentSeatCount = 0;
-                        }
-
-                    </div>
-
-                    foreach (var Rows in Cabin.Row)
-                    {
-                        if (Rows.Seat != null && Rows.Seat.First().restrictedReclineInd)
-                        {
-                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:10px;@(Cabin.Wing != null && Convert.ToInt32(Cabin.Wing.firstRow) >= Convert.ToInt32(Rows.RowNumber) && Convert.ToInt32(Rows.RowNumber) <= Convert.ToInt32(Cabin.Wing.lastRow) ? "border-left:2px solid Red;border-right:2px solid Red;" : "border-left:2px solid Gray;border-right:2px solid Gray;")">
-                            </div>
-                        }
-
-                        if (Rows.Seat != null && Rows.Seat.First().exitRowInd)
-                        {
-                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:10px;border-left:2px solid Gray;border-right:2px solid Gray;">
-                                <div class="text-left col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                                    <span class="text-left" style="color: white;background: green;font-weight: bold;padding: 5px 10px;">Exit</span>
-                                </div>
-                                <div class="text-right col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                                    <span class="text-left" style="color: white;background: green;font-weight: bold;padding: 5px 10px;">Exit</span>
-                                </div>
-                            </div>
-                        }
-
-                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:10px;@(Cabin.Wing != null && (Enumerable.Range(Convert.ToInt32(Cabin.Wing.firstRow),Convert.ToInt32(Cabin.Wing.lastRow)).Contains(Convert.ToInt32(Rows.RowNumber))) ? "border-left:2px solid Red;border-right:2px solid Red;" : "border-left:2px solid Gray;border-right:2px solid Gray;")">
-                            @{
-                                var CurrentSeat = 0;
-                            }
-                            @for (int Seats = 0; Seats < Cabin.Column.Length; Seats++)
-                            {
-
-                                var Checked = Rows.Seat == null ? false : Rows.Seat.ToList().FindIndex(SL => SL.Number == Cabin.Column[Seats].Column) != -1;
-
-
                                 if (Seating.SeatsBreaks[CurrentIndexOfSeatsBreak] == CurrentSeatCount)
                                 {
-                                    <div class="CabinSeats ">
+                                    <div class="SeatHeading CabinSeats">
 
                                     </div>
-
-                                    if (Checked)
-                                    {
-                                        Html.RenderPartial("/Views/Index/SeatTemplate.cshtml", new KoreaOnly.Models.SeatMapSeatModel() { RowNumber = Rows.RowNumber, SeatNumner = Rows.Seat[CurrentSeat].Number, Seats = Rows.Seat[CurrentSeat], IsDisabledSeats = false, isWindowSeats = Cabin.Column.Where(s => s.Column == Rows.Seat[CurrentSeat].Number)?.First().Characteristics.First().ToString() });
-                                        CurrentSeat++;
-                                    }
-                                    else
-                                    {
-                                        Html.RenderPartial("/Views/Index/SeatTemplate.cshtml", new KoreaOnly.Models.SeatMapSeatModel() { RowNumber = Rows.RowNumber, SeatNumner = Cabin.Column[Seats].Column, Seats = null, IsDisabledSeats = false, isNewSeats = true, isWindowSeats = Cabin.Column[Seats].Characteristics.First().ToString() });
-                                    }
-
+                                    <div class="SeatHeading CabinSeats">
+                                        @(Cabin.Column[i].Column?.ToString())
+                                    </div>
                                     CurrentIndexOfSeatsBreak++;
                                     CurrentSeatCount = 1;
                                 }
                                 else
                                 {
-                                    if (Checked)
-                                    {
-                                        Html.RenderPartial("/Views/Index/SeatTemplate.cshtml", new KoreaOnly.Models.SeatMapSeatModel() { RowNumber = Rows.RowNumber, SeatNumner = Rows.Seat[CurrentSeat].Number, Seats = Rows.Seat[CurrentSeat], IsDisabledSeats = false, isWindowSeats = Cabin.Column.Where(s => s.Column == Rows.Seat[CurrentSeat].Number)?.First().Characteristics.First().ToString() });
-                                        CurrentSeat++;
-                                    }
-                                    else
-                                    {
-                                        Html.RenderPartial("/Views/Index/SeatTemplate.cshtml", new KoreaOnly.Models.SeatMapSeatModel() { RowNumber = Rows.RowNumber, SeatNumner = Cabin.Column[Seats].Column, Seats = null, IsDisabledSeats = false, isNewSeats = true, isWindowSeats = Cabin.Column[Seats].Characteristics.First().ToString() });
-                                    }
-
+                                    <div class="SeatHeading CabinSeats">
+                                        @(Cabin.Column[i].Column?.ToString())
+                                    </div>
                                     CurrentSeatCount++;
                                 }
-
-
-
                             }
-
-
-
 
                             @{
                                 CurrentIndexOfSeatsBreak = 0;
@@ -363,51 +287,136 @@ new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 9, SeatsBreaks = new List<
 
                         </div>
 
-                        if (Rows.RowFacility != null && Rows.RowFacility.First().Location == Additional.EnhancedSeatMap.Enum_CabinFacilitiesRowLocationtype.Rear)
+                        @foreach (var Rows in Cabin.Row)
                         {
-                            foreach (var Faci2 in Rows.RowFacility)
+                            if (Rows.Seat != null && Rows.Seat.First().restrictedReclineInd)
                             {
-                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:10px;@(Cabin.Wing != null && Convert.ToInt32(Cabin.Wing.firstRow) >= Convert.ToInt32(Rows.RowNumber) && Convert.ToInt32(Rows.RowNumber) <= Convert.ToInt32(Cabin.Wing.lastRow) ? "border-left:2px solid Red;border-right:2px solid Red;" : "border-left:2px solid Gray;border-right:2px solid Gray;")">
-                            @foreach (var Faci in Faci2.Facility)
-                            {
-                                if (Faci.Characteristics.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesType_Base.Lavatory)
-                                {
-                                    <div class="CabinSeats seat" style="@(Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftCenterSection ? "float:left;" : Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightCenterSection ? "float:right;" : "")">
-
-
-                                        <img src="~/Images/Lavatory.png" width="50" height="50" />
-
-                                    </div>
-                                }
-                                else if (Faci.Characteristics.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesType_Base.StairstoUpperdeck)
-                                {
-                                    <div class="CabinSeats seat" style="@(Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftCenterSection ? "float:left;" : Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightCenterSection ? "float:right;" : "")">
-
-
-                                        <img src="~/Images/stairs.png" width="50" height="50" />
-
-                                    </div>
-                                }
-                                else if (Faci.Characteristics.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesType_Base.Galley)
-                                {
-                                    <div class="CabinSeats seat" style="@(Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftCenterSection ? "float:left;" : Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightCenterSection ? "float:right;" : "")">
-                                         
-                                        <img src="~/Images/Gallery.png" width="50" height="50" />
-
-                                    </div>
-                                }
-
+                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:10px;@(Cabin.Wing != null && Convert.ToInt32(Cabin.Wing.firstRow) >= Convert.ToInt32(Rows.RowNumber) && Convert.ToInt32(Rows.RowNumber) <= Convert.ToInt32(Cabin.Wing.lastRow) ? "border-left:2px solid Red;border-right:2px solid Red;" : "border-left:2px solid Gray;border-right:2px solid Gray;")">
+                                </div>
                             }
 
-                        </div>
-
+                            if (Rows.Type != null && Rows.Type.ToList().FindIndex(f => f.Value == Additional.EnhancedSeatMap.Enum_SeatRowType_Base.RowDoesNotExist) != -1)
+                            {
+                                 
+                                continue;
                             }
 
+                            if (Rows.Seat != null && Rows.Seat.First().exitRowInd)
+                            {
+                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:10px;border-left:2px solid Gray;border-right:2px solid Gray;">
+                                    <div class="text-left col-sm-6 col-md-6 col-xs-6 col-lg-6">
+                                        <span class="text-left" style="color: white;background: green;font-weight: bold;padding: 5px 10px;">Exit</span>
+                                    </div>
+                                    <div class="text-right col-sm-6 col-md-6 col-xs-6 col-lg-6">
+                                        <span class="text-left" style="color: white;background: green;font-weight: bold;padding: 5px 10px;">Exit</span>
+                                    </div>
+                                </div>
+                            }
+
+                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:10px;@(Cabin.Wing != null && (Enumerable.Range(Convert.ToInt32(Cabin.Wing.firstRow),Convert.ToInt32(Cabin.Wing.lastRow)).Contains(Convert.ToInt32(Rows.RowNumber))) ? "border-left:2px solid Red;border-right:2px solid Red;" : "border-left:2px solid Gray;border-right:2px solid Gray;")">
+                                @{
+                                    var CurrentSeat = 0;
+                                }
+                                @for (int Seats = 0; Seats < Cabin.Column.Length; Seats++)
+                                {
+
+                                    var Checked = Rows.Seat == null ? false : Rows.Seat.ToList().FindIndex(SL => SL.Number == Cabin.Column[Seats].Column) != -1;
+
+
+                                    if (Seating.SeatsBreaks[CurrentIndexOfSeatsBreak] == CurrentSeatCount)
+                                    {
+                                        <div class="CabinSeats ">
+
+                                        </div>
+
+                                        if (Checked)
+                                        {
+                                            Html.RenderPartial("/Views/Index/SeatTemplate.cshtml", new KoreaOnly.Models.SeatMapSeatModel() { RowNumber = Rows.RowNumber, SeatNumner = Rows.Seat[CurrentSeat].Number, Seats = Rows.Seat[CurrentSeat], IsDisabledSeats = false, isWindowSeats = Cabin.Column.Where(s => s.Column == Rows.Seat[CurrentSeat].Number)?.First().Characteristics.First().ToString() });
+                                            CurrentSeat++;
+                                        }
+                                        else
+                                        {
+                                            Html.RenderPartial("/Views/Index/SeatTemplate.cshtml", new KoreaOnly.Models.SeatMapSeatModel() { RowNumber = Rows.RowNumber, SeatNumner = Cabin.Column[Seats].Column, Seats = null, IsDisabledSeats = false, isNewSeats = true, isWindowSeats = Cabin.Column[Seats].Characteristics.First().ToString() });
+                                        }
+
+                                        CurrentIndexOfSeatsBreak++;
+                                        CurrentSeatCount = 1;
+                                    }
+                                    else
+                                    {
+                                        if (Checked)
+                                        {
+                                            Html.RenderPartial("/Views/Index/SeatTemplate.cshtml", new KoreaOnly.Models.SeatMapSeatModel() { RowNumber = Rows.RowNumber, SeatNumner = Rows.Seat[CurrentSeat].Number, Seats = Rows.Seat[CurrentSeat], IsDisabledSeats = false, isWindowSeats = Cabin.Column.Where(s => s.Column == Rows.Seat[CurrentSeat].Number)?.First().Characteristics.First().ToString() });
+                                            CurrentSeat++;
+                                        }
+                                        else
+                                        {
+                                            Html.RenderPartial("/Views/Index/SeatTemplate.cshtml", new KoreaOnly.Models.SeatMapSeatModel() { RowNumber = Rows.RowNumber, SeatNumner = Cabin.Column[Seats].Column, Seats = null, IsDisabledSeats = false, isNewSeats = true, isWindowSeats = Cabin.Column[Seats].Characteristics.First().ToString() });
+                                        }
+
+                                        CurrentSeatCount++;
+                                    }
+
+
+
+                                }
+
+
+
+
+                                @{
+                                    CurrentIndexOfSeatsBreak = 0;
+                                    CurrentSeatCount = 0;
+                                }
+
+                            </div>
+
+                            if (Rows.RowFacility != null && Rows.RowFacility.First().Location == Additional.EnhancedSeatMap.Enum_CabinFacilitiesRowLocationtype.Rear)
+                            {
+                                foreach (var Faci2 in Rows.RowFacility)
+                                {
+
+                                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:10px;padding:0px @(SeatingArrgementMtrix.Where(d=>d.TotalSeats == Cabin.Column.Length).First().SpecialPadding)%; @(Cabin.Wing != null && Convert.ToInt32(Cabin.Wing.firstRow) >= Convert.ToInt32(Rows.RowNumber) && Convert.ToInt32(Rows.RowNumber) <= Convert.ToInt32(Cabin.Wing.lastRow) ? "border-left:2px solid Red;border-right:2px solid Red;" : "border-left:2px solid Gray;border-right:2px solid Gray;")">
+                                        @foreach (var Faci in Faci2.Facility)
+                                        {
+                                            if (Faci.Characteristics.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesType_Base.Lavatory)
+                                            {
+                                                <div class="CabinSeats seat" style="@(Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftCenterSection ? "float:left;" : Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightCenterSection ? "float:right;" : "")">
+
+
+                                                    <img src="~/Images/Lavatory.png" width="50" height="50" />
+
+                                                </div>
+                                            }
+                                            else if (Faci.Characteristics.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesType_Base.StairstoUpperdeck)
+                                            {
+                                                <div class="CabinSeats seat" style="@(Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftCenterSection ? "float:left;" : Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightCenterSection ? "float:right;" : "")">
+
+
+                                                    <img src="~/Images/stairs.png" width="50" height="50" />
+
+                                                </div>
+                                            }
+                                            else if (Faci.Characteristics.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesType_Base.Galley)
+                                            {
+                                                <div class="CabinSeats seat" style="@(Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftCenterSection ? "float:left;" : Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightCenterSection ? "float:right;" : "")">
+
+                                                    <img src="~/Images/Gallery.png" width="50" height="50" />
+
+                                                </div>
+                                            }
+
+                                        }
+
+                                    </div>
+
+                                }
+
+
+                            }
 
                         }
-
-                    }
-
+                    </div>
                 }
 
             }

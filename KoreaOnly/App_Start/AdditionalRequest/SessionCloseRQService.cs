@@ -44,7 +44,7 @@ namespace Additional.SessionClose
         /// <remarks/>
         public SessionCloseRQService()
         {
-            this.Url = "https://webservices.sabre.com";
+            this.Url = Additional.URL.Url;
         }
 
         public MessageHeader MessageHeaderValue
@@ -1149,13 +1149,13 @@ namespace Additional.SessionClose
     public partial class SPKIDataType
     {
 
-        private byte[][] sPKISexpField;
+        private byte[] sPKISexpField;
 
         private System.Xml.XmlElement anyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("SPKISexp", DataType = "base64Binary")]
-        public byte[][] SPKISexp
+        public byte[] SPKISexp
         {
             get
             {

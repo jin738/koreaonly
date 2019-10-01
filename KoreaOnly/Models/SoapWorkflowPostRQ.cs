@@ -122,6 +122,11 @@ namespace KoreaOnly.Models
         public string AgencyStreetNumber { get; set; }
 
         /// <summary>
+        /// Sec Page
+        /// </summary>
+        public string SecPage { get; set; }
+
+        /// <summary>
         /// Gets or sets the agency state code.
         /// </summary>
         /// <value>

@@ -48,7 +48,7 @@ namespace OTA_AirRule
         /// <remarks/>
         public OTA_AirRulesService()
         {
-            this.Url = "https://webservices.sabre.com/websvc";
+            this.Url = Additional.URL.Url;
         }
 
         public MessageHeader MessageHeaderValue
@@ -880,13 +880,13 @@ namespace OTA_AirRule
     public partial class SPKIDataType
     {
 
-        private byte[][] sPKISexpField;
+        private byte[] sPKISexpField;
 
         private System.Xml.XmlElement anyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("SPKISexp", DataType = "base64Binary")]
-        public byte[][] SPKISexp
+        public byte[] SPKISexp
         {
             get
             {
