@@ -1,25 +1,68 @@
 ﻿@model List<KoreaOnly.CheapFlights>
 
 
+@if (Model == null || Model.Count == 0)
+{
+    <h2 class="text-center">No Flight Found...</h2>
+}
+
 @foreach (var item in Model)
 {
 
-    <div class="col-sm-4 col-md-3">
-        <div class="thumbnail cheapflightsbox" data-flightOrigin="@item.AirportNameOrigin()" data-flightDestination="@item.AirportNameDestination()" data-Airline="@(item.AirlineCode + " " + item.AirlineName() )" data-Date="@item.DepartureDate" data-Price="@item.Price" data-id="@item.ID">
-            @*<img src="@item.Picture" alt="@item.AirportCode">*@
-            @*<div class="caption">
-                    <p class="cheap-flights-city">@(item.Name())</p>
-                </div>*@
+    @*<div class="col-sm-3 col-md-3">
+            <div class="thumbnail cheapflightsbox" data-flightOrigin="@item.AirportNameOrigin()" data-flightDestination="@item.AirportNameDestination()" data-Airline="@(item.AirlineCode + " " + item.AirlineName() )" data-Date="@item.DepartureDate" data-Price="@item.Price" data-id="@item.ID">
+                @*<img src="@item.Picture" alt="@item.AirportCode">
+                @*<div class="caption">
+                        <p class="cheap-flights-city">@(item.Name())</p>
+                    </div>
 
-            <div class="caption">
-                <p class="cheap-flights-city"><b>From    : </b> @item.NameOrigin()</p>
-                <p class="cheap-flights-city"><b>To      : </b> @item.NameDestination()</p>
-                <p class="cheap-flights-city"><b>Airline : </b> @item.AirlineName()</p>
-                <p class="cheap-flights-city"><b>Date    : </b> @item.DepartureDate</p>
-                <p class="cheap-flights-city"><b>Price   : </b> $@item.Price</p>
+                <div class="caption">
+
+                    <p class="cheap-flights-city">
+                        <img src="~/Images/Airlines/@(item.AirlineCode).png" style="text-align:left;border:1px solid; padding:2px;" width="30" height="30" />
+                        @item.DepartureCode - @item.AirportCode
+
+                        <span class="cheap-flights-city" style="font-size:14px;color:gray;">( @(Convert.ToDateTime(item.DepartureDate).ToString("MMM-dd")) )</span>
+                    </p>
+
+
+                    <p class="text-left" style="margin:5px 0px;padding:10px 0px;">
+                        <span class="cheap-flights-city " style="font-size:15px;color: white;padding: 10px;background: #287490;">$@item.Price</span>
+                        <span class="cheap-flights-city cheap-price" style="font-size:15px;color: white;padding: 10px;background: #287490;">Select</span>
+                    </p>
+
+                    @*<p class="cheap-flights-city"><b>From    : </b> @item.NameOrigin()</p>
+                        <p class="cheap-flights-city"><b>To      : </b> @item.NameDestination()</p>
+                        <p class="cheap-flights-city"><b>Airline : </b> @item.AirlineName()</p>
+                        <p class="cheap-flights-city"><b>Date    : </b> @item.DepartureDate</p>
+                        <p class="cheap-flights-city"><b>Price   : </b> $@item.Price</p>
+                </div>
+
+            </div>
+        </div>*@
+
+    <div class="col-sm-4 col-md-4 cheapflightsbox " style="margin:5px 0px;" data-flightOrigin="@item.AirportNameOrigin()" data-flightDestination="@item.AirportNameDestination()" data-Airline="" data-Date="@item.DepartureDate" data-Price="@item.Price" data-id="@item.ID">
+
+        <div style="display:flex; padding:10px;border:1px solid #1f4d65; ">
+            <div class="col-sm-1 col-md-1" style="padding:0px;margin:0px 5px;">
+                <img src="~/Images/Airlines/@(item.AirlineCode).png" style="text-align:left;border:1px solid #1f4d65; padding:2px;" width="40" height="40" />
             </div>
 
+            <div class="col-sm-8 col-md-8" style="padding:0px 5px;vertical-align:middle;">
+                <p class="cheap-flights-city" style="font-size:1em;">@item.AirlineName()</p>
+                <p class="cheap-flights-city" style="font-size:1em;">(@item.DepartureCode) @item.NameOrigin().Split(',')[0] - (@item.AirportCode) @item.NameDestination().Split(',')[0]</p>
+                <p class="cheap-flights-city" style="font-size:14px;color:gray;">From @(Convert.ToDateTime(item.DepartureDate).ToString("MMM dd yyyy"))</p>
+            </div>
+            <div class="col-sm-2 col-md-2 cheap-flights-city" style=" text-align:center;margin:20px auto;">
+                <span style="vertical-align:middle;">$@(item.Price)</span>
+            </div>
+
+            <div class="col-sm-1 col-md-1 cheap-flights-city" style="text-align:center;margin:15px auto 0px auto;">
+                <i class="fa fa-caret-right" style="font-size:30px;" />
+            </div>
         </div>
+
     </div>
+
 
 }

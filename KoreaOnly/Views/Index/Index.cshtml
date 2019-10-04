@@ -67,9 +67,14 @@
         margin-bottom: 0px;
     }
 
+    .cheap-price:hover {
+        background-color: #113948 !important;
+        cursor: pointer;
+    }
+
     .cheap-flights-city {
         font-weight: bold;
-        font-size: 18px;
+        font-size: 16px;
         color: #1f4d65;
         margin-bottom: 0px;
     }
@@ -81,6 +86,10 @@
         min-height: 400px;
         background-size: cover;
         padding-top: 20px;
+    }
+
+    .cheapflightsbox:hover {
+        cursor: pointer;
     }
 
     .subheading {
@@ -358,7 +367,24 @@
 
 <div class="clearfix"></div>
 
+<div class="row">
 
+    <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+
+        <h2 style="color: #1c546f;text-align: center;font-weight: bold;margin-top: 20px;">Cheap Flights</h2>
+        <hr />
+
+    </div>
+
+    <div style="margin-top:10px !important;" class="col-md-12 col-xs-12 col-sm-12 col-lg-12" id="CheapFlightPanelList">
+
+        <p class="text-center" style="font-weight:bold">Loading.....</p>
+
+    </div>
+
+</div>
+
+<div class="clearfix"></div>
 
 <div class="row" style="padding: 40px 0px 40px 0px;background-color: #287490;">
 
@@ -416,7 +442,7 @@
 
 </div>
 
-<div class="row">
+<div class="row" style="display:none;">
 
     <div class="callcenter" style="margin-top: 40px;">
 
@@ -634,7 +660,7 @@
         }
 </style>
 
-<div class="row" style="padding: 40px 0px 40px 0px;background-color: #287490;">
+<div class="row" style="padding: 40px 0px 40px 0px;background-color: #287490;border-top: 3px solid #eee;">
 
     <div class="col-md-12 animatedParent" style="padding-top:60px;">
 
@@ -678,6 +704,49 @@
 
     <script>
         $(document).ready(function () {
+
+            $("#OriginAirportCode1").val(getCookie("ORIGIN"));
+            $("#DestinationAirportCode1").val(getCookie("DESTI"));
+            $("#OAC1").val(getCookie("ORIGIN"));
+            $("#DAC1").val(getCookie("DESTI"));
+
+            $.post("/Index/GetCheapFlights", function (data) {
+
+                $("#CheapFlightPanelList").html(data);
+                $(".cheapflightsbox").click(function () {
+                    var codeO = $(this).data('flightorigin');
+                    $("#OriginAirportCode1").val(codeO);
+                    $("#OAC1").val(codeO);
+
+
+                    var codeD = $(this).data('flightdestination');
+                    $("#DestinationAirportCode1").val(codeD);
+                    $("#DAC1").val(codeD);
+
+                    var b = $("#DepartureDate1").pickadate('picker');
+
+                    b.set('select', $(this).data('date'));
+
+
+                    $("#Airline").val($(this).data('airline'))
+
+                    //$.ajax({
+                    //    url: "https://geoip-db.com/jsonp",
+                    //    jsonpCallback: "callback",
+                    //    dataType: "jsonp",
+                    //    success: function (location) {
+                    //        $('#country').html(location.country_name);
+                    //        $('#state').html(location.state);
+                    //        $('#city').html(location.city);
+                    //        $('#latitude').html(location.latitude);
+                    //        $('#longitude').html(location.longitude);
+                    //        $('#ip').html(location.IPv4);
+                    //    }
+                    //});
+
+                    $("#OriginAirportCode1").focus();
+                });
+            });
 
             setInterval(function () {
 
@@ -1048,12 +1117,16 @@
                                 var obj = (response);
 
                                 if (obj.Code == "200") {
+
+                                    setCookie("ORIGIN", $("#OriginAirportCode1").val(), 365);
+                                    setCookie("DESTI", $("#DestinationAirportCode1").val(), 365);
+
                                     $('#submitreal').click();
                                 } else {
                                     $("#loadingdivs").hide();
                                     $("#error").html(obj.Message);
                                     $("#error").show();
-                                    
+
 
                                 }
 
@@ -1079,6 +1152,27 @@
 
         });
 
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
 
         function AddValidation() {
             $(".input-field").each(function () {
@@ -1212,39 +1306,11 @@
         //        $('#CurrentCity').html(location.city);
         //    }
         //});
-
+             *@
                     // Comment duew to Ch
 
-                    //$.post("/Index/GetCheapFlights", function (data) {
 
-                    //    $("#CheapFlightPanelList").html(data);
-                    //    $(".cheapflightsbox").click(function () {
-                    //        var codeO = $(this).data('flightorigin');
-                    //        $("#OriginAirportCode1").val(codeO);
-                    //        var codeD = $(this).data('flightdestination');
-                    //        $("#DestinationAirportCode1").val(codeD);
 
-                    //        $("#DepartureDate1").val($(this).data('date'))
-                    //        $("#airlinename").val($(this).data('airline'))
-
-                    //        //$.ajax({
-                    //        //    url: "https://geoip-db.com/jsonp",
-                    //        //    jsonpCallback: "callback",
-                    //        //    dataType: "jsonp",
-                    //        //    success: function (location) {
-                    //        //        $('#country').html(location.country_name);
-                    //        //        $('#state').html(location.state);
-                    //        //        $('#city').html(location.city);
-                    //        //        $('#latitude').html(location.latitude);
-                    //        //        $('#longitude').html(location.longitude);
-                    //        //        $('#ip').html(location.IPv4);
-                    //        //    }
-                    //        //});
-
-                    //        $("#arrivedate").focus();
-                    //    });
-                    //});
-            *@
 
     </script>
 

@@ -1592,3 +1592,72 @@ Object reference not set to an instance of an object. LINE NUMBER  406
     </FlightSegment>
   </OriginDestinationInformation>
 </FareRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<FareRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.7.0">
+  <OptionalQualifiers xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <TimeQualifiers>
+      <TravelDateOptions Start="10-18" />
+    </TimeQualifiers>
+  </OptionalQualifiers>
+  <OriginDestinationInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment>
+      <DestinationLocation LocationCode="LAS" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+</FareRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_PingRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0">
+  <EchoData xmlns="http://www.opentravel.org/OTA/2003/05">Are you there</EchoData>
+</OTA_PingRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_PingRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0">
+  <Success xmlns="http://www.opentravel.org/OTA/2003/05" />
+  <EchoData xmlns="http://www.opentravel.org/OTA/2003/05">Are you there</EchoData>
+</OTA_PingRS>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_PingRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0">
+  <EchoData xmlns="http://www.opentravel.org/OTA/2003/05">Are you there</EchoData>
+</OTA_PingRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_PingRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0">
+  <Success xmlns="http://www.opentravel.org/OTA/2003/05" />
+  <EchoData xmlns="http://www.opentravel.org/OTA/2003/05">Are you there</EchoData>
+</OTA_PingRS>
+<?xml version="1.0" encoding="utf-16"?>
+<FareRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.7.0">
+  <OptionalQualifiers xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <TimeQualifiers>
+      <TravelDateOptions Start="10-26" />
+    </TimeQualifiers>
+  </OptionalQualifiers>
+  <OriginDestinationInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment>
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+</FareRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_PingRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0">
+  <EchoData xmlns="http://www.opentravel.org/OTA/2003/05">Are you there</EchoData>
+</OTA_PingRQ>
+<?xml version="1.0" encoding="utf-16"?>
+<OTA_PingRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0">
+  <Success xmlns="http://www.opentravel.org/OTA/2003/05" />
+  <EchoData xmlns="http://www.opentravel.org/OTA/2003/05">Are you there</EchoData>
+</OTA_PingRS>
+<?xml version="1.0" encoding="utf-16"?>
+<FareRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.7.0">
+  <OptionalQualifiers xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <TimeQualifiers>
+      <TravelDateOptions Start="10-27" />
+    </TimeQualifiers>
+  </OptionalQualifiers>
+  <OriginDestinationInformation xmlns="http://webservices.sabre.com/sabreXML/2011/10">
+    <FlightSegment>
+      <DestinationLocation LocationCode="ICN" />
+      <OriginLocation LocationCode="LAX" />
+    </FlightSegment>
+  </OriginDestinationInformation>
+</FareRQ>

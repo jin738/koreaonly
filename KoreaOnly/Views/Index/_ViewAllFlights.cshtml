@@ -56,7 +56,7 @@
                                 <p class="airlinename2"> @(MainController.GetAirline(Flight.GetDeparture_Airline(i)).AirlineName) </p>
                             </div>
                             <div class="col-md-2 col-xs-4 flight_right" style="padding:0px;">
-                                <strong> @(Convert.ToDateTime(Flight.Flight_From_Time[i]).ToString("hh:mm tt")) </strong>
+                                <strong style="font-size:.9em;"> @(Convert.ToDateTime(Flight.Flight_From_Time[i]).ToString("hh:mm tt")) </strong>
                                 <p> @Flight.Flight_From[i] </p>
                             </div>
                             <div class="col-md-2 col-xs-4 flight_centre">
@@ -64,7 +64,7 @@
                                 <p class="flight_stop">@(Convert.ToInt32(Flight.Stop_Count[i]) == 0 ? "NonStop" : Flight.Stop_Count[i] + " Stop")</p>
                             </div>
                             <div class="col-md-2 col-xs-4 flight_left" style="padding:0px;">
-                                <strong> @(Convert.ToDateTime(Flight.Flight_To_Time[i]).ToString("hh:mm tt")) </strong>
+                                <strong style="font-size:.9em;"> @(Convert.ToDateTime(Flight.Flight_To_Time[i]).ToString("hh:mm tt")) </strong>
                                 <p> @Flight.Flight_To[i] </p>
                             </div>
                             <div class="col-md-3 col-xs-12 flight_centre">
