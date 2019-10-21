@@ -6,6 +6,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="joacFm5feicHlaq82yKOd6XtZRknGl8at1oGPYAKEQI" />
+
+    @RenderSection("SEOHeader", required: false)
 
     @*<meta http-equiv="cache-control" content="max-age=1" />
         <meta http-equiv="expires" content="@DateTime.Now.AddMinutes(30).ToString("ddd, dd MMM yyy HH’:’mm’:’ss ‘GMT’")" />
@@ -58,7 +61,7 @@
                 <div class="" style="float:left;margin-left:20px;">
                     <a href="/">
                         @*<img src="~/Images/Logo.png" />*@
-                        <div style="background: url(../Images/Logo.png);background-size: cover;width: 200px;height: 100px;">
+                        <div style="background: url(/Images/Logo.png);background-size: cover;width: 200px;height: 100px;">
 
                         </div>
                     </a>
@@ -282,7 +285,7 @@
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-     
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38725538-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];

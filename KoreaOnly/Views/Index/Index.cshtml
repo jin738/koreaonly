@@ -4,6 +4,22 @@
     Layout = "~/Views/Default.cshtml";
 }
 
+@section SEOHeader{
+
+    <meta id="MetaDescription" name="DESCRIPTION" content="Find cheap flights from @ViewBag.ORCode to @ViewBag.DSCode on Koreaonly. Enjoy huge discounts on @(ViewBag.AORCode) to @(ViewBag.ADSCode) flight tickets. Book now &amp;amp;amp; Save Big!" />
+    <meta id="MetaKeywords" name="KEYWORDS" content="Cheap Flights from @ViewBag.ORCode to @ViewBag.DSCode, @(ViewBag.AORCode) to @(ViewBag.ADSCode) Flights, flights from  @(ViewBag.AORCode) to @(ViewBag.ADSCode), flights from @(ViewBag.AORCode) to @ViewBag.DSCode,  @(ViewBag.AORCode) to @(ViewBag.ADSCode)" />
+    <meta id="MetaCopyright" name="COPYRIGHT" content="Copyright @DateTime.Now.Year by Koreaonly.com" />
+    <meta id="MetaAuthor" name="AUTHOR" content="USAMA ALAM" />
+    <meta name="RESOURCE-TYPE" content="DOCUMENT" />
+    <meta name="DISTRIBUTION" content="GLOBAL" />
+    <meta name="REVISIT-AFTER" content="1 DAYS" />
+
+
+    <link rel="canonical" href="@ViewBag.Curr" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+}
 <style>
 
 
@@ -80,7 +96,7 @@
     }
 
     .backgroundimage {
-        background: url('/Images/plane.jpg') repeat;
+        background: url('/index/Thumbnail?filename=~/Images/plane.jpg&W=1000&H=600') repeat;
         width: 100%;
         background-position: center;
         min-height: 400px;
@@ -90,6 +106,11 @@
 
     .cheapflightsbox:hover {
         cursor: pointer;
+    }
+
+
+    .cheapflightsbox > div:hover {
+        background-color: rgba(31, 77, 101, 0.08);
     }
 
     .subheading {
@@ -146,6 +167,16 @@
     .border {
         border: 1px solid red !important;
     }
+
+    .CardImagetitle {
+        position: absolute;
+        bottom: 0px;
+        color: #148cb7;
+        padding: 5px 20px;
+        /* background: rgba(40, 116, 143, 0.47843137254901963); */
+        background: rgba(0, 0, 0, 0.68);
+        width: 90%;
+    }
 </style>
 
 
@@ -178,10 +209,15 @@
             </div>
 
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <p class="subheading"> SEARCH FLIGHT</p>
 
-
-
+                @if (ViewBag.LinkSearched != null && ViewBag.LinkSearched == "1")
+                {
+                    <h2 class="subheading"> Where to next?</h2>
+                }
+                else
+                {
+                    <h1 class="subheading"> Where to next?</h1>
+                }
             </div>
 
             <div class="clearfix"></div>
@@ -211,7 +247,7 @@
 
                         <div class="form-group input-container">
                             <i class="material-icons icons">flight_takeoff</i>
-                            <input id="OriginAirportCode1" data-code="OAC1" data-moveto="DestinationAirportCode1" data-airportname="yes" autocomplete="off" class="input-field" type="text" placeholder="Leaving From">
+                            <input id="OriginAirportCode1" data-code="OAC1" data-moveto="DestinationAirportCode1" data-airportname="yes" autocomplete="off" class="input-field" type="text" value="@(string.IsNullOrEmpty(ViewBag.ORCode) ? "" : ViewBag.ORCode)" placeholder="Leaving From">
                             <input name="OriginAirportCode" id="OAC1" type="hidden" />
                         </div>
 
@@ -221,7 +257,7 @@
 
                         <div class="form-group input-container">
                             <i class="material-icons icons">flight_land</i>
-                            <input id="DestinationAirportCode1" data-code="DAC1" data-airportname="yes" autocomplete="off" class="input-field" type="text" placeholder="Going To">
+                            <input id="DestinationAirportCode1" data-code="DAC1" data-airportname="yes" autocomplete="off" class="input-field" type="text" placeholder="Going To" value="@(string.IsNullOrEmpty(ViewBag.DSCode) ? "" : ViewBag.DSCode)">
                             <input name="DestinationAirportCode" id="DAC1" type="hidden" />
                         </div>
 
@@ -279,7 +315,7 @@
                             @*<input class="input-field" name="trvaud" type="number" min="1" value="1" max="10"
                                 placeholder="Adults (12+)">*@
                             <select name="trvaud" class="form-control dropdowncustom">
-                                <option value="1">1 Adult (12+)</option>
+                                <option value="1">1 Adult (12 or older)</option>
                                 <option value="2">2 Adults</option>
                                 <option value="3">3 Adults</option>
                                 <option value="4">4 Adults</option>
@@ -295,7 +331,7 @@
                             <i class="material-icons icons">person</i>
                             @*<input class="input-field" name="trvchild" type="number" min="0" value="0" max="10" placeholder="Child (Under 12)">*@
                             <select name="trvchild" class="form-control dropdowncustom">
-                                <option selected="selected" value="0">0 Child (under 12)</option>
+                                <option selected="selected" value="0">0 Child (2 ~ 11)</option>
                                 <option value="1">1 Child (under 12)</option>
                                 <option value="2">2 Children</option>
                                 <option value="3">3 Children</option>
@@ -365,24 +401,134 @@
 
 
 
+@if (ViewBag.LinkSearched != null && ViewBag.LinkSearched == "1")
+{
+    <div class="clearfix"></div>
+
+    <div class="row" style="padding:20px">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+
+                    <h1 style="color: #1c546f;text-align: left;font-weight: bold;font-size:1.3rem;margin-top: 20px;">Cheap Flights from @(((string)(ViewBag.ORCode)).Split(')', '-')[1]) to @(((string)(ViewBag.DSCode)).Split(')', '-')[1]) (@ViewBag.AORCode - @ViewBag.ADSCode)</h1>
+                    <br />
+
+                    <h2 style="color: #1c546f;text-align: left;font-weight: bold;font-size:1.3rem;margin-top: 20px;">Top last minute flight deals</h2><br />
+
+                    <p style="color:gray;font-size:18px;">Feeling spontaneous? It’s never too late to book a trip. Here’s our pick of the best last minute flights to @(((string)(ViewBag.DSCode)).Split(')', '-')[1])...</p>
+                    <hr />
+
+                </div>
+
+                <div style="margin-top:10px !important;" class="col-md-12 col-xs-12 col-sm-12 col-lg-12" id="CheapFlightPanelList2">
+
+                    <p class="text-center" style="font-weight:bold">Working On it </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+
+
 <div class="clearfix"></div>
 
-<div class="row">
+<div class="row" style="padding:20px">
 
-    <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+    <div class="container">
 
-        <h2 style="color: #1c546f;text-align: center;font-weight: bold;margin-top: 20px;">Cheap Flights</h2>
-        <hr />
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+
+                <h2 style="color: #1c546f;text-align: left;font-weight: bold;margin-top: 20px;">Recommendations for you</h2>
+                <hr />
+            </div>
+
+            <div style="margin-top:10px !important;" class="col-md-12 col-xs-12 col-sm-12 col-lg-12" id="CheapFlightPanelList">
+
+                <p class="text-center" style="font-weight:bold">Loading.....</p>
+
+            </div>
+        </div>
+
+
+
+        @*<div class="row">
+
+                <div class="col-md-4">
+
+                    <a href="#">
+                        <div class="CardImagetitle" style="background: url(/Images/Airlines/AA.png) no-repeat right 15px bottom 20px rgba(0,0,0,0.7);">
+
+                            <i class="material-icons" style="color:#fff;font-size:20px;">flight_takeoff</i> <span style="font-weight:bold">New York City, NYC </span>  <span style="font-weight:bold"> Karachi, KHI</span><br />
+                            <span style="color:white;font-weight:bold;">American Airlines </span><br />
+                            <span style="color:grey;font-weight:bold;font-size:14px;">From Nov 13, 2019</span><br />
+                            <span style="color:white;font-weight:bold;">$500</span>
+                        </div>
+
+                        <img style="border: 1px solid black;" src="@Url.Action("Thumbnail", "Index", new {FileName="~/Locations/NYC.jpg", W=400, H=400}) " />
+
+                    </a>
+                </div>
+
+            </div>*@
 
     </div>
 
-    <div style="margin-top:10px !important;" class="col-md-12 col-xs-12 col-sm-12 col-lg-12" id="CheapFlightPanelList">
 
-        <p class="text-center" style="font-weight:bold">Loading.....</p>
 
+</div>
+
+<div class="clearfix"><br /></div>
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <h2 style="color: #1c546f;text-align: left;font-weight: bold;margin-top: 20px;font-size:20px;">Our weekly cheapest flights</h2>
+            <hr />
+        </div>
+    </div>
+
+    <div class="row" style="margin-bottom:20px;">
+        <div class="col-md-12 col-xs-12 col-sm-12" style="padding-top:20px;" id=" ">
+
+            Working on it.....
+
+        </div>
     </div>
 
 </div>
+
+
+<div class="clearfix"><br /></div>
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <h2 style="color: #1c546f;text-align: left;font-weight: bold;margin-top: 20px;font-size:20px;">Most popular flights from <span id="CurrentCity">....</span></h2>
+            <hr />
+        </div>
+    </div>
+
+    <div class="row" style="margin-bottom:20px;">
+        <div class="col-md-12 col-xs-12 col-sm-12" style="padding-top:20px;" id="RCMDFlights">
+
+            Loading Flights......
+
+        </div>
+    </div>
+
+</div>
+
+
 
 <div class="clearfix"></div>
 
@@ -702,13 +848,29 @@
 @section scriptarea{
 
 
+    @if (string.IsNullOrEmpty(ViewBag.ORCode) || string.IsNullOrEmpty(ViewBag.DSCode))
+    {
+        <script>
+            $(document).ready(function () {
+                $("#OriginAirportCode1").val(getCookie("ORIGIN"));
+                $("#DestinationAirportCode1").val(getCookie("DESTI"));
+
+                $("#OAC1").val(getCookie("ORIGIN"));
+                $("#DAC1").val(getCookie("DESTI"));
+
+            });
+        </script>
+
+    }
+
     <script>
         $(document).ready(function () {
 
-            $("#OriginAirportCode1").val(getCookie("ORIGIN"));
-            $("#DestinationAirportCode1").val(getCookie("DESTI"));
-            $("#OAC1").val(getCookie("ORIGIN"));
-            $("#DAC1").val(getCookie("DESTI"));
+
+            @*$("#OriginAirportCode1").val(@(string.IsNullOrEmpty(ViewBag.ORCode) ? "getCookie(\"ORIGIN\")" : "'" + ViewBag.ORCode+"'") );
+            $("#DestinationAirportCode1").val(@(string.IsNullOrEmpty(ViewBag.ORCode) ? "getCookie(\"DESTI\")" : ViewBag.DSCode));
+            $("#OAC1").val(@(string.IsNullOrEmpty(ViewBag.ORCode) ? "getCookie(\"ORIGIN\")" : ViewBag.ORCode));
+            $("#DAC1").val(@(string.IsNullOrEmpty(ViewBag.ORCode) ? "getCookie(\"DESTI\")" : ViewBag.DSCode));*@
 
             $.post("/Index/GetCheapFlights", function (data) {
 
@@ -725,7 +887,7 @@
 
                     var b = $("#DepartureDate1").pickadate('picker');
 
-                    b.set('select', $(this).data('date'));
+                    b.set('select', new Date($(this).data('date')));
 
 
                     $("#Airline").val($(this).data('airline'))
@@ -1296,20 +1458,23 @@
             $("#" + ID).easyAutocomplete(options);
         }
 
-        @*
-        //$.ajax({
-        //    url: "https://geoip-db.com/jsonp",
-        //    jsonpCallback: "callback",
-        //    dataType: "jsonp",
-        //    success: function (location) {
 
-        //        $('#CurrentCity').html(location.city);
-        //    }
-        //});
-             *@
-                    // Comment duew to Ch
+        $.ajax({
+            url: "https://geoip-db.com/jsonp",
+            jsonpCallback: "callback",
+            dataType: "jsonp",
+            success: function (location) {
+                $('#CurrentCity').html(location.city + ", " + location.country_name);
 
+                $.post("/Index/GetRecommendedFlights", { City: location.city, Country: location.country_name }, function (Success)
+                {
+                    $("#RCMDFlights").html(Success);
+                });
 
+                setCookie("LOCATION", location.city + ";" + location.country_name);
+
+            }
+        });
 
 
     </script>

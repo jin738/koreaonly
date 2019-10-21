@@ -29,10 +29,16 @@
         <tr>
 
             <th>
-                Departure Airport Code
+                Dept. Code
             </th>
             <th>
-                Arrival Airport Code
+                Arrival Code
+            </th>
+            <th>
+                Departure Airport
+            </th>
+            <th>
+                Arrival Airport
             </th>
             <th>
                 Departure Date
@@ -60,6 +66,12 @@
                     @Html.DisplayFor(modelItem => item.AirportCode)
                 </td>
                 <td>
+                    @Html.DisplayFor(modelItem => item.DeptShortName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArrvShortName)
+                </td>
+                <td>
                     @Html.DisplayFor(modelItem => item.DepartureDate)
                 </td>
                 <td>
@@ -72,7 +84,8 @@
                     <label>@(item.isactive == "True" ? "Active" : "De-Active" )</label>
                 </td>
                 <td>
-                    @Html.ActionLink("Active/De-Active", "Mark", new { id = item.ID, currentstatus = item.isactive }) |
+                    @Html.ActionLink("Active/De-Active", "Mark", new { id = item.ID, currentstatus = item.isactive }) <br/>
+                    @Html.ActionLink("Update", "Update", new { id = item.ID }) <br/>
                     @Html.ActionLink("Delete", "Delete", new { id = item.ID })
                 </td>
             </tr>

@@ -14,6 +14,91 @@ namespace KoreaOnly.Controllers
     public class IndexController : Controller
     {
         // GET: Index
+[OutputCache(Duration = 3600, VaryByParam = "filename;W;H")]
+        public ActionResult Thumbnail(string filename, int W, int H)
+        {
+            var img = new WebImage(filename)
+                .Resize(W, H, false, true);
+            return new ImageResult(new MemoryStream(img.GetBytes()), "binary/octet-stream");
+        }
+
+        public ActionResult TestSeatMap(string SaveResponse, string Origin, string Destination, string DeprtDate, string Arrival, string OperatingAirline, string FlightNumberOperating, string MarketingAirline, string FlightNumberMarketing)
+        {
+
+            var Resp = new MainController().SendEnhanceSeatMapRequest
+              (
+                  new Additional.EnhancedSeatMap.Flight_Segment()
+                  {
+                      destination = Destination.ToUpper(),
+                      origin = Origin.ToUpper(),
+                      DepartureDate = new Additional.EnhancedSeatMap.FlightDate() { Value = Convert.ToDateTime(DeprtDate) },
+                      Operating = new Additional.EnhancedSeatMap.Flight_Identifier() { carrier = OperatingAirline.ToUpper(), Value = FlightNumberOperating },
+                      Marketing = new Additional.EnhancedSeatMap.Flight_Identifier[] { new Additional.EnhancedSeatMap.Flight_Identifier() { carrier = MarketingAirline.ToUpper(), Value = FlightNumberMarketing } },
+                      ArrivalDate = new Additional.EnhancedSeatMap.FlightDate() { Value = Convert.ToDateTime(Arrival) }
+                  }
+                );
+
+            if (SaveResponse == "on")
+            {
+                if (Resp.ApplicationResults.status == Additional.EnhancedSeatMap.CompletionCodes.Complete)
+                {
+                    var Data = MainController.GetXMLFromObject(Resp);
+                    System.IO.File.WriteAllText(HostingEnvironment.MapPath("/Content/SeatMapTemplate.xml"), Data);
+                }
+            }
+
+            return View("SeatSelection", Resp);
+        }
+
+        public ActionResult SeatSelection()
+        {
+            var SeatsMap = (Additional.EnhancedSeatMap.EnhancedSeatMapRS)MainController.ObjectToXML(System.IO.File.ReadAllText(HostingEnvironment.MapPath("/Content/SeatMapTemplate.xml")), typeof(Additional.EnhancedSeatMap.EnhancedSeatMapRS));
+
+            return View(SeatsMap);
+        }
+
+        public ActionResult Index(string departureCode = "-", string arrivalCode = "-", string text = "-")
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+            MainController.GetAirline();
+
+            //new MainController().SendEnhanceSeatMapRequest();
+
+            MainController.OTA_AIRLOWFARESEARCH_Response = null;
+            Session["ViewModel"] = null;
+
+            if (Session["ErrorShow"]?.ToString() == "1")
+            {
+                ViewBag.Error = Session["Error"];
+                Session["Error"] = "";
+                Session["ErrorShow"] = "";
+            }
+
+            Session["CURRENTREQ"] = null;
+
+
+
+            if (departureCode != "-")
+            {
+                ViewBag.ORCode = MainController.GetAirport(departureCode.ToUpper()).Result.FormatedName();
+                ViewBag.AORCode = departureCode.ToUpper();
+
+
+                ViewBag.Curr = $"https://koreaonly.com/Search/Flight/{departureCode}/{arrivalCode}/{text}";
+
+            }
+            if (arrivalCode != "-")
+            {
+                ViewBag.DSCode = MainController.GetAirport(arrivalCode.ToUpper()).Result.FormatedName();
+                ViewBag.ADSCode = arrivalCode.ToUpper();
+
+                ViewBag.Curr = $"https://koreaonly.com/Search/Flight/{departureCode}/{arrivalCode}/{text}";
+                ViewBag.LinkSearched = "1";
+            }
+
+            return View();
+        }
 
         public ActionResult Index()
         {
