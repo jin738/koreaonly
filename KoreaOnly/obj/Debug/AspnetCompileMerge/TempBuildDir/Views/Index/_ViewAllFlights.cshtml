@@ -1,0 +1,84 @@
+﻿@model List<KoreaOnly.Models.SearchFlightResult>
+
+
+@using System.Threading.Tasks;
+
+@{
+    var Reqst = (KoreaOnly.Models.SoapWorkflowPostRQ)Session["REQUEST"];
+    //var Flight = Model;
+}
+
+
+<h4 style="margin-left:20px;margin-top:20px;">@Model.Count() Flights Found</h4>
+<div class="col-md-12 col-lg-12 col-sm-12">
+
+    @{int flightIndex = 0; }
+
+    @foreach (var Flight in Model)
+    {
+        <div class="flight_bg">
+
+            <div class="row flight_sbg">
+
+                <div class="loadinglap@(Flight.ID)" style="position:absolute;width:95%;z-index:100;height:145px;background-color:rgba(40, 116, 144, 0.62);padding:23px;display:none;">
+                    <p style="font-weight:bold;color:white;font-size:26px;text-align:center;margin:0 auto;width:100%;margin-top:2%;">Please Wait...</p>
+                </div>
+
+                <div class="col-md-9 col-xs-12 ">
+                    @*<label>REF# @(Flight.ID)</label>*@
+                    @for (int i = 0; i < Flight.AirlineCode.Count; i++)
+                    {
+                        <div class="row flight_one left">
+                            <div class="col-md-3 col-xs-12 flight_centre">
+                                <img src="~/Images/Airlines/@(Flight.AirlineCode[i]).png" height="30" class="flight_icon">
+                                <p class="airlinename2"> @(MainController.GetAirline(Flight.GetDeparture_Airline(i)).AirlineName) </p>
+                            </div>
+                            <div class="col-md-2 col-xs-4 flight_right">
+                                <strong> @Flight.Flight_From_Time[i] </strong>
+                                <p> @Flight.Flight_From[i] </p>
+                            </div>
+                            <div class="col-md-2 col-xs-4 flight_centre">
+                                <div class="line hidden-xs"></div>
+                                <p class="flight_stop">@(Convert.ToInt32(Flight.Stop_Count[i]) == 0 ? "NonStop" : Flight.Stop_Count[i] + " Stop")</p>
+                            </div>
+                            <div class="col-md-2 col-xs-4 flight_left">
+                                <strong> @Flight.Flight_To_Time[i] </strong>
+                                <p> @Flight.Flight_To[i] </p>
+                            </div>
+                            <div class="col-md-3 col-xs-12 flight_centre">
+                                <p style="margin-bottom:0px;font-weight:bold;" class="hidden-xs">Duration</p>
+                                <p class="flight_stop"> @Flight.GetTotalTime[i]</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="col-md-3 col-xs-12 flight_right flight_two">
+                    <div class="bottom-right">
+                        <span class="amount">$ @Flight.Total_Price</span>
+                        <a href="#" FlightId="@Flight.ID" class="btn btn-default btnTheam btnx SelectFlight" role="button">Select</a>
+
+                    </div>
+                </div>
+                <div class="col-md-12 col-xs-12 " style="text-align:center;">
+                    <span data-toggle="collapse" data-target="#flightdetails@(flightIndex)view" style="font-size: 14px;color: #ffffff;background-color:#287490;font-weight:bold;padding: 12px 15px;" fid="@Flight.ID" class="btnviewflightdetails">
+                        View Flight Details
+                    </span>
+
+                </div>
+            </div>
+
+            <div id="flightdetails@(flightIndex)view" class="keel-chp row collapse">
+
+            </div>
+
+        </div>
+
+        flightIndex++;
+    }
+
+
+
+
+
+
+</div>

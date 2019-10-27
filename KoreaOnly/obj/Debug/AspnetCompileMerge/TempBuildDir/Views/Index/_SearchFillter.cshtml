@@ -1,0 +1,562 @@
+﻿
+
+@{
+    var Reqst = (KoreaOnly.Models.SoapWorkflowPostRQ)Session["REQUEST"];
+    var SearchFillter = (KoreaOnly.Models.SearchFillter)Session["SearchFillter"];
+}
+
+<script>
+    $(function () {
+        $("#slider-range").slider({
+            range: true,
+            min: @SearchFillter.PriceFillter[0],
+            max: @SearchFillter.PriceFillter[1],
+            values: [@SearchFillter.PriceFillter[2], @SearchFillter.PriceFillter[3]],
+            slide: function (event, ui) {
+                $("#stamount").val("$" + ui.values[0]);
+                $("#edamount").val("$" + ui.values[1]);
+                dosearch("price slider");
+            }
+        });
+
+        $("#stamount").val("$" + $("#slider-range").slider("values", 0));
+        $("#edamount").val("$" + $("#slider-range").slider("values", 1));
+
+        $("#slider-range2").slider({
+            range: true,
+            min: 0,
+            max: 1440,
+            step: 15,
+            values: [0, 1440],
+            slide: function (event, ui) {
+
+                var hours1 = Math.floor(ui.values[0] / 60);
+                var minutes1 = ui.values[0] - (hours1 * 60);
+
+                if (hours1.length == 1) hours1 = '0' + hours1;
+                if (minutes1.length == 1) minutes1 = '0' + minutes1;
+                if (minutes1 == 0) minutes1 = '00';
+                if (hours1 >= 12) {
+                    if (hours1 == 12) {
+                        hours1 = hours1;
+                        minutes1 = minutes1 + " PM";
+                    } else {
+                        hours1 = hours1 - 12;
+                        minutes1 = minutes1 + " PM";
+                    }
+                } else {
+                    hours1 = hours1;
+                    minutes1 = minutes1 + " AM";
+                }
+                if (hours1 == 0) {
+                    hours1 = 12;
+                    minutes1 = minutes1;
+                }
+
+
+                $('#stamount2val').val(ui.values[0]);
+                $('#stamount2').val(hours1 + ':' + minutes1);
+
+                var hours2 = Math.floor(ui.values[1] / 60);
+                var minutes2 = ui.values[1] - (hours2 * 60);
+
+                if (hours2.length == 1) hours2 = '0' + hours2;
+                if (minutes2.length == 1) minutes2 = '0' + minutes2;
+                if (minutes2 == 0) minutes2 = '00';
+                if (hours2 >= 12) {
+                    if (hours2 == 12) {
+                        hours2 = hours2;
+                        minutes2 = minutes2 + " PM";
+                    } else if (hours2 == 24) {
+                        hours2 = 11;
+                        minutes2 = "59 PM";
+                    } else {
+                        hours2 = hours2 - 12;
+                        minutes2 = minutes2 + " PM";
+                    }
+                } else {
+                    hours2 = hours2;
+                    minutes2 = minutes2 + " AM";
+                }
+
+                $('#edamount2val').val(ui.values[1]);
+                $('#edamount2').val(hours2 + ':' + minutes2);
+                dosearch("time slider");
+            }
+        });
+
+        $("#stamount2").val("12:00 AM");
+        $("#edamount2").val("11:59 PM");
+
+    });
+
+    function dosearch(whoclick){
+        // console.log(whoclick);
+        if(LOCK)
+            $("#btnsearchsubmit").click();
+    }
+
+    function AddSearchoption(inputid){
+        var Apt = $("#"+inputid).val();
+
+        var options = {
+            url: function (phrase) {
+                return "/Index/GetAllAirports?AirCode=" + ($("#"+inputid).val());
+            },
+            list: {
+                match: {
+                    enabled: true
+                }
+            },
+            theme: "plate-dark",
+            getValue: "name"
+        };
+
+
+        $("#"+inputid).easyAutocomplete(options);
+    }
+
+</script>
+
+<div class="row" style="margin-top:18px;">
+    <div id="mobilefilter" class="filtert">
+        <div class="contentsdw">
+            <div class="filtersho">
+                <span class="nrow">Refine Your Search </span>
+            </div>
+            <div class="inmodify">
+
+                <form method="POST" style="padding:10px;" id="frm1">
+
+                    <h4 style="font-weight: bold;" class="h4heading">Stop</h4>
+                    <div style="padding: 10px;">
+                        <label class="container2 subval" id="divstop1">
+                            non-stop
+
+                            @if (SearchFillter.Stop1 == "on")
+                            {
+                                <input type="checkbox" checked="checked" id="idstop1" name="stop1">
+                                <script>
+                                    $("input[name='stop1']").prop("checked", true);
+                                </script>
+                            }
+                            else
+                            {
+                                <input type="checkbox" name="stop1" id="idstop1">
+                            }
+
+                            <span class="checkmark2"></span>
+                            <span class="onlythis stopclickE" id="onlystop1" style="background-color: rgb(22, 111, 193);color : white;font-size: 1em;display: none;cursor:pointer;" flightid="All">only</span>
+                            <span class="CLickonly" id="enlystop1" style="background-color: rgb(22, 111, 193);color : white;font-size: 1em;cursor:pointer;float: right;" flightid="All">only</span>
+                        </label>
+                        <label class="container2 subval" id="divstop2">
+                            1 Stop
+
+                            @if (SearchFillter.Stop2 == "on")
+                            {
+                                <input type="checkbox" checked="checked" id="idstop2" name="stop2">
+                                <script>
+                                    $("input[name='stop2']").prop("checked", true);
+                                </script>
+                            }
+                            else
+                            {
+                                <input type="checkbox" name="stop2" id="idstop2">
+                            }
+
+                            <span class="checkmark2"></span>
+                            <span class="onlythis stopclickE" id="onlystop2" style="background-color: rgb(22, 111, 193);color: white;font-size: 1em;display: none;" flightid="All">only</span>
+                            <span class="CLickonly" id="enlystop2" style="background-color: rgb(22, 111, 193);color : white;font-size: 1em;cursor:pointer;float: right;" flightid="All">only</span>
+                        </label>
+                        <label class="container2 subval" id="divstop3">
+                            2+ Stop
+
+                            @if (SearchFillter.Stop3 == "on")
+                            {
+                                <input type="checkbox" checked="checked" id="idstop3" name="stop3">
+                                <script>
+                                    $("input[name='stop3']").prop("checked", true);
+                                </script>
+                            }
+                            else
+                            {
+                                <input type="checkbox" id="idstop3" name="stop3">
+                            }
+
+                            <span class="checkmark2"></span>
+                            <span class="onlythis stopclickE" id="onlystop3" style="background-color: rgb(22, 111, 193);color: white;font-size: 1em;display: none;" flightid="All">only</span>
+                            <span class="CLickonly" id="enlystop3" style="background-color: rgb(22, 111, 193);color : white;font-size: 1em;cursor:pointer;float: right;" flightid="All">only</span>
+                        </label>
+                    </div>
+
+                    <script>
+                        $(document).ready(function () {
+                            //setEventOnlyDiv("divstop1", "onlystop1");
+                            //setEventOnlyDiv("divstop2", "onlystop2");
+                            //setEventOnlyDiv("divstop3", "onlystop3");
+
+                        });
+
+                    </script>
+
+                    <br />
+                    <h4 style="font-weight: bold;" class="h4heading">Airlines</h4>
+                    <div style="padding: 10px;">
+
+                        @foreach (var airline in SearchFillter.Airlines)
+                        {
+                            var airlname = MainController.GetAirline(airline[0]).AirlineName.Replace(" ", "");
+
+                            @*<label class="container2 subval" id="flight@(airline[0])" onclick="checkit('@(airlname)', 'div@(airlname)','@(airline[0])')">
+
+                                    @MainController.GetAirline(airline[0]).AirlineName
+
+                                    @* CHECK BOX
+                                    <input datae="@(airlname)=div@(airlname)=@(airline[0])" type="checkbox" @( airline[1] == "1" ? "checked='checked'" : "" ) name="AirlineChk" id="@airlname">
+
+
+                                    @* CHECK BOX HIDDEN Feild
+                                    <input type="text" value="@(airline[0])@(airline[1])" name="Airline" id="div@(airlname)">
+
+                                    <span class="checkmark2" onclick="checkit('@(airlname)', 'div@(airlname)','@(airline[0])')"></span>
+                                    <span class="onlythis onlythisF" style="background-color:#166fc1;color:white;font-size: 1em;" id="onlyflight@(airline[0])">only</span>
+
+                                    <script>
+                                        setEventOnlyDiv("flight@(airline[0])", "onlyflight@(airline[0])");
+                                    </script>
+
+                                </label>*@
+
+                            <label class="container2 subval" id="flight@(airline[0])">
+
+                                @MainController.GetAirline(airline[0]).AirlineName
+
+                                @* CHECK BOX *@
+                                <input datae="@(airlname)=div@(airlname)=@(airline[0])" type="checkbox" @( airline[1] == "1" ? "checked=\"checked\"" : "" ) name="AirlineChk" id="@airlname">
+
+
+                                @* CHECK BOX HIDDEN Feild *@
+                                <input type="text" value="@(airline[0])@(airline[1])" name="Airline" id="div@(airlname)">
+
+                                <span class="checkmark2"></span>
+                                <span class="onlythis onlythisF" style="background-color:#166fc1;color:white;font-size: 1em;" id="onlyflight@(airline[0])">only</span>
+
+                                <script>
+                                    $(document).ready(function(){
+                                        setEventOnlyDiv("flight@(airline[0])", "onlyflight@(airline[0])");
+                                    });
+                                </script>
+
+                            </label>
+
+                        }
+
+                    </div>
+
+                    <br />
+                    <h4 style="font-weight: bold;" class="h4heading">Filter By Price</h4>
+                    <div style="padding: 10px;">
+                        <p>
+                            <input type="text" id="stamount" name="pricefrom" class="fliteramount subval" readonly style="border:0; color:#287490;font-weight:bold;float:left;text-align: left;">
+                            <input type="text" id="edamount" name="priceto" class="fliteramount subval" readonly style="border:0; color:#287490;font-weight:bold;float:right;text-align: right;">
+                        </p>
+
+                        <div id="slider-range" style="margin-top:25px;"></div>
+                    </div>
+
+                    <br />
+
+                    <h4 style="font-weight: bold;" class="h4heading">Filter By Departure Time</h4>
+                    <div style="padding: 10px;">
+                        <p>
+                            <input type="text" id="stamount2val" name="stamount2val" class="fliteramount subval" readonly style="display:none; border:0; color:#287490;font-weight:bold;float:left;text-align: left;">
+                            <input type="text" id="edamount2val" name="edamount2val" class="fliteramount subval" readonly style="display:none; border:0; color:#287490;font-weight:bold;float:right;text-align: right;">
+
+                            <input type="text" id="stamount2" name="stamount2" class="fliteramount subval" readonly style="border:0; color:#287490;font-weight:bold;float:left;text-align: left;">
+                            <input type="text" id="edamount2" name="edamount2" class="fliteramount subval" readonly style="border:0; color:#287490;font-weight:bold;float:right;text-align: right;">
+                        </p>
+
+                        <div id="slider-range2" style="margin-top:25px;"></div>
+                    </div>
+                    <div>
+                        <input type="button" class="btn btn-primary btnTheam btnx" id="btnsearchsubmit" value="Search" style="width:100%;">
+                        <input type="submit" style="display:none;" id="btnSubmitOff" class="btn btn-default btnTheam" value="Search Flight" />
+                    </div>
+
+                    <script>
+
+                        function getCookie(cname) {
+                            var name = cname + "=";
+                            var ca = document.cookie.split(';');
+                            for (var i = 0; i < ca.length; i++) {
+                                var c = ca[i];
+                                while (c.charAt(0) == ' ') {
+                                    c = c.substring(1);
+                                }
+                                if (c.indexOf(name) == 0) {
+                                    return c.substring(name.length, c.length);
+                                }
+                            }
+                            return "";
+                        }
+
+                        $("#btnsearchsubmit").click(function () {
+
+                            $("#loadingdiv").show();
+
+                            $("#loadingdivsFlight").show();
+                            $.ajax({
+                                type: "POST",
+                                data:$("#frm1").serialize(),
+                                url: "/Index/SearchFlight",
+                                success: function (response) {
+
+                                    if(response.search("<script src=") == -1)
+                                    {
+                                        if (response != "") {
+                                            Loads();
+                                        } else {
+                                            window.location.href = "/";
+                                        }
+
+                                        $("#AllFlights").html(response);
+
+                                        $(".btnviewflightdetails").click(function () {
+                                            var bc = $(this).attr("fid");
+                                            var name = $(this).attr("data-target");
+
+                                            if ($(name).attr("st") != "1") {
+                                                var a = $(this);
+                                                a.html("Loading...");
+                                                $.ajax({
+                                                    type: "POST",
+                                                    data: { id: bc },
+                                                    url: "/Index/GetFlightDetails",
+                                                    success: function (response) {
+                                                        $(name).html(response);
+                                                        $(name).attr("st", "1");
+                                                        a.html("View Flight Details");
+                                                    }
+                                                });
+                                            }
+                                        });
+                                        $.ajax({
+                                            type: "POST",
+                                            url: "/Index/GetSearchFlightsPanel",
+                                            success: function (response) {
+
+                                                $("#SearchFlightsPanel").html(response);
+
+                                                if(getCookie("stopid") != "")
+                                                {
+                                                    $("#"+getCookie("stopid")).prop("checked",true);
+                                                }
+
+                                            }
+                                        });
+
+
+
+                                    }
+
+                                    setTimeout(function(){
+                                        Loads();
+                                        $("#loadingdiv").hide();
+
+                                        $("#loadingdivsFlight").hide();
+                                    },1000);
+                                }
+                            });
+                        });
+                    </script>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+   
+    function Loads() {
+
+        $(".CLickonly").unbind("click").bind("click", function (e) {
+            //$(".CLickonly").click(function () {
+            console.log("check Trig");
+            $(".subval > input[name='AirlineChk']").prop("checked", true);
+
+            var e = $("label[id^='flight'] > input[name='Airline']");
+
+            for (var i = 0; i < e.length; i++) {
+                e[i].value = e[i].value.substring(0, 2) + "1";
+            }
+
+            $("#idstop1").prop("checked", false);
+            $("#idstop2").prop("checked", false);
+            $("#idstop3").prop("checked", false);
+            setCookie("stopid", "id" + $(this).get(0).id.substring(4, 9));
+            $("#id" + $(this).get(0).id.substring(4, 9)).prop("checked", true);
+            LOCK = true;
+            dosearch("E" + this.id);
+            LOCK = false;
+        });
+
+        $(".onlythisF").unbind("click").bind("click", function (e) {
+            //$(".onlythisF").click(function (e) {
+
+            $("input[name='stop1']").prop('checked', true);
+            $("input[name='stop2']").prop('checked', true);
+            $("input[name='stop3']").prop('checked', true);
+
+            $("label[id^='flight'] > input[name='AirlineChk']").prop('checked', false);
+
+            var Chec = $("label[id^='flight'] > input[name='Airline']");
+
+            for (var i = 0; i < Chec.length; i++) {
+                if (Chec[i].value.substring(0, 2) != this.id.substring(10, this.id.length))
+                    Chec[i].value = (Chec[i].value.substring(0, 2) + "0");
+                else
+                    Chec[i].value = (Chec[i].value.substring(0, 2) + "1");
+            }
+
+            var ee = this.id.substring(4, this.id.length);
+            setTimeout(function () {
+                Dochecked(ee);
+            }, 200);
+            LOCK = true;
+            dosearch("check box " + this.id);
+            LOCK = false;
+        });
+
+        function dosearch(whoclick) {
+            // console.log(whoclick);
+            if (LOCK)
+                $("#btnsearchsubmit").click();
+        }
+
+        $(".onlythisFA").unbind("click").bind("click", function (e) {
+            //$(".onlythisFA").click(function (e) {
+
+            $("input[name='stop1']").prop('checked', true);
+            $("input[name='stop2']").prop('checked', true);
+            $("input[name='stop3']").prop('checked', true);
+
+            $("label[id^='flight'] > input[name='AirlineChk']").prop('checked', false);
+
+            var Chec = $("label[id^='flight'] > input[name='Airline']");
+
+            for (var i = 0; i < Chec.length; i++) {
+                if (Chec[i].value.substring(0, 2) != this.id.substring(10, this.id.length))
+                    Chec[i].value = (Chec[i].value.substring(0, 2) + "0");
+                else
+                    Chec[i].value = (Chec[i].value.substring(0, 2) + "1");
+            }
+
+            $("label[id='" + this.id.substring(4, this.id.length) + "'] > input[name='AirlineChk']").prop('checked', true);
+
+            LOCK = true;
+            dosearch("check box SEARCH" + this.id);
+            LOCK = false;
+
+        });
+
+        $(".SelectAll").unbind("click").bind("click", function (e) {
+            //$(".SelectAll").click(function () {
+
+            $("input[name='stop1']").prop('checked', true);
+            $("input[name='stop2']").prop('checked', true);
+            $("input[name='stop3']").prop('checked', true);
+
+
+            $(".subval > input[name='AirlineChk']").prop('checked', true);
+
+            var Chec = $("label[id^='flight'] > input[name='Airline']");
+
+            for (var i = 0; i < Chec.length; i++) {
+                Chec[i].value = (Chec[i].value.substring(0, 2) + "1");
+            }
+
+            var options = $("#slider-range").slider('option');
+
+            //$("#slider-range").slider('values', [options.min, options.max]);
+            LOCK = true;
+            dosearch("all flight");
+            LOCK = false;
+        });
+
+
+        $(".stopclickE").unbind("click").bind("click", function (e) {
+            //$(".stopclickE").click(function (e) {
+
+            $("input[name='stop1']").prop("checked", false);
+            $("input[name='stop2']").prop("checked", false);
+            $("input[name='stop3']").prop("checked", false);
+
+            $(".subval > input[name='AirlineChk']").prop("checked", false);
+
+            if ($(this).attr("flightid") == "All") {
+                $(".subval > input[name='AirlineChk']").prop("checked", true);
+            } else {
+
+                $("#" + $(this).attr("flightid") + " > input[name='AirlineChk']").prop("checked", true);
+            }
+
+
+            $("input[name='" + this.id.substring(4, 10) + "']").prop("checked", true);
+
+            var Chec = $("label[id^='flight'] > input[name='Airline']");
+
+            if ($(this).attr("flightid") == "All") {
+
+                for (var i = 0; i < Chec.length; i++) {
+                    Chec[i].value = (Chec[i].value.substring(0, 2) + "1");
+                }
+            } else {
+                for (var i = 0; i < Chec.length; i++) {
+                    Chec[i].value = (Chec[i].value.substring(0, 2) + "0");
+                }
+            }
+
+            if ($(this).attr("flightid") != "All") {
+                $("#" + $(this).attr("flightid") + " > input[name='Airline']").val($("#" + $(this).attr("flightid") + " > input[name='Airline']").val().substring(0, 2) + "1");
+            }
+
+            ///var ee = this.id.substring(4, this.id.length);
+            // setTimeout(function () {
+            //ChangeChecked(ee);
+            LOCK = true;
+            dosearch("E " + this.id);
+            LOCK = false;
+
+            //}, 200);
+
+        });
+
+    }
+
+</script>

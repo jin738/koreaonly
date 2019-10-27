@@ -1,0 +1,47 @@
+﻿@model KoreaOnly.Airlines
+
+@{
+    ViewBag.Title = "Delete Airline";
+    Layout = "~/Views/AdminView.cshtml";
+}
+
+<div class="container">
+    <br />
+    <h2>Delete Airline</h2>
+
+    <p style="color:red;">Are you sure you want to delete this?</p>
+    <div>
+        
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.AirlineName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AirlineName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AirlineCode)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AirlineCode)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="hidden" name="aircode" value="@(Model.AirlineCode)" />
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+
+</div>

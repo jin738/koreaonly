@@ -1,0 +1,93 @@
+﻿@model List<KoreaOnly.Models.Invoices>
+
+@{
+    ViewBag.Title = "Invoices ";
+    Layout = "~/Views/AdminView.cshtml";
+}
+
+<br />
+
+<a href="/SystemMaster/" class="btn btn-default">Go Back</a>
+
+<h2>Invoices</h2>
+<hr />
+<br />
+
+<table class="table">
+    <tr>
+
+        <th>
+            Invoice#
+        </th>
+        <th>
+            SABRE PNR
+        </th>
+        <th>
+            AIRLINE PNR
+        </th>
+        <th>
+            Departure
+        </th>
+        <th>
+            Arrival
+        </th>
+        <th>
+            Fare Amount
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Phone No
+        </th>
+        <th>
+            Address
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.IInvoiceNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ISabrePNR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IAirlinePNR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDeparture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IArrival)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IFareAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IPhoneNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IAddress)
+            </td>
+
+            <td>
+
+                <form method="get" action="/Invoices/Details"> <input type="hidden" name="ID" value="@item.IInvoiceNo" /> <button class="btn btn-default">View Details</button></form>
+
+                @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+            </td>
+        </tr>
+    }
+
+</table>

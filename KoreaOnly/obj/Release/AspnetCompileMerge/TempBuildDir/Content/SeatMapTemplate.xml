@@ -1,0 +1,2985 @@
+<?xml version="1.0" encoding="utf-16"?>
+<EnhancedSeatMapRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL_Payload/v02_00" />
+  <SeatMap changeOfGaugeInd="false" xmlns="http://stl.sabre.com/Merchandising/v5">
+    <Equipment>359</Equipment>
+    <Flight destination="ICN" origin="LAX">
+      <DepartureDate>2019-10-06</DepartureDate>
+      <Operating carrier="OZ">203</Operating>
+      <Marketing carrier="OZ">203</Marketing>
+    </Flight>
+    <Cabin firstRow="10" lastRow="27" classLocation="Maindeck" seatOccupationDefault="Free">
+      <CabinClass>
+        <RBD>Y</RBD>
+        <MarketingDescription>PRICE PER SEAT:USD 150.00,USD 170.00</MarketingDescription>
+      </CabinClass>
+      <Row>
+        <RowNumber>10</RowNumber>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>BulkheadSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>BulkheadSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>SeatWithBassinetFacility</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>BulkheadSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>BulkheadSeat</Detail>
+          </Location>
+          <Facilities>
+            <Detail>SeatWithBassinetFacility</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>E</Number>
+          <Location>
+            <Detail>BulkheadSeat</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>BulkheadSeat</Detail>
+          </Location>
+          <Facilities>
+            <Detail>SeatWithBassinetFacility</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>BulkheadSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>BulkheadSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>SeatWithBassinetFacility</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>BulkheadSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>11</RowNumber>
+        <Type>OverwingRow</Type>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>E</Number>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>12</RowNumber>
+        <Type>OverwingRow</Type>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>E</Number>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>13</RowNumber>
+        <Type>RowDoesNotExist</Type>
+      </Row>
+      <Row>
+        <RowNumber>14</RowNumber>
+        <Type>OverwingRow</Type>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>E</Number>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>LegSpaceSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">170.00</TotalAmount>
+          </Price>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>15</RowNumber>
+        <Type>OverwingRow</Type>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>E</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>16</RowNumber>
+        <Type>OverwingRow</Type>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>E</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>17</RowNumber>
+        <Type>OverwingRow</Type>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>E</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="true" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+          <Facilities>
+            <Detail>PreferredSeat/PreferentialSeat</Detail>
+          </Facilities>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>18</RowNumber>
+        <Type>OverwingRow</Type>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>19</RowNumber>
+        <Type>OverwingRow</Type>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>20</RowNumber>
+        <Type>OverwingRow</Type>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>21</RowNumber>
+        <Type>OverwingRow</Type>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>22</RowNumber>
+        <Type>OverwingRow</Type>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>23</RowNumber>
+        <Type>OverwingRow</Type>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>E</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>24</RowNumber>
+        <Type>OverwingRow</Type>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>E</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>25</RowNumber>
+        <Type>OverwingRow</Type>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>26</RowNumber>
+        <Type>OverwingRow</Type>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>27</RowNumber>
+        <Type>OverwingRow</Type>
+        <RowFacility>
+          <Location>Rear</Location>
+          <Facility>
+            <Characteristics>Lavatory</Characteristics>
+            <Location>LeftSideSection</Location>
+          </Facility>
+          <Facility>
+            <Characteristics>Lavatory</Characteristics>
+            <Location>CenterSection</Location>
+          </Facility>
+          <Facility>
+            <Characteristics>Lavatory</Characteristics>
+            <Location>CenterSection</Location>
+          </Facility>
+          <Facility>
+            <Characteristics>Lavatory</Characteristics>
+            <Location>RightSideSection</Location>
+          </Facility>
+        </RowFacility>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>E</Number>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>OverWingSeat(S)</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Wing firstRow="11" lastRow="27" />
+      <Column>
+        <Column>A</Column>
+        <Characteristics>Window</Characteristics>
+      </Column>
+      <Column>
+        <Column>B</Column>
+        <Characteristics>CenterSeat</Characteristics>
+      </Column>
+      <Column>
+        <Column>C</Column>
+        <Characteristics>Aisle</Characteristics>
+      </Column>
+      <Column>
+        <Column>D</Column>
+        <Characteristics>Aisle</Characteristics>
+      </Column>
+      <Column>
+        <Column>E</Column>
+        <Characteristics>CenterSeat</Characteristics>
+      </Column>
+      <Column>
+        <Column>G</Column>
+        <Characteristics>Aisle</Characteristics>
+      </Column>
+      <Column>
+        <Column>H</Column>
+        <Characteristics>Aisle</Characteristics>
+      </Column>
+      <Column>
+        <Column>J</Column>
+        <Characteristics>CenterSeat</Characteristics>
+      </Column>
+      <Column>
+        <Column>K</Column>
+        <Characteristics>Window</Characteristics>
+      </Column>
+      <CabinFacility>
+        <Location>Front</Location>
+        <Facility>
+          <Characteristics>Galley</Characteristics>
+          <Location>CenterSection</Location>
+        </Facility>
+        <Facility>
+          <Characteristics>Galley</Characteristics>
+          <Location>CenterSection</Location>
+        </Facility>
+        <Facility>
+          <Characteristics>Galley</Characteristics>
+          <Location>CenterSection</Location>
+        </Facility>
+        <Facility>
+          <Characteristics>Lavatory</Characteristics>
+          <Location>RightSideSection</Location>
+        </Facility>
+      </CabinFacility>
+    </Cabin>
+    <Cabin firstRow="28" lastRow="43" classLocation="Maindeck" seatOccupationDefault="Free">
+      <CabinClass>
+        <RBD>Y</RBD>
+      </CabinClass>
+      <Row>
+        <RowNumber>28</RowNumber>
+        <Type>OverwingRow</Type>
+        <Seat occupiedInd="false" inoperativeInd="true" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>NoSeatAtThisLocation</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="true" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>NoSeatAtThisLocation</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="true" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>NoSeatAtThisLocation</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>BulkheadSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>E</Number>
+          <Location>
+            <Detail>BulkheadSeat</Detail>
+          </Location>
+          <Limitations>
+            <Detail>RestrictedGeneral</Detail>
+          </Limitations>
+          <Facilities>
+            <Detail>SeatWithBassinetFacility</Detail>
+          </Facilities>
+          <Facilities>
+            <Detail>SeatSuitableForAdultWithInfant</Detail>
+          </Facilities>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>BulkheadSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="true" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>NoSeatAtThisLocation</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="true" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>NoSeatAtThisLocation</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="true" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>NoSeatAtThisLocation</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>29</RowNumber>
+        <Type>ExitRow</Type>
+        <Seat occupiedInd="false" inoperativeInd="true" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>NoSeatAtThisLocation</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="true" restrictedReclineInd="false" noInfantInd="true">
+          <Number>B</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>ExitRowSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Limitations>
+            <Detail>NotAllowedForInfants</Detail>
+          </Limitations>
+          <Limitations>
+            <Detail>SeatNotSuitableForChild</Detail>
+          </Limitations>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">150.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="true" restrictedReclineInd="false" noInfantInd="true">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>ExitRowSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Limitations>
+            <Detail>NotAllowedForInfants</Detail>
+          </Limitations>
+          <Limitations>
+            <Detail>SeatNotSuitableForChild</Detail>
+          </Limitations>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">150.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>E</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="true" restrictedReclineInd="false" noInfantInd="true">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>ExitRowSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Limitations>
+            <Detail>NotAllowedForInfants</Detail>
+          </Limitations>
+          <Limitations>
+            <Detail>SeatNotSuitableForChild</Detail>
+          </Limitations>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">150.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="true" restrictedReclineInd="false" noInfantInd="true">
+          <Number>J</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>ExitRowSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Limitations>
+            <Detail>NotAllowedForInfants</Detail>
+          </Limitations>
+          <Limitations>
+            <Detail>SeatNotSuitableForChild</Detail>
+          </Limitations>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">150.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="true" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>NoSeatAtThisLocation</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>30</RowNumber>
+        <Type>ExitRow</Type>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="true" restrictedReclineInd="false" noInfantInd="true">
+          <Number>A</Number>
+          <Location>
+            <Detail>ExitRowSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+          <Limitations>
+            <Detail>NotAllowedForInfants</Detail>
+          </Limitations>
+          <Limitations>
+            <Detail>SeatNotSuitableForChild</Detail>
+          </Limitations>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">150.00</TotalAmount>
+          </Price>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="true" restrictedReclineInd="false" noInfantInd="true">
+          <Number>B</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>ExitRowSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Limitations>
+            <Detail>NotAllowedForInfants</Detail>
+          </Limitations>
+          <Limitations>
+            <Detail>SeatNotSuitableForChild</Detail>
+          </Limitations>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="true" restrictedReclineInd="false" noInfantInd="true">
+          <Number>C</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>ExitRowSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Limitations>
+            <Detail>NotAllowedForInfants</Detail>
+          </Limitations>
+          <Limitations>
+            <Detail>SeatNotSuitableForChild</Detail>
+          </Limitations>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>E</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="true" restrictedReclineInd="false" noInfantInd="true">
+          <Number>H</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>ExitRowSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Limitations>
+            <Detail>NotAllowedForInfants</Detail>
+          </Limitations>
+          <Limitations>
+            <Detail>SeatNotSuitableForChild</Detail>
+          </Limitations>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="true" restrictedReclineInd="false" noInfantInd="true">
+          <Number>J</Number>
+          <Occupation>
+            <Detail>SeatBlockedForOtherReason</Detail>
+          </Occupation>
+          <Location>
+            <Detail>ExitRowSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Limitations>
+            <Detail>NotAllowedForInfants</Detail>
+          </Limitations>
+          <Limitations>
+            <Detail>SeatNotSuitableForChild</Detail>
+          </Limitations>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="true" exitRowInd="true" restrictedReclineInd="false" noInfantInd="true">
+          <Number>K</Number>
+          <Location>
+            <Detail>ExitRowSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+          <Limitations>
+            <Detail>NotAllowedForInfants</Detail>
+          </Limitations>
+          <Limitations>
+            <Detail>SeatNotSuitableForChild</Detail>
+          </Limitations>
+          <Facilities>
+            <Detail>ChargeableSeat</Detail>
+          </Facilities>
+          <Price>
+            <TotalAmount currencyCode="USD">150.00</TotalAmount>
+          </Price>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>31</RowNumber>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>32</RowNumber>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="true" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>E</Number>
+          <Occupation>
+            <Detail>SeatIsOccupied</Detail>
+          </Occupation>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>33</RowNumber>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>34</RowNumber>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>35</RowNumber>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>36</RowNumber>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>37</RowNumber>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>38</RowNumber>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>39</RowNumber>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>40</RowNumber>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>41</RowNumber>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>42</RowNumber>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>LeftSideOfAircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>E</Number>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Location>
+            <Detail>RightSideOf Aircraft</Detail>
+          </Location>
+          <Location>
+            <Detail>Window</Detail>
+          </Location>
+        </Seat>
+      </Row>
+      <Row>
+        <RowNumber>43</RowNumber>
+        <RowFacility>
+          <Location>Rear</Location>
+          <Facility>
+            <Characteristics>Galley</Characteristics>
+            <Location>CenterSection</Location>
+          </Facility>
+        </RowFacility>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>A</Number>
+          <Limitations>
+            <Detail>NoSeatLavatory</Detail>
+          </Limitations>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="true" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>B</Number>
+          <Location>
+            <Detail>NoSeatAtThisLocation</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="true" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>C</Number>
+          <Location>
+            <Detail>NoSeatAtThisLocation</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>D</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Limitations>
+            <Detail>SeatToBeLeftVacant/OfferedLast</Detail>
+          </Limitations>
+          <Limitations>
+            <Detail>RestrictedGeneral</Detail>
+          </Limitations>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>E</Number>
+          <Limitations>
+            <Detail>SeatToBeLeftVacant/OfferedLast</Detail>
+          </Limitations>
+          <Limitations>
+            <Detail>RestrictedGeneral</Detail>
+          </Limitations>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>G</Number>
+          <Location>
+            <Detail>AisleSeat</Detail>
+          </Location>
+          <Limitations>
+            <Detail>SeatToBeLeftVacant/OfferedLast</Detail>
+          </Limitations>
+          <Limitations>
+            <Detail>RestrictedGeneral</Detail>
+          </Limitations>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="true" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>H</Number>
+          <Location>
+            <Detail>NoSeatAtThisLocation</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="true" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>J</Number>
+          <Location>
+            <Detail>NoSeatAtThisLocation</Detail>
+          </Location>
+        </Seat>
+        <Seat occupiedInd="false" inoperativeInd="false" premiumInd="false" chargeableInd="false" exitRowInd="false" restrictedReclineInd="false" noInfantInd="false">
+          <Number>K</Number>
+          <Limitations>
+            <Detail>NoSeatLavatory</Detail>
+          </Limitations>
+        </Seat>
+      </Row>
+      <Wing firstRow="28" lastRow="28" />
+      <Column>
+        <Column>A</Column>
+        <Characteristics>Window</Characteristics>
+      </Column>
+      <Column>
+        <Column>B</Column>
+        <Characteristics>CenterSeat</Characteristics>
+      </Column>
+      <Column>
+        <Column>C</Column>
+        <Characteristics>Aisle</Characteristics>
+      </Column>
+      <Column>
+        <Column>D</Column>
+        <Characteristics>Aisle</Characteristics>
+      </Column>
+      <Column>
+        <Column>E</Column>
+        <Characteristics>CenterSeat</Characteristics>
+      </Column>
+      <Column>
+        <Column>G</Column>
+        <Characteristics>Aisle</Characteristics>
+      </Column>
+      <Column>
+        <Column>H</Column>
+        <Characteristics>Aisle</Characteristics>
+      </Column>
+      <Column>
+        <Column>J</Column>
+        <Characteristics>CenterSeat</Characteristics>
+      </Column>
+      <Column>
+        <Column>K</Column>
+        <Characteristics>Window</Characteristics>
+      </Column>
+    </Cabin>
+  </SeatMap>
+</EnhancedSeatMapRS>

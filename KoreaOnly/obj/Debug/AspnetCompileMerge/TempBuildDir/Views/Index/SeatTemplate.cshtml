@@ -1,0 +1,306 @@
+﻿
+@model KoreaOnly.Models.SeatMapSeatModel
+
+@{
+    var Seats = Model.Seats;
+
+    var isLav = false;
+
+    var isNotPricesed = true;
+    var Pc = Model.Seats?.Price;
+
+    if (Seats != null && Seats.chargeableInd)
+    {
+        if (Pc != null && Pc.First().TotalAmount != null && Pc.First().TotalAmount.Value != new decimal(0.00))
+        {
+            isNotPricesed = false;
+        }
+    }
+    else
+    {
+        isNotPricesed = false;
+    }
+
+
+    if (Seats != null && Seats.Facilities != null && (Seats.Facilities.ToList().FindIndex(fc => fc.Detail.Value == Additional.EnhancedSeatMap.Enum_SeatFacilitiesType_Base.PreferredSeatPreferentialSeat) != -1))
+    {
+        isNotPricesed = true;
+    }
+
+
+    if (Seats != null && Seats.Limitations != null && (Seats.Limitations.ToList().FindIndex(lm => lm.Detail.Value == Additional.EnhancedSeatMap.Enum_SeatLimitationsType_Base.NoSeatLavatory) != -1))
+    {
+        isNotPricesed = true;
+        isLav = true;
+    }
+
+    if (Seats != null && Seats.Limitations != null && (Seats.Limitations.ToList().FindIndex(lm => lm.Detail.Value == Additional.EnhancedSeatMap.Enum_SeatLimitationsType_Base.RestrictedGeneral) != -1))
+    {
+        isNotPricesed = true;
+    }
+
+    Model.SeatLocation = Model.isWindowSeats;
+
+    var isWindowsSeatLeft = Model.SeatNumner == "A";
+
+}
+
+@if (Model.isNewSeats)
+{
+    <div class="CabinSeats seat">
+
+        <input type="checkbox" id="@(Model.RowNumber + "" + Model.SeatNumner)" />
+        <label class="trigger" style="@(Model.isWindowSeats.ToLower() == "window" ? (isWindowsSeatLeft ? "border-left: 2px solid red;" : "border-right: 2px solid red;" ) : "")" data-popup="#pop-up@(Model.RowNumber + "" + Model.SeatNumner)" for="@(Model.RowNumber + "" + Model.SeatNumner)">@(Model.RowNumber + "" + Model.SeatNumner)</label>
+
+        <div class="pop-up" id="pop-up@(Model.RowNumber + "" + Model.SeatNumner)" syle="@(Model.isWindowSeats.ToLower() == "window" ? (isWindowsSeatLeft ? "border-left: 2px solid red;" : "border-right: 2px solid red;" ) : "")">
+            <p>
+                @(Model.RowNumber + "" + Model.SeatNumner) (@(Model.SeatLocation ?? "")) Seat is Available.
+            </p>
+
+            <br>
+
+        </div>
+
+    </div>
+}
+else if (Model.Seats.Location != null && Model.Seats.Location?.ToList().FindIndex(loc => loc.Detail.Value == Additional.EnhancedSeatMap.Enum_SeatLocationType_Base.NoSeatAtThisLocation) != -1)
+{
+    <div class="CabinSeats">
+
+    </div>
+}
+else if (isLav)
+{
+    <div class="CabinSeats seat trigger" style="max-width:5%;" data-popup="#pop-up@(Model.RowNumber + "" + Model.SeatNumner)">
+
+        <input type="checkbox" disabled id="@(Model.RowNumber + "" + Model.SeatNumner)" />
+
+        <img src="~/Images/Lavatory.png" width="35" height="35" />
+
+        <div class="pop-up" id="pop-up@(Model.RowNumber + "" + Model.SeatNumner)">
+            <p>
+                @(Model.RowNumber + "" + Model.SeatNumner) (@(Model.SeatLocation)) is Lavatory.
+            </p>
+        </div>
+
+    </div>
+}
+else if (isNotPricesed)
+{
+    <div class="CabinSeats seat">
+
+        <input type="checkbox" disabled id="@(Model.RowNumber + "" + Model.SeatNumner)" />
+        <label class="trigger" syle="@(Model.isWindowSeats.ToLower() == "window" ? (isWindowsSeatLeft ? "border-left: 2px solid red;" : "border-right: 2px solid red;" ) : "")" data-popup="#pop-up@(Model.RowNumber + "" + Model.SeatNumner)" for="@(Model.RowNumber + "" + Model.SeatNumner)">Occupied</label>
+
+
+
+        <div class="pop-up" id="pop-up@(Model.RowNumber + "" + Model.SeatNumner)">
+            <p>
+                @(Model.RowNumber + "" + Model.SeatNumner) (@(Model.SeatLocation)) @(Seats.occupiedInd ? "Seat is Already Reserved" : "Seat is BLOCKED").
+            </p>
+
+            <br>
+
+
+            @if (Seats.Occupation != null)
+            {
+                <b>Occupation</b>
+                <br />
+
+                foreach (var item in Seats.Occupation)
+                {
+                    <p>@item.Detail.Value</p>
+                }
+            }
+
+            @if (Seats.Location != null)
+            {
+                <b>Location</b>
+                <br />
+
+                foreach (var item in Seats.Location)
+                {
+                    <p>@item.Detail.Value</p>
+                }
+            }
+
+            @if (Seats.Limitations != null)
+            {
+                <b>Limitations</b>
+                <br />
+
+                foreach (var item in Seats.Limitations)
+                {
+                    <p>@item.Detail.Value</p>
+                }
+            }
+
+
+
+            @if (Seats.Facilities != null)
+            {
+                <b>Facilities</b>
+                <br />
+
+                foreach (var item in Seats.Facilities)
+                {
+                    <p>@item.Detail.Value</p>
+                }
+            }
+
+
+
+            @if (Seats.Price != null && Seats.Price.First().Taxes != null)
+            {
+                <b>Taxes</b>
+
+                foreach (var Price in Seats.Price.First().Taxes)
+                {
+                    <p> @(Price.TaxTypeRef): @(Price.Tax.Value) @(Price.Tax.currencyCode)</p>
+                }
+
+            }
+
+
+            @{
+                if (Seats.Price != null)
+                {
+                    <hr />
+                    <b>Total Price:</b>
+                    <span>@(Seats.Price.First().TotalAmount.Value) @(Seats.Price.First().TotalAmount.currencyCode)</span>
+                }
+            }
+
+        </div>
+    </div>
+}
+else if (Model.IsDisabledSeats || Seats.occupiedInd)
+{
+    <div class="CabinSeats seat">
+
+        <input type="checkbox" disabled id="@(Model.RowNumber + "" + Model.SeatNumner)" />
+        <label class="trigger" style="@(Model.isWindowSeats.ToLower() == "window" ? (isWindowsSeatLeft ? "border-left: 2px solid red;" : "border-right: 2px solid red;" ) : "")" data-popup="#pop-up@(Model.RowNumber + "" + Model.SeatNumner)" for="@(Model.RowNumber + "" + Model.SeatNumner)">Occupied</label>
+        <div class="pop-up" id="pop-up@(Model.RowNumber + "" + Model.SeatNumner)">
+            <p>
+                @(Model.RowNumber + "" + Model.SeatNumner) Seat is Already Reserved.
+            </p>
+        </div>
+    </div>
+}
+else if ((Seats.Limitations != null && (Seats.Limitations.ToList().FindIndex(l => l.Detail.Value == Additional.EnhancedSeatMap.Enum_SeatLimitationsType_Base.SeatToBeLeftVacantOfferedLast)) != -1))
+{
+    <div class="CabinSeats seat">
+
+        <input type="checkbox" disabled id="@(Model.RowNumber + "" + Model.SeatNumner)" />
+        <label class="trigger" style="@(Model.isWindowSeats.ToLower() == "window" ? (isWindowsSeatLeft ? "border-left: 2px solid red;" : "border-right: 2px solid red;" ) : "")" data-popup="#pop-up@(Model.RowNumber + "" + Model.SeatNumner)" for="@(Model.RowNumber + "" + Model.SeatNumner)">Occupied</label>
+        <div class="pop-up" id="pop-up@(Model.RowNumber + "" + Model.SeatNumner)">
+            <p>
+                @(Model.RowNumber + "" + Model.SeatNumner) Seat To Be Left Vacant / Offered Last.
+            </p>
+        </div>
+
+    </div>
+}
+else if ((Seats.Occupation != null && (Seats.Occupation.ToList().FindIndex(l => l.Detail.Value == Additional.EnhancedSeatMap.Enum_SeatOccupationType_Base.SeatBlockedForOtherReason)) != -1))
+{
+    <div class="CabinSeats seat">
+
+        <input type="checkbox" disabled id="@(Model.RowNumber + "" + Model.SeatNumner)" />
+        <label class="trigger" style="@(Model.isWindowSeats.ToLower() == "window" ? (isWindowsSeatLeft ? "border-left: 2px solid red;" : "border-right: 2px solid red;" ) : "")" data-popup="#pop-up@(Model.RowNumber + "" + Model.SeatNumner)" for="@(Model.RowNumber + "" + Model.SeatNumner)">Occupied</label>
+        <div class="pop-up" id="pop-up@(Model.RowNumber + "" + Model.SeatNumner)">
+            <p>
+                @(Model.RowNumber + "" + Model.SeatNumner) Seat To Be Left Vacant / Offered Last.
+            </p>
+        </div>
+
+    </div>
+}
+else
+{
+
+    <div class="CabinSeats seat">
+
+        <input type="checkbox" id="@(Model.RowNumber + "" + Model.SeatNumner)" />
+        <label style="@(Model.isWindowSeats.ToLower() == "window" ? (isWindowsSeatLeft ? "border-left: 2px solid red;" : "border-right: 2px solid red;" ) : "")" class="trigger @(Seats.chargeableInd && !Seats.noInfantInd ? "ChargibleSeats" : "") @(Seats.noInfantInd ? "NoInfantSeat" : "")" data-popup="#pop-up@(Model.RowNumber + "" + Model.SeatNumner)" for="@(Model.RowNumber + "" + Model.SeatNumner)">@(Model.RowNumber + "" + Model.SeatNumner)</label>
+
+        <div class="pop-up" id="pop-up@(Model.RowNumber + "" + Model.SeatNumner)">
+            <p>
+                @(Model.RowNumber + "" + Model.SeatNumner) (@(Model.SeatLocation)) Seat is Available@(Seats.chargeableInd ? " and Chargable" : "").
+            </p>
+
+            <br>
+
+
+            @if (Seats.Occupation != null)
+            {
+                <b>Occupation</b>
+                <br />
+
+                foreach (var item in Seats.Occupation)
+                {
+                    <p>@item.Detail.Value</p>
+                }
+            }
+
+            @if (Seats.Location != null)
+            {
+                <b>Location</b>
+                <br />
+
+                foreach (var item in Seats.Location)
+                {
+                    <p>@item.Detail.Value</p>
+                }
+            }
+
+            @if (Seats.Limitations != null)
+            {
+                <b>Limitations</b>
+                <br />
+
+                foreach (var item in Seats.Limitations)
+                {
+                    <p>@item.Detail.Value</p>
+                }
+            }
+
+
+
+            @if (Seats.Facilities != null)
+            {
+                <b>Facilities</b>
+                <br />
+
+                foreach (var item in Seats.Facilities)
+                {
+                    <p>@item.Detail.Value</p>
+                }
+            }
+
+
+
+            @if (Seats.Price != null && Seats.Price.First().Taxes != null)
+            {
+                <b>Taxes</b>
+
+                foreach (var Price in Seats.Price.First().Taxes)
+                {
+                    <p> @(Price.TaxTypeRef): @(Price.Tax.Value) @(Price.Tax.currencyCode)</p>
+                }
+
+            }
+
+
+            @{
+                if (Seats.Price != null)
+                {
+                    <hr />
+                    <b>Total Price:</b>
+                    <span>@(Seats.Price.First().TotalAmount.Value) @(Seats.Price.First().TotalAmount.currencyCode)</span>
+                }
+            }
+
+        </div>
+
+    </div>
+}

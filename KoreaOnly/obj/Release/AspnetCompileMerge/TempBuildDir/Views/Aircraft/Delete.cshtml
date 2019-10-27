@@ -1,0 +1,56 @@
+﻿@model KoreaOnly.AircraftType
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/AdminView.cshtml";
+}
+
+<div class="container">
+    <br />
+    <h2>Delete Aircraft</h2>
+
+    <p style="color:red;">Are you sure you want to delete this?</p>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Code)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Code)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Type)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Type)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="hidden" name="aircode" value="@(Model.ID)" />
+                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+
+    </div>
+    <br/>
+    
+</div>

@@ -1,0 +1,252 @@
+﻿
+@model string
+
+@{ 
+    var Flight = ((List<KoreaOnly.Models.SearchFlightResult>)Session["ViewModel"]).Find(f => f.ID == Model);
+}
+
+<div class="keel-grid">
+    <div class="col-list-body">
+        <div class="Flights-Results-BestFlights withChrome">
+            <div class="best-flights-list">
+
+                <div class="Flights-Results-FlightResultItem">
+                    <div class="resultWrapper">
+                        <div class="detailsWrapper" style="height: 100%;">
+
+                            <div class="Flights-Results-FlightResultDetails">
+                                @for (int i = 0; i < Flight.FlightDetails.Length; i++)
+                                {
+                                    <section class="details-section">
+
+                                        <div class="section-content">
+                                            <div id="SFOB" class="Flights-Results-FlightLegDetails">
+                                                <div class="header">
+                                                    <div class="spec-leg left">
+                                                        <span class="leg-filter-checkbox">
+                                                            <span id="SFOB-select-leg-wrapper" class="checkbox-wrapper">
+                                                                <div class="Common-Widgets-Checkbox-Checkbox select-leg-checkbox disable-mouseout-animation size-m ">
+                                                                    <label class="label">
+
+                                                                        @if ((i == 1) && Flight.FlightDetails.Length == 2)
+                                                                        {
+                                                                            <span>Return</span>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <span>Depart</span>
+                                                                        }
+
+                                                                    </label>
+                                                                </div>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="airports left">
+                                                        <span class="origin-destination">
+                                                            @(MainController.GetAirport(Flight.FlightDetails[i].FlightSegment.First().OriginLocation.LocationCode).Result.AirportLocation) - @(MainController.GetAirport(Flight.FlightDetails[i].FlightSegment[(Flight.FlightDetails[i].FlightSegment.Length - 1)].DestinationLocation.LocationCode).Result.AirportLocation)
+                                                        </span>
+                                                    </div>
+
+                                                    @{
+
+                                                        int total_time_Flight = 0;
+                                                        TimeSpan totalhoursFlightSegment = TimeSpan.FromMinutes(0);
+
+                                                        for (int o = 0; o < Flight.FlightDetails[i].FlightSegment.Length; o++)
+                                                        {
+                                                            total_time_Flight += Convert.ToInt32(Flight.FlightDetails[i].FlightSegment[o].ElapsedTime);
+
+                                                            if ((o + 1) != Flight.FlightDetails[i].FlightSegment.Length)
+                                                            {
+                                                                var de1_ = MainController.GetDateTimeWithTimezone(Flight.FlightDetails[i].FlightSegment[o].DestinationTimeZone, Flight.FlightDetails[i].FlightSegment[o].ArrivalDateTime);
+                                                                var de2_ = MainController.GetDateTimeWithTimezone(Flight.FlightDetails[i].FlightSegment[o + 1].OriginTimeZone, Flight.FlightDetails[i].FlightSegment[o + 1].DepartureDateTime);
+
+                                                                totalhoursFlightSegment += ((de2_) - (de1_));
+                                                            }
+
+                                                        }
+
+                                                        TimeSpan totalTime = TimeSpan.FromMinutes(total_time_Flight);
+                                                        totalTime = totalTime + totalhoursFlightSegment;
+                                                    }
+
+                                                    <div class="times right">
+                                                        <span class="duration">@((totalTime.TotalHours.ToString(".0").ToString().Split('.')[0].ToString()))h @(((totalTime.Minutes).ToString("00")))m</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content-card ">
+                                                    @for (int j = 0; j < Flight.FlightDetails[i].FlightSegment.Length; j++)
+                                                    {
+                                                        <div class="segment-row" data-flightnumber="562">
+                                                            <div class="left-column segment-dates" style="text-align: center;">
+                                                                <div class="leg-dates-set">
+                                                                    <div class="date">
+                                                                        @Convert.ToDateTime(Flight.FlightDetails[i].FlightSegment[j].DepartureDateTime).ToString("ddd, MMM dd")
+                                                                    </div>
+                                                                </div>
+                                                                <div class="leg-dates-set">
+                                                                    <div class="date" style="color: #717585 !important;">
+                                                                        @(Flight.FlightDetails[i].FlightSegment[j].MarketingAirline.Code + "" + Flight.FlightDetails[i].FlightSegment[j].MarketingAirline.FlightNumber)
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="right-column segment-details">
+                                                                <div class="segment-details-grid" tabindex="0">
+                                                                    <div class="icon-column">
+                                                                        <img src="/Images/Airlines/@(Flight.FlightDetails[i].FlightSegment[j].MarketingAirline.Code).png">
+                                                                    </div>
+                                                                    <div class="keel-grid legGrid">
+                                                                        <div class="col-8-12 col-segment-heading">
+                                                                            <div class="segmentTimes details-heading text-row">
+                                                                                <span class="time">
+                                                                                    @(Convert.ToDateTime(Flight.FlightDetails[i].FlightSegment[j].DepartureDateTime).ToString("hh:mm tt"))
+                                                                                </span>
+                                                                                —
+                                                                                <span class="time">
+                                                                                    @(Convert.ToDateTime(Flight.FlightDetails[i].FlightSegment[j].ArrivalDateTime).ToString("hh:mm tt"))
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="airport-codes details-heading text-row">
+                                                                                <span class="origin">
+                                                                                    <span class="city">
+
+                                                                                        @{ var aircode = Flight.FlightDetails[i].FlightSegment[j].OriginLocation.LocationCode; }
+
+                                                                                        (@(aircode)) @(MainController.GetAirport(aircode).Result.AirportLocation)
+
+                                                                                    </span>
+                                                                                </span>
+                                                                                -
+                                                                                <span class="destination">
+                                                                                    <span class="city">
+
+                                                                                        @{ var aircode2 = Flight.FlightDetails[i].FlightSegment[j].DestinationLocation.LocationCode; }
+
+                                                                                        (@(aircode2)) @(MainController.GetAirport(aircode2).Result.AirportLocation)
+
+                                                                                    </span>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-4-12 col-segment-aside cabin-duration details-heading right">
+                                                                            <div class="text-row">
+                                                                                <span class="segmentCabinClass">
+                                                                                    @(Flight.FlightDetails[i].FlightSegment[j].MarketingCabin.ToString() == "Y" ? "Economy" : Flight.FlightDetails[i].FlightSegment[j].MarketingCabin.ToString() == "S" ? "Premium Economy" : "Business")
+                                                                                </span>
+                                                                                <span class="segmentDuration text-row">
+
+                                                                                    @{
+                                                                                        int total_time_Flight_Leg = Convert.ToInt32(Flight.FlightDetails[i].FlightSegment[j].ElapsedTime);
+
+                                                                                        TimeSpan totalTime_leg = TimeSpan.FromMinutes(total_time_Flight_Leg);
+                                                                                    }
+
+                                                                                    @(totalTime_leg.Hours)h @(totalTime_leg.Minutes.ToString("00"))m
+
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="qualityIcons text-row">
+                                                                                <div id="HCeO" class="Flights-Results-QualityIcons" aria-label="Quality icons">
+                                                                                    <div id="HCeO-icons" class="keel-grid iconGrid">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        @*<div class="col text-row">
+                                                                            <div class="planeDetails details-subheading">
+                                                                            @(MainController.GetAirline(Flight.FlightDetails[i].FlightSegment[j].MarketingAirline.Code).AirlineName) @(Flight.FlightDetails[i].FlightSegment[j].MarketingAirline.FlightNumber) @*· Narrow-body jet · Airbus A320-100/200
+                                                                            </div>
+                                                                            </div>*@
+
+                                                                        @if (Flight.FlightDetails[i].FlightSegment[j].OperatingAirline != null && Flight.FlightDetails[i].FlightSegment[j].OperatingAirline.Code != "" &&
+                                                                            @*Flight.FlightDetails[i].FlightSegment[j].OperatingAirline.Code != Flight.FlightDetails[i].FlightSegment[j].MarketingAirline.Code &&*@
+                                                                                                                Flight.FlightDetails[i].FlightSegment[j].OperatingAirline.CompanyShortName != "")
+                                                                        {
+
+                                                                            <div class="col text-row">
+                                                                                <div class="planeDetails details-subheading">
+                                                                                    <span style="font-weight:bold;">Operated by</span> @(MainController.GetAirline(Flight.FlightDetails[i].FlightSegment[j].OperatingAirline.Code).AirlineName) @(Flight.FlightDetails[i].FlightSegment[j].OperatingAirline.CompanyShortName)
+                                                                                </div>
+                                                                            </div>
+
+                                                                        }
+
+                                                                        <div class="col text-row">
+                                                                            <div class="planeDetails details-subheading">
+                                                                                <span style="font-weight:bold;">Aircarft Type </span>@(MainController.GetAircraftTypeByCode(Flight.FlightDetails[i].FlightSegment[j].Equipment.AirEquipType).Description)  <span style='font-weight:bold;'>@(Flight.FlightDetails[i].FlightSegment[j].Meal != null ? ", Meal : " + MainController.GetMealType(Flight.FlightDetails[i].FlightSegment[j].Meal.MealCode).Description : "")</span>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col legWarnings text-row">
+                                                                            <ul>
+                                                                                <li class="message" tabindex="0">
+                                                                                    @* <b>Carry-on</b>
+                                                                                        baggage fees may apply to one or more segments of this trip*@
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                @if ((j + 1) != Flight.FlightDetails[i].FlightSegment.Length)
+                                                                {
+                                                                    <div class="segment-details-grid">
+                                                                        <div class="layover-container">
+                                                                            <div class="Flights-Results-FlightLayoverDetails" tabindex="0">
+                                                                                <div class="keel-grid layoverGrid ">
+                                                                                    <div class="col-10-12">
+                                                                                        <div class="layoverText ">
+                                                                                            Change planes in @(MainController.GetAirport(Flight.FlightDetails[i].FlightSegment[j].DestinationLocation.LocationCode).Result.AirportFullName) (@(Flight.FlightDetails[i].FlightSegment[j].DestinationLocation.LocationCode))
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-2-12 right">
+                                                                                        <div class="layoverDuration">
+
+                                                                                            @{
+                                                                                                var de1 = MainController.GetDateTimeWithTimezone(Flight.FlightDetails[i].FlightSegment[j].DestinationTimeZone, Flight.FlightDetails[i].FlightSegment[j].ArrivalDateTime);
+                                                                                                var de2 = MainController.GetDateTimeWithTimezone(Flight.FlightDetails[i].FlightSegment[j + 1].OriginTimeZone, Flight.FlightDetails[i].FlightSegment[j + 1].DepartureDateTime);
+
+                                                                                                var de = ((de2) - (de1));
+
+                                                                                            }
+
+                                                                                            @(de.Hours)h @((de.Minutes).ToString("00"))m
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                                                }
+                                                            </div>
+                                                        </div>
+                                                                                                }
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </section>
+
+
+
+                                                                                                }
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

@@ -1,0 +1,104 @@
+﻿@model KoreaOnly.Models.Invoices
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/AdminView.cshtml";
+}
+
+
+<br/>
+
+<h2>Invoice Details</h2>
+<hr/>
+
+<br/>
+<div>
+  
+    <hr />
+    <dl class="dl-horizontal">
+        
+        <dt>
+            Invoice No
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IInvoiceNo)
+        </dd>
+
+        <dt>
+            Sabre PNR
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISabrePNR)
+        </dd>
+
+        <dt>
+            Airline PNR
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IAirlinePNR)
+        </dd>
+
+        <dt>
+            Departure
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDeparture)
+        </dd>
+
+        <dt>
+            Arrival
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IArrival)
+        </dd>
+
+        <dt>
+            FareAmount
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IFareAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IEmail)
+        </dt>
+
+        <dd>
+            Email
+        </dd>
+
+        <dt>
+            PhoneNo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IPhoneNo)
+        </dd>
+
+        <dt>
+            Address
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IAddress)
+        </dd>
+
+        <dt>
+            Datetime
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.xDatetime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a href="/SystemMaster/Invoices" class="btn btn-default">GO BACK</a>
+</p>

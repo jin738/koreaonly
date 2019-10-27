@@ -1,0 +1,1052 @@
+﻿@model List<KoreaOnly.Models.ContactInfoModel>
+
+@{
+    ViewBag.Title = "ContactInfo";
+    Layout = "~/Views/Default.cshtml";
+    var AirRule = (List<Additional.OTA_AirRule.OTA_AirRulesRS>)Session["AirRulles"];
+    var AirRulleSabre = (string)Session["AirRullesSabre"];
+
+
+}
+
+
+<style>
+    .btn-primary {
+        color: #fff;
+        background-color: #0f3e50 !important;
+        border-color: #0f3e50 !important;
+    }
+
+    .errorText {
+        font-size: 12px;
+        color: red;
+    }
+
+    .col-md-4, .col-md-3, .col-md-2 {
+        margin-bottom: 20px;
+    }
+
+    hr {
+        border-top: 1px solid #ccc4c4;
+    }
+
+    label {
+        color: #474747;
+    }
+
+    .row {
+        margin-top: 20px;
+    }
+
+    .btn-primary {
+        -webkit-transition: background-color 0.5s;
+        -moz-transition: background-color 0.5s;
+        -o-transition: background-color 0.5s;
+        transition: background-color 0.5s;
+        width: 100%;
+        border-radius: 0px;
+        padding: 10px;
+        background-color: #0f3e50;
+        border-width: 0px;
+    }
+
+        .btn-primary:hover {
+            background-color: #f72615;
+        }
+
+    .Flight_Details {
+        padding: 10px;
+        background-color: #0f3e50;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .Flight_More_info {
+        border-top: 1px solid #fff;
+        padding-top: 20px;
+        text-align: left;
+    }
+
+    .Fare_Info {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #0f3e50;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .Baggage_Details {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #0f3e50;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .IMportant {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #0f3e50;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+    }
+</style>
+
+<div class="clearfix"></div>
+<div class="row">
+
+    <div class="col-md-12">
+        <div class="col-md-4">
+            <div class="row">
+                <h2 style="font-size: 22px !important;line-height: 26px;font-weight:bold;">Review Your Selection and Price</h2>
+                <hr style="margin-top: 9px;margin-bottom: 10px;" />
+
+                <div class="col-md-12">
+
+                    <div class="Flight_Details" data-toggle="collapse" data-target="#Flight_More_info">
+
+                        <p>Flight Details</p>
+
+                        @{ var R = (Additional.SearchFares.OTA_AirLowFareSearchRSPricedItineraryOriginDestinationOption[])Session["SelectedFlight"]; }
+
+                        @for (int i = 0; i < R.Length; i++)
+                        {
+                            if (i == 1 && Model.Count == 2)
+                            {
+                                <p><i class="fa fa-plane fa-rotate-270"></i>&nbsp;&nbsp;Return --- @R[i].FlightSegment.First().OriginLocation.LocationCode&nbsp;&nbsp;<i class="fa fa-arrow-right"></i>&nbsp;&nbsp;@R[i].FlightSegment.Last().DestinationLocation.LocationCode&nbsp;&nbsp;@(Convert.ToDateTime(R[i].FlightSegment.First().DepartureDateTime).ToString("MMM dd hh:mm")) @*@(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("hh:mm"))*@</p>
+                            }
+                            else
+                            {
+                                <p><i class="fa fa-plane"></i>&nbsp;&nbsp;Depart --- @R[i].FlightSegment.First().OriginLocation.LocationCode&nbsp;&nbsp;<i class="fa fa-arrow-right"></i>&nbsp;&nbsp;@R[i].FlightSegment.Last().DestinationLocation.LocationCode&nbsp;&nbsp;@(Convert.ToDateTime(R[i].FlightSegment.First().DepartureDateTime).ToString("MMM dd hh:mm")) @*@(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("hh:mm"))*@</p>
+                            }
+                        }
+
+
+                        <p class="small" style="cursor: pointer;">(Click To See Your Flight Details)</p>
+
+                    </div>
+                    <div id="Flight_More_info" class="Flight_More_info collapse">
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            if (i == 1 && Model.Count == 2)
+                            {
+                                <p style="font-weight:bold;"><i class="fa fa-plane fa-rotate-270"></i>&nbsp;&nbsp;Return</p>
+                            }
+                            else
+                            {
+                                <p style="font-weight:bold;"><i class="fa fa-plane"></i>&nbsp;&nbsp;Departure</p>
+                            }
+
+                            <table class="table table-bordered c-passenger-table" style="background-color:#0f3e50;font-size: 13px; color:white;">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <table class="table table-bordered c-passenger-table" style="background-color:white;color:#474747;font-weight:normal;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="width: 70px" class="small">Flight#</td>
+                                                        <td>@string.Format("{0} {1}", Model[i].Marketing_Airline, Model[i].FlightNo)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><i class="fa fa-plane"></i> <br>Take-off</td>
+                                                        <td>
+                                                            @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("MMM dd hh:mm tt")) @*@(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("MMM")) @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Take_Off_DateTime).ToString("hh:mm"))*@<br> @Model[i].Take_Off_Location_Airport <br /><strong>Terminal-:</strong>@(Model[i].Take_Off_Location_Terminal) <br> @Model[i].Take_Off_Location_City
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><i class="fa fa-plane fa-rotate-90"></i><br> Landing</td>
+                                                        <td>
+                                                            @(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("MMM dd hh:mm tt")) @*@(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("MMM")) @(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("dd"))  @(Convert.ToDateTime(Model[i].Landing_DateTime).ToString("hh:mm"))*@<br />
+                                                            <strong>Terminal-:</strong>
+                                                            @(Model[i].Landing_Location_Terminal)
+                                                            <br>
+                                                            @Model[i].Landing_Location_Airport <br> @Model[i].Landing_Location_City
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <strong>Duration-:</strong>
+                                            @Model[i].Flight_Duration  &nbsp;|
+                                            <strong>Equipment Type:</strong>
+                                            @( MainController.GetAircraftTypeByCode(Model[i].Equipment_Type).Description) &nbsp;|
+                                            &nbsp;
+                                            <strong>Air Miles-:</strong>
+                                            @Model[i].Air_Miles&nbsp;<br />
+                                            <strong>Operating Airline-:</strong>
+                                            @(MainController.GetAirline(Model[i].Operating_Airline).AirlineName.ToUpper()) &nbsp; @(Model[i].Operating_Airline_CompanyName)
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        }
+
+                    </div>
+
+
+                    <div class="Fare_Info" data-toggle="collapse" data-target="#Fare_Info">
+
+                        <p>Fare Info</p>
+
+                        <p class="small" style="cursor: pointer;">(Click To See Your Fare Details)</p>
+
+                        <div id="Fare_Info" class="Fare_More_Info collapse in">
+                            <table class="table table-bordered c-passenger-table" style="font-weight:normal;background-color:white;color:#474747;    font-size: 14px;">
+                                <thead>
+                                    <tr>
+                                        <th class="small">Passengers</th>
+                                        <th class="small">Base Fare</th>
+                                        <th class="small">Tax</th>
+                                        <th class="small">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{ decimal TotalFarePrice = 0;}
+                                    @foreach (var Price in (List<FarePrice>)Session["Prices"])
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Price.PassengerName.ToString()&nbsp;x&nbsp; @Price.NoOfPassenger
+                                            </td>
+                                            <td>@Price.BaseFare</td>
+                                            <td>@Price.Tax</td>
+                                            <td>@Price.TotalAmount</td>
+                                        </tr>
+
+                                        TotalFarePrice += Convert.ToDecimal(Price.TotalAmount);
+
+                                    }
+                                </tbody>
+                            </table>
+
+                            <div class="center" style="margin-bottom: 10px;">
+                                <br>
+                                Total Fare: $@TotalFarePrice
+                                <br>
+                                @* Service Charge: $0.00*@
+                            </div>
+                            <div>
+                                <div class="center" style="margin-bottom: 10px;">
+                                    <span class="font-xl">
+                                        @*Total Price: $@TotalFarePrice*@
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="Baggage_Details" data-toggle="collapse" data-target="#Baggage_Details">
+
+                        <p>Baggage Details</p>
+
+                        <p class="small" style="cursor: pointer;">(Click Here)</p>
+
+                        <div id="Baggage_Details" class="Baggage_More_Details collapse">
+                            <table class="table table-bordered c-passenger-table" style="font-weight:normal;background-color:white;color:#474747;">
+                                <tbody>
+
+                                    @foreach (var Bag in (string[])Session["BagDetails"])
+                                    {
+                                        <tr>
+                                            <td class="small" style="text-align:left; color: white; background: rgb(15, 62, 80);">@Bag</td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="IMportant">
+
+                        <p>Important Information</p>
+
+                        <p class="small" style="cursor: pointer;"></p>
+
+                        <div id="IMportant" class="IMportant_More">
+                            <table class="table table-bordered c-passenger-table" style="font-weight:normal;background-color:white;color:#474747;">
+                                <tbody>
+                                    <tr>
+                                        <td class="small" style="text-align:left; color: white; background: rgb(15, 62, 80);cursor:pointer;" data-toggle="modal" data-target="#exampleModalLong">Click to See Fare Rules For Airline</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="small" style="text-align:left; color: white; background: rgb(15, 62, 80);cursor:pointer;" data-toggle="modal" data-target="#myModal">Click to See Conditions for Payments &amp; Security </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="small" style="text-align:left; color: white; background: rgb(15, 62, 80);cursor:pointer;">Free Cancellation within 24 Hours</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="col-md-8" style="padding:0 10px 0px 20px;">
+            <form method="post" id="contactfrm" action="">
+                <div class="row">
+                    <h2 style="font-size: 22px !important;line-height: 26px;font-weight:bold;">Contact Info</h2>
+                    <hr style="margin-top: 9px;margin-bottom: 10px;" />
+                    <p class="NormalText">Phone Number is required (example +001-312-3339706)</p>
+
+                    <div class="col-md-4">
+                        <label>Device Type</label>
+                        <select name="DeviceType" class="form-control">
+                            <option selected>Cell</option>
+                            <option>Home Phone</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label>Country</label>
+                        <select name="CountryCode" id="countrycode" class="form-control">
+                            <option value="US">1-United states</option>
+                            <option value="KO">82-Korea (South)</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label>Phone Number</label>
+                        <input type="text" placeholder="123-123-1234 or 010-1234-1234" class="form-control" id="phonenumber" name="PhoneNumber" />
+                        <span id="errorPhoneNumber" class="errorText"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Email" class="form-control" name="EmailAddress" data-Error="errorEmailAddress" />
+                        <span id="errorEmailAddress" class="errorText"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Confirm Email Address</label>
+                        <input type="email" placeholder="Confrim-Email" class="form-control" name="Email2" data-Error="errorEmail2" />
+                        <span id="errorEmail2" class="errorText"></span>
+                    </div>
+                </div>
+
+                @{
+                    List<string[]> List = new List<string[]>();
+                    if (Session["Traveller"] != null)
+                    {
+                        List = (List<string[]>)Session["Traveller"];
+                    }
+
+                    int Number = 1;
+                }
+
+                <div class="row">
+                    <h2 style="font-size: 22px !important;line-height: 26px;font-weight:bold;">Traveller Details</h2>
+                    <hr style="margin-top: 9px;margin-bottom: 10px;" />
+
+                    <div class="col-md-12">
+                        <p style="color:red;">IMPORTANT: Each passenger's full name must be entered as it appers on their passport or government issued photo ID. <br />Name changes are not permitted after booking. </p>
+                    </div>
+
+
+                    @for (int i = 0; i < List.Count; i++)
+                    {
+                        // List[i][1]
+
+                        for (int j = 0; j < Convert.ToInt32(List[i][0]); j++)
+                        {
+                            <div class="col-md-2">
+                                <label>@(List[i][1].ToString() == "ADT" ? "Adult" : "Child") # @(Number)</label>
+                                <select name="TrvTitle" data-Error="errorTrvTitle-@(Number)" class="form-control">
+                                    <option value="0">Select Title</option>
+                                    <option value="@(List[i][1].ToString() == "ADT" ? "ADT-Mr" : "CNN-Mr")">Mr</option>
+                                    <option value="@(List[i][1].ToString() == "ADT" ? "Miss-Miss" : "CNN-Miss")">Miss</option>
+                                </select>
+                                <span id="errorTrvTitle-@(Number)" class="errorText"></span>
+                            </div>
+                            <input type="hidden" name="TrvType" value="@(List[i][1].ToString())" />
+                            <div class="col-md-3">
+                                <label>First Name</label>
+                                <input type="text" placeholder="First Name" class="form-control id" id="TrvFName-@(Number)" name="TrvFName" data-Error="errorTrvFName-@(Number)" />
+                                <span id="errorTrvFName-@(Number)" class="errorText"></span>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label>Middle Name</label>
+                                <input type="text" placeholder="Middle Name" class="form-control id" id="TrvMName-@(Number)" name="TrvMName" />
+                                <span id="errorTrvMName-@(Number)" class="errorText"></span>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label>Last Name</label>
+                                <input type="text" placeholder="Last Name" class="form-control" name="TrvLName" data-Error="errorTrvLName-@(Number)" />
+                                <span id="errorTrvLName-@(Number)" class="errorText"></span>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label>Date Of Birth</label>
+                                <input type="text" placeholder="mm/dd/yyyy" required class="form-control dob" id="DOB@(Number)" data-odate="DOBORG@(Number)" data-Error="errorTrvDOB@(Number)" />
+                                <span id="errorTrvDOB@(Number)" class="errorText"></span>
+
+                                <input type="hidden" class="DOBO" id="DOBORG@(Number)" name="TrvDOB" data-Picker="DOB@(Number)" data-Error="errorTrvDOB@(Number)" />
+
+                            </div>
+
+                            @*<div class="col-md-4">
+                                    <label>Frequent Flyer Number</label>
+                                    <input type="text" placeholder="Frequent Flyer Number" class="form-control" name="FrequentFlyer" />
+                                    <span id="errorFrequentFlyer" class="errorText"></span>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label>Airline</label>
+                                    <input type="text" placeholder="Airline" class="form-control" name="Airline" />
+                                    <span id="errorAirline" class="errorText"></span>
+                                </div>*@
+
+                            <div class="col-md-12">
+                            </div>
+
+
+
+
+                            Number++;
+
+                        }
+                    }
+
+                </div>
+                <div class="row">
+                    <h2 style="font-size: 22px !important;line-height: 26px;font-weight:bold;">Payment Details</h2>
+                    <hr style="margin-top: 9px;margin-bottom: 10px;" />
+
+
+
+                    <div class="col-md-12">
+                        <label>Card Holder Name: </label>
+                        <input type="text" placeholder="Card Holder Full Name" class="form-control" name="BillFName" data-Error="errorBillFName" />
+                        <span id="errorBillFName" class="errorText"></span>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label>Address : </label>
+                        <input type="text" placeholder="Address" class="form-control" name="BillAddress" data-Error="errorAddress" />
+                        <span id="errorAddress" class="errorText"></span>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <label>Zip/Postal Code :</label>
+                        <input type="text" placeholder="Zip/Postal Code" class="form-control" name="ZipCode" data-Error="errorZipCode" />
+                        <span id="errorZipCode" class="errorText"></span>
+                    </div>
+
+
+
+                </div>
+
+                <div class="row">
+                    <h2 style="font-size: 22px !important;line-height: 26px;font-weight:bold;">Credit(Debit) Card Info</h2>
+                    <hr style="margin-top: 9px;margin-bottom: 10px;" />
+
+                    <div class="col-md-4">
+                        <label>Card Type</label>
+                        <select id="CardType" name="CardType" class="form-control">
+                            <option value="VI">Visa</option>
+                            <option value="CA">Master Card</option>
+                            <option value="AX">American Express</option>
+                            <option value="DS">Discover</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Card Number</label>
+                        <input type="text" placeholder="Card Number" data-inputmask="'mask': '9999 999999 99999'" class="form-control" name="CardNumber" id="cardnumber" data-Error="errorCardNumber" />
+                        <span id="errorCardNumber" class="errorText"></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label>CSV <a href="#" class="icon" style="font-size:12px;"><i class="fas fa-info-circle"></i></a><span class="iconimage"><img src="~/Images/VisaMastercardCVV.png"></span></label>
+                        <input type="password" maxlength="3" placeholder="CSV" class="form-control" name="CSV" data-Error="errorCSV" />
+                        <span id="errorCSV" class="errorText"></span>
+                    </div>
+
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Expiration Month</label>
+                        <select id="CardExpM" name="CardExpM" class="form-control">
+                            <option value="01">January (01)</option>
+                            <option value="02">February (02)</option>
+                            <option value="03">March (03)</option>
+                            <option value="04">April (04)</option>
+                            <option value="05">May (05)</option>
+                            <option value="06">June (06)</option>
+                            <option value="07">July (07)</option>
+                            <option value="08">August (08)</option>
+                            <option value="09">September (09)</option>
+                            <option value="10">October (10)</option>
+                            <option value="11">November (11)</option>
+                            <option value="12">December (12)</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label>Expiration Year</label>
+                        <select id="CardExpY" name="CardExpY" class="form-control">
+                            @for (int i = DateTime.Now.Year; i <= DateTime.Now.Year + 10; i++)
+                            {
+                                <option>@i</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="button" onclick="history.back();" class="btn btn-primary" value="Go Back" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="button" id="btnSubmit" class="btn btn-primary" value="Buy Ticket Now" />
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalLongTitle" style="font-weight:bold;color:#10404F;font-size:25px;text-align:center;">
+                    Fare Rules For Airline
+                </h5>
+
+            </div>
+            <div class="modal-body">
+
+
+                <p style="font-size: 15px;margin: 5px; white-space:pre-line;font-weight:bold">1) Book With Confidence.</p>
+                <p style="font-size: 15px;margin: 5px; white-space:pre-line;">2) Fare is non-refundable, name change is not permitted and ticket is non-transferable.</p>
+                <p style="font-size: 15px;margin: 5px; white-space:pre-line;">3) Date changes will incur penaily and fees (airline penalty plus any fare difference plus or processing service fee) and is based on availity of flight at the time of change.</p>
+                <p style="font-size: 15px;margin: 5px; white-space:pre-line;">4) Date changes after departure must be done by the airline directly (airline penalty plus any fare difference will apply and is based on availability of flight at the time of change).</p>
+                <p style="font-size: 15px;margin: 5px; white-space:pre-line;">5) Routing change will incur penaily and fees (airline penaily plus any fare difference plus our processing service fee will apply and is based on availability of flight at the time of change).</p>
+                <br />
+
+                <hr />
+                @if (AirRulleSabre == "")
+                {
+                    int Index = 0;
+                    var Vals = ((List<string[]>)Session["Route"]);
+                    foreach (var item in AirRule)
+                    {
+                        @*<p>@((MainController.GetAirport((Vals[Index][0]).Split(' ')[0]).Result.AirportFullName).Split('-')[0]) --- @((MainController.GetAirport((Vals[Index][1]).Split(' ')[0]).Result.AirportFullName).Split('-')[0]) </p>*@
+
+                        <h3 style="text-align:center;">(@(Vals[Index][2])) @((MainController.GetAirline((Vals[Index][2])).AirlineName.ToUpper())) Fare Rules</h3>
+                        <h4 style="text-align:center;">@((MainController.GetAirport((Vals[Index][0])).Result.AirportFullName).Split('-')[0]) --- @((MainController.GetAirport((Vals[Index][1])).Result.AirportFullName).Split('-')[0])</h4>
+                        Index++;
+                        <hr />
+
+
+                        if (item.ApplicationResults.status != Additional.OTA_AirRule.CompletionCodes.Complete)
+                        {
+
+
+                            foreach (var item2 in item.ApplicationResults.Error)
+                            {
+                                foreach (var item3 in item2.SystemSpecificResults)
+                                {
+                                    var c = item3.Message.Where(n => n.Value.Contains("FARE BASIS NOT FOUND FOR CITYPAIR/DATE"));
+                                    if (c != null && c.Count() > 0)
+                                    {
+                                        <p style="font-size: 15px;margin: 5px; white-space:pre-line;">
+                                            16.PENALTIES
+                                            CONTACT CARRIER FOR DETAILS.
+                                        </p>
+                                    }
+                                }
+                            }
+                        }
+                        else if (item.ApplicationResults.status == Additional.OTA_AirRule.CompletionCodes.Complete && item.ApplicationResults.Error == null)
+                        {
+                            if (item.FareRuleInfo != null && item.FareRuleInfo.Rules != null && item.FareRuleInfo.Rules.Count() > 0)
+                            {
+
+                                foreach (var Rule in item.FareRuleInfo.Rules.Where(r => r.RPH == "16"))
+                                {
+                                    <h3 style="font-weight: bold;color: #0f3e50;">
+                                        @Rule.Title
+                                    </h3>
+
+                                    <hr />
+
+                                    <p style="font-size: 15px;margin: 5px; white-space:pre-line;">
+                                        @Rule.Text
+                                    </p>
+
+                                    <br />
+
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    var str = AirRulleSabre.Substring(AirRulleSabre.IndexOf("16."));
+
+                    var t = str.Substring(0, str.IndexOf("17."));
+
+                    <p style="font-size: 15px;margin: 5px; white-space:pre-line;">
+                        @t
+                    </p>
+                }
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    .heading {
+        color: red !important;
+        font-weight: bold;
+        margin: 20px 0px 5px 0px;
+        font-size: 15px;
+    }
+
+    #myModal p {
+        color: rgb(0,128,128);
+        text-align: justify;
+    }
+</style>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalLongTitle" style="font-weight:bold;color:red;font-size:25px;text-align:center;">
+                    Payment &amp; Security Conditions
+                </h5>
+
+            </div>
+            <div class="modal-body">
+
+                <p>We assure you that your payment can be securely made in accordance with the international standards of online payment.</p>
+
+                <p>Your credit card number is entered on a secure page hosted by our bank and therefore external to our site. No credit card number is recorded, or even visible during the payment on our site. We have no access to your payment information.</p>
+
+                <p class="heading">Secure Sockets Layer (SSL Technology)</p>
+                <p>Koreaonly.com uses Secure Sockets Layer (SSL) technology to provide you with the safest, most secure shopping experience possible. SSL technology enables encryption of sensitive information during your online transactions. All of the forms on our site are secured with SSL technology so your personal information stays safe and out of malicious hands.</p>
+
+                <p class="heading">Credit Card</p>
+                <p>Payment will be deducted from your account using the US Dollar (USD) ($) as currency. It is very important that you understand that once you’ve decided to select this payment method,your account will be debited in USD, regardless of the currency you were using when browsing Koreaonly.com and when you place your order with us. </p>
+
+                <img src="~/Images/visa-verify-img.png" title="Visa Verifed" width="200" height="100" />
+                <img src="~/Images/mastercard-verify-img.png" title="Master Card Verifed" width="200" height="100" />
+                <br />
+                <p class="heading">Security Policy</p>
+
+                <p>We would like to assure you that your personal information is our top priority. We will never share any of your private data with other vendors or outside parties for any reason. Your Credit Card information, Personal Data and/or Order Information is processed and protected by our payment processors.</p>
+
+                <p>See our Privacy <a href="/Index/privacy_policy" style="color:red;">Policy page</a> for more information.</p>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section scriptarea{
+
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("select[name='TrvTitle']").change(function () {
+                if ($(this).val() == "0") {
+                    $(this).css('border-color', 'red');
+                } else {
+                    $(this).css('border-color', '#ccc');
+                }
+            });
+
+
+
+            $('.dob').each(function () {
+
+                $(this).change(function () {
+
+                    var T = $(this);
+                    var a = T.data("odate");
+
+                    $("#" + a).val(T.val());
+
+
+                });
+
+            });
+
+
+
+
+            $('.dob').pickadate({
+                min: new Date(1950, 1, 1),
+                max: new Date(),
+                selectMonths: true,
+                selectYears: true,
+                format: 'mm/dd/yyyy',
+                formatSubmit: 'mm/dd/yyyy',
+                selectYears: 100,
+                hiddenName: true,
+                hiddenPrefix: 'prefix__',
+                hiddenSuffix: '',
+                onSet: function (thingSet) {
+
+
+
+                }
+            });
+
+
+            $("#btnSubmit").click(function () {
+
+                var CHECK = Check();
+
+                if (!CHECK) {
+                    return;
+                } else {
+                    $("#btnSubmit").prop("Allow", "Access");
+                }
+
+                if ($("#cardnumber").val() != "") {
+                    $("#errorCardNumber").val("");
+                }
+
+
+                $("#btnSubmit").prop('disabled', true);
+
+                $("#overlay").show();
+                $("#overlay").css('opacity', 1);
+
+
+                var FrmData = $("#contactfrm").serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Index/PayNow",
+                    data: FrmData,
+                    success: function (response) {
+                        if (response != "") {
+
+                            var obj = $.parseJSON(response);
+
+                            if (obj.Code == "200") {
+                                window.location.href = "/index/Tickets";
+                            } else {
+                                $("#btnSubmit").prop('disabled', false);
+
+                                $("#overlay").hide();
+                                $("#overlay").css('opacity', 0);
+
+                                if (obj.Code == "100") {
+                                    $("#errorCardNumber").html("Please Enter Correct Card Number");
+                                    alert("Please Enter Correct Card Number");
+                                } else if (obj.Code == "102") {
+                                    alert(obj.Message);
+                                }
+                                else {
+                                    alert("Fill Required fields");
+                                }
+
+
+
+                            }
+
+                        } else {
+                            window.location.href = "/";
+                        }
+
+                    }, error: function () {
+                        $("#overlay").hide();
+                        $("#overlay").css('opacity', 0);
+
+                        alert("Fill Required fields");
+
+                    }
+                });
+
+            });
+
+            $("#cardnumber").mask("9999-9999-9999-9999");
+            $("#phonenumber").mask("999-999-9999");
+
+            $('#CardType').change(function () {
+                var $selected = $(this).find('option:selected');
+                if ($selected.val() === 'AX') {
+                    $("#cardnumber").mask("9999-999999-99999");
+                } else {
+                    $("#cardnumber").mask("9999-9999-9999-9999");
+                }
+            });
+
+
+            $('#countrycode').change(function () {
+                var $selected = $(this).find('option:selected');
+                if ($selected.val() === 'US') {
+                    $("#phonenumber").mask("999-999-9999");
+                } else {
+                    $("#phonenumber").mask("99-9999-9999");
+                }
+            });
+
+
+
+
+        });
+
+        function Check() {
+
+
+
+            var res = true;
+
+            $("input[type='text'], input[type='password'], input[type='email']").each(function () {
+                var T = $(this);
+                if (T.val() == "") {
+                    res = false;
+                    $("#" + T.data('error')).html('Please Fill This field.');
+                }
+            });
+
+
+            $(".DOBO").each(function () {
+                var eid = "#" + $(this).data("error");
+
+                if ($(this).val() == "") {
+                    res = false;
+                    $(eid).html("Please Select Data of Birth.");
+                    $(this).focus();
+                } else {
+                    $(eid).html("");
+                }
+
+
+            });
+
+            $("select[name='TrvTitle']").each(function () {
+                if ($(this).val() == "0") {
+                    $(this).css('border-color', 'red');
+                    $("#" + $(this).data('error')).html('Please Fill This field.');
+                    res = false;
+                } else {
+                    $(this).css('border-color', '#ccc');
+                    $("#" + $(this).data('error')).html('');
+                }
+            });
+
+            return res;
+
+        }
+
+        function ActiveButton() {
+
+            $("input[type='text'], input[type='password'], input[type='email']").each(function () {
+
+                $(this).blur(function () {
+                    var T = $(this);
+                    if (T.val() == "") {
+                        T.css("border-color", "red");
+                        $("#" + T.data('error')).html('Please Fill This field.');
+                        $("#btnSubmit").prop("Allow", "NotAccess");
+                    } else {
+                        T.css("border-color", "#ccc");
+                        $("#btnSubmit").prop("Allow", "Access");
+                        $("#" + T.data('error')).html('');
+                    }
+                });
+
+            });
+
+
+            $("input[type='text']").blur(function () {
+
+                if (this.name == "") {
+                    if ($(this).data("orgname") != "") {
+
+                        var aa = $("#" + $(this).data("orgname")).val();
+                        if (aa == "") {
+                            $(this).css("border-color", "red");
+                            $("#error" + $(this).data("orgname")).html("Please fill in here");
+                            $("#btnSubmit").prop("Allow", "NotAccess");
+                        } else {
+                            $(this).css("border-color", "#ccc");
+
+                            $("#error" + $(this).data("orgname")).html("");
+                            $("#btnSubmit").prop("Allow", "Access");
+                        }
+
+                    }
+                } else if (this.value == "") {
+                    if (!$("input[name=" + this.name + "]").prop("disabled")) {
+                        $("input[name=" + this.name + "]").css("border-color", "red");
+                        $("#error" + this.name).html("Please fill in here");
+                        $("#btnSubmit").prop("Allow", "NotAccess");
+                    } else {
+                        $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                        $("#error" + this.id).html("");
+                        $("#btnSubmit").prop("Allow", "Access");
+                    }
+                } else {
+                    $("#error" + this.name).html("");
+                    $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                    $("#btnSubmit").prop("Allow", "Access");
+                }
+            });
+
+            $("input[type='email']").blur(function () {
+                if (this.value == "") {
+                    if (!$("input[name=" + this.name + "]").prop("disabled")) {
+                        $("input[name=" + this.name + "]").css("border-color", "red");
+                        $("#error" + this.name).html("Please fill in here");
+                        $("#btnSubmit").prop("Allow", "NotAccess");
+                    } else {
+                        $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                        $("#error" + this.id).html("");
+                        $("#btnSubmit").prop("Allow", "Access");
+                    }
+                } else {
+
+                    $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                    $("#error" + this.name).html("");
+
+                    $("#errorEmailAddress").html("");
+                    $("input[name=EmailAddress]").css("border-color", "#ccc");
+                    $("#btnSubmit").prop("Allow", "Access");
+
+                    if ($("input[name=EmailAddress]").val() != $("input[name=Email2]").val()) {
+
+                        $("input[name=EmailAddress]").css("border-color", "red");
+                        $("#errorEmailAddress").html("Email Address Not Match");
+                        $("#btnSubmit").prop("Allow", "NotAccess");
+                    }
+
+                }
+            });
+
+
+
+
+
+            $("input[type='Password']").blur(function () {
+                if (this.value == "") {
+                    if (!$("input[name=" + this.name + "]").prop("disabled")) {
+                        $("input[name=" + this.name + "]").css("border-color", "red");
+                        $("#error" + this.name).html("Please fill in here");
+                        $("#btnSubmit").prop("Allow", "NotAccess");
+                    } else {
+                        $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                        $("#error" + this.id).html("");
+                        $("#btnSubmit").prop("Allow", "Access");
+                    }
+                } else {
+                    $("#error" + this.name).html("");
+                    $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                    $("#btnSubmit").prop("Allow", "Access");
+                }
+            });
+
+
+            $(".hasDatepicker").blur(function () {
+                if (this.value == "") {
+                    if (!$("input[name=" + this.name + "]").prop("disabled")) {
+                        $("input[name=" + this.name + "]").css("border-color", "red");
+                        $("#btnSubmit").prop("Allow", "NotAccess");
+                    } else {
+                        $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                        $("#btnSubmit").prop("Allow", "Access");
+                    }
+                } else {
+                    $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                    $("#btnSubmit").prop("Allow", "Access");
+                }
+            });
+
+            $(".hasDatepicker").change(function () {
+                if (this.value == "") {
+                    if (!$("input[name=" + this.name + "]").prop("disabled")) {
+                        $("input[name=" + this.name + "]").css("border-color", "red");
+                        $("#btnSubmit").prop("Allow", "NotAccess");
+                    } else {
+                        $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                        $("#btnSubmit").prop("Allow", "Access");
+                    }
+                } else {
+                    $("input[name=" + this.name + "]").css("border-color", "#ccc");
+                    $("#btnSubmit").prop("Allow", "Access");
+                }
+            });
+
+            //$(".hasDatepicker").change(function () {
+            //    if (this.value == "") {
+            //        if (!$("input[name=" + this.name + "]").prop("disabled")) {
+            //            $("input[name=" + this.name + "]").css("border-color", "red");
+            //            $("#error" + this.name).html("Please fill in here");
+            //            $("#btnSubmit").prop("Allow", "NotAccess");
+            //        } else {
+            //            $("input[name=" + this.name + "]").css("border-color", "#ccc");
+            //            $("#btnSubmit").prop("Allow", "Access");
+            //            $("#error" + this.name).html("");
+            //        }
+            //    } else {
+            //        $("input[name=" + this.name + "]").css("border-color", "#ccc");
+            //        $("#btnSubmit").prop("Allow", "Access");
+            //        $("#error" + this.name).html("");
+            //    }
+            //});
+        }
+
+        ActiveButton();
+
+    </script>
+
+}

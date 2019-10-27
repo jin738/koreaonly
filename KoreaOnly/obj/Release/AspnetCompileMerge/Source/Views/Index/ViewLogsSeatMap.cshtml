@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "ViewLogs";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+    .btnclearlog {
+        float: right;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        background-color: #4791d5;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 13px;
+        position: fixed;
+        right: 20px;
+    }
+
+        .btnclearlog:hover {
+            background-color: #2f6392;
+        }
+</style>
+
+
+<title>View Logs Seat Map</title>
+
+<a href="/index/ViewLogsSeatMap?flush=y" target="_self" style="top: 10px;" class="btnclearlog">Clear Log</a>
+@*<a href="/index/ViewLogs?Activate=y" target="_self" style="top: 50px;@(MainController.CasheCheck ? "background-color: #ff1a09;" : "background-color:#039e08;")" class="btnclearlog">Activate @(MainController.CasheCheck ? "Online" : "Offline" ) </a>*@
+
+<input type="checkbox" id="ch" onclick="check()" class="btnclearlog" style="bottom:0px;" />
+
+
+<form style="display:none;" id="form">
+    <textarea name="TestXML" type="text" id="txtb" style="width:50%;height:500px;position:absolute;">
+        @{ string flightdetils = System.IO.File.ReadAllText(Server.MapPath("~/Content/SearchTemplate.Fltemp")); }
+
+        @flightdetils
+
+    </textarea>
+
+    <input style="top:510px;position:absolute;" id="btnsubm" type="button" value="Save Test XML" />
+
+</form>
+<script>
+    function check() {
+        var a = $("#ch:checked").val();
+        if (a == "on") {
+            $("#form").show();
+        } else {
+            $("#form").hide();
+        }
+    }
+
+    $("#btnsubm").click(function () { 
+           
+            $.ajax({
+                type: "post",
+                data: { TestXML: $('#txtb').val() },
+                url: "/Index/ViewLogs"
+            });
+
+    });
+</script>
+
+<p><pre style="word-wrap: break-word; white-space: pre-wrap;">@MainController.PrettyPrint(ViewBag.XML)</pre></p>
+

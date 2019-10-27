@@ -1,0 +1,455 @@
+﻿@model Additional.EnhancedSeatMap.EnhancedSeatMapRS
+
+@{
+    ViewBag.Title = "Seat Selection";
+    Layout = "~/Views/Default.cshtml";
+
+
+    var RowsLabel = new List<string>() { "A", "B", "C", "D", "E", "F", "G", "H", "J" };
+
+    var SeatingArrgementMtrix = new List<KoreaOnly.Models.SeatingArragment>()
+{
+new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 10, SeatsBreaks = new List<int>(){ 3,4,3 }, SpecialPadding = 20 },
+new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 4, SeatsBreaks = new List<int>(){ 1,2,1 }, SpecialPadding = 20 },
+new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 6, SeatsBreaks = new List<int>(){ 3,3 }, SpecialPadding = 30 },
+new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 8, SeatsBreaks = new List<int>(){ 2,4,2 }, SpecialPadding = 25 },
+new KoreaOnly.Models.SeatingArragment(){ TotalSeats = 9, SeatsBreaks = new List<int>(){ 3,3,3 }, SpecialPadding = 20 }
+};
+
+}
+
+<link rel="stylesheet" href="~/Content/code.css" />
+
+
+
+<style>
+    .plane .row {
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
+
+    .pop-up {
+        display: none;
+        position: absolute;
+        width: 280px;
+        padding: 10px;
+        z-index: 1000;
+        background: #0f6e9c;
+        top: 30px;
+        left: 20px;
+        color: #fff;
+        box-shadow: 0px 0px 8px 0px #0f6e9c;
+        border: 1px solid #0f6e9c;
+        border-radius: 0px 20px 20px 0px;
+        font-size: 90%;
+    }
+
+    .ChargibleSeats {
+        background: #1e3540 !important;
+    }
+
+    .NoInfantSeat {
+        background: #c4c70b !important;
+    }
+
+    .WingSeats {
+        border-left: 2px solid Red;
+        border-right: 2px solid Red;
+    }
+
+    .CabinSeats {
+        display: inline-block !important;
+        min-width: 5% !important;
+        text-align: center;
+        padding: 0px !important;
+    }
+
+    .combin2Seats {
+        min-width: 10% !important;
+    }
+</style>
+
+
+
+<div class="row ">
+
+    <div class="col-md-12 mt-5">
+
+        <div class="col-md-5">
+            <br />
+            <h2 style="color:#265d76; font-weight:bold;">Flight Information</h2>
+            <hr />
+
+            @if (Model.ApplicationResults.status == Additional.EnhancedSeatMap.CompletionCodes.Complete)
+            {
+
+
+                <p style="font-weight: bold;font-size: 22px;color: #265d76;">@(Model.SeatMap.First().Flight.origin) <i class="fa fa-arrow-right"></i> @( Model.SeatMap.First().Flight.destination)</p>
+
+                <p style="font-weight: bold;font-size: 16px;color: #265d76;">@(Model.SeatMap.First().Flight.Operating != null ? Model.SeatMap.First().Flight.Operating.carrier + "" + Model.SeatMap.First().Flight.Operating.Value : Model.SeatMap.First().Flight.Marketing.First().carrier + "" + Model.SeatMap.First().Flight.Marketing.First().Value)</p>
+                <p style="font-weight: bold;font-size: 16px;color: #265d76;">@(MainController.GetAircraftTypeByCode(Model.SeatMap.First().Equipment).Description)</p>
+                <p style="font-weight: bold;font-size: 16px;color: #265d76;">@(Convert.ToDateTime(Model.SeatMap.First().Flight.DepartureDate.Value).ToString("ddd, MM, yyyy"))</p>
+
+                if (Model.SeatMap.First().Cabin.First().CabinClass != null)
+                {
+                    foreach (var item in Model.SeatMap.First()?.Cabin?.First()?.CabinClass?.RBD)
+                    {
+                        <p style="font-weight: bold;font-size: 14px;color: #265d76;">@(item == 'Y' ? "Economy" : item == 'F' ? "First" : "Business" )</p>
+                    }
+                }
+            }
+            else
+            {
+                <p style="font-weight: bold;font-size: 16px;color: #265d76;">Flight Information Not Found Check Logs Files</p>
+            }
+
+            <hr />
+
+            <div>
+                <h4 style="font-weight:bold;color:#265d76;">Passenger List</h4>
+                <br />
+                <div style="color:#265d76;">
+                    <p> <i class="fa fa-arrow-right"></i> Muhammad Osama Alam</p>
+                    <p> <i class="fa fa-arrow-right"></i> XYZ NAME</p>
+                </div>
+            </div>
+
+            <br />
+
+            <div style="border: 2px solid #82b2c8; padding: 20px;">
+                <h5 style="font-weight:bold;color:#265d76;">Test Operation</h5>
+                <hr />
+                <form method="post" action="/index/TestSeatMap">
+                    <div class="form-group">
+                        <label for="Origin">Origin Location</label>
+                        <input type="text" class="form-control" name="Origin" id="Origin" placeholder="Example: LAX" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Destination">Destination Location</label>
+                        <input type="text" class="form-control" name="Destination" id="Destination" placeholder="Example: LAS" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="DeprtDate">Deprt. Date</label>
+                        <input type="date" class="form-control" name="DeprtDate" id="DeprtDate" placeholder="Date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Arrival">Arrival. Date</label>
+                        <input type="date" class="form-control" name="Arrival" id="Arrival" placeholder="Date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="OperatingAirline">Operating Airline</label>
+                        <input type="text" class="form-control" name="OperatingAirline" id="OperatingAirline" placeholder="Example: AA" required>
+                        <label for="FlightNumberOperating">Flight Number</label>
+                        <input type="text" class="form-control" name="FlightNumberOperating" id="FlightNumberOperating" placeholder="Example: 0000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="MarketingAirline">Marketing Airline</label>
+                        <input type="text" class="form-control" name="MarketingAirline" id="MarketingAirline" placeholder="Example: AA" required>
+                        <label for="FlightNumberMarketing">Flight Number</label>
+                        <input type="text" class="form-control" name="FlightNumberMarketing" id="FlightNumberMarketing" placeholder="Example: 0000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <p for="SaveResponse">Check this if you want to <b>Save Response</b>. (Overwrite Response To Local File For Default Use. If Response Status is <b>Complete</b>)</p>
+                        <input type="checkbox" class="form-control" name="SaveResponse" id="SaveResponse" placeholder="Save Response" required>
+                    </div>
+
+                    <input type="submit" value="Get Seat Map" class="btn btn-default" />
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6 text-center">
+            <br />
+            <h2 style="color:#265d76; font-weight:bold;">Seats Information</h2>
+            <hr />
+            <ol class="text-center">
+                <li class="row row--Test">
+                    <ol class="seats" type="TestA">
+                        <li class="seat">
+
+                            <input type="checkbox" disabled id="Test" />
+                            <label class="trigger" data-popup="#pop-upTest" for="Test">Occupied</label>
+                            <div class="pop-up" id="pop-upTest">
+                                <p>
+                                    A Seat is Already Reserved.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="Test1" />
+                            <label class="trigger" data-popup="#pop-upTest1" for="Test1">XX</label>
+                            <div class="pop-up" id="pop-upTest1">
+                                <p>
+                                    Seat is Available.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="Test2" />
+                            <label class="trigger ChargibleSeats " data-popup="#pop-upTest2" for="Test2">XX</label>
+                            <div class="pop-up" id="pop-upTest2">
+                                <p>
+                                    Seat is Available and Chargable.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="Test3" />
+                            <label class="trigger NoInfantSeat " data-popup="#pop-upTest3" for="Test3">XX</label>
+                            <div class="pop-up" id="pop-upTest3">
+                                <p>
+                                    Seat is Available. Not Allowed For Infants and Seat Not Suitable For Child.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="seat">
+                            <input type="checkbox" id="Test4" />
+                            <label class="trigger " style="    border-left: 2px solid red;" data-popup="#pop-upTest4" for="Test4">XX</label>
+                            <div class="pop-up" id="pop-upTest4">
+                                <p>
+                                    left windows seat.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="Test5" />
+                            <label class="trigger " style="    border-right: 2px solid red;" data-popup="#pop-upTest5" for="Test5">XX</label>
+                            <div class="pop-up" id="pop-upTest5">
+                                <p>
+                                    right windows seat.
+                                </p>
+                            </div>
+                        </li>
+
+                    </ol>
+                </li>
+            </ol>
+
+
+            @if (Model.ApplicationResults.status == Additional.EnhancedSeatMap.CompletionCodes.Complete)
+            {
+
+                foreach (var Cabin in Model.SeatMap.First().Cabin)
+                {
+                    var Seating = SeatingArrgementMtrix.Where(s => s.TotalSeats == Cabin.Column.Length).First();
+                    int CurrentIndexOfSeatsBreak = 0;
+                    int CurrentSeatCount = 0;
+
+                    <div class="clearfix">
+                        <hr />
+                    </div>
+
+                    <h4 style="text-align:center;color:#265d76;margin:20px;font-weight:bold;">@(Cabin.classLocation.First())</h4>
+                    <h4 style="text-align:center;color:#265d76;margin:20px">Cabin Class : @(Cabin.CabinClass.RBD == "Y" ? "Economy" : Cabin.CabinClass.RBD == "F" ? "First" : "Business")</h4>
+
+                    <div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:10px;border-top: 2px solid black;padding-top: 20px;border-left: 2px solid black;border-right: 2px solid black;">
+
+
+
+                            @for (int i = 0; i < Cabin.Column.Length; i++)
+                            {
+                                if (Seating.SeatsBreaks[CurrentIndexOfSeatsBreak] == CurrentSeatCount)
+                                {
+                                    <div class="SeatHeading CabinSeats">
+
+                                    </div>
+                                    <div class="SeatHeading CabinSeats">
+                                        @(Cabin.Column[i].Column?.ToString())
+                                    </div>
+                                    CurrentIndexOfSeatsBreak++;
+                                    CurrentSeatCount = 1;
+                                }
+                                else
+                                {
+                                    <div class="SeatHeading CabinSeats">
+                                        @(Cabin.Column[i].Column?.ToString())
+                                    </div>
+                                    CurrentSeatCount++;
+                                }
+                            }
+
+                            @{
+                                CurrentIndexOfSeatsBreak = 0;
+                                CurrentSeatCount = 0;
+                            }
+
+                        </div>
+
+                        @foreach (var Rows in Cabin.Row)
+                        {
+                            if (Rows.Seat != null && Rows.Seat.First().restrictedReclineInd)
+                            {
+                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:10px;@(Cabin.Wing != null && Convert.ToInt32(Cabin.Wing.firstRow) >= Convert.ToInt32(Rows.RowNumber) && Convert.ToInt32(Rows.RowNumber) <= Convert.ToInt32(Cabin.Wing.lastRow) ? "border-left:2px solid Red;border-right:2px solid Red;" : "border-left:2px solid Gray;border-right:2px solid Gray;")">
+                                </div>
+                            }
+
+                            if (Rows.Seat != null && Rows.Seat.First().exitRowInd)
+                            {
+                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:10px;border-left:2px solid Gray;border-right:2px solid Gray;">
+                                    <div class="text-left col-sm-6 col-md-6 col-xs-6 col-lg-6">
+                                        <span class="text-left" style="color: white;background: green;font-weight: bold;padding: 5px 10px;">Exit</span>
+                                    </div>
+                                    <div class="text-right col-sm-6 col-md-6 col-xs-6 col-lg-6">
+                                        <span class="text-left" style="color: white;background: green;font-weight: bold;padding: 5px 10px;">Exit</span>
+                                    </div>
+                                </div>
+                            }
+
+                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:10px;@(Cabin.Wing != null && (Enumerable.Range(Convert.ToInt32(Cabin.Wing.firstRow),Convert.ToInt32(Cabin.Wing.lastRow)).Contains(Convert.ToInt32(Rows.RowNumber))) ? "border-left:2px solid Red;border-right:2px solid Red;" : "border-left:2px solid Gray;border-right:2px solid Gray;")">
+                                @{
+                                    var CurrentSeat = 0;
+                                }
+                                @for (int Seats = 0; Seats < Cabin.Column.Length; Seats++)
+                                {
+
+                                    var Checked = Rows.Seat == null ? false : Rows.Seat.ToList().FindIndex(SL => SL.Number == Cabin.Column[Seats].Column) != -1;
+
+
+                                    if (Seating.SeatsBreaks[CurrentIndexOfSeatsBreak] == CurrentSeatCount)
+                                    {
+                                        <div class="CabinSeats ">
+
+                                        </div>
+
+                                        if (Checked)
+                                        {
+                                            Html.RenderPartial("/Views/Index/SeatTemplate.cshtml", new KoreaOnly.Models.SeatMapSeatModel() { RowNumber = Rows.RowNumber, SeatNumner = Rows.Seat[CurrentSeat].Number, Seats = Rows.Seat[CurrentSeat], IsDisabledSeats = false, isWindowSeats = Cabin.Column.Where(s => s.Column == Rows.Seat[CurrentSeat].Number)?.First().Characteristics.First().ToString() });
+                                            CurrentSeat++;
+                                        }
+                                        else
+                                        {
+                                            Html.RenderPartial("/Views/Index/SeatTemplate.cshtml", new KoreaOnly.Models.SeatMapSeatModel() { RowNumber = Rows.RowNumber, SeatNumner = Cabin.Column[Seats].Column, Seats = null, IsDisabledSeats = false, isNewSeats = true, isWindowSeats = Cabin.Column[Seats].Characteristics.First().ToString() });
+                                        }
+
+                                        CurrentIndexOfSeatsBreak++;
+                                        CurrentSeatCount = 1;
+                                    }
+                                    else
+                                    {
+                                        if (Checked)
+                                        {
+                                            Html.RenderPartial("/Views/Index/SeatTemplate.cshtml", new KoreaOnly.Models.SeatMapSeatModel() { RowNumber = Rows.RowNumber, SeatNumner = Rows.Seat[CurrentSeat].Number, Seats = Rows.Seat[CurrentSeat], IsDisabledSeats = false, isWindowSeats = Cabin.Column.Where(s => s.Column == Rows.Seat[CurrentSeat].Number)?.First().Characteristics.First().ToString() });
+                                            CurrentSeat++;
+                                        }
+                                        else
+                                        {
+                                            Html.RenderPartial("/Views/Index/SeatTemplate.cshtml", new KoreaOnly.Models.SeatMapSeatModel() { RowNumber = Rows.RowNumber, SeatNumner = Cabin.Column[Seats].Column, Seats = null, IsDisabledSeats = false, isNewSeats = true, isWindowSeats = Cabin.Column[Seats].Characteristics.First().ToString() });
+                                        }
+
+                                        CurrentSeatCount++;
+                                    }
+
+
+
+                                }
+
+
+
+
+                                @{
+                                    CurrentIndexOfSeatsBreak = 0;
+                                    CurrentSeatCount = 0;
+                                }
+
+                            </div>
+
+                            if (Rows.RowFacility != null && Rows.RowFacility.First().Location == Additional.EnhancedSeatMap.Enum_CabinFacilitiesRowLocationtype.Rear)
+                            {
+                                foreach (var Faci2 in Rows.RowFacility)
+                                {
+
+                                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:10px;padding:0px @(SeatingArrgementMtrix.Where(d=>d.TotalSeats == Cabin.Column.Length).First().SpecialPadding)%; @(Cabin.Wing != null && Convert.ToInt32(Cabin.Wing.firstRow) >= Convert.ToInt32(Rows.RowNumber) && Convert.ToInt32(Rows.RowNumber) <= Convert.ToInt32(Cabin.Wing.lastRow) ? "border-left:2px solid Red;border-right:2px solid Red;" : "border-left:2px solid Gray;border-right:2px solid Gray;")">
+                                        @foreach (var Faci in Faci2.Facility)
+                                        {
+                                            if (Faci.Characteristics.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesType_Base.Lavatory)
+                                            {
+                                                <div class="CabinSeats seat" style="@(Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftCenterSection ? "float:left;" : Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightCenterSection ? "float:right;" : "")">
+
+
+                                                    <img src="~/Images/Lavatory.png" width="50" height="50" />
+
+                                                </div>
+                                            }
+                                            else if (Faci.Characteristics.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesType_Base.StairstoUpperdeck)
+                                            {
+                                                <div class="CabinSeats seat" style="@(Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftCenterSection ? "float:left;" : Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightCenterSection ? "float:right;" : "")">
+
+
+                                                    <img src="~/Images/stairs.png" width="50" height="50" />
+
+                                                </div>
+                                            }
+                                            else if (Faci.Characteristics.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesType_Base.Galley)
+                                            {
+                                                <div class="CabinSeats seat" style="@(Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.LeftCenterSection ? "float:left;" : Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightSideSection ||  Faci.Location.Value == Additional.EnhancedSeatMap.Enum_CabinFacilitiesLocation_Base.RightCenterSection ? "float:right;" : "")">
+
+                                                    <img src="~/Images/Gallery.png" width="50" height="50" />
+
+                                                </div>
+                                            }
+
+                                        }
+
+                                    </div>
+
+                                }
+
+
+                            }
+
+                        }
+                    </div>
+                }
+
+            }
+
+
+        </div>
+    </div>
+
+
+</div>
+
+
+@section scriptarea{
+    <script>
+
+
+        $(document).ready(function () {
+            var moveLeft = 20;
+            var moveDown = 10;
+
+            $('.trigger').hover(function (e) {
+
+                var pop = $(this).data('popup');
+
+                $(pop).show();
+                //.css('top', e.pageY + moveDown)
+                //.css('left', e.pageX + moveLeft)
+                //.appendTo('body');
+            }, function () {
+                var pop = $(this).data('popup');
+                $(pop).hide();
+            });
+
+            $('.trigger').mousemove(function (e) {
+                var pop = $(this).data('popup');
+
+            });
+
+        });
+
+    </script>
+}

@@ -1,0 +1,118 @@
+﻿@model KoreaOnly.CheapFlights
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/AdminView.cshtml";
+}
+
+<br />
+<h2 style="margin-top:20px;">Add Cheap Flights </h2>
+
+@using (Html.BeginForm("Create", "CheapFlights", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label class="control-label col-md-2">Departure Airport Code</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DepartureCode, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DepartureCode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Arrival Airport Code</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AirportCode, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AirportCode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-lg-offset-2 col-md-10">
+
+                <input type="button" class="btn btn-primary" value="Load Airport Name" id="btnload" />
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Departure Airport Short Name </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DeptShortName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DeptShortName, "", new { @class = "text-danger" })
+                <span style="color:gray;font-size:12px;font-weight:bold">This text display on cheap flight Panel</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Arrival Airport Short Name</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ArrvShortName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ArrvShortName, "", new { @class = "text-danger" })
+                <span style="color:gray;font-size:12px;font-weight:bold">This text display on cheap flight Panel</span>
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-lg-offset-2 col-md-10">
+                <span style="color:gray;font-size:12px;font-weight:bold">Note: Change Above Text For Easy To Understand On Cheap Flight Display.</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Departure Date </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DepartureDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DepartureDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Airline Code</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AirlineCode, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AirlineCode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Price</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $("#btnload").click(function () {
+            $.get("/Index/GetAllAirports?AirCode=" + $("#DepartureCode").val(), function (success) {
+                $("#DeptShortName").val(success[0].name);
+            });
+
+            $.get("/Index/GetAllAirports?AirCode=" + $("#AirportCode").val(), function (success) {
+                $("#ArrvShortName").val(success[0].name);
+            });
+        });
+    });
+
+</script>

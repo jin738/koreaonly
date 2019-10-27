@@ -14,6 +14,26 @@ namespace KoreaOnly
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapMvcAttributeRoutes();
+
+            routes.MapRoute(
+               name: "Sitemap",
+               url: "sitemap.xml",
+               defaults: new { controller = "Sitemap", action = "index" }
+           );
+
+
+            routes.MapRoute(
+                name: "DefaultFlight",
+                url: "Search/Flight/{departureCode}/{arrivalCode}/{text}",
+                defaults: new { controller = "index", action = "index", departureCode = UrlParameter.Optional, arrivalCode = UrlParameter.Optional, text = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "DefaultFlight2",
+                url: "Flight/{departureCode}/{arrivalCode}/{text}",
+                defaults: new { controller = "index", action = "index", departureCode = UrlParameter.Optional, arrivalCode = UrlParameter.Optional, text = UrlParameter.Optional }
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

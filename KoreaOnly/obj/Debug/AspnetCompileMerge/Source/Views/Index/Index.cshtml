@@ -1,0 +1,1239 @@
+﻿
+@{
+    ViewBag.Title = "Search Flight";
+    Layout = "~/Views/Default.cshtml";
+}
+
+<style>
+
+
+    /* Style the input container */
+    .input-container {
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    /* Style the form icons */
+    .icons {
+        padding: 10px;
+        background: #1f4d65;
+        color: white;
+        min-width: 50px;
+        text-align: center;
+    }
+
+    input[id^="OriginAirportCode"] {
+        text-transform: uppercase;
+    }
+
+
+    input[id^="DestinationAirportCode"] {
+        text-transform: uppercase;
+    }
+
+    /* Style the input fields */
+    .input-field {
+        padding: 10px !important;
+        outline: none !important;
+        border: 0px !important;
+        width: 100% !important;
+        font-weight: bold !important;
+        font-size: 14px !important;
+        height: 45px !important;
+        border-radius: 0px !important;
+    }
+
+        .input-field:focus {
+            color: #1f4d65 !important;
+        }
+
+    /* Set a style for the submit button */
+    .button {
+        border: none;
+        padding: 0px 10px;
+        color: #fff;
+        background: #1f4d65;
+        font-weight: bold;
+    }
+
+        .button:hover {
+            background: #113040;
+        }
+
+    .cheap-flights-country {
+        font-weight: bold;
+        font-size: 14px;
+        color: #7d8184;
+        margin-bottom: 0px;
+    }
+
+    .cheap-flights-city {
+        font-weight: bold;
+        font-size: 18px;
+        color: #1f4d65;
+        margin-bottom: 0px;
+    }
+
+    .backgroundimage {
+        background: url('/Images/plane.jpg') repeat;
+        width: 100%;
+        background-position: center;
+        min-height: 400px;
+        background-size: cover;
+        padding-top: 20px;
+    }
+
+    .subheading {
+        font-family: "Lato", sans-serif;
+        line-height: 1;
+        color: #fff;
+        margin: 0 0 10px 0;
+        font-size: 25px;
+        text-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+        font-weight: 900;
+        text-align: left;
+    }
+
+    .dropdowncustom {
+        border: none !important;
+        border-radius: 0px !important;
+        height: auto !important;
+        width: 300px !important;
+        font-weight: bold !important;
+    }
+
+    .triptypeActive {
+        background-color: #1f4d65;
+        color: #fff;
+    }
+
+    .triptype {
+        font-weight: bold;
+        color: #fff;
+        padding: 10px 4px;
+        display: inline-block;
+        border: 1px solid hsl(201, 53%, 26%);
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+
+        .triptype:hover {
+            background-color: #1f4d65 !important;
+            color: #fff !important;
+        }
+
+    .easy-autocomplete {
+        width: 100% !important;
+    }
+
+    .eac-item {
+        padding: 10px !important;
+    }
+
+        .eac-item b {
+            color: red !important;
+        }
+
+    .border {
+        border: 1px solid red !important;
+    }
+</style>
+
+
+
+<div class="row">
+
+
+    <div class="col-md-12 col-sm-12 col-xs-12 backgroundimage" style="min-height:400px !important;">
+
+
+        <div class="col-md-12 col-sm-12 col-xs-12">
+
+            <div class="clearfix"></div>
+            <br />
+            <h2 id="flightsearch" style="display:none; text-align: center;color: #fff;font-weight: bold;">
+                Please Wait Let us Find a Best Flight For You...
+            </h2>
+        </div>
+
+
+        <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12" id="flightsearchpanel">
+
+            <div id="loadingdivs" style="display:none;">
+                <div style="position:  absolute;height: 95%;width: 95%;top: 10px;background-color:  #fff;bottom:  10px;z-index:100;opacity:0.6;">
+                </div>
+                <div class="loader" style="position:absolute;top: 30%;right: 40%;left: 42%;z-index: 110;"></div>
+                <div style="position:absolute;top: 65%;right: 36%;left: 36%;z-index: 110;text-align:center;color:#1c6784;">
+                    @*<label>Please Wait <br>Let us Find Flights for you...</label>*@
+                </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <p class="subheading"> SEARCH FLIGHT</p>
+
+
+
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+
+
+                <span class="triptype triptypeActive" data-mode="rt">Round Trip</span>
+                <span class="triptype" data-mode="ot">One Way</span>
+                <span class="triptype" data-mode="mt">Multi City</span>
+
+
+
+            </div>
+
+
+
+
+            <div class="clearfix"></div>
+
+            <form class="form" id="frmsearchflight" action="/Index/SearchFlight" method="get" autocomplete="off">
+                <input type="text" name="triptype2" style="display: none;" id="triptypetext" value="0" autocomplete="off">
+                <input type="text" name="triptype" style="display: none;" id="triptypetext1" value="0" autocomplete="off">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+
+                        <div class="form-group input-container">
+                            <i class="material-icons icons">flight_takeoff</i>
+                            <input id="OriginAirportCode1" data-code="OAC1" data-moveto="DestinationAirportCode1" data-airportname="yes" autocomplete="off" class="input-field" type="text" placeholder="Leaving From">
+                            <input name="OriginAirportCode" id="OAC1" type="hidden" />
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+
+                        <div class="form-group input-container">
+                            <i class="material-icons icons">flight_land</i>
+                            <input id="DestinationAirportCode1" data-code="DAC1" data-airportname="yes" autocomplete="off" class="input-field" type="text" placeholder="Going To">
+                            <input name="DestinationAirportCode" id="DAC1" type="hidden" />
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+
+                        <div class="form-group input-container">
+                            <i class="material-icons icons">date_range</i>
+                            <input id="DepartureDate1" name="DepartureDate" autocomplete="off" type="text" class="input-field datepicker" placeholder="Departure Date" />
+                        </div>
+
+                        <div class="form-group input-container" id="contarrivedate">
+                            <i class="material-icons icons">date_range</i>
+                            <input id="arrivedate" name="arrivedate" autocomplete="off" type="text" class="input-field datepicker" placeholder="Arrival Date" />
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div id="multicityarea" style="display: none;">
+
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12 multicityareaButtons" style="display: none;">
+                    <div class="col-md-2 col-sm-12 col-xs-12">
+                        <div class="form-group input-container button-container">
+                            <i class="material-icons icons">remove</i>
+                            <input type="button" class="button" value="Remove" id="removebtnmulticity" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-12 col-xs-12">
+                        <div class="form-group input-container button-container" id="addsegmulticityDiv">
+                            <i class="material-icons icons">add</i>
+                            <input type="button" class="button" value="Add Segment" id="addsegmulticity" />
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <hr />
+                </div>
+
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+
+                        <div class="form-group input-container">
+                            <i class="material-icons icons">person</i>
+                            @*<input class="input-field" name="trvaud" type="number" min="1" value="1" max="10"
+                                placeholder="Adults (12+)">*@
+                            <select name="trvaud" class="form-control dropdowncustom">
+                                <option value="1">1 Adult (12+)</option>
+                                <option value="2">2 Adults</option>
+                                <option value="3">3 Adults</option>
+                                <option value="4">4 Adults</option>
+                                <option value="5">5 Adults</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="form-group input-container">
+                            <i class="material-icons icons">person</i>
+                            @*<input class="input-field" name="trvchild" type="number" min="0" value="0" max="10" placeholder="Child (Under 12)">*@
+                            <select name="trvchild" class="form-control dropdowncustom">
+                                <option selected="selected" value="0">0 Child (under 12)</option>
+                                <option value="1">1 Child (under 12)</option>
+                                <option value="2">2 Children</option>
+                                <option value="3">3 Children</option>
+                                <option value="4">4 Children</option>
+                                <option value="5">5 Children</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="form-group input-container">
+                            <i class="material-icons icons">flight</i>
+                            <select name="flightclass" class="form-control dropdowncustom">
+                                <option selected="selected" value="Y">Economy</option>
+                                <option value="S">Premium Economy</option>
+                                <option value="C">Business</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="form-group input-container">
+                            <i class="material-icons icons">flight</i>
+                            <input id="Airline" name="airlinename" type="text" class="input-field" data-optional="1"
+                                   placeholder="Airline ( Optional )" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+
+
+                        <div class="form-group input-container button-container">
+                            <i class="material-icons icons">search</i>
+                            <button class="button" type="button" id="submitnow">Search Flight</button>
+                            <input type="submit" style="display: none;" id="submitreal" class="btn btn-default"
+                                   value="Search Flight" />
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <p style="font-weight: bold;color: #c51616;background: #fff;padding: 20px;opacity: 0.7;border-radius: 10px;text-align: justify; @(string.IsNullOrEmpty(ViewBag.Error) ? "display: none;" : "")">
+
+                            @ViewBag.Error
+
+                        </p>
+                    </div>
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+<div class="clearfix"></div>
+
+
+
+<div class="row" style="padding: 40px 0px 40px 0px;background-color: #287490;">
+
+    <div class="col-md-12" style="padding-top:20px;" id="se">
+
+        <div class="col-md-12 SubDivss">
+            <div class="col-md-1 SubDivs4 xs-only-text-center">
+                <img src="~/Images/search-icon-png-21.png" style="width:60px;height:60px" />
+            </div>
+            <div class="col-md-11 col-sm-11 col-xs-11 SubDivs8  xs-only-text-center">
+                <p class="subheadings">The World's Travel Search Engine</p>
+                <p class="xs-only-text-center" style="color:#fff;text-align: justify;">You can use our search engine to find any flight you want and select a desired destination and price.</p>
+            </div>
+        </div>
+
+        <div class="clearfix" style="margin:30px 0px;"></div>
+        <hr />
+        <div class="col-md-12 SubDivss text-right">
+
+            <div class="col-md-11 SubDivs8 text-right  xs-only-text-center">
+                <p class="subheadings">Cheap and Beneficial Air Tickets</p>
+                <p class=" xs-only-text-center" style="color:#fff;text-align: right;">We provide affordable tickets to the flights of almost all existing airlines so you don’t need to look for them.</p>
+            </div>
+            <div class="col-md-1 SubDivs4  xs-only-text-center">
+                <img src="~/Images/AirTicket.png" style="width:60px;height:60px" />
+            </div>
+        </div>
+
+        <div class="clearfix" style="margin:30px 0px;"></div>
+        <hr />
+        <div class="col-md-12 SubDivss ">
+            <div class="col-md-1 SubDivs4  xs-only-text-center">
+                <img src="~/Images/SupportLines.png" style="width:60px;height:60px" />
+            </div>
+            <div class="col-md-11 SubDivs8  xs-only-text-center">
+                <p class="subheadings">Our Support Lines are Open 24/7</p>
+                <p class=" xs-only-text-center" style="color:#fff;text-align: justify;">Our 24/7 support operators are always ready to help you select a proper flight according to your needs.</p>
+            </div>
+        </div>
+
+        <div class="clearfix" style="margin:30px 0px;"></div>
+        <hr />
+        <div class="col-md-12 SubDivss text-right">
+
+            <div class="col-md-11 SubDivs8 text-right xs-only-text-center">
+                <p class="subheadings">Convenient Payment Method For You</p>
+                <p class=" xs-only-text-center" style="color:#fff;text-align: right;">We provide a variety of payment methods including cheque, cash, and credit cards.</p>
+            </div>
+            <div class="col-md-1 SubDivs4 xs-only-text-center">
+                <img src="~/Images/businessNew.png" style="width:60px;height:60px" />
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="callcenter" style="margin-top: 40px;">
+
+        <div class="col-md-12" style="">
+            <div class="col-md-6 hidden-xs">
+
+            </div>
+            <div class="col-md-6 calluspadding">
+
+                <p class="text-blue-light big">24/7 Support</p>
+                <div style="color: #1f2746;letter-spacing: 0;font-weight: 900;text-transform: capitalize;line-height: 1.16667;font-size: 1.5em;">Tel. <a href="callto:#" style="color: #1f2746;">(+1) 213 738-8185</a></div>
+                <p class="text-base offset-top-20 offset-md-top-30 big">Our Support Service is available 24 hours a day, 7 days a week to help you buy your tickets.</p>
+
+                <span class="btn btn-default btnTheam" id="btncontact" data-toggle="modal" data-target="#contactModal">
+                    Contact Us
+                </span>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="contactModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Contact us</h4>
+            </div>
+            <div class="modal-body">
+                <div class="containter">
+                    <div class="row">
+                        <form class="form-horizontal" name="commentform" method="post">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="InputName" class="col-lg-4 control-label">Name</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" name="CommentFormFirst_name" id="first_name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="InputEmail" class="col-lg-4 control-label">Email</label>
+                                    <div class="col-lg-8">
+                                        <input type="email" class="form-control" id="email" name="CommentFormEmail" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="InputMessage" class="col-lg-4 control-label">Message</label>
+                                    <div class="col-lg-8">
+                                        <textarea name="CommentFormComments" id="comments" class="form-control" rows="5" required></textarea>
+                                    </div>
+                                </div>
+
+                                <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+                            </div>
+                        </form>
+                        <hr class="featurette-divider hidden-lg">
+                    </div>
+                </div>
+            </div><!-- End of Modal body -->
+        </div><!-- End of Modal content -->
+    </div><!-- End of Modal dialog -->
+</div><!-- End of Modal -->
+
+
+
+<style>
+    #wrapper {
+        width: 100%;
+        height: 220px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    #carousel {
+        width: 80%;
+        position: relative;
+        margin: 60px auto;
+    }
+
+        #carousel ul {
+            list-style: none;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        #carousel li {
+            font-size: 40px;
+            color: #999;
+            text-align: center;
+            display: block;
+            width: 232px;
+            height: 178px;
+            padding: 0;
+            margin: 6px;
+            float: left;
+            position: relative;
+        }
+
+            #carousel li img {
+                width: 201px;
+                height: 127px;
+                margin-top: 14px;
+            }
+
+            #carousel li span {
+                background: transparent url(../../Images/complogo/carousel_shine.png) no-repeat 0 0;
+                text-indent: -999px;
+                display: block;
+                overflow: hidden;
+                width: 201px;
+                height: 127px;
+                position: absolute;
+                z-index: 2;
+                top: 14px;
+                left: 16px;
+            }
+
+    .clearfix {
+        float: none;
+        clear: both;
+    }
+
+    #carousel .prev, #carousel .next {
+        background: transparent url(../../Images/complogo/carousel_control.png) no-repeat 0 0;
+        text-indent: -999px;
+        display: block;
+        overflow: hidden;
+        width: 15px;
+        height: 21px;
+        margin-left: 10px;
+        position: absolute;
+        top: 70px;
+    }
+
+    #carousel .prev {
+        background-position: 0 0;
+        left: -30px;
+    }
+
+        #carousel .prev:hover {
+            left: -31px;
+        }
+
+    #carousel .next {
+        background-position: -18px 0;
+        right: -20px;
+    }
+
+        #carousel .next:hover {
+            right: -21px;
+        }
+
+    #carousel .pager {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+        #carousel .pager a {
+            background: transparent url(../../Images/complogo/carousel_control.png) no-repeat -2px -32px;
+            text-decoration: none;
+            text-indent: -999px;
+            display: inline-block;
+            overflow: hidden;
+            width: 8px;
+            height: 8px;
+            margin: 0 5px 0 0;
+        }
+
+            #carousel .pager a.selected {
+                background: transparent url(../../Images/complogo/carousel_control.png) no-repeat -12px -32px;
+                text-decoration: underline;
+            }
+
+    #source {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+    }
+
+        #source, #source a {
+            font-size: 12px;
+            color: #999;
+        }
+
+    #donate-spacer {
+        height: 100%;
+    }
+
+    #donate {
+        border-top: 1px solid #999;
+        width: 750px;
+        padding: 50px 75px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+        #donate p, #donate form {
+            margin: 0;
+            float: left;
+        }
+
+        #donate p {
+            width: 650px;
+        }
+
+        #donate form {
+            width: 100px;
+        }
+</style>
+
+<div class="row" style="padding: 40px 0px 40px 0px;background-color: #287490;">
+
+    <div class="col-md-12 animatedParent" style="padding-top:60px;">
+
+        <div class="col-md-4 SubDivs">
+            <div class="col-md-4 SubDivs4">
+                <p class="subheadings righttocenter toright">FREE CANCELLATION POLICY</p>
+            </div>
+
+            <div class="col-md-8 SubDivs8">
+                <p style="color:#fff;font-weight:bold;">Cancel Free With In 24 Hrs</p>
+                <p style="color:#fff;">You can cancel your booking with in 24 hrs with Best Flight DealsNo Extra Cost. We serve you best!.</p>
+            </div>
+
+        </div>
+        <div class="col-md-4 SubDivs">
+            <div class="col-md-4 SubDivs4">
+                <p class="subheadings righttocenter toright">BEST FARE GUARANTEE</p>
+            </div>
+            <div class="col-md-8 SubDivs8">
+                <p style="color:#fff;font-weight:bold;">The Lowest Asiana Fare</p>
+                <p style="color:#fff;">If you find a lower rate, we will pay you the difference.</p>
+            </div>
+        </div>
+        <div class="col-md-4 SubDivs">
+            <div class="col-md-4 SubDivs4">
+                <p class="subheadings righttocenter toright">NO BOOKING FEE</p>
+            </div>
+            <div class="col-md-8 SubDivs8">
+                <p style="color:#fff;font-weight:bold;">When you book with Us</p>
+                <p style="color:#fff;">We decided to reduce the cost for our clients.</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+@section scriptarea{
+
+
+    <script>
+        $(document).ready(function () {
+
+            $("form[name='commentform']").submit(function (e)
+            {
+                e.preventDefault();
+
+                $("#contactModal input[type='submit']").prop('disabled', true);
+                var ser = $(this).serialize();
+
+                $.post('/Index/Comment', ser , function (success)
+                {
+                    $("#contactModal input[type='submit']").prop('disabled', false);
+                    if (success.status == 200) {
+                        alert("Thanks For Contact us We Will Contact You as soon as possible.");
+
+                    } else {
+                        alert("Sorry For inconvenience Please Try Agin Later.");
+
+                    }
+
+
+                    $('#contactModal').modal('hide');
+
+                });
+
+            });
+
+            AddSearch("OriginAirportCode1");
+            AddSearch("DestinationAirportCode1");
+
+            AddAirlineSearch("Airline");
+            AddValidation();
+
+            $('#arrivedate').prop('disabled', true);
+
+            window.dp1 = $('#DepartureDate1').pickadate({
+                min: new Date(),
+                format: 'dddd, dd mmm, yyyy',
+                formatSubmit: 'yyyy/mm/dd',
+                hiddenName: true,
+                hiddenPrefix: 'prefix__',
+                hiddenSuffix: '',
+                onSet: function (thingSet) {
+
+                    if ($("#triptypetext").val() == "0") {
+
+                        if ($("#DepartureDate1").val() != "") {
+
+                            $('#arrivedate').prop('disabled', false);
+
+                            var a = $("#arrivedate").pickadate('picker');
+
+                            var b = $("#DepartureDate1").pickadate('picker');
+
+                            var c = b.get('select');
+
+                            var date = new Date(c.year, c.month, c.date);
+
+                            var NextDay = date.getDate() + 1;
+
+                            date.setDate(NextDay);
+
+                            a.set('min', date);
+                            a.set('select', date);
+
+                            $('#arrivedate').focus();
+                        }
+
+                    } else if ($("#triptypetext").val() == "2") {
+
+                        if ($("#DepartureDate2").length) {
+                            var a = $("#DepartureDate2").pickadate('picker');
+
+                            var b = $("#DepartureDate1").pickadate('picker');
+
+                            var c = b.get('select');
+
+                            var date = new Date(c.year, c.month, c.date);
+
+                            var NextDay = date.getDate() + 1;
+
+                            date.setDate(NextDay);
+
+                            a.set('min', date);
+                            a.set('select', date);
+
+
+                        }
+
+
+                    }
+
+
+                }
+            });
+
+
+
+            window.ari1 = $('#arrivedate').pickadate({
+
+                format: 'dddd, dd mmm, yyyy',
+                formatSubmit: 'yyyy/mm/dd',
+                hiddenName: true,
+                hiddenPrefix: 'prefix__',
+                hiddenSuffix: '',
+                onSet: function (thingSet) {
+
+                }
+            });
+
+
+            $(".triptype").click(function () {
+                var mode = $(this).data('mode');
+
+                $(".triptype").removeClass("triptypeActive");
+
+                $(this).addClass("triptypeActive");
+
+
+                $("#arrivedate").prop("disabled", false);
+                $("#contarrivedate").hide();
+                $(".multicityareaButtons").hide();
+                $("#multicityarea").hide();
+
+                $("#multicityarea input[type='text']").prop("disabled", true);
+
+
+
+                if (mode == 'rt') {
+
+                    $("#triptypetext").val("0");
+
+                    $("#triptypetext1").val("0");
+
+
+                    $("#contarrivedate").show();
+                    if ($("#DepartureDate1").val() == "") {
+                        $("#arrivedate").prop("disabled", true);
+                    }
+
+                } else if (mode == 'ot') {
+                    $("#triptypetext").val("1");
+                    $("#triptypetext1").val("1");
+
+                    $("#arrivedate").prop("disabled", true);
+                } else if (mode == 'mt') {
+                    $("#arrivedate").attr("disabled", true);
+                    $("#triptypetext").val("2");
+                    $("#triptypetext1").val("2");
+
+                    $(".multicityareaButtons").show();
+                    $("#multicityarea").show();
+
+                    $("#multicityarea input[type='text']").prop("disabled", false);
+                    $("#arrivedate").prop("disabled", true);
+                }
+            });
+
+            $("#removebtnmulticity").click(function () {
+                $(".MulticitySegment").last().remove();
+                var count = $(".MulticitySegment").length;
+
+                if (count < 4) {
+                    $("#addsegmulticityDiv").show();
+                }
+
+
+            });
+
+
+            $('#btncontact').click(function () {
+
+            });
+
+            $("#addsegmulticity").click(function () {
+
+                var Filled = true;
+
+                if ($("#OriginAirportCode1").val() == "") {
+                    $("#OriginAirportCode1").addClass('border'); Filled = false;
+                }
+
+                if ($("#DestinationAirportCode1").val() == "") {
+                    $("#DestinationAirportCode1").addClass('border'); Filled = false;
+                }
+
+                if ($("#DepartureDate1").val() == "") {
+                    $("#DepartureDate1").addClass('border'); Filled = false;
+                }
+
+                $(".MulticitySegment:last-child .input-field").each(function () {
+                    var aa = $(this).val();
+                    if (aa == "") {
+                        $(this).addClass('border'); Filled = false;
+                    } else { $(this).removeClass('border'); }
+                });
+
+                if (!Filled) {
+                    return;
+                }
+
+                var count = $(".MulticitySegment").length;
+
+                if (count < 4) {
+
+                    var OriginAirportCodeID = "OriginAirportCode" + (count + 2);
+                    var DestinationAirportCodeID = "DestinationAirportCode" + (count + 2);
+                    var DepartureDateID = "DepartureDate" + (count + 2);
+
+
+                    var DestinationAirportCodePrevID = "DestinationAirportCode" + (count + 1);
+                    var DepartureDatePrevID = "DepartureDate" + (count + 1);
+
+
+                    var DepartureDateNextID = "DepartureDate" + (count + 3);
+
+                    var MulticitySegmentDiv =
+                        "<div class='col-md-12 col-sm-12 col-xs-12 MulticitySegment'><div class='col-md-4 col-sm-12 col-xs-12'><div class='form-group input-container'><i class='material-icons icons'>flight_takeoff</i><input id='" +
+                        OriginAirportCodeID +
+                        "' class='input-field' data-code='OAC" + (count + 2) + "' data-moveto='" + DestinationAirportCodeID + "' data-airportname='yes' type='text' autocomplete='off' placeholder='Leaving From'/><input name='OriginAirportCode' id='OAC" + (count + 2) + "' type='hidden' /></div></div><div class='col-md-4 col-sm-12 col-xs-12'><div class='form-group input-container'><i class='material-icons icons'>flight_land</i><input  id='" +
+                        DestinationAirportCodeID +
+                        "' class='input-field' data-airportname='yes' data-code='DAC" + (count + 2) + "' type='text' autocomplete='off' placeholder='Going To'/><input name='DestinationAirportCode' id='DAC" + (count + 2) + "' type='hidden' /></div></div><div class='col-md-4 col-sm-12 col-xs-12'><div class='form-group input-container'><i class='material-icons icons'>date_range</i><input id='" +
+                        DepartureDateID +
+                        "' autocomplete='off' type='text'   class='input-field datepicker' placeholder='Departure Date' /><input type='hidden' name='DepartureDate' id='" + DepartureDateID + "Main'/></div></div></div>";
+
+                    $("#multicityarea").append(MulticitySegmentDiv);
+                    if (count == 3) {
+                        $("#addsegmulticityDiv").hide();
+                    }
+
+                    $("#" + OriginAirportCodeID).val($("#" + DestinationAirportCodePrevID).val());
+
+                    $("#OAC" + (count + 2)).val($("#" + DestinationAirportCodePrevID).val().replace("(", "").replace(")", ""));
+
+                    $("#" + DestinationAirportCodeID).focus();
+
+                    // Generate Prev Date For Min
+
+                    var getMinDate = $("#" + DepartureDatePrevID).pickadate('picker');
+
+                    var c = getMinDate.get('select');
+
+                    var date = new Date(c.year, c.month, c.date);
+
+                    var NextDay = date.getDate() + 1;
+
+                    date.setDate(NextDay);
+
+                    // END
+
+                    $('#' + DepartureDateID).pickadate({
+                        min: date, // set Min Date Generated Above
+                        format: 'dddd, dd mmm, yyyy',
+                        formatSubmit: 'yyyy/mm/dd',
+                        hiddenName: true,
+                        hiddenPrefix: 'prefix__',
+                        hiddenSuffix: '',
+                        onSet: function (thingSet) {
+                            var a = $("#" + DepartureDateID).pickadate('picker');
+                            $("#" + DepartureDateID + "Main").val(a.get('select', 'yyyy/mm/dd'));
+
+                            if ($("#" + DepartureDateNextID).length) {
+                                var setMinDate = $("#" + DepartureDateNextID).pickadate('picker');
+
+                                var getMinDate = a;
+
+                                var c = getMinDate.get('select');
+
+                                var date = new Date(c.year, c.month, c.date);
+
+                                var NextDay = date.getDate() + 1;
+
+                                date.setDate(NextDay);
+
+                                setMinDate.set('min', date);
+                                setMinDate.set('select', date);
+                            }
+
+
+                        }
+                    });
+
+                    AddSearch(OriginAirportCodeID);
+                    AddSearch(DestinationAirportCodeID);
+                    AddValidation();
+
+                } else {
+                    $("#addsegmulticityDiv").hide();
+                }
+
+            });
+
+
+            $("#submitnow").click(function () {
+
+                var Run = true;
+
+                $(".input-field").each(function () {
+
+                    var disabledElement = $(this).prop('disabled');
+
+                    if (disabledElement == false) {
+
+                        var Optional = $(this).data('optional');
+
+                        if (Optional != undefined && Optional == "1") {
+                            $(this).removeClass('border');
+
+                        } else {
+
+                            if ($(this).val() == "") {
+                                $(this).addClass('border');
+
+                                if ($("#triptypetext").val() != "0") {
+                                    if ($(this).get(0).id == "arrivedate") {
+
+                                    } else {
+                                        Run = false;
+                                    }
+                                } else {
+                                    Run = false;
+                                }
+
+                            } else {
+                                $(this).removeClass('border');
+                            }
+
+                        }
+                    }
+
+                });
+
+
+                if (Run) {
+
+                    var FrmData = $("#frmsearchflight").serialize();
+
+
+                    $("#frmsearchflight input").prop('disabled', true);
+                    $("#frmsearchflight select").prop('disabled', true);
+                    $("#frmsearchflight button").prop('disabled', true);
+
+                    //$("#flightsearchpanel").css('opacity', '0.5');
+                    $("#loadingdivs").show();
+
+                    $("#flightsearch").css('display', 'block');
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/Index/TaskRun",
+                        data: FrmData,
+                        success: function (response) {
+
+                            $("#frmsearchflight input").prop('disabled', false);
+                            $("#frmsearchflight select").prop('disabled', false);
+                            $("#frmsearchflight button").prop('disabled', false);
+
+                            $('#submitreal').click();
+                            if (response != "") {
+
+                                var obj = $.parseJSON(response);
+
+                                if (obj.Code == "200") {
+                                    //$('#btnSubmitOff').click();
+                                } else {
+                                    $("#loadingdivs").hide();
+                                    $("#error").html(obj.Message);
+                                }
+
+                            } else {
+                                window.location.href = "/";
+                            }
+
+                        },
+                        error: function (response) {
+                            $("#frmsearchflight input").prop('disabled', false);
+                            $("#frmsearchflight select").prop('disabled', false);
+                            $("#frmsearchflight button").prop('disabled', false);
+                            $('#submitreal').click();
+
+                        }
+                    });
+
+                }
+
+            });
+
+
+        });
+
+
+        function AddValidation() {
+            $(".input-field").each(function () {
+                $(this).unbind('blur');
+                $(this).unbind('change');
+
+
+                var isairporttext = $(this).data('airportname');
+
+                if (isairporttext != undefined) {
+                    $(this).unbind('click');
+
+                    $(this).change(function () {
+                        $("#" + $(this).data("code")).val($(this).val().replace("(", "").replace(")", ""));
+
+                        if ($(this).data("moveto") != "") {
+                            $("#" + $(this).data("moveto")).delay(2000).focus();
+                        }
+
+                        $("#" + $(this).data("code")).val($(this).val().replace("(", "").replace(")", ""));
+
+                    });
+
+                    $(this).click(function () {
+                        $(this).val("");
+                        $(this).focus();
+
+                        $("#" + $(this).data('code')).val("");
+
+                    });
+
+                }
+
+
+                $(this).blur(function () {
+                    var Optional = $(this).data('optional');
+
+                    if (Optional != undefined && Optional == "1") {
+                        $(this).removeClass('border');
+                    } else {
+
+                        if ($(this).val() == "") {
+                            $(this).addClass('border');
+
+                        } else {
+                            $(this).removeClass('border');
+                        }
+
+                    }
+
+
+
+
+                });
+
+                $(this).change(function () {
+                    var Optional = $(this).data('optional');
+
+                    if (Optional != undefined && Optional == "1") {
+                        $(this).removeClass('border');
+                    } else {
+
+                        if ($(this).val() == "") {
+                            $(this).addClass('border');
+
+                        } else {
+                            $(this).removeClass('border');
+                        }
+
+                    }
+                });
+
+            });
+        }
+
+        function AddAirlineSearch(ID) {
+            var options = {
+                url: function (phrase) {
+                    return "/Index/GetAllAirlines?AirCode=" + ($("#" + ID).val().toUpperCase());
+                },
+                list: {
+                    maxNumberOfElements: 20,
+                    match: {
+                        enabled: true
+                    },
+                    onClickEvent: function () {
+                        $(".easy-autocomplete-container").each(function () {
+                            $(this).children().css('display', 'none');
+                        });
+                    }
+                },
+                requestDelay: 500,
+                theme: "plate-dark",
+                getValue: "name"
+            };
+
+            $("#" + ID).easyAutocomplete(options);
+        }
+
+        function AddSearch(ID) {
+            var options = {
+                url: function (phrase) {
+                    return "/index/GetAllAirports?AirCode=" + ($("#" + ID).val().toUpperCase());
+                },
+                list: {
+                    maxNumberOfElements: 20,
+                    match: {
+                        enabled: true
+                    },
+                    onClickEvent: function () {
+                        $(".easy-autocomplete-container").each(function () {
+                            $(this).children().css('display', 'none');
+                        });
+                    }
+                },
+                requestDelay: 500,
+                theme: "plate-dark",
+                getValue: "name"
+            };
+
+            $("#" + ID).easyAutocomplete(options);
+        }
+
+        @*
+        //$.ajax({
+        //    url: "https://geoip-db.com/jsonp",
+        //    jsonpCallback: "callback",
+        //    dataType: "jsonp",
+        //    success: function (location) {
+
+        //        $('#CurrentCity').html(location.city);
+        //    }
+        //});
+
+                    // Comment duew to Ch
+
+                    //$.post("/Index/GetCheapFlights", function (data) {
+
+                    //    $("#CheapFlightPanelList").html(data);
+                    //    $(".cheapflightsbox").click(function () {
+                    //        var codeO = $(this).data('flightorigin');
+                    //        $("#OriginAirportCode1").val(codeO);
+                    //        var codeD = $(this).data('flightdestination');
+                    //        $("#DestinationAirportCode1").val(codeD);
+
+                    //        $("#DepartureDate1").val($(this).data('date'))
+                    //        $("#airlinename").val($(this).data('airline'))
+
+                    //        //$.ajax({
+                    //        //    url: "https://geoip-db.com/jsonp",
+                    //        //    jsonpCallback: "callback",
+                    //        //    dataType: "jsonp",
+                    //        //    success: function (location) {
+                    //        //        $('#country').html(location.country_name);
+                    //        //        $('#state').html(location.state);
+                    //        //        $('#city').html(location.city);
+                    //        //        $('#latitude').html(location.latitude);
+                    //        //        $('#longitude').html(location.longitude);
+                    //        //        $('#ip').html(location.IPv4);
+                    //        //    }
+                    //        //});
+
+                    //        $("#arrivedate").focus();
+                    //    });
+                    //});
+            *@
+
+    </script>
+
+}

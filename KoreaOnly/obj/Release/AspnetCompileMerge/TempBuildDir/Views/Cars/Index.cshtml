@@ -1,0 +1,147 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Default.cshtml";
+}
+
+<div class="row">
+
+    <div class="Background-car">
+
+        <div class="col-md-12 animatedParent">
+
+            <div class="col-md-6 hidden-xs ">
+
+            </div>
+
+            <div class="col-md-6 SearchDiv animated growIn animateOnce">
+
+                <p><i class="fa fa-car" aria-hidden="true"></i> Car</p>
+                <hr />
+
+                <form action="/Cars/SearchCar" method="get">
+
+                    <div class="col-md-12">
+                        <label class="containerRad radio-inline">
+                            Return Same Location
+                            <input type="radio" name="triptype" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="containerRad radio-inline">
+                            Return Different Location
+                            <input type="radio" name="triptype">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <br /><br />
+
+                    <div class="col-md-6">
+                        <label>Pick-Up Location</label>
+                        <input type="text" name="picklocation" class="form-control" placeholder="Enter City Or Airport" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Drop-Off Location</label>
+                        <input type="text" name="drplocation" class="form-control" placeholder="Enter City Or Airport" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label>Pick-Up Date</label>
+                        <input type="date" name="depdate" class="form-control" placeholder="Depart Date" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Drop-Off Date</label>
+                        <input type="date" name="retdate" class="form-control" placeholder="Returning Date" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label>Pick-Up Time</label>
+                        <select class="form-control" name="deptime"><option>Select Time</option></select>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Drop-Off Time</label>
+                        <select class="form-control" name="rettime"><option>Select Time</option></select>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <label>Country</label>
+                        <input type="text" name="retdate" class="form-control" placeholder="Country" /><br />
+                    </div>
+
+                    <div class="col-md-12">
+                        <span class="btn btn-default btnTheam" id="btnSubmit">
+                            <i class="fa fa-search" aria-hidden="true"></i> Search Car
+                        </span>
+
+                        <script>
+
+                            $(document).ready(function () {
+                                $('#btnSubmit').click(function () {
+                                    $('#btnSubmitOff').click();
+                                });
+                            });
+                        </script>
+
+                        <input type="submit" style="display:none;" id="btnSubmitOff" class="btn btn-default btnTheam" value="Search Flight" />
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="row" style="padding: 40px 0px 40px 0px;background-color: #fff;">
+
+    <div class="col-md-12 animatedParent" style="padding-top:60px;">
+
+        <div class="col-md-3 SubDivs">
+            <div class="col-md-4 SubDivs4">
+                <img src="~/Images/search2.png" />
+            </div>
+            <div class="col-md-8 SubDivs8">
+                <p class="subheading DefColor">Lowest Prices</p>
+                <p style="color:#fff;text-align: justify;" class="DefColor">We give best prices for car rental which makes us first preference in customer satisfaction survey.</p>
+            </div>
+        </div>
+
+        <div class="col-md-3 SubDivs ">
+            <div class="col-md-4 SubDivs4">
+                <img src="~/Images/carsicon.png" />
+            </div>
+            <div class="col-md-8  SubDivs8">
+                <p class="subheading DefColor">Wide Selection</p>
+                <p style="color:#fff;text-align: justify;" class="DefColor">We sell huge inventory online , lets help us to find a car for you.</p>
+            </div>
+        </div>
+
+        <div class="col-md-3 SubDivs">
+            <div class="col-md-4 SubDivs4">
+                <img src="~/Images/audio-headset-of-auriculars-with-microphone-included_318-47145.jpg" />
+            </div>
+            <div class="col-md-8 SubDivs8">
+                <p class="subheading DefColor">Our Support Lines are Open 24/7</p>
+                <p style="color:#fff;text-align: justify;" class="DefColor">Our 24/7 support operators are always ready to help you select a proper flight according to your needs.</p>
+            </div>
+        </div>
+
+        <div class="col-md-3 SubDivs">
+            <div class="col-md-4 SubDivs4">
+                <img src="~/Images/business2.png" />
+            </div>
+            <div class="col-md-8 SubDivs8">
+                <p class="subheading DefColor">Convenient Payment Method For You</p>
+                <p style="color:#fff;text-align: justify;" class="DefColor">We provide a variety of payment methods including cheque, cash, and credit cards.</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>

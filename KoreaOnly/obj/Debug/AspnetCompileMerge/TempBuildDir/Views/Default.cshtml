@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head lang="en">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    @*<meta http-equiv="cache-control" content="max-age=1" />
+        <meta http-equiv="expires" content="@DateTime.Now.AddMinutes(30).ToString("ddd, dd MMM yyy HH’:’mm’:’ss ‘GMT’")" />
+        <meta http-equiv="pragma" content="no-cache" />*@
+
+    <link rel="stylesheet" href="~/Content/BSM337.css" media="all">
+    <link rel="stylesheet" href="~/Content/JQM145.css" media="all">
+    @*<link rel="stylesheet" href="~/Content/FA510.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" media="all">*@
+    <link rel="stylesheet" href="~/Content/FA510.css" media="all">
+    <link rel="stylesheet" href="~/Content/owl.carousel.css" media="all" />
+
+    <link rel="stylesheet" href="~/Content/owl.theme.css" media="all" />
+    <link rel="stylesheet" href="~/Content/owl.transitions.css" media="all" />
+    <link rel="stylesheet" href="~/Content/KoreaStyle.css" media="all" />
+    <link rel="stylesheet" href="~/Content/style2.css" media="all" />
+    <link rel="stylesheet" href="~/Content/default.css" media="all">
+    <link rel="stylesheet" href="~/Content/default.date.css" media="all">
+
+
+    <link href="~/Content/GAF.css" rel="stylesheet" media="all">
+
+    <link rel="stylesheet" href="~/Content/JQUI.css" media="all" />
+
+    <link rel="stylesheet" href="~/Content/easy-autocomplete.min.css" media="all">
+
+    <link rel="shortcut icon" href="~/Images/favicon.png" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="~/Content/details.css" media="all" />
+
+    <title>@ViewBag.Title - Korea Only</title>
+
+
+
+</head>
+<body>
+
+    <nav class="navbar" style="margin-bottom:0px;padding-top:10px;box-shadow: 0 2px 20px 0 rgba(100, 103, 121, 0.21);">
+        <div class="container-fluid">
+
+            @*<span class="pull-left"><img src="~/Images/698.gif" style="width: 41px;height: 30px;" /></span>
+                <span class="pull-left"><img src="~/Images/672.gif" style="width: 41px;height: 30px;" /></span>*@
+
+            <div class="navbar-header">
+                @*<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>*@
+                <div class="" style="float:left;margin-left:20px;">
+                    <a href="/">
+                        @*<img src="~/Images/Logo.png" />*@
+                        <div style="background: url(../Images/Logo.png);background-size: cover;width: 200px;height: 100px;">
+
+                        </div>
+                    </a>
+                </div>
+
+                @*<div class="visible-xs" style="float:left;margin-left:20px;display: inline-block;">
+                        <a href="/">
+                            <div style="display:inline-block;background:url(/Images/Logo.png) no-repeat;background-size: 140px 24px;width: 140px;height: 24px;margin-top: 10px;"></div>
+                        </a>
+                    </div>*@
+
+            </div>
+
+            <div class="" style="margin: 20px auto;text-align: center;font-weight: bold;font-size: 35px;float: right;margin-right: 20px;color: #1f4d65;">
+                <span>Customer Satisfaction is our Highest Priority</span>
+            </div>
+
+        </div>
+        @*<div class="collapse navbar-collapse" id="myNavbar" style="margin-top: 20px;">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="/"><i class="fa fa-plane" aria-hidden="true"></i>Flights</a></li>
+                    <li><a href="/Cars/Index"><i class="fa fa-car" aria-hidden="true"></i>Cars</a></li>
+                    <li><a href="/Hotel/Index"><i class="fa fa-bed" aria-hidden="true"></i>Hotels</a></li>
+                    <li><a href="#"><i class="fa fa-suitcase" aria-hidden="true"></i>My Trip</a></li>
+                    <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>Contact us</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>*@
+
+    </nav>
+
+    @*<script>
+            $(document).ready(function () {
+                // get current URL path and assign 'active' class
+
+                var pathname = "/" + window.location.pathname.split('/')[1] + "/";
+
+                if (pathname == '//' || pathname == '/Index/') {
+                    $('.nav > li > a').first().addClass('active');
+                } else {
+                    $('.nav > li > a[href^="' + pathname + '"]').addClass('active');
+                }
+
+            })
+        </script>*@
+
+    <div class="container-fluid">
+
+        @RenderBody()
+
+        <div class="row">
+            <div class="footer-grids">
+                <div class="footer one">
+                    <h3>More About Company</h3>
+
+                    <p>"Koreaonly.com is a sibling of a well renowned US based air travel firm "America Tours"</p>
+
+
+                    <p>
+                        Your privacy is our first priority, so we use state-of-the-art technology to assure your security.
+                        California Seller of Travel: CST 2091844-40, ARC #05 656206
+                    </p>
+                    <p class="adam"></p>
+                    <div class="clear"></div>
+
+                    <p>
+                        <img src="~/Images/logo-arc.png" style="width: 160px;height: 40px;">
+                        <img src="/Images/gd-verified-logo.png" style="width: 131px;height: 50px;">
+                        <img src="/Images/trust-e-certified-logo.png" style="width: 160px;height: 40px;">
+                    </p>
+
+                </div>
+                <div class="footer two animatedParent" data-sequence='200'>
+                    <h3>Keep Connected</h3>
+                    <ul>
+                        <li><a class="fb animated growIn" data-id='1' href="https://www.facebook.com/koreaonlycom"><i></i>Like us on Facebook</a></li>
+                        <li><a class="fb1 animated growIn" data-id='2' href="https://twitter.com/koreaonlycom"><i></i>Follow us on Twitter</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer three">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li>KoreaOnly</li>
+                        <li>(+1) 213 738-8185  </li>
+                        <li><a href="mailto:admin@koreaonly.com">admin@koreaonly.com</a> </li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="copy-right-grids">
+                <div class="copy-left">
+                    <p class="footer-gd">&copy; 2017 KoreaOnly. All Rights Reserved</p>
+                </div>
+                <div class="copy-right">
+                    <ul>
+                        <li><a href="/Index/Aboutus/">Company Information</a></li>
+                        <li><a href="/Index/privacy_policy">Privacy Policy</a></li>
+                        <li><a href="/Index/termsandconditions">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="overlay">
+        <div class="loader" style="margin: 10% auto;z-index: 110;"></div>
+        <div id="progstat"></div>
+        <div id="progress"></div>
+    </div>
+
+    <style>
+        #overlay {
+            position: fixed;
+            z-index: 99999;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0,0,0,0.9);
+            transition: 1s 0.4s;
+        }
+
+        #progress {
+            height: 1px;
+            background: #fff;
+            position: absolute;
+            width: 0;
+            top: 50%;
+        }
+
+        #progstat {
+            font-size: 0.7em;
+            letter-spacing: 3px;
+            position: absolute;
+            top: 50%;
+            margin-top: -40px;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+
+
+
+    <div id="loadingdiv" style="position: absolute;
+    left: 40%;
+    top: 50%;
+    background-color: white;
+    right: 50%;
+    bottom: 50%;
+    height: 100px;
+    width: 300px;
+    padding-top: 50px;
+    box-shadow: 1px 2px 9px 2px #4791d5;
+    display:none;
+    padding-left: 38px;">
+        <div id="loading"></div>
+    </div>
+
+    @* LOAD JAVA SCRIPT AFTER THIS*@
+    <script src="~/scripts/JQ321.js"></script>
+    <script src="~/scripts/BS337.js"></script>
+    <script src="~/scripts/InputScript.js"></script>
+    <script src="~/scripts/owl.carousel.min.js"></script>
+    <script src="~/scripts/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+    <script src="~/scripts/css3-animate-it.js"></script>
+    <script src="~/scripts/Koreaonly.js"></script>
+    <script src="~/Content/jquery.easy-autocomplete.min.js"></script>
+
+    <script src="~/scripts/JUI1121.js"></script>
+
+
+    <script src="~/scripts/picker.js"></script>
+    <script src="~/scripts/pickerdate.js"></script>
+
+    <script type="text/javascript">
+
+        $(window).on('load', function () {
+            $("#loadingdiv").fadeOut(1000);
+        });
+    </script>
+
+    <script type="text/javascript">
+        (function () {
+            function id(v) { return document.getElementById(v); }
+            function loadbar() {
+                var ovrl = id("overlay"),
+                    prog = id("progress"),
+                    stat = id("progstat"),
+                    img = document.images,
+                    c = 0,
+                    tot = img.length;
+                if (tot == 0) return doneLoading();
+
+                function imgLoaded() {
+                    c += 1;
+                    var perc = ((100 / tot * c) << 0) + "%";
+                    prog.style.width = perc;
+                    stat.innerHTML = "Loading " + perc;
+                    if (c === tot) return doneLoading();
+                }
+                function doneLoading() {
+                    ovrl.style.opacity = 0;
+                    setTimeout(function () {
+                        ovrl.style.display = "none";
+                    }, 1200);
+                }
+                for (var i = 0; i < tot; i++) {
+                    var tImg = new Image();
+                    tImg.onload = imgLoaded;
+                    tImg.onerror = imgLoaded;
+                    tImg.src = img[i].src;
+                }
+            }
+            document.addEventListener('DOMContentLoaded', loadbar, false);
+        }());
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+     
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38725538-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-38725538-1');
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $(".SubDivs").addClass("animated");
+            $(".SubDivs").addClass("growIn");
+
+        });
+
+
+        function checkit(checkboxid, valueboxid, valueboxname) {
+            if ($("#" + checkboxid).is(":checked")) {
+                $("#" + valueboxid).val(valueboxname + "1");
+                //$("#" + checkboxid).prop('checked', true);
+            } else {
+                //$("#" + checkboxid).prop('checked', false);
+                $("#" + valueboxid).val(valueboxname + "0");
+            }
+
+            dosearch("check it echeck");
+
+        }
+
+        function setEventOnlyDiv(trigerdiv, targetdiv) {
+
+            $("#" + targetdiv).hide();
+
+            $("#" + trigerdiv).hover(function () {
+
+                $("#" + targetdiv).show();
+
+            });
+            $("#" + trigerdiv).mouseleave(function () {
+
+                $("#" + targetdiv).hide();
+
+            });
+
+        }
+
+    </script>
+
+
+
+    @RenderSection("scriptarea", required: false)
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+﻿
+@model List<string[]>
+
+
+@foreach (var item in Model)
+{
+    <div class="col-md-3" style="padding:5px 15px;">
+        <a href="/Search/Flight/@item[1]/@item[2]/cheap-flight-from-@item[3]">Flight To @item[0]</a>
+    </div>
+}
+

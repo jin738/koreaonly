@@ -1,0 +1,264 @@
+﻿
+@model List<KoreaOnly.Models.TicketsModel>
+
+@{
+    ViewBag.Title = "Tickets";
+    Layout = "~/Views/Default.cshtml";
+}
+
+<head>
+    <link href="~/Content/Tickets.css" media="all" rel="stylesheet" />
+</head>
+
+<div class="container TicketClass" id="" style="margin-bottom: 30px;">
+    <br /><br />
+    <h2 style="color:#135577;font-weight:bold">
+        THANK YOU FOR YOUR TICKET PURCHASE!
+    </h2>
+
+    <p style="color:#135577;">Check your email for itinerary & Invoice</p>
+
+    <br />
+
+    @foreach (var ticket in Model)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tripheader">
+                    <span class="bold uppercase" style="color:#135577 !important;">@(ticket.TripFromDate ) <i style="font-size: 20px;" class="fa fa-caret-right" aria-hidden="true"></i> @(ticket.TripToDate)</span><span class="tripto" style="color:#135577 !important;">TRIP TO</span><span style="color:#135577 !important;" class="bold">@(ticket.TripTo)</span>
+                </div>
+                <div class="top10 FullWidth" style="margin-bottom:5px;">
+                    <span class="preparedfor" style="color:#135577 !important;">PREPARED FOR</span>
+
+                </div>
+
+                @foreach (var Passenger in ticket.Passengers)
+                {
+
+                    <div class="FullWidth">
+                        <span class="bold uppercase" style="color:#135577 !important;">@Passenger.Name</span>
+                    </div>
+
+                    @*<div class="top10 FullWidth">
+                            <span class="normalHeading colorgray uppercase" style="color:#135577 !important;">RESERVATION CODE <span class="smalltext" style="color:#135577;">@Passenger.ReservationCode</span></span>
+                        </div>*@
+
+
+                }
+                <div class="clearfix"></div>
+                <div class="FullWidth borderbottom" style="margin-top:10px;">
+                    <span class="normalHeading colorgray uppercase" style="color:#135577 !important;">AIRLINE RESERVATION CODE <span class="smalltext" style="color:#135577 !important;">@(ticket.Passengers.First().AirlineReservationCode) (@(ticket.Passengers.First().AirlineCode))</span></span>
+                </div>
+                @foreach (var Ticketinfo in ticket.TicketFligtInfos)
+                {
+                    <div class="FullWidth top10" style="margin-top:30px !important;">
+                        <div>
+                            <div style="width: 55px;float: left;">
+                                <i style="font-size: 50px;color:#135577;" class="fa fa-plane" aria-hidden="true"></i>
+                            </div>
+                            <span class="marginleft">
+                                <span class="bold normalHeading" style="color:#135577 !important;">Departure:  </span><span class="bigtext bold marginright" style="color:#135577 !important;">@Ticketinfo.DepartureDate</span><i style="font-size: 20px;color:#135577;" class="fa fa-caret-right" aria-hidden="true"></i><span class="bold normalHeading marginleft" style="color:#135577 !important;">ARRIVAL:  </span><span class="bigtext bold" style="color:#135577 !important;">@Ticketinfo.ArrivalDate </span>
+                            </span>
+                            <br />
+                            <span class="marginleft">
+                                <span style="color:#135577;" class="smalltext fontsize11 normalHeading">Please verify flight times prior to departure</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row top10" style="border: 2px solid #135577;padding: 0px;border-radius: 0px 0px 0px 55px !important;">
+
+                        <div class="col-md-12 " style="padding:0px;">
+                            <div class="col-md-3 curvediv" style="border: 1px solid #1f4d65;color: #ffffff;height: 100%;background-color:#135577;">
+                                <span class="bold FullWidth" style="color:#fff;">@Ticketinfo.AirlineName</span><br />
+                                <span class="bold FullWidth" style="color:#fff;">@Ticketinfo.FlightNumber</span><br /><br />
+                                <span class="bold normalHeading FullWidth" style="color:#fff;">Duration :</span><br />
+                                <span class="normalHeading" style="color:#fff;">@Ticketinfo.Duration</span><br />
+                                <br />
+                                <span class="bold normalHeading FullWidth" style="color:#fff;">Class :</span><br />
+                                <span class="normalHeading" style="color:#fff;">@Ticketinfo.Class</span><br />
+                                <br />
+                                <span class="bold normalHeading FullWidth" style="color:#fff;">Status :</span><br />
+                                <span class="normalHeading" style="color:#fff;">@Ticketinfo.Status</span><br />
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="row" style="">
+                                    <div class="col-md-6 col-sm-6" style="color:#135577;">
+                                        <p style="font-weight:bold;font-size:20px;color:#135577;">@Ticketinfo.AirportFromCode</p>
+                                        <p>@Ticketinfo.AirportFrom</p>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6" style="border-left: 2px solid #135577;color:#135577;">
+                                        <p style="font-weight:bold;font-size:20px;">@Ticketinfo.AirportToCode</p>
+                                        <p style="color:#135577;">@Ticketinfo.AirportTo</p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6" style="min-height: 190px !important;border-top: 2px solid #135577;">
+                                        <p style="font-weight:bold;font-size:17px;padding-top:5px;color:#135577;">Departing At:</p>
+                                        <p style="font-size:18px;margin-bottom: 0px;color:#135577;">@Ticketinfo.DepartureTime</p>
+                                        <p style="font-size:18px;padding-top:0px;color:#135577;color:#135577;">(@Ticketinfo.DepartureDate)</p>
+                                        <p style="font-weight:bold;font-size:17px;margin-bottom: 0px;color:#135577;">Terminal</p>
+                                        <p style="font-size:16px;padding-top:5px; margin-bottom: 0px;color:#135577;">@Ticketinfo.DepartureTerminal</p>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6" style="min-height: 190px !important;border-left: 2px solid #135577;border-top: 2px solid #135577;">
+                                        <p style="font-weight:bold;font-size:17px;padding-top:5px;color:#135577;">Arrival At:</p>
+                                        <p style="font-size:18px;margin-bottom: 0px;color:#135577;">@Ticketinfo.ArrivalTime</p>
+                                        <p style="font-size:18px;padding-top:0px;color:#135577;">(@Ticketinfo.ArrivalDate)</p>
+                                        <p style="font-weight:bold;font-size:17px;margin-bottom: 0px;color:#135577;">Terminal</p>
+                                        <p style="font-size:16px;padding-top:5px; margin-bottom: 0px;color:#135577;">@Ticketinfo.ArrivalTerminal</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-12" style="min-height: 280px !important;border-left: 2px solid #135577;">
+                                    <p style="font-weight:bold;font-size:17px;padding-top:5px;color:#135577;">Aircraft:</p>
+                                    <p style="font-size:16px;margin-bottom: 0px;color:#135577;">@Ticketinfo.AircraftName</p>
+                                    <p style="font-size:18px;Padding-top:5px;color:#135577;margin-bottom: 0px;">Distance(in Miles):</p>
+                                    <p style="font-size:16px;margin-bottom: 0px;color:#135577;">@Ticketinfo.Distance</p>
+
+                                    @*<p style="font-size:18px;Padding-top:5px;margin-bottom: 0px;color:#135577;">Stop(s): @Ticketinfo.Stops</p>*@
+
+                                    <p style="font-size:18px;Padding-top:5px;margin-bottom: 0px;color:#135577;">Meals:</p>
+                                    <p style="font-size:16px;margin-bottom: 0px;color:#135577;">@Ticketinfo.Meals</p>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                }
+
+
+
+                <div class="row top10">
+                    <div class="col-md-12 top10 " style="padding:0px;">
+                        <table id="tb" style="width:100%;border:2px solid #135577">
+                            <tr>
+                                <th>Passenger Name:</th>
+                                <th>Seats:</th>
+                            </tr>
+                            @foreach (var Passenger in ticket.Passengers)
+                            {
+                                <tr>
+                                    <td>@Passenger.Name</td>
+                                    <td>@Passenger.Seats</td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                </div>
+
+
+                <div class="row cc" style="margin-top:20px;">
+                    <div class="col-md-12"><hr /></div>
+                </div>
+            </div>
+        </div>
+
+
+
+    }
+
+
+
+</div>
+
+@*
+
+    <div class="row top10" style="border: 2px solid #135577;padding: 0px;border-radius: 0px 0px 0px 55px !important;">
+
+        <div class="col-md-12 " style="padding:0px;">
+            <div class="col-md-3 curvediv" style="border: 1px solid #1f4d65;color: #ffffff;height: 100%;background-color:#135577;">
+                <span class="bold FullWidth" style="color:#fff;">ASIANA AIRLINES</span><br />
+                <span class="bold FullWidth" style="color:#fff;">OZ 0201</span><br /><br />
+                <span class="bold normalHeading FullWidth" style="color:#fff;">Duration :</span><br />
+                <span class="normalHeading" style="color:#fff;">13hr(s) 30min(s)</span><br />
+                <br />
+                <span class="bold normalHeading FullWidth" style="color:#fff;">Class :</span><br />
+                <span class="normalHeading" style="color:#fff;">Economy</span><br />
+                <br />
+                <span class="bold normalHeading FullWidth" style="color:#fff;">Status :</span><br />
+                <span class="normalHeading" style="color:#fff;">Confirmed</span><br />
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="row" style="">
+                    <div class="col-md-6 col-sm-6" style="color:#135577;">
+                        <p style="font-weight:bold;font-size:20px;color:#135577;">LAX</p>
+                        <p>LOS ANGLES CA</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6" style="border-left: 2px solid #135577;color:#135577;">
+                        <p style="font-weight:bold;font-size:20px;">ICN</p>
+                        <p style="color:#135577;">SEOUL INCHEON INT, KOREA REPUBLIC</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-sm-6" style="min-height: 190px !important;border-top: 2px solid #135577;">
+                        <p style="font-weight:bold;font-size:17px;padding-top:5px;color:#135577;">Departing At:</p>
+                        <p style="font-size:18px;margin-bottom: 0px;color:#135577;">11:00am</p>
+                        <p style="font-size:18px;padding-top:0px;color:#135577;color:#135577;">(Thu, Dec 21)</p>
+                        <p style="font-weight:bold;font-size:17px;margin-bottom: 0px;color:#135577;">Terminal</p>
+                        <p style="font-size:16px;padding-top:5px; margin-bottom: 0px;color:#135577;">TOM BRADELY INTL TERM</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6" style="min-height: 190px !important;border-left: 2px solid #135577;border-top: 2px solid #135577;">
+                        <p style="font-weight:bold;font-size:17px;padding-top:5px;color:#135577;">Departing At:</p>
+                        <p style="font-size:18px;margin-bottom: 0px;color:#135577;">11:00am</p>
+                        <p style="font-size:18px;padding-top:0px;color:#135577;">(Thu, Dec 21)</p>
+                        <p style="font-weight:bold;font-size:17px;margin-bottom: 0px;color:#135577;">Terminal</p>
+                        <p style="font-size:16px;padding-top:5px; margin-bottom: 0px;color:#135577;">TOM BRADELY INTL TERM</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12" style="min-height: 280px !important;border-left: 2px solid #135577;">
+                    <p style="font-weight:bold;font-size:17px;padding-top:5px;color:#135577;">Aircraft:</p>
+                    <p style="font-size:16px;margin-bottom: 0px;color:#135577;">AIRBUS INDUSTRIE A380-800 JET</p>
+                    <p style="font-size:18px;Padding-top:5px;color:#135577;margin-bottom: 0px;">Distance(in Miles):</p>
+                    <p style="font-size:16px;margin-bottom: 0px;color:#135577;">5999</p>
+
+                    <p style="font-size:18px;Padding-top:5px;margin-bottom: 0px;color:#135577;">Stop(s): 0</p>
+
+                    <p style="font-size:18px;Padding-top:5px;margin-bottom: 0px;color:#135577;">Meals:</p>
+                    <p style="font-size:16px;margin-bottom: 0px;color:#135577;">Lunch, Snack</p>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="row top10">
+        <div class="col-md-12 top10 " style="padding:0px;">
+            <table id="tb" style="width:100%;border:2px solid #135577">
+                <tr>
+                    <th>Passenger Name:</th>
+                    <th>Seats:</th>
+                </tr>
+                <tr>
+                    <td>Muhammad Usama Alam</td>
+                    <td>Check-In Required</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+*@
