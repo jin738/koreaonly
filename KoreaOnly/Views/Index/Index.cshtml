@@ -270,7 +270,7 @@
                         <div class="form-group input-container">
                             <i class="material-icons icons">flight_takeoff</i>
                             <input id="OriginAirportCode1" data-code="OAC1" data-moveto="DestinationAirportCode1" data-airportname="yes" autocomplete="off" class="input-field" type="text" value="@(string.IsNullOrEmpty(ViewBag.ORCode) ? "" : ViewBag.ORCode)" placeholder="Leaving From">
-                            <input name="OriginAirportCode" id="OAC1" type="hidden" />
+                            <input name="OriginAirportCode" id="OAC1" value="@(string.IsNullOrEmpty(ViewBag.ORCode) ? "" : ViewBag.ORCode)" type="hidden" />
                         </div>
 
                     </div>
@@ -280,7 +280,7 @@
                         <div class="form-group input-container">
                             <i class="material-icons icons">flight_land</i>
                             <input id="DestinationAirportCode1" data-code="DAC1" data-airportname="yes" autocomplete="off" class="input-field" type="text" placeholder="Going To" value="@(string.IsNullOrEmpty(ViewBag.DSCode) ? "" : ViewBag.DSCode)">
-                            <input name="DestinationAirportCode" id="DAC1" type="hidden" />
+                            <input name="DestinationAirportCode" id="DAC1" type="hidden" value="@(string.IsNullOrEmpty(ViewBag.DSCode) ? "" : ViewBag.DSCode)" />
                         </div>
 
                     </div>
@@ -451,7 +451,7 @@
 
                 <div style="margin-top:10px !important;" class="col-md-12 col-xs-12 col-sm-12 col-lg-12" id="CheapFlightPanelList2">
 
-                    <p class="text-center" style="font-weight:bold">Working On it </p>
+                    <p class="text-center" style="font-weight:bold">Loading.... </p>
 
                 </div>
             </div>
@@ -1502,22 +1502,42 @@
         }
 
 
+        if (getCookie("LC") == undefined || getCookie("LC") == "") {
+            $.get("https://ipinfo.io/json", function (response) {
+
+                var myJSON = JSON.stringify(response);
+                setCookie("LC", myJSON);
+
+                $.post("/Async/GetRecommendedFlights", { location: response }, function (Success) {
+
+                    var ff = response.city + ", " + response.country;
+
+                    $('#CurrentCity').html(ff);
+                    setCookie("LOCATION", ff);
+                    UpdateUserInfo("LOCATION", ff);
 
 
-        $.post("/Index/GetRecommendedFlights", function (Success) {
+                    $("#RCMDFlights").html(Success);
 
+                });
+            }, "jsonp");
+        } else {
+            $.post("/Async/GetRecommendedFlights", { location: JSON.parse(getCookie("LC")) }, function (Success) {
 
-            $.post("/Index/ReturnLocation", function (ff)
-            {
+                var response = JSON.parse(getCookie("LC"));
+
+                var ff = response.city + ", " + response.country;
+
                 $('#CurrentCity').html(ff);
                 setCookie("LOCATION", ff);
                 UpdateUserInfo("LOCATION", ff);
 
+
+                $("#RCMDFlights").html(Success);
+
             });
 
-            $("#RCMDFlights").html(Success);
-
-        });
+        }
 
 
 
@@ -1553,13 +1573,29 @@
 
 
 
-        function UpdateUserInfo( KEY, VAL) {
+function UpdateUserInfo( KEY, VAL) {
             $.post("/Index/UpdateUser", { Session: getCookie("KSession"), KEY: KEY, VAL: VAL }, function (Success) {
 
-            });
-        }
+                            });
+                }
 
 
     </script>
+
+
+    @if (ViewBag.LinkSearched != null && ViewBag.LinkSearched == "1")
+    {
+        <script>
+
+            $.post("/Async/LoadRoutedFlights", { OR: "@ViewBag.AORCode", DS: "@ViewBag.ADSCode" }, function (Success) {
+
+                $("#CheapFlightPanelList2").html(Success);
+
+            });
+
+
+        </script>
+
+    }
 
 }

@@ -96,18 +96,19 @@
         </div>*@
 
 
-    <div class="col-md-4 col-sm-12 col-xs-12" style="margin:5px  0px">
+    <div class="col-md-4 col-sm-12 col-xs-12" style="margin:5px  0px;min-height:115px;">
 
         <a href="/Search/Flight/@item.DeptShortName/@item.ArrvShortName/cheap-flight-from-@item.AirportNameOrigin().Split(')',',')[1].Trim().Replace(" ","-").Replace("--","-")-to-@item.AirportNameDestination().Split(')',',')[1].Trim().Replace(" ","-").Replace("--","-")">
             <div class="CardImagetitle" style="background: url(/Images/Airlines/@(item.AirlineCode).png) no-repeat right 15px bottom 20px rgba(0,0,0,0.7);">
 
                 <span style="font-size:14px;"><i class="material-icons" style="color:#fff;font-size:20px;">flight_takeoff</i> <span style="font-weight:bold">@item.AirportNameOrigin().Split(')', ',')[1], @item.DeptShortName </span>  <span style="font-weight:bold"> @item.AirportNameDestination().Split(')', ',')[1], @item.ArrvShortName</span><br /></span>
                 <span style="color:white;font-weight:bold;">@item.AirlineName() </span><br />
-                <span style="color:grey;font-weight:bold;font-size:14px;">From @(Convert.ToDateTime(item.DepartureDate).ToString("MMM dd, yyyy"))</span><br /><br/>
+                <span style="color:grey;font-weight:bold;font-size:14px;">From @(Convert.ToDateTime(item.DepartureDate).ToString("MMM dd, yyyy"))</span><br /><br />
                 <span style="color:white;font-weight:bold;">$ @(item.Price.Split('.')[0])</span><span style="font-size: 13px;vertical-align: top;color:#fff;">@(item.Price.Contains(".") ? "." + item.Price.Split('.')[1] : "")</span>
             </div>
 
-            <img style="border: 1px solid black;" src="@Url.Action("Thumbnail", "Index", new {FileName="~/Locations/"+ item.ArrvShortName +".jpg", W=400, H=400}) " />
+            <img style="border: 1px solid black;" src="@Url.Action("Thumbnail", "Async", new {FileName="~/Locations/"+ item.ArrvShortName +".jpg", W=400, H=400}) " />
+            @*<img style="border: 1px solid black;" width="400" height="400" src="~/Locations/@(item.ArrvShortName).jpg"  />*@
 
         </a>
     </div>

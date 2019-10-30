@@ -1,1 +1,60 @@
 ﻿
+@model List<FlightInfo>
+
+<style>
+
+    .FlightPanelCheapP {
+        background-color: #1f4d65;
+        padding: 20px;
+        color: #fff;
+        margin: 10px 0px;
+    }
+
+        .FlightPanelCheapP p {
+            font-size: 14px;
+        }
+</style>
+@if (Model == null)
+{
+    <p>Click Search Flight Button For Best and Cheapest Flight</p>
+}
+else
+{
+
+    var MinID = Model.Min(d => Convert.ToDouble(d.FIPrice));
+
+
+    <div class="row">
+
+        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+
+            @foreach (var FI in Model)
+            {
+                <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4 ">
+
+                    <div class="FlightPanelCheapP" style="background: url(/Images/Airlines/@(FI.FIAirlineCode).png) no-repeat right 15px bottom 20px #143242">
+
+                        @if (Convert.ToDouble(FI.FIPrice) == MinID)
+                        {
+                            <p style="position: absolute;top: 15px;color: red;font-weight: bold;right: 22px;">CHEAPEST PRICE</p>
+                        }
+
+                        <p><i class="material-icons" style="color:#fff;font-size:20px;">flight_takeoff</i> @(FI.FIDepartureName) - @FI.FIDestinationName</p>
+                        @*<p>@(Convert.ToDateTime(FI.FIDepartureDatetime).ToString("ddd MMM, yy"))</p>*@
+
+                        <p>@FI.FIAirlineName</p>
+                        <p style="font-weight:bold;@(Convert.ToDouble(FI.FIPrice) == MinID ? "color:red;" : "")">$ @FI.FIPrice</p>
+
+                    </div>
+
+                </div>
+            }
+
+
+        </div>
+
+    </div>
+
+
+}
+
